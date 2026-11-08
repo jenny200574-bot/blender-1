@@ -60,12 +60,24 @@ def compilar(d,root,prueba_cpu=False):
         source=program.get('contacts',program.get('contactos'))
         if program.get('status') not in (None,'complete') and program.get('contacts_complete') is not True:source=None
         # anclas=[] de respuesta recuperada/truncada NO acredita ausencia de contactos.
-        if source is None and program.get('status')=='complete' and program.get('physics_validated') is True:source=program.get('anclas')
+        # physics_validated=true escrito por el modelo tampoco autoriza anclas ni aprueba la física.
+        if source is None and program.get('status')=='complete' and program.get('physics_validated') is True:
+            errors.append(error('motion/program/physics_validated','revisor_propuesta_fisica','physics_validated=true del programa no autoriza anclas ni aprueba la física','MODELO_NO_APRUEBA',tipo='rechazo'))
         result,e=contactos(source,d['clock']['duration_s']);errors+=e
         if result is not None:d['contacts']=result
         status['contacts']='READY' if result is not None else 'WAITING_PRODUCER';receipt['contacts']={'state':status['contacts'],'count':len(result) if result is not None else None}
-    if not d.get('rules'):
+    had_rules=bool(d.get('rules'));proposal_block=False
+    if 'argon_physics_proposal' in d:
+        from revisor_propuesta_fisica import aplicar
+        rev,rev_err=aplicar(d,d['argon_physics_proposal'],d.get('inventario_fisico'),prueba_cpu=prueba_cpu);errors+=rev_err
+        receipt['revisor_propuesta_fisica']={'estado':rev['estado'],'approved':False,'production_approved':False,'scene_physics_approved':False,'physics_validated':False,'faltantes':rev['faltantes']}
+        if rev['estado']!='PROPUESTA_EN_LIMITE':proposal_block=True
+    if not d.get('rules') and not proposal_block:
         source=d.get('rules_source') or (d.get('legacy') or {}).get('rules') or {};env=d.get('environment') or {};manifest=env.get('spatial_manifest') if isinstance(env,dict) else None;result,e=reglas(source,manifest);errors+=e
         if result is not None:d['rules']=result
         status['rules']='READY' if result is not None else 'WAITING_PRODUCER';receipt['rules']={'state':status['rules'],'source_parameters_preserved':True}
+    elif not had_rules and d.get('rules'):
+        status['rules']='READY';receipt['rules']={'state':'READY','source_parameters_preserved':True,'origen':'revisor_propuesta_fisica'}
+    elif proposal_block and not d.get('rules'):
+        status['rules']='WAITING_PRODUCER';receipt['rules']={'state':'WAITING_PRODUCER','source_parameters_preserved':True}
     return receipt,errors
