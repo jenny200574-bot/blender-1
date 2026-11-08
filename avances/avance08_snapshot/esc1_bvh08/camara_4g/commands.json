@@ -1,0 +1,455 @@
+{
+  "v1": {
+    "encuadre": [
+      [
+        "MS",
+        {}
+      ],
+      [
+        "HIGHANGLE",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 35.0
+        }
+      ],
+      [
+        "SINGLE",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        1.0,
+        "STATIC",
+        {}
+      ],
+      [
+        1.0,
+        3.0,
+        "DOLLYIN",
+        {
+          "size_range": [
+            "MS",
+            "MCU"
+          ],
+          "speed": "BRISK"
+        }
+      ]
+    ]
+  },
+  "v2": {
+    "encuadre": [
+      [
+        "CU",
+        {}
+      ],
+      [
+        "LOWANGLE",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 24.0
+        }
+      ],
+      [
+        "SINGLE",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        6.0,
+        "DOLLYOUT",
+        {
+          "size_range": [
+            "CU",
+            "MS"
+          ],
+          "speed": "SLOW"
+        }
+      ]
+    ]
+  },
+  "v3": {
+    "encuadre": [
+      [
+        "WS",
+        {}
+      ],
+      [
+        "EYELEVEL",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 24.0
+        }
+      ],
+      [
+        "SINGLE",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        2.0,
+        "PAN",
+        {
+          "dir_lr": "R",
+          "speed": "BRISK",
+          "degrees": 45.0
+        }
+      ]
+    ]
+  },
+  "v4": {
+    "encuadre": [
+      [
+        "MS",
+        {}
+      ],
+      [
+        "LOWANGLE",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 35.0
+        }
+      ],
+      [
+        "SINGLE",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        4.5,
+        "STATIC",
+        {}
+      ],
+      [
+        4.5,
+        7.0,
+        "TRACK",
+        {
+          "screen": "L2R",
+          "speed": "SLOW"
+        }
+      ]
+    ]
+  },
+  "v5": {
+    "encuadre": [
+      [
+        "WS",
+        {}
+      ],
+      [
+        "EYELEVEL",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 24.0
+        }
+      ],
+      [
+        "GROUPSHOT",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        3.0,
+        "CRANE",
+        {
+          "dir_ud": "DOWN",
+          "speed": "BRISK",
+          "distance": 0.8
+        }
+      ]
+    ]
+  },
+  "v6": {
+    "encuadre": [
+      [
+        "MCU",
+        {}
+      ],
+      [
+        "LOWANGLE",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 35.0
+        }
+      ],
+      [
+        "TWOSHOT",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        4.0,
+        "DOLLYIN",
+        {
+          "size_range": [
+            "MCU",
+            "CU"
+          ],
+          "speed": "SLOW"
+        }
+      ]
+    ]
+  },
+  "v7": {
+    "encuadre": [
+      [
+        "MS",
+        {}
+      ],
+      [
+        "EYELEVEL",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 28.0
+        }
+      ],
+      [
+        "GROUPSHOT",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        1.5,
+        "PAN",
+        {
+          "dir_lr": "R",
+          "speed": "BRISK",
+          "degrees": 25.5
+        }
+      ],
+      [
+        1.5,
+        5.0,
+        "STATIC",
+        {}
+      ]
+    ]
+  },
+  "v8": {
+    "encuadre": [
+      [
+        "FS",
+        {}
+      ],
+      [
+        "HIGHANGLE",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 24.0
+        }
+      ],
+      [
+        "GROUPSHOT",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        3.0,
+        "DOLLYIN",
+        {
+          "size_range": [
+            "FS",
+            "MS"
+          ],
+          "speed": "SLOW"
+        }
+      ]
+    ]
+  },
+  "v9": {
+    "encuadre": [
+      [
+        "MCU",
+        {}
+      ],
+      [
+        "EYELEVEL",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 50.0
+        }
+      ],
+      [
+        "TWOSHOT",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        3.0,
+        "STATIC",
+        {}
+      ],
+      [
+        3.0,
+        7.0,
+        "DOLLYIN",
+        {
+          "size_range": [
+            "MCU",
+            "CU"
+          ],
+          "speed": "VSLOW"
+        }
+      ]
+    ]
+  },
+  "v10": {
+    "encuadre": [
+      [
+        "MS",
+        {}
+      ],
+      [
+        "LOWANGLE",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 35.0
+        }
+      ],
+      [
+        "THREESHOT",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        4.0,
+        "STATIC",
+        {}
+      ]
+    ]
+  },
+  "v11": {
+    "encuadre": [
+      [
+        "FS",
+        {}
+      ],
+      [
+        "EYELEVEL",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 28.0
+        }
+      ],
+      [
+        "GROUPSHOT",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        2.0,
+        "DOLLYIN",
+        {
+          "size_range": [
+            "FS",
+            "MS"
+          ],
+          "speed": "SLOW"
+        }
+      ],
+      [
+        2.0,
+        3.4,
+        "STATIC",
+        {}
+      ]
+    ]
+  },
+  "v12": {
+    "encuadre": [
+      [
+        "CU",
+        {}
+      ],
+      [
+        "LOWANGLE",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 50.0
+        }
+      ],
+      [
+        "SINGLE",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0.0,
+        5.5,
+        "DOLLYIN",
+        {
+          "size_range": [
+            "CU",
+            "ECU"
+          ],
+          "speed": "VSLOW"
+        }
+      ],
+      [
+        5.5,
+        7.6,
+        "STATIC",
+        {}
+      ]
+    ]
+  }
+}

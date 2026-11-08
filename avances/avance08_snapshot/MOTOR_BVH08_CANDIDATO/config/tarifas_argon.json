@@ -1,0 +1,68 @@
+{
+  "tokens": {
+    "fuente": "gemini_model.py (fase 2): USD por 1M de tokens, endpoint global, tarifa est\u00e1ndar, contexto <= 200K. https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing (consultada el 2026-10-17).",
+    "fuente_argon": "gemini-4-argon (T17, paso 00): mismo precio que PRECIO en genesis_tejado/motor/argon_cliente.py:10; cuadra con la corrida real de prueba_paso00_genesis (13.703 tokens de entrada + 42.889 de salida = US$0,4563).",
+    "fuente_argon_t27b": "T27b (25-oct-2026, hora Colombia): artron confirm\u00f3 en p\u00e1ginas oficiales que gemini-4-argon cuesta US$2/US$10 por 1M (entrada/salida) hasta el 30-nov-2026 y US$4/US$20 desde el 1-dic-2026. Cada tramo rige desde su vigente_desde hasta el d\u00eda antes del siguiente; el \u00faltimo no tiene fin. Antes del primer vigente_desde no hay precio y se para. El primer vigente_desde (2026-10-23) es la primera llamada a Argon que consta en los ledgers del equipo, no una fecha oficial (duda D-T27b-1).",
+    "gemini-4-argon": [
+      {
+        "vigente_desde": "2026-10-23",
+        "nota_vigente_desde": "NO OFICIAL (T27d, D1): 2026-10-23 no es una fecha oficial de Google; es la primera llamada a Argon en los ledgers del equipo. Lo oficial (verificado por artron) es que 2/10 vale hasta el 30-nov-2026.",
+        "entrada": 2.0,
+        "salida": 10.0
+      },
+      {
+        "vigente_desde": "2026-12-01",
+        "entrada": 4.0,
+        "salida": 20.0
+      }
+    ],
+    "gemini-3.8-flash": [
+      {
+        "hasta": "2026-12-31",
+        "entrada": 0.75,
+        "salida": 3.75
+      },
+      {
+        "desde": "2027-01-01",
+        "entrada": 1.5,
+        "salida": 7.5
+      }
+    ],
+    "anteriores": {
+      "gemini-2.5-flash-lite": {
+        "entrada": 0.1,
+        "salida": 0.4,
+        "entrada_audio": 0.3
+      },
+      "gemini-2.5-flash": {
+        "entrada": 0.3,
+        "salida": 2.5,
+        "entrada_audio": 1.0
+      },
+      "gemini-2.5-pro": {
+        "entrada": 1.25,
+        "salida": 10.0,
+        "entrada_audio": 1.25
+      },
+      "gemini-3.5-flash-lite": {
+        "entrada": 0.3,
+        "salida": 2.5,
+        "entrada_audio": 0.3
+      },
+      "gemini-3.1-flash-lite": {
+        "entrada": 0.25,
+        "salida": 1.5,
+        "entrada_audio": 0.5
+      }
+    },
+    "gemini-3-flash-preview": [
+      {
+        "vigente_desde": "2026-11-07",
+        "entrada": 0.5,
+        "salida": 3.0,
+        "source": "https://cloud.google.com/model-garden/pricing"
+      }
+    ]
+  },
+  "source_sha256": "91bd479e875d1f5943138ab06737f5925b6a19512fa456ddf72929ee6c3724e2"
+}

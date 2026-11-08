@@ -1,0 +1,44 @@
+{
+  "source": "Measured native rig from existing Eco ADN; rest rig coordinates, not certified surface thickness",
+  "head_upperarm_minus_tail_clavicle_m": 0.0,
+  "clavicle_bone": "clavicula_L",
+  "length_m": 0.08669999986886978,
+  "head": [
+    -0.020400000736117363,
+    0.0,
+    0.27859997749328613
+  ],
+  "tail": [
+    -0.1071000024676323,
+    0.0,
+    0.27859997749328613
+  ],
+  "inverse_rotation_rows": [
+    [
+      0.0,
+      1.0,
+      -4.371138828673793e-08
+    ],
+    [
+      -1.0000001192092896,
+      7.105428204633949e-15,
+      -3.821371777362357e-15
+    ],
+    [
+      0.0,
+      4.371138828673793e-08,
+      1.0
+    ]
+  ],
+  "inverse_rotation_euler_deg": [
+    2.5044780654876655e-06,
+    -0.0,
+    -90.00000250447816
+  ],
+  "point_tail_local": [
+    0,
+    0,
+    0
+  ],
+  "native_left_measured": true
+}

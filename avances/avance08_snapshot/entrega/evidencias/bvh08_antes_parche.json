@@ -1,0 +1,534 @@
+{
+  "scope": "PAIRWISE_EXACT_NATIVE_STATIC_BVH_DIAGNOSTIC_NOT_FULL_SCENE",
+  "topology": [
+    {
+      "mesh": "piso",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "muro_frente_0",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "muro_frente_1",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "muro_frente_2",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "muro_fondo_0",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "muro_fondo_1",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "muro_fondo_2",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "muro_fondo_3",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "muro_izq_0",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "muro_der_0",
+      "nonmanifold_edges": 0
+    },
+    {
+      "mesh": "obj-armario",
+      "nonmanifold_edges": 0
+    }
+  ],
+  "checks": [
+    {
+      "pair": [
+        "piso",
+        "muro_frente_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "piso",
+        "muro_frente_1"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "piso",
+        "muro_frente_2"
+      ],
+      "all_passed": false,
+      "errors": [
+        {
+          "type": "PENETRACION",
+          "frame": 1,
+          "objects": [
+            "piso",
+            "muro_frente_2"
+          ],
+          "depth_m": 0,
+          "intersections": 4
+        }
+      ]
+    },
+    {
+      "pair": [
+        "piso",
+        "muro_fondo_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "piso",
+        "muro_fondo_1"
+      ],
+      "all_passed": false,
+      "errors": [
+        {
+          "type": "PENETRACION",
+          "frame": 1,
+          "objects": [
+            "piso",
+            "muro_fondo_1"
+          ],
+          "depth_m": 0,
+          "intersections": 4
+        }
+      ]
+    },
+    {
+      "pair": [
+        "piso",
+        "muro_fondo_2"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "piso",
+        "muro_fondo_3"
+      ],
+      "all_passed": false,
+      "errors": [
+        {
+          "type": "PENETRACION",
+          "frame": 1,
+          "objects": [
+            "piso",
+            "muro_fondo_3"
+          ],
+          "depth_m": 0,
+          "intersections": 4
+        }
+      ]
+    },
+    {
+      "pair": [
+        "piso",
+        "muro_izq_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "piso",
+        "muro_der_0"
+      ],
+      "exception": "ValueError: Malla no apta para prueba de interior"
+    },
+    {
+      "pair": [
+        "piso",
+        "obj-armario"
+      ],
+      "all_passed": false,
+      "errors": [
+        {
+          "type": "PENETRACION",
+          "frame": 1,
+          "objects": [
+            "piso",
+            "obj-armario"
+          ],
+          "depth_m": 0,
+          "intersections": 4
+        }
+      ]
+    },
+    {
+      "pair": [
+        "muro_frente_0",
+        "muro_frente_1"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_0",
+        "muro_frente_2"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_0",
+        "muro_fondo_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_0",
+        "muro_fondo_1"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_0",
+        "muro_fondo_2"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_0",
+        "muro_fondo_3"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_0",
+        "muro_izq_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_0",
+        "muro_der_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_0",
+        "obj-armario"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_1",
+        "muro_frente_2"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_1",
+        "muro_fondo_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_1",
+        "muro_fondo_1"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_1",
+        "muro_fondo_2"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_1",
+        "muro_fondo_3"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_1",
+        "muro_izq_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_1",
+        "muro_der_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_1",
+        "obj-armario"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_2",
+        "muro_fondo_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_2",
+        "muro_fondo_1"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_2",
+        "muro_fondo_2"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_2",
+        "muro_fondo_3"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_2",
+        "muro_izq_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_frente_2",
+        "muro_der_0"
+      ],
+      "exception": "ValueError: Malla no apta para prueba de interior"
+    },
+    {
+      "pair": [
+        "muro_frente_2",
+        "obj-armario"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_0",
+        "muro_fondo_1"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_0",
+        "muro_fondo_2"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_0",
+        "muro_fondo_3"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_0",
+        "muro_izq_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_0",
+        "muro_der_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_0",
+        "obj-armario"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_1",
+        "muro_fondo_2"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_1",
+        "muro_fondo_3"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_1",
+        "muro_izq_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_1",
+        "muro_der_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_1",
+        "obj-armario"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_2",
+        "muro_fondo_3"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_2",
+        "muro_izq_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_2",
+        "muro_der_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_2",
+        "obj-armario"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_3",
+        "muro_izq_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_3",
+        "muro_der_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_fondo_3",
+        "obj-armario"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_izq_0",
+        "muro_der_0"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_izq_0",
+        "obj-armario"
+      ],
+      "all_passed": true,
+      "errors": []
+    },
+    {
+      "pair": [
+        "muro_der_0",
+        "obj-armario"
+      ],
+      "all_passed": true,
+      "errors": []
+    }
+  ],
+  "exceptions": 2
+}

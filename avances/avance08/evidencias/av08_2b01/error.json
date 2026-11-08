@@ -1,0 +1,8 @@
+{
+  "date_bogota": "2026-11-07T22:38:55.412666-05:00",
+  "phase": "network",
+  "type": "ClientError",
+  "code": "400",
+  "usage_received": false,
+  "safe_message": "ClientError: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Request contains an invalid argument.', 'status': 'INVALID_ARGUMENT'}}"
+}

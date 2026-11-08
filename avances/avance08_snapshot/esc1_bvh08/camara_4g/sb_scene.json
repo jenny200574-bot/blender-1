@@ -1,0 +1,2453 @@
+{
+  "version": "sb_v1",
+  "de": "argon (aprobado: Ricardo t261s798)",
+  "escena": "1",
+  "duracion_s": 55.0,
+  "niveles": {
+    "nivel_1_genero_tono": {
+      "estado": "definido (Ricardo t251u (por escrito))",
+      "generos": [
+        "aventura"
+      ],
+      "tono_general": "por definir",
+      "pistas_del_canal": {
+        "x23_story_type": "infantil",
+        "narration_tone": null
+      },
+      "nota": "Los géneros del canal son la MEZCLA permitida; la etapa 1 detecta cuál domina en cada tramo de cada escena."
+    },
+    "nivel_2_estilo_visual": {
+      "estado": "del canal (style_fijo); categoría del catálogo por confirmar",
+      "estilo_catalogo": "por definir",
+      "estilo_fijo_del_canal": "Los Guardianes de la Ceiba · 3D CGI estilizado (imagen de Spark)",
+      "style_del_canal": "realista"
+    },
+    "nivel_3_direccion_artistica": {
+      "estado": "por definir",
+      "reglamento": null,
+      "nombre_propuesto": null
+    }
+  },
+  "niveles_aplicados": {
+    "nivel_1_generos": [
+      "aventura"
+    ],
+    "nivel_2_estilo": "por definir",
+    "nivel_3_reglamento": "por definir"
+  },
+  "etapa1_segmentos_genero": [
+    {
+      "desde_cita": "[Plano cerrado: un libro de cuentos abierto sobre una cama.",
+      "hasta_cita": "…aburrido. Como a mí me gusta.",
+      "generos": [
+        {
+          "genero": "aventura",
+          "peso": 0.4
+        },
+        {
+          "genero": "comedia",
+          "peso": 0.3
+        },
+        {
+          "genero": "fantasia",
+          "peso": 0.3
+        }
+      ],
+      "tono": "Travesura mágica e intriga juguetona",
+      "emociones": [
+        "sorpresa",
+        "curiosidad",
+        "diversión"
+      ],
+      "intensidad": 3,
+      "por_que": "El inicio presenta el problema del episodio mediante magia visual y un villano cómico e inofensivo que despierta la atención del niño sin asustarlo.",
+      "subgenero": "fantasía infantil cómica",
+      "indice_etapa1": 0,
+      "t": [
+        0.0,
+        18.0
+      ],
+      "indice": 0
+    },
+    {
+      "desde_cita": "[Corte rápido. Las cuatro luces de colores aterrizan",
+      "hasta_cita": "¡Esto es una emergencia de nivel arcoíris!",
+      "generos": [
+        {
+          "genero": "aventura",
+          "peso": 0.6
+        },
+        {
+          "genero": "accion",
+          "peso": 0.2
+        },
+        {
+          "genero": "comedia",
+          "peso": 0.2
+        }
+      ],
+      "tono": "Urgencia heroica y colorida",
+      "emociones": [
+        "entusiasmo",
+        "alerta",
+        "emoción"
+      ],
+      "intensidad": 4,
+      "por_que": "La llegada dinámica de los héroes y el ritmo acelerado de Pintor elevan la energía para establecer la misión de rescate.",
+      "subgenero": "aventura de superhéroes preescolar",
+      "indice_etapa1": 1,
+      "t": [
+        18.0,
+        30.0
+      ],
+      "indice": 1
+    },
+    {
+      "desde_cita": "[Plano: en el centro de la habitación aparece",
+      "hasta_cita": "en letras que tiemblan: \"¡DON CAOS BORRÓ EL ABECEDARIO!\"]",
+      "generos": [
+        {
+          "genero": "aventura",
+          "peso": 0.5
+        },
+        {
+          "genero": "misterio",
+          "peso": 0.3
+        },
+        {
+          "genero": "fantasia",
+          "peso": 0.2
+        }
+      ],
+      "tono": "Invitación mágica y complicidad",
+      "emociones": [
+        "intriga",
+        "valentía",
+        "ilusión"
+      ],
+      "intensidad": 3,
+      "por_que": "La aparición del cofre dorado y el llamado directo a cámara convierten al espectador en el protagonista valiente y siembran la intriga de la palabra secreta.",
+      "subgenero": "aventura interactiva con misterio",
+      "indice_etapa1": 2,
+      "t": [
+        30.0,
+        55.0
+      ],
+      "indice": 2
+    }
+  ],
+  "etapa2_perfiles_por_segmento": [
+    {
+      "segmento": 0,
+      "t": [
+        0.0,
+        18.0
+      ],
+      "fuentes": [
+        {
+          "perfil": "aventura",
+          "peso": 0.4
+        },
+        {
+          "perfil": "comedia",
+          "peso": 0.3
+        },
+        {
+          "perfil": "fantasia",
+          "peso": 0.3
+        }
+      ],
+      "subgenero": "fantasía infantil cómica",
+      "notas_subgenero": [],
+      "reglas": {
+        "intencion": [
+          "aventura (0.4): asombro y descubrimiento; ganas de seguir",
+          "comedia (0.3): humor: sorpresa y reacción",
+          "fantasia (0.3): maravilla o amenaza sobrenatural; escala"
+        ],
+        "beats": [
+          "aventura (0.4): mostrar el mundo y la meta; esconder lo que viene detrás de la próxima esquina",
+          "comedia (0.3): mostrar la preparación del chiste y, sobre todo, la reacción",
+          "fantasia (0.3): mostrar el poder y su efecto en el mundo; esconder su origen hasta el momento justo"
+        ],
+        "secuencia": [
+          "aventura (0.4): revelaciones amplias seguidas del personaje reaccionando",
+          "comedia (0.3): preparación → pausa → remate → reacción",
+          "fantasia (0.3): revelación de escala: detalle → general"
+        ],
+        "direccion": [
+          "aventura (0.4): planos generales que muestran escala, grúas y travellings que acompañan; lentes 24-50 mm",
+          "comedia (0.3): planos abiertos estables que dejan ver el gag, lentes 24-50 mm, poca cámara en movimiento",
+          "fantasia (0.3): grúas, planos generales, contrapicados, lentes 18-35 mm para escala"
+        ],
+        "actuacion": [
+          "aventura (0.4): intensidad media-alta, gestos abiertos, curiosidad",
+          "comedia (0.3): intensidad alta y clara, timing",
+          "fantasia (0.3): gestos amplios en la épica; contención en la oscura"
+        ],
+        "composicion": [
+          "aventura (0.4): profundidad, líneas que guían hacia el horizonte o la meta",
+          "comedia (0.3): encuadre de preparación limpio, simetría para el absurdo",
+          "fantasia (0.3): escala monumental, luz como protagonista, profundidad"
+        ],
+        "ritmo": [
+          "aventura (0.4): alterna movimiento y contemplación",
+          "comedia (0.3): pausas medidas antes del remate, cortes abruptos",
+          "fantasia (0.3): crece hacia la revelación"
+        ],
+        "transiciones": [
+          "aventura (0.4): cortes limpios, encadenados para pasos de tiempo o viaje",
+          "comedia (0.3): cortes secos de remate, corte a la reacción",
+          "fantasia (0.3): encadenados, cortes en la energía, match cut de luz"
+        ],
+        "continuidad": [
+          "aventura (0.4): dirección del viaje constante en pantalla",
+          "comedia (0.3): el gag se entiende solo si el espacio es claro",
+          "fantasia (0.3): los efectos y daños de magia/energía permanecen"
+        ],
+        "justificacion": [
+          "aventura (0.4): hacer sentir el tamaño del mundo y la valentía del personaje",
+          "comedia (0.3): cada elección prepara y entrega la risa",
+          "fantasia (0.3): que el público sienta lo enorme o lo amenazante del poder"
+        ]
+      },
+      "preferencias": {
+        "duracion_vineta_s": [
+          1.55,
+          8.0
+        ],
+        "lente_mm": [
+          16.8,
+          50.0
+        ],
+        "planos_preferidos": [
+          "WS",
+          "FS",
+          "EWS",
+          "MS",
+          "REACTION",
+          "CU"
+        ],
+        "angulos_preferidos": [
+          "EYELEVEL",
+          "LOWANGLE",
+          "HIGHANGLE",
+          "WORMSEYE"
+        ],
+        "movimientos_preferidos": [
+          "CRANE",
+          "TRACK",
+          "DOLLYIN",
+          "PAN",
+          "STATIC",
+          "CRASHZOOM",
+          "WHIPPAN",
+          "ORBIT",
+          "DOLLYOUT",
+          "DRONEREVEAL"
+        ],
+        "transiciones_preferidas": [
+          "CORTE",
+          "ENCADENADO",
+          "CORTE_SECO",
+          "MATCH_CUT"
+        ],
+        "movimientos_evitar": [
+          "IMPERCEPTIBLE"
+        ],
+        "pausas": "algunas"
+      },
+      "ejemplos_direccion": [
+        "aventura: La puerta se abre a un paisaje enorme: plano general desde detrás del personaje, grúa que sube y revela el mundo.",
+        "comedia: Plano general estable, abre la puerta, pausa, corte seco a su cara de sorpresa exagerada.",
+        "fantasia: La puerta se abre y la luz sale; contrapicado del personaje, la cámara retrocede y sube para mostrar la escala de lo que hay detrás."
+      ]
+    },
+    {
+      "segmento": 1,
+      "t": [
+        18.0,
+        30.0
+      ],
+      "fuentes": [
+        {
+          "perfil": "aventura",
+          "peso": 0.6
+        },
+        {
+          "perfil": "accion",
+          "peso": 0.2
+        },
+        {
+          "perfil": "comedia",
+          "peso": 0.2
+        }
+      ],
+      "subgenero": "aventura de superhéroes preescolar",
+      "notas_subgenero": [],
+      "reglas": {
+        "intencion": [
+          "aventura (0.6): asombro y descubrimiento; ganas de seguir",
+          "accion (0.2): adrenalina, urgencia, peligro físico; el público debe sentir el impacto",
+          "comedia (0.2): humor: sorpresa y reacción"
+        ],
+        "beats": [
+          "aventura (0.6): mostrar el mundo y la meta; esconder lo que viene detrás de la próxima esquina",
+          "accion (0.2): mostrar causa→impacto→consecuencia de cada golpe; ocultar lo que no aporta al choque",
+          "comedia (0.2): mostrar la preparación del chiste y, sobre todo, la reacción"
+        ],
+        "secuencia": [
+          "aventura (0.6): revelaciones amplias seguidas del personaje reaccionando",
+          "accion (0.2): revelación rápida; acciones partidas en varias viñetas cortas",
+          "comedia (0.2): preparación → pausa → remate → reacción"
+        ],
+        "direccion": [
+          "aventura (0.6): planos generales que muestran escala, grúas y travellings que acompañan; lentes 24-50 mm",
+          "accion (0.2): ángulos bajos para poder, cámara en movimiento (seguimiento, travelling lateral), lentes 24-35 mm cerca de la acción",
+          "comedia (0.2): planos abiertos estables que dejan ver el gag, lentes 24-50 mm, poca cámara en movimiento"
+        ],
+        "actuacion": [
+          "aventura (0.6): intensidad media-alta, gestos abiertos, curiosidad",
+          "accion (0.2): intensidad alta, cuerpos en tensión, poses de impulso",
+          "comedia (0.2): intensidad alta y clara, timing"
+        ],
+        "composicion": [
+          "aventura (0.6): profundidad, líneas que guían hacia el horizonte o la meta",
+          "accion (0.2): diagonales, dinamismo, primer término con objetos que pasan; eje claro para entender quién va hacia dónde",
+          "comedia (0.2): encuadre de preparación limpio, simetría para el absurdo"
+        ],
+        "ritmo": [
+          "aventura (0.6): alterna movimiento y contemplación",
+          "accion (0.2): viñetas cortas que se aceleran hacia el clímax; pausa breve solo antes del golpe decisivo",
+          "comedia (0.2): pausas medidas antes del remate, cortes abruptos"
+        ],
+        "transiciones": [
+          "aventura (0.6): cortes limpios, encadenados para pasos de tiempo o viaje",
+          "accion (0.2): cortes secos, match cut de acción, cortes en el movimiento",
+          "comedia (0.2): cortes secos de remate, corte a la reacción"
+        ],
+        "continuidad": [
+          "aventura (0.6): dirección del viaje constante en pantalla",
+          "accion (0.2): dirección de pantalla estricta: quien huye y quien persigue no cambian de lado",
+          "comedia (0.2): el gag se entiende solo si el espacio es claro"
+        ],
+        "justificacion": [
+          "aventura (0.6): hacer sentir el tamaño del mundo y la valentía del personaje",
+          "accion (0.2): cada elección busca energía e impacto sin perder claridad espacial",
+          "comedia (0.2): cada elección prepara y entrega la risa"
+        ]
+      },
+      "preferencias": {
+        "duracion_vineta_s": [
+          1.56,
+          6.8
+        ],
+        "lente_mm": [
+          18.0,
+          50.0
+        ],
+        "planos_preferidos": [
+          "WS",
+          "FS",
+          "MS",
+          "EWS",
+          "CU",
+          "REACTION"
+        ],
+        "angulos_preferidos": [
+          "EYELEVEL",
+          "LOWANGLE",
+          "HIGHANGLE",
+          "DUTCH"
+        ],
+        "movimientos_preferidos": [
+          "TRACK",
+          "DOLLYIN",
+          "CRANE",
+          "PAN",
+          "WHIPPAN",
+          "CRASHZOOM",
+          "FOLLOW",
+          "TRUCK",
+          "HANDHELD",
+          "STATIC"
+        ],
+        "transiciones_preferidas": [
+          "CORTE",
+          "ENCADENADO",
+          "CORTE_SECO",
+          "MATCH_CUT"
+        ],
+        "movimientos_evitar": [
+          "IMPERCEPTIBLE"
+        ],
+        "pausas": "algunas"
+      },
+      "ejemplos_direccion": [
+        "aventura: La puerta se abre a un paisaje enorme: plano general desde detrás del personaje, grúa que sube y revela el mundo.",
+        "accion: Patada a la puerta en plano bajo, corte seco al interior, travelling que sigue al personaje mientras entra.",
+        "comedia: Plano general estable, abre la puerta, pausa, corte seco a su cara de sorpresa exagerada."
+      ]
+    },
+    {
+      "segmento": 2,
+      "t": [
+        30.0,
+        55.0
+      ],
+      "fuentes": [
+        {
+          "perfil": "aventura",
+          "peso": 0.5
+        },
+        {
+          "perfil": "misterio",
+          "peso": 0.3
+        },
+        {
+          "perfil": "fantasia",
+          "peso": 0.2
+        }
+      ],
+      "subgenero": "aventura interactiva con misterio",
+      "notas_subgenero": [],
+      "reglas": {
+        "intencion": [
+          "aventura (0.5): asombro y descubrimiento; ganas de seguir",
+          "misterio (0.3): curiosidad e intriga: pistas",
+          "fantasia (0.2): maravilla o amenaza sobrenatural; escala"
+        ],
+        "beats": [
+          "aventura (0.5): mostrar el mundo y la meta; esconder lo que viene detrás de la próxima esquina",
+          "misterio (0.3): mostrar pistas en insertos; esconder la respuesta",
+          "fantasia (0.2): mostrar el poder y su efecto en el mundo; esconder su origen hasta el momento justo"
+        ],
+        "secuencia": [
+          "aventura (0.5): revelaciones amplias seguidas del personaje reaccionando",
+          "misterio (0.3): revelación por partes, de detalle a conjunto",
+          "fantasia (0.2): revelación de escala: detalle → general"
+        ],
+        "direccion": [
+          "aventura (0.5): planos generales que muestran escala, grúas y travellings que acompañan; lentes 24-50 mm",
+          "misterio (0.3): planos de observación, insertos, cambios de foco, lentes 35-85 mm",
+          "fantasia (0.2): grúas, planos generales, contrapicados, lentes 18-35 mm para escala"
+        ],
+        "actuacion": [
+          "aventura (0.5): intensidad media-alta, gestos abiertos, curiosidad",
+          "misterio (0.3): observación, cejas, manos que exploran",
+          "fantasia (0.2): gestos amplios en la épica; contención en la oscura"
+        ],
+        "composicion": [
+          "aventura (0.5): profundidad, líneas que guían hacia el horizonte o la meta",
+          "misterio (0.3): marcos dentro del marco, objetos clave en tercios",
+          "fantasia (0.2): escala monumental, luz como protagonista, profundidad"
+        ],
+        "ritmo": [
+          "aventura (0.5): alterna movimiento y contemplación",
+          "misterio (0.3): medido, con pausas para observar",
+          "fantasia (0.2): crece hacia la revelación"
+        ],
+        "transiciones": [
+          "aventura (0.5): cortes limpios, encadenados para pasos de tiempo o viaje",
+          "misterio (0.3): match cut entre pistas, cortes",
+          "fantasia (0.2): encadenados, cortes en la energía, match cut de luz"
+        ],
+        "continuidad": [
+          "aventura (0.5): dirección del viaje constante en pantalla",
+          "misterio (0.3): cada pista queda donde estaba",
+          "fantasia (0.2): los efectos y daños de magia/energía permanecen"
+        ],
+        "justificacion": [
+          "aventura (0.5): hacer sentir el tamaño del mundo y la valentía del personaje",
+          "misterio (0.3): hacer que el público junte las piezas",
+          "fantasia (0.2): que el público sienta lo enorme o lo amenazante del poder"
+        ]
+      },
+      "preferencias": {
+        "duracion_vineta_s": [
+          1.9,
+          8.7
+        ],
+        "lente_mm": [
+          22.3,
+          65.0
+        ],
+        "planos_preferidos": [
+          "MS",
+          "EWS",
+          "WS",
+          "FS",
+          "CU",
+          "ECU",
+          "INSERT"
+        ],
+        "angulos_preferidos": [
+          "HIGHANGLE",
+          "EYELEVEL",
+          "LOWANGLE",
+          "TOPDOWN",
+          "WORMSEYE"
+        ],
+        "movimientos_preferidos": [
+          "DOLLYIN",
+          "PAN",
+          "CRANE",
+          "TRACK",
+          "RACKFOCUS",
+          "STATIC",
+          "ORBIT",
+          "DOLLYOUT",
+          "DRONEREVEAL"
+        ],
+        "transiciones_preferidas": [
+          "CORTE",
+          "ENCADENADO",
+          "MATCH_CUT"
+        ],
+        "movimientos_evitar": [
+          "CRASHZOOM"
+        ],
+        "pausas": "algunas"
+      },
+      "ejemplos_direccion": [
+        "aventura: La puerta se abre a un paisaje enorme: plano general desde detrás del personaje, grúa que sube y revela el mundo.",
+        "misterio: Inserto de una marca extraña en la puerta, cambio de foco al personaje que la examina, plano general a medias del interior.",
+        "fantasia: La puerta se abre y la luz sale; contrapicado del personaje, la cámara retrocede y sube para mostrar la escala de lo que hay detrás."
+      ]
+    }
+  ],
+  "etapa3_narrativa": {
+    "intencion_escena": "Presentar la travesura mágica de Don Caos al borrar las letras y colores del mundo, introducir la llegada heroica de los Guardianes y romper la cuarta pared para invitar al espectador a descubrir la palabra mágica del cofre dorado.",
+    "estructura": "Planteamiento cómico-mágico del conflicto (Don Caos borra letras y colores) -> Giro de urgencia heroica (llegada de los Guardianes y diagnóstico de emergencia) -> Invitación misteriosa e interactiva (aparición del cofre dorado y llamado directo al espectador).",
+    "beats_narrativos": [
+      {
+        "id": "bn1",
+        "beats_01": [
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5"
+        ],
+        "segmento_genero": 0,
+        "intencion": "Mostrar con humor juguetón y asombro mágico cómo Don Caos deja el libro en blanco y apaga el arcoíris de la ventana.",
+        "enfatizar": "El efecto mágico del rayo morado sobre las letras que vuelan como mariposas, el arcoíris volviéndose gris y la risa traviesa sin maldad de Don Caos.",
+        "ocultar": "La llegada inminente de los Guardianes hasta que Don Caos se da por satisfecho.",
+        "ritmo": "Juguetón y contrastado entre los disparos rápidos del rayo y la pausa de bostezo cómico de Don Caos."
+      },
+      {
+        "id": "bn2",
+        "beats_01": [
+          "a6",
+          "a7",
+          "a8",
+          "a9",
+          "a10",
+          "a11",
+          "a12"
+        ],
+        "segmento_genero": 1,
+        "intencion": "Inyectar energía heroica y urgencia colorida con el aterrizaje de los cuatro Guardianes y la confirmación de la emergencia.",
+        "enfatizar": "El contraste de las cuatro luces de colores frente a la habitación apagada, la lectura del visor de Spark y la reacción acelerada de Pintor.",
+        "ocultar": "El origen y aparición del cofre dorado hasta que se declara la emergencia total.",
+        "ritmo": "Ágil y dinámico, acelerándose desde el aterrizaje grupal hasta el remate alarmado de Pintor."
+      },
+      {
+        "id": "bn3",
+        "beats_01": [
+          "a13",
+          "a14",
+          "a15",
+          "a16",
+          "a17",
+          "a18",
+          "a19",
+          "a20",
+          "a21",
+          "a22",
+          "a23",
+          "a24",
+          "a25"
+        ],
+        "segmento_genero": 2,
+        "intencion": "Despertar intriga mágica con la aparición del cofre de tres candados y crear complicidad directa señalando al niño espectador como el elegido.",
+        "enfatizar": "El brillo de los tres candados del cofre dorado, el giro sincronizado hacia cámara y la promesa misteriosa de Spark.",
+        "ocultar": "Cuál es la palabra mágica que guarda el cofre.",
+        "ritmo": "Medido y envolvente, con una pausa de suspenso en el giro lento hacia cámara antes del susurro colectivo."
+      }
+    ]
+  },
+  "vinetas": [
+    {
+      "id": "v1",
+      "orden": 1,
+      "t": [
+        0.0,
+        3.0
+      ],
+      "beats_01": [
+        "a1"
+      ],
+      "beat_narrativo": "bn1",
+      "segmento_genero": 0,
+      "intencion_narrativa": "Impactar visualmente con el disparo del rayo morado de Don Caos que hace volar las letras del libro de cuentos.",
+      "beats_visuales": [
+        "Las letras del libro abierto sobre la cama tiemblan en silencio.",
+        "Don Caos apunta y dispara un rayo morado que hace volar las letras como mariposas hasta dejar el papel en blanco."
+      ],
+      "secuencia": "Detalle del libro afectado por la magia pasando al encuadre más cerrado del efecto.",
+      "director_imagen": {
+        "plano": "MS",
+        "angulo": "HIGHANGLE",
+        "lente_mm": 35,
+        "perspectiva": "Picado ligero sobre la cama que muestra a Don Caos a la izquierda apuntando al libro abierto a la derecha.",
+        "dsl_encuadre": "/MS /HIGHANGLE /LENS35 /SINGLE",
+        "en_cuadro": [
+          {
+            "id": "ch-don-caos-7adf",
+            "lado": "L",
+            "profundidad": "medio",
+            "mira_a": "obj-libro-cuentos__e1-8",
+            "orientacion": "perfil derecho"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-libro-cuentos__e1-8",
+            "lado": "R",
+            "estado": "abierto sobre la cama mientras sus letras salen volando como mariposas y queda en blanco",
+            "profundidad": "frente"
+          },
+          {
+            "nombre": "obj-rayo-confundidor",
+            "lado": "L",
+            "estado": "disparando un rayo morado brillante",
+            "profundidad": "medio"
+          }
+        ],
+        "composicion": "Diagonal dinámica trazada por el rayo morado desde Don Caos en el tercio izquierdo hacia el libro de cuentos en primer término derecho.",
+        "continuidad_con_anterior": "Inicio de la escena en la habitación con luz diurna."
+      },
+      "actuacion": [
+        {
+          "id": "ch-don-caos-7adf",
+          "expresion": "Travieso con cejas arqueadas y ojos girando de entusiasmo",
+          "gestos": "Señala el libro con su pistola de rayos morada al disparar",
+          "postura": "De pie con el cuerpo inclinado hacia adelante",
+          "movimiento": "Levanta el brazo y dispara hacia el libro",
+          "intensidad": 4
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-1s: /STATIC 1-3s: /DOLLYIN:MS>MCU:BRISK",
+        "encuadre_inicio": "MS",
+        "encuadre_fin": "MCU",
+        "velocidad": "BRISK",
+        "motivacion": "Acentuar la sorpresa mágica cuando el rayo morado impacta el libro y las letras despegan."
+      },
+      "ritmo": {
+        "duracion_s": 3.0,
+        "pausas": [
+          {
+            "t": [
+              0.0,
+              0.5
+            ],
+            "motivo": "Breve silencio inicial mientras las letras tiemblan antes del disparo."
+          }
+        ]
+      },
+      "transicion_salida": {
+        "tipo": "CORTE",
+        "motivo": "Pasar a la reacción burlona y risa de Don Caos tras borrar las letras."
+      },
+      "audio": [
+        {
+          "tipo": "sonido",
+          "quien": "EFECTO",
+          "t": [
+            0.5,
+            2.8
+          ],
+          "texto": "¡ZAP! Rayo morado cruza la pantalla y aleteo mágico de letras volando."
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Traje morado con botones desordenados, sombrero de copa y bufanda a rayas de Don Caos",
+          "Cama en el dormitorio iluminado de día"
+        ],
+        "eje": "ch-don-caos-7adf-libro",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": [
+          {
+            "que": "objetos",
+            "personaje": "ch-don-caos-7adf",
+            "antes": "obj-libro-cuentos__e1-8 con letras impresas en sus páginas",
+            "despues": "obj-libro-cuentos__e1-8 con las páginas completamente en blanco",
+            "beat_01": "a1"
+          }
+        ]
+      },
+      "justificacion": {
+        "emocion_buscada": "Sorpresa y curiosidad",
+        "por_que": "El inicio silencioso roto por el rayo morado y las letras volando como mariposas engancha de inmediato con maravilla mágica sin asustar al público infantil."
+      }
+    },
+    {
+      "id": "v2",
+      "orden": 2,
+      "t": [
+        3.0,
+        9.0
+      ],
+      "beats_01": [
+        "a2"
+      ],
+      "beat_narrativo": "bn1",
+      "segmento_genero": 0,
+      "intencion_narrativa": "Presentar el carácter cómico e inofensivo de Don Caos celebrando su travesura.",
+      "beats_visuales": [
+        "Don Caos se ríe con gesto teatral mirando el libro en blanco.",
+        "Abre los brazos ufano celebrando que nadie podrá leer cuentos."
+      ],
+      "secuencia": "Plano cercano de reacción cómica que se abre para mostrar su pose fanfarrona.",
+      "director_imagen": {
+        "plano": "CU",
+        "angulo": "LOWANGLE",
+        "lente_mm": 24,
+        "perspectiva": "Contrapicado cómico que exagera la pequeñez redonda y el sombrero torcido de Don Caos.",
+        "dsl_encuadre": "/CU /LOWANGLE /LENS24 /SINGLE",
+        "en_cuadro": [
+          {
+            "id": "ch-don-caos-7adf",
+            "lado": "L",
+            "profundidad": "frente",
+            "mira_a": "obj-libro-cuentos__e1-8",
+            "orientacion": "tres cuartos derecha"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-rayo-confundidor",
+            "lado": "L",
+            "estado": "sujeto en la mano de Don Caos",
+            "profundidad": "frente"
+          },
+          {
+            "nombre": "obj-libro-cuentos__e1-8",
+            "lado": "R",
+            "estado": "abierto con las páginas en blanco sobre la cama",
+            "profundidad": "medio"
+          }
+        ],
+        "composicion": "Don Caos domina el tercio izquierdo en contrapicado con el libro en blanco visible a la derecha para mantener clara la relación espacial.",
+        "continuidad_con_anterior": "Mantiene a Don Caos a la izquierda mirando hacia el libro a la derecha, cambiando tamaño de plano y ángulo."
+      },
+      "actuacion": [
+        {
+          "id": "ch-don-caos-7adf",
+          "expresion": "Divertido, riendo a carcajadas con bigote enrollado",
+          "gestos": "Sacude los hombros al reír y gesticula con teatralidad cómica",
+          "postura": "De pie con el pecho inflado de orgullo travieso",
+          "movimiento": "Pequeños rebotes cómicos en su sitio mientras habla",
+          "intensidad": 4
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-6s: /DOLLYOUT:CU>MS:SLOW",
+        "encuadre_inicio": "CU",
+        "encuadre_fin": "MS",
+        "velocidad": "SLOW",
+        "motivacion": "Revelar gradualmente el cuerpo pequeñito de Don Caos junto al libro en blanco para reforzar la comedia."
+      },
+      "ritmo": {
+        "duracion_s": 6.0,
+        "pausas": []
+      },
+      "transicion_salida": {
+        "tipo": "CORTE_SECO",
+        "motivo": "Cortar con ritmo cómico al segundo disparo hacia la ventana."
+      },
+      "audio": [
+        {
+          "tipo": "dialogo",
+          "quien": "ch-don-caos-7adf",
+          "t": [
+            3.0,
+            9.0
+          ],
+          "texto": "[riendo, con voz de malo que no da miedo] ¡Jajajá! ¡Sin letras no hay cuentos! ¡Y sin cuentos… todos a la cama sin leer!"
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Vestuario de Don Caos y su pistola de rayos",
+          "Libro de cuentos en blanco a la derecha",
+          "Don Caos en el lado izquierdo del encuadre"
+        ],
+        "eje": "ch-don-caos-7adf-libro",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": []
+      },
+      "justificacion": {
+        "emocion_buscada": "Diversión",
+        "por_que": "El contrapicado con lente angular de 24 mm que se aleja subraya que Don Caos es diminuto y gracioso, logrando que su risa resulte simpática."
+      }
+    },
+    {
+      "id": "v3",
+      "orden": 3,
+      "t": [
+        9.0,
+        11.0
+      ],
+      "beats_01": [
+        "a3"
+      ],
+      "beat_narrativo": "bn1",
+      "segmento_genero": 0,
+      "intencion_narrativa": "Escalar la travesura mostrando cómo Don Caos apaga el color del arcoíris en la ventana.",
+      "beats_visuales": [
+        "Don Caos señala hacia la ventana del cuarto y lanza otro rayo morado.",
+        "El arcoíris brillante de la ventana pierde su color y se vuelve completamente gris."
+      ],
+      "secuencia": "Plano general de la habitación que conecta el disparo de Don Caos con la transformación del arcoíris.",
+      "director_imagen": {
+        "plano": "WS",
+        "angulo": "EYELEVEL",
+        "lente_mm": 24,
+        "perspectiva": "Vista amplia a nivel de ojos de la habitación mostrando la cama y la ventana al fondo a la derecha.",
+        "dsl_encuadre": "/WS /EYELEVEL /LENS24 /SINGLE",
+        "en_cuadro": [
+          {
+            "id": "ch-don-caos-7adf",
+            "lado": "L",
+            "profundidad": "medio",
+            "mira_a": "Ventana con vista al arcoíris",
+            "orientacion": "tres cuartos derecha"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-rayo-confundidor",
+            "lado": "L",
+            "estado": "disparando un segundo rayo morado hacia la ventana",
+            "profundidad": "medio"
+          },
+          {
+            "nombre": "Ventana con vista al arcoíris",
+            "lado": "R",
+            "estado": "el arcoíris exterior pierde sus colores y se vuelve gris",
+            "profundidad": "fondo"
+          },
+          {
+            "nombre": "obj-libro-cuentos__e1-8",
+            "lado": "C",
+            "estado": "abierto y en blanco sobre la cama",
+            "profundidad": "medio"
+          }
+        ],
+        "composicion": "Profundidad clara desde Don Caos en el lado izquierdo hasta la ventana del fondo a la derecha, unidas por el haz morado.",
+        "continuidad_con_anterior": "Conserva a Don Caos en el lado izquierdo y abre a plano general a nivel de ojos para mostrar la ventana."
+      },
+      "actuacion": [
+        {
+          "id": "ch-don-caos-7adf",
+          "expresion": "Burlón con sonrisa pícara",
+          "gestos": "Señala con el brazo extendido hacia la ventana",
+          "postura": "De pie girado hacia la ventana",
+          "movimiento": "Extiende el brazo disparando hacia el arcoíris",
+          "intensidad": 4
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-2s: /PAN:R:BRISK",
+        "encuadre_inicio": "WS",
+        "encuadre_fin": "WS",
+        "velocidad": "BRISK",
+        "motivacion": "Seguir la trayectoria del rayo morado desde Don Caos hasta el arcoíris que se vuelve gris."
+      },
+      "ritmo": {
+        "duracion_s": 2.0,
+        "pausas": []
+      },
+      "transicion_salida": {
+        "tipo": "CORTE",
+        "motivo": "Pasar a la declaración aburrida de Don Caos tras apagar los colores."
+      },
+      "audio": [
+        {
+          "tipo": "sonido",
+          "quien": "EFECTO",
+          "t": [
+            9.1,
+            10.8
+          ],
+          "texto": "¡ZAP! Sonido de descarga mágica y desvanecimiento del color."
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Vestuario de Don Caos",
+          "Libro de cuentos abierto y en blanco sobre la cama",
+          "Don Caos en el lado izquierdo"
+        ],
+        "eje": "ch-don-caos-7adf-ventana",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": [
+          {
+            "que": "objetos",
+            "personaje": "ch-don-caos-7adf",
+            "antes": "Ventana con vista al arcoíris de colores vivos",
+            "despues": "Ventana con vista al arcoíris completamente gris",
+            "beat_01": "a3"
+          },
+          {
+            "que": "luz",
+            "personaje": "ch-don-caos-7adf",
+            "antes": "Luz diurna cálida con reflejos de arcoíris",
+            "despues": "Luz diurna desaturada con reflejo gris de la ventana",
+            "beat_01": "a3"
+          }
+        ]
+      },
+      "justificacion": {
+        "emocion_buscada": "Asombro y sorpresa cómica",
+        "por_que": "El plano general con paneo rápido permite ver de forma clara la causa y el efecto mágico sobre el arcoíris de la ventana."
+      }
+    },
+    {
+      "id": "v4",
+      "orden": 4,
+      "t": [
+        11.0,
+        18.0
+      ],
+      "beats_01": [
+        "a4",
+        "a5"
+      ],
+      "beat_narrativo": "bn1",
+      "segmento_genero": 0,
+      "intencion_narrativa": "Rematar la comedia de Don Caos bostezando de satisfacción porque el mundo quedó aburrido.",
+      "beats_visuales": [
+        "Don Caos se despide de los colores y números mirando la ventana gris y da un gran bostezo.",
+        "Camina satisfecho hacia la cama arrastrando su bufanda a rayas."
+      ],
+      "secuencia": "Preparación cómica en encuadre estable, pausa en el bostezo y acompañamiento mientras camina.",
+      "director_imagen": {
+        "plano": "MS",
+        "angulo": "LOWANGLE",
+        "lente_mm": 35,
+        "perspectiva": "Contrapicado suave desde la altura del colchón con la ventana gris al fondo.",
+        "dsl_encuadre": "/MS /LOWANGLE /LENS35 /SINGLE",
+        "en_cuadro": [
+          {
+            "id": "ch-don-caos-7adf",
+            "lado": "L",
+            "profundidad": "medio",
+            "mira_a": "Ventana con vista al arcoíris",
+            "orientacion": "tres cuartos derecha"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-rayo-confundidor",
+            "lado": "L",
+            "estado": "guardado en mano de Don Caos sin disparar",
+            "profundidad": "medio"
+          },
+          {
+            "nombre": "Ventana con vista al arcoíris",
+            "lado": "R",
+            "estado": "con el arcoíris gris al fondo",
+            "profundidad": "fondo"
+          },
+          {
+            "nombre": "obj-libro-cuentos__e1-8",
+            "lado": "C",
+            "estado": "abierto con páginas en blanco sobre la cama",
+            "profundidad": "medio"
+          }
+        ],
+        "composicion": "Encuadre limpio con Don Caos en el tercio izquierdo y la ventana gris en el tercio derecho reforzando el mundo aburrido.",
+        "continuidad_con_anterior": "Mantiene el eje entre Don Caos a la izquierda y la ventana gris a la derecha, cerrando a plano medio en contrapicado."
+      },
+      "actuacion": [
+        {
+          "id": "ch-don-caos-7adf",
+          "expresion": "Pasa de burlón a aburrido al bostezar y termina con sonrisa satisfecha",
+          "gestos": "Se lleva una mano a la boca al bostezar exageradamente",
+          "postura": "De pie relajado y luego caminando con paso ufano",
+          "movimiento": "Camina de izquierda a derecha mirando hacia la cama entre los segundos 15.5 y 18.0",
+          "intensidad": 3
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-4.5s: /STATIC 4.5-7s: /TRACK:L2R:SLOW",
+        "encuadre_inicio": "MS",
+        "encuadre_fin": "MS",
+        "velocidad": "SLOW",
+        "motivacion": "Mantener fijo el encuadre para el timing cómico del bostezo y luego acompañar el paseo satisfecho de Don Caos."
+      },
+      "ritmo": {
+        "duracion_s": 7.0,
+        "pausas": [
+          {
+            "t": [
+              14.0,
+              15.0
+            ],
+            "motivo": "Pausa cómica durante el bostezo antes de decir que le gusta lo aburrido."
+          }
+        ]
+      },
+      "transicion_salida": {
+        "tipo": "CORTE_SECO",
+        "motivo": "Romper de golpe la calma aburrida de Don Caos con el aterrizaje explosivo de las luces de los Guardianes."
+      },
+      "audio": [
+        {
+          "tipo": "dialogo",
+          "quien": "ch-don-caos-7adf",
+          "t": [
+            11.0,
+            17.5
+          ],
+          "texto": "¡Y adiós colores! ¡Y adiós números! Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta."
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Arcoíris gris en la ventana del fondo",
+          "Libro de cuentos en blanco sobre la cama",
+          "Vestuario y bufanda larga de Don Caos"
+        ],
+        "eje": "ch-don-caos-7adf-ventana",
+        "direccion_pantalla": "L2R",
+        "cambios_declarados": [
+          {
+            "que": "direccion_pantalla",
+            "personaje": "ch-don-caos-7adf",
+            "antes": "neutral",
+            "despues": "L2R",
+            "beat_01": "a5"
+          }
+        ]
+      },
+      "justificacion": {
+        "emocion_buscada": "Diversión y expectativa",
+        "por_que": "La calma estática del bostezo crea el contraste cómico perfecto antes del corte rápido que introduce la acción heroica del siguiente segmento."
+      }
+    },
+    {
+      "id": "v5",
+      "orden": 5,
+      "t": [
+        18.0,
+        21.0
+      ],
+      "beats_01": [
+        "a6",
+        "a7",
+        "a8",
+        "a9",
+        "a10"
+      ],
+      "beat_narrativo": "bn2",
+      "segmento_genero": 1,
+      "intencion_narrativa": "Desatar entusiasmo y energía heroica con el aterrizaje de las cuatro luces de colores que se transforman en los Guardianes.",
+      "beats_visuales": [
+        "Cuatro haces de luz azul, magenta, verde y amarillo aterrizan en el centro de la habitación.",
+        "Las luces revelan a Spark, Valentina, Eco con Piquito en su hombro izquierdo y Pintor en postura de alerta."
+      ],
+      "secuencia": "Revelación amplia y energética del equipo completo aterrizando en el dormitorio.",
+      "director_imagen": {
+        "plano": "WS",
+        "angulo": "EYELEVEL",
+        "lente_mm": 24,
+        "perspectiva": "Plano general frontal del centro de la habitación que destaca la llegada luminosa del equipo completo.",
+        "dsl_encuadre": "/WS /EYELEVEL /LENS24 /GROUPSHOT",
+        "en_cuadro": [
+          {
+            "id": "ch-valentina-a9be",
+            "lado": "L",
+            "profundidad": "medio",
+            "mira_a": "Centro de la habitación",
+            "orientacion": "tres cuartos derecha"
+          },
+          {
+            "id": "ch-spark-468e",
+            "lado": "C",
+            "profundidad": "medio",
+            "mira_a": "Centro de la habitación",
+            "orientacion": "frontal"
+          },
+          {
+            "id": "ch-eco-eff3",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "Centro de la habitación",
+            "orientacion": "tres cuartos izquierda"
+          },
+          {
+            "id": "ch-piquito-030a",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "Centro de la habitación",
+            "orientacion": "tres cuartos izquierda"
+          },
+          {
+            "id": "ch-pintor-bce0",
+            "lado": "R",
+            "profundidad": "frente",
+            "mira_a": "Centro de la habitación",
+            "orientacion": "tres cuartos izquierda"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-visor-spark",
+            "lado": "C",
+            "estado": "encendido sobre los ojos de Spark",
+            "profundidad": "medio"
+          },
+          {
+            "nombre": "obj-libro-cuentos__e1-8",
+            "lado": "L",
+            "estado": "abierto y en blanco sobre la cama al fondo",
+            "profundidad": "fondo"
+          },
+          {
+            "nombre": "Ventana con vista al arcoíris",
+            "lado": "R",
+            "estado": "con el arcoíris gris al fondo",
+            "profundidad": "fondo"
+          }
+        ],
+        "composicion": "Formación heroica en abanico con Valentina a la izquierda, Spark al centro y Eco con Piquito y Pintor a la derecha devolviendo el color al centro del cuadro.",
+        "continuidad_con_anterior": "Corte rápido al centro de la habitación conservando al fondo la cama con el libro en blanco y la ventana con el arcoíris gris."
+      },
+      "actuacion": [
+        {
+          "id": "ch-spark-468e",
+          "expresion": "Alerta y concentrado",
+          "gestos": "Manos listas a los costados al materializarse",
+          "postura": "De pie firme tras aterrizar",
+          "movimiento": "Aterriza como luz azul y se incorpora en pose heroica",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-valentina-a9be",
+          "expresion": "Alerta y decidida",
+          "gestos": "Capa rosa ondeando al aterrizar",
+          "postura": "De pie en guardia",
+          "movimiento": "Aterriza como luz magenta a la izquierda del grupo",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-eco-eff3",
+          "expresion": "Alerta y atenta",
+          "gestos": "Brazos equilibrados tras el aterrizaje",
+          "postura": "De pie lista para actuar",
+          "movimiento": "Aterriza como luz verde a la derecha del grupo",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-pintor-bce0",
+          "expresion": "Alerta con ojos muy abiertos",
+          "gestos": "Sujeta su boina roja al aterrizar",
+          "postura": "De pie con rodillas flexionadas de impulso",
+          "movimiento": "Aterriza como luz amarilla en el lado derecho",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-piquito-030a",
+          "expresion": "Alerta con plumitas del copete erguidas",
+          "gestos": "Abre sus alitas cortas manteniendo el equilibrio",
+          "postura": "De pie sobre el hombro izquierdo de Eco",
+          "movimiento": "Aparece junto a Eco en su hombro izquierdo",
+          "intensidad": 4
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-3s: /CRANE:DOWN:BRISK",
+        "encuadre_inicio": "WS",
+        "encuadre_fin": "WS",
+        "velocidad": "BRISK",
+        "motivacion": "Acompañar verticalmente el descenso de las cuatro luces de colores hasta que los héroes tocan el suelo."
+      },
+      "ritmo": {
+        "duracion_s": 3.0,
+        "pausas": []
+      },
+      "transicion_salida": {
+        "tipo": "CORTE",
+        "motivo": "Pasar de inmediato al diagnóstico urgente de Spark en su visor."
+      },
+      "audio": [
+        {
+          "tipo": "sonido",
+          "quien": "EFECTO",
+          "t": [
+            18.0,
+            20.8
+          ],
+          "texto": "Cuatro destellos sónicos de energía aterrizando y acorde heroico brillante."
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Pijamas característicos de cada Guardián",
+          "Piquito amarillo siempre en el hombro izquierdo de Eco",
+          "Ventana con arcoíris gris y libro en blanco en la habitación"
+        ],
+        "eje": "ch-spark-468e-ch-pintor-bce0",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": [
+          {
+            "que": "posicion",
+            "personaje": "ch-spark-468e",
+            "antes": "fuera de la habitación",
+            "despues": "en el centro de la habitación (C)",
+            "beat_01": "a6"
+          },
+          {
+            "que": "posicion",
+            "personaje": "ch-valentina-a9be",
+            "antes": "fuera de la habitación",
+            "despues": "en el lado izquierdo de la habitación (L)",
+            "beat_01": "a7"
+          },
+          {
+            "que": "posicion",
+            "personaje": "ch-eco-eff3",
+            "antes": "fuera de la habitación",
+            "despues": "en el lado derecho de la habitación (R)",
+            "beat_01": "a8"
+          },
+          {
+            "que": "posicion",
+            "personaje": "ch-pintor-bce0",
+            "antes": "fuera de la habitación",
+            "despues": "en el lado derecho de la habitación (R)",
+            "beat_01": "a9"
+          },
+          {
+            "que": "posicion",
+            "personaje": "ch-piquito-030a",
+            "antes": "fuera de la habitación",
+            "despues": "en el hombro izquierdo de Eco (R)",
+            "beat_01": "a10"
+          },
+          {
+            "que": "direccion_pantalla",
+            "personaje": "ch-spark-468e",
+            "antes": "L2R",
+            "despues": "neutral",
+            "beat_01": "a6"
+          },
+          {
+            "que": "eje",
+            "personaje": "ch-spark-468e",
+            "antes": "ch-don-caos-7adf-ventana",
+            "despues": "ch-spark-468e-ch-pintor-bce0",
+            "beat_01": "a6"
+          }
+        ]
+      },
+      "justificacion": {
+        "emocion_buscada": "Entusiasmo y emoción heroica",
+        "por_que": "El descenso de grúa en plano general resalta la llegada luminosa y coordinada de los cuatro superhéroes preescolares."
+      }
+    },
+    {
+      "id": "v6",
+      "orden": 6,
+      "t": [
+        21.0,
+        25.0
+      ],
+      "beats_01": [
+        "a11"
+      ],
+      "beat_narrativo": "bn2",
+      "segmento_genero": 1,
+      "intencion_narrativa": "Subrayar la gravedad de la misión cuando Spark consulta su visor y detecta cero letras en el mundo.",
+      "beats_visuales": [
+        "Spark observa los datos holográficos en su visor azul con gesto preocupado.",
+        "Valentina lo observa atenta desde la izquierda mientras el visor marca cero."
+      ],
+      "secuencia": "Acercamiento hacia el líder del equipo verificando el problema en su visor.",
+      "director_imagen": {
+        "plano": "MCU",
+        "angulo": "LOWANGLE",
+        "lente_mm": 35,
+        "perspectiva": "Contrapicado heroico sobre Spark en el centro con Valentina en segundo término a la izquierda.",
+        "dsl_encuadre": "/MCU /LOWANGLE /LENS35 /TWOSHOT",
+        "en_cuadro": [
+          {
+            "id": "ch-valentina-a9be",
+            "lado": "L",
+            "profundidad": "medio",
+            "mira_a": "ch-spark-468e",
+            "orientacion": "tres cuartos derecha"
+          },
+          {
+            "id": "ch-spark-468e",
+            "lado": "C",
+            "profundidad": "frente",
+            "mira_a": "obj-visor-spark",
+            "orientacion": "frontal"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-visor-spark",
+            "lado": "C",
+            "estado": "proyectando un holograma azul de alerta con el número cero",
+            "profundidad": "frente"
+          }
+        ],
+        "composicion": "Spark ocupa el centro con el resplandor azul del visor iluminando su expresión preocupada y Valentina equilibrando el tercio izquierdo.",
+        "continuidad_con_anterior": "Respeta las posiciones del grupo con Valentina a la izquierda y Spark en el centro, cerrando a plano medio corto en contrapicado."
+      },
+      "actuacion": [
+        {
+          "id": "ch-spark-468e",
+          "expresion": "Preocupado con una ceja levantada mirando el holograma",
+          "gestos": "Toca el borde de su visor transparente azul",
+          "postura": "De pie erguido",
+          "movimiento": "Inclina levemente la cabeza leyendo los datos del visor",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-valentina-a9be",
+          "expresion": "Preocupada y atenta",
+          "gestos": "Manos juntas cerca del pecho",
+          "postura": "De pie",
+          "movimiento": "Mira hacia el visor de Spark",
+          "intensidad": 3
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-4s: /DOLLYIN:MCU>CU:SLOW",
+        "encuadre_inicio": "MCU",
+        "encuadre_fin": "CU",
+        "velocidad": "SLOW",
+        "motivacion": "Acercarse al rostro y visor de Spark para enfatizar el dato crítico de cero letras en el mundo."
+      },
+      "ritmo": {
+        "duracion_s": 4.0,
+        "pausas": []
+      },
+      "transicion_salida": {
+        "tipo": "CORTE_SECO",
+        "motivo": "Pasar de inmediato al estallido cómico y acelerado de Pintor."
+      },
+      "audio": [
+        {
+          "tipo": "dialogo",
+          "quien": "ch-spark-468e",
+          "t": [
+            21.0,
+            25.0
+          ],
+          "texto": "[preocupado, mirando su visor] Alerta. Nivel de letras en el mundo: cero."
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Pijama azul con rayos amarillos y visor azul de Spark",
+          "Pijama magenta y capa rosa de Valentina",
+          "Orden espacial Valentina (L) y Spark (C) sobre el eje"
+        ],
+        "eje": "ch-spark-468e-ch-pintor-bce0",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": []
+      },
+      "justificacion": {
+        "emocion_buscada": "Alerta e intriga",
+        "por_que": "El dolly in lento en contrapicado le da peso de misión heroica a la lectura del visor de Spark."
+      }
+    },
+    {
+      "id": "v7",
+      "orden": 7,
+      "t": [
+        25.0,
+        30.0
+      ],
+      "beats_01": [
+        "a12"
+      ],
+      "beat_narrativo": "bn2",
+      "segmento_genero": 1,
+      "intencion_narrativa": "Elevar la urgencia cómica con la reacción rapidísima de Pintor declarando la emergencia de nivel arcoíris.",
+      "beats_visuales": [
+        "Pintor señala alarmado hacia Spark hablando a toda velocidad.",
+        "Eco y Piquito en su hombro izquierdo reaccionan sorprendidos junto a él."
+      ],
+      "secuencia": "Reacción energética del lado derecho del equipo completando el diagnóstico del problema.",
+      "director_imagen": {
+        "plano": "MS",
+        "angulo": "EYELEVEL",
+        "lente_mm": 28,
+        "perspectiva": "Plano medio a nivel de ojos que encuadra a Spark en el centro y a Pintor, Eco y Piquito a la derecha.",
+        "dsl_encuadre": "/MS /EYELEVEL /LENS28 /GROUPSHOT",
+        "en_cuadro": [
+          {
+            "id": "ch-spark-468e",
+            "lado": "C",
+            "profundidad": "medio",
+            "mira_a": "ch-pintor-bce0",
+            "orientacion": "tres cuartos derecha"
+          },
+          {
+            "id": "ch-pintor-bce0",
+            "lado": "R",
+            "profundidad": "frente",
+            "mira_a": "ch-spark-468e",
+            "orientacion": "tres cuartos izquierda"
+          },
+          {
+            "id": "ch-eco-eff3",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "ch-pintor-bce0",
+            "orientacion": "tres cuartos izquierda"
+          },
+          {
+            "id": "ch-piquito-030a",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "ch-pintor-bce0",
+            "orientacion": "tres cuartos izquierda"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-visor-spark",
+            "lado": "C",
+            "estado": "encendido sobre los ojos de Spark",
+            "profundidad": "medio"
+          }
+        ],
+        "composicion": "Pintor destaca en primer término derecho señalando hacia Spark en el centro, mientras Eco y Piquito acompañan la reacción.",
+        "continuidad_con_anterior": "Mantiene el eje de 180 grados con Spark en el centro mirando a la derecha y Pintor con Eco y Piquito en la derecha mirando a la izquierda."
+      },
+      "actuacion": [
+        {
+          "id": "ch-pintor-bce0",
+          "expresion": "Alarmado con ojos enormes y expresivos",
+          "gestos": "Señala con energía hacia Spark y agita las manos manchadas de pintura",
+          "postura": "De pie inclinado hacia adelante con urgencia",
+          "movimiento": "Gesticula rapidísimo al ritmo de sus exclamaciones",
+          "intensidad": 5
+        },
+        {
+          "id": "ch-spark-468e",
+          "expresion": "Atento escuchando a Pintor",
+          "gestos": "Baja las manos observando a su amigo",
+          "postura": "De pie",
+          "movimiento": "Gira el rostro hacia Pintor",
+          "intensidad": 3
+        },
+        {
+          "id": "ch-eco-eff3",
+          "expresion": "Sorprendida",
+          "gestos": "Abre las manos con asombro",
+          "postura": "De pie junto a Pintor",
+          "movimiento": "Mira a Pintor asentir",
+          "intensidad": 3
+        },
+        {
+          "id": "ch-piquito-030a",
+          "expresion": "Alarmado de forma cómica",
+          "gestos": "Se tapa los ojos con sus alitas cortas",
+          "postura": "De pie en el hombro izquierdo de Eco",
+          "movimiento": "Da un brinquito en el hombro de Eco",
+          "intensidad": 4
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-1.5s: /PAN:R:BRISK 1.5-5s: /STATIC",
+        "encuadre_inicio": "MS",
+        "encuadre_fin": "MS",
+        "velocidad": "BRISK",
+        "motivacion": "Desplazar rápidamente la atención hacia Pintor al estallar su diálogo veloz y dejar estable el encuadre para apreciar su actuación cómica."
+      },
+      "ritmo": {
+        "duracion_s": 5.0,
+        "pausas": []
+      },
+      "transicion_salida": {
+        "tipo": "CORTE",
+        "motivo": "Abrir el plano para revelar la aparición mágica del cofre dorado en el centro de la habitación."
+      },
+      "audio": [
+        {
+          "tipo": "dialogo",
+          "quien": "ch-pintor-bce0",
+          "t": [
+            25.0,
+            30.0
+          ],
+          "texto": "[hablando rapidísimo] ¡Cero letras! ¡Cero colores! ¡Cero todo! ¡Esto es una emergencia de nivel arcoíris!"
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Pijama amarillo con manchas de pintura y boina roja de Pintor",
+          "Piquito amarillo en el hombro izquierdo de Eco",
+          "Spark en el centro y Pintor, Eco y Piquito a la derecha"
+        ],
+        "eje": "ch-spark-468e-ch-pintor-bce0",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": []
+      },
+      "justificacion": {
+        "emocion_buscada": "Emoción y humor",
+        "por_que": "El paneo rápido seguido de cámara fija permite que la actuación acelerada de Pintor y el gesto de Piquito funcionen con claridad cómica."
+      }
+    },
+    {
+      "id": "v8",
+      "orden": 8,
+      "t": [
+        30.0,
+        33.0
+      ],
+      "beats_01": [
+        "a13",
+        "a14"
+      ],
+      "beat_narrativo": "bn3",
+      "segmento_genero": 2,
+      "intencion_narrativa": "Introducir el misterio mágico con la aparición del cofre dorado de tres candados frente a los héroes sorprendidos.",
+      "beats_visuales": [
+        "En el centro de la habitación aparece flotando y posándose un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra.",
+        "Spark y el resto del equipo miran el cofre con asombro."
+      ],
+      "secuencia": "Revelación mágica del objeto clave en el centro del grupo seguida de acercamiento.",
+      "director_imagen": {
+        "plano": "FS",
+        "angulo": "HIGHANGLE",
+        "lente_mm": 24,
+        "perspectiva": "Picado que enmarca el cofre dorado en primer término central rodeado por los Guardianes en semicírculo.",
+        "dsl_encuadre": "/FS /HIGHANGLE /LENS24 /GROUPSHOT",
+        "en_cuadro": [
+          {
+            "id": "ch-valentina-a9be",
+            "lado": "L",
+            "profundidad": "medio",
+            "mira_a": "obj-cofre-dorado",
+            "orientacion": "tres cuartos derecha"
+          },
+          {
+            "id": "ch-spark-468e",
+            "lado": "C",
+            "profundidad": "medio",
+            "mira_a": "obj-cofre-dorado",
+            "orientacion": "frontal"
+          },
+          {
+            "id": "ch-eco-eff3",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "obj-cofre-dorado",
+            "orientacion": "tres cuartos izquierda"
+          },
+          {
+            "id": "ch-piquito-030a",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "obj-cofre-dorado",
+            "orientacion": "tres cuartos izquierda"
+          },
+          {
+            "id": "ch-pintor-bce0",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "obj-cofre-dorado",
+            "orientacion": "tres cuartos izquierda"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-cofre-dorado",
+            "lado": "C",
+            "estado": "recién aparecido con tres candados brillantes (color, número y letra)",
+            "profundidad": "frente"
+          },
+          {
+            "nombre": "obj-visor-spark",
+            "lado": "C",
+            "estado": "encendido sobre los ojos de Spark",
+            "profundidad": "medio"
+          }
+        ],
+        "composicion": "El cofre dorado brilla en el centro inferior como punto focal de luz cálida mientras las miradas de todos los personajes convergen en él.",
+        "continuidad_con_anterior": "Mantiene las posiciones de Valentina (L), Spark (C) y Eco, Piquito y Pintor (R), cambiando a plano entero en ángulo picado."
+      },
+      "actuacion": [
+        {
+          "id": "ch-spark-468e",
+          "expresion": "Sorprendido y maravillado",
+          "gestos": "Abre ligeramente los brazos observando el cofre",
+          "postura": "De pie frente al cofre",
+          "movimiento": "Baja la mirada hacia el cofre dorado que aparece",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-valentina-a9be",
+          "expresion": "Asombrada",
+          "gestos": "Lleva una mano a su mejilla sonrojada",
+          "postura": "De pie a la izquierda",
+          "movimiento": "Observa los candados brillantes",
+          "intensidad": 3
+        },
+        {
+          "id": "ch-eco-eff3",
+          "expresion": "Curiosa y maravillada",
+          "gestos": "Se inclina un poco para ver los candados",
+          "postura": "De pie a la derecha",
+          "movimiento": "Mira el cofre dorado",
+          "intensidad": 3
+        },
+        {
+          "id": "ch-piquito-030a",
+          "expresion": "Curioso",
+          "gestos": "Inclinación de cabecita mirando el brillo dorado",
+          "postura": "De pie en el hombro izquierdo de Eco",
+          "movimiento": "Asoma el pico hacia el cofre",
+          "intensidad": 3
+        },
+        {
+          "id": "ch-pintor-bce0",
+          "expresion": "Fascinado",
+          "gestos": "Se queda quieto de golpe mirando los candados",
+          "postura": "De pie a la derecha",
+          "movimiento": "Fija la vista en el cofre",
+          "intensidad": 3
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-3s: /DOLLYIN:FS>MS:SLOW",
+        "encuadre_inicio": "FS",
+        "encuadre_fin": "MS",
+        "velocidad": "SLOW",
+        "motivacion": "Acercar al espectador hacia el misterio del cofre dorado y sus tres candados brillantes."
+      },
+      "ritmo": {
+        "duracion_s": 3.0,
+        "pausas": []
+      },
+      "transicion_salida": {
+        "tipo": "CORTE",
+        "motivo": "Pasar a Valentina explicando con suavidad el secreto del cofre."
+      },
+      "audio": [
+        {
+          "tipo": "sonido",
+          "quien": "EFECTO",
+          "t": [
+            30.0,
+            32.8
+          ],
+          "texto": "Acorde mágico cristalino al materializarse el cofre dorado con sus tres candados."
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Posiciones del equipo: Valentina (L), Spark (C), Eco, Piquito y Pintor (R)",
+          "Piquito amarillo en el hombro izquierdo de Eco"
+        ],
+        "eje": "ch-spark-468e-ch-pintor-bce0",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": [
+          {
+            "que": "objetos",
+            "personaje": "ch-spark-468e",
+            "antes": "espacio central sin cofre",
+            "despues": "obj-cofre-dorado con tres candados brillantes en el centro de la habitación",
+            "beat_01": "a13"
+          }
+        ]
+      },
+      "justificacion": {
+        "emocion_buscada": "Intriga y maravilla",
+        "por_que": "El picado con dolly in hacia el brillo del cofre dorado guía la mirada hacia los tres candados como pista central de la aventura."
+      }
+    },
+    {
+      "id": "v9",
+      "orden": 9,
+      "t": [
+        33.0,
+        40.0
+      ],
+      "beats_01": [
+        "a15"
+      ],
+      "beat_narrativo": "bn3",
+      "segmento_genero": 2,
+      "intencion_narrativa": "Conectar con el espectador a través de la voz suave de Valentina revelando que el cofre guarda una palabra mágica.",
+      "beats_visuales": [
+        "Valentina mira directamente a cámara con dulzura junto al cofre dorado.",
+        "Muestra el cofre explicando que al leer su palabra mágica en voz alta todo volverá a la normalidad."
+      ],
+      "secuencia": "Plano cercano de observación y complicidad con el público.",
+      "director_imagen": {
+        "plano": "MCU",
+        "angulo": "EYELEVEL",
+        "lente_mm": 50,
+        "perspectiva": "A nivel de ojos con lente de 50 mm para crear cercanía cálida con Valentina y el cofre brillante.",
+        "dsl_encuadre": "/MCU /EYELEVEL /LENS50 /TWOSHOT",
+        "en_cuadro": [
+          {
+            "id": "ch-valentina-a9be",
+            "lado": "L",
+            "profundidad": "medio",
+            "mira_a": "cámara",
+            "orientacion": "frontal"
+          },
+          {
+            "id": "ch-spark-468e",
+            "lado": "C",
+            "profundidad": "fondo",
+            "mira_a": "obj-cofre-dorado",
+            "orientacion": "tres cuartos izquierda"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-cofre-dorado",
+            "lado": "C",
+            "estado": "cerrado con sus tres candados brillando en primer término",
+            "profundidad": "frente"
+          },
+          {
+            "nombre": "obj-visor-spark",
+            "lado": "C",
+            "estado": "encendido sobre los ojos de Spark",
+            "profundidad": "fondo"
+          }
+        ],
+        "composicion": "Valentina se sitúa en el tercio izquierdo mirando a cámara mientras el cofre dorado resplandece en el tercio inferior central.",
+        "continuidad_con_anterior": "Mantiene a Valentina a la izquierda y a Spark con el cofre en el centro, pasando a plano medio corto a nivel de ojos."
+      },
+      "actuacion": [
+        {
+          "id": "ch-valentina-a9be",
+          "expresion": "Serena y cálida con sonrisa amplia y mejillas sonrojadas",
+          "gestos": "Extiende suavemente una mano hacia el cofre dorado mientras habla a cámara",
+          "postura": "De pie con porte tranquilo",
+          "movimiento": "Mira al frente conectando con el espectador",
+          "intensidad": 3
+        },
+        {
+          "id": "ch-spark-468e",
+          "expresion": "Atento y reflexivo",
+          "gestos": "Observa los candados del cofre",
+          "postura": "De pie en segundo término",
+          "movimiento": "Asiente suavemente escuchando a Valentina",
+          "intensidad": 2
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-3s: /STATIC 3-7s: /DOLLYIN:MCU>CU:VSLOW",
+        "encuadre_inicio": "MCU",
+        "encuadre_fin": "CU",
+        "velocidad": "VSLOW",
+        "motivacion": "Subrayar la importancia de la palabra mágica acercándose con delicadeza a Valentina."
+      },
+      "ritmo": {
+        "duracion_s": 7.0,
+        "pausas": [
+          {
+            "t": [
+              34.0,
+              34.6
+            ],
+            "motivo": "Pausa suave tras decir 'Esperen…' para captar la atención de los niños."
+          }
+        ]
+      },
+      "transicion_salida": {
+        "tipo": "CORTE",
+        "motivo": "Pasar al entusiasmo de Eco completando la condición para abrir el cofre."
+      },
+      "audio": [
+        {
+          "tipo": "dialogo",
+          "quien": "ch-valentina-a9be",
+          "t": [
+            33.0,
+            40.0
+          ],
+          "texto": "[suave, mirando a cámara] Esperen… este cofre guarda una palabra mágica. Si alguien la lee en voz alta, todo vuelve a la normalidad."
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Pijama magenta con corazones, capa rosa y Escudo de la Empatía de Valentina",
+          "Cofre dorado con tres candados en el centro",
+          "Valentina a la izquierda y Spark al centro"
+        ],
+        "eje": "ch-spark-468e-ch-pintor-bce0",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": []
+      },
+      "justificacion": {
+        "emocion_buscada": "Ilusión y confianza",
+        "por_que": "El lente de 50 mm a nivel de ojos con un acercamiento muy suave transmite ternura y misterio, haciendo que la regla del cofre se sienta mágica."
+      }
+    },
+    {
+      "id": "v10",
+      "orden": 10,
+      "t": [
+        40.0,
+        44.0
+      ],
+      "beats_01": [
+        "a16"
+      ],
+      "beat_narrativo": "bn3",
+      "segmento_genero": 2,
+      "intencion_narrativa": "Sumar valentía y entusiasmo cuando Eco declara que solo alguien muy valiente puede abrir el cofre.",
+      "beats_visuales": [
+        "Eco mira a Valentina llena de energía mientras Piquito aplaude con sus alitas desde su hombro izquierdo.",
+        "Valentina le devuelve la mirada con complicidad junto al cofre dorado."
+      ],
+      "secuencia": "Plano medio de interacción entre Eco y Valentina preparando el giro hacia el espectador.",
+      "director_imagen": {
+        "plano": "MS",
+        "angulo": "LOWANGLE",
+        "lente_mm": 35,
+        "perspectiva": "Contrapicado ligero que realza el entusiasmo valiente de Eco pese a ser la más bajita del grupo.",
+        "dsl_encuadre": "/MS /LOWANGLE /LENS35 /THREESHOT",
+        "en_cuadro": [
+          {
+            "id": "ch-valentina-a9be",
+            "lado": "L",
+            "profundidad": "medio",
+            "mira_a": "ch-eco-eff3",
+            "orientacion": "tres cuartos derecha"
+          },
+          {
+            "id": "ch-eco-eff3",
+            "lado": "R",
+            "profundidad": "frente",
+            "mira_a": "ch-valentina-a9be",
+            "orientacion": "tres cuartos izquierda"
+          },
+          {
+            "id": "ch-piquito-030a",
+            "lado": "R",
+            "profundidad": "frente",
+            "mira_a": "ch-valentina-a9be",
+            "orientacion": "tres cuartos izquierda"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-cofre-dorado",
+            "lado": "C",
+            "estado": "cerrado con sus tres candados brillando entre ellas",
+            "profundidad": "medio"
+          }
+        ],
+        "composicion": "Eco y Piquito ocupan el tercio derecho con fuerza expresiva mirando hacia Valentina en el tercio izquierdo, con el cofre dorado en el centro.",
+        "continuidad_con_anterior": "Conserva a Valentina a la izquierda, el cofre al centro y a Eco con Piquito a la derecha, cambiando a plano medio en contrapicado."
+      },
+      "actuacion": [
+        {
+          "id": "ch-eco-eff3",
+          "expresion": "Entusiasmada con sonrisa radiante",
+          "gestos": "Alza un puño con energía positiva",
+          "postura": "De pie firme y animada",
+          "movimiento": "Se dirige con entusiasmo hacia Valentina",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-piquito-030a",
+          "expresion": "Alegre y valiente",
+          "gestos": "Aplaude con sus alitas cortas",
+          "postura": "De pie en el hombro izquierdo de Eco",
+          "movimiento": "Aletea emocionado acompañando las palabras de Eco",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-valentina-a9be",
+          "expresion": "Sonriente y cómplice",
+          "gestos": "Asiente dándole la razón a Eco",
+          "postura": "De pie a la izquierda",
+          "movimiento": "Mira a Eco con complicidad",
+          "intensidad": 3
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-4s: /STATIC",
+        "encuadre_inicio": "MS",
+        "encuadre_fin": "MS",
+        "velocidad": "STEADY",
+        "motivacion": "Dar estabilidad al entusiasmo de Eco antes del movimiento sincronizado de todo el grupo en la siguiente viñeta."
+      },
+      "ritmo": {
+        "duracion_s": 4.0,
+        "pausas": []
+      },
+      "transicion_salida": {
+        "tipo": "CORTE",
+        "motivo": "Pasar al plano grupal para el giro lento de los cuatro héroes hacia la cámara."
+      },
+      "audio": [
+        {
+          "tipo": "dialogo",
+          "quien": "ch-eco-eff3",
+          "t": [
+            40.0,
+            44.0
+          ],
+          "texto": "[con energía] ¡Pero solo puede abrirlo alguien muy valiente!"
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Pijama verde con hojitas y diadema de hojas de Eco",
+          "Piquito amarillo en el hombro izquierdo de Eco",
+          "Cofre dorado en el centro"
+        ],
+        "eje": "ch-spark-468e-ch-pintor-bce0",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": []
+      },
+      "justificacion": {
+        "emocion_buscada": "Valentía y entusiasmo",
+        "por_que": "El ángulo contrapicado sobre Eco refuerza el llamado a la valentía y prepara la pregunta implícita de quién será esa persona valiente."
+      }
+    },
+    {
+      "id": "v11",
+      "orden": 11,
+      "t": [
+        44.0,
+        47.4
+      ],
+      "beats_01": [
+        "a17",
+        "a18",
+        "a19",
+        "a20",
+        "a21",
+        "a22",
+        "a23",
+        "a24"
+      ],
+      "beat_narrativo": "bn3",
+      "segmento_genero": 2,
+      "intencion_narrativa": "Romper la cuarta pared con suspenso y emoción cuando los cuatro héroes giran lentamente hacia la cámara y señalan al espectador.",
+      "beats_visuales": [
+        "Los cuatro Guardianes giran lentamente en sincronía hasta mirar de frente a la cámara.",
+        "Señalan al frente al mismo tiempo susurrando con emoción: '…¡TÚ!'."
+      ],
+      "secuencia": "Giro lento en grupo durante una pausa de suspenso seguido del gesto directo señalando a cámara.",
+      "director_imagen": {
+        "plano": "FS",
+        "angulo": "EYELEVEL",
+        "lente_mm": 28,
+        "perspectiva": "Frontal simétrica a nivel de ojos para que los cuatro héroes miren y señalen directamente al espectador.",
+        "dsl_encuadre": "/FS /EYELEVEL /LENS28 /GROUPSHOT",
+        "en_cuadro": [
+          {
+            "id": "ch-valentina-a9be",
+            "lado": "L",
+            "profundidad": "medio",
+            "mira_a": "cámara",
+            "orientacion": "frontal"
+          },
+          {
+            "id": "ch-spark-468e",
+            "lado": "C",
+            "profundidad": "medio",
+            "mira_a": "cámara",
+            "orientacion": "frontal"
+          },
+          {
+            "id": "ch-eco-eff3",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "cámara",
+            "orientacion": "frontal"
+          },
+          {
+            "id": "ch-piquito-030a",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "cámara",
+            "orientacion": "frontal"
+          },
+          {
+            "id": "ch-pintor-bce0",
+            "lado": "R",
+            "profundidad": "medio",
+            "mira_a": "cámara",
+            "orientacion": "frontal"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-cofre-dorado",
+            "lado": "C",
+            "estado": "cerrado con sus tres candados brillando frente al grupo",
+            "profundidad": "frente"
+          },
+          {
+            "nombre": "obj-visor-spark",
+            "lado": "C",
+            "estado": "encendido sobre los ojos de Spark",
+            "profundidad": "medio"
+          }
+        ],
+        "composicion": "Composición frontal equilibrada con el cofre dorado en el centro inferior y las cuatro manos apuntando hacia el centro de la lente.",
+        "continuidad_con_anterior": "Mantiene el orden de izquierda a derecha de Valentina (L), Spark (C) y Eco con Piquito y Pintor (R), abriendo a plano entero a nivel de ojos."
+      },
+      "actuacion": [
+        {
+          "id": "ch-spark-468e",
+          "expresion": "Pasa de decidido en el giro a emocionado al señalar",
+          "gestos": "Señala directamente al frente hacia el espectador",
+          "postura": "De pie firme frente a cámara",
+          "movimiento": "Gira lentamente hacia el frente (44-46s) y señala susurrando (46-47.4s)",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-valentina-a9be",
+          "expresion": "Decidida y luego emocionada con gran sonrisa",
+          "gestos": "Señala al frente hacia la cámara",
+          "postura": "De pie a la izquierda",
+          "movimiento": "Gira lentamente al frente y señala al espectador",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-eco-eff3",
+          "expresion": "Decidida y luego emocionada",
+          "gestos": "Señala al frente hacia la cámara",
+          "postura": "De pie a la derecha",
+          "movimiento": "Gira lentamente al frente y señala al espectador",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-pintor-bce0",
+          "expresion": "Decidido y luego entusiasmado",
+          "gestos": "Señala al frente con su mano manchada de pintura",
+          "postura": "De pie a la derecha",
+          "movimiento": "Gira lentamente al frente y señala al espectador",
+          "intensidad": 4
+        },
+        {
+          "id": "ch-piquito-030a",
+          "expresion": "Emocionado",
+          "gestos": "Apunta con una alita hacia el frente",
+          "postura": "De pie en el hombro izquierdo de Eco",
+          "movimiento": "Gira con Eco hacia la cámara",
+          "intensidad": 4
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-2s: /DOLLYIN:FS>MS:SLOW 2-3.4s: /STATIC",
+        "encuadre_inicio": "FS",
+        "encuadre_fin": "MS",
+        "velocidad": "SLOW",
+        "motivacion": "Acercarse durante el giro lento para aumentar la tensión y detenerse en el instante exacto en que señalan al espectador."
+      },
+      "ritmo": {
+        "duracion_s": 3.4,
+        "pausas": [
+          {
+            "t": [
+              44.0,
+              46.0
+            ],
+            "motivo": "Pausa de suspenso mientras los cuatro héroes giran lentamente hacia la cámara antes de susurrar."
+          }
+        ]
+      },
+      "transicion_salida": {
+        "tipo": "CORTE",
+        "motivo": "Cerrar a primer plano de Spark para la promesa final del prólogo."
+      },
+      "audio": [
+        {
+          "tipo": "dialogo",
+          "quien": "ch-eco-eff3",
+          "t": [
+            46.0,
+            47.4
+          ],
+          "texto": "[susurrando] …¡TÚ!"
+        },
+        {
+          "tipo": "dialogo",
+          "quien": "ch-valentina-a9be",
+          "t": [
+            46.0,
+            47.4
+          ],
+          "texto": "[susurrando] …¡TÚ!"
+        },
+        {
+          "tipo": "dialogo",
+          "quien": "ch-pintor-bce0",
+          "t": [
+            46.0,
+            47.4
+          ],
+          "texto": "[susurrando] …¡TÚ!"
+        },
+        {
+          "tipo": "dialogo",
+          "quien": "ch-spark-468e",
+          "t": [
+            46.0,
+            47.4
+          ],
+          "texto": "[susurrando] …¡TÚ!"
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Posiciones del equipo: Valentina (L), Spark (C), Eco, Piquito y Pintor (R)",
+          "Piquito amarillo en el hombro izquierdo de Eco",
+          "Cofre dorado frente a ellos"
+        ],
+        "eje": "ch-spark-468e-ch-pintor-bce0",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": []
+      },
+      "justificacion": {
+        "emocion_buscada": "Complicidad y valentía",
+        "por_que": "El dolly in sincronizado con el giro lento y la pausa de dos segundos convierte el susurro colectivo en un llamado directo e inolvidable para el niño."
+      }
+    },
+    {
+      "id": "v12",
+      "orden": 12,
+      "t": [
+        47.4,
+        55.0
+      ],
+      "beats_01": [
+        "a25"
+      ],
+      "beat_narrativo": "bn3",
+      "segmento_genero": 2,
+      "intencion_narrativa": "Sellar el gancho del episodio con la promesa misteriosa de Spark y la aparición del título tembloroso.",
+      "beats_visuales": [
+        "Spark mira fijamente a cámara con sonrisa misteriosa y una ceja levantada prometiendo que el espectador leerá su primera palabra mágica al final de la misión.",
+        "Aparece en pantalla el gráfico con el título en letras que tiemblan: '¡DON CAOS BORRÓ EL ABECEDARIO!'."
+      ],
+      "secuencia": "Primer plano íntimo que se cierra aún más hacia los ojos curiosos de Spark mientras entra el título del episodio.",
+      "director_imagen": {
+        "plano": "CU",
+        "angulo": "LOWANGLE",
+        "lente_mm": 50,
+        "perspectiva": "Contrapicado suave y cercano que enfatiza la complicidad y el misterio en la mirada de Spark.",
+        "dsl_encuadre": "/CU /LOWANGLE /LENS50 /SINGLE",
+        "en_cuadro": [
+          {
+            "id": "ch-spark-468e",
+            "lado": "C",
+            "profundidad": "frente",
+            "mira_a": "cámara",
+            "orientacion": "frontal"
+          }
+        ],
+        "objetos": [
+          {
+            "nombre": "obj-visor-spark",
+            "lado": "C",
+            "estado": "con un destello azul suave sobre los ojos de Spark",
+            "profundidad": "frente"
+          },
+          {
+            "nombre": "obj-cofre-dorado",
+            "lado": "C",
+            "estado": "emitiendo resplandor dorado desde la parte inferior del cuadro",
+            "profundidad": "frente"
+          }
+        ],
+        "composicion": "Encuadre central en primer plano de Spark iluminado por el reflejo dorado del cofre abajo y el azul de su visor, dejando aire limpio para el gráfico del título.",
+        "continuidad_con_anterior": "Mantiene a Spark en el centro mirando de frente a cámara, cerrando de plano medio a primer plano en contrapicado con lente de 50 mm."
+      },
+      "actuacion": [
+        {
+          "id": "ch-spark-468e",
+          "expresion": "Misterioso y cómplice, con sonrisa confiada y una ceja levantada",
+          "gestos": "Baja lentamente la mano tras señalar y hace un pequeño gesto de secreto al decir 'todavía'",
+          "postura": "De pie frente a cámara",
+          "movimiento": "Se inclina levemente hacia la cámara en la última palabra",
+          "intensidad": 3
+        }
+      ],
+      "director_camara": {
+        "dsl_movimiento": "0-5.5s: /DOLLYIN:CU>ECU:VSLOW 5.5-7.6s: /STATIC",
+        "encuadre_inicio": "CU",
+        "encuadre_fin": "ECU",
+        "velocidad": "VSLOW",
+        "motivacion": "Acercarse imperceptiblemente de forma muy lenta hacia la mirada cómplice de Spark para sembrar intriga en la palabra 'todavía'."
+      },
+      "ritmo": {
+        "duracion_s": 7.6,
+        "pausas": [
+          {
+            "t": [
+              53.2,
+              53.8
+            ],
+            "motivo": "Breve pausa de intriga antes de rematar con la palabra '…todavía.' y el título del episodio."
+          }
+        ]
+      },
+      "transicion_salida": {
+        "tipo": "FIN_ESCENA",
+        "motivo": "Cierre del gancho y prólogo sobre el título del episodio."
+      },
+      "audio": [
+        {
+          "tipo": "dialogo",
+          "quien": "ch-spark-468e",
+          "t": [
+            47.5,
+            55.0
+          ],
+          "texto": "Al final de esta misión, tú vas a leer tu primera palabra mágica. Y no te voy a decir cuál es… todavía."
+        }
+      ],
+      "continuidad": {
+        "debe_mantenerse": [
+          "Pijama azul con rayos amarillos y visor transparente azul de Spark",
+          "Resplandor cálido del cofre dorado en el centro"
+        ],
+        "eje": "ch-spark-468e-ch-pintor-bce0",
+        "direccion_pantalla": "neutral",
+        "cambios_declarados": []
+      },
+      "justificacion": {
+        "emocion_buscada": "Intriga e ilusión",
+        "por_que": "El cierre en primerísimo primer plano con la ceja levantada de Spark deja sembrada la curiosidad para que el espectador se quede toda la misión hasta leer la palabra mágica."
+      }
+    }
+  ],
+  "memoria_entrada": {
+    "personajes": {},
+    "direccion_pantalla": "neutral",
+    "eje": "",
+    "objetos_escena": [],
+    "escena_anterior": null,
+    "fuente": "inicio del capítulo"
+  },
+  "memoria_salida": {
+    "personajes": [
+      {
+        "id": "ch-don-caos-7adf",
+        "vestuario": [
+          "Traje morado con botones desordenados, sombrero de copa y bufanda a rayas"
+        ],
+        "danos": [],
+        "objetos": [
+          "obj-rayo-confundidor"
+        ],
+        "posicion": {
+          "lado": "L",
+          "zona": "Cerca de la cama en la habitación"
+        },
+        "arco_emocional": "Pasa de la travesura divertida al aburrimiento satisfecho tras borrar letras y colores."
+      },
+      {
+        "id": "ch-spark-468e",
+        "vestuario": [
+          "Pijama azul con rayos amarillos y pantuflas cohete"
+        ],
+        "danos": [],
+        "objetos": [
+          "obj-visor-spark"
+        ],
+        "posicion": {
+          "lado": "C",
+          "zona": "Centro de la habitación frente al cofre dorado"
+        },
+        "arco_emocional": "Pasa del estado de alerta y preocupación por la falta de letras a la complicidad misteriosa con el espectador."
+      },
+      {
+        "id": "ch-valentina-a9be",
+        "vestuario": [
+          "Pijama magenta con corazones, capa rosa y pantuflas conejo"
+        ],
+        "danos": [],
+        "objetos": [
+          "Escudo de la Empatía"
+        ],
+        "posicion": {
+          "lado": "L",
+          "zona": "Centro de la habitación a la izquierda de Spark"
+        },
+        "arco_emocional": "Pasa de la alerta inicial a la serenidad cálida y entusiasmo al invitar al espectador."
+      },
+      {
+        "id": "ch-eco-eff3",
+        "vestuario": [
+          "Pijama verde con hojitas, diadema de hojas y pantuflas rana"
+        ],
+        "danos": [],
+        "objetos": [
+          "Regadera pequeña en el cinturón"
+        ],
+        "posicion": {
+          "lado": "R",
+          "zona": "Centro de la habitación a la derecha de Spark"
+        },
+        "arco_emocional": "Pasa de la alerta tras el aterrizaje al entusiasmo valiente al buscar a quién abrirá el cofre."
+      },
+      {
+        "id": "ch-pintor-bce0",
+        "vestuario": [
+          "Pijama amarillo con manchas de pintura y boina roja"
+        ],
+        "danos": [],
+        "objetos": [
+          "Pincel detrás de la oreja"
+        ],
+        "posicion": {
+          "lado": "R",
+          "zona": "Centro de la habitación a la derecha del grupo"
+        },
+        "arco_emocional": "Pasa de la alarma acelerada por la falta de colores y letras a la decisión entusiasta frente al espectador."
+      },
+      {
+        "id": "ch-piquito-030a",
+        "vestuario": [
+          "Plumaje amarillo #FFD84D con pecho #FFF1A8 y pico naranja #F2792A"
+        ],
+        "danos": [],
+        "objetos": [],
+        "posicion": {
+          "lado": "R",
+          "zona": "Hombro izquierdo de Eco"
+        },
+        "arco_emocional": "Acompaña las reacciones de Eco pasando del susto cómico a la emoción valiente."
+      }
+    ],
+    "direccion_pantalla": "neutral",
+    "eje": "ch-spark-468e-ch-pintor-bce0",
+    "objetos_escena": [
+      "obj-libro-cuentos__e1-8 (abierto con páginas en blanco sobre la cama)",
+      "Ventana con vista al arcoíris (con el arcoíris gris)",
+      "obj-rayo-confundidor",
+      "obj-visor-spark",
+      "obj-cofre-dorado (cerrado con tres candados brillantes en el centro de la habitación)"
+    ]
+  },
+  "revision": [
+    {
+      "chequeo": "cobertura_tiempo",
+      "ok": true,
+      "nota": "Las 12 viñetas cubren de 0.0 a 55.0 segundos de forma continua sin huecos ni solapamientos."
+    },
+    {
+      "chequeo": "beats_01",
+      "ok": true,
+      "nota": "Todos los beats de acción a1 a a25 están incluidos en las viñetas cuyos rangos de tiempo coinciden con cada beat."
+    },
+    {
+      "chequeo": "eje_180",
+      "ok": true,
+      "nota": "Se respeta el eje de 180 grados en toda la escena manteniendo constantes los lados de cada personaje (Don Caos L; Valentina L, Spark C, Eco R, Piquito R, Pintor R)."
+    },
+    {
+      "chequeo": "regla_30",
+      "ok": true,
+      "nota": "Todos los cortes consecutivos cambian tanto el tamaño de plano como el ángulo de cámara."
+    },
+    {
+      "chequeo": "dsl_valido",
+      "ok": true,
+      "nota": "Todos los comandos en dsl_encuadre y dsl_movimiento cumplen la gramática DSL y respetan los tiempos relativos de cada viñeta."
+    },
+    {
+      "chequeo": "dialogo_completo",
+      "ok": true,
+      "nota": "Todas las líneas de diálogo aparecen en orden, con texto literal, hablantes exactos (incluyendo las 4 entradas colectivas de TODOS) y velocidad menor o igual a 3.0 palabras por segundo."
+    },
+    {
+      "chequeo": "continuidad_memoria",
+      "ok": true,
+      "nota": "Los cambios de objetos, luz, posiciones, eje y dirección de pantalla están declarados con su beat_01 y consolidados en memoria_salida."
+    },
+    {
+      "chequeo": "genero_por_segmento",
+      "ok": true,
+      "nota": "Las viñetas reflejan la progresión de fantasía cómica (0-18s), aventura heroica (18-30s) y aventura con misterio interactivo (30-55s)."
+    },
+    {
+      "chequeo": "reglamento_nivel3",
+      "ok": true,
+      "nota": "Se cumplen las preferencias de lentes, planos y movimientos evitando los movimientos restringidos en cada segmento."
+    }
+  ],
+  "dsl_commit": "7cbc087dabe0d4a8ec7a4ecf5b24d786783806d3",
+  "avisos": [],
+  "fecha": "2026-11-07T03:24:06+0100",
+  "hablantes_colectivos": [
+    {
+      "quien_guion": "TODOS",
+      "linea_trozo": 14,
+      "texto_linea": "TODOS: [susurrando] …¡TÚ!",
+      "acotacion_anterior": {
+        "linea_trozo": 13,
+        "texto": "[Los cuatro héroes giran lentamente hacia la cámara.]"
+      },
+      "numero_grupo": 4,
+      "numeros_vistos": [
+        4
+      ],
+      "presentes_01": [
+        "ch-don-caos-7adf",
+        "ch-spark-468e",
+        "ch-valentina-a9be",
+        "ch-eco-eff3",
+        "ch-pintor-bce0",
+        "ch-piquito-030a"
+      ],
+      "excluidos_marcados": {},
+      "hablantes_previos_recientes": [
+        "ch-eco-eff3",
+        "ch-valentina-a9be",
+        "ch-pintor-bce0",
+        "ch-spark-468e",
+        "ch-don-caos-7adf"
+      ],
+      "modo": "a",
+      "por_que": "la acotación anterior nombra un grupo de 4; se toman los 4 hablantes distintos más recientes antes de la línea, presentes en el 01 y no marcados fuera del grupo",
+      "ids": [
+        "ch-eco-eff3",
+        "ch-valentina-a9be",
+        "ch-pintor-bce0",
+        "ch-spark-468e"
+      ]
+    }
+  ],
+  "normalizaciones_dsl": [
+    {
+      "vineta": "v4",
+      "campo": "director_camara.dsl_movimiento",
+      "antes": "0-4.5s: /STATIC 4.5-7s: /TRACK:R:SLOW",
+      "despues": "0-4.5s: /STATIC 4.5-7s: /TRACK:L2R:SLOW",
+      "regla": "argumento de dirección relativo a cámara (R/L) → screen L2R/R2L del registro; velocidad y tiempos sin cambio",
+      "fuente": "cubo_sb.normalizar_dsl (código, sin Argon)"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "case": "disjoint",
+      "expected_pass": true,
+      "actual_pass": true,
+      "passed": true,
+      "max_penetration_m": 0,
+      "errors": []
+    },
+    {
+      "case": "penetration",
+      "expected_pass": false,
+      "actual_pass": false,
+      "passed": true,
+      "max_penetration_m": 0.5,
+      "errors": [
+        {
+          "type": "PENETRACION",
+          "frame": 1,
+          "objects": [
+            "unitA",
+            "unitB"
+          ],
+          "depth_m": 0.5,
+          "intersections": 0
+        }
+      ]
+    },
+    {
+      "case": "contained",
+      "expected_pass": false,
+      "actual_pass": false,
+      "passed": true,
+      "max_penetration_m": 0.75,
+      "errors": [
+        {
+          "type": "PENETRACION",
+          "frame": 1,
+          "objects": [
+            "unitA",
+            "unitB"
+          ],
+          "depth_m": 0.75,
+          "intersections": 0
+        }
+      ]
+    },
+    {
+      "case": "touch_exact_no_transversal_overlap",
+      "expected_pass": true,
+      "actual_pass": true,
+      "passed": true,
+      "max_penetration_m": 0,
+      "errors": []
+    },
+    {
+      "case": "touch_transversal_strict",
+      "expected_pass": false,
+      "actual_pass": false,
+      "passed": true,
+      "max_penetration_m": 0,
+      "errors": [
+        {
+          "type": "PENETRACION",
+          "frame": 1,
+          "objects": [
+            "unitA",
+            "unitB"
+          ],
+          "depth_m": 0,
+          "intersections": 4
+        }
+      ]
+    },
+    {
+      "case": "penetration_with_declared_surface_contact",
+      "expected_pass": false,
+      "actual_pass": false,
+      "passed": true,
+      "max_penetration_m": 0.5,
+      "errors": [
+        {
+          "type": "PENETRACION",
+          "frame": 1,
+          "objects": [
+            "unitA",
+            "unitB"
+          ],
+          "depth_m": 0.5,
+          "intersections": 0
+        }
+      ]
+    },
+    {
+      "case": "touch_explicit_surface",
+      "expected_pass": true,
+      "actual_pass": true,
+      "passed": true,
+      "max_penetration_m": 0,
+      "errors": []
+    }
+  ],
+  "physical_penetration_tolerance_m_unchanged": 0.001,
+  "ray_advance": "max(1e-7,max(1,abs(world_hit))*2**-20); fail closed above tolerance/16",
+  "scope": "Native BVH candidate at 20m float32 stress magnitudes; no production approval"
+}

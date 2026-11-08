@@ -1,0 +1,35 @@
+{
+  "candidate": "/opt/myia-motor-v9/avance08_20261107/esc1_bvh08",
+  "source_candidate_untouched": "/opt/myia-motor-v9/avance08_20261107/esc1_candidata",
+  "engine": "/opt/myia-motor-v9/avance08_20261107/MOTOR_BVH08_CANDIDATO",
+  "original_engine_untouched": "/opt/myia-motor-v9/avance08_20261107/MOTOR_UNICO_20261107",
+  "changed_code_files": [
+    "motor/fisica_final.py"
+  ],
+  "original_sha256": "682856ed505cd6f63d66c81dd11e64ef8db582a94528ae228f5decd1667ec7fd",
+  "candidate_sha256": "ec04a49605251b898b93a6c73b7f19e375c1339d68e5634a57cbc538c93639fe",
+  "extra_surface_contact_pairs": [
+    [
+      "piso",
+      "muro_frente_2"
+    ],
+    [
+      "piso",
+      "muro_fondo_1"
+    ],
+    [
+      "piso",
+      "muro_fondo_3"
+    ],
+    [
+      "piso",
+      "obj-armario"
+    ]
+  ],
+  "contact_pairs_exempt_depth": false,
+  "all_numeric_physical_limits_unchanged": true,
+  "new_numerical_ray_progress": "max(1e-7,max(1,abs(world_hit))*2**-20), fail closed above penetration_tolerance/16",
+  "new_evaluated_surface_probes": "Triangle centroids and unique triangle-edge midpoints; catches vertex-only coaxial penetration blind spot",
+  "scene_approved": false,
+  "regression_required": true
+}

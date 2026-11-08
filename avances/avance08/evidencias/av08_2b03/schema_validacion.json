@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "errors": [],
+  "response_mime_type": "application/json",
+  "response_schema_sent": false,
+  "response_json_schema_sent": true,
+  "schema_mode": "json"
+}

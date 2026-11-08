@@ -1,0 +1,8507 @@
+{
+  "status": "complete",
+  "finish_reason": "STOP",
+  "reconstruction08": true,
+  "poses": {
+    "v_de_pie": {
+      "angulos": {
+        "columna": [
+          0,
+          0,
+          0
+        ],
+        "pecho": [
+          0,
+          0,
+          0
+        ],
+        "cuello": [
+          0,
+          0,
+          0
+        ],
+        "brazo_L": [
+          0,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          6,
+          0,
+          0
+        ],
+        "brazo_R": [
+          0,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          6,
+          0,
+          0
+        ],
+        "muslo_L": [
+          0,
+          11,
+          0
+        ],
+        "pierna_L": [
+          14,
+          0,
+          0
+        ],
+        "muslo_R": [
+          0,
+          11,
+          0
+        ],
+        "pierna_R": [
+          14,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biblioteca Ako anterior, convertida a ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc8",
+      "validado": true,
+      "estiramiento_original_pct": 0.0,
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_v_de_pie.png"
+      }
+    },
+    "v_caido_espalda": {
+      "angulos": {
+        "cuello": [
+          9,
+          0,
+          0
+        ],
+        "brazo_L": [
+          153,
+          71,
+          0
+        ],
+        "antebrazo_L": [
+          3,
+          0,
+          0
+        ],
+        "brazo_R": [
+          31,
+          74,
+          0
+        ],
+        "antebrazo_R": [
+          14,
+          0,
+          0
+        ],
+        "muslo_L": [
+          -23,
+          13,
+          0
+        ],
+        "pierna_L": [
+          52,
+          0,
+          0
+        ],
+        "muslo_R": [
+          0,
+          13,
+          0
+        ],
+        "pierna_R": [
+          13,
+          0,
+          0
+        ],
+        "raiz": [
+          87,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biblioteca Ako anterior, convertida a ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc8",
+      "validado": false,
+      "estiramiento_original_pct": 13.7
+    },
+    "v_levantandose": {
+      "angulos": {
+        "columna": [
+          17,
+          0,
+          0
+        ],
+        "pecho": [
+          17,
+          0,
+          0
+        ],
+        "cuello": [
+          -3,
+          0,
+          0
+        ],
+        "brazo_L": [
+          60,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          23,
+          0,
+          0
+        ],
+        "brazo_R": [
+          6,
+          17,
+          0
+        ],
+        "antebrazo_R": [
+          14,
+          0,
+          0
+        ],
+        "muslo_L": [
+          81,
+          13,
+          0
+        ],
+        "pierna_L": [
+          81,
+          0,
+          0
+        ],
+        "muslo_R": [
+          -6,
+          11,
+          0
+        ],
+        "pierna_R": [
+          80,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biblioteca Ako anterior, convertida a ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc8",
+      "validado": false,
+      "estiramiento_original_pct": 17.7
+    },
+    "v_aterriza_pie1": {
+      "angulos": {
+        "columna": [
+          0,
+          0,
+          0
+        ],
+        "pecho": [
+          0,
+          0,
+          0
+        ],
+        "cuello": [
+          0,
+          0,
+          0
+        ],
+        "brazo_L": [
+          0,
+          59,
+          0
+        ],
+        "antebrazo_L": [
+          10,
+          0,
+          0
+        ],
+        "brazo_R": [
+          0,
+          59,
+          0
+        ],
+        "antebrazo_R": [
+          10,
+          0,
+          0
+        ],
+        "muslo_L": [
+          11,
+          9,
+          0
+        ],
+        "pierna_L": [
+          17,
+          0,
+          0
+        ],
+        "muslo_R": [
+          -13,
+          10,
+          0
+        ],
+        "pierna_R": [
+          14,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biblioteca Ako anterior, convertida a ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc8",
+      "validado": false,
+      "estiramiento_original_pct": 55.6
+    },
+    "v_aterriza_agachado": {
+      "angulos": {
+        "columna": [
+          14,
+          0,
+          0
+        ],
+        "pecho": [
+          14,
+          0,
+          0
+        ],
+        "cuello": [
+          -3,
+          0,
+          0
+        ],
+        "brazo_L": [
+          62,
+          13,
+          0
+        ],
+        "antebrazo_L": [
+          27,
+          0,
+          0
+        ],
+        "brazo_R": [
+          -6,
+          34,
+          0
+        ],
+        "antebrazo_R": [
+          18,
+          0,
+          0
+        ],
+        "muslo_L": [
+          81,
+          14,
+          0
+        ],
+        "pierna_L": [
+          87,
+          0,
+          0
+        ],
+        "muslo_R": [
+          -11,
+          12,
+          0
+        ],
+        "pierna_R": [
+          68,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biblioteca Ako anterior, convertida a ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc8",
+      "validado": false,
+      "estiramiento_original_pct": 164.6
+    },
+    "v_con_lanza": {
+      "angulos": {
+        "columna": [
+          2.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          2.0,
+          0.0,
+          0.0
+        ],
+        "cuello": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          10.0,
+          15.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          25.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          25.0,
+          18.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          45.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          12.0,
+          8.0,
+          0.0
+        ],
+        "pierna_L": [
+          12.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          -8.0,
+          8.0,
+          0.0
+        ],
+        "pierna_R": [
+          10.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "descripcion": "De pie firme sosteniendo la lanza en guardia media.",
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": false,
+      "llamada": "fisica_v8_r0",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          2,
+          0,
+          0
+        ],
+        "pecho": [
+          2,
+          0,
+          0
+        ],
+        "cuello": [
+          0,
+          0,
+          0
+        ],
+        "brazo_L": [
+          10,
+          15,
+          0
+        ],
+        "antebrazo_L": [
+          25,
+          0,
+          0
+        ],
+        "brazo_R": [
+          25,
+          18,
+          0
+        ],
+        "antebrazo_R": [
+          45,
+          0,
+          0
+        ],
+        "muslo_L": [
+          12,
+          8,
+          0
+        ],
+        "pierna_L": [
+          12,
+          0,
+          0
+        ],
+        "muslo_R": [
+          -8,
+          8,
+          0
+        ],
+        "pierna_R": [
+          10,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "v_onda_palma": {
+      "angulos": {
+        "columna": [
+          4,
+          0,
+          0
+        ],
+        "pecho": [
+          4,
+          0,
+          0
+        ],
+        "cuello": [
+          -6,
+          0,
+          0
+        ],
+        "brazo_L": [
+          -20,
+          16,
+          0
+        ],
+        "antebrazo_L": [
+          29,
+          0,
+          0
+        ],
+        "brazo_R": [
+          98,
+          4,
+          0
+        ],
+        "antebrazo_R": [
+          4,
+          0,
+          0
+        ],
+        "muslo_L": [
+          -18,
+          11,
+          0
+        ],
+        "pierna_L": [
+          12,
+          0,
+          0
+        ],
+        "muslo_R": [
+          18,
+          11,
+          0
+        ],
+        "pierna_R": [
+          12,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biblioteca Ako anterior, convertida a ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc8",
+      "validado": false,
+      "estiramiento_original_pct": 6.3
+    },
+    "v_despedido": {
+      "angulos": {
+        "cuello": [
+          -5,
+          0,
+          0
+        ],
+        "brazo_L": [
+          66,
+          32,
+          0
+        ],
+        "antebrazo_L": [
+          19,
+          0,
+          0
+        ],
+        "brazo_R": [
+          66,
+          32,
+          0
+        ],
+        "antebrazo_R": [
+          19,
+          0,
+          0
+        ],
+        "muslo_L": [
+          4,
+          14,
+          0
+        ],
+        "pierna_L": [
+          17,
+          0,
+          0
+        ],
+        "muslo_R": [
+          20,
+          14,
+          0
+        ],
+        "pierna_R": [
+          17,
+          0,
+          0
+        ],
+        "raiz": [
+          -63,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biblioteca Ako anterior, convertida a ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc8",
+      "validado": false,
+      "estiramiento_original_pct": 33.5
+    },
+    "v_de_rodillas": {
+      "angulos": {
+        "columna": [
+          9,
+          0,
+          0
+        ],
+        "pecho": [
+          9,
+          0,
+          0
+        ],
+        "cuello": [
+          3,
+          0,
+          0
+        ],
+        "brazo_L": [
+          41,
+          12,
+          0
+        ],
+        "antebrazo_L": [
+          49,
+          0,
+          0
+        ],
+        "brazo_R": [
+          63,
+          -3,
+          0
+        ],
+        "antebrazo_R": [
+          54,
+          0,
+          0
+        ],
+        "muslo_L": [
+          8,
+          9,
+          0
+        ],
+        "pierna_L": [
+          95,
+          0,
+          0
+        ],
+        "muslo_R": [
+          8,
+          9,
+          0
+        ],
+        "pierna_R": [
+          95,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biblioteca Ako anterior, convertida a ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc8",
+      "validado": false,
+      "estiramiento_original_pct": 20.7
+    },
+    "b_de_pie": {
+      "angulos": {
+        "columna": [
+          0.0,
+          0,
+          0
+        ],
+        "pecho": [
+          0.0,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0.0,
+          0
+        ],
+        "muslo_L": [
+          0.0,
+          0,
+          0
+        ],
+        "pierna_L": [
+          0.0,
+          0,
+          0
+        ],
+        "brazo_L": [
+          0.0,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          0.0,
+          0,
+          0
+        ],
+        "muslo_R": [
+          0.0,
+          0,
+          0
+        ],
+        "pierna_R": [
+          0.0,
+          0,
+          0
+        ],
+        "brazo_R": [
+          0.0,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          0.0,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biomecanica.py Ako, ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": false
+    },
+    "b_tendido": {
+      "angulos": {
+        "columna": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          -11.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          30.0,
+          10.0,
+          0.0
+        ],
+        "pierna_L": [
+          45.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          -7.0,
+          25.0,
+          0.0
+        ],
+        "pierna_R": [
+          66.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -30.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          25.0,
+          10.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          40.0,
+          20.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          13.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          32.0,
+          42.0,
+          0.0
+        ]
+      },
+      "descripcion": "Tendido de lado en el piso apoyando mano y rodilla derechas",
+      "apoyos": [
+        "mano_R",
+        "pierna_R"
+      ],
+      "origen": "ia (Argon) + ajuste IK de piso del validador",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r2",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          25.0,
+          8.0,
+          0.0
+        ],
+        "pierna_L": [
+          35.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          20.0,
+          12.0,
+          0.0
+        ],
+        "pierna_R": [
+          40.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          20.0,
+          10.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          25.0,
+          15.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          25.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          88.0,
+          0.0
+        ]
+      },
+      "version_argon": {
+        "columna": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          30.0,
+          10.0,
+          0.0
+        ],
+        "pierna_L": [
+          45.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          25.0,
+          25.0,
+          0.0
+        ],
+        "pierna_R": [
+          50.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -30.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          25.0,
+          10.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          40.0,
+          20.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          45.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          88.0,
+          0.0
+        ]
+      },
+      "ajuste": "apoyos al piso: {\"mano_R\": 0.0, \"pierna_R\": 0.025}",
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_tendido.png"
+      },
+      "historial_rechazado": [
+        {
+          "angulos": {
+            "columna": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "pecho": [
+              -11.0,
+              0.0,
+              0.0
+            ],
+            "muslo_L": [
+              35.0,
+              10.0,
+              0.0
+            ],
+            "pierna_L": [
+              55.0,
+              0.0,
+              0.0
+            ],
+            "muslo_R": [
+              15.0,
+              25.0,
+              0.0
+            ],
+            "pierna_R": [
+              75.0,
+              0.0,
+              0.0
+            ],
+            "pie_R": [
+              -30.0,
+              0.0,
+              0.0
+            ],
+            "brazo_L": [
+              35.0,
+              15.0,
+              0.0
+            ],
+            "antebrazo_L": [
+              30.0,
+              0.0,
+              0.0
+            ],
+            "brazo_R": [
+              45.0,
+              25.0,
+              0.0
+            ],
+            "antebrazo_R": [
+              20.0,
+              0.0,
+              0.0
+            ],
+            "raiz": [
+              45.0,
+              55.0,
+              0.0
+            ]
+          },
+          "origen": "ia (Argon)",
+          "llamada": "fisica_v8_r0",
+          "motivo": "validador v8: Kael empeoró (6 cuadros fuera hasta 35 cm + 3 saltitos vs 12 cuadros hasta 16 cm + 0 saltitos)",
+          "fecha": "2026-11-04"
+        }
+      ]
+    },
+    "b_lado_mano": {
+      "angulos": {
+        "columna": [
+          -22.0,
+          15.0,
+          0.0
+        ],
+        "pecho": [
+          -6.0,
+          15.0,
+          0.0
+        ],
+        "cuello": [
+          -10.0,
+          -15.0,
+          0.0
+        ],
+        "muslo_L": [
+          45.0,
+          15.0,
+          0.0
+        ],
+        "pierna_L": [
+          75.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          3.0,
+          42.0,
+          0.0
+        ],
+        "pierna_R": [
+          90.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -35.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          25.0,
+          15.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          20.0,
+          35.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          24.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          -30.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          32.0,
+          81.0,
+          0.0
+        ]
+      },
+      "descripcion": "Incorporandose de lado apoyado en mano derecha y rodilla derecha",
+      "apoyos": [
+        "mano_R",
+        "pierna_R"
+      ],
+      "origen": "ia (Argon) + ajuste IK de piso del validador",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r2",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          10.0,
+          12.0,
+          0.0
+        ],
+        "pecho": [
+          10.0,
+          12.0,
+          0.0
+        ],
+        "cuello": [
+          -10.0,
+          -15.0,
+          0.0
+        ],
+        "muslo_L": [
+          40.0,
+          15.0,
+          0.0
+        ],
+        "pierna_L": [
+          70.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          25.0,
+          20.0,
+          0.0
+        ],
+        "pierna_R": [
+          85.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -30.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          25.0,
+          15.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          10.0,
+          55.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          10.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          -30.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          62.0,
+          0.0
+        ]
+      },
+      "version_argon": {
+        "columna": [
+          10.0,
+          15.0,
+          0.0
+        ],
+        "pecho": [
+          10.0,
+          15.0,
+          0.0
+        ],
+        "cuello": [
+          -10.0,
+          -15.0,
+          0.0
+        ],
+        "muslo_L": [
+          45.0,
+          15.0,
+          0.0
+        ],
+        "pierna_L": [
+          75.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          30.0,
+          42.0,
+          0.0
+        ],
+        "pierna_R": [
+          90.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -35.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          25.0,
+          15.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          15.0,
+          35.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          25.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          -30.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          65.0,
+          0.0
+        ]
+      },
+      "ajuste": "apoyos al piso: {\"mano_R\": 0.001, \"pierna_R\": 0.025}",
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_lado_mano.png"
+      },
+      "historial_rechazado": [
+        {
+          "angulos": {
+            "columna": [
+              6.0,
+              8.0,
+              0.0
+            ],
+            "pecho": [
+              6.0,
+              6.0,
+              0.0
+            ],
+            "cuello": [
+              -20.0,
+              -8.0,
+              0.0
+            ],
+            "muslo_L": [
+              72.0,
+              22.0,
+              0.0
+            ],
+            "pierna_L": [
+              92.0,
+              0.0,
+              0.0
+            ],
+            "pie_L": [
+              -35.0,
+              0.0,
+              0.0
+            ],
+            "muslo_R": [
+              62.0,
+              35.0,
+              0.0
+            ],
+            "pierna_R": [
+              95.0,
+              0.0,
+              0.0
+            ],
+            "pie_R": [
+              -35.0,
+              0.0,
+              0.0
+            ],
+            "brazo_L": [
+              76.0,
+              32.0,
+              0.0
+            ],
+            "antebrazo_L": [
+              25.0,
+              0.0,
+              0.0
+            ],
+            "mano_L": [
+              -50.0,
+              0.0,
+              0.0
+            ],
+            "brazo_R": [
+              72.0,
+              58.0,
+              0.0
+            ],
+            "antebrazo_R": [
+              20.0,
+              0.0,
+              0.0
+            ],
+            "mano_R": [
+              -50.0,
+              0.0,
+              0.0
+            ],
+            "raiz": [
+              72.0,
+              26.0,
+              0.0
+            ]
+          },
+          "origen": "ia (Argon)",
+          "llamada": "fisica_v8_r1",
+          "motivo": "validador v8: Kael empeoró (6 cuadros fuera hasta 35 cm + 3 saltitos vs 12 cuadros hasta 16 cm + 0 saltitos)",
+          "fecha": "2026-11-04"
+        }
+      ]
+    },
+    "b_manos_rodillas": {
+      "angulos": {
+        "columna": [
+          -16.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          -8.0,
+          0.0,
+          0.0
+        ],
+        "cuello": [
+          -35.0,
+          0.0,
+          0.0
+        ],
+        "cabeza": [
+          -20.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          85.0,
+          5.0,
+          0.0
+        ],
+        "pierna_L": [
+          95.0,
+          0.0,
+          0.0
+        ],
+        "pie_L": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          85.0,
+          5.0,
+          0.0
+        ],
+        "pierna_R": [
+          95.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          78.0,
+          11.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          43.0,
+          0.0,
+          0.0
+        ],
+        "mano_L": [
+          -55.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          78.0,
+          11.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          43.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          -55.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          85.0,
+          0.0,
+          0.0
+        ]
+      },
+      "descripcion": "En cuatro puntos sobre manos y rodillas",
+      "apoyos": [
+        "mano_L",
+        "mano_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "origen": "ia (Argon) + ajuste IK de piso del validador",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r2",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "cuello": [
+          -35.0,
+          0.0,
+          0.0
+        ],
+        "cabeza": [
+          -20.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          82.0,
+          5.0,
+          0.0
+        ],
+        "pierna_L": [
+          95.0,
+          0.0,
+          0.0
+        ],
+        "pie_L": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          82.0,
+          5.0,
+          0.0
+        ],
+        "pierna_R": [
+          95.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          80.0,
+          6.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "mano_L": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          80.0,
+          6.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          78.0,
+          0.0,
+          0.0
+        ]
+      },
+      "version_argon": {
+        "columna": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cuello": [
+          -35.0,
+          0.0,
+          0.0
+        ],
+        "cabeza": [
+          -20.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          85.0,
+          5.0,
+          0.0
+        ],
+        "pierna_L": [
+          95.0,
+          0.0,
+          0.0
+        ],
+        "pie_L": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          85.0,
+          5.0,
+          0.0
+        ],
+        "pierna_R": [
+          95.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          90.0,
+          5.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          35.0,
+          0.0,
+          0.0
+        ],
+        "mano_L": [
+          -55.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          90.0,
+          5.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          35.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          -55.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          85.0,
+          0.0,
+          0.0
+        ]
+      },
+      "ajuste": "apoyos al piso: {\"mano_L\": 0.001, \"mano_R\": 0.001, \"pierna_L\": 0.025, \"pierna_R\": 0.025}",
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_manos_rodillas.png"
+      },
+      "historial_rechazado": [
+        {
+          "angulos": {
+            "columna": [
+              -10.0,
+              0.0,
+              0.0
+            ],
+            "pecho": [
+              -5.0,
+              0.0,
+              0.0
+            ],
+            "cuello": [
+              -35.0,
+              0.0,
+              0.0
+            ],
+            "cabeza": [
+              -18.0,
+              0.0,
+              0.0
+            ],
+            "muslo_L": [
+              80.0,
+              18.0,
+              0.0
+            ],
+            "pierna_L": [
+              92.0,
+              0.0,
+              0.0
+            ],
+            "pie_L": [
+              -40.0,
+              0.0,
+              0.0
+            ],
+            "muslo_R": [
+              80.0,
+              18.0,
+              0.0
+            ],
+            "pierna_R": [
+              92.0,
+              0.0,
+              0.0
+            ],
+            "pie_R": [
+              -40.0,
+              0.0,
+              0.0
+            ],
+            "brazo_L": [
+              84.0,
+              22.0,
+              0.0
+            ],
+            "antebrazo_L": [
+              28.0,
+              0.0,
+              0.0
+            ],
+            "mano_L": [
+              -55.0,
+              0.0,
+              0.0
+            ],
+            "brazo_R": [
+              84.0,
+              22.0,
+              0.0
+            ],
+            "antebrazo_R": [
+              28.0,
+              0.0,
+              0.0
+            ],
+            "mano_R": [
+              -55.0,
+              0.0,
+              0.0
+            ],
+            "raiz": [
+              80.0,
+              0.0,
+              0.0
+            ]
+          },
+          "origen": "ia (Argon)",
+          "llamada": "fisica_v8_r1",
+          "motivo": "validador v8: Kael empeoró (6 cuadros fuera hasta 35 cm + 3 saltitos vs 12 cuadros hasta 16 cm + 0 saltitos)",
+          "fecha": "2026-11-04"
+        }
+      ]
+    },
+    "b_rodilla_apoyo": {
+      "angulos": {
+        "columna": [
+          12.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          12.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          90.0,
+          5.0,
+          0.0
+        ],
+        "pierna_L": [
+          90.0,
+          0.0,
+          0.0
+        ],
+        "pie_L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          3.0,
+          3.0,
+          0.0
+        ],
+        "pierna_R": [
+          98.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          25.0,
+          8.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          25.0,
+          8.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "descripcion": "Una rodilla apoyada en el piso y el pie izquierdo plantado al frente para levantarse",
+      "apoyos": [
+        "pie_L",
+        "pierna_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r1",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          12.5,
+          0,
+          0
+        ],
+        "pecho": [
+          12.5,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0.0,
+          0
+        ],
+        "muslo_L": [
+          85,
+          0,
+          0
+        ],
+        "pierna_L": [
+          90,
+          0,
+          0
+        ],
+        "brazo_L": [
+          25,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          20,
+          0,
+          0
+        ],
+        "muslo_R": [
+          -5,
+          0,
+          0
+        ],
+        "pierna_R": [
+          95,
+          0,
+          0
+        ],
+        "brazo_R": [
+          25,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          20,
+          0,
+          0
+        ]
+      },
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_rodilla_apoyo.png"
+      }
+    },
+    "b_cadera_arriba": {
+      "angulos": {
+        "columna": [
+          18.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "cuello": [
+          -10.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          25.0,
+          4.0,
+          0.0
+        ],
+        "pierna_L": [
+          32.0,
+          0.0,
+          0.0
+        ],
+        "pie_L": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          22.0,
+          4.0,
+          0.0
+        ],
+        "pierna_R": [
+          32.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          15.0,
+          8.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          15.0,
+          8.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "descripcion": "Subiendo la cadera para incorporarse con ambos pies plantados en el suelo",
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r1",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          9.0,
+          0,
+          0
+        ],
+        "pecho": [
+          9.0,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0.0,
+          0
+        ],
+        "muslo_L": [
+          45,
+          0,
+          0
+        ],
+        "pierna_L": [
+          50,
+          0,
+          0
+        ],
+        "brazo_L": [
+          12,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          0.0,
+          0,
+          0
+        ],
+        "muslo_R": [
+          15,
+          0,
+          0
+        ],
+        "pierna_R": [
+          25,
+          0,
+          0
+        ],
+        "brazo_R": [
+          12,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          0.0,
+          0,
+          0
+        ]
+      },
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_cadera_arriba.png"
+      }
+    },
+    "b_arrodillado": {
+      "angulos": {
+        "columna": [
+          9.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          9.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          5.0,
+          3.0,
+          0.0
+        ],
+        "pierna_L": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "pie_L": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          5.0,
+          3.0,
+          0.0
+        ],
+        "pierna_R": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          35.0,
+          -10.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          75.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          35.0,
+          -10.0,
+          0.0
+        ],
+        "antebrazo_R": [
+          75.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "descripcion": "Arrodillado en el piso con ambas rodillas y empeines apoyados, tronco levemente inclinado",
+      "apoyos": [
+        "pierna_L",
+        "pierna_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r1",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          9.0,
+          0,
+          0
+        ],
+        "pecho": [
+          9.0,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0.0,
+          0
+        ],
+        "muslo_L": [
+          0.0,
+          0,
+          0
+        ],
+        "pierna_L": [
+          92,
+          0,
+          0
+        ],
+        "brazo_L": [
+          35,
+          -10,
+          0
+        ],
+        "antebrazo_L": [
+          75,
+          0,
+          0
+        ],
+        "muslo_R": [
+          0.0,
+          0,
+          0
+        ],
+        "pierna_R": [
+          92,
+          0,
+          0
+        ],
+        "brazo_R": [
+          35,
+          -10,
+          0
+        ],
+        "antebrazo_R": [
+          75,
+          0,
+          0
+        ]
+      },
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_arrodillado.png"
+      }
+    },
+    "b_apuntar": {
+      "angulos": {
+        "columna": [
+          3.0,
+          0,
+          0
+        ],
+        "pecho": [
+          3.0,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0.0,
+          0
+        ],
+        "muslo_L": [
+          12,
+          0,
+          0
+        ],
+        "pierna_L": [
+          10,
+          0,
+          0
+        ],
+        "brazo_L": [
+          62,
+          -18,
+          0
+        ],
+        "antebrazo_L": [
+          38,
+          0,
+          0
+        ],
+        "muslo_R": [
+          -6,
+          0,
+          0
+        ],
+        "pierna_R": [
+          0.0,
+          0,
+          0
+        ],
+        "brazo_R": [
+          72,
+          0,
+          0
+        ],
+        "antebrazo_R": [
+          12,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biomecanica.py Ako, ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": false
+    },
+    "b_golpe": {
+      "angulos": {
+        "columna": [
+          5.0,
+          0,
+          0
+        ],
+        "pecho": [
+          5.0,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0.0,
+          0
+        ],
+        "muslo_L": [
+          15,
+          0,
+          0
+        ],
+        "pierna_L": [
+          15,
+          0,
+          0
+        ],
+        "brazo_L": [
+          0.0,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          0.0,
+          0,
+          0
+        ],
+        "muslo_R": [
+          0.0,
+          0,
+          0
+        ],
+        "pierna_R": [
+          0.0,
+          0,
+          0
+        ],
+        "brazo_R": [
+          88,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          0,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biomecanica.py Ako, ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": false
+    },
+    "b_vuelo": {
+      "angulos": {
+        "columna": [
+          4.0,
+          0,
+          0
+        ],
+        "pecho": [
+          4.0,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0.0,
+          0
+        ],
+        "muslo_L": [
+          15,
+          0,
+          0
+        ],
+        "pierna_L": [
+          35,
+          0,
+          0
+        ],
+        "brazo_L": [
+          15,
+          25,
+          0
+        ],
+        "antebrazo_L": [
+          0.0,
+          0,
+          0
+        ],
+        "muslo_R": [
+          10,
+          0,
+          0
+        ],
+        "pierna_R": [
+          25,
+          0,
+          0
+        ],
+        "brazo_R": [
+          15,
+          25,
+          0
+        ],
+        "antebrazo_R": [
+          0.0,
+          0,
+          0
+        ]
+      },
+      "origen": "humano (biomecanica.py Ako, ángulos)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": false
+    },
+    "b_de_pie_exhausto": {
+      "angulos": {
+        "columna": [
+          8,
+          0,
+          0
+        ],
+        "pecho": [
+          8,
+          0,
+          0
+        ],
+        "cuello": [
+          -5,
+          0,
+          0
+        ],
+        "brazo_L": [
+          10,
+          10,
+          0
+        ],
+        "antebrazo_L": [
+          20,
+          0,
+          0
+        ],
+        "brazo_R": [
+          10,
+          10,
+          0
+        ],
+        "antebrazo_R": [
+          20,
+          0,
+          0
+        ],
+        "muslo_L": [
+          16,
+          6,
+          0
+        ],
+        "pierna_L": [
+          22,
+          0,
+          0
+        ],
+        "muslo_R": [
+          14,
+          6,
+          0
+        ],
+        "pierna_R": [
+          20,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "descripcion": "De pie con fatiga, rodillas levemente flexionadas y torso ligeramente inclinado hacia adelante.",
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "accion": "creada",
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_de_pie_exhausto.png"
+      }
+    },
+    "b_paso_corto_impulso": {
+      "angulos": {
+        "columna": [
+          10,
+          0,
+          0
+        ],
+        "pecho": [
+          10,
+          0,
+          0
+        ],
+        "cuello": [
+          -5,
+          0,
+          0
+        ],
+        "brazo_L": [
+          -8,
+          10,
+          0
+        ],
+        "antebrazo_L": [
+          25,
+          0,
+          0
+        ],
+        "brazo_R": [
+          22,
+          10,
+          0
+        ],
+        "antebrazo_R": [
+          25,
+          0,
+          0
+        ],
+        "muslo_L": [
+          32,
+          5,
+          0
+        ],
+        "pierna_L": [
+          38,
+          0,
+          0
+        ],
+        "muslo_R": [
+          -6,
+          5,
+          0
+        ],
+        "pierna_R": [
+          18,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "descripcion": "Inicio de paso corto y pesado adelantando la pierna izquierda con esfuerzo.",
+      "apoyos": [
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "accion": "creada",
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_paso_corto_impulso.png"
+      }
+    },
+    "b_paso_corto_recepcion": {
+      "angulos": {
+        "columna": [
+          9,
+          0,
+          0
+        ],
+        "pecho": [
+          9,
+          0,
+          0
+        ],
+        "cuello": [
+          -4,
+          0,
+          0
+        ],
+        "brazo_L": [
+          12,
+          10,
+          0
+        ],
+        "antebrazo_L": [
+          22,
+          0,
+          0
+        ],
+        "brazo_R": [
+          8,
+          10,
+          0
+        ],
+        "antebrazo_R": [
+          18,
+          0,
+          0
+        ],
+        "muslo_L": [
+          20,
+          6,
+          0
+        ],
+        "pierna_L": [
+          26,
+          0,
+          0
+        ],
+        "muslo_R": [
+          8,
+          6,
+          0
+        ],
+        "pierna_R": [
+          18,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "descripcion": "Recepcion del paso corto vacilante apoyando ambos pies con piernas pesadas.",
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "accion": "creada",
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_paso_corto_recepcion.png"
+      }
+    },
+    "b_descenso_rodillas": {
+      "angulos": {
+        "columna": [
+          12,
+          0,
+          0
+        ],
+        "pecho": [
+          10,
+          0,
+          0
+        ],
+        "cuello": [
+          -5,
+          0,
+          0
+        ],
+        "brazo_L": [
+          25,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          45,
+          0,
+          0
+        ],
+        "brazo_R": [
+          25,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          45,
+          0,
+          0
+        ],
+        "muslo_L": [
+          45,
+          5,
+          0
+        ],
+        "pierna_L": [
+          85,
+          0,
+          0
+        ],
+        "muslo_R": [
+          30,
+          5,
+          0
+        ],
+        "pierna_R": [
+          90,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "descripcion": "Fase intermedia bajando de estar de pie hacia las rodillas al perder las fuerzas.",
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "accion": "creada",
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_descenso_rodillas.png"
+      }
+    },
+    "b_arrodillado_suplica": {
+      "angulos": {
+        "columna": [
+          8.0,
+          0.0,
+          0.0
+        ],
+        "pecho": [
+          8.0,
+          0.0,
+          0.0
+        ],
+        "cuello": [
+          -6.0,
+          0.0,
+          0.0
+        ],
+        "cabeza": [
+          -4.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          6.0,
+          4.0,
+          0.0
+        ],
+        "pierna_L": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "pie_L": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          6.0,
+          4.0,
+          0.0
+        ],
+        "pierna_R": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "pie_R": [
+          -45.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          42.0,
+          -12.0,
+          -25.0
+        ],
+        "antebrazo_L": [
+          95.0,
+          0.0,
+          0.0
+        ],
+        "mano_L": [
+          10.0,
+          0.0,
+          0.0
+        ],
+        "brazo_R": [
+          42.0,
+          -12.0,
+          25.0
+        ],
+        "antebrazo_R": [
+          95.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          10.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "descripcion": "Arrodillado en actitud de suplica con manos juntas y rodillas apoyadas",
+      "apoyos": [
+        "pierna_L",
+        "pierna_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r1",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          8,
+          0,
+          0
+        ],
+        "pecho": [
+          8,
+          0,
+          0
+        ],
+        "cuello": [
+          -6,
+          0,
+          0
+        ],
+        "cabeza": [
+          -4,
+          0,
+          0
+        ],
+        "brazo_L": [
+          42,
+          -12,
+          -25
+        ],
+        "antebrazo_L": [
+          95,
+          0,
+          0
+        ],
+        "mano_L": [
+          10,
+          0,
+          0
+        ],
+        "brazo_R": [
+          42,
+          -12,
+          25
+        ],
+        "antebrazo_R": [
+          95,
+          0,
+          0
+        ],
+        "mano_R": [
+          10,
+          0,
+          0
+        ],
+        "muslo_L": [
+          6,
+          4,
+          0
+        ],
+        "pierna_L": [
+          98,
+          0,
+          0
+        ],
+        "muslo_R": [
+          6,
+          4,
+          0
+        ],
+        "pierna_R": [
+          98,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_arrodillado_suplica.png"
+      }
+    },
+    "b_prepara_lanza": {
+      "angulos": {
+        "columna": [
+          -3.0,
+          0.0,
+          -22.0
+        ],
+        "pecho": [
+          -3.0,
+          0.0,
+          -20.0
+        ],
+        "cuello": [
+          4.0,
+          0.0,
+          30.0
+        ],
+        "cabeza": [
+          2.0,
+          0.0,
+          12.0
+        ],
+        "clavicula_R": [
+          -8.0,
+          5.0,
+          0.0
+        ],
+        "brazo_R": [
+          -35.0,
+          78.0,
+          -20.0
+        ],
+        "antebrazo_R": [
+          75.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          5.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          55.0,
+          25.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          35.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          18.0,
+          10.0,
+          0.0
+        ],
+        "pierna_L": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          -12.0,
+          12.0,
+          0.0
+        ],
+        "pierna_R": [
+          18.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "descripcion": "Fase de anticipación de arpón: tronco girado a la derecha, mano derecha llevada atrás a altura media-alta sobre el hombro sin superar la cabeza, brazo izquierdo al frente para contrapeso.",
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": false,
+      "llamada": "fisica_v8_r1",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          -4.0,
+          0.0,
+          -22.0
+        ],
+        "pecho": [
+          -4.0,
+          0.0,
+          -20.0
+        ],
+        "cuello": [
+          4.0,
+          0.0,
+          30.0
+        ],
+        "cabeza": [
+          2.0,
+          0.0,
+          12.0
+        ],
+        "clavicula_R": [
+          -10.0,
+          18.0,
+          0.0
+        ],
+        "brazo_R": [
+          -35.0,
+          95.0,
+          -45.0
+        ],
+        "antebrazo_R": [
+          75.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          10.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          55.0,
+          25.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          35.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          18.0,
+          10.0,
+          0.0
+        ],
+        "pierna_L": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          -12.0,
+          12.0,
+          0.0
+        ],
+        "pierna_R": [
+          18.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "b_apuntar_lanza_pecho": {
+      "angulos": {
+        "columna": [
+          4.0,
+          0.0,
+          -15.0
+        ],
+        "pecho": [
+          4.0,
+          0.0,
+          -15.0
+        ],
+        "cuello": [
+          2.0,
+          0.0,
+          22.0
+        ],
+        "cabeza": [
+          2.0,
+          0.0,
+          8.0
+        ],
+        "clavicula_R": [
+          -4.0,
+          2.0,
+          0.0
+        ],
+        "brazo_R": [
+          -18.0,
+          74.0,
+          -22.0
+        ],
+        "antebrazo_R": [
+          90.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          10.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          82.0,
+          15.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          12.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          16.0,
+          10.0,
+          0.0
+        ],
+        "pierna_L": [
+          14.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          -10.0,
+          10.0,
+          0.0
+        ],
+        "pierna_R": [
+          12.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "descripcion": "Postura lista para lanzar arpón: mano derecha 12-18 cm por encima del hombro (bajo la oreja, >15 cm bajo la coronilla), codo atrás flexionado ~90°, brazo izquierdo extendido apuntando a Kael.",
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": false,
+      "llamada": "fisica_v8_r1",
+      "accion": "corregida",
+      "version_anterior": {
+        "columna": [
+          4.0,
+          0.0,
+          -15.0
+        ],
+        "pecho": [
+          4.0,
+          0.0,
+          -15.0
+        ],
+        "cuello": [
+          2.0,
+          0.0,
+          22.0
+        ],
+        "cabeza": [
+          2.0,
+          0.0,
+          8.0
+        ],
+        "clavicula_R": [
+          -5.0,
+          15.0,
+          0.0
+        ],
+        "brazo_R": [
+          -15.0,
+          92.0,
+          -55.0
+        ],
+        "antebrazo_R": [
+          90.0,
+          0.0,
+          0.0
+        ],
+        "mano_R": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "brazo_L": [
+          82.0,
+          15.0,
+          0.0
+        ],
+        "antebrazo_L": [
+          12.0,
+          0.0,
+          0.0
+        ],
+        "muslo_L": [
+          16.0,
+          10.0,
+          0.0
+        ],
+        "pierna_L": [
+          14.0,
+          0.0,
+          0.0
+        ],
+        "muslo_R": [
+          -10.0,
+          10.0,
+          0.0
+        ],
+        "pierna_R": [
+          12.0,
+          0.0,
+          0.0
+        ],
+        "raiz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "b_mirar_brazalete_ini": {
+      "angulos": {
+        "columna": [
+          8,
+          0,
+          4
+        ],
+        "pecho": [
+          8,
+          0,
+          4
+        ],
+        "cuello": [
+          18,
+          -5,
+          15
+        ],
+        "cabeza": [
+          15,
+          -5,
+          10
+        ],
+        "brazo_L": [
+          35,
+          10,
+          -20
+        ],
+        "antebrazo_L": [
+          65,
+          0,
+          30
+        ],
+        "brazo_R": [
+          8,
+          10,
+          0
+        ],
+        "antebrazo_R": [
+          15,
+          0,
+          0
+        ],
+        "muslo_L": [
+          14,
+          6,
+          0
+        ],
+        "pierna_L": [
+          18,
+          0,
+          0
+        ],
+        "muslo_R": [
+          10,
+          6,
+          0
+        ],
+        "pierna_R": [
+          14,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "descripcion": "De pie quieto comenzando a levantar el antebrazo izquierdo y bajando la mirada hacia la muneca.",
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "accion": "creada",
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_mirar_brazalete_ini.png"
+      }
+    },
+    "b_mirar_brazalete_fin": {
+      "angulos": {
+        "columna": [
+          10,
+          0,
+          6
+        ],
+        "pecho": [
+          10,
+          0,
+          6
+        ],
+        "cuello": [
+          28,
+          -8,
+          22
+        ],
+        "cabeza": [
+          22,
+          -6,
+          15
+        ],
+        "brazo_L": [
+          52,
+          6,
+          -30
+        ],
+        "antebrazo_L": [
+          92,
+          0,
+          45
+        ],
+        "mano_L": [
+          10,
+          0,
+          0
+        ],
+        "brazo_R": [
+          8,
+          10,
+          0
+        ],
+        "antebrazo_R": [
+          18,
+          0,
+          0
+        ],
+        "muslo_L": [
+          14,
+          6,
+          0
+        ],
+        "pierna_L": [
+          18,
+          0,
+          0
+        ],
+        "muslo_R": [
+          10,
+          6,
+          0
+        ],
+        "pierna_R": [
+          14,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "descripcion": "De pie quieto con miedo, antebrazo izquierdo levantado frente al pecho y cabeza inclinada mirando el brazalete en la muneca izquierda.",
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "accion": "creada",
+      "validacion": {
+        "ok": true,
+        "imagen": "salida/val_poses_final/pose_b_mirar_brazalete_fin.png"
+      }
+    },
+    "p_de_pie_base": {
+      "angulos": {
+        "columna": [
+          2,
+          0,
+          0
+        ],
+        "pecho": [
+          2,
+          0,
+          0
+        ],
+        "cuello": [
+          0,
+          0,
+          0
+        ],
+        "cabeza": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_L": [
+          0,
+          2,
+          0
+        ],
+        "brazo_L": [
+          4,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          12,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          0,
+          2,
+          0
+        ],
+        "brazo_R": [
+          4,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          12,
+          0,
+          0
+        ],
+        "mano_R": [
+          0,
+          0,
+          0
+        ],
+        "muslo_L": [
+          6,
+          5,
+          0
+        ],
+        "pierna_L": [
+          12,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          6,
+          5,
+          0
+        ],
+        "pierna_R": [
+          12,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Postura erguida equilibrada en reposo activo con brazos relajados.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_aterriza_flex": {
+      "angulos": {
+        "columna": [
+          12,
+          0,
+          0
+        ],
+        "pecho": [
+          10,
+          0,
+          0
+        ],
+        "cuello": [
+          -8,
+          0,
+          0
+        ],
+        "cabeza": [
+          -4,
+          0,
+          0
+        ],
+        "clavicula_L": [
+          0,
+          8,
+          0
+        ],
+        "brazo_L": [
+          20,
+          35,
+          0
+        ],
+        "antebrazo_L": [
+          35,
+          0,
+          0
+        ],
+        "mano_L": [
+          -10,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          0,
+          8,
+          0
+        ],
+        "brazo_R": [
+          20,
+          35,
+          0
+        ],
+        "antebrazo_R": [
+          35,
+          0,
+          0
+        ],
+        "mano_R": [
+          -10,
+          0,
+          0
+        ],
+        "muslo_L": [
+          38,
+          8,
+          0
+        ],
+        "pierna_L": [
+          65,
+          0,
+          0
+        ],
+        "pie_L": [
+          15,
+          0,
+          0
+        ],
+        "muslo_R": [
+          38,
+          8,
+          0
+        ],
+        "pierna_R": [
+          65,
+          0,
+          0
+        ],
+        "pie_R": [
+          15,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Recepcion de aterrizaje con rodillas flexionadas y brazos abiertos equilibrando.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_alerta_pie": {
+      "angulos": {
+        "columna": [
+          4,
+          0,
+          0
+        ],
+        "pecho": [
+          4,
+          0,
+          0
+        ],
+        "cuello": [
+          -2,
+          0,
+          0
+        ],
+        "cabeza": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_L": [
+          2,
+          5,
+          0
+        ],
+        "brazo_L": [
+          18,
+          15,
+          0
+        ],
+        "antebrazo_L": [
+          40,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          2,
+          5,
+          0
+        ],
+        "brazo_R": [
+          18,
+          15,
+          0
+        ],
+        "antebrazo_R": [
+          40,
+          0,
+          0
+        ],
+        "mano_R": [
+          0,
+          0,
+          0
+        ],
+        "muslo_L": [
+          12,
+          7,
+          0
+        ],
+        "pierna_L": [
+          20,
+          0,
+          0
+        ],
+        "pie_L": [
+          -5,
+          0,
+          0
+        ],
+        "muslo_R": [
+          12,
+          7,
+          0
+        ],
+        "pierna_R": [
+          20,
+          0,
+          0
+        ],
+        "pie_R": [
+          -5,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Postura de guardia alerta tras aterrizar mirando al frente.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_disparo_prep": {
+      "angulos": {
+        "columna": [
+          4,
+          0,
+          -12
+        ],
+        "pecho": [
+          4,
+          0,
+          -10
+        ],
+        "cuello": [
+          2,
+          0,
+          15
+        ],
+        "cabeza": [
+          4,
+          0,
+          5
+        ],
+        "clavicula_L": [
+          0,
+          5,
+          0
+        ],
+        "brazo_L": [
+          25,
+          20,
+          0
+        ],
+        "antebrazo_L": [
+          45,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          5,
+          8,
+          0
+        ],
+        "brazo_R": [
+          65,
+          15,
+          -10
+        ],
+        "antebrazo_R": [
+          55,
+          0,
+          0
+        ],
+        "mano_R": [
+          10,
+          0,
+          0
+        ],
+        "muslo_L": [
+          10,
+          6,
+          0
+        ],
+        "pierna_L": [
+          16,
+          0,
+          0
+        ],
+        "pie_L": [
+          -5,
+          0,
+          0
+        ],
+        "muslo_R": [
+          6,
+          6,
+          0
+        ],
+        "pierna_R": [
+          12,
+          0,
+          0
+        ],
+        "pie_R": [
+          -5,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Prepara el brazo derecho con pistola de rayos y tronco girado con travesura.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_disparo_ext": {
+      "angulos": {
+        "columna": [
+          6,
+          0,
+          8
+        ],
+        "pecho": [
+          6,
+          0,
+          8
+        ],
+        "cuello": [
+          -4,
+          0,
+          -10
+        ],
+        "cabeza": [
+          -2,
+          0,
+          -5
+        ],
+        "clavicula_L": [
+          -4,
+          8,
+          0
+        ],
+        "brazo_L": [
+          -10,
+          28,
+          0
+        ],
+        "antebrazo_L": [
+          30,
+          0,
+          0
+        ],
+        "mano_L": [
+          -15,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          10,
+          5,
+          0
+        ],
+        "brazo_R": [
+          92,
+          6,
+          0
+        ],
+        "antebrazo_R": [
+          8,
+          0,
+          0
+        ],
+        "mano_R": [
+          0,
+          0,
+          0
+        ],
+        "muslo_L": [
+          14,
+          6,
+          0
+        ],
+        "pierna_L": [
+          18,
+          0,
+          0
+        ],
+        "pie_L": [
+          -4,
+          0,
+          0
+        ],
+        "muslo_R": [
+          4,
+          6,
+          0
+        ],
+        "pierna_R": [
+          10,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Extiende el brazo derecho apuntando/disparando el rayo hacia el objetivo.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_risa_pecho": {
+      "angulos": {
+        "columna": [
+          -8,
+          0,
+          0
+        ],
+        "pecho": [
+          -8,
+          0,
+          0
+        ],
+        "cuello": [
+          6,
+          0,
+          0
+        ],
+        "cabeza": [
+          8,
+          4,
+          0
+        ],
+        "clavicula_L": [
+          4,
+          6,
+          0
+        ],
+        "brazo_L": [
+          38,
+          22,
+          -15
+        ],
+        "antebrazo_L": [
+          65,
+          0,
+          20
+        ],
+        "mano_L": [
+          -10,
+          10,
+          0
+        ],
+        "clavicula_R": [
+          4,
+          6,
+          0
+        ],
+        "brazo_R": [
+          38,
+          22,
+          15
+        ],
+        "antebrazo_R": [
+          65,
+          0,
+          -20
+        ],
+        "mano_R": [
+          -10,
+          10,
+          0
+        ],
+        "muslo_L": [
+          6,
+          6,
+          0
+        ],
+        "pierna_L": [
+          12,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          6,
+          6,
+          0
+        ],
+        "pierna_R": [
+          12,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Risa burlona echando el torso ligeramente atras con manos abiertas.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_bostezo_mano": {
+      "angulos": {
+        "columna": [
+          -4,
+          0,
+          0
+        ],
+        "pecho": [
+          -4,
+          0,
+          0
+        ],
+        "cuello": [
+          -10,
+          4,
+          0
+        ],
+        "cabeza": [
+          -12,
+          4,
+          0
+        ],
+        "clavicula_L": [
+          8,
+          10,
+          0
+        ],
+        "brazo_L": [
+          75,
+          12,
+          -25
+        ],
+        "antebrazo_L": [
+          110,
+          0,
+          30
+        ],
+        "mano_L": [
+          15,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          0,
+          4,
+          0
+        ],
+        "brazo_R": [
+          10,
+          12,
+          0
+        ],
+        "antebrazo_R": [
+          20,
+          0,
+          0
+        ],
+        "mano_R": [
+          0,
+          0,
+          0
+        ],
+        "muslo_L": [
+          6,
+          5,
+          0
+        ],
+        "pierna_L": [
+          12,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          6,
+          5,
+          0
+        ],
+        "pierna_R": [
+          12,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Bostezo de aburrimiento llevando la mano izquierda cerca de la boca.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_visor_toque": {
+      "angulos": {
+        "columna": [
+          6,
+          0,
+          0
+        ],
+        "pecho": [
+          6,
+          0,
+          0
+        ],
+        "cuello": [
+          10,
+          0,
+          -8
+        ],
+        "cabeza": [
+          12,
+          0,
+          -8
+        ],
+        "clavicula_L": [
+          0,
+          4,
+          0
+        ],
+        "brazo_L": [
+          12,
+          10,
+          0
+        ],
+        "antebrazo_L": [
+          25,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          8,
+          12,
+          0
+        ],
+        "brazo_R": [
+          78,
+          22,
+          25
+        ],
+        "antebrazo_R": [
+          108,
+          0,
+          -20
+        ],
+        "mano_R": [
+          10,
+          0,
+          0
+        ],
+        "muslo_L": [
+          8,
+          5,
+          0
+        ],
+        "pierna_L": [
+          14,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          8,
+          5,
+          0
+        ],
+        "pierna_R": [
+          14,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Mano derecha alzada al lateral del casco para consultar el visor con preocupacion.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_alarma_manos": {
+      "angulos": {
+        "columna": [
+          6,
+          0,
+          10
+        ],
+        "pecho": [
+          6,
+          0,
+          10
+        ],
+        "cuello": [
+          -4,
+          0,
+          15
+        ],
+        "cabeza": [
+          0,
+          0,
+          10
+        ],
+        "clavicula_L": [
+          6,
+          12,
+          0
+        ],
+        "brazo_L": [
+          62,
+          35,
+          -15
+        ],
+        "antebrazo_L": [
+          55,
+          0,
+          20
+        ],
+        "mano_L": [
+          -15,
+          10,
+          0
+        ],
+        "clavicula_R": [
+          6,
+          12,
+          0
+        ],
+        "brazo_R": [
+          78,
+          25,
+          10
+        ],
+        "antebrazo_R": [
+          25,
+          0,
+          -10
+        ],
+        "mano_R": [
+          -10,
+          0,
+          0
+        ],
+        "muslo_L": [
+          10,
+          6,
+          0
+        ],
+        "pierna_L": [
+          16,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          10,
+          6,
+          0
+        ],
+        "pierna_R": [
+          16,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Gesto rapido y alarmado con ambos brazos levantados y abiertos.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_sorpresa_cofre": {
+      "angulos": {
+        "columna": [
+          8,
+          0,
+          0
+        ],
+        "pecho": [
+          6,
+          0,
+          0
+        ],
+        "cuello": [
+          8,
+          0,
+          0
+        ],
+        "cabeza": [
+          10,
+          0,
+          0
+        ],
+        "clavicula_L": [
+          4,
+          8,
+          0
+        ],
+        "brazo_L": [
+          28,
+          22,
+          -10
+        ],
+        "antebrazo_L": [
+          48,
+          0,
+          15
+        ],
+        "mano_L": [
+          -12,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          4,
+          8,
+          0
+        ],
+        "brazo_R": [
+          28,
+          22,
+          10
+        ],
+        "antebrazo_R": [
+          48,
+          0,
+          -15
+        ],
+        "mano_R": [
+          -12,
+          0,
+          0
+        ],
+        "muslo_L": [
+          10,
+          6,
+          0
+        ],
+        "pierna_L": [
+          16,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          10,
+          6,
+          0
+        ],
+        "pierna_R": [
+          16,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Inclinacion sutil de asombro mirando hacia el cofre con manos abiertas.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_habla_suave": {
+      "angulos": {
+        "columna": [
+          3,
+          0,
+          0
+        ],
+        "pecho": [
+          3,
+          0,
+          0
+        ],
+        "cuello": [
+          0,
+          2,
+          0
+        ],
+        "cabeza": [
+          2,
+          3,
+          0
+        ],
+        "clavicula_L": [
+          3,
+          5,
+          0
+        ],
+        "brazo_L": [
+          32,
+          14,
+          -20
+        ],
+        "antebrazo_L": [
+          58,
+          0,
+          35
+        ],
+        "mano_L": [
+          5,
+          8,
+          0
+        ],
+        "clavicula_R": [
+          3,
+          5,
+          0
+        ],
+        "brazo_R": [
+          36,
+          16,
+          20
+        ],
+        "antebrazo_R": [
+          62,
+          0,
+          -35
+        ],
+        "mano_R": [
+          5,
+          8,
+          0
+        ],
+        "muslo_L": [
+          6,
+          5,
+          0
+        ],
+        "pierna_L": [
+          12,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          6,
+          5,
+          0
+        ],
+        "pierna_R": [
+          12,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Gesto explicativo suave y calido con manos abiertas a media altura.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_energia_puno": {
+      "angulos": {
+        "columna": [
+          2,
+          0,
+          6
+        ],
+        "pecho": [
+          4,
+          0,
+          6
+        ],
+        "cuello": [
+          -2,
+          0,
+          10
+        ],
+        "cabeza": [
+          0,
+          0,
+          8
+        ],
+        "clavicula_L": [
+          2,
+          6,
+          0
+        ],
+        "brazo_L": [
+          20,
+          16,
+          0
+        ],
+        "antebrazo_L": [
+          45,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          8,
+          10,
+          0
+        ],
+        "brazo_R": [
+          68,
+          18,
+          15
+        ],
+        "antebrazo_R": [
+          88,
+          0,
+          -25
+        ],
+        "mano_R": [
+          8,
+          0,
+          0
+        ],
+        "muslo_L": [
+          8,
+          6,
+          0
+        ],
+        "pierna_L": [
+          14,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          8,
+          6,
+          0
+        ],
+        "pierna_R": [
+          14,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Gesto entusiasta de valentia cerrando el antebrazo derecho con energia.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_senalar_frente": {
+      "angulos": {
+        "columna": [
+          5,
+          0,
+          4
+        ],
+        "pecho": [
+          5,
+          0,
+          4
+        ],
+        "cuello": [
+          -2,
+          0,
+          0
+        ],
+        "cabeza": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_L": [
+          0,
+          6,
+          0
+        ],
+        "brazo_L": [
+          14,
+          14,
+          0
+        ],
+        "antebrazo_L": [
+          28,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          8,
+          4,
+          0
+        ],
+        "brazo_R": [
+          86,
+          4,
+          0
+        ],
+        "antebrazo_R": [
+          6,
+          0,
+          0
+        ],
+        "mano_R": [
+          -5,
+          0,
+          0
+        ],
+        "muslo_L": [
+          8,
+          5,
+          0
+        ],
+        "pierna_L": [
+          14,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          8,
+          5,
+          0
+        ],
+        "pierna_R": [
+          14,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Brazo derecho extendido al frente senalando directamente al espectador.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_camina_1": {
+      "angulos": {
+        "columna": [
+          4,
+          0,
+          -4
+        ],
+        "pecho": [
+          4,
+          0,
+          -4
+        ],
+        "cuello": [
+          0,
+          0,
+          4
+        ],
+        "cabeza": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_L": [
+          2,
+          3,
+          0
+        ],
+        "brazo_L": [
+          22,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          25,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          -2,
+          3,
+          0
+        ],
+        "brazo_R": [
+          -14,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          18,
+          0,
+          0
+        ],
+        "mano_R": [
+          0,
+          0,
+          0
+        ],
+        "muslo_L": [
+          -14,
+          4,
+          0
+        ],
+        "pierna_L": [
+          18,
+          0,
+          0
+        ],
+        "pie_L": [
+          -12,
+          0,
+          0
+        ],
+        "muslo_R": [
+          24,
+          4,
+          0
+        ],
+        "pierna_R": [
+          12,
+          0,
+          0
+        ],
+        "pie_R": [
+          8,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Ciclo de caminata fase 1: contacto derecho adelante e izquierdo atras.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_camina_2": {
+      "angulos": {
+        "columna": [
+          4,
+          0,
+          0
+        ],
+        "pecho": [
+          4,
+          0,
+          0
+        ],
+        "cuello": [
+          0,
+          0,
+          0
+        ],
+        "cabeza": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_L": [
+          0,
+          3,
+          0
+        ],
+        "brazo_L": [
+          4,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          20,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          0,
+          3,
+          0
+        ],
+        "brazo_R": [
+          4,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          20,
+          0,
+          0
+        ],
+        "mano_R": [
+          0,
+          0,
+          0
+        ],
+        "muslo_L": [
+          18,
+          5,
+          0
+        ],
+        "pierna_L": [
+          42,
+          0,
+          0
+        ],
+        "pie_L": [
+          5,
+          0,
+          0
+        ],
+        "muslo_R": [
+          6,
+          4,
+          0
+        ],
+        "pierna_R": [
+          14,
+          0,
+          0
+        ],
+        "pie_R": [
+          -4,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_R"
+      ],
+      "descripcion": "Ciclo de caminata fase 2: apoyo derecho y paso de pierna izquierda en el aire.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_camina_3": {
+      "angulos": {
+        "columna": [
+          4,
+          0,
+          4
+        ],
+        "pecho": [
+          4,
+          0,
+          4
+        ],
+        "cuello": [
+          0,
+          0,
+          -4
+        ],
+        "cabeza": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_L": [
+          -2,
+          3,
+          0
+        ],
+        "brazo_L": [
+          -14,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          18,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          2,
+          3,
+          0
+        ],
+        "brazo_R": [
+          22,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          25,
+          0,
+          0
+        ],
+        "mano_R": [
+          0,
+          0,
+          0
+        ],
+        "muslo_L": [
+          24,
+          4,
+          0
+        ],
+        "pierna_L": [
+          12,
+          0,
+          0
+        ],
+        "pie_L": [
+          8,
+          0,
+          0
+        ],
+        "muslo_R": [
+          -14,
+          4,
+          0
+        ],
+        "pierna_R": [
+          18,
+          0,
+          0
+        ],
+        "pie_R": [
+          -12,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "descripcion": "Ciclo de caminata fase 3: contacto izquierdo adelante y derecho atras.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_camina_4": {
+      "angulos": {
+        "columna": [
+          4,
+          0,
+          0
+        ],
+        "pecho": [
+          4,
+          0,
+          0
+        ],
+        "cuello": [
+          0,
+          0,
+          0
+        ],
+        "cabeza": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_L": [
+          0,
+          3,
+          0
+        ],
+        "brazo_L": [
+          4,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          20,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          0,
+          3,
+          0
+        ],
+        "brazo_R": [
+          4,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          20,
+          0,
+          0
+        ],
+        "mano_R": [
+          0,
+          0,
+          0
+        ],
+        "muslo_L": [
+          6,
+          4,
+          0
+        ],
+        "pierna_L": [
+          14,
+          0,
+          0
+        ],
+        "pie_L": [
+          -4,
+          0,
+          0
+        ],
+        "muslo_R": [
+          18,
+          5,
+          0
+        ],
+        "pierna_R": [
+          42,
+          0,
+          0
+        ],
+        "pie_R": [
+          5,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "apoyos": [
+        "pie_L"
+      ],
+      "descripcion": "Ciclo de caminata fase 4: apoyo izquierdo y paso de pierna derecha en el aire.",
+      "origen": "motor2B Argon t923",
+      "validado": false
+    },
+    "p_visor_sin_toque": {
+      "angulos": {
+        "columna": [
+          6,
+          0,
+          0
+        ],
+        "pecho": [
+          6,
+          0,
+          0
+        ],
+        "cuello": [
+          10,
+          0,
+          -8
+        ],
+        "cabeza": [
+          12,
+          0,
+          -8
+        ],
+        "clavicula_L": [
+          0,
+          4,
+          0
+        ],
+        "brazo_L": [
+          4,
+          8,
+          0
+        ],
+        "antebrazo_L": [
+          12,
+          0,
+          0
+        ],
+        "mano_L": [
+          0,
+          0,
+          0
+        ],
+        "clavicula_R": [
+          8,
+          12,
+          0
+        ],
+        "brazo_R": [
+          4,
+          8,
+          0
+        ],
+        "antebrazo_R": [
+          12,
+          0,
+          0
+        ],
+        "mano_R": [
+          0,
+          0,
+          0
+        ],
+        "muslo_L": [
+          8,
+          5,
+          0
+        ],
+        "pierna_L": [
+          14,
+          0,
+          0
+        ],
+        "pie_L": [
+          -6,
+          0,
+          0
+        ],
+        "muslo_R": [
+          8,
+          5,
+          0
+        ],
+        "pierna_R": [
+          14,
+          0,
+          0
+        ],
+        "pie_R": [
+          -6,
+          0,
+          0
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "source": "Argon08 selected source angles; no new numeric angles",
+      "validado": false,
+      "source_selection": "argon08_2b_propuesta.json#/visor_pose_sources"
+    }
+  },
+  "movimientos": {
+    "levantarse_por_fases": {
+      "descripcion": "Secuencia biomecanica completa de 6 fases desde tendido en el suelo hasta ponerse de pie con piernas temblorosas por el esfuerzo.",
+      "fases": [
+        {
+          "pose": "b_tendido",
+          "t_fin_frac": 0.12,
+          "apoyos": [
+            "mano_R",
+            "pierna_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_lado_mano",
+          "t_fin_frac": 0.3,
+          "apoyos": [
+            "mano_R",
+            "pierna_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_manos_rodillas",
+          "t_fin_frac": 0.5,
+          "apoyos": [
+            "mano_L",
+            "mano_R",
+            "pierna_L",
+            "pierna_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_rodilla_apoyo",
+          "t_fin_frac": 0.7,
+          "apoyos": [
+            "pie_L",
+            "pierna_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_cadera_arriba",
+          "t_fin_frac": 0.88,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_de_pie_exhausto",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "mirar",
+          "desde": "cabeza",
+          "hacia": "novia.cabeza",
+          "t_ini_frac": 0.55,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 3.5,
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "validacion": "revisor_movimiento esc11 v6 OK (salida/molde_esc11_v6/revisor_movimiento.json)",
+      "fisica": {
+        "masa_objeto_kg": 0.0,
+        "requiere_anticipacion": true,
+        "anticipacion_retroceso_m": 0.08,
+        "mano_a_altura_de_hombro": false,
+        "aceleracion_max_com_m_s2": 36.0,
+        "contrapeso": "El tronco se mantiene bajo e inclinado hacia las manos mientras la cadera y ambas rodillas siguen en el suelo, encerrando el centro de masa dentro del polígono de manos y rodillas/muslos.",
+        "fisica_real": "Para levantarse desde el suelo estando exhausto, el cuerpo gira de lado apoyando las manos separadas bajo los hombros con la pelvis y rodillas bajas, pasa a cuadrupedia amplia y adelanta un pie para subir la cadera.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04",
+        "escena": "esc11",
+        "ronda": 1
+      },
+      "historial_rechazado": [
+        {
+          "fases": [
+            {
+              "pose": "b_tendido",
+              "t_fin_frac": 0.14,
+              "apoyos": [
+                "mano_R",
+                "mano_L",
+                "pierna_R",
+                "pierna_L"
+              ],
+              "anclar_apoyo": true,
+              "desplazamiento_m": 0.0
+            },
+            {
+              "pose": "b_lado_mano",
+              "t_fin_frac": 0.35,
+              "apoyos": [
+                "mano_R",
+                "mano_L",
+                "pierna_R",
+                "pierna_L",
+                "pie_R",
+                "pie_L"
+              ],
+              "anclar_apoyo": true,
+              "desplazamiento_m": 0.0
+            },
+            {
+              "pose": "b_manos_rodillas",
+              "t_fin_frac": 0.56,
+              "apoyos": [
+                "mano_L",
+                "mano_R",
+                "pierna_L",
+                "pierna_R",
+                "pie_L",
+                "pie_R"
+              ],
+              "anclar_apoyo": true,
+              "desplazamiento_m": 0.0
+            },
+            {
+              "pose": "b_rodilla_apoyo",
+              "t_fin_frac": 0.75,
+              "apoyos": [
+                "mano_L",
+                "mano_R",
+                "pie_L",
+                "pierna_R",
+                "pie_R"
+              ],
+              "anclar_apoyo": true,
+              "desplazamiento_m": 0.0
+            },
+            {
+              "pose": "b_cadera_arriba",
+              "t_fin_frac": 0.9,
+              "apoyos": [
+                "pie_L",
+                "pie_R"
+              ],
+              "anclar_apoyo": true,
+              "desplazamiento_m": 0.0
+            },
+            {
+              "pose": "b_de_pie_exhausto",
+              "t_fin_frac": 1.0,
+              "apoyos": [
+                "pie_L",
+                "pie_R"
+              ],
+              "anclar_apoyo": true,
+              "desplazamiento_m": 0.0
+            }
+          ],
+          "llamada": "fisica_v8_r1",
+          "motivo": "empeoró el validador en v8"
+        }
+      ]
+    },
+    "paso_corto_vacilante": {
+      "descripcion": "Intento de avanzar con piernas debilitadas logrando solo un paso corto y pesado de 0.35 metros.",
+      "fases": [
+        {
+          "pose": "b_de_pie_exhausto",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_paso_corto_impulso",
+          "t_fin_frac": 0.65,
+          "apoyos": [
+            "pie_R"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.2
+        },
+        {
+          "pose": "b_paso_corto_recepcion",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.15
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "mirar",
+          "desde": "cabeza",
+          "hacia": "novia.cabeza",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 4.0,
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "validacion": "revisor_movimiento esc11 v6 OK (salida/molde_esc11_v6/revisor_movimiento.json)"
+    },
+    "arrodillarse": {
+      "descripcion": "Pierde las fuerzas desde de pie y cae de rodillas juntando las manos al pecho en gesto de suplica.",
+      "fases": [
+        {
+          "pose": "v_de_pie",
+          "t_fin_frac": 0.15,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_descenso_rodillas",
+          "t_fin_frac": 0.55,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_arrodillado",
+          "t_fin_frac": 0.8,
+          "apoyos": [
+            "pierna_L",
+            "pierna_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_arrodillado_suplica",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pierna_L",
+            "pierna_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "mirar",
+          "desde": "cabeza",
+          "hacia": "kael.cabeza",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 1.5,
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "validacion": "revisor_movimiento esc11 v6 OK (salida/molde_esc11_v6/revisor_movimiento.json)",
+      "fisica": {
+        "masa_objeto_kg": 0.0,
+        "requiere_anticipacion": false,
+        "anticipacion_retroceso_m": 0.0,
+        "mano_a_altura_de_hombro": false,
+        "aceleracion_max_com_m_s2": 28.0,
+        "contrapeso": "Inclinación leve del torso hacia adelante al flexionar caderas y rodillas para mantener la proyección del centro de masa sobre la base de sustentación.",
+        "fisica_real": "Descenso directo a favor de la gravedad sin requerir retroceso de anticipación, frenando al apoyar ambas rodillas en el suelo.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04",
+        "escena": "esc11",
+        "ronda": 1
+      },
+      "historial_fisica": [
+        {
+          "masa_objeto_kg": 0.0,
+          "requiere_anticipacion": true,
+          "anticipacion_retroceso_m": 0.05,
+          "mano_a_altura_de_hombro": false,
+          "aceleracion_max_com_m_s2": 10.5,
+          "contrapeso": "Inclinación leve del torso hacia adelante al flexionar caderas y rodillas para mantener la proyección del centro de masa sobre la base de sustentación.",
+          "fisica_real": "Descenso controlado asistido por gravedad mediante contracción excéntrica de cuádriceps y glúteos hasta apoyar ambas rodillas en el suelo.",
+          "origen": "ia (Argon)",
+          "fecha": "2026-11-04",
+          "escena": "esc11",
+          "ronda": 0
+        }
+      ]
+    },
+    "mantener_arrodillada_mirando": {
+      "descripcion": "Permanece de rodillas en el sitio con expresion y postura de suplica mirando continuamente a Kael.",
+      "fases": [
+        {
+          "pose": "b_arrodillado_suplica",
+          "t_fin_frac": 0.5,
+          "apoyos": [
+            "pierna_L",
+            "pierna_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_arrodillado_suplica",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pierna_L",
+            "pierna_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "mirar",
+          "desde": "cabeza",
+          "hacia": "kael.cabeza",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.5,
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "validacion": "revisor_movimiento esc11 v6 OK (salida/molde_esc11_v6/revisor_movimiento.json)"
+    },
+    "quieto_firme": {
+      "descripcion": "Permanece de pie inmovil en su sitio sosteniendo la lanza en la mano derecha sin alzarla y mirando a Kael.",
+      "fases": [
+        {
+          "pose": "v_con_lanza",
+          "t_fin_frac": 0.5,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "v_con_lanza",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "agarrar",
+          "desde": "mano_R",
+          "hacia": "lanza.agarre",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        },
+        {
+          "tipo": "mirar",
+          "desde": "cabeza",
+          "hacia": "kael.cabeza",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "validacion": "revisor_movimiento esc11 v6 OK (salida/molde_esc11_v6/revisor_movimiento.json)",
+      "fisica": {
+        "masa_objeto_kg": 3.2,
+        "requiere_anticipacion": false,
+        "anticipacion_retroceso_m": 0.0,
+        "mano_a_altura_de_hombro": false,
+        "aceleracion_max_com_m_s2": 2.0,
+        "contrapeso": "Postura erguida simétrica con peso repartido en ambos pies y lanza cerca del centro de gravedad.",
+        "fisica_real": "Equilibrio estático bípedo con mínimo gasto energético sosteniendo la lanza por su centro de masa.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04",
+        "escena": "esc11",
+        "ronda": 1
+      },
+      "historial_fisica": [
+        {
+          "masa_objeto_kg": 3.2,
+          "requiere_anticipacion": false,
+          "anticipacion_retroceso_m": 0.0,
+          "mano_a_altura_de_hombro": false,
+          "aceleracion_max_com_m_s2": 2.0,
+          "contrapeso": "Postura erguida simétrica con peso repartido en ambos pies y lanza cerca del centro de gravedad.",
+          "fisica_real": "Equilibrio estático bípedo con mínimo gasto energético sosteniendo la lanza por su centro de masa.",
+          "origen": "ia (Argon)",
+          "fecha": "2026-11-04",
+          "escena": "esc11",
+          "ronda": 0
+        }
+      ]
+    },
+    "apuntar_lanza": {
+      "descripcion": "Sin moverse de su sitio, realiza una anticipación llevando la lanza atrás con giro de tronco, y luego adopta la postura de lanzamiento de arpón con la mano derecha entre 0.12 y 0.18 m sobre el hombro (bajo la oreja y debajo de la coronilla), codo atrás a ~90° y brazo izquierdo extendido apuntando hacia el pecho de Kael.",
+      "fases": [
+        {
+          "pose": "v_con_lanza",
+          "t_fin_frac": 0.18,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_prepara_lanza",
+          "t_fin_frac": 0.52,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_apuntar_lanza_pecho",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "agarrar",
+          "desde": "mano_R",
+          "hacia": "lanza.agarre",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        },
+        {
+          "tipo": "apuntar",
+          "desde": "lanza.punta",
+          "hacia": "kael.pecho_c",
+          "t_ini_frac": 0.25,
+          "t_fin_frac": 1.0
+        },
+        {
+          "tipo": "mirar",
+          "desde": "cabeza",
+          "hacia": "kael.cabeza",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": false,
+      "llamada": "fisica_v8_r1",
+      "fisica": {
+        "masa_objeto_kg": 3.2,
+        "requiere_anticipacion": true,
+        "anticipacion_retroceso_m": 0.35,
+        "mano_a_altura_de_hombro": true,
+        "aceleracion_max_com_m_s2": 6.0,
+        "contrapeso": "El pie izquierdo se adelanta y el derecho queda atrás; el tronco gira hacia la derecha en la carga y el brazo izquierdo se extiende hacia adelante hacia Kael para equilibrar el par de la lanza a la altura del hombro derecho.",
+        "fisica_real": "Para apuntar una lanza de 1.90 m como arpón lista para lanzar sin alzarla sobre la cabeza, se realiza una anticipación llevando el hombro y la mano derecha hacia atrás y luego se posiciona la mano derecha unos 12-18 cm sobre el hombro (bajo la oreja, lejos de la coronilla) con el codo flexionado atrás (~90°) mientras el brazo izquierdo apunta al pecho de Kael.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04",
+        "escena": "esc11",
+        "ronda": 1
+      }
+    },
+    "mantener_apuntando_lanza": {
+      "descripcion": "Mantiene la postura tensa de arpón listo para lanzar en el sitio, con la mano derecha entre 0.12 y 0.18 m sobre el hombro, brazo izquierdo extendido y la punta de la lanza dirigida a kael.pecho_c.",
+      "fases": [
+        {
+          "pose": "b_apuntar_lanza_pecho",
+          "t_fin_frac": 0.5,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_apuntar_lanza_pecho",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "agarrar",
+          "desde": "mano_R",
+          "hacia": "lanza.agarre",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        },
+        {
+          "tipo": "apuntar",
+          "desde": "lanza.punta",
+          "hacia": "kael.pecho_c",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        },
+        {
+          "tipo": "mirar",
+          "desde": "cabeza",
+          "hacia": "kael.cabeza",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": false,
+      "llamada": "fisica_v8_r1",
+      "fisica": {
+        "masa_objeto_kg": 3.2,
+        "requiere_anticipacion": false,
+        "anticipacion_retroceso_m": 0.0,
+        "mano_a_altura_de_hombro": true,
+        "aceleracion_max_com_m_s2": 2.5,
+        "contrapeso": "Base bípeda amplia con piernas ligeramente flexionadas y brazo izquierdo extendido al frente compensando el peso de la lanza junto al hombro derecho.",
+        "fisica_real": "Contracción isométrica de deltoides, trapecio y core para sostener la lanza entre 0.10 y 0.20 m sobre el hombro derecho apuntando hacia el pecho de Kael.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04",
+        "escena": "esc11",
+        "ronda": 1
+      }
+    },
+    "mirar_brazalete": {
+      "descripcion": "Quieto en su lugar, levanta el antebrazo izquierdo y baja la mirada con miedo hacia el brazalete tecnologico en su muneca.",
+      "fases": [
+        {
+          "pose": "b_paso_corto_recepcion",
+          "t_fin_frac": 0.15,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_mirar_brazalete_ini",
+          "t_fin_frac": 0.5,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "b_mirar_brazalete_fin",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "mirar_objeto_mano",
+          "desde": "cabeza",
+          "hacia": "brazalete.centro",
+          "t_ini_frac": 0.2,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 1.5,
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "validado": true,
+      "llamada": "2b-r0",
+      "validacion": "revisor_movimiento esc11 v6 OK (salida/molde_esc11_v6/revisor_movimiento.json)"
+    },
+    "m_reposo_base": {
+      "descripcion": "Mantiene postura erguida de reposo estable sobre ambos pies.",
+      "fases": [
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 0.5,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_caminar_ciclo": {
+      "descripcion": "Ciclo completo de caminata natural alternando piernas y brazos en 5 fases cerradas.",
+      "fases": [
+        {
+          "pose": "p_camina_1",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_camina_2",
+          "t_fin_frac": 0.45,
+          "apoyos": [
+            "pie_R"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_camina_3",
+          "t_fin_frac": 0.7,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_camina_4",
+          "t_fin_frac": 0.9,
+          "apoyos": [
+            "pie_L"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_camina_1",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.8,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_giro_pasos": {
+      "descripcion": "Acompana el giro sobre el sitio con alternancia de pies y brazos.",
+      "fases": [
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_camina_2",
+          "t_fin_frac": 0.5,
+          "apoyos": [
+            "pie_R"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_camina_4",
+          "t_fin_frac": 0.8,
+          "apoyos": [
+            "pie_L"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": false,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.8,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_disparo_caos": {
+      "descripcion": "Apunta y dispara su pistola de rayos con gesto travieso y burlon.",
+      "fases": [
+        {
+          "pose": "p_disparo_prep",
+          "t_fin_frac": 0.3,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_disparo_ext",
+          "t_fin_frac": 0.75,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_disparo_prep",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_risa_caos": {
+      "descripcion": "Rie de forma burlona y gesticula mientras habla divertido.",
+      "fases": [
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_risa_pecho",
+          "t_fin_frac": 0.55,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_habla_suave",
+          "t_fin_frac": 0.85,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_bostezo_caos": {
+      "descripcion": "Habla con desden, bosteza llevandose la mano a la boca y recupera postura.",
+      "fases": [
+        {
+          "pose": "p_habla_suave",
+          "t_fin_frac": 0.3,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_bostezo_mano",
+          "t_fin_frac": 0.7,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_aterrizar_alerta": {
+      "descripcion": "Amortigua la llegada flexionando rodillas y se incorpora en guardia alerta.",
+      "fases": [
+        {
+          "pose": "p_aterriza_flex",
+          "t_fin_frac": 0.35,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_alerta_pie",
+          "t_fin_frac": 0.75,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_hablar_visor": {
+      "descripcion": "Lleva la mano derecha al visor del casco con preocupacion mientras reporta la alerta.",
+      "fases": [
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_visor_toque",
+          "t_fin_frac": 0.75,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_alerta_pie",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": false
+    },
+    "m_hablar_alarmado": {
+      "descripcion": "Gesticula rapidamente con brazos abiertos y senalando hacia Spark en estado de alarma.",
+      "fases": [
+        {
+          "pose": "p_alarma_manos",
+          "t_fin_frac": 0.35,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_senalar_frente",
+          "t_fin_frac": 0.7,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_alarma_manos",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "mirar",
+          "desde": "cabeza",
+          "hacia": "ch-spark-468e.cabeza",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.5,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_mirar_sorpresa": {
+      "descripcion": "Reacciona con sorpresa inclinando levemente el torso y abriendo antebrazos.",
+      "fases": [
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 0.25,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_sorpresa_cofre",
+          "t_fin_frac": 0.75,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_sorpresa_cofre",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_hablar_serena": {
+      "descripcion": "Explica con calma y suavidad abriendo las manos hacia adelante.",
+      "fases": [
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_habla_suave",
+          "t_fin_frac": 0.6,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_hablar_entusiasta": {
+      "descripcion": "Habla con gran energia levantando el antebrazo derecho y mirando a Valentina.",
+      "fases": [
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_energia_puno",
+          "t_fin_frac": 0.7,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_alerta_pie",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [
+        {
+          "tipo": "mirar",
+          "desde": "cabeza",
+          "hacia": "ch-valentina-a9be.cabeza",
+          "t_ini_frac": 0.0,
+          "t_fin_frac": 1.0
+        }
+      ],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_giro_decidido": {
+      "descripcion": "Acompana el giro lento hacia camara con postura decidida de torso y brazos.",
+      "fases": [
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 0.4,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_alerta_pie",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_senalar_tu": {
+      "descripcion": "Senala directamente al frente con emocion al decir TU.",
+      "fases": [
+        {
+          "pose": "p_alerta_pie",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_senalar_frente",
+          "t_fin_frac": 0.65,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_senalar_frente",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_hablar_misterioso": {
+      "descripcion": "Habla hacia la camara con tono misterioso y gesto pausado.",
+      "fases": [
+        {
+          "pose": "p_senalar_frente",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_habla_suave",
+          "t_fin_frac": 0.65,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    },
+    "m_hablar_visor_sin_toque": {
+      "descripcion": "Mira el visor sin crear contacto físico de mano; brazos base, mirada del diseño existente.",
+      "fases": [
+        {
+          "pose": "p_de_pie_base",
+          "t_fin_frac": 0.2,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_visor_sin_toque",
+          "t_fin_frac": 0.75,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        },
+        {
+          "pose": "p_alerta_pie",
+          "t_fin_frac": 1.0,
+          "apoyos": [
+            "pie_L",
+            "pie_R"
+          ],
+          "anclar_apoyo": true,
+          "desplazamiento_m": 0.0
+        }
+      ],
+      "objetivos": [],
+      "excepciones": {
+        "vuela": false,
+        "rapido": false,
+        "golpe": false
+      },
+      "temblor_deg": 0.0,
+      "ciclo_s": 0.0,
+      "validado": true,
+      "approval_ref": {
+        "path": "movimientos08_prevalidacion_cpu.json",
+        "sha256": "d3a5d23174daa46e1558b4adc9b35c35b9ead5519d698cd2574ddeb81946ad2f",
+        "scope": "NATIVE_CPU_POSE_AND_PHASE_SANITY_FOR_CPU_TRIAL_ONLY; scene dynamics/collision/balance NOT approved",
+        "production_approved": false,
+        "issued_by": "deterministic native rig test, not model"
+      }
+    }
+  },
+  "asignacion": [
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 9.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 0,
+        "quote": "Apunta su rayo al libro de cuentos sobre la cama y se rie",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a1",
+      "movimiento": "m_disparo_caos",
+      "t0": 0.0,
+      "t1": 3.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 1,
+        "quote": "Un rayo morado cruza la pantalla. Las letras salen volando como mariposas y la página queda en blanco.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a2",
+      "movimiento": "m_risa_caos",
+      "t0": 3.0,
+      "t1": 9.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 2,
+        "quote": "¡Jajajá! ¡Sin letras no hay cuentos! ¡Y sin cuentos… todos a la cama sin leer!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_1",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 9.0,
+      "t1": 11.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "muslo_R",
+        "pierna_R",
+        "pie_R",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 3,
+        "quote": "Se vuelve hacia la ventana para disparar al arcoiris",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a3",
+      "movimiento": "m_disparo_caos",
+      "t0": 9.0,
+      "t1": 11.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 4,
+        "quote": "Otro ZAP. Ahora el arcoíris de la ventana se vuelve gris.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_2",
+      "movimiento": "m_reposo_base",
+      "t0": 11.0,
+      "t1": 15.5,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 5,
+        "quote": "Celebra que borro los colores y los numeros y bosteza",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a4",
+      "movimiento": "m_bostezo_caos",
+      "t0": 11.0,
+      "t1": 15.5,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 6,
+        "quote": "¡Y adiós colores! ¡Y adiós números! Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_3",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 15.5,
+      "t1": 18.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "muslo_R",
+        "pierna_R",
+        "pie_R",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 7,
+        "quote": "Se retira junto a la cama para esconderse al llegar los heroes",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a5",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 15.5,
+      "t1": 18.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "muslo_R",
+        "pierna_R",
+        "pie_R",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 8,
+        "quote": "Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_4",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 55.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 9,
+        "quote": "Observa oculto junto a la cama mientras los heroes examinan el cofre",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 18.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 10,
+        "quote": "Posicion previa a su llegada como luz azul",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_1",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 30.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 11,
+        "quote": "Aterriza en la habitacion y revisa la alerta en su visor",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a6",
+      "movimiento": "m_aterrizar_alerta",
+      "t0": 18.0,
+      "t1": 21.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 12,
+        "quote": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a11",
+      "movimiento": "m_hablar_visor_sin_toque",
+      "t0": 21.0,
+      "t1": 25.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 13,
+        "quote": "Alerta. Nivel de letras en el mundo: cero.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_2",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 30.0,
+      "t1": 33.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "muslo_R",
+        "pierna_R",
+        "pie_R",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 14,
+        "quote": "Da un paso hacia el cofre dorado que aparece en el centro",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a14",
+      "movimiento": "m_mirar_sorpresa",
+      "t0": 30.0,
+      "t1": 33.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 15,
+        "quote": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_3",
+      "movimiento": "m_reposo_base",
+      "t0": 33.0,
+      "t1": 44.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 16,
+        "quote": "Escucha a Valentina y Eco hablando sobre el cofre",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_4",
+      "movimiento": "m_giro_pasos",
+      "t0": 44.0,
+      "t1": 46.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "muslo_R",
+        "pierna_R",
+        "pie_R",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 17,
+        "quote": "Gira lentamente hacia el frente",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a17",
+      "movimiento": "m_giro_decidido",
+      "t0": 44.0,
+      "t1": 46.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 18,
+        "quote": "…¡TÚ!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_5",
+      "movimiento": "m_reposo_base",
+      "t0": 46.0,
+      "t1": 55.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 19,
+        "quote": "Senala al frente y explica la mision final de la palabra magica",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a21",
+      "movimiento": "m_senalar_tu",
+      "t0": 46.0,
+      "t1": 48.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 20,
+        "quote": "…¡TÚ!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a25",
+      "movimiento": "m_hablar_misterioso",
+      "t0": 48.0,
+      "t1": 55.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 21,
+        "quote": "Al final de esta misión, tú vas a leer tu primera palabra mágica. Y no te voy a decir cuál es… todavía.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 18.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 22,
+        "quote": "Posicion previa a su llegada como luz magenta",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_1",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 30.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 23,
+        "quote": "Aterriza y escucha el reporte de Spark y Pintor",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "a7",
+      "movimiento": "m_aterrizar_alerta",
+      "t0": 18.0,
+      "t1": 21.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 24,
+        "quote": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_2",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 30.0,
+      "t1": 33.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "muslo_R",
+        "pierna_R",
+        "pie_R",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 25,
+        "quote": "Se acerca al cofre dorado recien aparecido",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_3",
+      "movimiento": "m_reposo_base",
+      "t0": 33.0,
+      "t1": 44.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 26,
+        "quote": "Explica que el cofre guarda una palabra magica",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "a15",
+      "movimiento": "m_hablar_serena",
+      "t0": 33.0,
+      "t1": 40.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 27,
+        "quote": "Esperen… este cofre guarda una palabra mágica. Si alguien la lee en voz alta, todo vuelve a la normalidad.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_4",
+      "movimiento": "m_giro_pasos",
+      "t0": 44.0,
+      "t1": 46.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "muslo_R",
+        "pierna_R",
+        "pie_R",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 28,
+        "quote": "Gira lentamente hacia el frente junto con el equipo",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "a18",
+      "movimiento": "m_giro_decidido",
+      "t0": 44.0,
+      "t1": 46.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 29,
+        "quote": "…¡TÚ!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_5",
+      "movimiento": "m_reposo_base",
+      "t0": 46.0,
+      "t1": 55.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 30,
+        "quote": "Susurra al frente y acompana el cierre de Spark",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "a22",
+      "movimiento": "m_senalar_tu",
+      "t0": 46.0,
+      "t1": 48.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 31,
+        "quote": "…¡TÚ!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 18.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 32,
+        "quote": "Posicion previa a su llegada como luz verde",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_1",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 30.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 33,
+        "quote": "Aterriza con Piquito en el hombro y escucha a sus amigos",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "a8",
+      "movimiento": "m_aterrizar_alerta",
+      "t0": 18.0,
+      "t1": 21.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "pelvis",
+        "columna",
+        "pecho",
+        "cuello",
+        "cabeza",
+        "clavicula_L",
+        "brazo_L",
+        "antebrazo_L",
+        "mano_L",
+        "muslo_L",
+        "pierna_L",
+        "pie_L",
+        "clavicula_R",
+        "brazo_R",
+        "antebrazo_R",
+        "mano_R",
+        "muslo_R",
+        "pierna_R",
+        "pie_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 34,
+        "quote": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "a9",
+      "movimiento": "m_aterrizar_alerta",
+      "t0": 18.0,
+      "t1": 21.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pecho",
+        "pelvis",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 35,
+        "quote": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "a19",
+      "movimiento": "m_giro_decidido",
+      "t0": 44.0,
+      "t1": 46.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "pecho"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 36,
+        "quote": "…¡TÚ!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "a20",
+      "movimiento": "m_giro_decidido",
+      "t0": 44.0,
+      "t1": 46.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "pecho"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 37,
+        "quote": "…¡TÚ!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "a23",
+      "movimiento": "m_senalar_tu",
+      "t0": 46.0,
+      "t1": 48.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "pecho"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 38,
+        "quote": "…¡TÚ!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "a24",
+      "movimiento": "m_senalar_tu",
+      "t0": 46.0,
+      "t1": 48.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "pecho"
+      ],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 39,
+        "quote": "…¡TÚ!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_2",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 30.0,
+      "t1": 33.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "clavicula_L",
+        "clavicula_R",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 40,
+        "quote": "Se acerca al cofre dorado en el centro de la habitacion",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_3",
+      "movimiento": "m_reposo_base",
+      "t0": 33.0,
+      "t1": 44.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pecho",
+        "pelvis",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 41,
+        "quote": "Dice con energia que solo alguien muy valiente puede abrir el cofre",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_4",
+      "movimiento": "m_giro_pasos",
+      "t0": 44.0,
+      "t1": 46.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "clavicula_L",
+        "clavicula_R",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 42,
+        "quote": "Gira lentamente hacia el frente junto con los demas",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_5",
+      "movimiento": "m_reposo_base",
+      "t0": 46.0,
+      "t1": 55.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pecho",
+        "pelvis",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 43,
+        "quote": "Senala al frente y escucha a Spark",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 18.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pecho",
+        "pelvis",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 44,
+        "quote": "Posicion previa a su llegada como luz amarilla",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_1",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 30.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pecho",
+        "pelvis",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 45,
+        "quote": "Aterriza y exclama que es una emergencia de nivel arcoiris",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_2",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 30.0,
+      "t1": 33.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "clavicula_L",
+        "clavicula_R",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 46,
+        "quote": "Se acerca a ver el cofre dorado que aparece en el centro",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_3",
+      "movimiento": "m_reposo_base",
+      "t0": 33.0,
+      "t1": 44.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pecho",
+        "pelvis",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 47,
+        "quote": "Observa el cofre mientras hablan Valentina y Eco",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_4",
+      "movimiento": "m_giro_pasos",
+      "t0": 44.0,
+      "t1": 46.0,
+      "objetivo_punto": "",
+      "capa": "locomocion",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "clavicula_L",
+        "clavicula_R",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 48,
+        "quote": "Gira lentamente hacia el frente con sus amigos",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_5",
+      "movimiento": "m_reposo_base",
+      "t0": 46.0,
+      "t1": 55.0,
+      "objetivo_punto": "",
+      "capa": "base",
+      "huesos": [
+        "antebrazo_L",
+        "antebrazo_R",
+        "brazo_L",
+        "brazo_R",
+        "cabeza",
+        "clavicula_L",
+        "clavicula_R",
+        "columna",
+        "cuello",
+        "mano_L",
+        "mano_R",
+        "muslo_L",
+        "muslo_R",
+        "pecho",
+        "pelvis",
+        "pie_L",
+        "pie_R",
+        "pierna_L",
+        "pierna_R"
+      ],
+      "_source_kind": "segmento_01",
+      "_source08": {
+        "proposal_row": 49,
+        "quote": "Susurra al frente y escucha la promesa de Spark",
+        "source_kind": "SOURCE01",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "a12",
+      "movimiento": "m_hablar_alarmado",
+      "t0": 25.0,
+      "t1": 30.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 50,
+        "quote": "¡Cero letras! ¡Cero colores! ¡Cero todo! ¡Esto es una emergencia de nivel arcoíris!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "a16",
+      "movimiento": "m_hablar_entusiasta",
+      "t0": 40.0,
+      "t1": 44.0,
+      "objetivo_punto": "",
+      "capa": "gesto",
+      "huesos": [],
+      "_source_kind": "accion_01",
+      "_source08": {
+        "proposal_row": 51,
+        "quote": "¡Pero solo puede abrirlo alguien muy valiente!",
+        "source_kind": "CHAPTER",
+        "scope": "Narrative/source01 mapping confirmed; not physical approval"
+      }
+    }
+  ],
+  "program": {
+    "status": "complete",
+    "narrative_source_complete": true,
+    "physics_validated": false,
+    "iniciales": {
+      "ch-don-caos-7adf": "p_de_pie_base",
+      "ch-spark-468e": "p_de_pie_base",
+      "ch-valentina-a9be": "p_de_pie_base",
+      "ch-eco-eff3": "p_de_pie_base",
+      "ch-pintor-bce0": "p_de_pie_base"
+    },
+    "anclas_semanticas": [
+      {
+        "entity": "ch-piquito-030a",
+        "target": "ch-eco-eff3.hombro_L",
+        "evidence_quote": "Piquito (pajarito AMARILLO #FFD84D) en el hombro izquierdo."
+      }
+    ],
+    "coverage": {
+      "needed": 52,
+      "covered": 52,
+      "missing": []
+    },
+    "producer": "Argon08 + deterministic exact-source compiler",
+    "source_zip_sha256": "9e7f7f91c915aff858fb144da0399063ab2543f17dde94df85d95c88770b12bb",
+    "notes": [
+      "New reconstruction from complete authorized chapter and01; NOT recovered original truncated API tail.",
+      "All52rows cited literally;15movement technical validation pending; visor touch removed without new angles."
+    ],
+    "contacts": [],
+    "contacts_complete": true,
+    "contact_design_source": "argon08_physics_canonica.json; attachment is explicit rigid parent binding, not external IK"
+  },
+  "source_response": "argon08_2b_propuesta.json",
+  "physics_proposal": "argon08_physics_canonica.json"
+}

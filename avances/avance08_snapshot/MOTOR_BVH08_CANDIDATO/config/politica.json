@@ -1,0 +1,9 @@
+{
+  "phase": "0a6",
+  "cpu_only": true,
+  "spend_enabled": false,
+  "total_cap_usd": 3,
+  "per_call_cap_usd": null,
+  "gpu_enabled": false,
+  "authorization_source": "Ricardo t289u; no gasto en estas fases"
+}

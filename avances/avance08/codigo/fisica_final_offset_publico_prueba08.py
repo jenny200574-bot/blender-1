@@ -89,9 +89,17 @@ def revisar(scene,d,rigs,objects):
                 prev_contact[i]=rel.copy()
             else:prev_contact.pop(i,None)
         # Todos los colliders suministrados son tratados por pares; los permitidos son explícitos.
-        names=rules['colliders'];trees={};verts={}
+        names=rules['colliders'];trees={};verts={};surface_probes={}
         for name in names:
-            obj=objects[name].evaluated_get(dg);mesh=obj.to_mesh();vs=[obj.matrix_world@v.co for v in mesh.vertices];fs=[list(p.vertices) for p in mesh.polygons];trees[name]=BVHTree.FromPolygons(vs,fs);verts[name]=vs;obj.to_mesh_clear()
+            obj=objects[name].evaluated_get(dg);mesh=obj.to_mesh();vs=[obj.matrix_world@v.co for v in mesh.vertices];fs=[list(p.vertices) for p in mesh.polygons]
+            trees[name]=BVHTree.FromPolygons(vs,fs);verts[name]=vs
+            # Evaluated triangle centroids and unique edge midpoints lie ON the
+            # supplied surface; no invented geometry or relaxed penetration limit.
+            # Vertices alone miss coaxial/interlocked solid penetration.
+            mesh.calc_loop_triangles();triangles=[tuple(t.vertices) for t in mesh.loop_triangles]
+            edges={tuple(sorted((a,b))) for tri in triangles for a,b in zip(tri,tri[1:]+tri[:1])}
+            surface_probes[name]=vs+[sum((vs[i] for i in t),Vector())/3 for t in triangles]+[(vs[a]+vs[b])/2 for a,b in sorted(edges)]
+            obj.to_mesh_clear()
         allow={frozenset(x) for x in rules['allowed_collision_pairs']};touch={frozenset(x) for x in rules.get('contact_pairs',[])}
         def inside(tree,p):
             ray=Vector((.87431,.37291,.31415)).normalized();origin=p.copy();count=0
@@ -112,7 +120,7 @@ def revisar(scene,d,rigs,objects):
                 if aabb_separados(verts[a],verts[b]):continue
                 overlapping=trees[a].overlap(trees[b]);depth=0
                 for source,target in ((a,b),(b,a)):
-                    for v in verts[source]:
+                    for v in surface_probes[source]:
                         nearest=trees[target].find_nearest(v)
                         if nearest[0] is not None and nearest[3]>rules['penetration_tolerance_m'] and inside(trees[target],v):depth=max(depth,nearest[3])
                 max_pen=max(max_pen,depth)

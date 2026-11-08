@@ -1,0 +1,7 @@
+{
+  "estado": "VALIDADO",
+  "faltantes": 0,
+  "errores": [],
+  "source": "Native orquestador.ejecutar solo_validar=True; no CLI flag invented",
+  "full_scene_review_passed": false
+}

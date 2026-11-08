@@ -1,0 +1,15 @@
+{
+  "field": "camera/sensor_width_mm",
+  "value": 36,
+  "unit": "mm",
+  "source": "aprobado por Ricardo 2026-11-08",
+  "authorization": "t43u",
+  "previous_processes": {
+    "48987": "not running",
+    "57475": "not running"
+  },
+  "processes_killed": false,
+  "gpu": false,
+  "new_spend_usd": 0,
+  "backup": "/opt/myia-motor-v9/avance08_20261107/respaldos/sensor36_20261108_124443"
+}

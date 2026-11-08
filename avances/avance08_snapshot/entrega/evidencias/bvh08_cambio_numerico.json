@@ -1,0 +1,14 @@
+{
+  "backup": "/opt/myia-motor-v9/avance08_20261107/respaldos/fisica_final_antes_avance_float32.py",
+  "changed": "/opt/myia-motor-v9/avance08_20261107/MOTOR_UNICO_20261107/motor/fisica_final.py",
+  "before_sha256": "682856ed505cd6f63d66c81dd11e64ef8db582a94528ae228f5decd1667ec7fd",
+  "after_sha256": "77cdc541320ff6da76e2488e781090c37beff3ad8292881a44138f7e2d6cfee9",
+  "physical_thresholds_changed": false,
+  "original_epsilon_1e_minus7_unchanged": true,
+  "method": "Minimal representable float32 progress when the original offset rounds back to the hit plane; no ignore/False fallback",
+  "references": [
+    "https://docs.blender.org/api/current/mathutils.bvhtree.html",
+    "https://blog.michelanders.nl/2016/03/performance-of-ray-casting-in-blender_81.html"
+  ],
+  "full_cpu_review_still_required": true
+}

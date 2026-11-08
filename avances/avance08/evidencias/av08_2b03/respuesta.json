@@ -1,0 +1,485 @@
+{
+  "rows": [
+    {
+      "index": 0,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Apunta su rayo al libro de cuentos sobre la cama y se rie",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 1,
+      "movement_id": "m_disparo_caos",
+      "evidence_quote": "Un rayo morado cruza la pantalla. Las letras salen volando como mariposas y la página queda en blanco.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 2,
+      "movement_id": "m_risa_caos",
+      "evidence_quote": "¡Jajajá! ¡Sin letras no hay cuentos! ¡Y sin cuentos… todos a la cama sin leer!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 3,
+      "movement_id": "m_caminar_ciclo",
+      "evidence_quote": "Se vuelve hacia la ventana para disparar al arcoiris",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 4,
+      "movement_id": "m_disparo_caos",
+      "evidence_quote": "Otro ZAP. Ahora el arcoíris de la ventana se vuelve gris.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 5,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Celebra que borro los colores y los numeros y bosteza",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 6,
+      "movement_id": "m_bostezo_caos",
+      "evidence_quote": "¡Y adiós colores! ¡Y adiós números! Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 7,
+      "movement_id": "m_caminar_ciclo",
+      "evidence_quote": "Se retira junto a la cama para esconderse al llegar los heroes",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 8,
+      "movement_id": "m_caminar_ciclo",
+      "evidence_quote": "Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 9,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Observa oculto junto a la cama mientras los heroes examinan el cofre",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 10,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Posicion previa a su llegada como luz azul",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 11,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Aterriza en la habitacion y revisa la alerta en su visor",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 12,
+      "movement_id": "m_aterrizar_alerta",
+      "evidence_quote": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 13,
+      "movement_id": "m_hablar_visor_sin_toque",
+      "evidence_quote": "Alerta. Nivel de letras en el mundo: cero.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 14,
+      "movement_id": "m_caminar_ciclo",
+      "evidence_quote": "Da un paso hacia el cofre dorado que aparece en el centro",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 15,
+      "movement_id": "m_mirar_sorpresa",
+      "evidence_quote": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 16,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Escucha a Valentina y Eco hablando sobre el cofre",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 17,
+      "movement_id": "m_giro_pasos",
+      "evidence_quote": "Gira lentamente hacia el frente",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 18,
+      "movement_id": "m_giro_decidido",
+      "evidence_quote": "…¡TÚ!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 19,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Senala al frente y explica la mision final de la palabra magica",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 20,
+      "movement_id": "m_senalar_tu",
+      "evidence_quote": "…¡TÚ!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 21,
+      "movement_id": "m_hablar_misterioso",
+      "evidence_quote": "Al final de esta misión, tú vas a leer tu primera palabra mágica. Y no te voy a decir cuál es… todavía.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 22,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Posicion previa a su llegada como luz magenta",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 23,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Aterriza y escucha el reporte de Spark y Pintor",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 24,
+      "movement_id": "m_aterrizar_alerta",
+      "evidence_quote": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 25,
+      "movement_id": "m_caminar_ciclo",
+      "evidence_quote": "Se acerca al cofre dorado recien aparecido",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 26,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Explica que el cofre guarda una palabra magica",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 27,
+      "movement_id": "m_hablar_serena",
+      "evidence_quote": "Esperen… este cofre guarda una palabra mágica. Si alguien la lee en voz alta, todo vuelve a la normalidad.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 28,
+      "movement_id": "m_giro_pasos",
+      "evidence_quote": "Gira lentamente hacia el frente junto con el equipo",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 29,
+      "movement_id": "m_giro_decidido",
+      "evidence_quote": "…¡TÚ!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 30,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Susurra al frente y acompana el cierre de Spark",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 31,
+      "movement_id": "m_senalar_tu",
+      "evidence_quote": "…¡TÚ!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 32,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Posicion previa a su llegada como luz verde",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 33,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Aterriza con Piquito en el hombro y escucha a sus amigos",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 34,
+      "movement_id": "m_aterrizar_alerta",
+      "evidence_quote": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 35,
+      "movement_id": "m_aterrizar_alerta",
+      "evidence_quote": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 36,
+      "movement_id": "m_giro_decidido",
+      "evidence_quote": "…¡TÚ!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 37,
+      "movement_id": "m_giro_decidido",
+      "evidence_quote": "…¡TÚ!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 38,
+      "movement_id": "m_senalar_tu",
+      "evidence_quote": "…¡TÚ!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 39,
+      "movement_id": "m_senalar_tu",
+      "evidence_quote": "…¡TÚ!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 40,
+      "movement_id": "m_caminar_ciclo",
+      "evidence_quote": "Se acerca al cofre dorado en el centro de la habitacion",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 41,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Dice con energia que solo alguien muy valiente puede abrir el cofre",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 42,
+      "movement_id": "m_giro_pasos",
+      "evidence_quote": "Gira lentamente hacia el frente junto con los demas",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 43,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Senala al frente y escucha a Spark",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 44,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Posicion previa a su llegada como luz amarilla",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 45,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Aterriza y exclama que es una emergencia de nivel arcoiris",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 46,
+      "movement_id": "m_caminar_ciclo",
+      "evidence_quote": "Se acerca a ver el cofre dorado que aparece en el centro",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 47,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Observa el cofre mientras hablan Valentina y Eco",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 48,
+      "movement_id": "m_giro_pasos",
+      "evidence_quote": "Gira lentamente hacia el frente con sus amigos",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 49,
+      "movement_id": "m_reposo_base",
+      "evidence_quote": "Susurra al frente y escucha la promesa de Spark",
+      "source_kind": "SOURCE01"
+    },
+    {
+      "index": 50,
+      "movement_id": "m_hablar_alarmado",
+      "evidence_quote": "¡Cero letras! ¡Cero colores! ¡Cero todo! ¡Esto es una emergencia de nivel arcoíris!",
+      "source_kind": "CHAPTER"
+    },
+    {
+      "index": 51,
+      "movement_id": "m_hablar_entusiasta",
+      "evidence_quote": "¡Pero solo puede abrirlo alguien muy valiente!",
+      "source_kind": "CHAPTER"
+    }
+  ],
+  "visor_pose_sources": [
+    {
+      "bone": "columna",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "pecho",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "cuello",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "cabeza",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "clavicula_L",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "brazo_L",
+      "source_pose": "p_de_pie_base"
+    },
+    {
+      "bone": "antebrazo_L",
+      "source_pose": "p_de_pie_base"
+    },
+    {
+      "bone": "mano_L",
+      "source_pose": "p_de_pie_base"
+    },
+    {
+      "bone": "clavicula_R",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "brazo_R",
+      "source_pose": "p_de_pie_base"
+    },
+    {
+      "bone": "antebrazo_R",
+      "source_pose": "p_de_pie_base"
+    },
+    {
+      "bone": "mano_R",
+      "source_pose": "p_de_pie_base"
+    },
+    {
+      "bone": "muslo_L",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "pierna_L",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "pie_L",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "muslo_R",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "pierna_R",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "pie_R",
+      "source_pose": "p_visor_toque"
+    },
+    {
+      "bone": "raiz",
+      "source_pose": "p_visor_toque"
+    }
+  ],
+  "movement_audit": [
+    {
+      "id": "m_aterrizar_alerta",
+      "fit": "DIRECT",
+      "reason": "Pose library matches landing action description for 18-21s sequence."
+    },
+    {
+      "id": "m_bostezo_caos",
+      "fit": "DIRECT",
+      "reason": "Includes necessary yawn phase specified in Chapter script at 11s."
+    },
+    {
+      "id": "m_caminar_ciclo",
+      "fit": "DIRECT",
+      "reason": "Standard locomotion cycle used for repositioning segments in 0..55s timeline."
+    },
+    {
+      "id": "m_disparo_caos",
+      "fit": "DIRECT",
+      "reason": "Matches ray gun animation requirements for Don Caos."
+    },
+    {
+      "id": "m_giro_decidido",
+      "fit": "DIRECT",
+      "reason": "Used for the 'ALL: YOU!' dramatic team rotation towards camera."
+    },
+    {
+      "id": "m_giro_pasos",
+      "fit": "DIRECT",
+      "reason": "Handles spatial orientation changes during walking/turning segments."
+    },
+    {
+      "id": "m_hablar_alarmado",
+      "fit": "DIRECT",
+      "reason": "Fits Pintor's high-energy reaction to the alert."
+    },
+    {
+      "id": "m_hablar_entusiasta",
+      "fit": "DIRECT",
+      "reason": "Fits Eco's supportive and energetic dialogue."
+    },
+    {
+      "id": "m_hablar_misterioso",
+      "fit": "DIRECT",
+      "reason": "Fits Spark's final hook at 48-55s."
+    },
+    {
+      "id": "m_hablar_serena",
+      "fit": "DIRECT",
+      "reason": "Fits Valentina's calm exposition about the chest."
+    },
+    {
+      "id": "m_hablar_visor",
+      "fit": "PARTIAL",
+      "reason": "Replaced by m_hablar_visor_sin_toque to align with script's 'looking' rather than 'touching'."
+    },
+    {
+      "id": "m_mirar_sorpresa",
+      "fit": "DIRECT",
+      "reason": "Covers Spark's reaction to the chest appearing."
+    },
+    {
+      "id": "m_reposo_base",
+      "fit": "DIRECT",
+      "reason": "Default idle state between active segments."
+    },
+    {
+      "id": "m_risa_caos",
+      "fit": "DIRECT",
+      "reason": "Fits Don Caos's opening villain laughter."
+    },
+    {
+      "id": "m_senalar_tu",
+      "fit": "DIRECT",
+      "reason": "Corresponds to explicit pointing gesture at camera during 'YOU!' beat."
+    }
+  ],
+  "contact_intents": [
+    {
+      "entity": "ch-piquito-030a",
+      "target": "ch-eco-eff3.hombro_L",
+      "evidence_quote": "Piquito (pajarito AMARILLO #FFD84D) en el hombro izquierdo."
+    }
+  ],
+  "notes": [
+    "Compilación completa de 52 filas basada estrictamente en existing_rows_PROPOSALS_NOT_APPROVED.",
+    "Movimiento m_hablar_visor sustituido por m_hablar_visor_sin_toque por orden narrativa (solo mirar visor).",
+    "Visor corregido: brazos y manos heredan p_de_pie_base para evitar contacto físico, manteniendo mirada de p_visor_toque.",
+    "Piquito establecido como amarillo #FFD84D en hombro izquierdo según autoridad de biblia/source01.",
+    "No se incluyen valores numéricos de poses ni aprobaciones físicas por restricción de rol Revisor2B."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date_bogota": "2026-11-07T23:29:08.935169-05:00",
+  "estado": "BLOQUEADO",
+  "faltantes_o_errores": 1,
+  "errores": [
+    {
+      "codigo": "STAR_DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "camera/sensor_width_mm",
+      "modulo": "SB/configuración cámara",
+      "mensaje": "Falta sensor de cámara por dato",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta sensor de cámara por dato",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    }
+  ],
+  "master": null,
+  "gpu_used": false,
+  "paid_calls": 0,
+  "ledger_unchanged": false,
+  "full_cpu_preview_passed": false,
+  "production_approved": false
+}

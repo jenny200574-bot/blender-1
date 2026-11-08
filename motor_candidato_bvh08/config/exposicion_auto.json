@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "max_saturated_pct": 0.5,
+  "saturation_channel_threshold": 250,
+  "metric": "any_RGB_channel_ge_threshold",
+  "view_transform": "AgX",
+  "look": "AgX - Base Contrast",
+  "exposure_start_ev": 0,
+  "exposure_step_ev": 0.5,
+  "exposure_min_ev": -8,
+  "world_strength_factor": 0.5,
+  "technical_fill_factor": 0.5,
+  "emission_strength_max": 1,
+  "samples": 16,
+  "resolution": [
+    320,
+    180
+  ],
+  "source": "Preset t\u00e9cnico universal t317, X=.5% configurable, no iluminaci\u00f3n art\u00edstica ni dato de canal"
+}

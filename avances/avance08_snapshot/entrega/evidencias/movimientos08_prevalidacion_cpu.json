@@ -1,0 +1,256 @@
+{
+  "passed": true,
+  "scope": "REAL_CPU_NATIVE_RIG_POSES_PHASES_SUPPORT_SANITY_ONLY; not scene dynamics, collision, balance, continuity or production approval",
+  "checks": [
+    {
+      "entity": "ch-don-caos-7adf",
+      "movement": "m_bostezo_caos",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-don-caos-7adf",
+      "movement": "m_caminar_ciclo",
+      "phases": 5,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-don-caos-7adf",
+      "movement": "m_disparo_caos",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-don-caos-7adf",
+      "movement": "m_reposo_base",
+      "phases": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-don-caos-7adf",
+      "movement": "m_risa_caos",
+      "phases": 4,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-spark-468e",
+      "movement": "m_aterrizar_alerta",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-spark-468e",
+      "movement": "m_caminar_ciclo",
+      "phases": 5,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-spark-468e",
+      "movement": "m_giro_decidido",
+      "phases": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-spark-468e",
+      "movement": "m_giro_pasos",
+      "phases": 4,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-spark-468e",
+      "movement": "m_hablar_misterioso",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-spark-468e",
+      "movement": "m_hablar_visor_sin_toque",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-spark-468e",
+      "movement": "m_mirar_sorpresa",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-spark-468e",
+      "movement": "m_reposo_base",
+      "phases": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-spark-468e",
+      "movement": "m_senalar_tu",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-valentina-a9be",
+      "movement": "m_aterrizar_alerta",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-valentina-a9be",
+      "movement": "m_caminar_ciclo",
+      "phases": 5,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-valentina-a9be",
+      "movement": "m_giro_decidido",
+      "phases": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-valentina-a9be",
+      "movement": "m_giro_pasos",
+      "phases": 4,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-valentina-a9be",
+      "movement": "m_hablar_serena",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-valentina-a9be",
+      "movement": "m_reposo_base",
+      "phases": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-valentina-a9be",
+      "movement": "m_senalar_tu",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-eco-eff3",
+      "movement": "m_aterrizar_alerta",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-eco-eff3",
+      "movement": "m_caminar_ciclo",
+      "phases": 5,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-eco-eff3",
+      "movement": "m_giro_decidido",
+      "phases": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-eco-eff3",
+      "movement": "m_giro_pasos",
+      "phases": 4,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-eco-eff3",
+      "movement": "m_hablar_entusiasta",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-eco-eff3",
+      "movement": "m_reposo_base",
+      "phases": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-eco-eff3",
+      "movement": "m_senalar_tu",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-pintor-bce0",
+      "movement": "m_aterrizar_alerta",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-pintor-bce0",
+      "movement": "m_caminar_ciclo",
+      "phases": 5,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-pintor-bce0",
+      "movement": "m_giro_decidido",
+      "phases": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-pintor-bce0",
+      "movement": "m_giro_pasos",
+      "phases": 4,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-pintor-bce0",
+      "movement": "m_hablar_alarmado",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-pintor-bce0",
+      "movement": "m_reposo_base",
+      "phases": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "entity": "ch-pintor-bce0",
+      "movement": "m_senalar_tu",
+      "phases": 3,
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "unique_used_movements": 15,
+  "max_measured_bone_length_error_m": 5.561821284083557e-08,
+  "model_approval_used": false,
+  "scene_physics_approved": false,
+  "production_approved": false
+}

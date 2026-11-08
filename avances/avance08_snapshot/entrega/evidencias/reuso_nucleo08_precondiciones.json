@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "test": "preflight_bvh08_zero_missing",
+      "passed": true
+    },
+    {
+      "test": "legacy_complete_input_identical",
+      "passed": true
+    },
+    {
+      "test": "clock_identical",
+      "passed": true
+    },
+    {
+      "test": "entities_and_added_final_geometry_identical",
+      "passed": true
+    },
+    {
+      "test": "motion_identical",
+      "passed": true
+    },
+    {
+      "test": "camera_identical",
+      "passed": true
+    },
+    {
+      "test": "environment_identical",
+      "passed": true
+    },
+    {
+      "test": "lighting_identical",
+      "passed": true
+    },
+    {
+      "test": "props_identical",
+      "passed": true
+    },
+    {
+      "test": "all_numerical_physical_rules_identical",
+      "passed": true
+    },
+    {
+      "test": "asset_names_identical",
+      "passed": true
+    },
+    {
+      "test": "only_asset_changed_is_contact_pair_metadata",
+      "passed": true
+    },
+    {
+      "test": "only_code_changed_is_final_BVH_validator",
+      "passed": true
+    }
+  ],
+  "changed_assets": [
+    "argon08_physics_canonica.json"
+  ],
+  "changed_code": [
+    "motor/fisica_final.py"
+  ],
+  "cached_core_source": "/opt/myia-motor-v9/avance08_20261107/preview_cpu08/nucleo/escena.blend",
+  "core_complete_and_hash_verified_later": false,
+  "not_approval": "Only establishes whether an already completed core MAY be reused. Does not approve any physical or visual output."
+}

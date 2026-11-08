@@ -1,0 +1,14 @@
+{
+  "source_01": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/cubos/01/esc_1.json",
+  "source_01_sha256": "9661b80e310e100aada93b5fe256accc350d1bd202b882ee2399747989b90896",
+  "source_sb": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/cubos/SB/blender/esc_1_camara.json",
+  "source_sb_sha256": "3f9795bc8f0b2906080da69fce92299fc8ab2dd4fa6a6f55a70e057d4c7a3577",
+  "molde": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/moldes/esc-habitacion/molde.blend",
+  "molde_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733",
+  "canonical_template": "/opt/myia-motor-v9/v9_motor_unico_20261107/MOTOR_UNICO_20261107/paquetes/guardianes/entrada_escena.json",
+  "canonical_template_sha256": "2301e3b26e184d8394adbed9083f78aacd5a8f628f4f13d9db797589f8b7d640",
+  "method": "exact_source_hash_match",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "capitulo": "cap01_ep-89b93118ad",
+  "escena": "1"
+}

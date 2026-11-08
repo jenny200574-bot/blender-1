@@ -1,0 +1,5 @@
+{
+  "numeric_python": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/entorno_cpu/bin/python",
+  "source": "Entorno SciPy ya instalado; dependencia técnica, no ruta de escena",
+  "gpu": false
+}

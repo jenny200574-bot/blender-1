@@ -1,0 +1,12 @@
+{
+  "original_sha256": "9e7f7f91c915aff858fb144da0399063ab2543f17dde94df85d95c88770b12bb",
+  "copy_sha256": "9e7f7f91c915aff858fb144da0399063ab2543f17dde94df85d95c88770b12bb",
+  "original_unchanged": true,
+  "archive_entries": 184,
+  "documents_docx": 164,
+  "selected_episode": "01_Los_Guardianes_de_la_Ceiba/GDC_T01_La_casa/Episodios/GDC_T01_E01_Don_Caos_borro_el_abecedario.docx",
+  "selected_docx_sha256": "7fc123b3629a24c99d363ee9bb30d269168ff7fd2e950300c4d61f40c902f468",
+  "selection_reason": "ZIP contains full series, not only one chapter; exact T01_E01 selected. Complete episode source retained, esc1 execution remains existing55s source01 timing.",
+  "new_physics_authority": "Ricardo22:38 Bogotá: Que Argon proponga los valores físicos por escena y el motor los valide",
+  "T317_values_imported": false
+}

@@ -1,0 +1,32 @@
+{
+  "locked_naturalness_trace": {},
+  "frames": 1,
+  "max_outside_support_m": 0,
+  "max_com_accel_m_s2": 0,
+  "max_relative_slip_m_frame": 0,
+  "max_joint_speed_deg_s": 0,
+  "max_penetration_m": 0,
+  "all_passed": true,
+  "errors": [],
+  "com_trace": [
+    {
+      "frame": 1,
+      "com": {}
+    }
+  ],
+  "scope": "EXACT_NATIVE_BVH_STATIC_ENVIRONMENT_UNIT_AT_SOURCE_FRAME1; not complete scene preview",
+  "source_blend": "set.blend unchanged",
+  "colliders": [
+    "piso",
+    "muro_frente_0",
+    "muro_frente_1",
+    "muro_frente_2",
+    "muro_fondo_0",
+    "muro_fondo_1",
+    "muro_fondo_2",
+    "muro_fondo_3",
+    "muro_izq_0",
+    "muro_der_0",
+    "obj-armario"
+  ]
+}

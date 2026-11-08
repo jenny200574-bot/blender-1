@@ -1,0 +1,9 @@
+{
+  "source_sha256": "eb2a39894dbe3559ed482d51f410d8fa8fa4a29c712aff2a872d71015312b1a1",
+  "assets_verified": 20,
+  "explicit_equivalences": {},
+  "paid_requests": 0,
+  "inferred_values": 0,
+  "adapter": "canonical_manifest_only",
+  "production_approved": false
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "metrics": {
+    "passed": true,
+    "dimensions_m": [
+      0.4,
+      0.26,
+      0.04000000000000001
+    ],
+    "tolerance_m": 0.001,
+    "part_count": 7,
+    "boxes": false,
+    "query_sha256": "1fc0341abd4cb8692805246008b2467f72c102325d2f63fd81b9bb8e53f938b5"
+  },
+  "minimum_glyph_clearance_m": 0.00037500000000000207,
+  "old_visual_rejection": "Two white ellipsoids looked like plates, so old shape NOT presented as approved book",
+  "shape_new": "Closed point-profile shells, rounded/chamfered corners + crease profile, not box",
+  "measured_or_original_ADN_dimensions_changed": false,
+  "visual_production_approved": false
+}

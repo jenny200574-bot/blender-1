@@ -1,0 +1,59 @@
+{
+  "passed": false,
+  "tests": [
+    {
+      "case": "disjoint",
+      "expected_pass": true,
+      "actual_pass": true,
+      "passed": true,
+      "max_penetration_m": 0,
+      "errors": []
+    },
+    {
+      "case": "penetration",
+      "expected_pass": false,
+      "actual_pass": true,
+      "passed": false,
+      "max_penetration_m": 0,
+      "errors": []
+    },
+    {
+      "case": "contained",
+      "expected_pass": false,
+      "actual_pass": false,
+      "passed": true,
+      "max_penetration_m": 0.75,
+      "errors": [
+        {
+          "type": "PENETRACION",
+          "frame": 1,
+          "objects": [
+            "unitA",
+            "unitB"
+          ],
+          "depth_m": 0.75,
+          "intersections": 0
+        }
+      ]
+    },
+    {
+      "case": "touch_strict",
+      "expected_pass": false,
+      "actual_pass": true,
+      "passed": false,
+      "max_penetration_m": 0,
+      "errors": []
+    },
+    {
+      "case": "touch_explicit_surface",
+      "expected_pass": true,
+      "actual_pass": true,
+      "passed": true,
+      "max_penetration_m": 0,
+      "errors": []
+    }
+  ],
+  "physical_penetration_tolerance_m_unchanged": 0.001,
+  "ray_advance_m": 1e-06,
+  "scope": "Native BVH candidate at source-like float coordinate magnitudes; no production approval"
+}

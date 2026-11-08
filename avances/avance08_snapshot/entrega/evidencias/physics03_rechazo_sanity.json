@@ -1,0 +1,13 @@
+{
+  "passed": false,
+  "errors": [
+    "INVALID_ALLOWED_PAIR:['ch-eco-eff3.base.suit', 'ch-piquito-030a.argon.leg.L']",
+    "INVALID_ALLOWED_PAIR:['ch-eco-eff3.base.suit', 'ch-piquito-030a.argon.leg.R']",
+    "INVALID_ALLOWED_PAIR:['ch-don-caos-7adf.base.body', 'ch-don-caos-7adf.base.jacket']",
+    "INVALID_ALLOWED_PAIR:['ch-spark-468e.base.body', 'ch-spark-468e.base.suit']",
+    "INVALID_ALLOWED_PAIR:['ch-valentina-a9be.base.body', 'ch-valentina-a9be.base.suit']",
+    "INVALID_ALLOWED_PAIR:['ch-eco-eff3.base.body', 'ch-eco-eff3.base.suit']",
+    "INVALID_ALLOWED_PAIR:['ch-pintor-bce0.base.body', 'ch-pintor-bce0.base.shirt']",
+    "FLOATING_BIRD_FOOT_SUPPORT_GAP"
+  ]
+}

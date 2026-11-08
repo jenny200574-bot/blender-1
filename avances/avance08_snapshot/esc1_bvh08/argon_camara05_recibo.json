@@ -1,0 +1,27 @@
+{
+  "fecha_bogota": "2026-11-07T21:03:49.146315-05:00",
+  "semantic_passed": true,
+  "source_response_sha256": "2f3d9438bdfbdd7214ca3f65ee21a74bac8d2da83888b07c9fb761569c2613b7",
+  "source": "Argon_GENERATED: storyboard_camara.json & official_heights_m",
+  "changes": [
+    {
+      "field": "camera/v3/0/PAN",
+      "argument": "degrees",
+      "value": 45.0,
+      "original_direction": "R"
+    },
+    {
+      "field": "camera/v5/0/CRANE",
+      "argument": "distance",
+      "value": 0.8,
+      "original_direction": "DOWN"
+    },
+    {
+      "field": "camera/v7/0/PAN",
+      "argument": "degrees",
+      "value": 25.5,
+      "original_direction": "R"
+    }
+  ],
+  "production_approved": false
+}

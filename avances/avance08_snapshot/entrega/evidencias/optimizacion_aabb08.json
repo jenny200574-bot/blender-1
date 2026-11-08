@@ -1,0 +1,8 @@
+{
+  "backup": "/opt/myia-motor-v9/avance08_20261107/respaldos/fisica_final_bvh08_antes_cache_aabb.py",
+  "before_sha256": "ec04a49605251b898b93a6c73b7f19e375c1339d68e5634a57cbc538c93639fe",
+  "after_sha256": "3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2",
+  "scope": "Only cache identical AABB min/max once per mesh per frame instead of recomputing for every pair",
+  "physical_tolerances_changed": false,
+  "gold_and_collision_units_must_be_rerun": true
+}

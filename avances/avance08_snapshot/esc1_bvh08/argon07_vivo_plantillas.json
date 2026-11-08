@@ -1,0 +1,125 @@
+{
+  "letter_selector": "all_book_parts_role_letter",
+  "letter_offsets": [
+    {
+      "t": 0,
+      "offset_m": [
+        0,
+        0,
+        0
+      ],
+      "curve": "CONSTANT"
+    },
+    {
+      "t": 0.5,
+      "offset_m": [
+        0,
+        0,
+        0.02
+      ],
+      "curve": "SMOOTH"
+    },
+    {
+      "t": 1.0,
+      "offset_m": [
+        0.01,
+        -0.01,
+        0.04
+      ],
+      "curve": "SMOOTH"
+    },
+    {
+      "t": 1.5,
+      "offset_m": [
+        -0.01,
+        0.01,
+        0.03
+      ],
+      "curve": "SMOOTH"
+    },
+    {
+      "t": 2.0,
+      "offset_m": [
+        0.005,
+        0,
+        0.05
+      ],
+      "curve": "SMOOTH"
+    },
+    {
+      "t": 3.0,
+      "offset_m": [
+        0.5,
+        0.5,
+        1.2
+      ],
+      "curve": "LINEAR"
+    }
+  ],
+  "letter_visibility": [
+    {
+      "t": 0,
+      "value": false,
+      "curve": "CONSTANT"
+    },
+    {
+      "t": 3,
+      "value": true,
+      "curve": "CONSTANT"
+    }
+  ],
+  "rainbow_selector": "all_seven_window_parts_role_rainbow",
+  "rainbow_t0": 9,
+  "rainbow_t1": 11,
+  "rainbow_gray_rgba": [
+    0.5,
+    0.5,
+    0.5,
+    1
+  ],
+  "rainbow_curve": "SMOOTH",
+  "hero_selector": "all_source01_aparecer_actors_a6_to_a10",
+  "hero_visibility": [
+    {
+      "t": 0,
+      "value": true,
+      "curve": "CONSTANT"
+    },
+    {
+      "t": 21,
+      "value": false,
+      "curve": "CONSTANT"
+    }
+  ],
+  "fx_selector": "all_four_new_fx",
+  "fx_visibility": [
+    {
+      "t": 0,
+      "value": true,
+      "curve": "CONSTANT"
+    },
+    {
+      "t": 18,
+      "value": false,
+      "curve": "CONSTANT"
+    },
+    {
+      "t": 21,
+      "value": true,
+      "curve": "CONSTANT"
+    }
+  ],
+  "fx_probe_t": 19.5,
+  "cofre_visibility": [
+    {
+      "t": 0,
+      "value": true,
+      "curve": "CONSTANT"
+    },
+    {
+      "t": 33,
+      "value": false,
+      "curve": "CONSTANT"
+    }
+  ]
+}

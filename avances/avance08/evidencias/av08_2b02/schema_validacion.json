@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "errors": [],
+  "response_mime_type": "application/json",
+  "response_schema_sent": true,
+  "response_json_schema_sent": false,
+  "schema_mode": "vertex"
+}

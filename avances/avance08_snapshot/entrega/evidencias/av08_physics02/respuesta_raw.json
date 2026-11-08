@@ -1,0 +1,106 @@
+{
+  "scene_id": "1",
+  "proposal_status": "PROPOSED_FOR_DETERMINISTIC_VALIDATION",
+  "physics": {
+    "allowed_collision_pairs": [
+      ["ch-piquito-030a", "ch-eco-eff3"],
+      ["ch-piquito-030a", "piso"],
+      ["ch-don-caos-7adf", "piso"],
+      ["ch-spark-468e", "piso"],
+      ["ch-valentina-a9be", "piso"],
+      ["ch-eco-eff3", "piso"],
+      ["ch-pintor-bce0", "piso"],
+      ["ch-don-caos-7adf", "obj-cama"],
+      ["ch-spark-468e", "obj-cofre-dorado"]
+    ],
+    "colliders": [
+      "piso",
+      "muro_frente_0",
+      "muro_frente_1",
+      "muro_frente_2",
+      "muro_fondo_0",
+      "muro_fondo_1",
+      "muro_fondo_2",
+      "muro_fondo_3",
+      "muro_izq_0",
+      "muro_der_0",
+      "obj-cama",
+      "obj-armario",
+      "obj-cofre-dorado",
+      "amb-esc-habitacion-mesa-dibujo",
+      "Mesa de noche junto a la cama"
+    ],
+    "penetration_tolerance_m": 0.001,
+    "reject_surface_intersections": true,
+    "bone_length_error_m": 0.0001,
+    "root_accel_max_m_s2": 15.0,
+    "root_speed_max_m_s": 5.0,
+    "com_accel_max_m_s2": 20.0,
+    "joint_speed_max_deg_s": 600.0,
+    "slip_max_m_per_frame": 0.05
+  },
+  "avian": {
+    "balance_margin_m": 0.005,
+    "attachment": {
+      "target_point": "ch-eco-eff3.hombro_L_aviar",
+      "offset_m": [0.0, 0.0, 0.0],
+      "rotation_deg": [0.0, 0.0, 0.0],
+      "source": "propuestaArgon_medidaNativa_hombroIZQ"
+    },
+    "support_intervals": [
+      {
+        "t0": 0.0,
+        "t1": 18.0,
+        "mode": "supported",
+        "support_points": ["ch-eco-eff3.soporte_piquito_0", "ch-eco-eff3.soporte_piquito_1", "ch-eco-eff3.soporte_piquito_2", "ch-eco-eff3.soporte_piquito_3"]
+      },
+      {
+        "t0": 18.0,
+        "t1": 30.0,
+        "mode": "supported",
+        "support_points": ["ch-eco-eff3.soporte_piquito_0", "ch-eco-eff3.soporte_piquito_1", "ch-eco-eff3.soporte_piquito_2", "ch-eco-eff3.soporte_piquito_3"]
+      },
+      {
+        "t0": 30.0,
+        "t1": 33.0,
+        "mode": "supported",
+        "support_points": ["ch-eco-eff3.soporte_piquito_0", "ch-eco-eff3.soporte_piquito_1", "ch-eco-eff3.soporte_piquito_2", "ch-eco-eff3.soporte_piquito_3"]
+      },
+      {
+        "t0": 33.0,
+        "t1": 44.0,
+        "mode": "supported",
+        "support_points": ["ch-eco-eff3.soporte_piquito_0", "ch-eco-eff3.soporte_piquito_1", "ch-eco-eff3.soporte_piquito_2", "ch-eco-eff3.soporte_piquito_3"]
+      },
+      {
+        "t0": 44.0,
+        "t1": 46.0,
+        "mode": "supported",
+        "support_points": ["ch-eco-eff3.soporte_piquito_0", "ch-eco-eff3.soporte_piquito_1", "ch-eco-eff3.soporte_piquito_2", "ch-eco-eff3.soporte_piquito_3"]
+      },
+      {
+        "t0": 46.0,
+        "t1": 55.0,
+        "mode": "supported",
+        "support_points": ["ch-eco-eff3.soporte_piquito_0", "ch-eco-eff3.soporte_piquito_1", "ch-eco-eff3.soporte_piquito_2", "ch-eco-eff3.soporte_piquito_3"]
+      }
+    ],
+    "explanation": "Piquito se mantiene anclado al hombro izquierdo de Eco (clavicula_L) mediante attachment rígido durante toda la escena, moviéndose solidariamente con ella. Se excluyen colisiones de visor/luces/empty por ser no físicos.",
+    "shoulder_offset_m": [0.0, 0.0, 0.05],
+    "rotation_relative_eco_deg": [0.0, 0.0, 10.0],
+    "support_polygon_offsets_m": [
+      [0.015, 0.015, 0.0],
+      [-0.015, 0.015, 0.0],
+      [-0.015, -0.015, 0.0],
+      [0.015, -0.015, 0.0]
+    ]
+  },
+  "contacts": [],
+  "reasoning": [
+    "PROPUESTA: Se definen colliders ambientales (piso, muros, cama, armario, cofre) basados en Measured Inventory para validación de pies y trayectorias.",
+    "PROPUESTA: El anclaje de Piquito usa clavicula_L.tail (Hombro Izquierdo nativo) como origen métrico para el attachment rígido.",
+    "DISEÑO AUDITADO: contacts[] está vacío intencionalmente. Los apoyos de los Guardianes en el suelo son resueltos por el solver de marcha; el ave no requiere IK externa al estar acoplada a Eco.",
+    "LIMITACIÓN: Se respetan los valores COM_20, Joint_600 y Slip_0.05 según orden Ricardo22:38.",
+    "EXCLUSIÓN FÍSICA: Se omiten Lights y FONT (Text) de la lista de colliders ya que carecen de masa o superficie sólida impactable en la simulación."
+  ]
+}

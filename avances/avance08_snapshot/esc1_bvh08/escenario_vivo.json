@@ -1,0 +1,1521 @@
+{
+  "status": "complete",
+  "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+  "state_for_scene": {
+    "escena": "1",
+    "inicio": [
+      "Libro de cuentos abierto sobre la cama con letras temblando",
+      "Arcoíris con color en la ventana"
+    ],
+    "fin": [
+      "Libro de cuentos con la página en blanco",
+      "Arcoíris de la ventana vuelto gris",
+      "Cuatro luces de colores aterrizadas como héroes",
+      "Cofre dorado cerrado con tres candados en el centro de la habitación"
+    ],
+    "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+  },
+  "changes": [
+    {
+      "object": "av07.book.letter_a",
+      "property": "location",
+      "keys": [
+        {
+          "t": 0,
+          "value": [
+            -0.1,
+            0,
+            0.015
+          ],
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 0.5,
+          "value": [
+            -0.1,
+            0,
+            0.035
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 1.0,
+          "value": [
+            -0.09000000000000001,
+            -0.01,
+            0.055
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 1.5,
+          "value": [
+            -0.11,
+            0.01,
+            0.045
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 2.0,
+          "value": [
+            -0.095,
+            0,
+            0.065
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 3.0,
+          "value": [
+            0.4,
+            0.5,
+            1.2149999999999999
+          ],
+          "curve": "LINEAR"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "action_id": "a1"
+    },
+    {
+      "object": "av07.book.letter_a",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": false,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 3,
+          "value": true,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "action_id": "a1"
+    },
+    {
+      "object": "av07.book.letter_e",
+      "property": "location",
+      "keys": [
+        {
+          "t": 0,
+          "value": [
+            0.05,
+            0.05,
+            0.015
+          ],
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 0.5,
+          "value": [
+            0.05,
+            0.05,
+            0.035
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 1.0,
+          "value": [
+            0.060000000000000005,
+            0.04,
+            0.055
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 1.5,
+          "value": [
+            0.04,
+            0.060000000000000005,
+            0.045
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 2.0,
+          "value": [
+            0.055,
+            0.05,
+            0.065
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 3.0,
+          "value": [
+            0.55,
+            0.55,
+            1.2149999999999999
+          ],
+          "curve": "LINEAR"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "action_id": "a1"
+    },
+    {
+      "object": "av07.book.letter_e",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": false,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 3,
+          "value": true,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "action_id": "a1"
+    },
+    {
+      "object": "av07.book.letter_o",
+      "property": "location",
+      "keys": [
+        {
+          "t": 0,
+          "value": [
+            0.05,
+            -0.05,
+            0.015
+          ],
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 0.5,
+          "value": [
+            0.05,
+            -0.05,
+            0.035
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 1.0,
+          "value": [
+            0.060000000000000005,
+            -0.060000000000000005,
+            0.055
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 1.5,
+          "value": [
+            0.04,
+            -0.04,
+            0.045
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 2.0,
+          "value": [
+            0.055,
+            -0.05,
+            0.065
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 3.0,
+          "value": [
+            0.55,
+            0.45,
+            1.2149999999999999
+          ],
+          "curve": "LINEAR"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "action_id": "a1"
+    },
+    {
+      "object": "av07.book.letter_o",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": false,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 3,
+          "value": true,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "action_id": "a1"
+    },
+    {
+      "object": "av07.window.rainbow.red",
+      "property": "material.base_color",
+      "keys": [
+        {
+          "t": 9,
+          "value": [
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 11,
+          "value": [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.red_material",
+      "action_id": "a3"
+    },
+    {
+      "object": "av07.window.rainbow.orange",
+      "property": "material.base_color",
+      "keys": [
+        {
+          "t": 9,
+          "value": [
+            1.0,
+            0.5,
+            0.0,
+            1.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 11,
+          "value": [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.orange_material",
+      "action_id": "a3"
+    },
+    {
+      "object": "av07.window.rainbow.yellow",
+      "property": "material.base_color",
+      "keys": [
+        {
+          "t": 9,
+          "value": [
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 11,
+          "value": [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.yellow_material",
+      "action_id": "a3"
+    },
+    {
+      "object": "av07.window.rainbow.green",
+      "property": "material.base_color",
+      "keys": [
+        {
+          "t": 9,
+          "value": [
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 11,
+          "value": [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.green_material",
+      "action_id": "a3"
+    },
+    {
+      "object": "av07.window.rainbow.blue",
+      "property": "material.base_color",
+      "keys": [
+        {
+          "t": 9,
+          "value": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 11,
+          "value": [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.blue_material",
+      "action_id": "a3"
+    },
+    {
+      "object": "av07.window.rainbow.indigo",
+      "property": "material.base_color",
+      "keys": [
+        {
+          "t": 9,
+          "value": [
+            0.29,
+            0.0,
+            0.51,
+            1.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 11,
+          "value": [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.indigo_material",
+      "action_id": "a3"
+    },
+    {
+      "object": "av07.window.rainbow.violet",
+      "property": "material.base_color",
+      "keys": [
+        {
+          "t": 9,
+          "value": [
+            0.5,
+            0.0,
+            0.5,
+            1.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 11,
+          "value": [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.violet_material",
+      "action_id": "a3"
+    },
+    {
+      "object": "ch-spark-468e",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 21,
+          "value": false,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true,
+      "action_id": "a6"
+    },
+    {
+      "object": "ch-valentina-a9be",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 21,
+          "value": false,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true,
+      "action_id": "a7"
+    },
+    {
+      "object": "ch-eco-eff3",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 21,
+          "value": false,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true,
+      "action_id": "a8"
+    },
+    {
+      "object": "ch-pintor-bce0",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 21,
+          "value": false,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true,
+      "action_id": "a9"
+    },
+    {
+      "object": "ch-piquito-030a",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 21,
+          "value": false,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true,
+      "action_id": "a10"
+    },
+    {
+      "object": "av07.fx.blue",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 18,
+          "value": false,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 21,
+          "value": true,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true
+    },
+    {
+      "object": "av07.fx.blue",
+      "property": "location",
+      "keys": [
+        {
+          "t": 18,
+          "value": [
+            1.45,
+            1.75,
+            2.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 21,
+          "value": [
+            1.45,
+            1.75,
+            0.04999999999999999
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "object": "av07.fx.magenta",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 18,
+          "value": false,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 21,
+          "value": true,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true
+    },
+    {
+      "object": "av07.fx.magenta",
+      "property": "location",
+      "keys": [
+        {
+          "t": 18,
+          "value": [
+            2.75,
+            2.65,
+            2.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 21,
+          "value": [
+            2.75,
+            2.65,
+            0.04999999999999999
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "object": "av07.fx.green",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 18,
+          "value": false,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 21,
+          "value": true,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true
+    },
+    {
+      "object": "av07.fx.green",
+      "property": "location",
+      "keys": [
+        {
+          "t": 18,
+          "value": [
+            3.25,
+            2.15,
+            2.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 21,
+          "value": [
+            3.25,
+            2.15,
+            0.04999999999999999
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "object": "av07.fx.yellow",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 18,
+          "value": false,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 21,
+          "value": true,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true
+    },
+    {
+      "object": "av07.fx.yellow",
+      "property": "location",
+      "keys": [
+        {
+          "t": 18,
+          "value": [
+            2.95,
+            1.65,
+            2.0
+          ],
+          "curve": "SMOOTH"
+        },
+        {
+          "t": 21,
+          "value": [
+            2.95,
+            1.65,
+            0.04999999999999999
+          ],
+          "curve": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "object": "obj-cofre-dorado",
+      "property": "hide_render",
+      "keys": [
+        {
+          "t": 0,
+          "value": true,
+          "curve": "CONSTANT"
+        },
+        {
+          "t": 33,
+          "value": false,
+          "curve": "CONSTANT"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "recursive": true,
+      "action_id": "a13"
+    }
+  ],
+  "expected_states": [
+    {
+      "id": "av07.state.0",
+      "object": "av07.book.letter_a",
+      "property": "hide_render",
+      "t": 0,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.1",
+      "object": "av07.book.letter_a",
+      "property": "location",
+      "t": 0.5,
+      "value": [
+        -0.1,
+        0,
+        0.035
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.2",
+      "object": "av07.book.letter_a",
+      "property": "location",
+      "t": 1.0,
+      "value": [
+        -0.09000000000000001,
+        -0.01,
+        0.055
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.3",
+      "object": "av07.book.letter_a",
+      "property": "hide_render",
+      "t": 55,
+      "value": true,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.4",
+      "object": "av07.book.letter_e",
+      "property": "hide_render",
+      "t": 0,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.5",
+      "object": "av07.book.letter_e",
+      "property": "location",
+      "t": 0.5,
+      "value": [
+        0.05,
+        0.05,
+        0.035
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.6",
+      "object": "av07.book.letter_e",
+      "property": "location",
+      "t": 1.0,
+      "value": [
+        0.060000000000000005,
+        0.04,
+        0.055
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.7",
+      "object": "av07.book.letter_e",
+      "property": "hide_render",
+      "t": 55,
+      "value": true,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.8",
+      "object": "av07.book.letter_o",
+      "property": "hide_render",
+      "t": 0,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.9",
+      "object": "av07.book.letter_o",
+      "property": "location",
+      "t": 0.5,
+      "value": [
+        0.05,
+        -0.05,
+        0.035
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.10",
+      "object": "av07.book.letter_o",
+      "property": "location",
+      "t": 1.0,
+      "value": [
+        0.060000000000000005,
+        -0.060000000000000005,
+        0.055
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.11",
+      "object": "av07.book.letter_o",
+      "property": "hide_render",
+      "t": 55,
+      "value": true,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.12",
+      "object": "av07.book.page_left",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.13",
+      "object": "av07.book.page_right",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.14",
+      "object": "av07.window.rainbow.red",
+      "property": "material.base_color",
+      "t": 0,
+      "value": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.red_material"
+    },
+    {
+      "id": "av07.state.15",
+      "object": "av07.window.rainbow.red",
+      "property": "material.base_color",
+      "t": 55,
+      "value": [
+        0.5,
+        0.5,
+        0.5,
+        1
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.red_material"
+    },
+    {
+      "id": "av07.state.16",
+      "object": "av07.window.rainbow.orange",
+      "property": "material.base_color",
+      "t": 0,
+      "value": [
+        1.0,
+        0.5,
+        0.0,
+        1.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.orange_material"
+    },
+    {
+      "id": "av07.state.17",
+      "object": "av07.window.rainbow.orange",
+      "property": "material.base_color",
+      "t": 55,
+      "value": [
+        0.5,
+        0.5,
+        0.5,
+        1
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.orange_material"
+    },
+    {
+      "id": "av07.state.18",
+      "object": "av07.window.rainbow.yellow",
+      "property": "material.base_color",
+      "t": 0,
+      "value": [
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.yellow_material"
+    },
+    {
+      "id": "av07.state.19",
+      "object": "av07.window.rainbow.yellow",
+      "property": "material.base_color",
+      "t": 55,
+      "value": [
+        0.5,
+        0.5,
+        0.5,
+        1
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.yellow_material"
+    },
+    {
+      "id": "av07.state.20",
+      "object": "av07.window.rainbow.green",
+      "property": "material.base_color",
+      "t": 0,
+      "value": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.green_material"
+    },
+    {
+      "id": "av07.state.21",
+      "object": "av07.window.rainbow.green",
+      "property": "material.base_color",
+      "t": 55,
+      "value": [
+        0.5,
+        0.5,
+        0.5,
+        1
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.green_material"
+    },
+    {
+      "id": "av07.state.22",
+      "object": "av07.window.rainbow.blue",
+      "property": "material.base_color",
+      "t": 0,
+      "value": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.blue_material"
+    },
+    {
+      "id": "av07.state.23",
+      "object": "av07.window.rainbow.blue",
+      "property": "material.base_color",
+      "t": 55,
+      "value": [
+        0.5,
+        0.5,
+        0.5,
+        1
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.blue_material"
+    },
+    {
+      "id": "av07.state.24",
+      "object": "av07.window.rainbow.indigo",
+      "property": "material.base_color",
+      "t": 0,
+      "value": [
+        0.29,
+        0.0,
+        0.51,
+        1.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.indigo_material"
+    },
+    {
+      "id": "av07.state.25",
+      "object": "av07.window.rainbow.indigo",
+      "property": "material.base_color",
+      "t": 55,
+      "value": [
+        0.5,
+        0.5,
+        0.5,
+        1
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.indigo_material"
+    },
+    {
+      "id": "av07.state.26",
+      "object": "av07.window.rainbow.violet",
+      "property": "material.base_color",
+      "t": 0,
+      "value": [
+        0.5,
+        0.0,
+        0.5,
+        1.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.violet_material"
+    },
+    {
+      "id": "av07.state.27",
+      "object": "av07.window.rainbow.violet",
+      "property": "material.base_color",
+      "t": 55,
+      "value": [
+        0.5,
+        0.5,
+        0.5,
+        1
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "material": "av07.window.rainbow.violet_material"
+    },
+    {
+      "id": "av07.state.28",
+      "object": "ch-spark-468e",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.29",
+      "object": "ch-valentina-a9be",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.30",
+      "object": "ch-eco-eff3",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.31",
+      "object": "ch-pintor-bce0",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.32",
+      "object": "ch-piquito-030a",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.33",
+      "object": "av07.fx.blue",
+      "property": "hide_render",
+      "t": 19.5,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.34",
+      "object": "av07.fx.blue",
+      "property": "hide_render",
+      "t": 55,
+      "value": true,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.35",
+      "object": "av07.fx.blue",
+      "property": "location",
+      "t": 18,
+      "value": [
+        1.45,
+        1.75,
+        2.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.36",
+      "object": "av07.fx.blue",
+      "property": "location",
+      "t": 21,
+      "value": [
+        1.45,
+        1.75,
+        0.04999999999999999
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.37",
+      "object": "av07.fx.magenta",
+      "property": "hide_render",
+      "t": 19.5,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.38",
+      "object": "av07.fx.magenta",
+      "property": "hide_render",
+      "t": 55,
+      "value": true,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.39",
+      "object": "av07.fx.magenta",
+      "property": "location",
+      "t": 18,
+      "value": [
+        2.75,
+        2.65,
+        2.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.40",
+      "object": "av07.fx.magenta",
+      "property": "location",
+      "t": 21,
+      "value": [
+        2.75,
+        2.65,
+        0.04999999999999999
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.41",
+      "object": "av07.fx.green",
+      "property": "hide_render",
+      "t": 19.5,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.42",
+      "object": "av07.fx.green",
+      "property": "hide_render",
+      "t": 55,
+      "value": true,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.43",
+      "object": "av07.fx.green",
+      "property": "location",
+      "t": 18,
+      "value": [
+        3.25,
+        2.15,
+        2.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.44",
+      "object": "av07.fx.green",
+      "property": "location",
+      "t": 21,
+      "value": [
+        3.25,
+        2.15,
+        0.04999999999999999
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.45",
+      "object": "av07.fx.yellow",
+      "property": "hide_render",
+      "t": 19.5,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.46",
+      "object": "av07.fx.yellow",
+      "property": "hide_render",
+      "t": 55,
+      "value": true,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.47",
+      "object": "av07.fx.yellow",
+      "property": "location",
+      "t": 18,
+      "value": [
+        2.95,
+        1.65,
+        2.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.48",
+      "object": "av07.fx.yellow",
+      "property": "location",
+      "t": 21,
+      "value": [
+        2.95,
+        1.65,
+        0.04999999999999999
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.49",
+      "object": "obj-cofre-dorado",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.50",
+      "object": "obj-cofre-dorado.candado_color",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.51",
+      "object": "obj-cofre-dorado.candado_numero",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.52",
+      "object": "obj-cofre-dorado.candado_letra",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.53",
+      "object": "av07.lock.color.shackle",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.54",
+      "object": "av07.lock.letter.glyph",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.55",
+      "object": "av07.lock.letter.shackle",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.56",
+      "object": "av07.lock.number.glyph",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.57",
+      "object": "av07.lock.number.shackle",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.58",
+      "object": "obj-cofre-dorado.tapa",
+      "property": "rotation_euler",
+      "t": 55,
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    }
+  ],
+  "state_bindings": {
+    "Libro de cuentos abierto sobre la cama con letras temblando": [
+      "av07.state.0",
+      "av07.state.1",
+      "av07.state.2",
+      "av07.state.4",
+      "av07.state.5",
+      "av07.state.6",
+      "av07.state.8",
+      "av07.state.9",
+      "av07.state.10"
+    ],
+    "Arcoíris con color en la ventana": [
+      "av07.state.14",
+      "av07.state.16",
+      "av07.state.18",
+      "av07.state.20",
+      "av07.state.22",
+      "av07.state.24",
+      "av07.state.26"
+    ],
+    "Libro de cuentos con la página en blanco": [
+      "av07.state.3",
+      "av07.state.7",
+      "av07.state.11",
+      "av07.state.12",
+      "av07.state.13"
+    ],
+    "Arcoíris de la ventana vuelto gris": [
+      "av07.state.15",
+      "av07.state.17",
+      "av07.state.19",
+      "av07.state.21",
+      "av07.state.23",
+      "av07.state.25",
+      "av07.state.27"
+    ],
+    "Cuatro luces de colores aterrizadas como héroes": [
+      "av07.state.28",
+      "av07.state.29",
+      "av07.state.30",
+      "av07.state.31",
+      "av07.state.32",
+      "av07.state.33",
+      "av07.state.34",
+      "av07.state.35",
+      "av07.state.36",
+      "av07.state.37",
+      "av07.state.38",
+      "av07.state.39",
+      "av07.state.40",
+      "av07.state.41",
+      "av07.state.42",
+      "av07.state.43",
+      "av07.state.44",
+      "av07.state.45",
+      "av07.state.46",
+      "av07.state.47",
+      "av07.state.48"
+    ],
+    "Cofre dorado cerrado con tres candados en el centro de la habitación": [
+      "av07.state.49",
+      "av07.state.50",
+      "av07.state.51",
+      "av07.state.52",
+      "av07.state.53",
+      "av07.state.54",
+      "av07.state.55",
+      "av07.state.56",
+      "av07.state.57",
+      "av07.state.58"
+    ]
+  },
+  "missing": [],
+  "scope": "Complete parameterized data; full esc1 build/physics/visual validation NOT done, still gated by 2B/anatomy/rules"
+}

@@ -133,4 +133,4 @@ Las pruebas unitarias de la sección 3 no necesitan ninguna de las dos.
 
 ## 9. Reglas que no se rompen
 
-Nunca imprimir claves. No tocar 217.76.52.53 ni el pod de Star 32soe7oh2f1gtf. En el 213 solo se trabaja en carpetas NUEVAS de `/opt/myia-motor-v9/` y en el flujo n8n autorizado, con respaldo. No sobrescribir `v9_universal_calidad_20261106`. No cambiar producción. Respaldo y `.off` antes de cada cambio. No inventar datos. El ADN manda la apariencia, el SB manda la cámara y las tomas duran 10 s como máximo, sin partirlas.
+Nunca imprimir claves. No tocar ${VPS_PROHIBIDO} ni el pod de Star 32soe7oh2f1gtf. En el 213 solo se trabaja en carpetas NUEVAS de `/opt/myia-motor-v9/` y en el flujo n8n autorizado, con respaldo. No sobrescribir `v9_universal_calidad_20261106`. No cambiar producción. Respaldo y `.off` antes de cada cambio. No inventar datos. El ADN manda la apariencia, el SB manda la cámara y las tomas duran 10 s como máximo, sin partirlas.

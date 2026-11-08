@@ -1,0 +1,9 @@
+{
+  "sb_angulo_a_elevacion_deg": {
+    "HIGHANGLE": 22.0,
+    "LOWANGLE": -12.0,
+    "EYELEVEL": 0.0
+  },
+  "source_sha256": "23eb8f0c414739473daeaee495d87dabd0f4b3b31b9b426f02799e9d20c2ee95",
+  "source": "Ejecución previa, sólo se recupera su tabla de política de elevación; no aprobación de cámara actual"
+}

@@ -1,3 +1,10 @@
+# ACTUALIZACIÓN PRIORITARIA — 2026-11-08T06:52:21.459144-05:00 (Bogotá)
+
+Esta actualización prevalece sobre el corte histórico inferior. Sensor 36 mm aprobado por Ricardo; GPU autorizada y ejecución a cargo de otro agente. No duplicarla. Ledger Argon verificado: US$0.894963 bruto; GPU pendiente de conciliación, no se certifica gasto cero. PR #1 abierto, no unido ni activado. Oro previo 23/23, física completa y dinámica pendientes de evidencia. Ver GUIA_CONTINUAR.md para pasos, copias y límites. Este paquete agrega candidato BVH y snapshot reciente; no contiene renders/binarios pesados ni credenciales.
+
+---
+# Corte histórico (conservar como historial; NO estado actual)
+
 # Traspaso de Inmi — para quien siga con el motor de Blender
 
 Soy Inmi, la asistente que llevó este plan hasta el 7-nov-2026 (23:00, hora de Bogotá). Te dejo todo lo necesario para seguir sin mí. Léelo completo antes de tocar nada.
@@ -22,7 +29,7 @@ Soy Inmi, la asistente que llevó este plan hasta el 7-nov-2026 (23:00, hora de 
 ## 4. Reglas de seguridad (todas obligatorias)
 - **Nunca imprimas, copies ni subas claves** (cuenta de servicio, API keys, tokens, ssh). Refiérete a ellas solo por ruta.
 - **Nunca sobrescribas** T317, `24_TRASPASO` ni `v9_universal_calidad_20261106`. Trabaja siempre en carpetas nuevas `avanceNN_YYYYMMDD`.
-- **Nunca toques** el otro VPS `217.76.52.53` ni el pod `32soe7oh2f1gtf`.
+- **Nunca toques** el otro VPS `${VPS_PROHIBIDO}` ni el pod `32soe7oh2f1gtf`.
 - **Solo Ricardo aprueba** cambios, gastos y borrados.
 - Pods: **stop** al terminar, **nunca terminate/delete**. Ante un 403 de RunPod, detente y avisa; no busques rodeos.
 - Antes de cualquier cambio: **respaldo** + dejar la función nueva apagada con su bandera **`.off`** hasta probarla.
@@ -40,7 +47,7 @@ Soy Inmi, la asistente que llevó este plan hasta el 7-nov-2026 (23:00, hora de 
   - 02: "animar en Blender" (SSH, vía puente) → "resultado T317".
   - Nodos de pago `SELLO … sello_pago` (compuerta + tope + ledger): aceptan el JSON nuevo sin romper el formato viejo (AVANCE_06). El pago automático nuevo sigue apagado hasta la prueba final.
 - **Puente SSH restringido** desde n8n: solo puede correr el motor y el generador nuevo (ampliado en AVANCE_06, respaldos en `avance06_20261107/respaldos/`).
-- **Credencial de Argon:** archivo protegido en el VPS, `/opt/myia-motor-v9/avance04_20261107/privado/vertex.json` (cuenta de servicio). En el código aparece como `${VERTEX_SA_FILE}`. Proyecto `${GCP_PROJECT_ID}` (un proyecto `gen-lang-client-…` de AI Studio, con facturación y créditos).
+- **Credencial de Argon:** archivo protegido en el VPS, `${VERTEX_SA_FILE}` (cuenta de servicio). En el código aparece como `${VERTEX_SA_FILE}`. Proyecto `${GCP_PROJECT_ID}` (un proyecto `gen-lang-client-…` de AI Studio, con facturación y créditos).
 - **Vertex:** modelo `gemini-3-flash-preview`, ubicación `global`, esquema estricto (JSON tipado). Otros modelos no están habilitados en ese proyecto. La API de Gemini directa no acepta cuentas de servicio.
 - **RunPod:** pod de render **`pul0wcedwdkwm7`** (detenido). Usar solo resume → render → copiar video → stop.
 - **video-studio** (`/opt/video-studio`): el nodo **3b "Cargar mi guion"** lee `studio.db` y el nodo **4e "Aprobar precio"** usa su panel en el puerto 8602. Ricardo solo autorizó (pendiente de su sí) liberar `media` y `backups`, nunca el código ni `studio.db`.

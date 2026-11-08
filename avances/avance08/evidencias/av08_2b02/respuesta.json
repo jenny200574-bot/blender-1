@@ -1,0 +1,793 @@
+{
+  "status": "NARRATIVE_COMPLETE_PHYSICS_PENDING",
+  "assignments": [
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 9.0,
+      "capa": "base",
+      "evidence": "DIRECT: Don Caos ríe y apunta rayo en inicio (0..9s)",
+      "support_in_source": "SOURCE01: ch-don-caos-7adf segment 0"
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a1",
+      "movimiento": "m_disparo_caos",
+      "t0": 0.0,
+      "t1": 3.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'Un rayo morado cruza la pantalla' (0-3s)",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a2",
+      "movimiento": "m_risa_caos",
+      "t0": 3.0,
+      "t1": 9.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'DON CAOS: [riendo, con voz de malo...]'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_1",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 9.0,
+      "t1": 11.0,
+      "capa": "locomocion",
+      "evidence": "SOURCE01: Movimiento hacia ventana",
+      "support_in_source": "SOURCE01: ch-don-caos-7adf segment 1"
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a3",
+      "movimiento": "m_disparo_caos",
+      "t0": 9.0,
+      "t1": 11.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'Otro ZAP. Ahora el arcoíris... se vuelve gris'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_2",
+      "movimiento": "m_reposo_base",
+      "t0": 11.0,
+      "t1": 15.5,
+      "capa": "base",
+      "evidence": "SOURCE01: Quieto celebrando (11-15.5s)",
+      "support_in_source": "SOURCE01: ch-don-caos-7adf segment 2"
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a4",
+      "movimiento": "m_bostezo_caos",
+      "t0": 11.0,
+      "t1": 15.5,
+      "capa": "gesto",
+      "evidence": "DIRECT: '[bosteza] ...aburrido'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_3",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 15.5,
+      "t1": 18.0,
+      "capa": "locomocion",
+      "evidence": "SOURCE01: Se retira junto a la cama",
+      "support_in_source": "SOURCE01: ch-don-caos-7adf segment 3"
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "a5",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 15.5,
+      "t1": 18.0,
+      "capa": "locomocion",
+      "evidence": "SOURCE01: Caminata hacia escondite",
+      "support_in_source": "SOURCE01: ch-don-caos-7adf segment 3"
+    },
+    {
+      "personaje": "ch-don-caos-7adf",
+      "accion_plan": "segmento_01_ch-don-caos-7adf_4",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 55.0,
+      "capa": "base",
+      "evidence": "DIRECT: 'asomando la cabeza por debajo de la cama' (posterior)",
+      "support_in_source": "SOURCE01: ch-don-caos-7adf segment 4"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 18.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Posición previa aterrizaje",
+      "support_in_source": "SOURCE01: ch-spark-468e segment 0"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_1",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 30.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Aterrizaje en habitación",
+      "support_in_source": "SOURCE01: ch-spark-468e segment 1"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a6",
+      "movimiento": "m_aterrizar_alerta",
+      "t0": 18.0,
+      "t1": 21.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'Las cuatro luces de colores aterrizan...'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a11",
+      "movimiento": "m_hablar_visor",
+      "t0": 21.0,
+      "t1": 25.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'SPARK: [preocupado, mirando su visor]'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_2",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 30.0,
+      "t1": 33.0,
+      "capa": "locomocion",
+      "evidence": "SOURCE01: Paso hacia el cofre",
+      "support_in_source": "SOURCE01: ch-spark-468e segment 2"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a14",
+      "movimiento": "m_mirar_sorpresa",
+      "t0": 30.0,
+      "t1": 33.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'aparece un cofre dorado... tres candados brillantes'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_3",
+      "movimiento": "m_reposo_base",
+      "t0": 33.0,
+      "t1": 44.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Escucha a Valentina y Eco",
+      "support_in_source": "SOURCE01: ch-spark-468e segment 3"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_4",
+      "movimiento": "m_giro_pasos",
+      "t0": 44.0,
+      "t1": 46.0,
+      "capa": "locomocion",
+      "evidence": "DIRECT: 'giran lentamente hacia la cámara'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a17",
+      "movimiento": "m_giro_decidido",
+      "t0": 44.0,
+      "t1": 46.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'TODOS: [susurrando] ...¡TÚ!'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "segmento_01_ch-spark-468e_5",
+      "movimiento": "m_reposo_base",
+      "t0": 46.0,
+      "t1": 55.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Señala al frente y explica misión",
+      "support_in_source": "SOURCE01: ch-spark-468e segment 5"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a21",
+      "movimiento": "m_senalar_tu",
+      "t0": 46.0,
+      "t1": 48.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: '...¡TÚ!' (repetido en 01)",
+      "support_in_source": "SOURCE01: a21"
+    },
+    {
+      "personaje": "ch-spark-468e",
+      "accion_plan": "a25",
+      "movimiento": "m_hablar_misterioso",
+      "t0": 48.0,
+      "t1": 55.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: '...no te voy a decir cuál es… todavía'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 18.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Posición previa llegada",
+      "support_in_source": "SOURCE01: ch-valentina-a9be segment 0"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_1",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 30.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Aterriza y escucha reporte",
+      "support_in_source": "SOURCE01: ch-valentina-a9be segment 1"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "a7",
+      "movimiento": "m_aterrizar_alerta",
+      "t0": 18.0,
+      "t1": 21.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'luces de colores aterrizan... magenta'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_2",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 30.0,
+      "t1": 33.0,
+      "capa": "locomocion",
+      "evidence": "SOURCE01: Se acerca al cofre dorado",
+      "support_in_source": "SOURCE01: ch-valentina-a9be segment 2"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_3",
+      "movimiento": "m_reposo_base",
+      "t0": 33.0,
+      "t1": 44.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Explica que el cofre guarda palabra",
+      "support_in_source": "SOURCE01: ch-valentina-a9be segment 3"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "a15",
+      "movimiento": "m_hablar_serena",
+      "t0": 33.0,
+      "t1": 40.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'VALENTINA: [suave, mirando a cámara]'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_4",
+      "movimiento": "m_giro_pasos",
+      "t0": 44.0,
+      "t1": 46.0,
+      "capa": "locomocion",
+      "evidence": "DIRECT: 'giran lentamente hacia la cámara'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "a18",
+      "movimiento": "m_giro_decidido",
+      "t0": 44.0,
+      "t1": 46.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'TODOS: [susurrando] ...¡TÚ!'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "segmento_01_ch-valentina-a9be_5",
+      "movimiento": "m_reposo_base",
+      "t0": 46.0,
+      "t1": 55.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Acompaña el cierre de Spark",
+      "support_in_source": "SOURCE01: ch-valentina-a9be segment 5"
+    },
+    {
+      "personaje": "ch-valentina-a9be",
+      "accion_plan": "a22",
+      "movimiento": "m_senalar_tu",
+      "t0": 46.0,
+      "t1": 48.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: '...¡TÚ!' (repetido en 01)",
+      "support_in_source": "SOURCE01: a22"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 18.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Posición previa luz verde",
+      "support_in_source": "SOURCE01: ch-eco-eff3 segment 0"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_1",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 30.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Aterriza con Piquito",
+      "support_in_source": "SOURCE01: ch-eco-eff3 segment 1"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "a8",
+      "movimiento": "m_aterrizar_alerta",
+      "t0": 18.0,
+      "t1": 21.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'luces de colores aterrizan... verde'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "a9",
+      "movimiento": "m_aterrizar_alerta",
+      "t0": 18.0,
+      "t1": 21.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'luces de colores aterrizan... amarillo'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "a19",
+      "movimiento": "m_giro_decidido",
+      "t0": 44.0,
+      "t1": 46.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'giran lentamente... ¡TÚ!'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "a20",
+      "movimiento": "m_giro_decidido",
+      "t0": 44.0,
+      "t1": 46.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'giran lentamente... ¡TÚ!'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "a23",
+      "movimiento": "m_senalar_tu",
+      "t0": 46.0,
+      "t1": 48.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'TODOS... ¡TÚ!'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "a24",
+      "movimiento": "m_senalar_tu",
+      "t0": 46.0,
+      "t1": 48.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'TODOS... ¡TÚ!'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_2",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 30.0,
+      "t1": 33.0,
+      "capa": "locomocion",
+      "evidence": "SOURCE01: Se acerca al cofre dorado",
+      "support_in_source": "SOURCE01: ch-eco-eff3 segment 2"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_3",
+      "movimiento": "m_reposo_base",
+      "t0": 33.0,
+      "t1": 44.0,
+      "capa": "base",
+      "evidence": "DIRECT: 'ECO: [con energía] ¡Pero solo puede abrirlo alguien muy valiente!'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_4",
+      "movimiento": "m_giro_pasos",
+      "t0": 44.0,
+      "t1": 46.0,
+      "capa": "locomocion",
+      "evidence": "DIRECT: 'giran lentamente hacia la cámara'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "segmento_01_ch-eco-eff3_5",
+      "movimiento": "m_reposo_base",
+      "t0": 46.0,
+      "t1": 55.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Escucha a Spark al frente",
+      "support_in_source": "SOURCE01: ch-eco-eff3 segment 5"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_0",
+      "movimiento": "m_reposo_base",
+      "t0": 0.0,
+      "t1": 18.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Posición previa luz amarilla",
+      "support_in_source": "SOURCE01: ch-pintor-bce0 segment 0"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_1",
+      "movimiento": "m_reposo_base",
+      "t0": 18.0,
+      "t1": 30.0,
+      "capa": "base",
+      "evidence": "DIRECT: 'PINTOR: [hablando rapidísimo] ¡Cero letras! ¡Cero colores!...'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_2",
+      "movimiento": "m_caminar_ciclo",
+      "t0": 30.0,
+      "t1": 33.0,
+      "capa": "locomocion",
+      "evidence": "SOURCE01: Se acerca a ver el cofre",
+      "support_in_source": "SOURCE01: ch-pintor-bce0 segment 2"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_3",
+      "movimiento": "m_reposo_base",
+      "t0": 33.0,
+      "t1": 44.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Observa el cofre (33-44s)",
+      "support_in_source": "SOURCE01: ch-pintor-bce0 segment 3"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_4",
+      "movimiento": "m_giro_pasos",
+      "t0": 44.0,
+      "t1": 46.0,
+      "capa": "locomocion",
+      "evidence": "DIRECT: 'giran lentamente hacia la cámara'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "segmento_01_ch-pintor-bce0_5",
+      "movimiento": "m_reposo_base",
+      "t0": 46.0,
+      "t1": 55.0,
+      "capa": "base",
+      "evidence": "SOURCE01: Escucha la promesa de Spark",
+      "support_in_source": "SOURCE01: ch-pintor-bce0 segment 5"
+    },
+    {
+      "personaje": "ch-pintor-bce0",
+      "accion_plan": "a12",
+      "movimiento": "m_hablar_alarmado",
+      "t0": 25.0,
+      "t1": 30.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'PINTOR: ...¡Esto es una emergencia de nivel arcoíris!'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    },
+    {
+      "personaje": "ch-eco-eff3",
+      "accion_plan": "a16",
+      "movimiento": "m_hablar_entusiasta",
+      "t0": 40.0,
+      "t1": 44.0,
+      "capa": "gesto",
+      "evidence": "DIRECT: 'ECO: ...¡Pero solo puede abrirlo alguien muy valiente!'",
+      "support_in_source": "CHAPTER: Bloque 1 - Gancho y prólogo"
+    }
+  ],
+  "movement_audit": [
+    {
+      "id": "m_aterrizar_alerta",
+      "narrative_fit": "PARTIAL",
+      "evidence": "El guion indica aterrizaje de luces, pero la flexión de rodillas y guardia es una interpretación cinemática de la librería.",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_aterrizar_alerta.fases[0].apoyos.tolerancia",
+        "peso_personajes_kg"
+      ]
+    },
+    {
+      "id": "m_bostezo_caos",
+      "narrative_fit": "DIRECT",
+      "evidence": "'DON CAOS: [bosteza] ...aburrido.'",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_bostezo_caos.fases[1].mano_target_offset"
+      ]
+    },
+    {
+      "id": "m_caminar_ciclo",
+      "narrative_fit": "DIRECT",
+      "evidence": "Mecánica necesaria para traslaciones descritas en 01 (hacia cofre/ventana).",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_caminar_ciclo.paso_largo_m",
+        "frecuencia_paso_hz"
+      ]
+    },
+    {
+      "id": "m_disparo_caos",
+      "narrative_fit": "PARTIAL",
+      "evidence": "El guion menciona el Rayo (ZAP), pero no describe explícitamente la pose de apuntar con el brazo.",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_disparo_caos.fases[1].objetivo_id_dinamico"
+      ]
+    },
+    {
+      "id": "m_giro_decidido",
+      "narrative_fit": "DIRECT",
+      "evidence": "'Los cuatro héroes giran lentamente hacia la cámara.'",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_giro_decidido.velocidad_angular_deg_s"
+      ]
+    },
+    {
+      "id": "m_giro_pasos",
+      "narrative_fit": "DIRECT",
+      "evidence": "Complemento técnico para el giro lento grupal.",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_giro_pasos.frecuencia_pasos"
+      ]
+    },
+    {
+      "id": "m_hablar_alarmado",
+      "narrative_fit": "PARTIAL",
+      "evidence": "El texto dice 'hablando rapidísimo' y 'emergencia'; los 'brazos abiertos' son interpretación.",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_hablar_alarmado.gesticulacion_intension_vocal"
+      ]
+    },
+    {
+      "id": "m_hablar_entusiasta",
+      "narrative_fit": "DIRECT",
+      "evidence": "'ECO: [con energía]'",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_hablar_entusiasta.mano_derecha_altura_offset"
+      ]
+    },
+    {
+      "id": "m_hablar_misterioso",
+      "narrative_fit": "DIRECT",
+      "evidence": "'SPARK: ...no te voy a decir cuál es… todavía.'",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_hablar_misterioso.curva_suavizado"
+      ]
+    },
+    {
+      "id": "m_hablar_serena",
+      "narrative_fit": "DIRECT",
+      "evidence": "'VALENTINA: [suave, mirando a cámara]'",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_hablar_serena.apertura_manos_distancia_m"
+      ]
+    },
+    {
+      "id": "m_hablar_visor",
+      "narrative_fit": "UNSUPPORTED",
+      "evidence": "Guion dice 'mirando visor'. No hay evidencia de que Spark toque el visor físicamente.",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_hablar_visor.colision_dedo_visor_margin"
+      ]
+    },
+    {
+      "id": "m_mirar_sorpresa",
+      "narrative_fit": "PARTIAL",
+      "evidence": "El guion describe la aparición del cofre; la sorpresa es una reacción inferida.",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_mirar_sorpresa.intensidad_torso_blend"
+      ]
+    },
+    {
+      "id": "m_reposo_base",
+      "narrative_fit": "DIRECT",
+      "evidence": "Postura neutra obligatoria entre acciones.",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_reposo_base.balanceo_respiracion_iteraciones"
+      ]
+    },
+    {
+      "id": "m_risa_caos",
+      "narrative_fit": "DIRECT",
+      "evidence": "'DON CAOS: [riendo, con voz de malo que no da miedo]'",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_risa_caos.sacudida_pecho_hz"
+      ]
+    },
+    {
+      "id": "m_senalar_tu",
+      "narrative_fit": "PARTIAL",
+      "evidence": "El texto dice 'TODOS: [susurrando] …¡TÚ!'; señalar es una interpretación visual de énfasis.",
+      "structural_only": true,
+      "missing_for_physical_approval": [
+        "m_senalar_tu.brazo_target_punto_focal"
+      ]
+    }
+  ],
+  "contact_intents": [
+    {
+      "entity": "ch-piquito-030a",
+      "effector_or_attachment": "feet",
+      "target_entity_or_object": "ch-eco-eff3",
+      "side": "left_shoulder",
+      "t0": 0.0,
+      "t1": 18.0,
+      "source_quote": "'Piquito (pajarito AMARILLO #FFD84D) en el hombro izquierdo.'",
+      "missing_execution_parameters": [
+        "presion_contacto_n",
+        "offset_hombro_izq_m"
+      ]
+    },
+    {
+      "entity": "ch-piquito-030a",
+      "effector_or_attachment": "feet",
+      "target_entity_or_object": "ch-eco-eff3",
+      "side": "left_shoulder",
+      "t0": 18.0,
+      "t1": 30.0,
+      "source_quote": "'Aterriza posado en el hombro izquierdo de Eco'",
+      "missing_execution_parameters": [
+        "presion_contacto_n",
+        "offset_hombro_izq_m"
+      ]
+    },
+    {
+      "entity": "ch-piquito-030a",
+      "effector_or_attachment": "feet",
+      "target_entity_or_object": "ch-eco-eff3",
+      "side": "left_shoulder",
+      "t0": 30.0,
+      "t1": 33.0,
+      "source_quote": "'Va en el hombro izquierdo de Eco cuando ella se acerca al cofre'",
+      "missing_execution_parameters": [
+        "presion_contacto_n",
+        "offset_hombro_izq_m"
+      ]
+    },
+    {
+      "entity": "ch-piquito-030a",
+      "effector_or_attachment": "feet",
+      "target_entity_or_object": "ch-eco-eff3",
+      "side": "left_shoulder",
+      "t0": 33.0,
+      "t1": 44.0,
+      "source_quote": "'Mira el cofre dorado desde el hombro izquierdo de Eco'",
+      "missing_execution_parameters": [
+        "presion_contacto_n",
+        "offset_hombro_izq_m"
+      ]
+    },
+    {
+      "entity": "ch-piquito-030a",
+      "effector_or_attachment": "feet",
+      "target_entity_or_object": "ch-eco-eff3",
+      "side": "left_shoulder",
+      "t0": 44.0,
+      "t1": 46.0,
+      "source_quote": "'Gira con Eco hacia el frente'",
+      "missing_execution_parameters": [
+        "presion_contacto_n",
+        "offset_hombro_izq_m"
+      ]
+    },
+    {
+      "entity": "ch-piquito-030a",
+      "effector_or_attachment": "feet",
+      "target_entity_or_object": "ch-eco-eff3",
+      "side": "left_shoulder",
+      "t0": 46.0,
+      "t1": 55.0,
+      "source_quote": "'Mira al frente desde el hombro izquierdo de Eco'",
+      "missing_execution_parameters": [
+        "presion_contacto_n",
+        "offset_hombro_izq_m"
+      ]
+    },
+    {
+      "entity": "ch-don-caos-7adf",
+      "effector_or_attachment": "mano_R",
+      "target_entity_or_object": "obj-rayo-caos",
+      "side": "right",
+      "t0": 0.0,
+      "t1": 18.0,
+      "source_quote": "'Siempre con su pistola de rayos morada/plateada'",
+      "missing_execution_parameters": [
+        "fuerza_agarre_n",
+        "mano_indice_curvatura"
+      ]
+    }
+  ],
+  "initials": [
+    {
+      "entity": "ch-don-caos-7adf",
+      "pose": "p_de_pie_base",
+      "source": "Derived from assignment: m_reposo_base at t0=0.0"
+    },
+    {
+      "entity": "ch-spark-468e",
+      "pose": "p_de_pie_base",
+      "source": "Derived from assignment: m_reposo_base at t0=0.0"
+    },
+    {
+      "entity": "ch-valentina-a9be",
+      "pose": "p_de_pie_base",
+      "source": "Derived from assignment: m_reposo_base at t0=0.0"
+    },
+    {
+      "entity": "ch-eco-eff3",
+      "pose": "p_de_pie_base",
+      "source": "Derived from assignment: m_reposo_base at t0=0.0"
+    },
+    {
+      "entity": "ch-pintor-bce0",
+      "pose": "p_de_pie_base",
+      "source": "Derived from assignment: m_reposo_base at t0=0.0"
+    }
+  ],
+  "source_conflicts": [
+    "CHAPTER describes Piquito as orange (provisional), but AUTHORITY_OVERRIDES and SOURCE01 mandate yellow #FFD84D.",
+    "CHAPTER convention [3 seconds silence] for PAUSA INTERACTIVA not reflected in segment duration logic of 01.",
+    "Spark looking at visor vs touching visor: movement m_hablar_visor lacks explicit literal support in CHAPTER."
+  ],
+  "unresolved": [
+    "Coordinación de mirada de Piquito durante el giro (44-46s): ¿sigue a Eco o a la cámara?",
+    "Frecuencia exacta de gesticulación para 'Pintor hablando rapidísimo' en t=25."
+  ]
+}

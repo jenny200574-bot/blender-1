@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"additional_surface_contacts": {"type": "array", "items": {"type": "object", "properties": {"a_index": {"type": "integer"}, "b_index": {"type": "integer"}, "rationale": {"type": "string"}}, "required": ["a_index", "b_index", "rationale"]}}}, "required": ["additional_surface_contacts"]}

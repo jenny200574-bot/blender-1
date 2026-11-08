@@ -37,7 +37,7 @@ def main():
  from google import genai
  from google.genai import types
  from google.oauth2 import service_account
- cred=service_account.Credentials.from_service_account_file(__import__('os').environ['VERTEX_SA_FILE'],scopes=['https://www.googleapis.com/auth/cloud-platform'])
+ cred=service_account.Credentials.from_service_account_file('${VERTEX_SA_FILE}',scopes=['https://www.googleapis.com/auth/cloud-platform'])
  schema_mode=os.environ.get('MYIA_SCHEMA_MODE','vertex')
  schema_kwargs={'response_json_schema':standard(schema)} if schema_mode=='json' else {'response_schema':vertex_schema(schema)}
  client=genai.Client(vertexai=True,project='${GCP_PROJECT_ID}',location='global',credentials=cred,http_options=types.HttpOptions(api_version='v1',base_url='https://aiplatform.googleapis.com',timeout=900000,retry_options=types.HttpRetryOptions(attempts=1)))
