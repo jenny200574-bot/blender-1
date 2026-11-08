@@ -83,7 +83,9 @@ def ligar(spec,rig,entity):
  if not spec.get('bind_role'):return spec
  from mathutils import Matrix,Euler,Vector
  lib=leer(Path(__file__).resolve().parents[1]/'bibliotecas/apariencia_base_cpu.json');roles={b.get('role'):b['id'] for b in (entity.get('rig') or {}).get('bones',[])};roles.update((entity.get('rig') or {}).get('roles') or {});name=roles.get(spec['bind_role']) or lib['body_bones'].get(entity['anatomy'],{}).get(spec['bind_role'])
- if not name or name not in rig.data.bones:raise ValueError('Base CPU: falta correspondencia anatómica '+spec['bind_role'])
+ if not name or name not in rig.data.bones:
+  from malla_cabeza import error_hueso_cabeza
+  raise ValueError(error_hueso_cabeza(entity.get('id'), spec.get('bind_role'), name, [b.name for b in rig.data.bones]))
  b=rig.data.bones[name];spec=copy.deepcopy(spec)
  if spec.get('fit_to_bone'):
   dims=spec['library_dimensions']['dimensions_m'];ratio=b.length/dims[2]

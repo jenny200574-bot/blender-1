@@ -16,6 +16,8 @@ from bpy_extras.object_utils import world_to_camera_view as w2c
 AQUI = Path(__file__).resolve().parent; sys.path.insert(0, str(AQUI))
 import rig_camara_coords as RIG
 from medir_objetivo_camara import puntos_de_objetivo, sensor_ancho_mm
+from curvas_accion import fijar_constante
+from eje_objetos import par_eje
 OFF = lambda n: (AQUI / f'{n}.off').exists()
 a = sys.argv[sys.argv.index('--') + 1:]
 def _j(i, d=None):
@@ -288,11 +290,7 @@ def orient_txt(txt):
         if all(c in t for c in r['contiene']): return r['grados']
     return None
 def eje_par(s):
-    if not s: return None
-    for A_ in sorted(ACT, key=len, reverse=True):
-        if s.startswith(A_ + '-'):
-            B_ = s[len(A_) + 1:]; return (A_, B_) if B_ in ACT else ('ambiguo', A_, B_)
-    return ('ambiguo', None, s)
+    return par_eje(s, set(ACT), set(bpy.data.objects.keys()))
 def buscar_id(label, ids):
     if not label:return None
     binding=(E.get('bindings') or {}).get(str(label));target=binding.get('scene_object_id') if binding else str(label)
@@ -631,13 +629,7 @@ if SW['resolver_camara']:
     for blk in (ob, cd):
         act = blk.animation_data.action if blk.animation_data else None
         if not act: continue
-        for layer in act.layers:
-            for strip in layer.strips:
-                for slot in act.slots:
-                    bag = strip.channelbag(slot)
-                    if bag:
-                        for fc in bag.fcurves:
-                            for kp in fc.keyframe_points: kp.interpolation = 'CONSTANT'   # un keyframe por cuadro: sin interpolación inventada
+        fijar_constante(act)   # 4.4+ layers; 4.2 fcurves. Un keyframe por cuadro, sin interpolación inventada.
 # verificación cruzada con la cámara REAL (world_to_camera_view, mismo método que blender_camaras.py del 05)
 for T in tomas:
     if T['estado'] is None or not T.get('objetivo'): continue

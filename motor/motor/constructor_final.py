@@ -71,6 +71,13 @@ try:
         root=obtener_raiz(p,objects,sc)
         for part in p.get('geometry',[]):construir_parte(part,root,objects)
         for id,obj in registrar_puntos(root,p.get('points',[]),objects).items():objects[p['id']+'.'+id]=obj
+        for eje_id in p.get('axis_ids') or []:
+            if eje_id in objects:continue
+            from eje_objetos import alias_vacio
+            spec_alias=alias_vacio(p,eje_id)
+            empty=bpy.data.objects.new(eje_id,None);sc.collection.objects.link(empty)
+            empty.matrix_world=root.matrix_world.copy();world=root.matrix_world.copy();root.parent=empty;root.matrix_world=world
+            empty['axis_of']=p['id'];empty['source']=spec_alias['source'];objects[eje_id]=empty
         for h in p.get('hinges',[]):
             pivot=bpy.data.objects.new(h['id'],None);sc.collection.objects.link(pivot);pivot.parent=root;pivot.location=h['pivot_m'];pivot.rotation_mode='AXIS_ANGLE';axis=Vector(h['axis']).normalized();objects[h['id']]=pivot
             for name in h['parts']:
