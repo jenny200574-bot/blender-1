@@ -27,33 +27,86 @@ Detalle: `docs/cotejo_vps_avance10.csv`.
 - No relanzar `preview_cpu_av10.py` hasta rehacer preflight y núcleo. Ese wrapper vuelve a pasar el blend viejo; el constructor ahora se detiene con `REUSO_INCOMPATIBLE`.
 - No tocar T317, n8n, video-studio, GPU ni APIs.
 
-## Aplicar solo estos archivos
+## Instalar
 
-Desde el candidato, las rutas del parche son `motor/...` y `pruebas/...` (`git diff 5e65c12` con `-p1`).
+El paquete para copiar al box es el archivo `parche_avance10_13.tar.gz` de los artefactos de esta corrida. Trae solo los 13 archivos, `manifiesto_13.json` y `instalar_parche_avance10.py`.
 
-Hashes esperados después del parche (SHA256 del archivo en esta rama):
+Ese instalador, sin `--aplicar`, no escribe. Con `--aplicar` escribe solo si cada archivo previo tiene el hash `antes` del manifiesto y `motor/fisica_final.py` sigue en `3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2`. Si el hash previo cambió, si un archivo nuevo ya existe, o si la física no es esa, no escribe nada. No borra la copia `heredado/malla_cabeza.py`.
 
-| Ruta en el candidato | SHA256 |
-|---|---|
-| motor/camara_v2_blender.py | `45e706ff53e02e261fbeb3936ef33c033657029f0dc67d6262022aad739e955e` |
-| motor/constructor_final.py | `8eca43c3e4d375e96b7d9082842475df65d341968c0d9f655bdd20e906f54ef2` |
-| motor/heredado/rig.py | `0e77225c7ff2e4b1ecac15938dc4a060490cb07a8adace55b2f0601153a5703b` |
-| motor/heredado/cargar_modulo_motor.py | `6a82c8f62cc098bfcb088067dad66ee6bbbb831a8e9dd6ad77180b5116c024d5` |
-| motor/malla_cabeza.py | `ef276da95cf7de25b96452ed97832b5b94bd2c2faa2815b6c5a60fee0bcce609` |
-| motor/nucleo_bueno_cpu.py | `5da09ca74229c7a2db3e19c4a86311edbbeb320544e7bea6b22024fff5a1285b` |
-| motor/objetos_adn.py | `c6140296d06f16fd60bd5a9ae160d866a2a7a6816f5ffae037848df8baa470f9` |
-| motor/orquestador.py | `f7e81ed829922039ea66a714d33eaff8463e8ba0e4242e06b464638c7a96ec6b` |
-| motor/traductor_adn.py | `fcc156672ee5fe99d2c2cad5ec961377b7af7f36677fef23799b23f48d919c4d` |
-| motor/compatibilidad_artefacto.py | `591e47e87a4b153eda4d8d00ac6547736fdc2f30fba9fc870ce398b511c5ef05` |
-| pruebas/test_malla_cabeza.py | `722aacaaca9c359ab384721c8317e257db9f2e7f4a137ddfee578b2c4a638d99` |
-| pruebas/test_cargar_modulo_motor.py | `7ff8cdb1d2f7af17c2cd2b0306b5833b0f03969f0c68a5af7dde042af3aa6e7a` |
-| pruebas/test_compatibilidad_artefacto.py | `ad5ad200c010d7c6a5f9c599ac14ab8d1f1d186f33faf14ccbac53ba6584ea69` |
+```bash
+tar -tzf parche_avance10_13.tar.gz
+cd /opt/myia-motor-v9/avance10_20261108
+python3 /ruta/del/paquete/instalar_parche_avance10.py \
+  --destino /opt/myia-motor-v9/avance10_20261108/MOTOR_BVH08_CANDIDATO \
+  --origen /ruta/del/paquete/archivos \
+  --manifiesto /ruta/del/paquete/manifiesto_13.json
+# si el seco dice SECO y la física no se toca:
+python3 /ruta/del/paquete/instalar_parche_avance10.py \
+  --destino /opt/myia-motor-v9/avance10_20261108/MOTOR_BVH08_CANDIDATO \
+  --origen /ruta/del/paquete/archivos \
+  --manifiesto /ruta/del/paquete/manifiesto_13.json \
+  --aplicar
+```
 
-Comprobar el hash de cada archivo después de copiarlo. Si no coincide, no seguir.
+Los hashes `antes` y `despues` están en `despliegue/manifiesto_13.json`. No se repiten aquí para no divergir.
 
-## Siguiente corrida, carpeta nueva y chica
+## Comandos CPU con rutas ya vistas
 
-1. Preflight desde la entrada fuente de la escena, no desde `paquete_normalizado` viejo. El orquestador nuevo escribe `compatibilidad_paquete.json` solo si la compilación dejó las marcas `_eje_objetos` y `_cabeza_compilada` y no hubo errores.
-2. Núcleo nuevo, sin tercer argumento de blend. `nucleo_bueno_cpu.py` escribe `compatibilidad_nucleo.json` junto al `.blend`.
-3. Constructor: si falta el recibo, el código no coincide o el legacy no es el mismo, sale `REUSO_INCOMPATIBLE` antes de abrir el blend.
-4. Oro 23/23 en salida nueva, tolerancias intactas. Esta VM no corrió Blender. El desplazamiento de la cápsula no cambió; sí cambió el import y la cámara ahora puede medir el hueso de cabeza si no hay malla visible. No se afirma 23/23 ni preview de escena 1.
+No se ejecutaron aquí. El script instalado `entrega/codigo/oro_final_bvh08.py` y `entrega/codigo/preflight_bvh08.py` (hash igual al repo) apuntan a avance08. No correrlos: escribirían en avance08. El blend viejo que sí se abrió es `/opt/myia-motor-v9/avance10_20261108/preview_cpu08/nucleo/escena.blend`. No pasarlo como tercer argumento.
+
+Oro. Entrada, binario y referencia salen del script de oro ya instalado. La salida `oro_av10_b` ya existe; `motor_unico.py` rechaza una salida existente. Comprobar los tres `test` y parar si falta alguno:
+
+```bash
+test -x /opt/blender/actual/blender
+test -f /opt/myia-motor-v9/avance06_20261107/oro_av06/revisor_comparable.json
+test -f /opt/myia-motor-v9/avance10_20261108/MOTOR_BVH08_CANDIDATO/paquetes/regresion_orden_explicito/entrada_escena.json
+test ! -e /opt/myia-motor-v9/avance10_20261108/oro_av10_c
+python3 /opt/myia-motor-v9/avance10_20261108/MOTOR_BVH08_CANDIDATO/motor_unico.py \
+  /opt/myia-motor-v9/avance10_20261108/MOTOR_BVH08_CANDIDATO/paquetes/regresion_orden_explicito/entrada_escena.json \
+  --salida /opt/myia-motor-v9/avance10_20261108/oro_av10_c \
+  --regresion \
+  --blender /opt/blender/actual/blender \
+  --referencia /opt/myia-motor-v9/avance06_20261107/oro_av06/revisor_comparable.json
+```
+
+El fixture dentro del candidato no está entre los 139 hashes. Si `test -f` falla, no inventar otra entrada.
+
+Preflight de la escena 1. La entrada que nombra el script instalado es `/opt/myia-motor-v9/avance08_20261107/esc1_bvh08/entrada_escena.json`. No está hasheada en avance10. Usar la primera que exista y no crear otra:
+
+```bash
+ENTRADA=
+for c in \
+  /opt/myia-motor-v9/avance10_20261108/esc1_bvh08/entrada_escena.json \
+  /opt/myia-motor-v9/avance08_20261107/esc1_bvh08/entrada_escena.json
+ do
+  if [ -f "$c" ]; then ENTRADA=$c; break; fi
+ done
+test -n "$ENTRADA"
+test ! -e /opt/myia-motor-v9/avance10_20261108/preflight_av10_b
+python3 - "$ENTRADA" << 'PY'
+import sys
+sys.path.insert(0, "/opt/myia-motor-v9/avance10_20261108/MOTOR_BVH08_CANDIDATO/motor")
+from orquestador import ejecutar
+entrada, salida = sys.argv[1], "/opt/myia-motor-v9/avance10_20261108/preflight_av10_b"
+x = ejecutar(entrada, salida, prueba_cpu=True, blender="/opt/blender/actual/blender", solo_validar=True)
+assert x["production_approved"] is False
+raise SystemExit(0 if x["errores"] == [] else 2)
+PY
+```
+
+Núcleo y escena 1, solo si ese preflight queda sin errores. Misma entrada. Salida distinta. El orquestador construye el núcleo y no recibe el blend de `preview_cpu08`. Puede tardar lo que tardó el constructor anterior. No enciende GPU ni llama APIs de pago si `config/argon_recetas.off` sigue presente y `politica_ejecucion.json` tiene `argon_automatico` en false, que es lo que exigía el preview instalado; comprobarlo antes.
+
+```bash
+test ! -e /opt/myia-motor-v9/avance10_20261108/preview_av10_b
+python3 - "$ENTRADA" << 'PY'
+import sys
+sys.path.insert(0, "/opt/myia-motor-v9/avance10_20261108/MOTOR_BVH08_CANDIDATO/motor")
+from orquestador import ejecutar
+entrada = sys.argv[1]
+x = ejecutar(entrada, "/opt/myia-motor-v9/avance10_20261108/preview_av10_b", prueba_cpu=True, blender="/opt/blender/actual/blender", solo_validar=False)
+assert x["production_approved"] is False
+raise SystemExit(0 if x["estado"] == "COMPLETO" else 2)
+PY
+```
+
+Una cabeza medida solo por el hueso deja la toma bloqueada y `production_approved` en false. No es malla visible. El oro no se afirma desde esta VM. n8n no cambia con este parche. No hubo limpieza en el PC.

@@ -18,7 +18,7 @@ import rig_camara_coords as RIG
 from medir_objetivo_camara import puntos_de_objetivo, sensor_ancho_mm
 from curvas_accion import fijar_constante
 from eje_objetos import par_eje
-from malla_cabeza import region_desde_hueso
+from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual
 OFF = lambda n: (AQUI / f'{n}.off').exists()
 a = sys.argv[sys.argv.index('--') + 1:]
 def _j(i, d=None):
@@ -131,7 +131,7 @@ def medir(pid, f, toma=None):
         if not HP: cab_m = []
     if cab_m:
         lo = Vector([min(p[i] for p in HP) for i in range(3)]); hi = Vector([max(p[i] for p in HP) for i in range(3)])
-        cc = (lo + hi) / 2; cab = {'centro': cc, 'alto': hi.z - lo.z, 'top': hi.z, 'puntos': HP, 'puntos_cara': [p for p in HP if abs(p.z - cc.z) <= (hi.z - lo.z) / 4] or HP}
+        cc = (lo + hi) / 2; cab = marcar_malla_cabeza_visible({'centro': cc, 'alto': hi.z - lo.z, 'top': hi.z, 'puntos': HP, 'puntos_cara': [p for p in HP if abs(p.z - cc.z) <= (hi.z - lo.z) / 4] or HP})
     pb = A.pose.bones; mw = A.matrix_world; fv = None; metodo = None
     pies = [n for n in R['pies'] if n in pb]
     if pies:
@@ -145,7 +145,7 @@ def medir(pid, f, toma=None):
         head = mw @ pb[hc].head; tail = mw @ pb[hc].tail
         puro = region_desde_hueso((head.x, head.y, head.z), (tail.x, tail.y, tail.z))
         if puro:
-            cab = {'centro': Vector(puro['centro']), 'alto': puro['alto'], 'top': puro['top'], 'puntos': [Vector(p) for p in puro['puntos']], 'puntos_cara': [Vector(p) for p in puro['puntos_cara']], 'origen': 'hueso'}
+            cab = {'centro': Vector(puro['centro']), 'alto': puro['alto'], 'top': puro['top'], 'puntos': [Vector(p) for p in puro['puntos']], 'puntos_cara': [Vector(p) for p in puro['puntos_cara']], 'origen': 'hueso', 'malla_visible': False, 'valida_visual': False, 'production_approved': False}
     if hc and fv is not None:
         M3 = (mw @ pb[hc].matrix).to_3x3(); ejes = [M3 @ Vector(x) for x in ((1,0,0),(-1,0,0),(0,0,1),(0,0,-1))]
         ejes = [Vector((e.x, e.y, 0)) for e in ejes]; ejes = [e.normalized() for e in ejes if e.length > 1e-6]
@@ -549,13 +549,15 @@ for n, v in enumerate(sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
     if m0 is None:
         T['estado'] = 'bloqueada'; T['motivos'] = [f'objetivo {tgt} no construido en la escena']; F(f'camera/{v["vineta"]}/objetivo', 'ADN/objetos (4b/4c/SELLO OBJ) + motor', 'construir el objetivo', f'{tgt} no existe en el .blend', tid)
         tomas.append(T); trays.append(None); continue
+    if m0.get('tipo') == 'personaje':
+        clase = clasificar_medida_cabeza(m0.get('cabeza')); T['cabeza_medida'] = clase
+        if not clase['valida_visual']: F(f'actors/{tgt}/rig/cabeza', 'motor (rig) / ADN', 'mostrar una malla de cabeza; el hueso solo no aprueba la apariencia', clase['mensaje'], tid)
     if SW['manifiesto_espacial']:
-        T['manifiesto'] = {str(f): {'altura_m': round(x['H'], 4), 'zmin': round(x['zmin'], 4), 'cabeza': ({'centro': r3(x['cabeza']['centro']), 'alto_m': round(x['cabeza']['alto'], 4)} if x['cabeza'] else None),
+        T['manifiesto'] = {str(f): {'altura_m': round(x['H'], 4), 'zmin': round(x['zmin'], 4), 'cabeza': ({'centro': r3(x['cabeza']['centro']), 'alto_m': round(x['cabeza']['alto'], 4), 'origen': x['cabeza'].get('origen'), 'malla_visible': x['cabeza'].get('malla_visible'), 'valida_visual': x['cabeza'].get('valida_visual'), 'production_approved': False} if x['cabeza'] else None),
                                     'frente': r3(x['frente']) if x['frente'] is not None else None, 'frente_cara': r3(x['frente_cara']) if x.get('frente_cara') is not None else None,
                                     'frente_metodo': x.get('frente_metodo'), 'huesos_z': {k: round(z, 4) for k, z in (x.get('huesos') or {}).items() if z is not None}}
                            for f in (f0, (f0 + f1) // 2, f1) for x in [medir(tgt, f, tid)] if x}
         if m0['tipo'] == 'personaje':
-            if m0['cabeza'] is None: F(f'actors/{tgt}/rig/cabeza', 'motor (rig) / ADN', 'mapear rol cabeza en el rig', 'rig sin hueso/malla de cabeza', tid)
             h = ADN_H.get(tgt)
             if isinstance(h, (int, float)) and abs(m0['H'] - h) / h > CFG['tolerancia_escala_adn']:
                 AVISOS.append(f'{tgt}: altura medida en el .blend {m0["H"]:.3f} m vs ADN {h} m (dif {100*(m0["H"]-h)/h:+.0f}%). No se cambia el ADN; la cámara usa la medida.')
@@ -577,7 +579,7 @@ for n, v in enumerate(sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
             sc.frame_set(f); mw = CAM.matrix_world; tray.append({'f': f, 'loc': mw.translation.copy(), 'quat': mw.to_quaternion(), 'lente': CAM.data.lens, 'roll': 0, 'mira': None})
         spec['medir'] = lambda f, tgt=tgt, tid=tid: medir(tgt, f, tid); spec['eje'] = (par[0], par[1], ref_eje.get(par)) if par and par[0] != 'ambiguo' and ref_eje.get(par) is not None else None
         mal = validar(tray, spec, f0, f1) if SW['validacion_camara'] else []
-        T['camara'] = 'existente (resolver_camara.off)'; T['estado'] = 'pasa' if not mal else 'bloqueada'; T['motivos'] = sorted({x[1] for x in mal}); T['muestras_malas'] = mal[:8]
+        T['camara'] = 'existente (resolver_camara.off)'; T['estado'] = estado_visual('pasa' if not mal else 'bloqueada', T.get('cabeza_medida')); T['motivos'] = sorted({x[1] for x in mal}); T['muestras_malas'] = mal[:8]
         if par and par[0] != 'ambiguo' and ref_eje.get(par) is None and tray: ref_eje[par] = eje_s(S | {'_eje': par}, f0, tray[0]['loc'])
         tomas.append(T); trays.append(None); continue
     intentos = []; elegido = None
@@ -594,7 +596,7 @@ for n, v in enumerate(sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
             if not mal: elegido = (tray, daz, fd, em_, ex, lado); break
         if elegido or len(intentos) >= CFG['reparaciones_max']: break
     if elegido:
-        tray, daz, fd, em_, ex, lado = elegido; T['estado'] = 'pasa'; T['reparacion'] = None if (daz == 0 and fd == 1.0) else {'acimut_extra_deg': daz, 'factor_distancia': fd, 'intentos': len(intentos)}
+        tray, daz, fd, em_, ex, lado = elegido; T['estado'] = estado_visual('pasa', T.get('cabeza_medida')); T['reparacion'] = None if (daz == 0 and fd == 1.0) else {'acimut_extra_deg': daz, 'factor_distancia': fd, 'intentos': len(intentos)}
         if par and par[0] != 'ambiguo' and ref_eje.get(par) is None and lado is not None: ref_eje[par] = lado
     else:
         val = [i for i in intentos if 'fallos' in i]; mejor = min(val, key=lambda i: i['fallos']) if val else None
@@ -651,7 +653,7 @@ for T in tomas:
     if m: sc.frame_set(f); T['verif_blender_mitad'] = {'frame': f, 'uv': r3(w2c(sc, CAM, (m['cabeza']['centro'] if m['cabeza'] else m['centro'])))}
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT / 'escena.blend'), copy=True)
 res = {'version': CFG['version'], 'contrato': 'camara_v2', 'interruptores': SW, 'fps': FPS, 'resolucion': [sc.render.resolution_x, sc.render.resolution_y], 'sensor_ancho_mm': SENSOR_W,
-       'tomas': tomas, 'faltantes': FALT, 'avisos': AVISOS,
-       'resumen': {'pasa': [t['toma'] for t in tomas if t['estado'] == 'pasa'], 'bloqueada': [t['toma'] for t in tomas if t['estado'] != 'pasa']}}
+       'tomas': tomas, 'faltantes': FALT, 'avisos': AVISOS, 'production_approved': False,
+       'resumen': {'pasa': [t['toma'] for t in tomas if t['estado'] == 'pasa' and (t.get('cabeza_medida') or {}).get('valida_visual', True)], 'bloqueada': [t['toma'] for t in tomas if t['estado'] != 'pasa' or (t.get('cabeza_medida') or {}).get('valida_visual') is False]}}
 json.dump(res, open(OUT / 'camara_v2.json', 'w'), ensure_ascii=False, indent=1, default=str)
 print('CAMARA_V2_OK ' + json.dumps(res['resumen']))

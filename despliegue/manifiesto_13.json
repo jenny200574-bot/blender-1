@@ -1,0 +1,89 @@
+{
+  "esquema": "parche_avance10/13",
+  "base_git": "cursor/import-y-reuso-artefactos-434f; preimagen 5e65c12 igual al VPS en estos 13",
+  "preimagen": "manifiesto VPS 2026-11-08T10:35 America/Bogota, igual a 5e65c12 en estos archivos",
+  "fisica_preservada": {
+    "ruta": "motor/fisica_final.py",
+    "sha256": "3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2"
+  },
+  "archivos": [
+    {
+      "ruta": "motor/camara_v2_blender.py",
+      "antes": "635d609fb66d9f594ec71e3369c4d2ae4807a50d4a3d31013c024e142a951a00",
+      "despues": "4d660b6ae21a2890b850c6806986c845f1122827bb8e709d78717f4e20ebaa27",
+      "bytes": 57012
+    },
+    {
+      "ruta": "motor/constructor_final.py",
+      "antes": "53ee5bbecec244f2849e730a759a09e098e70d368a8f91e375af656e4ea231ca",
+      "despues": "8eca43c3e4d375e96b7d9082842475df65d341968c0d9f655bdd20e906f54ef2",
+      "bytes": 18306
+    },
+    {
+      "ruta": "motor/heredado/rig.py",
+      "antes": "aa1329e232bfdae918bd0f7dd9255e47ff40ebcb0c935c62e5edd176b50ad12f",
+      "despues": "0e77225c7ff2e4b1ecac15938dc4a060490cb07a8adace55b2f0601153a5703b",
+      "bytes": 7626
+    },
+    {
+      "ruta": "motor/heredado/cargar_modulo_motor.py",
+      "antes": null,
+      "despues": "6a82c8f62cc098bfcb088067dad66ee6bbbb831a8e9dd6ad77180b5116c024d5",
+      "bytes": 900
+    },
+    {
+      "ruta": "motor/malla_cabeza.py",
+      "antes": "db015e6a696399e07e50f7a7d6ab9a91be0ce7e974abaae2806acdfb5902af2d",
+      "despues": "6fe5986490808dad1d3ae7ca42e3244b94ee150d5c712997ec85d72404055d1b",
+      "bytes": 5145
+    },
+    {
+      "ruta": "motor/nucleo_bueno_cpu.py",
+      "antes": "37b393677470d862b85c3b54f9bce560d89505b49d28489f12686319c2ad527f",
+      "despues": "5da09ca74229c7a2db3e19c4a86311edbbeb320544e7bea6b22024fff5a1285b",
+      "bytes": 24379
+    },
+    {
+      "ruta": "motor/objetos_adn.py",
+      "antes": "9217c618e1a4a98c9159df353867870c00e145c19bc1fdb75498c41fab7b0954",
+      "despues": "c6140296d06f16fd60bd5a9ae160d866a2a7a6816f5ffae037848df8baa470f9",
+      "bytes": 6600
+    },
+    {
+      "ruta": "motor/orquestador.py",
+      "antes": "0f7dfe054b483e70e3d070f6d7ca4cab7c6ccc49ef582b008dfa021893b62f0c",
+      "despues": "f7e81ed829922039ea66a714d33eaff8463e8ba0e4242e06b464638c7a96ec6b",
+      "bytes": 29014
+    },
+    {
+      "ruta": "motor/traductor_adn.py",
+      "antes": "de89589941408eab3c29bbc06ff7e18b17ac5c86edb330a11e5c5a43f61a4a26",
+      "despues": "fcc156672ee5fe99d2c2cad5ec961377b7af7f36677fef23799b23f48d919c4d",
+      "bytes": 8433
+    },
+    {
+      "ruta": "motor/compatibilidad_artefacto.py",
+      "antes": null,
+      "despues": "591e47e87a4b153eda4d8d00ac6547736fdc2f30fba9fc870ce398b511c5ef05",
+      "bytes": 8253
+    },
+    {
+      "ruta": "pruebas/test_malla_cabeza.py",
+      "antes": "e3c024349fcd8294f84afd522a4a3c9a79c8163f6dce9921ff19de967fcf6f9f",
+      "despues": "e3075a0e8d66d5bcb0153cdf4a7603710db6c3e991fb2f3034acd20542741777",
+      "bytes": 4653
+    },
+    {
+      "ruta": "pruebas/test_cargar_modulo_motor.py",
+      "antes": null,
+      "despues": "7ff8cdb1d2f7af17c2cd2b0306b5833b0f03969f0c68a5af7dde042af3aa6e7a",
+      "bytes": 1676
+    },
+    {
+      "ruta": "pruebas/test_compatibilidad_artefacto.py",
+      "antes": null,
+      "despues": "ad5ad200c010d7c6a5f9c599ac14ab8d1f1d186f33faf14ccbac53ba6584ea69",
+      "bytes": 3831
+    }
+  ]
+}
