@@ -52,6 +52,9 @@ def construir_parte(spec,root,objects):
         from objetos_star import construir
         return construir(spec,root,objects)
     if kind=='MESH':
+        from malla_cabeza import error_malla_vacia
+        vacia=error_malla_vacia(spec)
+        if vacia:raise ValueError(vacia)
         mesh=bpy.data.meshes.new(spec['id']);mesh.from_pydata(spec['vertices_m'],[],spec['faces']);mesh.update();obj=bpy.data.objects.new(spec['id'],mesh);bpy.context.scene.collection.objects.link(obj)
     elif kind=='CURVE':
         curve=bpy.data.curves.new(spec['id'],'CURVE');curve.dimensions='3D';curve.bevel_depth=spec['radius_m'];curve.bevel_resolution=spec['resolution'];s=curve.splines.new('POLY');s.points.add(len(spec['points_m'])-1)

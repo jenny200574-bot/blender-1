@@ -75,4 +75,12 @@ def compilar(d,prueba_cpu=False):
         if geometry:
             app=entity.setdefault('appearance',{});app['geometry']=geometry
             for field in ['rostros_finales','ropa_final']:app[field]={'asset':'entrada_escena.json#/entities/'+entity['id']+'/appearance/geometry','source':receipt['source']}
+            from malla_cabeza import validar_cabeza, error_malla_vacia
+            vacia=next((error_malla_vacia(part) for part in geometry.get('parts') or [] if error_malla_vacia(part)), None)
+            if vacia:
+                errors.append(error('entities/'+entity['id']+'/appearance/geometry','traductor ADN',vacia,'MALLA_VACIA'))
+            else:
+                falta=validar_cabeza(entity)
+                if falta and entity.get('type')=='CHARACTER':
+                    errors.append(error('entities/'+entity['id']+'/rig/cabeza','traductor ADN + ensamblado',falta,'CABEZA_NO_ASIGNADA'))
     return receipts,errors
