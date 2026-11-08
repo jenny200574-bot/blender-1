@@ -1,0 +1,61 @@
+{
+  "bogota": "2026-11-08T16:35:45.663054-05:00",
+  "head": "4a8165fc90bd0ab893a4a473a808a29aead3c481",
+  "files": [
+    {
+      "path": "avances/avance13_observabilidad/original/artefactos/supervisor_oro_constructor.py",
+      "sha256": "129187406f4381fb7740e561e7835336211590e5aaf5ef2b92b1559ea5e87c85",
+      "bytes": 3439
+    },
+    {
+      "path": "avances/avance13_observabilidad/paquete_operativo/supervisor_oro_constructor.py",
+      "sha256": "6f942bdc739ff8d7c721edabbe2c08849d03f29c923961ce544860689c368289",
+      "bytes": 12781
+    },
+    {
+      "path": "avances/avance13_observabilidad/paquete_operativo/aplicar_observabilidad.py",
+      "sha256": "98826a7c27ef49278f5a601611fa22873e3804f93e6d13bf770b03026900c197",
+      "bytes": 2969
+    },
+    {
+      "path": "avances/avance13_observabilidad/paquete_operativo/config/observabilidad_cierre.off",
+      "sha256": "da963b6ae0ebddaddef78260efc1172ef8b449449b8541d8858820ca0b602743",
+      "bytes": 193
+    },
+    {
+      "path": "avances/avance13_observabilidad/pruebas/test_observabilidad_supervisor.py",
+      "sha256": "c64cfbddd0a12ddef9d2fb2c7b7a11bd5ae46455c18b02cfed60c7aefa837dbe",
+      "bytes": 15755
+    },
+    {
+      "path": "avances/avance13_observabilidad/pruebas/hijos_simulados.py",
+      "sha256": "d75147dd36847d3434e1293493fc1b08484a64bad4e7646971e76a86788754c5",
+      "bytes": 746
+    },
+    {
+      "path": "motor/motor/orquestador.py",
+      "sha256": "0f7dfe054b483e70e3d070f6d7ca4cab7c6ccc49ef582b008dfa021893b62f0c",
+      "bytes": 28740
+    },
+    {
+      "path": "motor/motor/camara_v2_blender.py",
+      "sha256": "b27cb8181d8a6cf936abd894e461b3125a68cd903af6457fc33bb9cede7b2a28",
+      "bytes": 54478
+    },
+    {
+      "path": "motor/motor/fisica_final.py",
+      "sha256": "682856ed505cd6f63d66c81dd11e64ef8db582a94528ae228f5decd1667ec7fd",
+      "bytes": 8691
+    },
+    {
+      "path": "motor_candidato_bvh08/motor/camara_v2_blender.py",
+      "sha256": "b27cb8181d8a6cf936abd894e461b3125a68cd903af6457fc33bb9cede7b2a28",
+      "bytes": 54478
+    },
+    {
+      "path": "motor_candidato_bvh08/motor/fisica_final.py",
+      "sha256": "3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2",
+      "bytes": 9909
+    }
+  ]
+}

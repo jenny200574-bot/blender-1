@@ -1,0 +1,300 @@
+"""Copia operativa parchada — NO canon del motor ni import masivo.
+
+Base original (VPS, bit-idéntica): supervisor_oro_constructor.py
+SHA256 129187406f4381fb7740e561e7835336211590e5aaf5ef2b92b1559ea5e87c85 (3439 B).
+
+Alcance: registrar stderr/traceback, cierre (exit/señal), run_id/boot_id/PID y
+recuperar RUNNING de otro boot como INTERRUMPIDO_SIN_CIERRE. Sin relanzar,
+sin inventar causa, sin tocar cámara/física/ADN/precios.
+Interruptor: operaciones/observabilidad_cierre.off (presente = comportamiento original).
+No captura el SIGKILL de este proceso; un SIGKILL/reboot se reconoce al recuperar.
+"""
+import pathlib,json,subprocess,os,time,datetime,shutil,hashlib,traceback,sys,threading,uuid,fcntl
+
+_RAIZ_VPS='/opt/myia-motor-v9/avance13_20261108_tipoerror'
+_FISICA_SHA='3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2'
+s=pathlib.Path(os.environ.get('MYIA_SUPERVISOR_RAIZ',_RAIZ_VPS));m=s/'MOTOR_BVH08_CANDIDATO';ops=s/'operaciones';status=ops/'secuencia_estado.json';now=lambda:datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-5))).isoformat();start=time.monotonic()
+x={'supervisor_pid':os.getpid(),'started_bogota':now(),'state':'STARTING','phase':'GATES','returncode':None,'free_before':shutil.disk_usage(s).free}
+_owns_status=False
+
+def _activo():
+ return not (ops/'observabilidad_cierre.off').is_file()
+
+def _boot_id():
+ p=pathlib.Path('/proc/sys/kernel/random/boot_id')
+ if p.is_file():
+  return p.read_text().strip()
+ return None
+
+def _starttime(pid):
+ try:
+  raw=pathlib.Path('/proc/%s/stat'%pid).read_text()
+  rest=raw[raw.rfind(')')+2:].split()
+  return rest[19]
+ except (OSError,IndexError,ValueError):
+  return None
+
+def _pid_vivo(pid,starttime=None):
+ if not pid:
+  return False
+ try:
+  os.kill(int(pid),0)
+ except (OSError,ValueError,TypeError,ProcessLookupError):
+  return False
+ if starttime is None:
+  return True
+ actual=_starttime(pid)
+ return actual is not None and str(actual)==str(starttime)
+
+def _fsync_dir(path):
+ fd=os.open(str(path),os.O_RDONLY)
+ try:os.fsync(fd)
+ finally:os.close(fd)
+
+def _guardar_atomico(path,payload):
+ path=pathlib.Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+ tmp=path.with_suffix(path.suffix+'.partial')
+ data=payload if isinstance(payload,bytes) else payload.encode('utf-8')
+ fd=os.open(str(tmp),os.O_WRONLY|os.O_CREAT|os.O_TRUNC,0o644)
+ try:
+  os.write(fd,data);os.fsync(fd)
+ finally:
+  os.close(fd)
+ os.replace(str(tmp),str(path));_fsync_dir(path.parent)
+
+def _archivar(path):
+ p=pathlib.Path(path)
+ if not p.exists():
+  return None
+ dest=p.parent/'archivo'/datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-5))).strftime('%Y%m%d_%H%M%S_%f')
+ dest.mkdir(parents=True,exist_ok=False)
+ shutil.copy2(p,dest/p.name)
+ return dest/p.name
+
+def save():
+ global _owns_status
+ if not _activo():
+  p=status.with_suffix('.partial');p.write_text(json.dumps(x,ensure_ascii=False,indent=2));os.replace(p,status);_owns_status=True;return
+ x.setdefault('run_id',uuid.uuid4().hex)
+ bid=_boot_id()
+ if bid:x.setdefault('boot_id',bid)
+ x['supervisor_pid']=os.getpid()
+ _guardar_atomico(status,json.dumps(x,ensure_ascii=False,indent=2)+'\n');_owns_status=True
+
+def _evento(texto,stream='supervisor'):
+ if not _activo():
+  return
+ linea='%s | %s | %s\n'%(now(),stream,texto.rstrip('\n'))
+ path=ops/'supervisor_eventos.log'
+ path.parent.mkdir(parents=True,exist_ok=True)
+ fd=os.open(str(path),os.O_WRONLY|os.O_CREAT|os.O_APPEND,0o644)
+ try:
+  os.write(fd,linea.encode('utf-8'));os.fsync(fd)
+ finally:
+  os.close(fd)
+
+class _Bomba:
+ def __init__(self,raw_fd,stamp_fd,nombre,lock):
+  self.raw_fd=raw_fd;self.stamp_fd=stamp_fd;self.nombre=nombre;self.lock=lock;self.buf=b'';self.error=None
+ def __call__(self,src):
+  try:
+   while True:
+    chunk=src.read(4096)
+    if not chunk:
+     break
+    self._emit(chunk)
+   if self.buf:
+    self._stamp(self.buf);self.buf=b''
+  except Exception as e:
+   self.error=e
+  finally:
+   try:src.close()
+   except Exception:
+    pass
+ def _emit(self,chunk):
+  with self.lock:
+   os.write(self.raw_fd,chunk);os.fsync(self.raw_fd)
+  self.buf+=chunk
+  while b'\n' in self.buf:
+   line,self.buf=self.buf.split(b'\n',1)
+   self._stamp(line+b'\n')
+ def _stamp(self,line):
+  prefix=('%s | %s | '%(now(),self.nombre)).encode('utf-8')
+  with self.lock:
+   os.write(self.stamp_fd,prefix+line);os.fsync(self.stamp_fd)
+
+def _cerrar_fd(fd):
+ if fd is None:
+  return
+ try:
+  os.fsync(fd)
+ except OSError:
+  pass
+ os.close(fd)
+
+def _anotar_cierre(phase,rc):
+ key=phase.lower()
+ x[key+'_returncode']=rc
+ if rc is None:
+  x[key+'_exitcode']=None;x[key+'_signal']=None
+ elif rc<0:
+  # Python 3.12 subprocess.Popen.returncode: -N = señal N (POSIX).
+  x[key+'_exitcode']=None;x[key+'_signal']=-rc
+ else:
+  x[key+'_exitcode']=rc;x[key+'_signal']=None
+
+def _lock_ops():
+ ops.mkdir(parents=True,exist_ok=True)
+ fd=os.open(str(ops/'secuencia_estado.lock'),os.O_WRONLY|os.O_CREAT,0o644)
+ try:
+  fcntl.flock(fd,fcntl.LOCK_EX|fcntl.LOCK_NB)
+ except BlockingIOError:
+  os.close(fd)
+  raise RuntimeError('CORRIDA_CONCURRENTE: secuencia_estado.lock ocupado; no se sobrescribe')
+ return fd
+
+def guard():
+ assert shutil.disk_usage(s).free>=2*1024**3
+ assert (m/'config/argon_recetas.off').is_file()
+ assert json.loads((m/'config/politica_ejecucion.json').read_text()).get('argon_automatico') is False
+ if os.environ.get('MYIA_SUPERVISOR_PRUEBA_HIJO')=='1':
+  return
+ assert hashlib.sha256((m/'motor/fisica_final.py').read_bytes()).hexdigest()==_FISICA_SHA
+
+def run(phase,a,log,extra=None):
+ guard();assert not log.exists();env=os.environ.copy();env['PYTHONDONTWRITEBYTECODE']='1'
+ if extra:env.update(extra)
+ if not _activo():
+  with log.open('xb') as f:
+   p=subprocess.Popen(a,cwd=s,stdin=subprocess.DEVNULL,stdout=f,stderr=subprocess.STDOUT,env=env)
+   x.update({'state':'RUNNING','phase':phase,'worker_pid':p.pid,'command':a,'log':str(log),'phase_started_bogota':now()});x[phase.lower()+'_pid']=p.pid;save();rc=p.wait()
+  x[phase.lower()+'_returncode']=rc;save();return rc
+ lockfd=_lock_ops()
+ try:
+  env.setdefault('PYTHONUNBUFFERED','1')
+  log=pathlib.Path(log)
+  stderr_path=pathlib.Path(str(log)+'.stderr')
+  stamp_path=pathlib.Path(str(log)+'.stamp')
+  raw_fd=os.open(str(log),os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o644)
+  err_fd=os.open(str(stderr_path),os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o644)
+  stamp_fd=os.open(str(stamp_path),os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o644)
+  wlock=threading.Lock()
+  bomb_out=_Bomba(raw_fd,stamp_fd,'stdout',wlock)
+  bomb_err=_Bomba(err_fd,stamp_fd,'stderr',wlock)
+  p=None
+  try:
+   p=subprocess.Popen(a,cwd=s,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE,env=env,bufsize=0)
+   x.update({'state':'RUNNING','phase':phase,'worker_pid':p.pid,'command':list(a),'log':str(log),'log_stderr':str(stderr_path),'log_stamp':str(stamp_path),'phase_started_bogota':now(),'worker_starttime':_starttime(p.pid)})
+   x[phase.lower()+'_pid']=p.pid
+   try:
+    save()
+   except Exception:
+    try:p.kill()
+    except Exception:pass
+    raise
+   t1=threading.Thread(target=bomb_out,args=(p.stdout,),name='obs-stdout',daemon=True)
+   t2=threading.Thread(target=bomb_err,args=(p.stderr,),name='obs-stderr',daemon=True)
+   t1.start();t2.start()
+   rc=p.wait();t1.join(timeout=30);t2.join(timeout=30)
+   if bomb_out.error or bomb_err.error:
+    x['log_pump_error']=str(bomb_out.error or bomb_err.error)
+    _anotar_cierre(phase,rc);save()
+    raise RuntimeError('FALLO_REGISTRO_LOG: '+x['log_pump_error'])
+   _anotar_cierre(phase,rc);save();return rc
+  finally:
+   _cerrar_fd(raw_fd);_cerrar_fd(err_fd);_cerrar_fd(stamp_fd)
+ finally:
+  try:fcntl.flock(lockfd,fcntl.LOCK_UN)
+  except OSError:pass
+  os.close(lockfd)
+
+def recuperar_running():
+ """Marca RUNNING huérfano. No relanza. No inventa causa. No toca estados ya terminales."""
+ if not _activo():
+  return {'accion':'apagado','ok':False,'error':'observabilidad_cierre.off'}
+ if not status.exists():
+  return {'accion':'nada','ok':True,'motivo':'sin_estado'}
+ prev=json.loads(status.read_text())
+ if prev.get('state')!='RUNNING':
+  return {'accion':'conservado','ok':True,'motivo':'ya_terminal','state':prev.get('state'),'run_id':prev.get('run_id')}
+ boot=_boot_id();prev_boot=prev.get('boot_id')
+ pid=prev.get('worker_pid') or prev.get('constructor_pid') or prev.get('oro_pid')
+ vivo=_pid_vivo(pid,prev.get('worker_starttime'))
+ if vivo:
+  return {'accion':'intacta','ok':True,'motivo':'mismo_boot_pid_vivo','pid':pid,'boot_id':boot}
+ archivo=_archivar(status)
+ if prev_boot and boot and prev_boot!=boot:
+  cierre='RUNNING_BOOT_ANTERIOR_SIN_CIERRE'
+ else:
+  cierre='PID_AUSENTE_SIN_EVENTO_TERMINAL'
+ x.clear();x.update(prev)
+ x.update({'state':'INTERRUMPIDO_SIN_CIERRE','cierre':cierre,'returncode':prev.get('returncode'),'recuperado_bogota':now(),'boot_id_recuperacion':boot,'causa_inventada':False,'nota':'Sin evento terminal (exitcode/señal/traceback). No se atribuye reinicio, TypeError histórico, OOM, timeout ni cámara.','archivo_previo':str(archivo) if archivo else None})
+ save();_evento('recuperacion %s run_id=%s'%(cierre,x.get('run_id')))
+ return {'accion':'marcado','ok':True,'cierre':cierre,'run_id':x.get('run_id')}
+
+def _fallar(exc):
+ tb=traceback.format_exc()
+ x.update({'state':'FAILED','failure':str(exc),'failure_type':type(exc).__name__,'traceback':tb})
+ traceback.print_exc()
+ if _activo():
+  for line in tb.splitlines():
+   _evento(line,'stderr')
+
+def _main_produccion():
+ if os.environ.get('MYIA_SUPERVISOR_PRUEBA_HIJO')=='1':
+  raise RuntimeError('PRUEBA_HIJO no ejecuta oro/constructor reales')
+ assert not status.exists() and not (s/'oro_tipoerror').exists() and not (s/'rebuild_tipoerror').exists()
+ a=['/usr/bin/python3',str(m/'motor_unico.py'),str(s/'entradas/oro/entrada_escena.json'),'--salida',str(s/'oro_tipoerror'),'--regresion','--blender','/opt/blender/actual/blender','--referencia',str(s/'entradas/revisor_comparable.json')]
+ rc=run('ORO',a,ops/'oro_tipoerror.log');assert rc==0,'ORO_EXIT_NO_CERO'
+ metrics=json.loads((s/'oro_tipoerror/metricas_oro.json').read_text());x['oro_metrics']={'count':metrics['count'],'all_equal':metrics['all_equal'],'checks':len(metrics['checks'])}
+ assert metrics['count']==23 and metrics['all_equal'] is True and len(metrics['checks'])==23 and all(v['equal'] is True for v in metrics['checks']),'ORO_NO_IDENTICO'
+ x['oro_pass_bogota']=now();save()
+ core=s/'nucleo_reutilizable/escena.blend';assert hashlib.sha256(core.read_bytes()).hexdigest()=='353c8ae47fe0bd9c435adc5a647d85786513932a900407ac9219526c467d8a2e'
+ receipt=json.loads(core.with_name('compatibilidad_nucleo.json').read_text());assert all(hashlib.sha256((m/k).read_bytes()).hexdigest()==v for k,v in receipt['codigo'].items())
+ a=['/opt/blender/actual/blender','-b','--disable-autoexec','-t','2','--python-exit-code','17','-P',str(m/'motor/constructor_final.py'),'--',str(s/'preflight_av11/paquete_normalizado'),str(s/'rebuild_tipoerror'),str(core)]
+ extra={'SONDA_CAMARA':'1','SONDA_ACTOR':'ch-pintor-bce0','SONDA_FRAMES':'433,468,504,601,660,720','SONDA_SALIDA':str(s/'sonda_tipoerror.json')};x['sonda_environment']=extra;save()
+ rc=run('CONSTRUCTOR',a,ops/'constructor_tipoerror.log',extra);x.update({'returncode':rc,'state':'FINISHED' if rc==0 else 'FAILED'})
+
+def _main_simulado():
+ plan_path=pathlib.Path(os.environ['MYIA_SUPERVISOR_SIMULACION'])
+ plan=json.loads(plan_path.read_text())
+ assert not status.exists()
+ last=None
+ for fase in plan['fases']:
+  argv=list(fase['argv'])
+  rc=run(fase['nombre'],argv,ops/fase['log'],fase.get('extra'))
+  last=rc
+  if fase['nombre']=='ORO' and plan.get('exigir_oro_cero',False):
+   assert rc==0,'ORO_EXIT_NO_CERO'
+  x['returncode']=rc
+  x['state']='FINISHED' if rc==0 else 'FAILED'
+  save()
+ return last
+
+if __name__=='__main__':
+ if os.environ.get('MYIA_SUPERVISOR_SOLO_RECUPERAR')=='1':
+  r=recuperar_running()
+  print(json.dumps(r,ensure_ascii=False,indent=2),flush=True)
+  raise SystemExit(0 if r.get('ok') else 2)
+ try:
+  if os.environ.get('MYIA_SUPERVISOR_SIMULACION'):
+   _main_simulado()
+  else:
+   _main_produccion()
+ except BaseException as e:
+  _fallar(e)
+  if isinstance(e,(SystemExit,KeyboardInterrupt)):
+   raise
+ finally:
+  try:
+   if _owns_status or not status.exists():
+    x.update({'finished_bogota':now(),'elapsed_seconds':round(time.monotonic()-start,3),'free_after':shutil.disk_usage(s).free})
+    save()
+   else:
+    sys.stderr.write('SAVE_OMITIDO_ESTADO_AJENO\n');sys.stderr.flush()
+  except Exception as e:
+   sys.stderr.write('FALLO_REGISTRO_ESTADO: %s\n'%e);sys.stderr.flush();x['state']='FAILED';x['registro_estado_ok']=False
+   try:sys.stderr.write(json.dumps({'ok':False,'error':'FALLO_REGISTRO_ESTADO','detail':str(e)},ensure_ascii=False)+'\n');sys.stderr.flush()
+   except Exception:pass
+   raise SystemExit(3)
+ print(json.dumps(x,ensure_ascii=False,indent=2),flush=True)

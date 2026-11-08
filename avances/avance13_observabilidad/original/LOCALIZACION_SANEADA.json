@@ -1,0 +1,106 @@
+{
+  "directorio": "/opt/myia-motor-v9/avance13_20261108_tipoerror/operaciones",
+  "archivos": [
+    {
+      "nombre": "constructor_tipoerror.log",
+      "directorio": false,
+      "bytes": 0
+    },
+    {
+      "nombre": "copia_fuentes_hashes.json",
+      "directorio": false,
+      "bytes": 93701
+    },
+    {
+      "nombre": "installer_aplicar.log",
+      "directorio": false,
+      "bytes": 111
+    },
+    {
+      "nombre": "installer_seco.log",
+      "directorio": false,
+      "bytes": 69
+    },
+    {
+      "nombre": "oro_tipoerror.log",
+      "directorio": false,
+      "bytes": 35
+    },
+    {
+      "nombre": "paquete_buscador",
+      "directorio": true,
+      "bytes": 4096
+    },
+    {
+      "nombre": "posthashes_buscador.json",
+      "directorio": false,
+      "bytes": 428
+    },
+    {
+      "nombre": "preimagen_buscador.json",
+      "directorio": false,
+      "bytes": 363
+    },
+    {
+      "nombre": "preimagenes_archivos",
+      "directorio": true,
+      "bytes": 4096
+    },
+    {
+      "nombre": "secuencia_estado.json",
+      "directorio": false,
+      "bytes": 1320
+    },
+    {
+      "nombre": "supervisor.log",
+      "directorio": false,
+      "bytes": 0
+    },
+    {
+      "nombre": "supervisor_oro_constructor.py",
+      "directorio": false,
+      "bytes": 3439
+    }
+  ],
+  "estado": {
+    "supervisor_pid": 19177,
+    "started_bogota": "2026-11-08T14:25:10.325622-05:00",
+    "state": "RUNNING",
+    "phase": "CONSTRUCTOR",
+    "returncode": null,
+    "free_before": 3343675392,
+    "worker_pid": 19474,
+    "command": [
+      "/opt/blender/actual/blender",
+      "-b",
+      "--disable-autoexec",
+      "-t",
+      "2",
+      "--python-exit-code",
+      "17",
+      "-P",
+      "/opt/myia-motor-v9/avance13_20261108_tipoerror/MOTOR_BVH08_CANDIDATO/motor/constructor_final.py",
+      "--",
+      "/opt/myia-motor-v9/avance13_20261108_tipoerror/preflight_av11/paquete_normalizado",
+      "/opt/myia-motor-v9/avance13_20261108_tipoerror/rebuild_tipoerror",
+      "/opt/myia-motor-v9/avance13_20261108_tipoerror/nucleo_reutilizable/escena.blend"
+    ],
+    "log": "/opt/myia-motor-v9/avance13_20261108_tipoerror/operaciones/constructor_tipoerror.log",
+    "phase_started_bogota": "2026-11-08T14:30:09.000834-05:00",
+    "oro_pid": 19178,
+    "oro_returncode": 0,
+    "oro_metrics": {
+      "count": 23,
+      "all_equal": true,
+      "checks": 23
+    },
+    "oro_pass_bogota": "2026-11-08T14:30:08.849334-05:00",
+    "sonda_environment": {
+      "SONDA_CAMARA": "1",
+      "SONDA_ACTOR": "ch-pintor-bce0",
+      "SONDA_FRAMES": "433,468,504,601,660,720",
+      "SONDA_SALIDA": "/opt/myia-motor-v9/avance13_20261108_tipoerror/sonda_tipoerror.json"
+    },
+    "constructor_pid": 19474
+  }
+}
