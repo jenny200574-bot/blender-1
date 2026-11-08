@@ -18,7 +18,29 @@ La sonda de avance12, en los cuadros 433, 468, 504, 601, 660 y 720, contó 13 ma
 
 La sonda nueva escribe `motor_preserve_hidden` y las claves `hide_render` (cuadro y valor). El rayo que antes golpeaba columna o pecho era el propio actor: ahora separa golpe propio y golpe externo, y dice que eso no es la validación de la toma.
 
-Hasta correr otra vez el constructor no se declara cámara, cabeza, física ni video resueltos.
+Hasta correr otra vez el constructor no se declara cámara, cabeza, física ni video resueltos. El TypeError de avance12 tampoco queda superado: avance13 sigue dentro del constructor y no hay auditoría posterior.
+
+## Rendimiento del proceso que sigue vivo
+
+El buscador, si la pose pedida no cumple, arma 31 acimutes por 21 o 22 factores dentro de ±75° y de 0,7 a 1,45. No sale de esas listas. Para cada candidato recorría todos los cuadros de la toma, y cada cuadro reconstruía el BVH del escenario: la caché solo guarda seis cuadros y el recorrido no repite un cuadro hasta el candidato siguiente. No hay línea de progreso, ni tope de tiempo, ni cancelación. `reparaciones_max` 55 limita solo las validaciones de después, no esta búsqueda.
+
+Eso puede ocupar decenas de minutos de CPU sin escribir archivos y sin leer disco, porque la malla ya está en memoria. También puede ser un bucle. Con los datos de las 15:12 no se distingue. No se mata el proceso 19474 ni el supervisor 19177.
+
+La corrección recorre todos los candidatos de un mismo cuadro antes de pasar al siguiente, así el BVH de ese cuadro se reutiliza. No cambia el pase, las listas, las tolerancias ni el sensor. Un aviso `BUSCADOR_POSICION` sale con toma, índice de cuadro y cantidad de candidatos. No entra en el proceso que ya está corriendo. Si más adelante se usa, hace falta otra carpeta de salida y el mismo núcleo; el oro no se repite. El tiempo ya gastado por ese proceso no se recupera.
+
+Observación, solo lectura, sin strace, sin depurador y sin escribir en el proceso:
+
+```bash
+P=19474
+date -Is
+ps -o pid,ppid,etime,time,pcpu,stat,wchan:20 -p 19474,19177
+awk '/^(voluntary_ctxt_switches|nonvoluntary_ctxt_switches|Threads)/{print}' /proc/$P/status
+cat /proc/$P/io
+cat /proc/$P/stack
+ls -l --time-style=full-iso /proc/$P/fd/1 /proc/$P/fd/2
+```
+
+Repetir una vez, minutos después, sin bucle. Si el CPU sigue subiendo, `stack` cae en geometría o en Python, y no aparecen `camara_v2.json` ni `BUSCADOR_POSICION`, sigue siendo compatible con la búsqueda vieja. Si `stack` no cambia de sitio y el CPU no avanza, eso sí acerca un bloqueo. Esta corrida no lo midió.
 
 ## Por qué las seis tomas seguían bloqueadas en avance11
 

@@ -257,20 +257,48 @@ def fallos_muestra(daz, factor, muestra, ped, lado_visto):
     return set(mal), lado_visto
 
 
+def _sumar(tot, mal):
+    for k in mal:
+        if k in tot:
+            tot[k] += 1
+        elif k == 'pedido':
+            tot['encuadre'] += 1
+
+
 def fallos_de(daz, factor, ped):
     tot = {k: 0 for k in RESTRICCIONES}
     lado = ped.get('lado')
     for muestra in ped['muestras']:
         mal, lado = fallos_muestra(daz, factor, muestra, ped, lado if ped.get('lado') is not None else lado)
-        if ped.get('lado') is None:
-            # el lado de este candidato queda fijado por su primer cuadro, como el resolutor actual
-            pass
-        for k in mal:
-            if k in tot:
-                tot[k] += 1
-            elif k == 'pedido':
-                tot['encuadre'] += 1
+        _sumar(tot, mal)
     return tot
+
+
+def evaluar_por_cuadro(pares, pedido):
+    """Evalúa todos los candidatos en un cuadro antes de pasar al siguiente.
+
+    El resultado por candidato es el de fallos_de. El orden deja vivo el BVH
+    del cuadro: el resolutor lo guarda por cuadro y lo tira si acumula más de seis.
+    """
+    estado = []
+    vistos = set()
+    for daz, factor in pares:
+        clave = _clave(daz, factor)
+        if clave in vistos:
+            continue
+        vistos.add(clave)
+        estado.append({'daz': clave[0], 'factor': clave[1], 'fallos': {k: 0 for k in RESTRICCIONES}, 'lado': pedido.get('lado')})
+    muestras = pedido['muestras']
+    aviso = pedido.get('aviso')
+    for i, muestra in enumerate(muestras):
+        if callable(aviso) and (i % 24 == 0 or i + 1 == len(muestras)):
+            aviso({'cuadro_indice': i, 'cuadros': len(muestras), 'candidatos': len(estado)})
+        for fila in estado:
+            mal, lado = fallos_muestra(fila['daz'], fila['factor'], muestra, pedido, fila['lado'] if pedido.get('lado') is not None else fila['lado'])
+            if pedido.get('lado') is None:
+                fila['lado'] = lado
+            _sumar(fila['fallos'], mal)
+    return estado
 
 
 def _lista(valores):
@@ -538,15 +566,17 @@ def buscar(pedido):
             'propuestas': propuestas,
             'production_approved': False,
         }
-    for daz, factor in discretos:
-        anotar(daz, factor)
-    rejilla_ok = any(_pasa(item['fallos']) for item in examinados)
-    for daz in azimuts:
-        muestras_f = []
-        for factor in factores:
-            fila = anotar(daz, factor)
-            if fila is not None:
-                muestras_f.append(fila)
+    pares = [(daz, factor) for daz in azimuts for factor in factores if _clave(daz, factor) not in vistos]
+    for fila in evaluar_por_cuadro(pares, pedido):
+        examinados.append(fila)
+        vistos.add(_clave(fila['daz'], fila['factor']))
+        if _pasa(fila['fallos']):
+            buenos.append(fila)
+    rejilla_ok = any(_pasa(item['fallos']) for item in examinados if _clave(item['daz'], item['factor']) in {_clave(a, f) for a, f in discretos})
+    por_az = {}
+    for fila in examinados:
+        por_az.setdefault(fila['daz'], []).append(fila)
+    for daz, muestras_f in por_az.items():
         muestras_f.sort(key=lambda item: item['factor'])
         for i in range(len(muestras_f) - 1):
             a, b = muestras_f[i], muestras_f[i + 1]

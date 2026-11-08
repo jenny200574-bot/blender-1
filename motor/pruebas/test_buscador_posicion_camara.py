@@ -175,7 +175,29 @@ class Buscador(unittest.TestCase):
         self.assertEqual(len(info['propuestas']), len(AZ) * len(FAC))
         self.assertNotIn('sin_solucion', info['motivo'])
 
-    def test_el_rig_consulta_el_acimut_por_cuadro(self):
+    def test_recorre_un_cuadro_entero_antes_del_siguiente(self):
+        orden = []
+
+        def obs(marca):
+            def fn(loc):
+                orden.append(marca)
+                return False, None, None
+            return fn
+
+        muestras = [muestra(puntos=[], obstaculo=obs(0)), muestra(puntos=[], obstaculo=obs(1))]
+        info = B.buscar(base(muestras=muestras, azimuts_deg=[0, 15], factores=[0.7, 1.0]))
+        self.assertFalse(info['resuelto_geometrico'])
+        grupos = []
+        for marca in orden:
+            if not grupos or grupos[-1] != marca:
+                grupos.append(marca)
+        self.assertEqual(grupos, [0, 1, 0, 1])
+        lo, hi, az = B._azimuts(AZ)
+        flo, fhi, fac = B._factores(FAC)
+        self.assertEqual((lo, hi, flo, fhi), (-75.0, 75.0, 0.7, 1.45))
+        self.assertEqual(len(az), 31)
+        self.assertLessEqual(len(fac), 22)
+        self.assertGreater(len(az) * len(fac), len(AZ) * len(FAC))
         texto = (ROOT / 'motor' / 'rig_camara_coords.py').read_text(encoding='utf-8')
         self.assertIn("tr.get('az_fn')", texto)
         arbol = ast.parse((ROOT / 'motor' / 'camara_v2_blender.py').read_text(encoding='utf-8'))

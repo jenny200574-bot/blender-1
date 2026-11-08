@@ -661,7 +661,8 @@ for n, v in enumerate(sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
                                   'aire': float(S['aire']), 'xlado': float(S['xlado']), 'region_min': CFG['region_en_cuadro_min'], 'max_cara_deg': CFG['max_angulo_cara_deg'],
                                   'inclinacion_tol_deg': CFG['inclinacion_tolerancia_deg'], 'roll_tol_deg': CFG['roll_tolerancia_deg'], 'holgura_max_m': CFG['holgura_max_m'],
                                   'holgura_frac_distancia': CFG['holgura_frac_distancia'], 'holgura_frac_altura': CFG['holgura_frac_altura'], 'lado': None if S['cruce_permitido'] else S.get('_lado_eje'),
-                                  'cara_exigida': spec['cara'], 'azimuts_deg': CFG['busqueda_acimut_deg'], 'factores': CFG['busqueda_factor_distancia'], 'muestras': medidas})
+                                  'cara_exigida': spec['cara'], 'azimuts_deg': CFG['busqueda_acimut_deg'], 'factores': CFG['busqueda_factor_distancia'], 'muestras': medidas,
+                                  'aviso': (lambda msg, toma=tid: print('BUSCADOR_POSICION ' + json.dumps(dict(msg, toma=toma), ensure_ascii=False), flush=True))})
     T['busqueda_matematica'] = BUS.resumen(informe)
     propuestas = list(informe.get('propuestas') or [])
     if not propuestas: propuestas = [{'az_extra_deg': a, 'factor_distancia': fd} for a in CFG['busqueda_acimut_deg'] for fd in CFG['busqueda_factor_distancia']]
