@@ -64,9 +64,27 @@ def _malla(obj, dg):
         'semantic_role': obj.get('semantic_role'),
         'role': obj.get('role'),
         'bind_role': obj.get('bind_role'),
+        'motor_preserve_hidden': bool(obj.get('motor_preserve_hidden')),
+        'claves_hide_render': _claves_hide(obj),
         'vertices_evaluados': verts,
         'bbox_mundo': _caja(obj),
     }
+
+
+def _claves_hide(obj):
+    """Cuadros y valores de hide_render. No copia la acción ni el ADN."""
+    anim = getattr(obj, 'animation_data', None)
+    action = None if anim is None else anim.action
+    if action is None:
+        return []
+    from curvas_accion import curvas_de_accion
+    claves = []
+    for curva in curvas_de_accion(action):
+        if getattr(curva, 'data_path', None) != 'hide_render':
+            continue
+        for punto in curva.keyframe_points:
+            claves.append({'frame': int(round(punto.co[0])), 'hide_render': bool(round(punto.co[1]))})
+    return claves
 
 
 def inspeccionar(ctx, actor, frames, config=None):
@@ -102,11 +120,28 @@ def inspeccionar(ctx, actor, frames, config=None):
             dir_ = Vector(destino) - Vector(origen)
             largo = dir_.length
             if largo > 1e-6:
-                hit, loc, normal, index, hit_obj, _matrix = ctx.scene.ray_cast(dg, Vector(origen), dir_.normalized(), distance=largo)
-                if hit and hit_obj is not None:
-                    rayo = {'golpea': True, 'objeto': hit_obj.name, 'distancia_m': round((Vector(loc) - Vector(origen)).length, 4)}
-                else:
-                    rayo = {'golpea': False}
+                propios = {obj.name} | {x.name for x in obj.children_recursive}
+                origen_v = Vector(origen)
+                direccion = dir_.normalized()
+                restante = largo
+                propio = None
+                externo = None
+                for _ in range(6):
+                    hit, loc, _normal, _index, hit_obj, _matrix = ctx.scene.ray_cast(dg, origen_v, direccion, distance=restante)
+                    if not hit or hit_obj is None:
+                        break
+                    dist = (Vector(loc) - Vector(origen)).length
+                    if hit_obj.name in propios:
+                        if propio is None:
+                            propio = {'objeto': hit_obj.name, 'distancia_m': round(dist, 4)}
+                        origen_v = Vector(loc) + direccion * 0.002
+                        restante = largo - (origen_v - Vector(origen)).length
+                        if restante <= 0.002:
+                            break
+                        continue
+                    externo = {'objeto': hit_obj.name, 'distancia_m': round(dist, 4)}
+                    break
+                rayo = {'golpe_propio': propio, 'golpe_externo': externo, 'no_es_validacion': True}
         informe['cuadros'].append({
             'frame': int(f),
             'mallas': len(mallas),

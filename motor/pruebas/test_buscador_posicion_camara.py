@@ -201,6 +201,8 @@ class Sonda(unittest.TestCase):
         self.assertNotIn('ops.wm.save', texto)
         ast.parse(texto)
         self.assertIn('hide_render', texto)
+        self.assertIn('motor_preserve_hidden', texto)
+        self.assertIn('claves_hide_render', texto)
         self.assertIn('evaluated_get', texto)
 
 

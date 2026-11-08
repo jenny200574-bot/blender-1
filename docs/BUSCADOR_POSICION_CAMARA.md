@@ -1,65 +1,61 @@
 # Buscador de posición de cámara
 
-La rejilla de acimut y distancia no falla por tener pocos puntos. Falla porque varias restricciones no viven en esa rejilla.
+## El constructor de avance12 murió antes de auditar
 
-## Por qué las seis tomas siguen bloqueadas
+Blender 4.2.3 salió con código 17: `TypeError: 'list' object is not callable` en `validar`, en `for f in muestras(f0, f1)`. El bucle de tomas había guardado la lista de la búsqueda en el mismo nombre global `muestras`. No hay `camara_v2.json` nuevo. No se demostró mejora de las seis tomas.
 
-- La toma con `STATIC` y después `TRACK` congela el acimut del primer cuadro. Cuando el sujeto gira en el tramo `TRACK`, la cámara queda a su espalda. Mover el acimut inicial no deshace ese giro. El `TRACK` ahora vuelve a medir el frente en cada cuadro y conserva el acimut pedido respecto de ese frente.
-- El factor de distancia solo toma cinco valores. Entre dos de ellos puede estar la única distancia que encuadra y a la vez queda fuera de la holgura. El buscador recorre el intervalo cerrado de esas listas; no lo amplía.
-- El eje de 180° ya fijado por una toma anterior es un semiespacio. Si la ventana de ±75° alrededor de la orientación pedida no lo corta, no hay posición legal. No se cruza el eje si el storyboard no trajo `CROSSAXIS`.
-- Una grúa o un paneo pedidos cambian la altura o la guiñada. Si eso saca la inclinación de su tolerancia o la cabeza del cuadro, el cruce está vacío. No se anula la orden para que pase.
-- La cabeza del actor en la toma amplia y en la toma media no es el mismo fallo. Una mide solo el hueso y la otra mide malla y aun así queda fuera de cuadro. El buscador no marca esa malla como visible ni aprueba la apariencia.
-- Holgura, inclinación, roll, encuadre y eje siguen siendo los de `camara_v2_config.json`. El sensor sigue en 36 mm.
+`validar` ahora recorre `cuadros_muestra`. La lista de la búsqueda se llama `medidas`. La prueba `test_camara_validar_no_pisa_muestreador.py` compila esas dos funciones del archivo real, les pone encima una lista llamada `muestras` y llama a `validar` como el resolutor. No abre Blender. El oro 23/23 de las 13:57 no se toca ni se vuelve a correr aquí.
 
-## Qué hace el código
+## Cabeza: hay malla, y el render la oculta por cuadro
 
-`motor/buscador_posicion_camara.py` no usa numpy ni scipy. Si la pose pedida ya cumple, la devuelve. Si no, busca dentro del intervalo. Si el cruce está vacío, el informe nombra la restricción o el par incompatible. `validar` del resolutor sigue siendo la compuerta: un candidato geométrico que el rayo del escenario rechaza queda bloqueado.
+La sonda de avance12, en los cuadros 433, 468, 504, 601, 660 y 720, contó 13 mallas de cabeza y 2728 vértices evaluados. No falta la geometría.
 
-De los 13 archivos ya instalados en avance11, solo vuelve a cambiar `motor/camara_v2_blender.py`. `motor/rig_camara_coords.py` no estaba en esos 13. Entran además el buscador, la sonda y su prueba. `motor/fisica_final.py` no va en el paquete. Su hash exigido sigue siendo `3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2`.
+- En 433, 468 y 504 las 13 tienen `hide_render=true`, `hide_viewport=false` y `visible_get=true`. Viewport visible no es render.
+- En 601, 660 y 720 doce piezas `.base.*` pasan a `hide_render=false`. La cápsula `{id}_malla_cabeza` sigue en `hide_render=true`.
+- El núcleo crea esa cápsula por hueso (`heredado/rig.py`). El constructor, si la entidad trae legacy, la marca `hide_render` y `motor_preserve_hidden` (`constructor_final.py`). El comentario del código dice que la cápsula se conserva para auditoría y no es el acabado.
+- `eventos.aplicar` no reescribe un objeto con `motor_preserve_hidden`. Las piezas `.base.*` sí reciben la pista `hide_render` de una aparición o desaparición (`narrativa_estructurada.py` arma la pista; `eventos.py` la hornea, recursiva, curva CONSTANT).
+- `medir` ignora las mallas con `hide_render`. Por eso un cuadro oculto cae al hueso y uno ya mostrado mide la malla. No se encienden los flags a mano: cambiarlos saltaría la pista de presencia o destaparía la cápsula a propósito.
 
-El recibo del núcleo no incluye estos archivos. El núcleo de 1320 cuadros se puede reabrir si `compatibilidad_nucleo.json` y el legacy coinciden. No hace falta repetir esa construcción ni usar el preview viejo. Esta máquina no tiene Blender: la escena no queda resuelta aquí. El oro 23/23 no se volvió a correr.
+La sonda nueva escribe `motor_preserve_hidden` y las claves `hide_render` (cuadro y valor). El rayo que antes golpeaba columna o pecho era el propio actor: ahora separa golpe propio y golpe externo, y dice que eso no es la validación de la toma.
 
-## Instalación, solo sobre el stage que ya tiene los 13
+Hasta correr otra vez el constructor no se declara cámara, cabeza, física ni video resueltos.
+
+## Por qué las seis tomas seguían bloqueadas en avance11
+
+- La toma con `STATIC` y después `TRACK` congela el acimut del primer cuadro. Cuando el sujeto gira en el tramo `TRACK`, la cámara queda a su espalda. El `TRACK` vuelve a medir el frente en cada cuadro.
+- El factor de distancia solo toma cinco valores. El buscador recorre el intervalo cerrado de esas listas; no lo amplía.
+- El eje de 180° ya fijado por una toma anterior es un semiespacio. Si la ventana de ±75° no lo corta, no hay posición legal. Sin `CROSSAXIS` no se cruza.
+- Una grúa o un paneo pedidos pueden sacar la inclinación de su tolerancia o la cabeza del cuadro. No se anula la orden.
+- Holgura, inclinación, roll, encuadre y eje siguen en `camara_v2_config.json`. El sensor sigue en 36 mm.
+
+## Instalación sobre avance12, que ya tiene 1611c56
 
 ```bash
 python3 instalar_parche_buscador.py \
-  --destino /opt/myia-motor-v9/avance11_20261108_pr4/runtime_1145/MOTOR_BVH08_CANDIDATO \
+  --destino /opt/myia-motor-v9/avance12_20261108_buscador/MOTOR_BVH08_CANDIDATO \
   --origen /ruta/del/paquete/motor \
-  --manifiesto manifiesto_buscador.json
-# si el seco sale 0:
-python3 instalar_parche_buscador.py --aplicar \
-  --destino /opt/myia-motor-v9/avance11_20261108_pr4/runtime_1145/MOTOR_BVH08_CANDIDATO \
-  --origen /ruta/del/paquete/motor \
-  --manifiesto manifiesto_buscador.json
+  --manifiesto manifiesto_buscador_tipoerror.json
 ```
 
-## Constructor nuevo, mismo núcleo
+Con `--aplicar` solo si el seco sale 0. No toca `fisica_final.py` (`3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2`).
 
-Salida distinta. No se toca `rebuild_av11`.
+## Constructor en carpeta nueva, mismo núcleo
+
+El log abrió `/opt/myia-motor-v9/avance12_20261108_buscador/nucleo_reutilizable/escena.blend`. El paquete es el mismo que ya recibió ese constructor. La salida tiene que ser otra carpeta.
 
 ```bash
-N=/opt/myia-motor-v9/avance11_20261108_pr4/runtime_1145
-M=$N/MOTOR_BVH08_CANDIDATO
-test ! -e $N/rebuild_buscador
+A=/opt/myia-motor-v9/avance12_20261108_buscador
+M=$A/MOTOR_BVH08_CANDIDATO
+test ! -e $A/rebuild_tipoerror
 SONDA_CAMARA=1 \
 SONDA_ACTOR=<id del actor de las tomas 05 y 07> \
 SONDA_FRAMES=433,468,504,601,660,720 \
-SONDA_SALIDA=$N/rebuild_buscador_sonda.json \
+SONDA_SALIDA=$A/sonda_tipoerror.json \
 /opt/blender/actual/blender -b --disable-autoexec -t 2 --python-exit-code 17 \
   -P $M/motor/constructor_final.py -- \
-  $N/preflight_av11/paquete_normalizado \
-  $N/rebuild_buscador \
-  $N/rebuild_av11/nucleo/escena.blend
+  <paquete_normalizado que ya usó avance12> \
+  $A/rebuild_tipoerror \
+  $A/nucleo_reutilizable/escena.blend
 ```
 
-Si el recibo del núcleo no coincide, el constructor se detiene y no hay que fingir el recibo. La sonda también puede correr después, sobre un `.blend` ya guardado, sin escribirlo:
-
-```bash
-/opt/blender/actual/blender -b $N/rebuild_av11/nucleo/escena.blend \
-  -P $M/motor/sonda_inspeccion_camara.py -- \
-  --actor <id> --frames 433,468,504,601,660,720 \
-  --salida /tmp/sonda_nucleo.json \
-  --config $M/motor/camara_v2_config.json
-```
-
-Cero mallas de cabeza en el núcleo no prueba que falten durante el constructor: el constructor puede agregarlas después de abrirlo. Por eso la sonda con `SONDA_CAMARA=1` corre dentro de ese proceso. `hide_viewport`, `hide_render`, `visible_get` y los vértices evaluados separan malla ausente, oculta y deformada.
+Si el recibo del núcleo no coincide, el constructor se detiene. No se finge el recibo ni se repite el núcleo. Esta máquina no ejecutó Blender: la prueba de `validar` no sustituye esa corrida.

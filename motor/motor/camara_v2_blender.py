@@ -240,8 +240,8 @@ def limites(f, ancla, H, excl=frozenset()):
         return max(0.0, (h[0] - o).length - hol) if h[0] is not None else None
     return {'minZ': minZ, 'maxZ': maxZ, 'max_dist': max_dist, 'piso_z': down[0].z if down[0] is not None else None, 'techo_z': up[0].z if up[0] is not None else None}
 # ---------------- revisión espacial del 05, en movimiento ----------------
-def muestras(f0, f1):
-    return list(range(f0,f1+1))
+def cuadros_muestra(f0, f1):
+    return list(range(f0, f1 + 1))
 
 OTROS = {}
 def otros_bvh(f, excluir):
@@ -251,7 +251,7 @@ def otros_bvh(f, excluir):
     return OTROS[k]
 def validar(tray, spec, f0, f1, libres_encuadre=(), libres_inclin=()):
     malos = []; P = {x['f']: x for x in tray}
-    for f in muestras(f0, f1):
+    for f in cuadros_muestra(f0, f1):
         x = P.get(f)
         if x is None: continue
         loc = x['loc']; R = x['quat'].to_matrix(); lens = x['lente']; m = spec['medir'](f)
@@ -654,14 +654,14 @@ for n, v in enumerate(sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
     if S.get('pov') or S.get('ots') or not S.get('lens'):
         informe = BUS.sin_modelo('POV, OTS o toma sin lente: la posición no sale del cono de elevación')
     else:
-        muestras = muestras_busqueda(v, S, f0, f1, medf, plano_de)
-        if not muestras: informe = BUS.sin_modelo('El objetivo no está medido en el primer cuadro')
+        medidas = muestras_busqueda(v, S, f0, f1, medf, plano_de)
+        if not medidas: informe = BUS.sin_modelo('El objetivo no está medido en el primer cuadro')
         else:
             informe = BUS.buscar({'sensor_mm': SENSOR_W, 'lens_mm': float(S['lens']), 'aspecto': ASP, 'elev_deg': float(S['elev']), 'orient_deg': float(S['orient'] or 0),
                                   'aire': float(S['aire']), 'xlado': float(S['xlado']), 'region_min': CFG['region_en_cuadro_min'], 'max_cara_deg': CFG['max_angulo_cara_deg'],
                                   'inclinacion_tol_deg': CFG['inclinacion_tolerancia_deg'], 'roll_tol_deg': CFG['roll_tolerancia_deg'], 'holgura_max_m': CFG['holgura_max_m'],
                                   'holgura_frac_distancia': CFG['holgura_frac_distancia'], 'holgura_frac_altura': CFG['holgura_frac_altura'], 'lado': None if S['cruce_permitido'] else S.get('_lado_eje'),
-                                  'cara_exigida': spec['cara'], 'azimuts_deg': CFG['busqueda_acimut_deg'], 'factores': CFG['busqueda_factor_distancia'], 'muestras': muestras})
+                                  'cara_exigida': spec['cara'], 'azimuts_deg': CFG['busqueda_acimut_deg'], 'factores': CFG['busqueda_factor_distancia'], 'muestras': medidas})
     T['busqueda_matematica'] = BUS.resumen(informe)
     propuestas = list(informe.get('propuestas') or [])
     if not propuestas: propuestas = [{'az_extra_deg': a, 'factor_distancia': fd} for a in CFG['busqueda_acimut_deg'] for fd in CFG['busqueda_factor_distancia']]
