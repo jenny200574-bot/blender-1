@@ -28,9 +28,13 @@ class Tests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(fisica).hexdigest(), FISICA)
         (self.origen / 'motor').mkdir()
         (self.origen / 'motor' / 'fisica_final.py').write_bytes(fisica)
-        for rel in ['motor/nucleo_bueno_cpu.py', 'motor/heredado/rig.py', 'motor/constructor_final.py']:
-            blob = subprocess.check_output(['git', 'show', '5e65c123288901682a8305ed18ddb9dfb77b9721:motor/' + rel])
-            path = self.origen / rel
+        manifiesto = json.loads((ROOT / 'despliegue' / 'manifiesto_13.json').read_text(encoding='utf-8'))
+        for item in manifiesto['archivos']:
+            if item['antes'] is None:
+                continue
+            blob = subprocess.check_output(['git', 'show', '5e65c123288901682a8305ed18ddb9dfb77b9721:motor/' + item['ruta']])
+            self.assertEqual(hashlib.sha256(blob).hexdigest(), item['antes'], item['ruta'])
+            path = self.origen / item['ruta']
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(blob)
         (self.origen / 'motor_unico.py').write_bytes((ROOT / 'motor' / 'motor_unico.py').read_bytes())
@@ -58,6 +62,10 @@ class Tests(unittest.TestCase):
         self.assertFalse((self.dest / 'MOTOR_BVH08_CANDIDATO' / 'respaldos').exists())
         self.assertFalse((self.dest / 'entradas' / 'oro' / 'archivo').exists())
         self.assertTrue((self.dest / 'entradas' / 'oro' / 'entrada.json').is_file())
+        raiz = self.dest / 'entradas' / 'oro' / 'entrada_escena.json'
+        self.assertTrue(raiz.is_file())
+        self.assertEqual(sha(raiz), sha(ORO))
+        self.assertTrue((self.dest / 'MOTOR_BVH08_CANDIDATO' / 'pruebas' / 'test_malla_cabeza.py').is_file())
         for path in (self.dest / 'MOTOR_BVH08_CANDIDATO').rglob('*'):
             if path.is_file():
                 self.assertFalse(path.is_symlink())
@@ -89,7 +97,32 @@ class Tests(unittest.TestCase):
         codigo = st.main(['--origen-motor', str(self.origen), '--destino', str(self.dest), '--entrada-escena', str(escena / 'entrada_escena.json'), '--copiar'])
         self.assertEqual(codigo, 0)
         self.assertTrue((self.dest / 'entradas' / 'escena' / 'archivo' / 'nota.json').is_file())
+        self.assertEqual(sha(self.dest / 'entradas' / 'escena' / 'entrada_escena.json'), sha(escena / 'entrada_escena.json'))
         self.assertFalse((self.dest / 'MOTOR_BVH08_CANDIDATO' / 'archivo').exists())
+
+    def test_stage_completo_pasa_el_instalador_en_seco(self):
+        import instalar_parche_avance10 as inst
+        escena = self.tmp / 'escena_ok'
+        escena.mkdir()
+        (escena / 'entrada.json').write_text('{}\n', encoding='utf-8')
+        (escena / 'entrada_escena.json').write_text(json.dumps({'assets': [{'path': 'entrada.json', 'sha256': sha(escena / 'entrada.json'), 'bytes': (escena / 'entrada.json').stat().st_size}]}), encoding='utf-8')
+        otro = self.tmp / 'runtime_1145'
+        codigo = st.main(['--origen-motor', str(self.origen), '--destino', str(otro), '--entrada-oro', str(ORO), '--entrada-escena', str(escena / 'entrada_escena.json'), '--referencia-oro', str(ROOT / 'motor' / 'config' / 'politica_ejecucion.json'), '--copiar'])
+        self.assertEqual(codigo, 0)
+        self.assertEqual(sha(otro / 'entradas' / 'oro' / 'entrada_escena.json'), sha(ORO))
+        self.assertEqual(sha(otro / 'entradas' / 'escena' / 'entrada_escena.json'), sha(escena / 'entrada_escena.json'))
+        motor = otro / 'MOTOR_BVH08_CANDIDATO'
+        self.assertTrue((motor / 'pruebas' / 'test_malla_cabeza.py').is_file())
+        self.assertFalse((motor / 'pruebas' / 'test_cargar_modulo_motor.py').exists())
+        self.assertFalse((motor / 'motor' / 'compatibilidad_artefacto.py').exists())
+        self.assertEqual(sha(motor / 'motor' / 'fisica_final.py'), FISICA)
+        self.assertEqual(inst.main(['--destino', str(motor), '--origen', str(ROOT / 'motor'), '--manifiesto', str(ROOT / 'despliegue' / 'manifiesto_13.json')]), 0)
+        # Segunda pasada: no pisa lo ya copiado y el origen sigue igual.
+        marca = sha(self.origen / 'motor' / 'fisica_final.py')
+        self.assertEqual(st.main(['--origen-motor', str(self.origen), '--destino', str(otro), '--entrada-oro', str(ORO), '--entrada-escena', str(escena / 'entrada_escena.json'), '--referencia-oro', str(ROOT / 'motor' / 'config' / 'politica_ejecucion.json'), '--copiar']), 0)
+        self.assertEqual(sha(self.origen / 'motor' / 'fisica_final.py'), marca)
+        self.assertTrue((otro / 'manifiesto_stage.json').is_file())
+        self.assertTrue((otro / 'manifiesto_stage_completar.json').is_file())
 
 
 if __name__ == '__main__':

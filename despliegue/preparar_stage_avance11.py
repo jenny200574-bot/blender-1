@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import stat
 import sys
 from pathlib import Path
@@ -210,12 +211,20 @@ def planear(origen, entrada, etapa):
         else:
             # set.blend y cualquier asset citado tienen que existir. No se sustituyen.
             faltan.append(rel)
+    entrada_path = Path(entrada).resolve()
+    if entrada_path.name != 'entrada_escena.json':
+        faltan.append('la entrada debe llamarse entrada_escena.json')
+    elif 'entrada_escena.json' not in paquete:
+        # motor_unico.py exige ese nombre. No está en assets, pero es la raíz del paquete.
+        paquete.insert(0, 'entrada_escena.json')
     codigo = archivos_codigo(origen)
     if etapa == 'oro':
         # regresion() no llama empaquetar ni lee bibliotecas ni config, salvo el .off negativo.
         codigo = [p for p in codigo if p == 'motor_unico.py' or p.startswith('motor/')]
         if (origen / 'config' / 'orden_determinista.off').exists():
             codigo.append('config/orden_determinista.off')
+    codigo, faltan_pre = exigir_preimagenes(origen, codigo)
+    faltan.extend(faltan_pre)
     return {
         'etapa': etapa,
         'entrada': str(entrada),
@@ -226,6 +235,49 @@ def planear(origen, entrada, etapa):
         'codigo': codigo,
         'production_approved': False,
     }
+
+
+def manifiesto_13():
+    return Path(__file__).resolve().parent / 'manifiesto_13.json'
+
+
+def exigir_preimagenes(origen, codigo):
+    """El instalador exige cada archivo con hash `antes`. Los de `antes` null no se copian."""
+    data = cargar_json(manifiesto_13())
+    faltan = []
+    prohibidos = set()
+    origen = Path(origen)
+    for item in data['archivos']:
+        rel = item['ruta']
+        if item.get('antes') is None:
+            prohibidos.add(rel)
+            continue
+        src = origen / rel
+        if not es_regular(src):
+            faltan.append('preimagen ausente ' + rel)
+            continue
+        if sha256(src) != item['antes']:
+            faltan.append('preimagen hash distinto ' + rel)
+            continue
+        if rel not in codigo:
+            codigo.append(rel)
+    codigo = [rel for rel in codigo if rel not in prohibidos]
+    return codigo, faltan
+
+
+def auditar_config(origen):
+    """Lista rutas absolutas de config sin cambiar los archivos."""
+    hallados = []
+    config = Path(origen) / 'config'
+    if not config.is_dir():
+        return hallados
+    for path in sorted(config.glob('*.json')):
+        if not es_regular(path):
+            continue
+        texto = path.read_text(encoding='utf-8')
+        for ruta in re.findall(r'"(/[^"]+)"', texto):
+            hallados.append({'archivo': 'config/' + path.name, 'ruta': ruta, 'se_copia_sin_cambiar': True, 'abre_blend_de_preview': 'preview_cpu' in ruta or ruta.endswith('.blend')})
+    return hallados
 
 
 def copiar_archivo(src, dst):
@@ -277,14 +329,18 @@ def copiar_plan(origen, entrada, destino, etapa, referencia=None):
     return plan, copiados
 
 
-def escribir_recibo(destino, planes, copiados, fisica_sha):
+def escribir_recibo(destino, planes, copiados, fisica_sha, config_rutas):
     total = sum(item['bytes'] for item in copiados)
     doc = {
         'production_approved': False,
+        'append_only': True,
         'no_reutiliza_nucleo_viejo': True,
         'salida_solo_en_este_stage': True,
         'fisica_sha256': fisica_sha,
         'bytes': total,
+        'entradas_raiz': ['entradas/oro/entrada_escena.json', 'entradas/escena/entrada_escena.json'],
+        'preimagen_pruebas': 'pruebas/test_malla_cabeza.py',
+        'config_rutas_absolutas_sin_cambiar': config_rutas,
         'archivos': copiados,
         'planes': [{k: v for k, v in plan.items() if k != 'codigo'} for plan in planes],
         'excluidos_porque_el_codigo_no_los_abre': [
@@ -293,7 +349,11 @@ def escribir_recibo(destino, planes, copiados, fisica_sha):
             'MOTOR_BVH08_CANDIDATO/respaldos',
         ],
     }
-    path = Path(destino) / 'manifiesto_stage.json'
+    destino = Path(destino)
+    nombre = 'manifiesto_stage_completar.json' if (destino / 'manifiesto_stage.json').exists() else 'manifiesto_stage.json'
+    path = destino / nombre
+    if path.exists():
+        raise SystemExit('No se reescribe ' + nombre)
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     return doc
 
@@ -334,17 +394,15 @@ def main(argv=None):
         return 0
     copiados = []
     for etapa, entrada in etapas:
-        # oro y preflight comparten el código; la segunda copia no pisa.
+        # La reconstrucción lee las mismas entradas/escena que el preflight.
         if etapa == 'reconstruccion':
-            plan = next(p for p in planes if p['etapa'] == etapa)
-            # Los fixtures de reconstrucción son los mismos que preflight.
             continue
         plan, hechos = copiar_plan(origen, entrada, destino, etapa, args.referencia_oro if etapa == 'oro' else None)
         copiados.extend(hechos)
     if sha256(fisica) != FISICA_SHA:
         print('RECHAZADO el origen cambió durante la copia')
         return 3
-    doc = escribir_recibo(destino, planes, copiados, FISICA_SHA)
+    doc = escribir_recibo(destino, planes, copiados, FISICA_SHA, auditar_config(origen))
     print('COPIADO', doc['bytes'], 'bytes en', destino)
     return 0
 
