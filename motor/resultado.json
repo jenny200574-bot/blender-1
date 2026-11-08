@@ -1,0 +1,3944 @@
+{
+  "estado": "BLOQUEADO",
+  "version": "20261107-dev6-cpu",
+  "validation_scope": "ESCENA_REAL",
+  "production_approved": false,
+  "fecha_bogota": "2026-11-07T11:30:26.323596-05:00",
+  "errores": [
+    {
+      "codigo": "JSON_TRUNCADO",
+      "severidad": "BLOQUEO",
+      "campo": "motion/respuesta_2b.json",
+      "modulo": "2B/Argon",
+      "mensaje": "JSON truncado: recuperar respuesta íntegra",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "JSON truncado: recuperar respuesta íntegra",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CONTACTOS_DATOS_FALTANTES",
+      "severidad": "BLOQUEO",
+      "campo": "motion/contacts",
+      "modulo": "01/2B + Star",
+      "mensaje": "Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "REGLAS_DATOS_FALTANTES",
+      "severidad": "BLOQUEO",
+      "campo": "rules/source_parameters",
+      "modulo": "biblioteca de reglas vigentes + 4a2/manifiesto",
+      "mensaje": "No están en la fuente estos parámetros: allowed_collision_pairs, bone_length_error_m, colliders, penetration_tolerance_m, reject_surface_intersections, root_accel_max_m_s2, root_speed_max_m_s",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": [
+        "allowed_collision_pairs",
+        "bone_length_error_m",
+        "colliders",
+        "penetration_tolerance_m",
+        "reject_surface_intersections",
+        "root_accel_max_m_s2",
+        "root_speed_max_m_s"
+      ],
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PERFIL_ANATOMICO_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "entities/ch-piquito-030a/anatomy_profile",
+      "modulo": "ADN Maestro 03/04 + 01/Star puntos",
+      "mensaje": "Faltan landmarks/proporciones estructurales y límites articulares certificados; altura y cabezas no determinan longitudes de alas/patas. Faltan también apoyos/ancla explícitos cuando va acoplado. No se escala un rig de otra identidad.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan landmarks/proporciones estructurales y límites articulares certificados; altura y cabezas no determinan longitudes de alas/patas. Faltan también apoyos/ancla explícitos cuando va acoplado. No se escala un rig de otra identidad.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": "adn_manifest.json",
+      "causa": "perfil_anatomico:ch-piquito-030a",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-libro-cuentos__e1-8/dna_ref",
+      "modulo": "ADN OBJ/SELLO + 4a2",
+      "mensaje": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-libro-cuentos__e1-8",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/Ventana con vista al arcoíris/dna_ref",
+      "modulo": "ADN OBJ/SELLO + 4a2",
+      "mensaje": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:Ventana con vista al arcoíris",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-cama/recipe",
+      "modulo": "ADN OBJ/SELLO + catálogo de formas",
+      "mensaje": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-cama",
+      "source_record": "gdc-cama-nino",
+      "search_receipt": {
+        "state": "FALTA",
+        "object": "obj-cama",
+        "step": 5,
+        "score": null,
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "missing": [
+          "El planificador automático agrupa y procesa las recetas faltantes"
+        ],
+        "attempts": [
+          {
+            "step": 1,
+            "recipe": null,
+            "state": "NOT_FOUND_OR_BBOX"
+          },
+          {
+            "step": 2,
+            "recipe": "cama_marco_colchon",
+            "score": 0.21000000000000002,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.03333333333333333
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "almohada_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "arbol_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "armario_2puertas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "auto_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "banco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bicicletero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bloque_edificio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bolardo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cables_haz",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "columna_estructural",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cortina_enrollable",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "escritorio_patas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "estanteria_abierta",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "farola_poste",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "hidrante_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "jardinera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "lampara_arquitecto",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "letrero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "manta_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "mesa_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "monitor_pantalla",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muro_plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muros_caja_con_huecos",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "parada_autobus",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "perchero_pie",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plafon_area",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "puerta_bisagra",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "quiosco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "rack_servidores",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "semaforo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_giratoria_ergonomica",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "teclado_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "toldo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "torre_pc",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "ventana_marco_vidrio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 3,
+            "state": "NO_DECLARED_PARTS"
+          },
+          {
+            "step": 4,
+            "state": "DEFERRED_AUTOMATIC",
+            "reason": "El planificador automático agrupa y procesa las recetas faltantes",
+            "spent_usd": 0
+          }
+        ],
+        "spent_usd": 0
+      },
+      "grupo": "B"
+    },
+    {
+      "codigo": "REFERENCIA_ESPACIAL_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "bindings/Centro de la habitación/reference_kind",
+      "modulo": "4a2/manifiesto espacial",
+      "mensaje": "Referencia sólo usada para mirar: falta declarar POINT u OBJECT. No pedir ADN de un lugar ni ocultar un mueble como si fuera un punto. Posición/bbox ya disponibles.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Referencia sólo usada para mirar: falta declarar POINT u OBJECT. No pedir ADN de un lugar ni ocultar un mueble como si fuera un punto. Posición/bbox ya disponibles.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "tipo_referencia:Centro de la habitación",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-visor-spark/dna_ref",
+      "modulo": "ADN OBJ/SELLO + 4a2",
+      "mensaje": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-visor-spark",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-cofre-dorado/recipe",
+      "modulo": "ADN OBJ/SELLO + catálogo de formas",
+      "mensaje": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-cofre-dorado",
+      "source_record": "gdc-cofre-abecedario",
+      "search_receipt": {
+        "state": "FALTA",
+        "object": "obj-cofre-dorado",
+        "step": 5,
+        "score": null,
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "missing": [
+          "El planificador automático agrupa y procesa las recetas faltantes"
+        ],
+        "attempts": [
+          {
+            "step": 1,
+            "recipe": null,
+            "state": "NOT_FOUND_OR_BBOX"
+          },
+          {
+            "step": 2,
+            "recipe": "plafon_area",
+            "score": 0.20405405405405408,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.013513513513513514
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "almohada_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "arbol_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "armario_2puertas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "auto_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "banco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bicicletero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bloque_edificio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bolardo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cables_haz",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cama_marco_colchon",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "columna_estructural",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cortina_enrollable",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "escritorio_patas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "estanteria_abierta",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "farola_poste",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "hidrante_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "jardinera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "lampara_arquitecto",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "letrero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "manta_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "mesa_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "monitor_pantalla",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muro_plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muros_caja_con_huecos",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "parada_autobus",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "perchero_pie",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "puerta_bisagra",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "quiosco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "rack_servidores",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "semaforo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_giratoria_ergonomica",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "teclado_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "toldo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "torre_pc",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "ventana_marco_vidrio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 3,
+            "state": "NO_DECLARED_PARTS"
+          },
+          {
+            "step": 4,
+            "state": "DEFERRED_AUTOMATIC",
+            "reason": "El planificador automático agrupa y procesa las recetas faltantes",
+            "spent_usd": 0
+          }
+        ],
+        "spent_usd": 0
+      },
+      "grupo": "B"
+    },
+    {
+      "codigo": "VIVO_DATOS_FALTANTES",
+      "severidad": "BLOQUEO",
+      "campo": "environment/live_source",
+      "modulo": "4a4 + 01 + 4a2",
+      "mensaje": "Sólo llegaron estados narrativos inicio/fin; faltan subpiezas/materiales/valores/curvas para cambios de letras, color y FX. Los tiempos explícitos de 01 se reutilizan; no se piden otra vez.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Sólo llegaron estados narrativos inicio/fin; faltan subpiezas/materiales/valores/curvas para cambios de letras, color y FX. Los tiempos explícitos de 01 se reutilizan; no se piden otra vez.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "escenario_vivo",
+      "grupo": "B"
+    },
+    {
+      "codigo": "BIBLIOTECA_SIN_VALIDAR",
+      "severidad": "BLOQUEO",
+      "campo": "motion/semantic_index/approval",
+      "modulo": "2B/Argon + biblioteca de movimientos",
+      "mensaje": "Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "movement_ids": [
+        "m_aterrizar_alerta",
+        "m_bostezo_caos",
+        "m_caminar_ciclo",
+        "m_disparo_caos",
+        "m_giro_decidido",
+        "m_giro_pasos",
+        "m_hablar_alarmado",
+        "m_hablar_entusiasta",
+        "m_hablar_misterioso",
+        "m_hablar_serena",
+        "m_hablar_visor",
+        "m_mirar_sorpresa",
+        "m_reposo_base",
+        "m_risa_caos",
+        "m_senalar_tu"
+      ],
+      "grupo": "B"
+    },
+    {
+      "codigo": "DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "coordinates",
+      "modulo": "01/4a2",
+      "mensaje": "Ejes y unidades certificados ausentes",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Ejes y unidades certificados ausentes",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PROVISIONAL",
+      "severidad": "BLOQUEO",
+      "campo": "ejes",
+      "modulo": "01/4a2",
+      "mensaje": "Provisional técnico: +Y frente/+Z arriba, ejes no certificados",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Provisional técnico: +Y frente/+Z arriba, ejes no certificados",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PROVISIONAL",
+      "severidad": "BLOQUEO",
+      "campo": "luces",
+      "modulo": "motor/configuración técnica",
+      "mensaje": "Luces CPU técnicas explícitas en entrada; no SB ni iluminación artística aprobada",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Luces CPU técnicas explícitas en entrada; no SB ni iluminación artística aprobada",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PROVISIONAL",
+      "severidad": "BLOQUEO",
+      "campo": "2B",
+      "modulo": "2B/Argon",
+      "mensaje": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PROVISIONAL",
+      "severidad": "BLOQUEO",
+      "campo": "iluminacion",
+      "modulo": "4a2/configuración técnica",
+      "mensaje": "El blend contiene luces de varias escenas simultáneas que lavan los RGB. Para esta previa se desactivan luces fuente por lista EXPLÍCITA y se aplican luces neutrales técnicas declaradas; no es luz artística aprobada.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "El blend contiene luces de varias escenas simultáneas que lavan los RGB. Para esta previa se desactivan luces fuente por lista EXPLÍCITA y se aplican luces neutrales técnicas declaradas; no es luz artística aprobada.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "motion/status",
+      "modulo": "2B/Argon",
+      "mensaje": "Programa completo no acreditado",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Programa completo no acreditado",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "environment/live_data",
+      "modulo": "4a4 + 01 + 4a2",
+      "mensaje": "Eventos no vinculados a propiedades/tiempos",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Eventos no vinculados a propiedades/tiempos",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "capability_bound": true,
+      "causa": "escenario_vivo",
+      "grupo": "B"
+    },
+    {
+      "codigo": "DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "lighting",
+      "modulo": "4a2/4a4",
+      "mensaje": "Luz artística base/eventos/exposición requeridos",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Luz artística base/eventos/exposición requeridos",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "DETALLE_ESCENARIO_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "environment/catalog_unresolved",
+      "modulo": "4a2/escenario vivo + catálogo/generador de formas",
+      "mensaje": "Faltan recetas compatibles para 22 elementos de ambiente; no convertir sus cajas de ubicación en acabado. Lista exacta en dato_esperado.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": [
+        {
+          "id": "amb-esc-habitacion-cortinas-ventana",
+          "source_quote": [
+            "ambiente «Par de cortinas de tela suave recogidas a los lados de la ventana» (amb-esc-habitacion-cortinas-ventana): compuesto 1.9×0.12×1.65 m en x=2.25, y=3.94, z=0.7 (pegado a pared fondo)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-barra-cortinero",
+          "source_quote": [
+            "ambiente «Barra de cortinero de madera con remates esféricos» (amb-esc-habitacion-barra-cortinero): cilindro 2×0.08×0.08 m en x=2.25, y=3.96, z=2.32 (pegado a pared fondo)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-edredon-acolchado",
+          "source_quote": [
+            "ambiente «Edredón acolchado esponjoso doblado a los pies de la cama» (amb-esc-habitacion-edredon-acolchado): caja 0.45×1.05×0.14 m en x=1.75, y=2.60, z=0.52 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-cojin-estrella",
+          "source_quote": [
+            "ambiente «Cojín decorativo con forma de estrella redondeada» (amb-esc-habitacion-cojin-estrella): compuesto 0.32×0.32×0.14 m en x=0.55, y=3.00, z=0.54 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-porta-lapices",
+          "source_quote": [
+            "ambiente «Vaso portalápices cilíndrico de madera» (amb-esc-habitacion-porta-lapices): cilindro 0.1×0.1×0.13 m en x=0.28, y=3.58, z=0.55 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-lamparita-noche",
+          "source_quote": [
+            "ambiente «Luz quitamiedos con forma de nubecita sonriente» (amb-esc-habitacion-lamparita-noche): compuesto 0.16×0.12×0.14 m en x=0.26, y=3.30, z=0.55 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-libros-apilados",
+          "source_quote": [
+            "ambiente «Grupo de libros infantiles cerrados de lomos lisos sin texto» (amb-esc-habitacion-libros-apilados): caja 0.24×0.22×0.2 m en x=0.82, y=3.78, z=0.42 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-bloques-geometricos",
+          "source_quote": [
+            "ambiente «Pirámide de bloques geométricos de madera sin letras» (amb-esc-habitacion-bloques-geometricos): compuesto 0.25×0.18×0.16 m en x=0.80, y=3.78, z=0.78 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-maceta-suculenta",
+          "source_quote": [
+            "ambiente «Maceta redondeada de cerámica con plantita verde de hojas redondas» (amb-esc-habitacion-maceta-suculenta): compuesto 0.18×0.18×0.22 m en x=1.15, y=3.78, z=0.78 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-baul-juguetes",
+          "source_quote": [
+            "ambiente «Baúl juguetero de madera con tapa cerrada y bordes redondeados» (amb-esc-habitacion-baul-juguetes): caja 0.72×0.42×0.48 m en x=3.45, y=3.72, z=0 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-peluche-oso",
+          "source_quote": [
+            "ambiente «Muñeco de peluche suave con forma de osito redondo sentado» (amb-esc-habitacion-peluche-oso): compuesto 0.24×0.22×0.28 m en x=3.35, y=3.72, z=0.48 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-pelota-colores",
+          "source_quote": [
+            "ambiente «Pelota blanda de gajos de colores» (amb-esc-habitacion-pelota-colores): compuesto 0.2×0.2×0.2 m en x=3.65, y=3.72, z=0.48 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-cesta-tela",
+          "source_quote": [
+            "ambiente «Cesta cilíndrica de tela tejida con asas de cuerda» (amb-esc-habitacion-cesta-tela): cilindro 0.36×0.36×0.4 m en x=4.15, y=3.62, z=0 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-mesa-dibujo",
+          "source_quote": [
+            "ambiente «Mesita infantil redonda de actividades» (amb-esc-habitacion-mesa-dibujo): cilindro 0.62×0.62×0.5 m en x=3.95, y=1.15, z=0 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-banquito-madera",
+          "source_quote": [
+            "ambiente «Banquito infantil redondo de cuatro patas» (amb-esc-habitacion-banquito-madera): cilindro 0.3×0.3×0.28 m en x=3.95, y=0.68, z=0 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-bote-crayones",
+          "source_quote": [
+            "ambiente «Cubilete bajo con crayones gruesos de cera» (amb-esc-habitacion-bote-crayones): cilindro 0.12×0.12×0.11 m en x=3.95, y=1.15, z=0.5 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-repisa-pared-izquierda",
+          "source_quote": [
+            "ambiente «Repisa flotante de madera con soportes redondeados» (amb-esc-habitacion-repisa-pared-izquierda): caja 0.68×0.2×0.06 m en x=0.34, y=1.25, z=1.45 (pegado a pared izquierda)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-avion-madera",
+          "source_quote": [
+            "ambiente «Avioncito de juguete de madera con hélice redondeada» (amb-esc-habitacion-avion-madera): compuesto 0.18×0.22×0.12 m en x=0.12, y=1.25, z=1.51 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-perchero-pared",
+          "source_quote": [
+            "ambiente «Perchero infantil de madera con tres pomos redondos» (amb-esc-habitacion-perchero-pared): compuesto 0.42×0.08×0.12 m en x=1.55, y=0.04, z=1.15 (pegado a pared frente)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-interruptor-luz",
+          "source_quote": [
+            "ambiente «Interruptor de luz de placa redondeada» (amb-esc-habitacion-interruptor-luz): caja 0.08×0.02×0.12 m en x=1.36, y=0.01, z=1.05 (pegado a pared frente)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-zocalo-perimetral",
+          "source_quote": [
+            "ambiente «Zócalo guardapolvo perimetral de madera de canto redondeado» (amb-esc-habitacion-zocalo-perimetral): compuesto 4.5×0.02×0.1 m en x=2.25, y=3.99, z=0 (pegado a pared fondo)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-guirnalda-banderines",
+          "source_quote": [
+            "ambiente «Guirnalda festiva de banderines triangulares de tela» (amb-esc-habitacion-guirnalda-banderines): compuesto 2.4×0.02×0.18 m en x=2.25, y=3.99, z=2.48 (pegado a pared fondo)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        }
+      ],
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "recetas_decoracion_ambiente",
+      "grupo": "B"
+    },
+    {
+      "codigo": "CAMARA_DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "camera/v3/0/PAN",
+      "modulo": "SB + 02N/4a2",
+      "mensaje": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CAMARA_DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "camera/v5/0/CRANE",
+      "modulo": "SB + 02N/4a2",
+      "mensaje": "Faltan metros o extremos verticales; dir_ud y speed no determinan altura",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan metros o extremos verticales; dir_ud y speed no determinan altura",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CAMARA_DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "camera/v7/0/PAN",
+      "modulo": "SB + 02N/4a2",
+      "mensaje": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    }
+  ],
+  "grupo_A": [],
+  "grupo_B": [
+    {
+      "codigo": "JSON_TRUNCADO",
+      "severidad": "BLOQUEO",
+      "campo": "motion/respuesta_2b.json",
+      "modulo": "2B/Argon",
+      "mensaje": "JSON truncado: recuperar respuesta íntegra",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "JSON truncado: recuperar respuesta íntegra",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CONTACTOS_DATOS_FALTANTES",
+      "severidad": "BLOQUEO",
+      "campo": "motion/contacts",
+      "modulo": "01/2B + Star",
+      "mensaje": "Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "REGLAS_DATOS_FALTANTES",
+      "severidad": "BLOQUEO",
+      "campo": "rules/source_parameters",
+      "modulo": "biblioteca de reglas vigentes + 4a2/manifiesto",
+      "mensaje": "No están en la fuente estos parámetros: allowed_collision_pairs, bone_length_error_m, colliders, penetration_tolerance_m, reject_surface_intersections, root_accel_max_m_s2, root_speed_max_m_s",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": [
+        "allowed_collision_pairs",
+        "bone_length_error_m",
+        "colliders",
+        "penetration_tolerance_m",
+        "reject_surface_intersections",
+        "root_accel_max_m_s2",
+        "root_speed_max_m_s"
+      ],
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PERFIL_ANATOMICO_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "entities/ch-piquito-030a/anatomy_profile",
+      "modulo": "ADN Maestro 03/04 + 01/Star puntos",
+      "mensaje": "Faltan landmarks/proporciones estructurales y límites articulares certificados; altura y cabezas no determinan longitudes de alas/patas. Faltan también apoyos/ancla explícitos cuando va acoplado. No se escala un rig de otra identidad.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan landmarks/proporciones estructurales y límites articulares certificados; altura y cabezas no determinan longitudes de alas/patas. Faltan también apoyos/ancla explícitos cuando va acoplado. No se escala un rig de otra identidad.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": "adn_manifest.json",
+      "causa": "perfil_anatomico:ch-piquito-030a",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-libro-cuentos__e1-8/dna_ref",
+      "modulo": "ADN OBJ/SELLO + 4a2",
+      "mensaje": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-libro-cuentos__e1-8",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/Ventana con vista al arcoíris/dna_ref",
+      "modulo": "ADN OBJ/SELLO + 4a2",
+      "mensaje": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:Ventana con vista al arcoíris",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-cama/recipe",
+      "modulo": "ADN OBJ/SELLO + catálogo de formas",
+      "mensaje": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-cama",
+      "source_record": "gdc-cama-nino",
+      "search_receipt": {
+        "state": "FALTA",
+        "object": "obj-cama",
+        "step": 5,
+        "score": null,
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "missing": [
+          "El planificador automático agrupa y procesa las recetas faltantes"
+        ],
+        "attempts": [
+          {
+            "step": 1,
+            "recipe": null,
+            "state": "NOT_FOUND_OR_BBOX"
+          },
+          {
+            "step": 2,
+            "recipe": "cama_marco_colchon",
+            "score": 0.21000000000000002,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.03333333333333333
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "almohada_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "arbol_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "armario_2puertas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "auto_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "banco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bicicletero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bloque_edificio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bolardo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cables_haz",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "columna_estructural",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cortina_enrollable",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "escritorio_patas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "estanteria_abierta",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "farola_poste",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "hidrante_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "jardinera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "lampara_arquitecto",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "letrero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "manta_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "mesa_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "monitor_pantalla",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muro_plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muros_caja_con_huecos",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "parada_autobus",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "perchero_pie",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plafon_area",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "puerta_bisagra",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "quiosco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "rack_servidores",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "semaforo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_giratoria_ergonomica",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "teclado_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "toldo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "torre_pc",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "ventana_marco_vidrio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 3,
+            "state": "NO_DECLARED_PARTS"
+          },
+          {
+            "step": 4,
+            "state": "DEFERRED_AUTOMATIC",
+            "reason": "El planificador automático agrupa y procesa las recetas faltantes",
+            "spent_usd": 0
+          }
+        ],
+        "spent_usd": 0
+      },
+      "grupo": "B"
+    },
+    {
+      "codigo": "REFERENCIA_ESPACIAL_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "bindings/Centro de la habitación/reference_kind",
+      "modulo": "4a2/manifiesto espacial",
+      "mensaje": "Referencia sólo usada para mirar: falta declarar POINT u OBJECT. No pedir ADN de un lugar ni ocultar un mueble como si fuera un punto. Posición/bbox ya disponibles.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Referencia sólo usada para mirar: falta declarar POINT u OBJECT. No pedir ADN de un lugar ni ocultar un mueble como si fuera un punto. Posición/bbox ya disponibles.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "tipo_referencia:Centro de la habitación",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-visor-spark/dna_ref",
+      "modulo": "ADN OBJ/SELLO + 4a2",
+      "mensaje": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-visor-spark",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-cofre-dorado/recipe",
+      "modulo": "ADN OBJ/SELLO + catálogo de formas",
+      "mensaje": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-cofre-dorado",
+      "source_record": "gdc-cofre-abecedario",
+      "search_receipt": {
+        "state": "FALTA",
+        "object": "obj-cofre-dorado",
+        "step": 5,
+        "score": null,
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "missing": [
+          "El planificador automático agrupa y procesa las recetas faltantes"
+        ],
+        "attempts": [
+          {
+            "step": 1,
+            "recipe": null,
+            "state": "NOT_FOUND_OR_BBOX"
+          },
+          {
+            "step": 2,
+            "recipe": "plafon_area",
+            "score": 0.20405405405405408,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.013513513513513514
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "almohada_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "arbol_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "armario_2puertas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "auto_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "banco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bicicletero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bloque_edificio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bolardo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cables_haz",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cama_marco_colchon",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "columna_estructural",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cortina_enrollable",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "escritorio_patas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "estanteria_abierta",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "farola_poste",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "hidrante_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "jardinera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "lampara_arquitecto",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "letrero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "manta_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "mesa_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "monitor_pantalla",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muro_plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muros_caja_con_huecos",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "parada_autobus",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "perchero_pie",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "puerta_bisagra",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "quiosco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "rack_servidores",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "semaforo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_giratoria_ergonomica",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "teclado_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "toldo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "torre_pc",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "ventana_marco_vidrio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": false,
+            "minimum": 0.75
+          },
+          {
+            "step": 3,
+            "state": "NO_DECLARED_PARTS"
+          },
+          {
+            "step": 4,
+            "state": "DEFERRED_AUTOMATIC",
+            "reason": "El planificador automático agrupa y procesa las recetas faltantes",
+            "spent_usd": 0
+          }
+        ],
+        "spent_usd": 0
+      },
+      "grupo": "B"
+    },
+    {
+      "codigo": "VIVO_DATOS_FALTANTES",
+      "severidad": "BLOQUEO",
+      "campo": "environment/live_source",
+      "modulo": "4a4 + 01 + 4a2",
+      "mensaje": "Sólo llegaron estados narrativos inicio/fin; faltan subpiezas/materiales/valores/curvas para cambios de letras, color y FX. Los tiempos explícitos de 01 se reutilizan; no se piden otra vez.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Sólo llegaron estados narrativos inicio/fin; faltan subpiezas/materiales/valores/curvas para cambios de letras, color y FX. Los tiempos explícitos de 01 se reutilizan; no se piden otra vez.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "escenario_vivo",
+      "grupo": "B"
+    },
+    {
+      "codigo": "BIBLIOTECA_SIN_VALIDAR",
+      "severidad": "BLOQUEO",
+      "campo": "motion/semantic_index/approval",
+      "modulo": "2B/Argon + biblioteca de movimientos",
+      "mensaje": "Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "movement_ids": [
+        "m_aterrizar_alerta",
+        "m_bostezo_caos",
+        "m_caminar_ciclo",
+        "m_disparo_caos",
+        "m_giro_decidido",
+        "m_giro_pasos",
+        "m_hablar_alarmado",
+        "m_hablar_entusiasta",
+        "m_hablar_misterioso",
+        "m_hablar_serena",
+        "m_hablar_visor",
+        "m_mirar_sorpresa",
+        "m_reposo_base",
+        "m_risa_caos",
+        "m_senalar_tu"
+      ],
+      "grupo": "B"
+    },
+    {
+      "codigo": "DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "coordinates",
+      "modulo": "01/4a2",
+      "mensaje": "Ejes y unidades certificados ausentes",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Ejes y unidades certificados ausentes",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PROVISIONAL",
+      "severidad": "BLOQUEO",
+      "campo": "ejes",
+      "modulo": "01/4a2",
+      "mensaje": "Provisional técnico: +Y frente/+Z arriba, ejes no certificados",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Provisional técnico: +Y frente/+Z arriba, ejes no certificados",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PROVISIONAL",
+      "severidad": "BLOQUEO",
+      "campo": "luces",
+      "modulo": "motor/configuración técnica",
+      "mensaje": "Luces CPU técnicas explícitas en entrada; no SB ni iluminación artística aprobada",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Luces CPU técnicas explícitas en entrada; no SB ni iluminación artística aprobada",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PROVISIONAL",
+      "severidad": "BLOQUEO",
+      "campo": "2B",
+      "modulo": "2B/Argon",
+      "mensaje": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PROVISIONAL",
+      "severidad": "BLOQUEO",
+      "campo": "iluminacion",
+      "modulo": "4a2/configuración técnica",
+      "mensaje": "El blend contiene luces de varias escenas simultáneas que lavan los RGB. Para esta previa se desactivan luces fuente por lista EXPLÍCITA y se aplican luces neutrales técnicas declaradas; no es luz artística aprobada.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "El blend contiene luces de varias escenas simultáneas que lavan los RGB. Para esta previa se desactivan luces fuente por lista EXPLÍCITA y se aplican luces neutrales técnicas declaradas; no es luz artística aprobada.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "motion/status",
+      "modulo": "2B/Argon",
+      "mensaje": "Programa completo no acreditado",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Programa completo no acreditado",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "environment/live_data",
+      "modulo": "4a4 + 01 + 4a2",
+      "mensaje": "Eventos no vinculados a propiedades/tiempos",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Eventos no vinculados a propiedades/tiempos",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "capability_bound": true,
+      "causa": "escenario_vivo",
+      "grupo": "B"
+    },
+    {
+      "codigo": "DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "lighting",
+      "modulo": "4a2/4a4",
+      "mensaje": "Luz artística base/eventos/exposición requeridos",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Luz artística base/eventos/exposición requeridos",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "DETALLE_ESCENARIO_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "environment/catalog_unresolved",
+      "modulo": "4a2/escenario vivo + catálogo/generador de formas",
+      "mensaje": "Faltan recetas compatibles para 22 elementos de ambiente; no convertir sus cajas de ubicación en acabado. Lista exacta en dato_esperado.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": [
+        {
+          "id": "amb-esc-habitacion-cortinas-ventana",
+          "source_quote": [
+            "ambiente «Par de cortinas de tela suave recogidas a los lados de la ventana» (amb-esc-habitacion-cortinas-ventana): compuesto 1.9×0.12×1.65 m en x=2.25, y=3.94, z=0.7 (pegado a pared fondo)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-barra-cortinero",
+          "source_quote": [
+            "ambiente «Barra de cortinero de madera con remates esféricos» (amb-esc-habitacion-barra-cortinero): cilindro 2×0.08×0.08 m en x=2.25, y=3.96, z=2.32 (pegado a pared fondo)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-edredon-acolchado",
+          "source_quote": [
+            "ambiente «Edredón acolchado esponjoso doblado a los pies de la cama» (amb-esc-habitacion-edredon-acolchado): caja 0.45×1.05×0.14 m en x=1.75, y=2.60, z=0.52 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-cojin-estrella",
+          "source_quote": [
+            "ambiente «Cojín decorativo con forma de estrella redondeada» (amb-esc-habitacion-cojin-estrella): compuesto 0.32×0.32×0.14 m en x=0.55, y=3.00, z=0.54 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-porta-lapices",
+          "source_quote": [
+            "ambiente «Vaso portalápices cilíndrico de madera» (amb-esc-habitacion-porta-lapices): cilindro 0.1×0.1×0.13 m en x=0.28, y=3.58, z=0.55 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-lamparita-noche",
+          "source_quote": [
+            "ambiente «Luz quitamiedos con forma de nubecita sonriente» (amb-esc-habitacion-lamparita-noche): compuesto 0.16×0.12×0.14 m en x=0.26, y=3.30, z=0.55 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-libros-apilados",
+          "source_quote": [
+            "ambiente «Grupo de libros infantiles cerrados de lomos lisos sin texto» (amb-esc-habitacion-libros-apilados): caja 0.24×0.22×0.2 m en x=0.82, y=3.78, z=0.42 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-bloques-geometricos",
+          "source_quote": [
+            "ambiente «Pirámide de bloques geométricos de madera sin letras» (amb-esc-habitacion-bloques-geometricos): compuesto 0.25×0.18×0.16 m en x=0.80, y=3.78, z=0.78 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-maceta-suculenta",
+          "source_quote": [
+            "ambiente «Maceta redondeada de cerámica con plantita verde de hojas redondas» (amb-esc-habitacion-maceta-suculenta): compuesto 0.18×0.18×0.22 m en x=1.15, y=3.78, z=0.78 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-baul-juguetes",
+          "source_quote": [
+            "ambiente «Baúl juguetero de madera con tapa cerrada y bordes redondeados» (amb-esc-habitacion-baul-juguetes): caja 0.72×0.42×0.48 m en x=3.45, y=3.72, z=0 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-peluche-oso",
+          "source_quote": [
+            "ambiente «Muñeco de peluche suave con forma de osito redondo sentado» (amb-esc-habitacion-peluche-oso): compuesto 0.24×0.22×0.28 m en x=3.35, y=3.72, z=0.48 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-pelota-colores",
+          "source_quote": [
+            "ambiente «Pelota blanda de gajos de colores» (amb-esc-habitacion-pelota-colores): compuesto 0.2×0.2×0.2 m en x=3.65, y=3.72, z=0.48 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-cesta-tela",
+          "source_quote": [
+            "ambiente «Cesta cilíndrica de tela tejida con asas de cuerda» (amb-esc-habitacion-cesta-tela): cilindro 0.36×0.36×0.4 m en x=4.15, y=3.62, z=0 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-mesa-dibujo",
+          "source_quote": [
+            "ambiente «Mesita infantil redonda de actividades» (amb-esc-habitacion-mesa-dibujo): cilindro 0.62×0.62×0.5 m en x=3.95, y=1.15, z=0 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-banquito-madera",
+          "source_quote": [
+            "ambiente «Banquito infantil redondo de cuatro patas» (amb-esc-habitacion-banquito-madera): cilindro 0.3×0.3×0.28 m en x=3.95, y=0.68, z=0 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-bote-crayones",
+          "source_quote": [
+            "ambiente «Cubilete bajo con crayones gruesos de cera» (amb-esc-habitacion-bote-crayones): cilindro 0.12×0.12×0.11 m en x=3.95, y=1.15, z=0.5 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-repisa-pared-izquierda",
+          "source_quote": [
+            "ambiente «Repisa flotante de madera con soportes redondeados» (amb-esc-habitacion-repisa-pared-izquierda): caja 0.68×0.2×0.06 m en x=0.34, y=1.25, z=1.45 (pegado a pared izquierda)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-avion-madera",
+          "source_quote": [
+            "ambiente «Avioncito de juguete de madera con hélice redondeada» (amb-esc-habitacion-avion-madera): compuesto 0.18×0.22×0.12 m en x=0.12, y=1.25, z=1.51 (centro)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-perchero-pared",
+          "source_quote": [
+            "ambiente «Perchero infantil de madera con tres pomos redondos» (amb-esc-habitacion-perchero-pared): compuesto 0.42×0.08×0.12 m en x=1.55, y=0.04, z=1.15 (pegado a pared frente)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-interruptor-luz",
+          "source_quote": [
+            "ambiente «Interruptor de luz de placa redondeada» (amb-esc-habitacion-interruptor-luz): caja 0.08×0.02×0.12 m en x=1.36, y=0.01, z=1.05 (pegado a pared frente)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-zocalo-perimetral",
+          "source_quote": [
+            "ambiente «Zócalo guardapolvo perimetral de madera de canto redondeado» (amb-esc-habitacion-zocalo-perimetral): compuesto 4.5×0.02×0.1 m en x=2.25, y=3.99, z=0 (pegado a pared fondo)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        },
+        {
+          "id": "amb-esc-habitacion-guirnalda-banderines",
+          "source_quote": [
+            "ambiente «Guirnalda festiva de banderines triangulares de tela» (amb-esc-habitacion-guirnalda-banderines): compuesto 2.4×0.02×0.18 m en x=2.25, y=3.99, z=2.48 (pegado a pared fondo)"
+          ],
+          "needed": "receta compatible/despiece/materiales de acabado; el bbox y su posición ya existen",
+          "producer": "4a2/escenario vivo + catálogo/generador de formas"
+        }
+      ],
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "recetas_decoracion_ambiente",
+      "grupo": "B"
+    },
+    {
+      "codigo": "CAMARA_DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "camera/v3/0/PAN",
+      "modulo": "SB + 02N/4a2",
+      "mensaje": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CAMARA_DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "camera/v5/0/CRANE",
+      "modulo": "SB + 02N/4a2",
+      "mensaje": "Faltan metros o extremos verticales; dir_ud y speed no determinan altura",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan metros o extremos verticales; dir_ud y speed no determinan altura",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CAMARA_DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "camera/v7/0/PAN",
+      "modulo": "SB + 02N/4a2",
+      "mensaje": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    }
+  ],
+  "avisos": [
+    {
+      "codigo": "ADN_DIAGNOSTICOS_CONSOLIDADOS",
+      "severidad": "AVISO",
+      "mensaje": "Se consolidaron avisos duplicados. T314 habilita base CPU; su acabado se verifica después de compilar, nunca por quitar diagnósticos."
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-don-caos-7adf/dna/face_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-don-caos-7adf/dna/garment_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-spark-468e/dna/face_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-spark-468e/dna/garment_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-valentina-a9be/dna/face_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-valentina-a9be/dna/garment_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-eco-eff3/dna/face_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-eco-eff3/dna/garment_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-pintor-bce0/dna/face_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-pintor-bce0/dna/garment_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-piquito-030a/dna/face_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "ADN_FIDELIDAD_BIBLIOTECA",
+      "severidad": "AVISO",
+      "campo": "entities/ch-piquito-030a/dna/garment_measurements",
+      "modulo": "ADN + biblioteca base CPU",
+      "mensaje": "Cotas de biblioteca t314, no cotas medidas del ADN; aproximación autorizada",
+      "fuente": "adn_manifest.json"
+    },
+    {
+      "codigo": "LICENCIA_INFORMATIVA",
+      "severidad": "AVISO",
+      "campo": "motion/semantic_index/license",
+      "modulo": "biblioteca de movimientos",
+      "mensaje": "Uso personal t291: licencia no bloquea; validación técnica sigue obligatoria",
+      "movement_ids": [
+        "m_aterrizar_alerta",
+        "m_bostezo_caos",
+        "m_caminar_ciclo",
+        "m_disparo_caos",
+        "m_giro_decidido",
+        "m_giro_pasos",
+        "m_hablar_alarmado",
+        "m_hablar_entusiasta",
+        "m_hablar_misterioso",
+        "m_hablar_serena",
+        "m_hablar_visor",
+        "m_mirar_sorpresa",
+        "m_reposo_base",
+        "m_risa_caos",
+        "m_senalar_tu"
+      ]
+    }
+  ],
+  "etapas": [
+    {
+      "n": 1,
+      "nombre": "Fuentes y gasto",
+      "handler": "fuentes",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "checked": 30,
+        "spend_usd": 0
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 2,
+      "nombre": "Argon/cache íntegra",
+      "handler": "argon",
+      "estado": "BLOQUEADA",
+      "artefacto": {
+        "new_calls": 0,
+        "cache_checked": true,
+        "errors": 1
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 3,
+      "nombre": "Preparar y puentes",
+      "handler": "puentes",
+      "estado": "BLOQUEADA",
+      "artefacto": {
+        "path": "entrada_normalizada.json",
+        "entities_preserved": 6,
+        "actions_preserved": 25,
+        "segments_preserved": 35
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 4,
+      "nombre": "Contrato y capacidades",
+      "handler": "contrato",
+      "estado": "BLOQUEADA",
+      "artefacto": {
+        "required_finish": [
+          "rostros_finales",
+          "ropa_final"
+        ],
+        "voice_lipsync": "Omni después del motor; no requerido ni bloqueante",
+        "dialogue_output": "tiempos_dialogo.json"
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 5,
+      "nombre": "ADN/apariencia",
+      "handler": "apariencia",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "entities_ready": 6,
+        "generic_backend": "apariencia_3d.py",
+        "prose_translation": "No se certifica sólo porque existe el backend"
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 6,
+      "nombre": "Escenario base y vivo",
+      "handler": "escenario",
+      "estado": "BLOQUEADA",
+      "artefacto": {
+        "base": "blend",
+        "hash_checked": true,
+        "events_ready": true,
+        "executor": "eventos.aplicar"
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 7,
+      "nombre": "Objetos y puntos Star",
+      "handler": "objetos",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "spatial_bindings": 6,
+        "requested": 6,
+        "backend_points": "geometria.registrar_puntos",
+        "hinges": "constructor_final.py (locales, eje y c explícitos)"
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 8,
+      "nombre": "Esqueletos y restricciones",
+      "handler": "anatomias",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "backend_humanoid": "heredado/armar.py (solver bueno conservado)",
+        "backend_avian": "anatomia_aviar.py (19 roles mínimos con dedos, alas, cola y pico)",
+        "backend_generic": "geometria.rig_declarativo"
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 9,
+      "nombre": "Escalera de movimientos",
+      "handler": "seleccion",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "order": [
+          "argon",
+          "catalogo",
+          "kimodo",
+          "cmu"
+        ],
+        "selector": "movimientos.seleccionar",
+        "candidate_count": 52
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 10,
+      "nombre": "Retarget, pulida y contactos",
+      "handler": "pulida",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "retarget": "retarget.transferir",
+        "polish": "pulida_estricta.pulir",
+        "contacts": "geometria.ik_punto",
+        "bug_keywords_fixed": true,
+        "off_respected": true
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 11,
+      "nombre": "Cámara SB/4g",
+      "handler": "camara",
+      "estado": "BLOQUEADA",
+      "artefacto": {
+        "requested_shots": 12,
+        "coordinate_backend": "camara_final.py + rig_camara_coords.py",
+        "legacy_resolver": "camara_v2_blender.py"
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 12,
+      "nombre": "Luz global",
+      "handler": "luz",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "global_clock": true,
+        "source_light_not_silently_disabled": true,
+        "ready": false
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 13,
+      "nombre": "Revisión vinculante",
+      "handler": "revision",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "state": "NO_CONSTRUIR_NI_RENDERIZAR",
+        "reason": "Compuerta previa bloqueada",
+        "backend": "constructor_final.py + fisica_final.py + núcleo bueno"
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 14,
+      "nombre": "Empaquetado del mismo worker (CPU; GPU fuera de alcance)",
+      "handler": "empaquetar",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "mode": "CPU_ONLY",
+        "code_files": 104,
+        "gpu_created": false
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 15,
+      "nombre": "Render por tomas",
+      "handler": "render",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "state": "BLOQUEADO_SIN_VIDEO",
+        "frames_rendered": 0
+      },
+      "aprobada_produccion": false
+    },
+    {
+      "n": 16,
+      "nombre": "Montaje y salida",
+      "handler": "montaje",
+      "estado": "EJECUTADA",
+      "artefacto": {
+        "state": "BLOQUEADO_SIN_MASTER",
+        "partial_master": false
+      },
+      "aprobada_produccion": false
+    }
+  ],
+  "coverage": {
+    "expected_frames": 1320,
+    "requested_shots": 12,
+    "requested_entities": 6,
+    "package_entities": 6,
+    "frames_built": 0,
+    "shots_approved": 0,
+    "entities_built": 0,
+    "actions_preserved": 25,
+    "segments_preserved": 35
+  },
+  "execution_policy": {
+    "mode": "CPU",
+    "external_spend_usd": 0,
+    "gpu_enabled": false,
+    "total_cap_usd": 3,
+    "per_call_cap_usd": null
+  },
+  "gasto_usd": 0,
+  "master": null,
+  "dialogue": "tiempos_dialogo.json",
+  "required_finish": [
+    "rostros_finales",
+    "ropa_final"
+  ],
+  "voice_lipsync": "FUERA_DEL_MOTOR: Omni posterior según t295",
+  "servidor_213": "SIN_COTEJAR / sin despliegue nuevo",
+  "consolidacion": {
+    "A_diagnostic_rows": 0,
+    "A_on_hold_faces_clothes": 0,
+    "A_other": 0,
+    "B_diagnostic_rows": 24,
+    "B_causes": 17,
+    "B_on_hold_ADN_causes": 0,
+    "B_other_causes": 17,
+    "B_on_hold_ADN_diagnostic_rows": 0,
+    "causes": [
+      {
+        "cause": "programa_2B_integro_y_contactos",
+        "producer": "2B/Argon + 01/Star",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "motion/respuesta_2b.json",
+            "code": "JSON_TRUNCADO",
+            "message": "JSON truncado: recuperar respuesta íntegra",
+            "original_producer": "2B/Argon"
+          },
+          {
+            "field": "motion/contacts",
+            "code": "CONTACTOS_DATOS_FALTANTES",
+            "message": "Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía",
+            "original_producer": "01/2B + Star"
+          },
+          {
+            "field": "2B",
+            "code": "PROVISIONAL",
+            "message": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada",
+            "original_producer": "2B/Argon"
+          },
+          {
+            "field": "motion/status",
+            "code": "DATO_FALTANTE",
+            "message": "Programa completo no acreditado",
+            "original_producer": "2B/Argon"
+          }
+        ]
+      },
+      {
+        "cause": "reglas_y_manifiesto_colision",
+        "producer": "Biblioteca reglas vigentes + 4a2/manifiesto",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "rules/source_parameters",
+            "code": "REGLAS_DATOS_FALTANTES",
+            "message": "No están en la fuente estos parámetros: allowed_collision_pairs, bone_length_error_m, colliders, penetration_tolerance_m, reject_surface_intersections, root_accel_max_m_s2, root_speed_max_m_s",
+            "original_producer": "biblioteca de reglas vigentes + 4a2/manifiesto"
+          }
+        ]
+      },
+      {
+        "cause": "perfil_anatomico:ch-piquito-030a",
+        "producer": "ADN Maestro 03/04 + 01/Star puntos",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "entities/ch-piquito-030a/anatomy_profile",
+            "code": "PERFIL_ANATOMICO_DATOS",
+            "message": "Faltan landmarks/proporciones estructurales y límites articulares certificados; altura y cabezas no determinan longitudes de alas/patas. Faltan también apoyos/ancla explícitos cuando va acoplado. No se escala un rig de otra identidad.",
+            "original_producer": "ADN Maestro 03/04 + 01/Star puntos"
+          }
+        ]
+      },
+      {
+        "cause": "objeto:obj-libro-cuentos__e1-8",
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "props/obj-libro-cuentos__e1-8/dna_ref",
+            "code": "OBJETO_ADN_DATOS",
+            "message": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+            "original_producer": "ADN OBJ/SELLO + 4a2"
+          }
+        ]
+      },
+      {
+        "cause": "objeto:Ventana con vista al arcoíris",
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "props/Ventana con vista al arcoíris/dna_ref",
+            "code": "OBJETO_ADN_DATOS",
+            "message": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+            "original_producer": "ADN OBJ/SELLO + 4a2"
+          }
+        ]
+      },
+      {
+        "cause": "objeto:obj-cama",
+        "producer": "ADN OBJ/SELLO + catálogo de formas",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "props/obj-cama/recipe",
+            "code": "OBJETO_ADN_DATOS",
+            "message": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+            "original_producer": "ADN OBJ/SELLO + catálogo de formas"
+          }
+        ]
+      },
+      {
+        "cause": "tipo_referencia:Centro de la habitación",
+        "producer": "4a2/manifiesto espacial",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "bindings/Centro de la habitación/reference_kind",
+            "code": "REFERENCIA_ESPACIAL_DATOS",
+            "message": "Referencia sólo usada para mirar: falta declarar POINT u OBJECT. No pedir ADN de un lugar ni ocultar un mueble como si fuera un punto. Posición/bbox ya disponibles.",
+            "original_producer": "4a2/manifiesto espacial"
+          }
+        ]
+      },
+      {
+        "cause": "objeto:obj-visor-spark",
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "props/obj-visor-spark/dna_ref",
+            "code": "OBJETO_ADN_DATOS",
+            "message": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+            "original_producer": "ADN OBJ/SELLO + 4a2"
+          }
+        ]
+      },
+      {
+        "cause": "objeto:obj-cofre-dorado",
+        "producer": "ADN OBJ/SELLO + catálogo de formas",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "props/obj-cofre-dorado/recipe",
+            "code": "OBJETO_ADN_DATOS",
+            "message": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+            "original_producer": "ADN OBJ/SELLO + catálogo de formas"
+          }
+        ]
+      },
+      {
+        "cause": "escenario_vivo",
+        "producer": "4a4 + 01 + 4a2",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "environment/live_source",
+            "code": "VIVO_DATOS_FALTANTES",
+            "message": "Sólo llegaron estados narrativos inicio/fin; faltan subpiezas/materiales/valores/curvas para cambios de letras, color y FX. Los tiempos explícitos de 01 se reutilizan; no se piden otra vez.",
+            "original_producer": "4a4 + 01 + 4a2"
+          },
+          {
+            "field": "environment/live_data",
+            "code": "DATO_FALTANTE",
+            "message": "Eventos no vinculados a propiedades/tiempos",
+            "original_producer": "4a4 + 01 + 4a2"
+          }
+        ]
+      },
+      {
+        "cause": "calidad_tecnica_biblioteca",
+        "producer": "Biblioteca de movimientos + 2B/revisor",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "motion/semantic_index/approval",
+            "code": "BIBLIOTECA_SIN_VALIDAR",
+            "message": "Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu",
+            "original_producer": "2B/Argon + biblioteca de movimientos"
+          }
+        ]
+      },
+      {
+        "cause": "marco_espacial",
+        "producer": "01/4a2",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "coordinates",
+            "code": "DATO_FALTANTE",
+            "message": "Ejes y unidades certificados ausentes",
+            "original_producer": "01/4a2"
+          },
+          {
+            "field": "ejes",
+            "code": "PROVISIONAL",
+            "message": "Provisional técnico: +Y frente/+Z arriba, ejes no certificados",
+            "original_producer": "01/4a2"
+          }
+        ]
+      },
+      {
+        "cause": "iluminacion_de_variante",
+        "producer": "4a2/4a4 + configuración técnica",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "luces",
+            "code": "PROVISIONAL",
+            "message": "Luces CPU técnicas explícitas en entrada; no SB ni iluminación artística aprobada",
+            "original_producer": "motor/configuración técnica"
+          },
+          {
+            "field": "iluminacion",
+            "code": "PROVISIONAL",
+            "message": "El blend contiene luces de varias escenas simultáneas que lavan los RGB. Para esta previa se desactivan luces fuente por lista EXPLÍCITA y se aplican luces neutrales técnicas declaradas; no es luz artística aprobada.",
+            "original_producer": "4a2/configuración técnica"
+          },
+          {
+            "field": "lighting",
+            "code": "DATO_FALTANTE",
+            "message": "Luz artística base/eventos/exposición requeridos",
+            "original_producer": "4a2/4a4"
+          }
+        ]
+      },
+      {
+        "cause": "recetas_decoracion_ambiente",
+        "producer": "4a2/escenario vivo + catálogo/generador de formas",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "environment/catalog_unresolved",
+            "code": "DETALLE_ESCENARIO_DATOS",
+            "message": "Faltan recetas compatibles para 22 elementos de ambiente; no convertir sus cajas de ubicación en acabado. Lista exacta en dato_esperado.",
+            "original_producer": "4a2/escenario vivo + catálogo/generador de formas"
+          }
+        ]
+      },
+      {
+        "cause": "camera/v3/0/PAN",
+        "producer": "SB + 02N/4a2",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "camera/v3/0/PAN",
+            "code": "CAMARA_DATO_FALTANTE",
+            "message": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+            "original_producer": "SB + 02N/4a2"
+          }
+        ]
+      },
+      {
+        "cause": "camera/v5/0/CRANE",
+        "producer": "SB + 02N/4a2",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "camera/v5/0/CRANE",
+            "code": "CAMARA_DATO_FALTANTE",
+            "message": "Faltan metros o extremos verticales; dir_ud y speed no determinan altura",
+            "original_producer": "SB + 02N/4a2"
+          }
+        ]
+      },
+      {
+        "cause": "camera/v7/0/PAN",
+        "producer": "SB + 02N/4a2",
+        "on_hold_ADN": false,
+        "diagnostics": [
+          {
+            "field": "camera/v7/0/PAN",
+            "code": "CAMARA_DATO_FALTANTE",
+            "message": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+            "original_producer": "SB + 02N/4a2"
+          }
+        ]
+      }
+    ],
+    "note": "Una causa no es un campo ni una fila: se preservan todas las referencias; consolidar no resuelve el dato."
+  }
+}

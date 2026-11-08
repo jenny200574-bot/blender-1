@@ -1,0 +1,40 @@
+{
+  "date_bogota": "2026-11-07T22:23:47.369380-05:00",
+  "backups": [
+    "/opt/myia-motor-v9/avance07_20261107/respaldos/politica_busqueda_formas_antes_MESH.json",
+    "/opt/myia-motor-v9/avance07_20261107/esc1_antes_integracion07"
+  ],
+  "mesh_capability": "MESH renderer and strict closed-volume validator already existed; add only MESH to new-copy search allowlist after real manifold tests; no new code execution",
+  "minimum_score_unchanged": true,
+  "same_27_tracks_numeric_values": true,
+  "actor_visibility_source_action_annotations": [
+    {
+      "actor": "ch-spark-468e",
+      "action_id": "a6",
+      "source": "source_01.json: exact actor/id, declared interval18..21"
+    },
+    {
+      "actor": "ch-valentina-a9be",
+      "action_id": "a7",
+      "source": "source_01.json: exact actor/id, declared interval18..21"
+    },
+    {
+      "actor": "ch-eco-eff3",
+      "action_id": "a8",
+      "source": "source_01.json: exact actor/id, declared interval18..21"
+    },
+    {
+      "actor": "ch-pintor-bce0",
+      "action_id": "a9",
+      "source": "source_01.json: exact actor/id, declared interval18..21"
+    },
+    {
+      "actor": "ch-piquito-030a",
+      "action_id": "a10",
+      "source": "source_01.json: exact actor/id, declared interval18..21"
+    }
+  ],
+  "duplicate_writer_policy": "Preserve native conflict detection. Explicit action_id prevents the fallback source01 writer from also claiming that action; no deletion/masking of true conflict.",
+  "engine_python_code_changed": false,
+  "automatic_paid_off": true
+}

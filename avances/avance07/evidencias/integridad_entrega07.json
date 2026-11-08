@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "test": "7 bloqueos reales; no preview completo, master o GPU",
+      "passed": true
+    },
+    {
+      "test": "original intacto respuesta_2b.json",
+      "passed": true
+    },
+    {
+      "test": "original intacto catalogo_poses_escena.json",
+      "passed": true
+    },
+    {
+      "test": "original intacto asignacion_para_motor.json",
+      "passed": true
+    },
+    {
+      "test": "original intacto source_01.json",
+      "passed": true
+    },
+    {
+      "test": "original intacto source_01_integral.json",
+      "passed": true
+    },
+    {
+      "test": "original intacto programa_2b.json",
+      "passed": true
+    },
+    {
+      "test": "motion no sustituido ni aprobado",
+      "passed": true
+    },
+    {
+      "test": "Piquito rig/perfil intacto",
+      "passed": true
+    },
+    {
+      "test": "solo 3 reglas con fuente",
+      "passed": true
+    },
+    {
+      "test": "4 activos reales con dimensiones y mallas cerradas",
+      "passed": true
+    },
+    {
+      "test": "54 estados ejecutados, 5 omitidos honestamente",
+      "passed": true
+    },
+    {
+      "test": "todos los Python del motor intactos",
+      "passed": true
+    },
+    {
+      "test": "umbral de formas sin cambio",
+      "passed": true
+    },
+    {
+      "test": "oro 23/23 mismo fixture",
+      "passed": true
+    },
+    {
+      "test": "14 asientos previos, reservas cero y presupuesto",
+      "passed": true
+    },
+    {
+      "test": "guardas off y prueba negativa sin gasto",
+      "passed": true
+    }
+  ],
+  "engine_python_files_compared": 772,
+  "policy_diff_paths": [
+    "/primitive_shapes"
+  ],
+  "date_bogota": "2026-11-07T22:33:13.352182-05:00"
+}

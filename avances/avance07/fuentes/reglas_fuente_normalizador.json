@@ -1,0 +1,13 @@
+{
+  "parameters": {
+    "aceleracion_max_com_m_s2": 20.0,
+    "vel_max_deg_s": 600.0,
+    "resbale_pie_max_cm_cuadro": 5.0,
+    "equilibrio_max_fuera_m": 0.06,
+    "equilibrio_cuadros_fuera_max": 2,
+    "saltitos_max": 0
+  },
+  "original_source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/motor/catalogo_reglas_validacion/reglas.json",
+  "original_sha256": "691d8fd8980d6dc029f7ae3df2f86b574103c234b15641ea0f793e60ed3d35d2",
+  "copy_policy": "Sólo topes bloqueados: no trasladar excepciones por personajes/escenarios"
+}

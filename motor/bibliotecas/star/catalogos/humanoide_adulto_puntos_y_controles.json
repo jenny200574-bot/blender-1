@@ -1,0 +1,170 @@
+{
+  "schema": "anatomical_profile_v1",
+  "profile_id": "humanoide_adulto",
+  "format_role": "puntos_y_controles",
+  "units": "m",
+  "frame": "REST_BONE",
+  "source": {
+    "original_sha256": "56f951039b3ce0102250b54e3b8e4de4b3bff45a620efbe557b9b219a94ee7a6",
+    "range_source": null
+  },
+  "examples": [
+    {
+      "example_id": "ejemplo_heredado_01",
+      "original_path": "bibliotecas/star/catalogos/archivo/20261107_102336_241099/catalogo_puntos_kael.json",
+      "sha256": "56f951039b3ce0102250b54e3b8e4de4b3bff45a620efbe557b9b219a94ee7a6",
+      "identity": "kael_vrm_hair_sample_male",
+      "source_model": null
+    }
+  ],
+  "puntos": {
+    "cabeza": {
+      "hueso": "J_Bip_C_Head",
+      "ext": "tail"
+    },
+    "cuello": {
+      "hueso": "J_Bip_C_Neck",
+      "ext": "head"
+    },
+    "pecho": {
+      "hueso": "J_Bip_C_Chest",
+      "ext": "head"
+    },
+    "torso": {
+      "hueso": "J_Bip_C_Spine",
+      "ext": "dir"
+    },
+    "espina": {
+      "hueso": "J_Bip_C_Spine",
+      "ext": "head"
+    },
+    "cadera": {
+      "hueso": "J_Bip_C_Hips",
+      "ext": "head"
+    },
+    "hombro_L": {
+      "hueso": "J_Bip_L_UpperArm",
+      "ext": "head"
+    },
+    "hombro_R": {
+      "hueso": "J_Bip_R_UpperArm",
+      "ext": "head"
+    },
+    "codo_L": {
+      "hueso": "J_Bip_L_LowerArm",
+      "ext": "head"
+    },
+    "codo_R": {
+      "hueso": "J_Bip_R_LowerArm",
+      "ext": "head"
+    },
+    "mano_L": {
+      "hueso": "J_Bip_L_Hand",
+      "ext": "tail"
+    },
+    "mano_R": {
+      "hueso": "J_Bip_R_Hand",
+      "ext": "tail"
+    },
+    "muneca_L": {
+      "hueso": "J_Bip_L_Hand",
+      "ext": "head"
+    },
+    "muneca_R": {
+      "hueso": "J_Bip_R_Hand",
+      "ext": "head"
+    },
+    "cadera_L": {
+      "hueso": "J_Bip_L_UpperLeg",
+      "ext": "head"
+    },
+    "cadera_R": {
+      "hueso": "J_Bip_R_UpperLeg",
+      "ext": "head"
+    },
+    "rodilla_L": {
+      "hueso": "J_Bip_L_LowerLeg",
+      "ext": "head"
+    },
+    "rodilla_R": {
+      "hueso": "J_Bip_R_LowerLeg",
+      "ext": "head"
+    },
+    "tobillo_L": {
+      "hueso": "J_Bip_L_Foot",
+      "ext": "head"
+    },
+    "tobillo_R": {
+      "hueso": "J_Bip_R_Foot",
+      "ext": "head"
+    },
+    "pie_L": {
+      "hueso": "J_Bip_L_Foot",
+      "ext": "tail"
+    },
+    "pie_R": {
+      "hueso": "J_Bip_R_Foot",
+      "ext": "tail"
+    }
+  },
+  "canales": {
+    "inclinacion": {
+      "aplica_a": [
+        "torso",
+        "espina",
+        "cabeza"
+      ],
+      "ejes": {
+        "atras": [
+          0,
+          -1,
+          0
+        ],
+        "adelante": [
+          0,
+          1,
+          0
+        ],
+        "izq": [
+          -1,
+          0,
+          0
+        ],
+        "der": [
+          1,
+          0,
+          0
+        ]
+      },
+      "angulo_max_deg": 35
+    },
+    "subir": {
+      "aplica_a": [
+        "hombro_L",
+        "hombro_R"
+      ],
+      "offset_local_m": [
+        0,
+        0,
+        0.08
+      ]
+    },
+    "flexion": {
+      "aplica_a": [
+        "rodilla_L",
+        "rodilla_R",
+        "codo_L",
+        "codo_R"
+      ],
+      "angulo_max_deg": 55
+    },
+    "giro": {
+      "aplica_a": [
+        "cabeza",
+        "torso",
+        "cadera"
+      ],
+      "angulo_max_deg": 45
+    }
+  }
+}

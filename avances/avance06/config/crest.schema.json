@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"source": {"type": "string"}, "crest1_pz": {"type": "number"}, "crest2_pz": {"type": "number"}}, "required": ["source", "crest1_pz", "crest2_pz"]}

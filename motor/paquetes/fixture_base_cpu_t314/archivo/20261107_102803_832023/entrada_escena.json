@@ -1,0 +1,1811 @@
+{
+  "schema_version": "1.0",
+  "job_id": "FIXTURE_NO_GUARDIANES",
+  "scene": "synthetic_cpu",
+  "clock": {
+    "fps": 8,
+    "duration_s": 2,
+    "rounding": "half_up"
+  },
+  "coordinates": {
+    "unit": "m",
+    "up": "Z",
+    "forward": "-Y",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "source": "fixture_sintetico.json"
+  },
+  "entities": [
+    {
+      "id": "bird_fixture",
+      "type": "CHARACTER",
+      "anatomy": "avian",
+      "appearance": {
+        "geometry": {
+          "parts": [
+            {
+              "id": "bird_body",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.4,
+                0.35,
+                0.55
+              ],
+              "position_m": [
+                0,
+                0,
+                0.53
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "body"
+            },
+            {
+              "id": "bird_head",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.35,
+                0.35,
+                0.35
+              ],
+              "position_m": [
+                0,
+                0,
+                0.9
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "head"
+            },
+            {
+              "id": "eye_l",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.08,
+                0.045,
+                0.08
+              ],
+              "position_m": [
+                -0.09,
+                -0.155,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "eye"
+            },
+            {
+              "id": "eye_r",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.08,
+                0.045,
+                0.08
+              ],
+              "position_m": [
+                0.09,
+                -0.155,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "eye"
+            },
+            {
+              "id": "pupil_l",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.035,
+                0.025,
+                0.035
+              ],
+              "position_m": [
+                -0.09,
+                -0.18,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.03,
+                  0.015,
+                  0.01,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "pupil"
+            },
+            {
+              "id": "pupil_r",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.035,
+                0.025,
+                0.035
+              ],
+              "position_m": [
+                0.09,
+                -0.18,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.03,
+                  0.015,
+                  0.01,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "pupil"
+            },
+            {
+              "id": "scarf",
+              "shape": "TORUS",
+              "dimensions_m": [
+                1,
+                1,
+                1
+              ],
+              "position_m": [
+                0,
+                0,
+                0.75
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.5,
+                  0.02,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "clothes",
+              "major_radius_m": 0.16,
+              "minor_radius_m": 0.025
+            },
+            {
+              "id": "wingmesh_L",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.12,
+                0.1,
+                0.35
+              ],
+              "position_m": [
+                0,
+                -0.15,
+                0
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "wing",
+              "bone": "wing.L"
+            },
+            {
+              "id": "wingmesh_R",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.12,
+                0.1,
+                0.35
+              ],
+              "position_m": [
+                0,
+                -0.15,
+                0
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "wing",
+              "bone": "wing.R"
+            },
+            {
+              "id": "bill",
+              "shape": "CONE",
+              "dimensions_m": [
+                0.12,
+                0.12,
+                0.2
+              ],
+              "position_m": [
+                0,
+                -0.2,
+                0.9
+              ],
+              "rotation_deg": [
+                90,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  1,
+                  0.2,
+                  0.02,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "beak",
+              "tip_ratio": 0
+            }
+          ],
+          "required_roles": [
+            "body",
+            "head",
+            "eye",
+            "pupil",
+            "clothes",
+            "beak",
+            "wing"
+          ],
+          "source": "fixture_sintetico.json",
+          "final_appearance_ref": "SOLO_FIXTURE_SINTETICO_NO_APROBACION_ARTISTICA"
+        },
+        "rostros_finales": {
+          "asset": "fixture_sintetico.json",
+          "source": "fixture_sintetico.json"
+        },
+        "ropa_final": {
+          "asset": "fixture_sintetico.json",
+          "source": "fixture_sintetico.json"
+        }
+      },
+      "points": [
+        {
+          "id": "centre",
+          "position_m": [
+            0,
+            0,
+            0.6
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "ground_l",
+          "position_m": [
+            -0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "ground_r",
+          "position_m": [
+            0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_a",
+          "position_m": [
+            -0.3,
+            -0.2,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_b",
+          "position_m": [
+            0.3,
+            -0.2,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_c",
+          "position_m": [
+            0.3,
+            0.35,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_d",
+          "position_m": [
+            -0.3,
+            0.35,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        }
+      ],
+      "anatomy_profile": {
+        "units": "m",
+        "rig": {
+          "bones": [
+            {
+              "id": "root",
+              "head": [
+                0,
+                0,
+                0.4
+              ],
+              "tail": [
+                0,
+                0,
+                0.55
+              ],
+              "parent": null,
+              "role": "root",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "neck",
+              "head": [
+                0,
+                0,
+                0.55
+              ],
+              "tail": [
+                0,
+                0,
+                0.78
+              ],
+              "parent": "root",
+              "role": "neck",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "head",
+              "head": [
+                0,
+                0,
+                0.78
+              ],
+              "tail": [
+                0,
+                0,
+                1.0
+              ],
+              "parent": "neck",
+              "role": "head",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "beak",
+              "head": [
+                0,
+                -0.1,
+                0.9
+              ],
+              "tail": [
+                0,
+                -0.25,
+                0.9
+              ],
+              "parent": "head",
+              "role": "beak",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "tail",
+              "head": [
+                0,
+                0.12,
+                0.5
+              ],
+              "tail": [
+                0,
+                0.4,
+                0.55
+              ],
+              "parent": "root",
+              "role": "tail",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "wing.L",
+              "head": [
+                -0.12,
+                0,
+                0.65
+              ],
+              "tail": [
+                -0.4,
+                0,
+                0.55
+              ],
+              "parent": "root",
+              "role": "wing.L",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "leg.L",
+              "head": [
+                -0.12,
+                0,
+                0.4
+              ],
+              "tail": [
+                -0.12,
+                0,
+                0.14
+              ],
+              "parent": "root",
+              "role": "leg.L",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "foot.L",
+              "head": [
+                -0.12,
+                0,
+                0.14
+              ],
+              "tail": [
+                -0.12,
+                0.15,
+                0.08
+              ],
+              "parent": "leg.L",
+              "role": "foot.L",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "toe.L.front1",
+              "head": [
+                -0.12,
+                0.15,
+                0.08
+              ],
+              "tail": [
+                -0.18,
+                0.27,
+                0.08
+              ],
+              "parent": "foot.L",
+              "role": "toe.L.front1",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "toe.L.front2",
+              "head": [
+                -0.12,
+                0.15,
+                0.08
+              ],
+              "tail": [
+                -0.12,
+                0.29000000000000004,
+                0.08
+              ],
+              "parent": "foot.L",
+              "role": "toe.L.front2",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "toe.L.front3",
+              "head": [
+                -0.12,
+                0.15,
+                0.08
+              ],
+              "tail": [
+                -0.06,
+                0.27,
+                0.08
+              ],
+              "parent": "foot.L",
+              "role": "toe.L.front3",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "toe.L.back",
+              "head": [
+                -0.12,
+                0.15,
+                0.08
+              ],
+              "tail": [
+                -0.12,
+                0.03,
+                0.08
+              ],
+              "parent": "foot.L",
+              "role": "toe.L.back",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "wing.R",
+              "head": [
+                0.12,
+                0,
+                0.65
+              ],
+              "tail": [
+                0.4,
+                0,
+                0.55
+              ],
+              "parent": "root",
+              "role": "wing.R",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "leg.R",
+              "head": [
+                0.12,
+                0,
+                0.4
+              ],
+              "tail": [
+                0.12,
+                0,
+                0.14
+              ],
+              "parent": "root",
+              "role": "leg.R",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "foot.R",
+              "head": [
+                0.12,
+                0,
+                0.14
+              ],
+              "tail": [
+                0.12,
+                0.15,
+                0.08
+              ],
+              "parent": "leg.R",
+              "role": "foot.R",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "toe.R.front1",
+              "head": [
+                0.12,
+                0.15,
+                0.08
+              ],
+              "tail": [
+                0.06,
+                0.27,
+                0.08
+              ],
+              "parent": "foot.R",
+              "role": "toe.R.front1",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "toe.R.front2",
+              "head": [
+                0.12,
+                0.15,
+                0.08
+              ],
+              "tail": [
+                0.12,
+                0.29000000000000004,
+                0.08
+              ],
+              "parent": "foot.R",
+              "role": "toe.R.front2",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "toe.R.front3",
+              "head": [
+                0.12,
+                0.15,
+                0.08
+              ],
+              "tail": [
+                0.18,
+                0.27,
+                0.08
+              ],
+              "parent": "foot.R",
+              "role": "toe.R.front3",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            },
+            {
+              "id": "toe.R.back",
+              "head": [
+                0.12,
+                0.15,
+                0.08
+              ],
+              "tail": [
+                0.12,
+                0.03,
+                0.08
+              ],
+              "parent": "foot.R",
+              "role": "toe.R.back",
+              "limits_deg": [
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ],
+                [
+                  -90,
+                  90
+                ]
+              ]
+            }
+          ]
+        },
+        "physics": {
+          "bone_mass_kg": {
+            "root": 1,
+            "neck": 1,
+            "head": 1,
+            "beak": 1,
+            "tail": 1,
+            "wing.L": 1,
+            "leg.L": 1,
+            "foot.L": 1,
+            "toe.L.front1": 1,
+            "toe.L.front2": 1,
+            "toe.L.front3": 1,
+            "toe.L.back": 1,
+            "wing.R": 1,
+            "leg.R": 1,
+            "foot.R": 1,
+            "toe.R.front1": 1,
+            "toe.R.front2": 1,
+            "toe.R.front3": 1,
+            "toe.R.back": 1
+          },
+          "balance_margin_m": 0.04,
+          "support_intervals": [
+            {
+              "t0": 0,
+              "t1": 2,
+              "mode": "supported",
+              "support_points": [
+                "support_fixture.support_a",
+                "support_fixture.support_b",
+                "support_fixture.support_c",
+                "support_fixture.support_d"
+              ]
+            }
+          ],
+          "hop_vertical_max_m_s": 0.5
+        },
+        "source": "fixture_esqueleto_datos_v5",
+        "attachment": {
+          "target_point": "support_fixture.anchor_origin",
+          "offset_m": [
+            0,
+            0,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_ancla_datos_v5"
+        }
+      }
+    }
+  ],
+  "requirements": {
+    "entity_ids": [
+      "bird_fixture"
+    ],
+    "object_refs": [
+      "prop_fixture"
+    ]
+  },
+  "environment": {
+    "mode": "geometry",
+    "geometry": [
+      {
+        "id": "floor",
+        "shape": "BOX",
+        "dimensions_m": [
+          5,
+          5,
+          0.1
+        ],
+        "position_m": [
+          0,
+          0,
+          -0.05
+        ],
+        "rotation_deg": [
+          0,
+          0,
+          0
+        ],
+        "resolution": 12,
+        "material": {
+          "rgba": [
+            0.25,
+            0.3,
+            0.35,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.45
+        },
+        "source": "fixture_sintetico.json",
+        "role": "geometry"
+      }
+    ],
+    "events": [],
+    "live_data": {
+      "status": "complete",
+      "source": "fixture_4a4_datos_v5",
+      "changes": [
+        {
+          "object": "prop_base",
+          "property": "material.base_color",
+          "material": "prop_base_material",
+          "source": "fixture_sintetico.json",
+          "keys": [
+            {
+              "t": 0,
+              "value": [
+                1,
+                0.1,
+                0,
+                1
+              ],
+              "curve": "LINEAR"
+            },
+            {
+              "t": 2,
+              "value": [
+                0.2,
+                0.2,
+                0.2,
+                1
+              ],
+              "curve": "LINEAR"
+            }
+          ]
+        },
+        {
+          "objeto": "support_fixture",
+          "propiedad": "location",
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            0.4,
+            0,
+            0
+          ],
+          "curve": "LINEAR",
+          "action_id": "cambio_escena_nuevo",
+          "source": "fixture_4a4_datos_v5"
+        }
+      ],
+      "expected_states": [
+        {
+          "id": "estado_material_nuevo",
+          "object": "prop_base",
+          "property": "material.base_color",
+          "material": "prop_base_material",
+          "t": 2,
+          "value": [
+            0.2,
+            0.2,
+            0.2,
+            1
+          ],
+          "tolerance": 1e-06,
+          "source": "fixture_4a4_extremos"
+        },
+        {
+          "id": "estado_ubicacion_nuevo",
+          "object": "support_fixture",
+          "property": "location",
+          "t": 2,
+          "value": [
+            0.4,
+            0,
+            0
+          ],
+          "tolerance": 1e-06,
+          "source": "fixture_4a4_extremos"
+        }
+      ]
+    }
+  },
+  "props": [
+    {
+      "id": "support_fixture",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "geometry": [],
+      "points": [
+        {
+          "id": "left",
+          "position_m": [
+            -0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "right",
+          "position_m": [
+            0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_a",
+          "position_m": [
+            -0.18,
+            0.03,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_b",
+          "position_m": [
+            0.18,
+            0.03,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_c",
+          "position_m": [
+            0.18,
+            0.29,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_d",
+          "position_m": [
+            -0.18,
+            0.29,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "anchor_origin",
+          "position_m": [
+            0,
+            0,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_ancla_datos_v5"
+        }
+      ],
+      "hinges": []
+    },
+    {
+      "id": "prop_fixture",
+      "dna_ref": "ADN_nuevo_cuerpo_articulado"
+    }
+  ],
+  "contacts": [
+    {
+      "entity": "bird_fixture",
+      "bone": "foot.L",
+      "target_point": "support_fixture.left",
+      "chain_length": 2,
+      "iterations": 128,
+      "t0": 0,
+      "t1": 2,
+      "tolerance_m": 0.0001,
+      "source": "fixture_sintetico.json"
+    },
+    {
+      "entity": "bird_fixture",
+      "bone": "foot.R",
+      "target_point": "support_fixture.right",
+      "chain_length": 2,
+      "iterations": 128,
+      "t0": 0,
+      "t1": 2,
+      "tolerance_m": 0.0001,
+      "source": "fixture_sintetico.json"
+    }
+  ],
+  "fx_events": [],
+  "motion": {
+    "status": "complete",
+    "catalog": "fixture_sintetico.json",
+    "assignments": "asignaciones.json",
+    "requests": [
+      {
+        "entity": "bird_fixture",
+        "action": "wing_open",
+        "anatomy": "avian",
+        "emotion": "neutral",
+        "load": "none",
+        "support": "feet",
+        "context": "flat"
+      }
+    ],
+    "candidates": [
+      {
+        "entity": "bird_fixture",
+        "action": "wing_open",
+        "anatomy": "avian",
+        "emotion": "neutral",
+        "load": "none",
+        "support": "feet",
+        "context": "flat",
+        "id": "authored_wing",
+        "provider": "argon",
+        "license_ref": "CREACION_SINTETICA_DE_PRUEBA_NO_BIBLIOTECA",
+        "approval_ref": "SOLO_PRUEBA_CPU",
+        "tracks": [
+          {
+            "bone": "wing.L",
+            "keys": [
+              {
+                "t": 0,
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "curve": "SMOOTH"
+              },
+              {
+                "t": 1,
+                "value": [
+                  15,
+                  0,
+                  0
+                ],
+                "curve": "SMOOTH"
+              },
+              {
+                "t": 2,
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "curve": "SMOOTH"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "camera": {
+    "shots": [
+      {
+        "id": "shot_A",
+        "t0": 0,
+        "t1": 1,
+        "transition": "CORTE",
+        "sensor_width_mm": 36,
+        "clip_start_m": 0.01,
+        "clip_end_m": 100,
+        "smoothing": 0,
+        "roll_deg": 0,
+        "handheld_amount": 0,
+        "check_points": [
+          "bird_fixture.centre"
+        ],
+        "ndc_margin": 0.03,
+        "ray_epsilon_m": 0.001,
+        "occlusion_allowed_objects": [
+          "bird_body",
+          "bird_head",
+          "eye_l",
+          "eye_r",
+          "pupil_l",
+          "pupil_r",
+          "scarf",
+          "wingmesh_L",
+          "wingmesh_R",
+          "bill"
+        ],
+        "min_clearance_m": 0.05,
+        "axis180": null,
+        "subjects": [
+          {
+            "id": "bird_fixture",
+            "scope": "FULL"
+          }
+        ],
+        "source_data": {
+          "vineta": "shot_A",
+          "t_abs": [
+            0,
+            1
+          ],
+          "objetivo": "bird_fixture",
+          "angulo": "EYELEVEL",
+          "lado_objetivo": "C",
+          "keyframes": [
+            {
+              "t": 0,
+              "plano": "FS",
+              "lente_mm": 28,
+              "giro_grados": 0
+            },
+            {
+              "t": 1,
+              "plano": "FS",
+              "lente_mm": 28,
+              "giro_grados": 0
+            }
+          ],
+          "segmentos": [
+            {
+              "t_abs": [
+                0,
+                0.5
+              ],
+              "movimiento": "PAN",
+              "args": {
+                "degrees": 3,
+                "dir_lr": "R"
+              },
+              "curva": "suave_entrada_salida"
+            },
+            {
+              "t_abs": [
+                0.5,
+                1
+              ],
+              "movimiento": "CRANE",
+              "args": {
+                "distance": 0.02,
+                "dir_ud": "UP"
+              },
+              "curva": "suave_entrada_salida"
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      },
+      {
+        "id": "shot_B",
+        "t0": 1,
+        "t1": 2,
+        "transition": {
+          "type": "FUNDIDO",
+          "duration_s": 0.25
+        },
+        "sensor_width_mm": 36,
+        "clip_start_m": 0.01,
+        "clip_end_m": 100,
+        "smoothing": 0,
+        "roll_deg": 0,
+        "handheld_amount": 0,
+        "check_points": [
+          "bird_fixture.centre"
+        ],
+        "ndc_margin": 0.03,
+        "ray_epsilon_m": 0.001,
+        "occlusion_allowed_objects": [
+          "bird_body",
+          "bird_head",
+          "eye_l",
+          "eye_r",
+          "pupil_l",
+          "pupil_r",
+          "scarf",
+          "wingmesh_L",
+          "wingmesh_R",
+          "bill"
+        ],
+        "min_clearance_m": 0.05,
+        "axis180": null,
+        "subjects": [
+          {
+            "id": "bird_fixture",
+            "scope": "FULL"
+          }
+        ],
+        "source_data": {
+          "vineta": "shot_B",
+          "t_abs": [
+            1,
+            2
+          ],
+          "objetivo": "bird_fixture",
+          "angulo": "EYELEVEL",
+          "lado_objetivo": "C",
+          "keyframes": [
+            {
+              "t": 1,
+              "plano": "FS",
+              "lente_mm": 28,
+              "giro_grados": 0
+            },
+            {
+              "t": 2,
+              "plano": "FS",
+              "lente_mm": 28,
+              "giro_grados": 0
+            }
+          ],
+          "segmentos": [
+            {
+              "t_abs": [
+                1,
+                1.5
+              ],
+              "movimiento": "TRACK",
+              "args": {
+                "screen": "L2R"
+              },
+              "curva": "suave_entrada_salida"
+            },
+            {
+              "t_abs": [
+                1.5,
+                2
+              ],
+              "movimiento": "DOLLYZOOM",
+              "args": {
+                "distance": 0.02,
+                "dir_io": "OUT"
+              },
+              "curva": "suave_entrada_salida"
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      }
+    ],
+    "transition_semantics": "incoming",
+    "source": "camara_4g/sb_source.json",
+    "resolver_inputs": {
+      "config": "camara_4g/config.json",
+      "ajustes": "camara_4g/ajustes.json",
+      "shot_types": "camara_4g/shot_types.json",
+      "elevations": "camara_4g/elevations.json",
+      "sb_scene": "camara_4g/sb_scene.json",
+      "commands": "camara_4g/commands.json"
+    },
+    "sensor_width_mm": 36
+  },
+  "lighting": {
+    "base": [
+      {
+        "id": "key_light",
+        "type": "AREA",
+        "position_m": [
+          0,
+          -2,
+          4
+        ],
+        "rotation_deg": [
+          25,
+          0,
+          0
+        ],
+        "energy": 400,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "exposure": 0,
+    "view_transform": "Standard",
+    "events": [
+      {
+        "object": "key_light",
+        "property": "energy",
+        "source": "fixture_sintetico.json",
+        "keys": [
+          {
+            "t": 0,
+            "value": 400,
+            "curve": "LINEAR"
+          },
+          {
+            "t": 2,
+            "value": 100,
+            "curve": "LINEAR"
+          }
+        ]
+      }
+    ],
+    "source": "fixture_sintetico.json"
+  },
+  "rules": {
+    "bone_length_error_m": 1e-05,
+    "root_speed_max_m_s": 5,
+    "root_accel_max_m_s2": 20,
+    "com_accel_max_m_s2": 20,
+    "joint_speed_max_deg_s": 900,
+    "slip_max_m_per_frame": 0.05,
+    "colliders": [
+      "bird_body",
+      "floor",
+      "prop_base"
+    ],
+    "allowed_collision_pairs": [],
+    "penetration_tolerance_m": 0.001,
+    "reject_surface_intersections": true,
+    "contact_pairs": [
+      [
+        "floor",
+        "prop_base"
+      ]
+    ]
+  },
+  "actions": [
+    {
+      "id": "dialog_1",
+      "accion": "hablar",
+      "actor": "bird_fixture",
+      "t": [
+        0.5,
+        1.5
+      ],
+      "cita": "Texto sintético para comprobar el archivo de tiempos. No se genera voz."
+    },
+    {
+      "id": "cambio_escena_nuevo",
+      "accion": "modificar",
+      "actor": "",
+      "objeto": "support_fixture",
+      "t": [
+        0,
+        2
+      ],
+      "cita": "Pista sintética medida"
+    }
+  ],
+  "segments": [],
+  "render": {
+    "engine": "CYCLES",
+    "resolution": [
+      128,
+      128
+    ],
+    "samples": 1,
+    "seed": 42
+  },
+  "required_capabilities": [
+    "rostros_finales",
+    "ropa_final"
+  ],
+  "libraries": [],
+  "fixture_only": true,
+  "assets": [
+    {
+      "path": "asignaciones.json",
+      "sha256": "4d380bd12c592bc30f0150d84e1aab8cbd415f5787d1aee879591a1fb9f6abce",
+      "bytes": 42
+    },
+    {
+      "path": "fixture_sintetico.json",
+      "sha256": "3c89e6a7fc4c20cefa952d265919afde3a207aba7df21949a99e320bda7606b0",
+      "bytes": 120
+    },
+    {
+      "path": "adn_entidades.json",
+      "sha256": "f870901a705af3dc06feed903ed9f797d54d694351f88eacccd5616c152fb987",
+      "bytes": 3717,
+      "type": "json"
+    },
+    {
+      "path": "camara_4g/elevations.json",
+      "sha256": "dd1e538a344b8d655ab9f746cce0e7006a1376324f23e1f671a92a455b1e4323",
+      "bytes": 59,
+      "type": "json"
+    },
+    {
+      "path": "camara_4g/sb_source.json",
+      "sha256": "e13bd57edd3d6b3d54a24eeec1698867be7b97f04022d2f1008dad102d8d0a73",
+      "bytes": 2001,
+      "type": "json"
+    },
+    {
+      "path": "camara_4g/config.json",
+      "sha256": "2558b429d1f8f84cb7b7abe6623943e56ba775ce16b2eb1d48a6358b54fcfb36",
+      "bytes": 6584,
+      "type": "json"
+    },
+    {
+      "path": "camara_4g/shot_types.json",
+      "sha256": "80dbcc83837e3a3d4fb7ca5e50ffbeda93866ec0cac745b9c5b8a386a5813c7d",
+      "bytes": 1815,
+      "type": "json"
+    },
+    {
+      "path": "camara_4g/sb_scene.json",
+      "sha256": "f399c04db3ab3999970a4340c193ca344e51d3741e5dd3d4317a05ab5aa7c461",
+      "bytes": 542,
+      "type": "json"
+    },
+    {
+      "path": "camara_4g/ajustes.json",
+      "sha256": "ccb5d0413793633aa4ba0c1958c34728d5b4c61ea3c6dae90a9c27624430eaa4",
+      "bytes": 282,
+      "type": "json"
+    },
+    {
+      "path": "camara_4g/commands.json",
+      "sha256": "5a1c144dbf917fde596f79c3f451f0916ab3c10bbb3ba20dba052c4b7fe37f69",
+      "bytes": 1142,
+      "type": "json"
+    }
+  ],
+  "sources": [
+    {
+      "module": "fixture_autogenerado_NO_MODULO_REAL",
+      "path": "fixture_sintetico.json",
+      "sha256": "3c89e6a7fc4c20cefa952d265919afde3a207aba7df21949a99e320bda7606b0"
+    }
+  ],
+  "adn_entities_source": "adn_entidades.json",
+  "locked_source_rules_not_yet_fully_integrated": {
+    "equilibrio_max_fuera_m": 0.06,
+    "equilibrio_cuadros_fuera_max": 2,
+    "saltitos_max": 0
+  },
+  "bindings": {
+    "prop_fixture": {
+      "scene_object_id": "prop_fixture",
+      "position_m": [
+        1.1,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "source": "fixture_objeto_medido_v5"
+    }
+  }
+}

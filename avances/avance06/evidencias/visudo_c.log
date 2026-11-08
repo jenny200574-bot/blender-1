@@ -1,0 +1,8 @@
+/etc/sudoers: parsed OK
+/etc/sudoers.d/90-cloud-init-users: parsed OK
+/etc/sudoers.d/README: parsed OK
+/etc/sudoers.d/myia-ab-motor: parsed OK
+/etc/sudoers.d/myia-motor-t317: parsed OK
+/etc/sudoers.d/myia-motor-v9-calidad: parsed OK
+/etc/sudoers.d/myia-motor-v9-t912: parsed OK
+/etc/sudoers.d/myia-taller-n8n: parsed OK

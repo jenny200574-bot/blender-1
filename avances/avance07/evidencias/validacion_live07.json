@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "tracks": 27,
+  "assertions": 59,
+  "six_states_bound": 6,
+  "three_letter_parts": 3,
+  "seven_rainbow_bands": 7,
+  "five_source_actors": 5,
+  "four_real_fx": 4,
+  "four_actual_landing_tracks": 4,
+  "lock_additions": 5,
+  "cofre_geometry_validation": {
+    "passed": true,
+    "dimensions_m": [
+      0.65,
+      0.42,
+      0.48
+    ],
+    "tolerance_m": 0.001,
+    "part_count": 10,
+    "boxes": false,
+    "query_sha256": "ef272ce7227018d648c93f4c75c7f74aa65d81a08e006b341c5cd20ec2892ed8"
+  },
+  "live_bridge": {
+    "state": "READY",
+    "changes_compiled": 27,
+    "source_status": "complete",
+    "unbound_states": [],
+    "assertions": 59
+  },
+  "twoB_or_rules_approval": false,
+  "full_scene_cpu_passed": false,
+  "production_approved": false
+}

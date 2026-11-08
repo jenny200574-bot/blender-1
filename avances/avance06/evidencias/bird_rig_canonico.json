@@ -1,0 +1,601 @@
+{
+  "units": "m",
+  "rig": {
+    "bones": [
+      {
+        "id": "ch-piquito-030a.root",
+        "role": "root",
+        "parent": null,
+        "head": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tail": [
+          0.0,
+          0.0,
+          0.05
+        ],
+        "limits_deg": [
+          [
+            -180,
+            180
+          ],
+          [
+            -180,
+            180
+          ],
+          [
+            -180,
+            180
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.neck",
+        "role": "neck",
+        "parent": "ch-piquito-030a.root",
+        "head": [
+          0.0,
+          0.0,
+          0.05
+        ],
+        "tail": [
+          0.0,
+          0.0,
+          0.055
+        ],
+        "limits_deg": [
+          [
+            -15,
+            15
+          ],
+          [
+            -15,
+            15
+          ],
+          [
+            -20,
+            20
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.head",
+        "role": "head",
+        "parent": "ch-piquito-030a.neck",
+        "head": [
+          0.0,
+          0.0,
+          0.055
+        ],
+        "tail": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "limits_deg": [
+          [
+            -30,
+            30
+          ],
+          [
+            -30,
+            30
+          ],
+          [
+            -45,
+            45
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.beak",
+        "role": "beak",
+        "parent": "ch-piquito-030a.head",
+        "head": [
+          0.0,
+          0.02,
+          0.075
+        ],
+        "tail": [
+          0.0,
+          0.035,
+          0.075
+        ],
+        "limits_deg": [
+          [
+            -10,
+            10
+          ],
+          [
+            -5,
+            5
+          ],
+          [
+            -5,
+            5
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.tail",
+        "role": "tail",
+        "parent": "ch-piquito-030a.root",
+        "head": [
+          0.0,
+          -0.02,
+          0.02
+        ],
+        "tail": [
+          0.0,
+          -0.045,
+          0.035
+        ],
+        "limits_deg": [
+          [
+            -20,
+            20
+          ],
+          [
+            -20,
+            20
+          ],
+          [
+            -30,
+            30
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.wing.L",
+        "role": "wing.L",
+        "parent": "ch-piquito-030a.root",
+        "head": [
+          0.025,
+          0.0,
+          0.04
+        ],
+        "tail": [
+          0.04,
+          -0.015,
+          0.03
+        ],
+        "limits_deg": [
+          [
+            -45,
+            90
+          ],
+          [
+            -30,
+            30
+          ],
+          [
+            -45,
+            45
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.wing.R",
+        "role": "wing.R",
+        "parent": "ch-piquito-030a.root",
+        "head": [
+          -0.025,
+          0.0,
+          0.04
+        ],
+        "tail": [
+          -0.04,
+          -0.015,
+          0.03
+        ],
+        "limits_deg": [
+          [
+            -45,
+            90
+          ],
+          [
+            -30,
+            30
+          ],
+          [
+            -45,
+            45
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.leg.L",
+        "role": "leg.L",
+        "parent": "ch-piquito-030a.root",
+        "head": [
+          0.015,
+          0.0,
+          0.01
+        ],
+        "tail": [
+          0.015,
+          0.0,
+          0.005
+        ],
+        "limits_deg": [
+          [
+            -30,
+            30
+          ],
+          [
+            -15,
+            15
+          ],
+          [
+            -15,
+            15
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.leg.R",
+        "role": "leg.R",
+        "parent": "ch-piquito-030a.root",
+        "head": [
+          -0.015,
+          0.0,
+          0.01
+        ],
+        "tail": [
+          -0.015,
+          0.0,
+          0.005
+        ],
+        "limits_deg": [
+          [
+            -30,
+            30
+          ],
+          [
+            -15,
+            15
+          ],
+          [
+            -15,
+            15
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.foot.L",
+        "role": "foot.L",
+        "parent": "ch-piquito-030a.leg.L",
+        "head": [
+          0.015,
+          0.0,
+          0.005
+        ],
+        "tail": [
+          0.015,
+          0.005,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -20,
+            40
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.foot.R",
+        "role": "foot.R",
+        "parent": "ch-piquito-030a.leg.R",
+        "head": [
+          -0.015,
+          0.0,
+          0.005
+        ],
+        "tail": [
+          -0.015,
+          0.005,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -20,
+            40
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.toe.L.front1",
+        "role": "toe.L.front1",
+        "parent": "ch-piquito-030a.foot.L",
+        "head": [
+          0.015,
+          0.005,
+          0.0
+        ],
+        "tail": [
+          0.01,
+          0.015,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.toe.L.front2",
+        "role": "toe.L.front2",
+        "parent": "ch-piquito-030a.foot.L",
+        "head": [
+          0.015,
+          0.005,
+          0.0
+        ],
+        "tail": [
+          0.015,
+          0.015,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.toe.L.front3",
+        "role": "toe.L.front3",
+        "parent": "ch-piquito-030a.foot.L",
+        "head": [
+          0.015,
+          0.005,
+          0.0
+        ],
+        "tail": [
+          0.02,
+          0.015,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.toe.L.back",
+        "role": "toe.L.back",
+        "parent": "ch-piquito-030a.foot.L",
+        "head": [
+          0.015,
+          0.005,
+          0.0
+        ],
+        "tail": [
+          0.015,
+          -0.005,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.toe.R.front1",
+        "role": "toe.R.front1",
+        "parent": "ch-piquito-030a.foot.R",
+        "head": [
+          -0.015,
+          0.005,
+          0.0
+        ],
+        "tail": [
+          -0.02,
+          0.015,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.toe.R.front2",
+        "role": "toe.R.front2",
+        "parent": "ch-piquito-030a.foot.R",
+        "head": [
+          -0.015,
+          0.005,
+          0.0
+        ],
+        "tail": [
+          -0.015,
+          0.015,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.toe.R.front3",
+        "role": "toe.R.front3",
+        "parent": "ch-piquito-030a.foot.R",
+        "head": [
+          -0.015,
+          0.005,
+          0.0
+        ],
+        "tail": [
+          -0.01,
+          0.015,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      },
+      {
+        "id": "ch-piquito-030a.toe.R.back",
+        "role": "toe.R.back",
+        "parent": "ch-piquito-030a.foot.R",
+        "head": [
+          -0.015,
+          0.005,
+          0.0
+        ],
+        "tail": [
+          -0.015,
+          -0.005,
+          0.0
+        ],
+        "limits_deg": [
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "source": "Argon_GENERATED_ch-piquito-030a"
+      }
+    ]
+  },
+  "bone_radii_m": {
+    "ch-piquito-030a.root": 0.025,
+    "ch-piquito-030a.neck": 0.02,
+    "ch-piquito-030a.head": 0.025,
+    "ch-piquito-030a.beak": 0.005,
+    "ch-piquito-030a.tail": 0.01,
+    "ch-piquito-030a.wing.L": 0.01,
+    "ch-piquito-030a.wing.R": 0.01,
+    "ch-piquito-030a.leg.L": 0.004,
+    "ch-piquito-030a.leg.R": 0.004,
+    "ch-piquito-030a.foot.L": 0.004,
+    "ch-piquito-030a.foot.R": 0.004,
+    "ch-piquito-030a.toe.L.front1": 0.002,
+    "ch-piquito-030a.toe.L.front2": 0.002,
+    "ch-piquito-030a.toe.L.front3": 0.002,
+    "ch-piquito-030a.toe.L.back": 0.002,
+    "ch-piquito-030a.toe.R.front1": 0.002,
+    "ch-piquito-030a.toe.R.front2": 0.002,
+    "ch-piquito-030a.toe.R.front3": 0.002,
+    "ch-piquito-030a.toe.R.back": 0.002
+  },
+  "source": "Argon_GENERATED_ch-piquito-030a",
+  "status": "GENERATED_DESIGN_VALIDATED_TOPOLOGY_ONLY",
+  "missing_physics_and_anchor_source": "Falta representacion fisica declarativa. No se certifica anclaje al hombro de Eco ni colisiones; unicamente se declara la estructura de huesos y apariencia propuesta segun ADN y orden de Ricardo."
+}

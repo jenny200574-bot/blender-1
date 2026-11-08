@@ -1,0 +1,97 @@
+{
+  "recipes": [
+    {
+      "id": "receta_ovoide_mock_unidad",
+      "source": "mock CPU t314, no Argon real",
+      "parts": [
+        {
+          "id": "prop_base",
+          "shape": "ELLIPSOID",
+          "dimensions_m": [
+            0.5,
+            0.3,
+            0.252
+          ],
+          "position_m": [
+            0,
+            0,
+            0.126
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "resolution": 24,
+          "material": {
+            "rgba": [
+              0.95,
+              0.7,
+              0.05,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.45
+          },
+          "source": "respuesta mock de unidad"
+        },
+        {
+          "id": "prop_lid",
+          "shape": "ELLIPSOID",
+          "dimensions_m": [
+            0.5,
+            0.3,
+            0.108
+          ],
+          "position_m": [
+            0,
+            0,
+            0.306
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "resolution": 24,
+          "material": {
+            "rgba": [
+              0.95,
+              0.7,
+              0.05,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.45
+          },
+          "source": "respuesta mock de unidad"
+        }
+      ],
+      "features": [
+        "tapa_ovoide_unica"
+      ],
+      "validation": {
+        "passed": true,
+        "dimensions_m": [
+          0.5,
+          0.3,
+          0.36
+        ],
+        "tolerance_m": 0.001,
+        "part_count": 2,
+        "boxes": false,
+        "query_sha256": "99d9281bccbf094af61a1bdfc8f9d8ea0f32c40a69450d8347bf483685f3dfa6"
+      },
+      "validated": true,
+      "query_sha256": "99d9281bccbf094af61a1bdfc8f9d8ea0f32c40a69450d8347bf483685f3dfa6",
+      "reference_dimensions_m": [
+        0.5,
+        0.3,
+        0.36
+      ],
+      "created_at": "2026-11-07T10:28:08.448427-05:00",
+      "origin": "mock_argon",
+      "recipe_sha256": "54c5f3930a7d19f1da83cab96abf871ca4bb15f914cbe49135a6a19338f11cc9"
+    }
+  ]
+}

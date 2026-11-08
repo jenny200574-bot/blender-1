@@ -1,0 +1,13 @@
+test_all_scene_assets_hashes (__main__.Tests.test_all_scene_assets_hashes) ... ok
+test_automatic_paid_disabled (__main__.Tests.test_automatic_paid_disabled) ... ok
+test_camera_values_and_original_timing (__main__.Tests.test_camera_values_and_original_timing) ... ok
+test_cpu_guard_stays_blocked (__main__.Tests.test_cpu_guard_stays_blocked) ... ok
+test_exact_object_identifiers_only (__main__.Tests.test_exact_object_identifiers_only) ... ok
+test_flat_components_unchanged (__main__.Tests.test_flat_components_unchanged) ... ok
+test_provisional_not_silently_removed (__main__.Tests.test_provisional_not_silently_removed) ... ok
+test_recipes_passed_without_tolerance_change (__main__.Tests.test_recipes_passed_without_tolerance_change) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.028s
+
+OK

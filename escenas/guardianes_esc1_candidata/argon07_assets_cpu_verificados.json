@@ -1,0 +1,819 @@
+{
+  "passed": true,
+  "checks": {
+    "all_passed": true,
+    "checks": [
+      {
+        "id": "av07.state.0",
+        "frame": 1,
+        "object": "av07.book.letter_a",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.1",
+        "frame": 13,
+        "object": "av07.book.letter_a",
+        "property": "location",
+        "actual": [
+          -0.10000000149011612,
+          0.0,
+          0.03500000014901161
+        ],
+        "expected": [
+          -0.1,
+          0,
+          0.035
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.2",
+        "frame": 25,
+        "object": "av07.book.letter_a",
+        "property": "location",
+        "actual": [
+          -0.09000000357627869,
+          -0.009999999776482582,
+          0.054999999701976776
+        ],
+        "expected": [
+          -0.09000000000000001,
+          -0.01,
+          0.055
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.3",
+        "frame": 1321,
+        "object": "av07.book.letter_a",
+        "property": "hide_render",
+        "actual": true,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "id": "av07.state.4",
+        "frame": 1,
+        "object": "av07.book.letter_e",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.5",
+        "frame": 13,
+        "object": "av07.book.letter_e",
+        "property": "location",
+        "actual": [
+          0.05000000074505806,
+          0.05000000074505806,
+          0.03500000014901161
+        ],
+        "expected": [
+          0.05,
+          0.05,
+          0.035
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.6",
+        "frame": 25,
+        "object": "av07.book.letter_e",
+        "property": "location",
+        "actual": [
+          0.05999999865889549,
+          0.03999999910593033,
+          0.054999999701976776
+        ],
+        "expected": [
+          0.060000000000000005,
+          0.04,
+          0.055
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.7",
+        "frame": 1321,
+        "object": "av07.book.letter_e",
+        "property": "hide_render",
+        "actual": true,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "id": "av07.state.8",
+        "frame": 1,
+        "object": "av07.book.letter_o",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.9",
+        "frame": 13,
+        "object": "av07.book.letter_o",
+        "property": "location",
+        "actual": [
+          0.05000000074505806,
+          -0.05000000074505806,
+          0.03500000014901161
+        ],
+        "expected": [
+          0.05,
+          -0.05,
+          0.035
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.10",
+        "frame": 25,
+        "object": "av07.book.letter_o",
+        "property": "location",
+        "actual": [
+          0.05999999865889549,
+          -0.05999999865889549,
+          0.054999999701976776
+        ],
+        "expected": [
+          0.060000000000000005,
+          -0.060000000000000005,
+          0.055
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.11",
+        "frame": 1321,
+        "object": "av07.book.letter_o",
+        "property": "hide_render",
+        "actual": true,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "id": "av07.state.12",
+        "frame": 1321,
+        "object": "av07.book.page_left",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.13",
+        "frame": 1321,
+        "object": "av07.book.page_right",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.14",
+        "frame": 1,
+        "object": "av07.window.rainbow.red",
+        "property": "material.base_color",
+        "actual": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "expected": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.15",
+        "frame": 1321,
+        "object": "av07.window.rainbow.red",
+        "property": "material.base_color",
+        "actual": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "expected": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.16",
+        "frame": 1,
+        "object": "av07.window.rainbow.orange",
+        "property": "material.base_color",
+        "actual": [
+          1.0,
+          0.5,
+          0.0,
+          1.0
+        ],
+        "expected": [
+          1.0,
+          0.5,
+          0.0,
+          1.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.17",
+        "frame": 1321,
+        "object": "av07.window.rainbow.orange",
+        "property": "material.base_color",
+        "actual": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "expected": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.18",
+        "frame": 1,
+        "object": "av07.window.rainbow.yellow",
+        "property": "material.base_color",
+        "actual": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "expected": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.19",
+        "frame": 1321,
+        "object": "av07.window.rainbow.yellow",
+        "property": "material.base_color",
+        "actual": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "expected": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.20",
+        "frame": 1,
+        "object": "av07.window.rainbow.green",
+        "property": "material.base_color",
+        "actual": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "expected": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.21",
+        "frame": 1321,
+        "object": "av07.window.rainbow.green",
+        "property": "material.base_color",
+        "actual": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "expected": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.22",
+        "frame": 1,
+        "object": "av07.window.rainbow.blue",
+        "property": "material.base_color",
+        "actual": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "expected": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.23",
+        "frame": 1321,
+        "object": "av07.window.rainbow.blue",
+        "property": "material.base_color",
+        "actual": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "expected": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.24",
+        "frame": 1,
+        "object": "av07.window.rainbow.indigo",
+        "property": "material.base_color",
+        "actual": [
+          0.28999999165534973,
+          0.0,
+          0.5099999904632568,
+          1.0
+        ],
+        "expected": [
+          0.29,
+          0.0,
+          0.51,
+          1.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.25",
+        "frame": 1321,
+        "object": "av07.window.rainbow.indigo",
+        "property": "material.base_color",
+        "actual": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "expected": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.26",
+        "frame": 1,
+        "object": "av07.window.rainbow.violet",
+        "property": "material.base_color",
+        "actual": [
+          0.5,
+          0.0,
+          0.5,
+          1.0
+        ],
+        "expected": [
+          0.5,
+          0.0,
+          0.5,
+          1.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.27",
+        "frame": 1321,
+        "object": "av07.window.rainbow.violet",
+        "property": "material.base_color",
+        "actual": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "expected": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.33",
+        "frame": 469,
+        "object": "av07.fx.blue",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.34",
+        "frame": 1321,
+        "object": "av07.fx.blue",
+        "property": "hide_render",
+        "actual": true,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "id": "av07.state.35",
+        "frame": 433,
+        "object": "av07.fx.blue",
+        "property": "location",
+        "actual": [
+          1.4500000476837158,
+          1.75,
+          2.0
+        ],
+        "expected": [
+          1.45,
+          1.75,
+          2.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.36",
+        "frame": 505,
+        "object": "av07.fx.blue",
+        "property": "location",
+        "actual": [
+          1.4500000476837158,
+          1.75,
+          0.05000000074505806
+        ],
+        "expected": [
+          1.45,
+          1.75,
+          0.04999999999999999
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.37",
+        "frame": 469,
+        "object": "av07.fx.magenta",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.38",
+        "frame": 1321,
+        "object": "av07.fx.magenta",
+        "property": "hide_render",
+        "actual": true,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "id": "av07.state.39",
+        "frame": 433,
+        "object": "av07.fx.magenta",
+        "property": "location",
+        "actual": [
+          2.75,
+          2.6500000953674316,
+          2.0
+        ],
+        "expected": [
+          2.75,
+          2.65,
+          2.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.40",
+        "frame": 505,
+        "object": "av07.fx.magenta",
+        "property": "location",
+        "actual": [
+          2.75,
+          2.6500000953674316,
+          0.05000000074505806
+        ],
+        "expected": [
+          2.75,
+          2.65,
+          0.04999999999999999
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.41",
+        "frame": 469,
+        "object": "av07.fx.green",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.42",
+        "frame": 1321,
+        "object": "av07.fx.green",
+        "property": "hide_render",
+        "actual": true,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "id": "av07.state.43",
+        "frame": 433,
+        "object": "av07.fx.green",
+        "property": "location",
+        "actual": [
+          3.25,
+          2.1500000953674316,
+          2.0
+        ],
+        "expected": [
+          3.25,
+          2.15,
+          2.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.44",
+        "frame": 505,
+        "object": "av07.fx.green",
+        "property": "location",
+        "actual": [
+          3.25,
+          2.1500000953674316,
+          0.05000000074505806
+        ],
+        "expected": [
+          3.25,
+          2.15,
+          0.04999999999999999
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.45",
+        "frame": 469,
+        "object": "av07.fx.yellow",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.46",
+        "frame": 1321,
+        "object": "av07.fx.yellow",
+        "property": "hide_render",
+        "actual": true,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "id": "av07.state.47",
+        "frame": 433,
+        "object": "av07.fx.yellow",
+        "property": "location",
+        "actual": [
+          2.950000047683716,
+          1.649999976158142,
+          2.0
+        ],
+        "expected": [
+          2.95,
+          1.65,
+          2.0
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.48",
+        "frame": 505,
+        "object": "av07.fx.yellow",
+        "property": "location",
+        "actual": [
+          2.950000047683716,
+          1.649999976158142,
+          0.05000000074505806
+        ],
+        "expected": [
+          2.95,
+          1.65,
+          0.04999999999999999
+        ],
+        "passed": true
+      },
+      {
+        "id": "av07.state.49",
+        "frame": 1321,
+        "object": "obj-cofre-dorado",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.50",
+        "frame": 1321,
+        "object": "obj-cofre-dorado.candado_color",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.51",
+        "frame": 1321,
+        "object": "obj-cofre-dorado.candado_numero",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.52",
+        "frame": 1321,
+        "object": "obj-cofre-dorado.candado_letra",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.53",
+        "frame": 1321,
+        "object": "av07.lock.color.shackle",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.54",
+        "frame": 1321,
+        "object": "av07.lock.letter.glyph",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.55",
+        "frame": 1321,
+        "object": "av07.lock.letter.shackle",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.56",
+        "frame": 1321,
+        "object": "av07.lock.number.glyph",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.57",
+        "frame": 1321,
+        "object": "av07.lock.number.shackle",
+        "property": "hide_render",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "id": "av07.state.58",
+        "frame": 1321,
+        "object": "obj-cofre-dorado.tapa",
+        "property": "rotation_euler",
+        "actual": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "expected": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "passed": true
+      }
+    ],
+    "errors": []
+  },
+  "mesh_count": 40,
+  "nonmanifold": [],
+  "data_tracks_verified": 22,
+  "assertions_verified": 54,
+  "not_built_actors": [
+    "ch-don-caos-7adf",
+    "ch-spark-468e",
+    "ch-valentina-a9be",
+    "ch-eco-eff3",
+    "ch-pintor-bce0",
+    "ch-piquito-030a"
+  ],
+  "skipped_actor_assertions": [
+    {
+      "id": "av07.state.28",
+      "object": "ch-spark-468e",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.29",
+      "object": "ch-valentina-a9be",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.30",
+      "object": "ch-eco-eff3",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.31",
+      "object": "ch-pintor-bce0",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    },
+    {
+      "id": "av07.state.32",
+      "object": "ch-piquito-030a",
+      "property": "hide_render",
+      "t": 55,
+      "value": false,
+      "tolerance": 1e-05,
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification"
+    }
+  ],
+  "full_esc1_preview_passed": false,
+  "physics_or_2B_approved": false,
+  "production_approved": false,
+  "gpu_used": false,
+  "scope": "REAL CPU Blender mesh/material/animation assertions for assets only; no fake actor placeholders; full scene remains gated"
+}

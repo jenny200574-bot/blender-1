@@ -1,0 +1,367 @@
+{
+ "_nota": "Catálogo de reglas de validación de coherencia de escena (crece solo). origen: codigo | ia | humano.",
+ "reglas": {
+  "dentro_de_limites": {
+   "tipo": "dentro_de_limites",
+   "descripcion": "Todo objeto queda dentro del piso y del lado interior de los muros (salvo que el ADN lo ponga afuera)",
+   "parametros": {
+    "tolerancia_m": 0.02,
+    "exentos_formula": [
+     "skyline_neon",
+     "piso_losas_juntas",
+     "murete_cornisa"
+    ]
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 2,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "apoyado_en_piso": {
+   "tipo": "apoyado_en_piso",
+   "descripcion": "Objetos de escena tocan el piso: ni flotan ni se hunden (patas del tanque al piso)",
+   "parametros": {
+    "tolerancia_m": 0.03,
+    "exentos_formula": [
+     "skyline_neon"
+    ]
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 0,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "sin_interseccion_objetos": {
+   "tipo": "sin_interseccion_objetos",
+   "descripcion": "Los objetos no se atraviesan entre sí",
+   "parametros": {
+    "tolerancia_m": 0.02,
+    "exentos_formula": [
+     "piso_losas_juntas",
+     "skyline_neon"
+    ],
+    "pares_permitidos": [
+     [
+      "murete_cornisa",
+      "murete_cornisa"
+     ]
+    ]
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 2,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "personaje_no_atraviesa": {
+   "tipo": "personaje_no_atraviesa",
+   "descripcion": "Ningún personaje atraviesa un objeto en ningún cuadro (salvo la Novia dentro de la prisión)",
+   "parametros": {
+    "margen_m": 0.05,
+    "permitidos": [
+     [
+      "novia",
+      "prision_octogonal"
+     ]
+    ],
+    "exentos_formula": [
+     "piso_losas_juntas",
+     "skyline_neon"
+    ]
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 0,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "escala_vs_adn": {
+   "tipo": "escala_vs_adn",
+   "descripcion": "El tamaño construido coincide con el pedido por el ADN/colocación",
+   "parametros": {
+    "tolerancia_rel": 0.3
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 1,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "visible_en_camara": {
+   "tipo": "visible_en_camara",
+   "descripcion": "Lo que el plan necesita visible entra en cuadro y no queda detrás de un muro",
+   "parametros": {
+    "cuadros": [
+     1,
+     120,
+     240
+    ],
+    "requeridos": [
+     "personajes",
+     "prision_octogonal",
+     "tanque_agua_elevado"
+    ]
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 0,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "lado_correcto_muro": {
+   "tipo": "lado_correcto_muro",
+   "descripcion": "Objetos de la azotea quedan del mismo lado del muro que la cámara",
+   "parametros": {
+    "exentos_formula": [
+     "skyline_neon",
+     "murete_cornisa",
+     "piso_losas_juntas"
+    ]
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 0,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "objeto_mano_toca": {
+   "tipo": "objeto_mano_toca",
+   "descripcion": "El objeto en la mano toca la mano en todos los cuadros",
+   "parametros": {
+    "max_dist_m": 0.08
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 0,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "luz_con_objeto": {
+   "tipo": "luz_con_objeto",
+   "descripcion": "Cada luz pertenece a un objeto o está junto a uno",
+   "parametros": {
+    "max_dist_m": 0.6,
+    "exentas_tipo": [
+     "SUN"
+    ]
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 0,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "posicion_vs_plan": {
+   "tipo": "posicion_vs_plan",
+   "descripcion": "Vista cenital: los personajes empiezan donde dice el plan",
+   "parametros": {
+    "tolerancia_m": 0.35
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T09:32:04-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 0,
+   "historial": [],
+   "ultima": {
+    "fecha": "2026-11-04T16:57:12-05:00",
+    "fallas": 0
+   }
+  },
+  "ia_poligono_apoyo_incorporacion": {
+   "tipo": "sugerida",
+   "descripcion": "Al levantarse del suelo en fase lateral (entre tendido y cuadrupedia), el personaje debe mantener al menos tres puntos de contacto distribuidos (manos y rodillas/muslos) que encierren la proyección vertical del centro de masa con margen positivo.",
+   "parametros": {},
+   "origen": "ia (Argon)",
+   "fecha": "2026-11-04T09:37:12-05:00",
+   "version": 1,
+   "activa": false,
+   "fallas_total": 0,
+   "historial": [],
+   "estado": "pendiente de programar"
+  },
+  "ia_postura_arpon_altura_mano": {
+   "tipo": "sugerida",
+   "descripcion": "En toda acción de apuntar o preparar una lanza para arrojar como arpón/jabalina, la mano portadora debe situarse a una altura igual o superior al hombro (Z_mano >= Z_hombro - 0.05 m) con el codo flexionado hacia atrás y el brazo opuesto adelantado como contrapeso y guía.",
+   "parametros": {},
+   "origen": "ia (Argon)",
+   "fecha": "2026-11-04T09:37:12-05:00",
+   "version": 1,
+   "activa": false,
+   "fallas_total": 0,
+   "historial": [],
+   "estado": "pendiente de programar"
+  },
+  "ia_altura_mano_arpon_bajo_coronilla": {
+   "tipo": "sugerida",
+   "descripcion": "Cuando un personaje apunta una lanza como arpón (mano_a_altura_de_hombro=true), la mano de agarre debe situarse entre 0.0 y 0.30 m por encima de la articulación del hombro y al menos 0.08 m por debajo de la coronilla para evitar que parezca alzada sobre la cabeza.",
+   "parametros": {},
+   "origen": "ia (Argon)",
+   "fecha": "2026-11-04T09:45:14-05:00",
+   "version": 1,
+   "activa": false,
+   "fallas_total": 0,
+   "historial": [],
+   "estado": "pendiente de programar"
+  },
+  "ia_poligono_amplio_transicion_suelo": {
+   "tipo": "sugerida",
+   "descripcion": "En las fases intermedias de levantarse desde el suelo (de lado y cuadrupedia), las manos y rodillas deben tener abducción lateral suficiente (≥18-30°) y declararse junto con los pies/piernas en contacto para que el polígono de sustentación encierre las oscilaciones del centro de masa.",
+   "parametros": {},
+   "origen": "ia (Argon)",
+   "fecha": "2026-11-04T09:45:14-05:00",
+   "version": 1,
+   "activa": false,
+   "fallas_total": 0,
+   "historial": [],
+   "estado": "pendiente de programar"
+  },
+  "limites_fisicos_bloqueados": {
+   "tipo": "limites_fisicos",
+   "descripcion": "Topes físicos humanos BLOQUEADOS: Argon ni el motor pueden subirlos para pasar la validación. Solo Ricardo puede cambiarlos (editar a mano con bloqueada_por='Ricardo').",
+   "parametros": {
+    "aceleracion_max_com_m_s2": 20.0,
+    "vel_max_deg_s": 600.0,
+    "resbale_pie_max_cm_cuadro": 5.0,
+    "equilibrio_max_fuera_m": 0.06,
+    "equilibrio_cuadros_fuera_max": 2,
+    "saltitos_max": 0
+   },
+   "bloqueada": true,
+   "bloqueada_por": "Ricardo t297u (aprobó v9: topes físicos bloqueados, COM ~20 m/s²)",
+   "origen": "humano",
+   "fecha": "2026-11-04T10:02:53-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 0,
+   "historial": []
+  },
+  "tiempos_accion": {
+   "tipo": "tiempos",
+   "descripcion": "Tiempos de cada acción: coherentes con la narración, palabras de ritmo (factor mínimo) y duración mínima por fase según los topes físicos bloqueados",
+   "parametros": {
+    "tolerancia_s": 0.5,
+    "cobertura_min": 0.5,
+    "tipos_estado": [
+     "quieto",
+     "mirar"
+    ],
+    "verbos_accion": {
+     "levantarse": [
+      "se levanta",
+      "levantarse",
+      "se incorpora",
+      "ponerse de pie",
+      "queda de pie"
+     ],
+     "arrodillarse": [
+      "de rodillas",
+      "arrodill"
+     ],
+     "acercarse": [
+      "paso",
+      "se acerca",
+      "avanza",
+      "camina"
+     ],
+     "mirar": [
+      "mira",
+      "mirada"
+     ],
+     "apuntar_arma": [
+      "apunt"
+     ],
+     "quieto": [
+      "permanece",
+      "quieto",
+      "firme"
+     ],
+     "sentarse": [
+      "se sienta"
+     ],
+     "caer": [
+      "cae ",
+      "se cae"
+     ],
+     "correr": [
+      "corre"
+     ]
+    },
+    "palabras_ritmo": {
+     "lentamente": 1.5,
+     "despacio": 1.5,
+     "lento": 1.4,
+     "con esfuerzo": 1.3,
+     "con dificultad": 1.3,
+     "pesad": 1.2,
+     "temblor": 1.15,
+     "apenas": 1.15,
+     "rapid": 0.7,
+     "de golpe": 0.6,
+     "de un salto": 0.6
+    },
+    "margen": 1.1,
+    "k_acel": 5.77,
+    "k_vel": 1.875
+   },
+   "origen": "codigo",
+   "fecha": "2026-11-04T12:28:02-05:00",
+   "version": 1,
+   "activa": true,
+   "fallas_total": 2,
+   "historial": [],
+   "script": "validar_tiempos.py",
+   "ultima": {
+    "fecha": "2026-11-04T16:55:48-05:00",
+    "fallas": 1
+   }
+  }
+ }
+}

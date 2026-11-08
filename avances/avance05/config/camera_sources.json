@@ -1,0 +1,748 @@
+{
+  "storyboard_camara.json": {
+    "version": "sb_dsl_a_blender_borrador_v1",
+    "dsl_commit": "7cbc087dabe0d4a8ec7a4ecf5b24d786783806d3",
+    "sensor_mm": [
+      36.0,
+      20.25
+    ],
+    "pista": "BORRADOR: el 02N aún no lee este archivo. Distancias solo con alturas medidas del diseño de Blender.",
+    "alturas_por_medir": [
+      "ch-don-caos-7adf",
+      "ch-eco-eff3",
+      "ch-pintor-bce0",
+      "ch-spark-468e",
+      "ch-valentina-a9be"
+    ],
+    "vinetas": [
+      {
+        "vineta": "v1",
+        "t_abs": [
+          0.0,
+          3.0
+        ],
+        "objetivo": "ch-don-caos-7adf",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "HIGHANGLE",
+        "lado_objetivo": "L",
+        "segmentos": [
+          {
+            "t_abs": [
+              0.0,
+              1.0
+            ],
+            "movimiento": "STATIC",
+            "args": {},
+            "curva": "suave_salida"
+          },
+          {
+            "t_abs": [
+              1.0,
+              3.0
+            ],
+            "movimiento": "DOLLYIN",
+            "args": {
+              "size_range": [
+                "MS",
+                "MCU"
+              ],
+              "speed": "BRISK"
+            },
+            "curva": "suave_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 0.0,
+            "plano": "MS",
+            "lente_mm": 35.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 3.0,
+            "plano": "MCU",
+            "lente_mm": 35.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "CORTE"
+      },
+      {
+        "vineta": "v2",
+        "t_abs": [
+          3.0,
+          9.0
+        ],
+        "objetivo": "ch-don-caos-7adf",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "LOWANGLE",
+        "lado_objetivo": "L",
+        "segmentos": [
+          {
+            "t_abs": [
+              3.0,
+              9.0
+            ],
+            "movimiento": "DOLLYOUT",
+            "args": {
+              "size_range": [
+                "CU",
+                "MS"
+              ],
+              "speed": "SLOW"
+            },
+            "curva": "suave_entrada_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 3.0,
+            "plano": "CU",
+            "lente_mm": 24.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 9.0,
+            "plano": "MS",
+            "lente_mm": 24.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "CORTE_SECO"
+      },
+      {
+        "vineta": "v3",
+        "t_abs": [
+          9.0,
+          11.0
+        ],
+        "objetivo": "ch-don-caos-7adf",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "EYELEVEL",
+        "lado_objetivo": "L",
+        "segmentos": [
+          {
+            "t_abs": [
+              9.0,
+              11.0
+            ],
+            "movimiento": "PAN",
+            "args": {
+              "dir_lr": "R",
+              "speed": "BRISK"
+            },
+            "curva": "suave_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 9.0,
+            "plano": "WS",
+            "lente_mm": 24.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 11.0,
+            "plano": "WS",
+            "lente_mm": 24.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": "por decidir en 02N (el DSL no dio grados)"
+          }
+        ],
+        "transicion_salida": "CORTE"
+      },
+      {
+        "vineta": "v4",
+        "t_abs": [
+          11.0,
+          18.0
+        ],
+        "objetivo": "ch-don-caos-7adf",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "LOWANGLE",
+        "lado_objetivo": "L",
+        "segmentos": [
+          {
+            "t_abs": [
+              11.0,
+              15.5
+            ],
+            "movimiento": "STATIC",
+            "args": {},
+            "curva": "suave_entrada_salida"
+          },
+          {
+            "t_abs": [
+              15.5,
+              18.0
+            ],
+            "movimiento": "TRACK",
+            "args": {
+              "screen": "L2R",
+              "speed": "SLOW"
+            },
+            "curva": "suave_entrada_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 11.0,
+            "plano": "MS",
+            "lente_mm": 35.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 18.0,
+            "plano": "MS",
+            "lente_mm": 35.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "CORTE_SECO"
+      },
+      {
+        "vineta": "v5",
+        "t_abs": [
+          18.0,
+          21.0
+        ],
+        "objetivo": "ch-pintor-bce0",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "EYELEVEL",
+        "lado_objetivo": "R",
+        "segmentos": [
+          {
+            "t_abs": [
+              18.0,
+              21.0
+            ],
+            "movimiento": "CRANE",
+            "args": {
+              "dir_ud": "DOWN",
+              "speed": "BRISK"
+            },
+            "curva": "suave_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 18.0,
+            "plano": "WS",
+            "lente_mm": 24.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 21.0,
+            "plano": "WS",
+            "lente_mm": 24.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "CORTE"
+      },
+      {
+        "vineta": "v6",
+        "t_abs": [
+          21.0,
+          25.0
+        ],
+        "objetivo": "ch-spark-468e",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "LOWANGLE",
+        "lado_objetivo": "C",
+        "segmentos": [
+          {
+            "t_abs": [
+              21.0,
+              25.0
+            ],
+            "movimiento": "DOLLYIN",
+            "args": {
+              "size_range": [
+                "MCU",
+                "CU"
+              ],
+              "speed": "SLOW"
+            },
+            "curva": "suave_entrada_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 21.0,
+            "plano": "MCU",
+            "lente_mm": 35.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 25.0,
+            "plano": "CU",
+            "lente_mm": 35.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "CORTE_SECO"
+      },
+      {
+        "vineta": "v7",
+        "t_abs": [
+          25.0,
+          30.0
+        ],
+        "objetivo": "ch-pintor-bce0",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "EYELEVEL",
+        "lado_objetivo": "R",
+        "segmentos": [
+          {
+            "t_abs": [
+              25.0,
+              26.5
+            ],
+            "movimiento": "PAN",
+            "args": {
+              "dir_lr": "R",
+              "speed": "BRISK"
+            },
+            "curva": "suave_salida"
+          },
+          {
+            "t_abs": [
+              26.5,
+              30.0
+            ],
+            "movimiento": "STATIC",
+            "args": {},
+            "curva": "suave_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 25.0,
+            "plano": "MS",
+            "lente_mm": 28.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 26.5,
+            "plano": "MS",
+            "lente_mm": 28.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": "por decidir en 02N (el DSL no dio grados)"
+          }
+        ],
+        "transicion_salida": "CORTE"
+      },
+      {
+        "vineta": "v8",
+        "t_abs": [
+          30.0,
+          33.0
+        ],
+        "objetivo": "ch-valentina-a9be",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "HIGHANGLE",
+        "lado_objetivo": "L",
+        "segmentos": [
+          {
+            "t_abs": [
+              30.0,
+              33.0
+            ],
+            "movimiento": "DOLLYIN",
+            "args": {
+              "size_range": [
+                "FS",
+                "MS"
+              ],
+              "speed": "SLOW"
+            },
+            "curva": "suave_entrada_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 30.0,
+            "plano": "FS",
+            "lente_mm": 24.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 33.0,
+            "plano": "MS",
+            "lente_mm": 24.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "CORTE"
+      },
+      {
+        "vineta": "v9",
+        "t_abs": [
+          33.0,
+          40.0
+        ],
+        "objetivo": "ch-valentina-a9be",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "EYELEVEL",
+        "lado_objetivo": "L",
+        "segmentos": [
+          {
+            "t_abs": [
+              33.0,
+              36.0
+            ],
+            "movimiento": "STATIC",
+            "args": {},
+            "curva": "suave_entrada_salida"
+          },
+          {
+            "t_abs": [
+              36.0,
+              40.0
+            ],
+            "movimiento": "DOLLYIN",
+            "args": {
+              "size_range": [
+                "MCU",
+                "CU"
+              ],
+              "speed": "VSLOW"
+            },
+            "curva": "suave_entrada_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 33.0,
+            "plano": "MCU",
+            "lente_mm": 50.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 40.0,
+            "plano": "CU",
+            "lente_mm": 50.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "CORTE"
+      },
+      {
+        "vineta": "v10",
+        "t_abs": [
+          40.0,
+          44.0
+        ],
+        "objetivo": "ch-eco-eff3",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "LOWANGLE",
+        "lado_objetivo": "R",
+        "segmentos": [
+          {
+            "t_abs": [
+              40.0,
+              44.0
+            ],
+            "movimiento": "STATIC",
+            "args": {},
+            "curva": "lineal"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 40.0,
+            "plano": "MS",
+            "lente_mm": 35.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "CORTE"
+      },
+      {
+        "vineta": "v11",
+        "t_abs": [
+          44.0,
+          47.4
+        ],
+        "objetivo": "ch-valentina-a9be",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "EYELEVEL",
+        "lado_objetivo": "L",
+        "segmentos": [
+          {
+            "t_abs": [
+              44.0,
+              46.0
+            ],
+            "movimiento": "DOLLYIN",
+            "args": {
+              "size_range": [
+                "FS",
+                "MS"
+              ],
+              "speed": "SLOW"
+            },
+            "curva": "suave_entrada_salida"
+          },
+          {
+            "t_abs": [
+              46.0,
+              47.4
+            ],
+            "movimiento": "STATIC",
+            "args": {},
+            "curva": "suave_entrada_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 44.0,
+            "plano": "FS",
+            "lente_mm": 28.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 46.0,
+            "plano": "MS",
+            "lente_mm": 28.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "CORTE"
+      },
+      {
+        "vineta": "v12",
+        "t_abs": [
+          47.4,
+          55.0
+        ],
+        "objetivo": "ch-spark-468e",
+        "altura_m": null,
+        "altura_fuente": "por medir en 02N",
+        "angulo": "LOWANGLE",
+        "lado_objetivo": "C",
+        "segmentos": [
+          {
+            "t_abs": [
+              47.4,
+              52.9
+            ],
+            "movimiento": "DOLLYIN",
+            "args": {
+              "size_range": [
+                "CU",
+                "ECU"
+              ],
+              "speed": "VSLOW"
+            },
+            "curva": "suave_entrada_salida"
+          },
+          {
+            "t_abs": [
+              52.9,
+              55.0
+            ],
+            "movimiento": "STATIC",
+            "args": {},
+            "curva": "suave_entrada_salida"
+          }
+        ],
+        "keyframes": [
+          {
+            "t": 47.4,
+            "plano": "CU",
+            "lente_mm": 50.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          },
+          {
+            "t": 52.9,
+            "plano": "ECU",
+            "lente_mm": 50.0,
+            "distancia_m": "por medir en 02N",
+            "giro_grados": 0
+          }
+        ],
+        "transicion_salida": "FIN_ESCENA"
+      }
+    ]
+  },
+  "official_heights_m": {
+    "ch-don-caos-7adf": 0.18,
+    "ch-spark-468e": 1.16,
+    "ch-valentina-a9be": 1.12,
+    "ch-eco-eff3": 1.02,
+    "ch-pintor-bce0": 1.06,
+    "ch-piquito-030a": 0.1
+  },
+  "bindings": {
+    "obj-libro-cuentos__e1-8": {
+      "scene_object_id": "obj-libro-cuentos__e1-8",
+      "position_m": [
+        1.2000000476837158,
+        2.5999999046325684,
+        0.5400000214576721
+      ],
+      "bbox_world_m": {
+        "min": [
+          0.9731684327125549,
+          2.42266583442688,
+          0.5200000405311584
+        ],
+        "max": [
+          1.4268317222595215,
+          2.777333974838257,
+          0.5600000023841858
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/19",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "Ventana con vista al arcoíris": {
+      "scene_object_id": "Ventana con vista al arcoíris",
+      "position_m": [
+        3.049999952316284,
+        4.025000095367432,
+        1.5499999523162842
+      ],
+      "bbox_world_m": {
+        "min": [
+          2.25,
+          3.950000047683716,
+          0.8999999761581421
+        ],
+        "max": [
+          3.8499999046325684,
+          4.100000381469727,
+          2.1999998092651367
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/10",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "obj-cama": {
+      "scene_object_id": "obj-cama",
+      "position_m": [
+        1.0499999523162842,
+        2.5999999046325684,
+        0.42500001192092896
+      ],
+      "bbox_world_m": {
+        "min": [
+          0.09999994188547134,
+          2.0749998092651367,
+          0.0
+        ],
+        "max": [
+          2.0,
+          3.125,
+          0.8500000238418579
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/14",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "Centro de la habitación": {
+      "scene_object_id": "Centro de la habitación",
+      "position_m": [
+        3.3499999046325684,
+        3.0999999046325684,
+        0.019999999552965164
+      ],
+      "bbox_world_m": {
+        "min": [
+          2.25,
+          1.9999998807907104,
+          0.009999999776482582
+        ],
+        "max": [
+          4.449999809265137,
+          4.199999809265137,
+          0.029999999329447746
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/11",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "obj-visor-spark": {
+      "scene_object_id": "obj-visor-spark",
+      "position_m": [
+        1.649999976158142,
+        1.850000023841858,
+        0.9800000190734863
+      ],
+      "bbox_world_m": {
+        "min": [
+          1.5699999332427979,
+          1.7899999618530273,
+          0.9500000476837158
+        ],
+        "max": [
+          1.7300000190734863,
+          1.9100000858306885,
+          1.0099999904632568
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/21",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "obj-cofre-dorado": {
+      "scene_object_id": "obj-cofre-dorado",
+      "position_m": [
+        2.25,
+        2.0,
+        0.24500000476837158
+      ],
+      "bbox_world_m": {
+        "min": [
+          1.9499999284744263,
+          1.7999999523162842,
+          0.02000001072883606
+        ],
+        "max": [
+          2.549999952316284,
+          2.200000047683716,
+          0.4699999988079071
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/22",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    }
+  },
+  "clock": {
+    "fps": 24,
+    "duration_s": 55.0,
+    "rounding": "half_up"
+  }
+}

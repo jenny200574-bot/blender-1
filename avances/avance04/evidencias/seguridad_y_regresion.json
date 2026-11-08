@@ -1,0 +1,46 @@
+{
+  "protected_source_unchanged_comparison": [
+    {
+      "path": "motor/nucleo_bueno_cpu.py",
+      "unchanged": true,
+      "sha256": "37b393677470d862b85c3b54f9bce560d89505b49d28489f12686319c2ad527f"
+    },
+    {
+      "path": "motor/heredado/movimiento_natural.py",
+      "unchanged": true,
+      "sha256": "9c0b3360cffe51f5aaa49d75a118261859a83159fb17e407914fb0d6973d913c"
+    },
+    {
+      "path": "motor_unico.py",
+      "unchanged": true,
+      "sha256": "8a36202424b4bb732306bb742747b5f00e83b6eec48980f06f5d3f17c7498664"
+    },
+    {
+      "path": "evidencia/oro_t317_definitivo/revisor_comparable.json",
+      "unchanged": true,
+      "sha256": "cc38fc2392ed7ad7b8b14a2054e522a516130f778d5b8b8b12bb755a89f32f2e"
+    },
+    {
+      "path": "config/funciones_produccion.json",
+      "unchanged": true,
+      "sha256": "5712f9680ccbe3cc3b55e848fa6f1883b160d8576907f19e6d30d3978d9ffac2"
+    }
+  ],
+  "credential_mode": "0o600",
+  "credential_directory_mode": "0o700",
+  "new_engine_automatic_paid_disabled": true,
+  "argon_envio_off_exists": true,
+  "new_engine_features": {
+    "adn_geometria": true,
+    "apariencia_datos": true,
+    "fx_datos": true,
+    "escenario_vivo": true,
+    "objetos_datos": true,
+    "slerp_raiz": true,
+    "ik_piso_suave": true,
+    "piso_suave": true,
+    "equilibrio_memoria": true,
+    "fase_apoyo": true,
+    "mocap_kimodo": true
+  }
+}

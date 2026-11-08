@@ -1,0 +1,21 @@
+{
+  "engine": "BLENDER_EEVEE",
+  "software_cpu": true,
+  "samples": 32,
+  "resolution": [
+    320,
+    180
+  ],
+  "world_color": [
+    0.06,
+    0.07,
+    0.1
+  ],
+  "world_strength": 0.42,
+  "exposure": 0,
+  "view_transform": "AgX",
+  "look": "AgX - Medium High Contrast",
+  "source": "t316 técnico autorizado; World de biblioteca Star v2; exposición neutra, no dato artístico de escena",
+  "bevel_width_m": 0.008,
+  "bevel_segments": 3
+}

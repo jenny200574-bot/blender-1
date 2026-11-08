@@ -1,0 +1,395 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "partial"
+      ]
+    },
+    "new_objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source_ref": {
+            "type": "string"
+          },
+          "position_m": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "rotation_deg": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "dimensions_m": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "dimension_origin": {
+            "type": "string"
+          },
+          "parts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "shape": {
+                  "type": "string",
+                  "enum": [
+                    "ELLIPSOID",
+                    "CYLINDER",
+                    "CONE",
+                    "POINT_TUBE"
+                  ]
+                },
+                "px": {
+                  "type": "number"
+                },
+                "py": {
+                  "type": "number"
+                },
+                "pz": {
+                  "type": "number"
+                },
+                "rx": {
+                  "type": "number"
+                },
+                "ry": {
+                  "type": "number"
+                },
+                "rz": {
+                  "type": "number"
+                },
+                "dx": {
+                  "type": "number"
+                },
+                "dy": {
+                  "type": "number"
+                },
+                "dz": {
+                  "type": "number"
+                },
+                "r": {
+                  "type": "number"
+                },
+                "g": {
+                  "type": "number"
+                },
+                "b": {
+                  "type": "number"
+                },
+                "a": {
+                  "type": "number"
+                },
+                "metallic": {
+                  "type": "number"
+                },
+                "roughness": {
+                  "type": "number"
+                },
+                "transmission": {
+                  "type": "number"
+                },
+                "emission": {
+                  "type": "number"
+                },
+                "resolution": {
+                  "type": "integer"
+                },
+                "tip_ratio": {
+                  "type": "number"
+                },
+                "radius_m": {
+                  "type": "number"
+                },
+                "plane_normal": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "points": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "number"
+                      },
+                      "y": {
+                        "type": "number"
+                      },
+                      "z": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y",
+                      "z"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "role",
+                "shape",
+                "px",
+                "py",
+                "pz",
+                "rx",
+                "ry",
+                "rz",
+                "dx",
+                "dy",
+                "dz",
+                "r",
+                "g",
+                "b",
+                "a",
+                "metallic",
+                "roughness",
+                "transmission",
+                "emission",
+                "resolution",
+                "tip_ratio",
+                "radius_m",
+                "plane_normal",
+                "points"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "source_ref",
+          "position_m",
+          "rotation_deg",
+          "dimensions_m",
+          "dimension_origin",
+          "parts"
+        ]
+      }
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "object": {
+            "type": "string"
+          },
+          "property": {
+            "type": "string",
+            "enum": [
+              "hide_render",
+              "location",
+              "rotation_euler",
+              "scale",
+              "material.base_color",
+              "material.emission_strength"
+            ]
+          },
+          "material": {
+            "type": "string"
+          },
+          "recursive": {
+            "type": "boolean"
+          },
+          "action_id": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "keys": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "t": {
+                  "type": "number"
+                },
+                "curve": {
+                  "type": "string",
+                  "enum": [
+                    "CONSTANT",
+                    "LINEAR",
+                    "SMOOTH"
+                  ]
+                },
+                "value_type": {
+                  "type": "string",
+                  "enum": [
+                    "BOOL",
+                    "NUMBER",
+                    "VEC3",
+                    "VEC4"
+                  ]
+                },
+                "bool_value": {
+                  "type": "boolean"
+                },
+                "number_value": {
+                  "type": "number"
+                },
+                "vector_value": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              },
+              "required": [
+                "t",
+                "curve",
+                "value_type",
+                "bool_value",
+                "number_value",
+                "vector_value"
+              ]
+            }
+          }
+        },
+        "required": [
+          "object",
+          "property",
+          "material",
+          "recursive",
+          "action_id",
+          "source",
+          "keys"
+        ]
+      }
+    },
+    "expected_states": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "object": {
+            "type": "string"
+          },
+          "property": {
+            "type": "string",
+            "enum": [
+              "hide_render",
+              "location",
+              "rotation_euler",
+              "scale",
+              "material.base_color",
+              "material.emission_strength"
+            ]
+          },
+          "material": {
+            "type": "string"
+          },
+          "t": {
+            "type": "number"
+          },
+          "tolerance": {
+            "type": "number"
+          },
+          "source": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "value_type": {
+            "type": "string",
+            "enum": [
+              "BOOL",
+              "NUMBER",
+              "VEC3",
+              "VEC4"
+            ]
+          },
+          "bool_value": {
+            "type": "boolean"
+          },
+          "number_value": {
+            "type": "number"
+          },
+          "vector_value": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "object",
+          "property",
+          "material",
+          "t",
+          "tolerance",
+          "source",
+          "claim",
+          "value_type",
+          "bool_value",
+          "number_value",
+          "vector_value"
+        ]
+      }
+    },
+    "state_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "assertion_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "text",
+          "assertion_ids"
+        ]
+      }
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "status",
+    "new_objects",
+    "changes",
+    "expected_states",
+    "state_bindings",
+    "missing"
+  ]
+}

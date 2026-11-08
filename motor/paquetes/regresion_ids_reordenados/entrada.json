@@ -1,0 +1,652 @@
+{
+  "scene": "kael_esc11",
+  "fps": 24,
+  "duration_s": 10.0,
+  "environment": {
+    "mode": "formulas",
+    "catalog": "formulas.json",
+    "placements": [
+      {
+        "id": "suelo_azotea",
+        "formula": "piso_losas_juntas",
+        "pos_m": [
+          8.0,
+          8.0,
+          0.0
+        ],
+        "tamano_m": [
+          16.0,
+          16.0,
+          0.02
+        ],
+        "rot_z_deg": 0.0
+      },
+      {
+        "id": "muro_fondo_norte",
+        "formula": "murete_cornisa",
+        "pos_m": [
+          9.0,
+          12.8,
+          0.0
+        ],
+        "tamano_m": [
+          14.0,
+          0.25,
+          1.05
+        ],
+        "rot_z_deg": 0.0
+      },
+      {
+        "id": "muro_lateral_izquierdo",
+        "formula": "murete_cornisa",
+        "pos_m": [
+          2.125,
+          6.8,
+          0.0
+        ],
+        "tamano_m": [
+          12.0,
+          0.25,
+          1.05
+        ],
+        "rot_z_deg": 90.0
+      },
+      {
+        "id": "horizonte_ciudad_neon",
+        "formula": "skyline_neon",
+        "pos_m": [
+          8.0,
+          15.8,
+          0.0
+        ],
+        "tamano_m": [
+          28.0,
+          2.5,
+          12.0
+        ],
+        "rot_z_deg": 0.0
+      },
+      {
+        "id": "estructura_tanque_derecho",
+        "formula": "tanque_agua_elevado",
+        "pos_m": [
+          12.8,
+          10.8,
+          0.0
+        ],
+        "tamano_m": [
+          2.2,
+          2.2,
+          4.6
+        ],
+        "rot_z_deg": -20.0,
+        "historial": [
+          {
+            "pos_m": [
+              12.8,
+              12.5,
+              0.0
+            ],
+            "tamano_m": [
+              2.2,
+              2.2,
+              4.6
+            ],
+            "rot_z_deg": -20.0
+          }
+        ],
+        "razon_v8": "Reubicado en Y=10.8 m para que su caja envolvente rotada (Y max ~12.21 m) quede completamente dentro del límite interior de la azotea (ymax=12.644 m), sin tocar ni intersectar el muro_fondo_norte, apoyado en el suelo (Z=0.0), lejos de los personajes y visible en el lado derecho del encuadre."
+      },
+      {
+        "id": "prision_energia_octogonal",
+        "formula": "prision_octogonal",
+        "pos_m": [
+          5.5,
+          10.5,
+          0.0
+        ],
+        "tamano_m": [
+          1.6,
+          1.6,
+          2.3
+        ],
+        "rot_z_deg": 22.5
+      },
+      {
+        "id": "cielo_azotea",
+        "formula": "cielo_nocturno_estrellado",
+        "pos_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tamano_m": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rot_z_deg": 0.0
+      }
+    ],
+    "visibility": {
+      "luz_tecnica": false,
+      "relleno_tecnico": false
+    },
+    "live": "escenario_vivo.json"
+  },
+  "actors": [
+    {
+      "id": "entidad_2",
+      "spec": {
+        "id": "entidad_2",
+        "altura_m": 1.9,
+        "cabezas": 8.0,
+        "complexion": "delgado",
+        "atletico": true,
+        "extras": [
+          "orejas_largas"
+        ],
+        "citas": {
+          "altura": "Estatura ~1.9 m",
+          "cabezas": "~8.0 cabezas",
+          "complexion": "delgado"
+        },
+        "altura_referencia_perfil_m": 1.72
+      },
+      "colors": {
+        "_": [
+          0.02,
+          0.02,
+          0.025
+        ],
+        "pecho": [
+          0.03,
+          0.03,
+          0.04
+        ],
+        "cabeza": [
+          0.45,
+          0.5,
+          0.58
+        ],
+        "cuello": [
+          0.03,
+          0.03,
+          0.04
+        ],
+        "oreja": [
+          0.45,
+          0.5,
+          0.58
+        ],
+        "antebrazo": [
+          0.02,
+          0.45,
+          0.6,
+          1.5
+        ],
+        "pierna": [
+          0.02,
+          0.45,
+          0.6,
+          1.2
+        ]
+      },
+      "profile": {
+        "retraso_tronco_s": 0.03,
+        "retraso_brazos_s": 0.06,
+        "umbral_fase_intermedia_deg": 35.0,
+        "suavizado_inicio_fin": 0.3,
+        "vel_max_deg_s": 180.0,
+        "anclaje_pies": 1,
+        "margen_equilibrio_m": 0.04,
+        "correccion_equilibrio_max_deg": 12.0,
+        "vel_vertical_max_m_s": 0.4,
+        "masa_rel": 1.25,
+        "temblor_deg": 0,
+        "vuela": 0,
+        "cola_contrapeso": 0,
+        "cuadrupedo": 0,
+        "anclaje_excursion_max_m": 0.65
+      },
+      "initial_pose_id": "v_de_pie",
+      "segments": [
+        {
+          "t0": 0,
+          "t1": 10,
+          "p0": [
+            9.8,
+            8.6,
+            0.0
+          ],
+          "p1": [
+            9.8,
+            8.6,
+            0.0
+          ],
+          "yaw": 136.2188752351313
+        }
+      ],
+      "floor_z": 0,
+      "appearance": {},
+      "profile_source": "congelado original; perfil 1",
+      "solver_policy": {
+        "foot_anchoring": false
+      },
+      "physics": {
+        "masa_kg": 88.0,
+        "par_max_hombro_Nm": 110.0,
+        "aceleracion_max_com_m_s2": 12.0,
+        "vel_max_deg_s": 320.0,
+        "fuerza_rel": 1.45,
+        "par_max_cadera_Nm": 220.0,
+        "tipo_cuerpo": "Humanoide atlético de 1.90 m, hombros anchos, cintura estrecha, extremidades largas y musculatura densa con armadura.",
+        "como_se_mueve": "Postura marcial, firme y precisa; gran control del núcleo y hombros capaces de cargar y sostener una lanza pesada a la altura del hombro/cuello sin oscilación.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:45:14-05:00",
+        "escena": "esc11",
+        "validado": false
+      }
+    },
+    {
+      "id": "entidad_1",
+      "spec": {
+        "id": "entidad_1",
+        "altura_m": 1.65,
+        "cabezas": 7.5,
+        "complexion": "delgado",
+        "atletico": false,
+        "extras": [],
+        "citas": {
+          "altura": "Estatura ~1.65 m",
+          "cabezas": "~7.5 cabezas",
+          "complexion": "delgado"
+        },
+        "altura_referencia_perfil_m": 1.72
+      },
+      "colors": {
+        "_": [
+          0.85,
+          0.8,
+          0.68
+        ],
+        "pelvis": [
+          0.04,
+          0.06,
+          0.12
+        ],
+        "muslo": [
+          0.04,
+          0.06,
+          0.12
+        ],
+        "pierna": [
+          0.04,
+          0.06,
+          0.12
+        ],
+        "pie": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "cabeza": [
+          0.8,
+          0.6,
+          0.5
+        ],
+        "cuello": [
+          0.8,
+          0.6,
+          0.5
+        ],
+        "mano": [
+          0.8,
+          0.6,
+          0.5
+        ]
+      },
+      "profile": {
+        "retraso_tronco_s": 0.07,
+        "retraso_brazos_s": 0.14,
+        "umbral_fase_intermedia_deg": 30.0,
+        "suavizado_inicio_fin": 0.35,
+        "vel_max_deg_s": 190.0,
+        "anclaje_pies": 1,
+        "margen_equilibrio_m": 0.05,
+        "correccion_equilibrio_max_deg": 16.0,
+        "vel_vertical_max_m_s": 0.5,
+        "masa_rel": 0.8,
+        "temblor_deg": 1.2,
+        "vuela": 0,
+        "cola_contrapeso": 0,
+        "cuadrupedo": 0,
+        "anclaje_excursion_max_m": 0.65
+      },
+      "initial_pose_id": "v_de_pie",
+      "segments": [
+        {
+          "t0": 0,
+          "t1": 10,
+          "p0": [
+            5.5,
+            10.5,
+            0.0
+          ],
+          "p1": [
+            5.5,
+            10.5,
+            0.0
+          ],
+          "yaw": -155.05609473657543
+        }
+      ],
+      "floor_z": 0,
+      "appearance": {},
+      "profile_source": "congelado original; perfil 1",
+      "solver_policy": {
+        "foot_anchoring": true
+      },
+      "physics": {
+        "masa_kg": 52.0,
+        "par_max_hombro_Nm": 38.0,
+        "aceleracion_max_com_m_s2": 20.0,
+        "vel_max_deg_s": 240.0,
+        "fuerza_rel": 0.7,
+        "par_max_cadera_Nm": 95.0,
+        "tipo_cuerpo": "Joven delgada y esbelta de 1.65 m, extremidades finas y centro de masa ligero.",
+        "como_se_mueve": "Movimientos suaves y contenidos; al dejarse caer de rodillas desciende por gravedad y frena al contactar las rodillas con el suelo.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:45:14-05:00",
+        "escena": "esc11",
+        "validado": false,
+        "_recortado_por_regla_bloqueada": {
+          "aceleracion_max_com_m_s2": 28.0
+        }
+      }
+    },
+    {
+      "id": "entidad_0",
+      "spec": {
+        "id": "entidad_0",
+        "altura_m": 1.72,
+        "cabezas": 7.0,
+        "complexion": "robusto",
+        "atletico": false,
+        "extras": [],
+        "citas": {
+          "altura": "Estatura ~1.72 m",
+          "cabezas": "~7.0 cabezas",
+          "complexion": "robusto"
+        },
+        "altura_referencia_perfil_m": 1.72
+      },
+      "colors": {
+        "_": [
+          0.42,
+          0.43,
+          0.45
+        ],
+        "pelvis": [
+          0.03,
+          0.05,
+          0.12
+        ],
+        "muslo": [
+          0.03,
+          0.05,
+          0.12
+        ],
+        "pierna": [
+          0.03,
+          0.05,
+          0.12
+        ],
+        "pie": [
+          0.02,
+          0.03,
+          0.06
+        ],
+        "cabeza": [
+          0.75,
+          0.55,
+          0.42
+        ],
+        "cuello": [
+          0.75,
+          0.55,
+          0.42
+        ],
+        "mano": [
+          0.75,
+          0.55,
+          0.42
+        ],
+        "pecho": [
+          0.42,
+          0.43,
+          0.45
+        ],
+        "columna": [
+          0.05,
+          0.08,
+          0.2
+        ]
+      },
+      "profile": {
+        "retraso_tronco_s": 0.056,
+        "retraso_brazos_s": 0.112,
+        "umbral_fase_intermedia_deg": 45.0,
+        "suavizado_inicio_fin": 0.25,
+        "vel_max_deg_s": 243.0,
+        "anclaje_pies": 1,
+        "margen_equilibrio_m": 0.04,
+        "correccion_equilibrio_max_deg": 12.0,
+        "vel_vertical_max_m_s": 0.9,
+        "masa_rel": 1.25,
+        "temblor_deg": 0,
+        "vuela": 0,
+        "cola_contrapeso": 0,
+        "cuadrupedo": 0,
+        "anclaje_excursion_max_m": 0.65
+      },
+      "initial_pose_id": "b_tendido",
+      "segments": [
+        {
+          "t0": 0,
+          "t1": 10,
+          "p0": [
+            7.5,
+            6.2,
+            0.0
+          ],
+          "p1": [
+            7.5,
+            6.2,
+            0.0
+          ],
+          "yaw": 24.943905263424583
+        }
+      ],
+      "floor_z": 0,
+      "appearance": {},
+      "profile_source": "congelado original; perfil 2",
+      "solver_policy": {
+        "foot_anchoring": true
+      },
+      "physics": {
+        "masa_kg": 68.0,
+        "par_max_hombro_Nm": 55.0,
+        "aceleracion_max_com_m_s2": 20.0,
+        "vel_max_deg_s": 260.0,
+        "fuerza_rel": 0.85,
+        "par_max_cadera_Nm": 130.0,
+        "tipo_cuerpo": "Joven de 1.72 m, complexión media ligeramente robusta, no atlético y físicamente agotado.",
+        "como_se_mueve": "Movimientos pesados, trabajosos y con temblor muscular; necesita apoyarse en manos, cadera y rodillas para subir su centro de masa paso a paso, con desaceleraciones bruscas al cambiar de apoyo en el suelo.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:45:14-05:00",
+        "escena": "esc11",
+        "validado": false,
+        "_recortado_por_regla_bloqueada": {
+          "aceleracion_max_com_m_s2": 36.0
+        }
+      }
+    }
+  ],
+  "props": [
+    {
+      "id": "brazalete_imi",
+      "formula": "brazalete_tecnologico.json",
+      "pos_m": [
+        0,
+        0,
+        0
+      ],
+      "size_m": null,
+      "yaw_deg": 0,
+      "anchor": {
+        "actor": "entidad_0",
+        "bone": "antebrazo_L"
+      },
+      "local_pos": [
+        0,
+        -0.03,
+        0
+      ],
+      "local_rot_deg": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "lanza_alien",
+      "formula": "lanza_doble_punta.json",
+      "pos_m": [
+        0,
+        0,
+        0
+      ],
+      "size_m": null,
+      "yaw_deg": 0,
+      "anchor": {
+        "actor": "entidad_2",
+        "bone": "mano_R"
+      },
+      "local_pos": [
+        0,
+        0,
+        -0.95
+      ],
+      "local_rot_deg": [
+        0,
+        0,
+        0
+      ],
+      "pivot": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "rot_deg": [
+          -90,
+          0,
+          0
+        ]
+      },
+      "track": {
+        "driver_actor": "entidad_2",
+        "target_actor": "entidad_0",
+        "target_point": "pecho_c",
+        "axis": "TRACK_Z",
+        "activation_fraction": 0.12,
+        "hold_movements": [
+          "mantener_apuntando_lanza"
+        ]
+      }
+    }
+  ],
+  "catalog": "catalogo.json",
+  "assignments": "asignacion.json",
+  "camera": {
+    "mode": "plan",
+    "source": "plan congelado",
+    "cause": "referencia",
+    "clip_end": 1000,
+    "sensor_width_mm": 36,
+    "keys": [
+      {
+        "t": 0.0,
+        "loc": [
+          7.8,
+          0.8,
+          1.9
+        ],
+        "mira": [
+          7.5,
+          9.0,
+          0.95
+        ],
+        "lens": 24.0
+      },
+      {
+        "t": 5.0,
+        "loc": [
+          7.7,
+          1.0,
+          1.95
+        ],
+        "mira": [
+          7.5,
+          9.0,
+          1.0
+        ],
+        "lens": 24.0
+      },
+      {
+        "t": 10.0,
+        "loc": [
+          7.6,
+          1.2,
+          2.0
+        ],
+        "mira": [
+          7.5,
+          9.0,
+          1.05
+        ],
+        "lens": 24.0
+      }
+    ],
+    "floor_z": 0.0
+  },
+  "solver": {
+    "slerp_raiz": false,
+    "contacto_apoyos": true,
+    "ik_piso_suave": false,
+    "piso_suave": false,
+    "equilibrio_memoria": false,
+    "anclaje_mismo_cuadro": false,
+    "orden_medicion": false
+  },
+  "rules": {
+    "layers": [],
+    "root_mode": "integrated",
+    "kimodo_source": "catálogo congelado kimodo_v2; no llamada nueva"
+  },
+  "render": {
+    "samples": 8,
+    "width": 960,
+    "height": 540,
+    "world_color": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "view_transform": "AgX",
+    "lights": [],
+    "exposure": -1.3
+  },
+  "provisional": []
+}

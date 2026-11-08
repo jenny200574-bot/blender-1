@@ -1,0 +1,1561 @@
+{
+  "priority": "ADN primero; parametros_3d secundario sólo en previa explícita, no sustituye un ADN discrepante",
+  "records": [
+    {
+      "id": "gdc-flores-jardin",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-flores-jardin.json",
+      "source_data": {
+        "id": "gdc-flores-jardin",
+        "nombre": "flores jardin",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-flores-jardin.png",
+        "imagen_sha256": "5dd72234ffce5ee9118e39de0a138ca5c5d8482f5d574fd133a2005c07492c14",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 120,
+          "fondo_cm": 60,
+          "alto_cm": 60
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-flores-jardin__aafda1.json",
+        "ids_capitulo": [
+          "obj-flores-jardin"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-flores-jardin"
+        ],
+        "frase_sello": "Prop 3D estilizado de un macizo de cinco flores cartoon sobre una base ovalada de tierra marrón con brotes de césped, con geometría rechoncha, bordes redondeados y acabado plástico satinado mate completamente liso. Compuesto por flores de ocho pétalos gruesos en colores rosa magenta, naranja y amarillo, con centros semiesféricos amarillos que emiten un suave brillo cálido, sostenidas por tallos cilíndricos con hojas ovaladas y cálices traseros en color verde vibrante, diseñado como activo decorativo estático de suelo.",
+        "actualizado": "2026-11-06T04:03:14+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-flores-jardin",
+        "obj-flores-jardin"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-escudo-valentina",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-escudo-valentina.json",
+      "source_data": {
+        "id": "gdc-escudo-valentina",
+        "nombre": "Escudo de Valentina",
+        "clase": "objeto",
+        "subclase": "portado",
+        "dueno": "gdc-valentina",
+        "portador": "Valentina",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-escudo-de-valentina.png",
+        "nunca_cambia": "Escudo morado redondeado con un corazón rojo en el centro; Valentina lo lleva en el brazo.",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "sellado": true,
+        "version": 2,
+        "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO",
+        "creado": "2026-11-02T16:50:00-05:00",
+        "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+        "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+        "imagen_sha256": "1ae2a861723bae43c8afc025c5a8c21ed932684c7670a077af9b054db4e1c11a",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 26,
+          "fondo_cm": 6,
+          "alto_cm": 28
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+        "ids_capitulo": [
+          "obj-escudo-de-valentina"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-escudo-de-valentina"
+        ],
+        "imagen_ref_anterior": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/valentina/referencia-cliente/refs/85876d21180a93bf.jpg",
+        "frase_sello": "Escudo pequeño portátil con silueta de corazón redondeado y perfil convexo, fabricado en material satinado color magenta y enmarcado por un grueso borde metálico dorado mate. En el centro frontal destaca una gema translúcida rosa abombada en forma de corazón con su propio bisel dorado, la cual puede permanecer apagada, brillar con luz azul cian intensa o emitir un resplandor rojo cálido con un halo concéntrico. El reverso es plano e incluye dos correas verticales de agarre color magenta fijadas con cuatro presillas rectangulares doradas.",
+        "actualizado": "2026-11-06T03:44:44+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-escudo-de-valentina",
+        "obj-escudo-de-valentina"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "nunca_cambia",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-manzanas",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-manzanas.json",
+      "source_data": {
+        "id": "gdc-manzanas",
+        "nombre": "manzanas",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "historia",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-manzanas.png",
+        "imagen_sha256": "5f703a1555c85967c051139437a02bcc022aad4ae046cfb62af56b6f89943426",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 7.0,
+          "fondo_cm": 7.0,
+          "alto_cm": 7.5
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-manzanas__9287ca.json",
+        "ids_capitulo": [
+          "obj-manzanas"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-manzanas"
+        ],
+        "frase_sello": "Props 3D estilizados de manzanas enteras y corazones mordidos con estética cartoon pulida. Las piezas enteras son esféricas en rojo carmesí muy brillante con tallo marrón cilíndrico y una hoja ovalada verde lima; los corazones tienen silueta de reloj de arena con pulpa amarillo crema mate, extremos de piel roja con bordes ondulados y dos semillas marrones centrales. Geometría de volúmenes suaves, sin texturas rugosas, con reflejos especulares limpios y oclusión ambiental suave.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-manzanas",
+        "obj-manzanas"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-tableta-spark",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-tableta-spark.json",
+      "source_data": {
+        "id": "gdc-tableta-spark",
+        "nombre": "Tableta holográfica de Spark",
+        "clase": "objeto",
+        "subclase": "portado",
+        "dueno": "gdc-spark",
+        "portador": "Spark",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/spark/referencia-cliente/refs/76f2c9cad7c45e6a.jpg",
+        "nunca_cambia": "Tableta/visor tecnológico azul que proyecta hologramas azules.",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "sellado": false,
+        "version": 1,
+        "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO",
+        "creado": "2026-11-02T16:50:00-05:00",
+        "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+        "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar"
+      },
+      "exact_aliases": [],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "nunca_cambia"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-mesa-cocina",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-mesa-cocina.json",
+      "source_data": {
+        "id": "gdc-mesa-cocina",
+        "nombre": "mesa cocina",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-mesa-cocina.png",
+        "imagen_sha256": "43f5bd40b3ce4567466610658a41fe85b0df0563e1603f795bf474b47aaff214",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 130.0,
+          "fondo_cm": 90.0,
+          "alto_cm": 76.0
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-lapiz__e3f27b.json",
+        "ids_capitulo": [
+          "obj-mesa-cocina"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-mesa-cocina"
+        ],
+        "frase_sello": "Mesa rectangular de estilo clásico en madera pulida color marrón miel con faldón recto y cuatro patas cilíndricas torneadas con remates bulbosos, cubierta por un mantel largo de tela gruesa mate color beige crema que cae hasta el suelo formando pliegues verticales profundos en las esquinas; superficies totalmente lisas sin patrones ni texturas complejas, presentable totalmente cubierta o con un lateral del mantel doblado sobre el tablero mostrando la estructura de madera.",
+        "actualizado": "2026-11-06T04:03:14+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-mesa-cocina",
+        "obj-mesa-cocina"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-pistola-don-caos",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-pistola-don-caos.json",
+      "source_data": {
+        "id": "gdc-pistola-don-caos",
+        "nombre": "Pistola de rayos de Don Caos (Rayo Ordenador / Confundidor)",
+        "clase": "objeto",
+        "subclase": "portado",
+        "dueno": "gdc-don-caos",
+        "portador": "Don Caos",
+        "colores": {
+          "cuerpo": "morado/plateado #C9CED6",
+          "luz": "turquesa #2BD9C9"
+        },
+        "nunca_cambia": "Pistola de rayos de juguete, morada y plateada, con luz turquesa. SE QUEDA (orden de Ricardo 2-nov-2026), aunque la biblia diga «nada de armas»: es un juguete cómico que no hace daño.",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "sellado": true,
+        "version": 2,
+        "adn_estado": "sin ADN Ako: espera la imagen pintada del paso 00 (4b2) y SELLO OBJ; PAGO CERRADO",
+        "creado": "2026-11-02T16:50:00-05:00",
+        "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+        "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+        "referencia_retirada": {
+          "ruta": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/don-caos/referencia-cliente/refs/d3ddaeb70fed28cb.jpg",
+          "motivo": "foto original del personaje: un objeto no la usa como referencia (orden Ricardo 2-nov-2026)",
+          "cuando": "2026-11-02T18:20:00-05:00"
+        },
+        "origen_imagen": "la crea el paso 00 del flujo (4b/4b2 → SELLO OBJ, imagen pintada); si necesita al personaje, usa la hoja aprobada de cubo_fijo/hojas/",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-rayo-confundidor.png",
+        "imagen_sha256": "fb7bc3c270380de5269e6d29e0cb16908933b00459fc906c417c7a1bf0ba1c5b",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 6,
+          "fondo_cm": 3,
+          "alto_cm": 4.5
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-pincel-magico__f40e27.json",
+        "ids_capitulo": [
+          "obj-rayo-confundidor"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-rayo-confundidor"
+        ],
+        "imagen_ref_anterior": null,
+        "frase_sello": "Pistola láser estilo cartoon 3D de proporciones rechonchas y geometría muy redondeada. Chasis principal bulboso y empuñadura corta de plástico satinado color morado intenso, con un pequeño gatillo naranja redondeado. El cañón frontal presenta dos anillos gruesos de metal dorado mate que enmarcan una gran punta semiesférica de cristal lila translúcido, la cual brilla con luz neón magenta y núcleo blanco al activarse. Superficie minimalista completamente lisa, estética de juguete sin costuras ni grabados.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-rayo-confundidor",
+        "obj-rayo-confundidor"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "nunca_cambia",
+          "medidas_cm",
+          "colores"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-mantel",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-mantel.json",
+      "source_data": {
+        "id": "gdc-mantel",
+        "nombre": "mantel",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-mantel.png",
+        "imagen_sha256": "39e636ff4aa200f4a7b4f9a04ed90b4bc00dde8d3917a60cd83b16bb06e9a0f3",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 180,
+          "fondo_cm": 120,
+          "alto_cm": 55
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-cofre-dorado__7faaf4.json",
+        "ids_capitulo": [
+          "obj-mantel"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-mantel"
+        ],
+        "frase_sello": "Mantel rectangular estilizado 3D de tela gruesa color beige crema con acabado mate liso, colocado sobre una mesa rectangular con caída pesada y pliegues suaves que forman cuatro esquinas puntiagudas colgantes. Presenta una doble franja continua cerca del borde inferior compuesta por una línea fina amarillo mostaza unida a una banda naranja tostado más ancha, manteniendo el resto de la superficie totalmente limpia y sin costuras.",
+        "actualizado": "2026-11-06T04:03:14+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-mantel",
+        "obj-mantel"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-armario",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-armario.json",
+      "source_data": {
+        "id": "gdc-armario",
+        "nombre": "armario",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-armario.png",
+        "imagen_sha256": "86373f4f7c515dd5e63cc8cefd8816aeda5a47027d76caec4b38c40cfd60c856",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 110.0,
+          "fondo_cm": 58.0,
+          "alto_cm": 175.0
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-lapiz__e3f27b.json",
+        "ids_capitulo": [
+          "obj-armario"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-armario"
+        ],
+        "frase_sello": "Armario ropero infantil estilizado en 3D de proporciones robustas y bordes redondeados, fabricado en madera color miel cálido con acabado satinado, cornisa superior arqueada y base con cuatro patas cortas. Cuenta con dos puertas frontales articuladas con tablones verticales, bisagras cilíndricas grises en los bordes exteriores, pomos centrales asimétricos (estrella a la izquierda, botón circular a la derecha) y cuatro paneles rectangulares inferiores pintados en secuencia azul, naranja, naranja y azul. Al abrirse, revela un interior de madera con estante superior, barra cilíndrica para colgar ropa y estante inferior.",
+        "actualizado": "2026-11-06T04:03:14+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-armario",
+        "obj-armario"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-papel-numeros",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-papel-numeros.json",
+      "source_data": {
+        "id": "gdc-papel-numeros",
+        "nombre": "papel numeros",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "historia",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-papel-numeros.png",
+        "imagen_sha256": "17b245e57ed4a3637190547ab90a7f6cac177bd57944b8106c290e9b3cd96245",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 4.5,
+          "fondo_cm": 0.2,
+          "alto_cm": 6.0
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-manzanas__9287ca.json",
+        "ids_capitulo": [
+          "obj-papel-numeros"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-papel-numeros"
+        ],
+        "frase_sello": "Lámina rectangular vertical de cartulina color crema en estilo 3D estilizado, con esquinas redondeadas, grosor sutil y pliegues marcados en cruz al centro. En la cara frontal muestra un dibujo infantil hecho con crayón púrpura de una pistola láser retro apuntando hacia la esquina superior derecha, rodeada de pequeños rayos color lila y con los números \"6 7 8 9 10\" escritos a mano en el borde inferior; el reverso es completamente liso y sin dibujos. Acabado mate suave con textura de papel ligeramente arrugado.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-papel-numeros",
+        "obj-papel-numeros"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-cama-nino",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-cama-nino.json",
+      "source_data": {
+        "id": "gdc-cama-nino",
+        "nombre": "Cama del niño",
+        "clase": "objeto",
+        "subclase": "lugar",
+        "dueno": null,
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-cama.png",
+        "lugar": "gdc-habitacion-nino",
+        "nunca_cambia": "Cama del niño en la habitación (donde está el libro; Don Caos se asoma por debajo).",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "sellado": true,
+        "version": 2,
+        "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO; falta imagen de referencia (no hay en material del cliente)",
+        "creado": "2026-11-02T16:50:00-05:00",
+        "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+        "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+        "imagen_sha256": "6f69123fcd9d87dbf489300b2724741d124077ebac8e282c0438925cf62d7c29",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 105,
+          "fondo_cm": 190,
+          "alto_cm": 85
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-cama__56219c.json",
+        "ids_capitulo": [
+          "obj-cama"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-cama"
+        ],
+        "imagen_ref_anterior": null,
+        "frase_sello": "Cama individual 3D estilizada de proporciones gruesas y bordes muy redondeados, con cabecero alto arqueado, piecero bajo y cuatro patas cortas integradas. Acabado mate liso tipo arcilla o plástico suave, con estructura en marrón ocre cálido y panel frontal del cabecero en color crema. Incluye un colchón blanco simple cubierto en tres cuartas partes por un edredón acolchado azul cielo con patrón de cuadrícula hundida, un doblez superior grueso y ribete perimetral color crema.",
+        "actualizado": "2026-11-06T04:05:10+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-cama",
+        "obj-cama"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "nunca_cambia",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-pincel-pintor",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-pincel-pintor.json",
+      "source_data": {
+        "id": "gdc-pincel-pintor",
+        "nombre": "Pincel Mágico de Pintor",
+        "clase": "objeto",
+        "subclase": "portado",
+        "dueno": "gdc-pintor",
+        "portador": "Pintor",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-pincel-magico.png",
+        "nunca_cambia": "Pincel con cerdas iridiscentes de colores; lo que dibuja en el aire cobra vida.",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "sellado": true,
+        "version": 2,
+        "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO",
+        "creado": "2026-11-02T16:50:00-05:00",
+        "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+        "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+        "imagen_sha256": "e199fa472bbae596cb6b8fea9e256565da36032204b964bdcfe649e321ee4c6f",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 2.5,
+          "fondo_cm": 2.5,
+          "alto_cm": 18
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-pincel-magico__f40e27.json",
+        "ids_capitulo": [
+          "obj-pincel-magico"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-pincel-magico"
+        ],
+        "imagen_ref_anterior": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/pintor/referencia-cliente/refs/93763250e250ad55.jpg",
+        "frase_sello": "Pincel 3D estilizado de proporciones gruesas y estética cartoon minimalista, formado por una punta bulbosa en forma de gota totalmente lisa sin cerdas, virola metálica dorada con dos anillos redondeados en relieve, mango cilíndrico amarillo cálido satinado y base semiesférica en azul marino mate. En reposo la punta es de color crema opaco; en estado activo, la punta se ilumina intensamente emitiendo un halo de energía mágica difusa en degradado arcoíris (naranja, cian, fucsia) o en amarillo neón brillante.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-pincel-magico",
+        "obj-pincel-magico"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "nunca_cambia",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-cofre-abecedario",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-cofre-abecedario.json",
+      "source_data": {
+        "id": "gdc-cofre-abecedario",
+        "nombre": "Cofre del Abecedario",
+        "clase": "objeto",
+        "subclase": "historia",
+        "dueno": null,
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-cofre-dorado.png",
+        "nunca_cambia": "Cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra (guion T01E01). Lo abre la palabra mágica.",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "sellado": true,
+        "version": 2,
+        "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO; falta imagen de referencia (no hay en material del cliente)",
+        "creado": "2026-11-02T16:50:00-05:00",
+        "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+        "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+        "imagen_sha256": "79e9b2dc80de9d06788a5850e462d2e34dacea886596ad6124bec1a3df9468e8",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 65,
+          "fondo_cm": 42,
+          "alto_cm": 48
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-cofre-dorado__7faaf4.json",
+        "ids_capitulo": [
+          "obj-cofre-dorado"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-cofre-dorado"
+        ],
+        "imagen_ref_anterior": null,
+        "frase_sello": "Cofre del tesoro 3D estilizado de estética cartoon, compuesto por una base trapezoidal, tapa abovedada articulada y biseles gruesos redondeados. Fabricado íntegramente en metal dorado satinado a dos tonos, cuenta con dos bandas estructurales verticales, esquineras reforzadas con remaches circulares, asas laterales curvas en forma de U, cerradura central con ojo de llave flanqueada por dos pestillos frontales y dos bisagras traseras. El interior está forrado en tela acolchada color azul marino oscuro y, en estado abierto, libera desde adentro un resplandor mágico amarillo dorado cálido acompañado de partículas de luz flotantes.",
+        "actualizado": "2026-11-06T04:03:14+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-cofre-dorado",
+        "obj-cofre-dorado"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "nunca_cambia",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-pijama-pintor",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-pijama-pintor.json",
+      "source_data": {
+        "id": "gdc-pijama-pintor",
+        "nombre": "pijama pintor",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "historia",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-pijama-pintor.png",
+        "imagen_sha256": "3faf257654556e5f8f6e9a29cd83cd765ac1bb0c085cc4c921201f04644b5d7f",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 42,
+          "fondo_cm": 18,
+          "alto_cm": 75
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+        "ids_capitulo": [
+          "obj-pijama-pintor"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-pijama-pintor"
+        ],
+        "frase_sello": "Mono enterizo acolchado estilo 3D cartoon de proporciones infantiles y silueta bulbosa, confeccionado en tela mate color amarillo mostaza cálido con una sutil costura vertical frontal y bordes elásticos acanalados en naranja tostado en cuello, muñecas y tobillos. Decorado asimétricamente por todo el cuerpo con manchas de pintura planas en azul cian, magenta, verde lima y naranja rojizo, presentando un volumen inflado, hueco y articulado sin cabeza, manos ni pies.",
+        "actualizado": "2026-11-06T04:04:42+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-pijama-pintor",
+        "obj-pijama-pintor"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-candados",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-candados.json",
+      "source_data": {
+        "id": "gdc-candados",
+        "nombre": "candados",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-candados.png",
+        "imagen_sha256": "48c82bcf40839a9404ce829706833c43b7c7e06ecc7ab90f85000e4262d9b266",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 12,
+          "fondo_cm": 5,
+          "alto_cm": 16
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-cofre-dorado__7faaf4.json",
+        "ids_capitulo": [
+          "obj-candados"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-candados"
+        ],
+        "frase_sello": "Candado estilizado 3D de proporciones gruesas, formado por un chasis cuadrado de metal dorado satinado con bordes redondeados y un grueso arco cilíndrico superior de acero plateado azulado. En el centro de su cara frontal lisa destaca un emblema translúcido brillante en relieve (gota verde, tres esferas azules o montaña magenta) rodeado por un halo de luz cálida, contando únicamente con dos orificios circulares superiores para el mecanismo de elevación y giro del arco.",
+        "actualizado": "2026-11-06T04:03:14+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-candados",
+        "obj-candados"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-visor",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-visor.json",
+      "source_data": {
+        "id": "gdc-visor",
+        "nombre": "visor",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "historia",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-visor.png",
+        "imagen_sha256": "716eab0d3ea1fdf1c1bb8ec76e57be645ce8df6e7b5c0b15cfc869a70ca2e853",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 16,
+          "fondo_cm": 12,
+          "alto_cm": 6.5
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+        "ids_capitulo": [
+          "obj-visor"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-visor"
+        ],
+        "frase_sello": "Gafas visor sci-fi envolventes de diseño estilizado 3D, montura gruesa de bordes redondeados en plástico mate azul cobalto con paneles de acento en blanco hueso en las cejas, bisagras y borde inferior de las patillas. Lente continua semitransparente de una pieza y nodo circular central superior con emisión luminosa en azul cian brillante (o rojo neón en modo alarma), complementado con un indicador LED horizontal color naranja ámbar incrustado en cada sien.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-visor",
+        "obj-visor"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-caneca-reciclaje",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-caneca-reciclaje.json",
+      "source_data": {
+        "id": "gdc-caneca-reciclaje",
+        "nombre": "caneca reciclaje",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-caneca-reciclaje.png",
+        "imagen_sha256": "08b92e49defd8b6e544ad72d8f50f442e5cbea880ca42c69d725b3df605df4f3",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 38,
+          "fondo_cm": 38,
+          "alto_cm": 50
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-flores__c28cd6.json",
+        "ids_capitulo": [
+          "obj-caneca-reciclaje"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-caneca-reciclaje"
+        ],
+        "frase_sello": "Contenedor de reciclaje 3D estilizado de una sola pieza, con geometría cilíndrica ligeramente cónica, bordes gruesos redondeados y abertura superior sin tapa. Fabricado en plástico satinado color verde vibrante, posee un anillo superior prominente, dos pequeñas asas laterales macizas bajo el borde y la cara trasera completamente lisa. En el centro frontal destaca el símbolo de reciclaje de tres flechas extruido en relieve tridimensional en color blanco hueso mate.",
+        "actualizado": "2026-11-06T04:03:14+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-caneca-reciclaje",
+        "obj-caneca-reciclaje"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-rio",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-rio.json",
+      "source_data": {
+        "id": "gdc-rio",
+        "nombre": "rio",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-rio.png",
+        "imagen_sha256": "3ad738b61ea7a92ad58bd9563a64d423aa2e0973134c9561d9a67579ccf3c749",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 300,
+          "fondo_cm": 90,
+          "alto_cm": 20
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-flores-jardin__aafda1.json",
+        "ids_capitulo": [
+          "obj-rio"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-rio"
+        ],
+        "frase_sello": "Prop ambiental 3D estilizado de un tramo de río modular con silueta en curva S, perfil bajo y base plana para suelo. Chasis de orillas en arcilla mate color beige arena, flanqueado en ambos bordes laterales por una fila continua de guijarros ovalados suaves en tonos crema, ocre y gris cálido. Canal central de agua con acabado brillante especular en colores azul cian y celeste, detallado con surcos ondulados longitudinales esculpidos que simulan la corriente en una sola pieza sólida.",
+        "actualizado": "2026-11-06T04:03:15+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-rio",
+        "obj-rio"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-papel-dulce",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-papel-dulce.json",
+      "source_data": {
+        "id": "gdc-papel-dulce",
+        "nombre": "papel dulce",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "historia",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-papel-dulce.png",
+        "imagen_sha256": "fe2ddf7c9d3ecc08b5e58b207e880e80137b1737974337b52910d681ba1228fe",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 6.0,
+          "fondo_cm": 5.0,
+          "alto_cm": 4.5
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-pincel-magico__b2bdc3.json",
+        "ids_capitulo": [
+          "obj-papel-dulce"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-papel-dulce"
+        ],
+        "frase_sello": "Caramelo envuelto 3D de una sola pieza, con cuerpo central esférico, base ligeramente plana y dos extremos retorcidos acampanados en abanico con bordes gruesos ondulados. Textura de papel grueso mate satinado en color gris pizarra frío, decorado con franjas horizontales en gris claro que convergen y se deforman en los dos cuellos de torsión junto con pliegues profundos de tensión.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-papel-dulce",
+        "obj-papel-dulce"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-libro-cuentos",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-libro-cuentos.json",
+      "source_data": {
+        "id": "gdc-libro-cuentos",
+        "nombre": "Libro de cuentos",
+        "clase": "objeto",
+        "subclase": "historia",
+        "dueno": null,
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-libro-de-cuentos.png",
+        "nunca_cambia": "Libro de cuentos abierto sobre la cama; sus letras salen volando como mariposas (guion T01E01, gancho).",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "sellado": true,
+        "version": 2,
+        "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO; falta imagen de referencia (no hay en material del cliente)",
+        "creado": "2026-11-02T16:50:00-05:00",
+        "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+        "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+        "imagen_sha256": "46251855a6c0a9eaff7971ee6a8f3b02024a38306d6dedcdd950522a879f4dcf",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 36,
+          "fondo_cm": 4.5,
+          "alto_cm": 24
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+        "ids_capitulo": [
+          "obj-libro-de-cuentos"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-libro-de-cuentos"
+        ],
+        "imagen_ref_anterior": null,
+        "frase_sello": "Libro estilizado 3D de tapa dura y lomo grueso, con cubiertas de textura textil mate divididas en bloques geométricos de color azul marino oscuro (arriba), azul cian brillante (abajo) y azul medio (lomo). Incorpora cuatro cantoneras metálicas doradas redondeadas en las esquinas exteriores, gruesas páginas color crema y una cinta marcapáginas naranja con corte en V que sobresale por el borde inferior. Al abrirse en su estado mágico activo, las páginas en blanco se iluminan con formas abstractas multicolores, emitiendo un brillo cálido y partículas doradas flotantes.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-libro-de-cuentos",
+        "obj-libro-de-cuentos"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "nunca_cambia",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-mesa-jardin",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-mesa-jardin.json",
+      "source_data": {
+        "id": "gdc-mesa-jardin",
+        "nombre": "mesa jardin",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-mesa-jardin.png",
+        "imagen_sha256": "ddd947c57dbe83bcd9a53d04d444d0c462e63bf2d383559071b22fa1c78bb149",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 120,
+          "fondo_cm": 75,
+          "alto_cm": 75
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-flores__c28cd6.json",
+        "ids_capitulo": [
+          "obj-mesa-jardin"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-mesa-jardin"
+        ],
+        "frase_sello": "Mesa baja o banco de madera estilizado en 3D con estética cartoon, proporciones robustas, bordes muy redondeados y acabado mate totalmente liso sin vetas. Cuenta con un tablero superior rectangular de color crema claro dividido longitudinalmente por dos ranuras en tres tablones gruesos paralelos. La estructura inferior es de color madera miel cálida, compuesta por dos listones de soporte bajo la mesa y cuatro patas cilíndricas ligeramente inclinadas hacia afuera, reforzadas a media altura por travesaños cilíndricos en forma de H, sin tornillos ni herrajes visibles.",
+        "actualizado": "2026-11-06T04:03:15+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-mesa-jardin",
+        "obj-mesa-jardin"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-vocales",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-vocales.json",
+      "source_data": {
+        "id": "gdc-vocales",
+        "nombre": "vocales",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-vocales.png",
+        "imagen_sha256": "371c9f262e827de666bfafe81bfb1479a7c2354ad4148cfe88482ec55b5c0133",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 85,
+          "fondo_cm": 12,
+          "alto_cm": 25
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-cofre-dorado__7faaf4.json",
+        "ids_capitulo": [
+          "obj-vocales"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-vocales"
+        ],
+        "frase_sello": "Conjunto de cinco letras 3D volumétricas independientes formando las vocales \"AEiou\" alineadas sobre el suelo. Geometría gruesa extruida con bordes muy redondeados y biselados suaves, fabricadas en plástico liso de color gris neutro con acabado satinado uniforme. La \"A\" y \"E\" son mayúsculas, la \"i\" minúscula tiene un punto cilíndrico flotante, la \"o\" es un anillo grueso y la \"u\" posee dos huecos rectangulares en sus extremos superiores, pudiendo posicionarse derecha o invertida boca abajo como un arco.",
+        "actualizado": "2026-11-06T04:03:15+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-vocales",
+        "obj-vocales"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-frutero",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-frutero.json",
+      "source_data": {
+        "id": "gdc-frutero",
+        "nombre": "frutero",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-frutero.png",
+        "imagen_sha256": "5f4b2db9f0ebafda65159ec52d7a11f35e31fa6b75387522ac2981dd2a0c2767",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 32.0,
+          "fondo_cm": 32.0,
+          "alto_cm": 14.0
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-lapiz__e3f27b.json",
+        "ids_capitulo": [
+          "obj-frutero"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-frutero"
+        ],
+        "frase_sello": "Cuenco de cerámica artesanal estilizado en 3D, de silueta semiesférica ancha con base anular y borde grueso redondeado. Cuerpo esmaltado en color crema cálido con textura exterior suavemente irregular, interior muy brillante y una franja pintada en verde azulado recorriendo el labio superior. Puede presentarse vacío, lleno de manzanas rojas carmesí brillantes con tallos marrones, o parcialmente lleno con una muesca rota en el borde frontal que expone la arcilla mate interna con pequeñas migas.",
+        "actualizado": "2026-11-06T04:03:14+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-frutero",
+        "obj-frutero"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-almohada",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-almohada.json",
+      "source_data": {
+        "id": "gdc-almohada",
+        "nombre": "almohada",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "escenario",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-almohada.png",
+        "imagen_sha256": "bcd041ee1a872f2123d8342f8b4f330ed2e81fd877982ac349d668c57ee9963d",
+        "imagen_origen": "paso 00 4c2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 60,
+          "fondo_cm": 40,
+          "alto_cm": 18
+        },
+        "medidas_fuente": "4c1 inv_obj_lugar__obj-cama__56219c.json",
+        "ids_capitulo": [
+          "obj-almohada"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-almohada"
+        ],
+        "frase_sello": "Cojín rectangular blando de proporción 2:1 y perfil lateral biconvexo abombado, confeccionado en tela lisa de acabado mate color amarillo pastel cálido. Cuenta con esquinas redondeadas, un ribete cilíndrico continuo de color crema claro en toda la costura del borde perimetral y sutiles arrugas de tensión junto a las uniones, manteniendo las caras centrales completamente lisas y limpias.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-almohada",
+        "obj-almohada"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "ch-don-caos-7adf",
+      "type": "CHARACTER",
+      "source": "adn_manifest.json",
+      "source_data": {
+        "id": "ch-don-caos-7adf",
+        "entity_type": "CHARACTER",
+        "height_m": 0.18,
+        "heads": 3.5,
+        "text": "1. Ficha Antropométrica:\n- Edad visual: 55-65 años.\n- Estatura aparente: 18 cm (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida) (diminuto, tamaño de una mano).\n- Complexión física: Delgada, ectomorfa y estilizada.\n- Proporción: 3,5 cabezas de alto.\n- Estilo de línea/sombreado: 3D CGI estilizado sin línea de contorno 2D. Sombreado volumétrico suave con dispersión subsuperficial en piel y texturas PBR definidas (satén, tela bordada y fieltro).\n\n2. Fisonomía Facial y Cabello:\n- Rostro: Piel clara, forma triangular invertida, pómulos marcados con rubor rosado y nariz grande, bulbosa y rojiza.\n- Cabello: Gris plateado, muy voluminoso, esculpido en mechones gruesos y puntiagudos abiertos en abanico.\n- Ojos: Grandes y redondos, iris marrón. Ojeras moradas profundas con una pequeña marca vertical azulada tipo lágrima de payaso bajo el centro de cada ojo.\n- Cejas: Gruesas, pobladas y de color gris oscuro.\n- Accesorios faciales fijos: Sin gafas, cicatrices ni pendientes (solo el maquillaje fijo de lágrima bajo los ojos).\n\n3. Paleta de Expresiones:\n- Normal: Cejas arqueadas relajadas, ojos muy abiertos y boca cerrada en media sonrisa asimétrica.\n- Feliz: Cejas elevadas en arco alto, ojos muy abiertos y boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n- Nervioso: Cejas arqueadas y juntas en el centro, ojos abiertos en tensión y boca entreabierta en mueca ondulada mostrando dientes; incluye dos gotas de sudor celestes en el lado izquierdo del rostro.\n- Enojado: Cejas fruncidas en ángulo agudo hacia abajo, párpados inferiores tensos y boca muy abierta gritando con dientes y lengua visibles.\n- Triste: Cejas caídas hacia los extremos exteriores, párpados superiores entrecerrados a la mitad y boca cerrada con las comisuras fuertemente arqueadas hacia abajo.\n\n4. Vestuario por Capas:\n- Prenda exterior: Capa trasera morada con agujeros, borde inferior dentado y dos parches cosidos (naranja y verde). Esclavina de bufón en los hombros rematada en picos con cascabeles dorados (mitad derecha morada, mitad izquierda verde con patrón damasco). Cuello alto rígido morado con reborde verde.\n- Prenda interior: Casaca entallada de bajo dentado dividida verticalmente: lado derecho verde lima con relieve damasco y bolsillo tipo bolsa morada con solapa marrón; lado izquierdo en satén morado liso con bolsillo plano turquesa. Mangas verdes con parches morados y puños vueltos en verde oscuro. Cierre central de tres botones (uno verde arriba, dos marrones abajo) y dos parches cuadrados en el pecho (azul a la derecha, verde a la izquierda).\n- Prenda inferior: Pantalón recto de satén morado cubierto de parches rectangulares con costuras visibles (amarillo, marrón y azul en pierna derecha; rojo, verde y ocre en pierna izquierda).\n- Calzado: Zapatillas deportivas de lona roja con puntera de goma blanca, suela blanca y cordones blancos.\n- Accesorio fijo: Pistola de rayos de juguete retrofuturista en la mano derecha, de cuerpo morado metálico, aletas rojas, anillos cobrizos en el cañón y esfera verde en la punta.\n\n5. Reglas de Giro:\n- Frente: Visibilidad total de la partición bicolor de la casaca, los tres botones centrales, bolsillos asimétricos y la pistola de rayos empuñada en la mano derecha.\n- Perfil: Nariz prominente proyectada hacia adelante, mechones de cabello dirigidos hacia atrás, caída diagonal de la capa hasta media pierna y bolsillo con solapa marrón visible en la cadera derecha.\n- Espaldas: La capa morada cubre todo el torso mostrando el borde dentado, agujeros y dos parches traseros (naranja a la izquierda, verde a la derecha). Esclavina dividida (verde a la izquierda, morada a la derecha) con cuatro cascabeles dorados visibles. Silueta limpia de accesorios ocultos.",
+        "adn_file": "adn/ADN_ch-don-caos-7adf.md",
+        "image_refs": [
+          {
+            "view": "hoja_aprobada",
+            "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-don-caos_18e192698074aea1.png",
+            "sha256": "18e192698074aea18f2b8026f126144ef4122b5ed935df3d9ad742010093e75c"
+          }
+        ]
+      },
+      "field_report": {
+        "fields_present": [
+          "text"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "ch-spark-468e",
+      "type": "CHARACTER",
+      "source": "adn_manifest.json",
+      "source_data": {
+        "id": "ch-spark-468e",
+        "entity_type": "CHARACTER",
+        "height_m": 1.16,
+        "heads": 5.0,
+        "text": "1. Ficha Antropométrica:\n* **Edad visual y estatura:** Niño de 10 a 12 años, estatura infantil media (1.16 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida)).\n* **Complexión y proporción:** Delgada y atlética; canon estilizado de 5 cabezas de altura.\n* **Estilo de línea y sombreado:** Renderizado 3D CGI estilizado sin líneas de contorno 2D. Sombreado tridimensional suave con *subsurface scattering* en la piel, acabados metálicos satinados en armadura, texturas mate en tela táctil y canales emisivos de luz neón.\n\n2. Fisonomía Facial y Cabello:\n* **Forma del rostro y piel:** Rostro ovalado de mandíbula suave y redondeada; piel tez cálida bronceada clara; nariz pequeña y respingada.\n* **Cabello:** Color castaño oscuro modelado en bloques suaves. Corto en los laterales y nuca, con un tupé voluminoso de puntas suaves peinado hacia arriba y hacia la derecha.\n* **Ojos y cejas:** Ojos grandes y redondeados con iris marrón cálido. Cejas gruesas, tupidas y bien definidas en color castaño oscuro.\n* **Accesorios faciales fijos:** Casco tecnológico azul cian metálico de cobertura craneal completa con abertura inferior (deja nariz, boca y mentón libres). Incluye gafas/visor traslúcido celeste integrado y líneas de circuito naranjas luminosas.\n\n3. Paleta de Expresiones:\n* **Normal:** Cejas relajadas en arco neutro, ojos bien abiertos y sonrisa serena con labios cerrados.\n* **Feliz:** Cejas elevadas en arco alto, ojos muy abiertos y brillantes, boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n* **Nervioso:** Cejas arqueadas con extremos internos elevados en gesto de preocupación, ojos muy abiertos, boca pequeña entreabierta en tensión y gotas de sudor en las sienes.\n* **Enojado:** Cejas fruncidas en ángulo \"V\" profundo sobre los párpados, mirada intensa y boca completamente abierta gritando, mostrando dientes superiores, inferiores y lengua.\n* **Triste:** Cejas inclinadas hacia arriba en su parte interna, párpados superiores ligeramente caídos y boca cerrada formando una curva pronunciada hacia abajo.\n\n4. Vestuario por Capas:\n* **Prenda exterior / única (Traje táctico):** Enterizo ajustado al cuerpo sin holguras ni pliegues. Base en azul profundo mate con peto, hombreras y rodilleras hexagonales en azul cian metálico. Cuello alto rígido con borde naranja. Estampado luminoso de circuitos en naranja y cian; emblema de átomo naranja brillante en el centro del pecho.\n* **Brazos y manos:** Brazaletes cian metálico en los antebrazos con bordes gruesos en naranja mate. Guantes ajustados azules con placas protectoras cian y ribetes naranjas en el dorso.\n* **Accesorios de cintura:** Cinturón táctico rígido en naranja mate, con hebilla central hexagonal (borde naranja, centro cian) y dos cartucheras rectangulares planas en los costados.\n* **Calzado:** Botas rígidas a media pantorrilla en azul cian metálico, con borde superior grueso, tiras verticales en la caña y suela plana corrida en color naranja mate.\n\n5. Reglas de Giro:\n* **Frente:** Visibilidad total del visor traslúcido, parte inferior del rostro, emblema del átomo en el pecho, hebilla hexagonal del cinturón y rodilleras cian.\n* **Perfil:** Silueta limpia sin capas ni mochilas. Destaca el volumen frontal del visor, módulos auriculares circulares con aros de luz naranja en el casco y un emblema de círculos concéntricos naranjas sobre el hombro.\n* **Espaldas:** El casco cubre el cráneo con líneas naranjas simétricas, dejando ver solo un corte limpio de cabello castaño en la nuca. Torso trasero sin emblema central, con tirantes estructurales naranjas y líneas de circuito naranjas/cian que bajan simétricamente por espalda, glúteos y piernas. Cinturón trasero continuo sin hebilla.",
+        "adn_file": "adn/ADN_ch-spark-468e.md",
+        "image_refs": [
+          {
+            "view": "hoja_aprobada",
+            "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-spark_53de336edfd14517.png",
+            "sha256": "53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7"
+          }
+        ]
+      },
+      "field_report": {
+        "fields_present": [
+          "text"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "ch-valentina-a9be",
+      "type": "CHARACTER",
+      "source": "adn_manifest.json",
+      "source_data": {
+        "id": "ch-valentina-a9be",
+        "entity_type": "CHARACTER",
+        "height_m": 1.12,
+        "heads": 4.5,
+        "text": "1. Ficha Antropométrica:\nEdad visual de 12 a 14 años, estatura aparente media-baja y complexión delgada estilizada, 1.12 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida). Proporción de 4.5 cabezas de altura. Acabado en estilo 3D CGI estilizado sin líneas de contorno 2D, utilizando sombreado suave con renderizado físico (PBR): piel con dispersión subsuperficial cálida, plásticos satinados en armadura, tela mate y circuitos con luminiscencia propia (emisivos).\n\n2. Fisonomía Facial y Cabello:\nRostro ovalado de mejillas suaves y piel morena cálida. Ojos grandes almendrados de iris marrón oscuro, nariz pequeña respingada y labios definidos color rosa terroso. Cejas castaño oscuro de grosor medio y arco definido. Cabello castaño muy oscuro, voluminoso y con ondas marcadas, que nace bajo el casco y llega hasta media espalda. Accesorio fijo: casco sci-fi púrpura de cara abierta (sin visor), con sujeción de mentón, orejeras circulares y líneas de circuito en rosa neón.\n\n3. Paleta de Expresiones:\n- Normal: Cejas relajadas en arco suave, ojos bien abiertos mirando al frente y sonrisa ligera con labios cerrados.\n- Feliz: Cejas elevadas, ojos brillantes ligeramente entrecerrados por los pómulos y sonrisa amplia abierta mostrando dientes superiores.\n- Nervioso: Cejas inclinadas mostrando preocupación, ojos muy abiertos mirando hacia su derecha, boca pequeña entreabierta y dos gotas de sudor celestes en el lado izquierdo del rostro.\n- Enojado: Ceño fruncido en ángulo agudo hacia el centro, apertura ocular máxima con mirada fija y boca abierta en forma trapezoidal (grito).\n- Triste: Extremos internos de las cejas elevados, párpados superiores ligeramente caídos y boca cerrada con comisuras hacia abajo en gesto de puchero.\n\n4. Vestuario por Capas:\n- Prenda única (Bodysuit): Traje enterizo futurista completamente ceñido, sin holgura, pliegues ni bolsillos. Combina paneles en magenta metálico (torso frontal y guantes integrados hasta medio antebrazo) con secciones en púrpura oscuro mate (brazos superiores, costados y piernas).\n- Estampados y detalles: Emblema de corazón rojo volumétrico con borde lila incrustado en el pecho. Trazos geométricos emisivos en rosa neón (estilo circuito impreso con pequeños nodos circulares) distribuidos simétricamente por torso, brazos y piernas.\n- Calzado: Botas rígidas a media pantorrilla en color magenta, de corte recto, suela baja color púrpura y circuitos iluminados en rosa neón en la caña y el empeine.\n\n5. Reglas de Giro:\n- Frente: Visibilidad exclusiva del corazón rojo en el pecho, la abertura en \"V\" del cuello del traje y dos mechones de cabello reposando sobre los hombros.\n- Perfil: Protagonismo del disco circular en el lateral del casco, volumen del cabello proyectado hacia atrás despejando el cuello y línea luminosa continua a lo largo del brazo y pierna exterior.\n- Espalda: El volumen del cabello ondulado cubre por completo la zona dorsal alta. El casco presenta tres líneas verticales de neón en la nuca; la zona lumbar, glúteos y piernas muestran continuidad simétrica de los circuitos brillantes. Silueta limpia, libre de capas o mochilas.",
+        "adn_file": "adn/ADN_ch-valentina-a9be.md",
+        "image_refs": [
+          {
+            "view": "hoja_aprobada",
+            "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-valentina_e3d8db772c0db601.png",
+            "sha256": "e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c"
+          }
+        ]
+      },
+      "field_report": {
+        "fields_present": [
+          "text"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "ch-eco-eff3",
+      "type": "CHARACTER",
+      "source": "adn_manifest.json",
+      "source_data": {
+        "id": "ch-eco-eff3",
+        "entity_type": "CHARACTER",
+        "height_m": 1.02,
+        "heads": 6.5,
+        "text": "1. Ficha Antropométrica:\n* **Edad visual:** 22-25 años.\n* **Estatura aparente:** 1.02 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida).\n* **Complexión física:** Atlética, estilizada y esbelta.\n* **Proporción:** 6.5 cabezas de altura (canon estilizado).\n* **Estilo de línea y sombreado:** Renderizado 3D CGI estilizado sin líneas de contorno (sin *lineart*). Piel con *subsurface scattering* cálido, iluminación suave con oclusión ambiental definida y materiales con acabados satinados/metálicos en el traje.\n\n2. Fisonomía Facial y Cabello:\n* **Forma del rostro:** Ovalado con tendencia a corazón, mejillas redondeadas con rubor rosado cálido, nariz pequeña respingada y mentón suave.\n* **Cabello:** Largo hasta media espalda, ondulado y voluminoso con raya lateral izquierda. Color verde esmeralda vibrante con brillos especulares en verde claro.\n* **Ojos:** Grandes y almendrados, iris color verde hoja brillante, pupilas grandes y pestañas superiores negras, densas y curvas.\n* **Cejas:** Grosor medio, arqueadas y definidas, en tono verde oscuro/castaño.\n* **Accesorios fijos:** Ninguno facial (sin gafas, cicatrices ni pendientes). Mascota fija: pequeño pájaro amarillo (tipo canario) posado sobre su hombro derecho.\n\n3. Paleta de Expresiones:\n* **Normal:** Cejas suavemente arqueadas en reposo, apertura ocular estándar con mirada cálida y boca cerrada en sonrisa ligera y serena.\n* **Feliz:** Cejas elevadas en arco alto, ojos muy abiertos y brillantes, boca abierta en sonrisa amplia mostrando la fila superior de dientes y la lengua.\n* **Nervioso:** Cejas arqueadas con extremos internos elevados en gesto de preocupación, ojos muy abiertos y tensos, boca entreabierta formando una pequeña curva descendente (incluye gota de sudor azul en la sien izquierda).\n* **Enojado:** Cejas fruncidas en ángulo agudo hacia el centro, párpados tensos con ojos completamente abiertos y boca muy abierta en grito, mostrando dientes superiores y lengua.\n* **Triste:** Cejas inclinadas hacia arriba en el centro (forma de \"V\" invertida), párpados superiores caídos con mirada baja y boca cerrada en puchero con comisuras hacia abajo.\n\n4. Vestuario por Capas:\n* **Prenda exterior/interior (Enterizo):** Traje completo (*bodysuit*) ultra ceñido de textura metálica satinada color verde esmeralda oscuro, sin holgura ni bolsillos. Cuello alto abierto en \"V\". Estampado luminoso del símbolo de reciclaje en verde claro centrado en el pecho.\n* **Apliques orgánicos (Armadura de hojas):** Hombreras formadas por hojas superpuestas en verde mate; corsé abdominal en \"V\" compuesto por hojas nervadas que se extienden hacia las caderas como faldones laterales; brazaletes de hojas en los antebrazos integrados a guantes completos color verde oscuro.\n* **Prenda inferior:** Integrada al enterizo, con costuras verticales en relieve que recorren el centro de los muslos hasta las rodillas.\n* **Calzado:** Botas altas hasta la rodilla en verde metálico con tacón cuadrado bajo. Caña cubierta por una gran hoja verde mate con nervaduras que termina en dos puntas bajo la rodilla.\n\n5. Reglas de Giro:\n* **De frente:** Visibilidad total del emblema de reciclaje en el pecho, el panel de hojas abdominal en \"V\" y el pájaro amarillo de frente sobre el hombro derecho.\n* **De perfil:** El cabello cae detrás del hombro despejando el rostro y el cuello; se aprecia la silueta del busto, la curvatura lumbar, el tacón de la bota y el perfil del pájaro amarillo.\n* **De espaldas:** El cabello cubre la zona dorsal alta hasta los omóplatos; cintura definida por un cinturón en \"V\" liso sin hojas centrales; costuras verticales recorren el centro de los glúteos y piernas; sin capas ni mochilas; el pájaro amarillo es visible de espaldas en el hombro derecho.",
+        "adn_file": "adn/ADN_ch-eco-eff3.md",
+        "image_refs": [
+          {
+            "view": "hoja_aprobada",
+            "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-eco_0597114f24f97a5d.png",
+            "sha256": "0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f"
+          }
+        ]
+      },
+      "field_report": {
+        "fields_present": [
+          "text"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "ch-pintor-bce0",
+      "type": "CHARACTER",
+      "source": "adn_manifest.json",
+      "source_data": {
+        "id": "ch-pintor-bce0",
+        "entity_type": "CHARACTER",
+        "height_m": 1.06,
+        "heads": 6.5,
+        "text": "1. Ficha Antropométrica:\n- Edad visual: 25 a 30 años.\n- Estatura y complexión: 1.06 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida), complexión delgada estilizada (ectomorfo).\n- Proporción: 6.5 cabezas de altura.\n- Estilo visual: 3D CGI estilizado, volúmenes suaves, sin línea de contorno, sombreado realista con dispersión subsuperficial (SSS) en la piel y materiales con microtextura.\n\n2. Fisonomía Facial y Cabello:\n- Rostro: Ovalado de mandíbula suave y mentón redondeado; piel clara de subtono cálido.\n- Cabello: Castaño claro, modelado en bloques suaves; corto en laterales y nuca, con tupé frontal voluminoso peinado hacia arriba y atrás.\n- Ojos: Grandes y almendrados, iris marrón cálido con brillos especulares definidos.\n- Cejas: Gruesas, color castaño, de geometría curva y bordes suavizados.\n- Accesorios faciales: Ninguno (rostro limpio sin gafas, cicatrices, vello facial ni pendientes).\n\n3. Paleta de Expresiones:\n- Normal: Cejas relajadas horizontales, apertura ocular media, boca cerrada con leve sonrisa simétrica.\n- Feliz: Cejas elevadas en arco, apertura ocular máxima, boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n- Nervioso: Cejas arqueadas con extremos internos elevados, ojos muy abiertos, boca entreabierta asimétrica mostrando dientes apretados, gotas de sudor translúcidas en las sienes.\n- Enojado: Cejas bajas fruncidas hacia el centro, párpados superiores tensos cubriendo parte del iris, boca abierta rectangular en gesto de grito mostrando dientes y lengua.\n- Triste: Cejas inclinadas con el interior elevado, párpados superiores caídos a media altura, boca cerrada con comisuras arqueadas hacia abajo.\n\n4. Vestuario por Capas:\n- Prenda exterior: Saco formal corte slim en tela azul marino mate, solapa de muesca, cierre de un botón y dos bolsillos laterales con tapeta. Textura salpicada con manchas de pintura neón (verde, amarillo, fucsia, cian y naranja).\n- Prenda interior: Camisa de vestir color amarillo mostaza, corte ajustado, cuello desabotonado sin corbata, puños asomando 1 cm bajo las mangas del saco.\n- Prenda inferior: Pantalón de vestir azul marino a juego con el saco, corte recto entallado, pliegue frontal suave y salpicaduras de pintura multicolor.\n- Calzado y accesorios: Zapatos Oxford de cuero marrón oscuro con suela baja y cordones finos. Reloj metálico dorado en la muñeca izquierda.\n\n5. Reglas de Giro:\n- Frente: Apertura en \"V\" de la camisa amarilla, solapas del saco, pliegue de los bolsillos frontales y esfera del reloj visible en la muñeca izquierda.\n- Perfil: Silueta pronunciada del tupé frontal y puente nasal recto; curva entallada de la espalda del saco; hilera de botones pequeños en el puño de la manga.\n- Espaldas: Costura vertical central que divide el saco, caída limpia sin aberturas ni bolsillos traseros visibles, capas de cabello escalonadas en la nuca y manchas de pintura distribuidas en hombros y pantorrillas.",
+        "adn_file": "adn/ADN_ch-pintor-bce0.md",
+        "image_refs": [
+          {
+            "view": "hoja_aprobada",
+            "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-pintor_fbdd0e2c29cf906f.png",
+            "sha256": "fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea"
+          }
+        ]
+      },
+      "field_report": {
+        "fields_present": [
+          "text"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "ch-piquito-030a",
+      "type": "CHARACTER",
+      "source": "adn_manifest.json",
+      "source_data": {
+        "id": "ch-piquito-030a",
+        "entity_type": "CHARACTER",
+        "height_m": 0.1,
+        "heads": 2.0,
+        "text": "1. Ficha Antropométrica:\n* **Edad visual:** Polluelo / ave infantil.\n* **Estatura aparente:** 10 cm (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida) (escala mascota de hombro).\n* **Complexión física:** Rechoncha, compacta y redondeada, con silueta en forma de pera.\n* **Proporción en cabezas:** 2 cabezas de alto (la cabeza representa el 50% de la altura total).\n* **Estilo de línea/sombreado:** 3D CGI estilizado sin línea de contorno. Sombreado suave con dispersión subsuperficial cálida, volúmenes plásticos limpios y textura mate sedosa.\n\n2. Fisonomía Facial y Cabello:\n* **Forma del rostro:** Esférica, fusionada directamente con el torso sin cuello divisorio, con mejillas abultadas y rubor anaranjado difuso.\n* **Cabello (Cresta):** Penacho central rígido compuesto por 3 plumas curvas de puntas redondeadas en color naranja rojizo (#FF6B2B).\n* **Geometría de ojos:** Grandes y circulares; esclerótica blanca, iris marrón cálido, pupila negra concéntrica y un único brillo especular blanco arriba a la izquierda.\n* **Grosor de cejas:** Medias, flotantes sobre el plumaje, de color marrón oscuro y bordes redondeados.\n* **Accesorios faciales fijos:** Sin accesorios. Pico corto, cónico y pequeño en el centro del rostro, color naranja medio.\n\n3. Paleta de Expresiones:\n* **Normal:** Cejas en arco suave simétrico, ojos abiertos al 100% mirando al frente, pico cerrado dibujando una sonrisa curva sutil.\n* **Feliz:** Cejas altas arqueadas, ojos cerrados formando dos arcos invertidos oscuros, pico abierto mostrando el interior bucal y lengua rosada.\n* **Nervioso:** Cejas oblicuas elevadas en el centro, ojos muy abiertos con el iris contraído, pico entreabierto con comisuras bajas, acompañado de 4 gotas de sudor celestes flotando a los lados de la cabeza.\n* **Enojado:** Cejas fruncidas en ángulo \"V\" pronunciado hacia el entrecejo, párpados superiores rectos cubriendo un tercio del ojo, pico completamente abierto en forma trapezoidal mostrando lengua e interior oscuro.\n* **Triste:** Cejas caídas hacia los extremos exteriores, párpados superiores bajos a media asta con mirada descendente, pico cerrado con comisura arqueada hacia abajo.\n\n4. Vestuario por Capas:\n* **Prenda exterior (Plumaje corporal):** Cuerpo desnudo cubierto de plumaje liso amarillo brillante (#FFD84D) de aspecto suave y continuo.\n* **Prenda interior (Pecho):** Detalle escultórico de 4 puntas de plumas superpuestas en relieve sobre la parte superior del pecho, del mismo tono amarillo (#FFD84D).\n* **Prenda inferior (Alas y Cola):** Alas cortas integradas a los costados, amarillas en la base con 3 plumas primarias en color naranja rojizo (#FF6B2B) en los extremos. Cola corta trasera formada por 3 plumas naranjas rojizas.\n* **Calzado (Patas):** Patas aviares cortas y delgadas de textura lisa color naranja amarronado, con 3 dedos frontales redondeados y 1 espolón trasero corto sin uñas diferenciadas.\n\n5. Reglas de Giro:\n* **De frente:** Visibles las 4 ondas de plumas en el pecho; las alas se ven pegadas al cuerpo mostrando solo el borde de las puntas naranjas; la cola queda completamente oculta tras el cuerpo.\n* **De perfil:** Silueta en \"S\" compacta con pecho prominente; la cresta revela sus 3 plumas escalonadas apuntando hacia atrás; el ala muestra claramente su división bicolor (hombro amarillo, 3 plumas inferiores naranjas); la cola sobresale en ángulo de 45 grados.\n* **De espaldas:** Cabeza y espalda completamente lisas en amarillo (#FFD84D) sin costuras ni plumas detalladas; la cola se despliega como un abanico simétrico de 3 pétalos naranjas en la base de la espalda, flanqueada por las puntas naranjas de ambas alas.",
+        "adn_file": "adn/ADN_ch-piquito-030a.md",
+        "image_refs": [
+          {
+            "view": "hoja_aprobada",
+            "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-piquito_120f2b6366694721.png",
+            "sha256": "120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788"
+          }
+        ]
+      },
+      "field_report": {
+        "fields_present": [
+          "text"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    }
+  ]
+}

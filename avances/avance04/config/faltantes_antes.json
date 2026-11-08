@@ -1,0 +1,194 @@
+[
+  {
+    "campo": "motion/respuesta_2b.json",
+    "modulo_productor": "2B/Argon",
+    "que_falta": "JSON truncado: recuperar respuesta íntegra",
+    "bloqueante": true,
+    "codigo": "JSON_TRUNCADO",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "motion/contacts",
+    "modulo_productor": "01/2B + Star",
+    "que_falta": "Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía",
+    "bloqueante": true,
+    "codigo": "CONTACTOS_DATOS_FALTANTES",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "rules/source_parameters",
+    "modulo_productor": "biblioteca de reglas vigentes + 4a2/manifiesto",
+    "que_falta": "No están en la fuente estos parámetros: allowed_collision_pairs, bone_length_error_m, colliders, com_accel_max_m_s2, joint_speed_max_deg_s, penetration_tolerance_m, reject_surface_intersections, root_accel_max_m_s2, root_speed_max_m_s, slip_max_m_per_frame",
+    "bloqueante": true,
+    "codigo": "REGLAS_DATOS_FALTANTES",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "entities/ch-piquito-030a/anatomy_profile",
+    "modulo_productor": "ADN Maestro 03/04 + 01/Star puntos",
+    "que_falta": "Faltan landmarks/proporciones estructurales y límites articulares certificados; altura y cabezas no determinan longitudes de alas/patas. Faltan también apoyos/ancla explícitos cuando va acoplado. No se escala un rig de otra identidad.",
+    "bloqueante": true,
+    "codigo": "PERFIL_ANATOMICO_DATOS",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "props/obj-libro-cuentos__e1-8/dna_ref",
+    "modulo_productor": "ADN OBJ/SELLO + 4a2",
+    "que_falta": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+    "bloqueante": true,
+    "codigo": "OBJETO_ADN_DATOS",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "props/Ventana con vista al arcoíris/dna_ref",
+    "modulo_productor": "ADN OBJ/SELLO + 4a2",
+    "que_falta": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+    "bloqueante": true,
+    "codigo": "OBJETO_ADN_DATOS",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "props/obj-cama/recipe",
+    "modulo_productor": "ADN OBJ/SELLO + catálogo de formas",
+    "que_falta": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+    "bloqueante": true,
+    "codigo": "OBJETO_ADN_DATOS",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "bindings/Centro de la habitación/reference_kind",
+    "modulo_productor": "4a2/manifiesto espacial",
+    "que_falta": "Referencia sólo usada para mirar: falta declarar POINT u OBJECT. No pedir ADN de un lugar ni ocultar un mueble como si fuera un punto. Posición/bbox ya disponibles.",
+    "bloqueante": true,
+    "codigo": "REFERENCIA_ESPACIAL_DATOS",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "props/obj-visor-spark/dna_ref",
+    "modulo_productor": "ADN OBJ/SELLO + 4a2",
+    "que_falta": "Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres",
+    "bloqueante": true,
+    "codigo": "OBJETO_ADN_DATOS",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "props/obj-cofre-dorado/recipe",
+    "modulo_productor": "ADN OBJ/SELLO + catálogo de formas",
+    "que_falta": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+    "bloqueante": true,
+    "codigo": "OBJETO_ADN_DATOS",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "environment/live_source",
+    "modulo_productor": "4a4 + 01 + 4a2",
+    "que_falta": "Sólo llegaron estados narrativos inicio/fin; faltan subpiezas/materiales/valores/curvas para cambios de letras, color y FX. Los tiempos explícitos de 01 se reutilizan; no se piden otra vez.",
+    "bloqueante": true,
+    "codigo": "VIVO_DATOS_FALTANTES",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "camera/inputs_4g",
+    "modulo_productor": "SB + preparar/configuración 4g",
+    "que_falta": "Faltan fuentes por hash: config, ajustes, commands, sb_scene, elevations, shot_types",
+    "bloqueante": true,
+    "codigo": "CAMARA_DATOS_FALTANTES",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "motion/semantic_index/approval",
+    "modulo_productor": "2B/Argon + biblioteca de movimientos",
+    "que_falta": "Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu",
+    "bloqueante": true,
+    "codigo": "BIBLIOTECA_SIN_VALIDAR",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "coordinates",
+    "modulo_productor": "01/4a2",
+    "que_falta": "Ejes y unidades certificados ausentes",
+    "bloqueante": true,
+    "codigo": "DATO_FALTANTE",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "ejes",
+    "modulo_productor": "01/4a2",
+    "que_falta": "Provisional técnico: +Y frente/+Z arriba, ejes no certificados",
+    "bloqueante": true,
+    "codigo": "PROVISIONAL",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "luces",
+    "modulo_productor": "motor/configuración técnica",
+    "que_falta": "Luces CPU técnicas explícitas en entrada; no SB ni iluminación artística aprobada",
+    "bloqueante": true,
+    "codigo": "PROVISIONAL",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "2B",
+    "modulo_productor": "2B/Argon",
+    "que_falta": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada",
+    "bloqueante": true,
+    "codigo": "PROVISIONAL",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "iluminacion",
+    "modulo_productor": "4a2/configuración técnica",
+    "que_falta": "El blend contiene luces de varias escenas simultáneas que lavan los RGB. Para esta previa se desactivan luces fuente por lista EXPLÍCITA y se aplican luces neutrales técnicas declaradas; no es luz artística aprobada.",
+    "bloqueante": true,
+    "codigo": "PROVISIONAL",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "motion/status",
+    "modulo_productor": "2B/Argon",
+    "que_falta": "Programa completo no acreditado",
+    "bloqueante": true,
+    "codigo": "DATO_FALTANTE",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "environment/live_data",
+    "modulo_productor": "4a4 + 01 + 4a2",
+    "que_falta": "Eventos no vinculados a propiedades/tiempos",
+    "bloqueante": true,
+    "codigo": "DATO_FALTANTE",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "lighting",
+    "modulo_productor": "4a2/4a4",
+    "que_falta": "Luz artística base/eventos/exposición requeridos",
+    "bloqueante": true,
+    "codigo": "DATO_FALTANTE",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "camera/v3/0/PAN",
+    "modulo_productor": "SB + 02N/4a2",
+    "que_falta": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+    "bloqueante": true,
+    "codigo": "CAMARA_DATO_FALTANTE",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "camera/v5/0/CRANE",
+    "modulo_productor": "SB + 02N/4a2",
+    "que_falta": "Faltan metros o extremos verticales; dir_ud y speed no determinan altura",
+    "bloqueante": true,
+    "codigo": "CAMARA_DATO_FALTANTE",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  },
+  {
+    "campo": "camera/v7/0/PAN",
+    "modulo_productor": "SB + 02N/4a2",
+    "que_falta": "Faltan grados o extremos inequívocos; dir_lr y speed no determinan amplitud",
+    "bloqueante": true,
+    "codigo": "CAMARA_DATO_FALTANTE",
+    "accion": "Revisar y completar desde el productor indicado; no inventar"
+  }
+]

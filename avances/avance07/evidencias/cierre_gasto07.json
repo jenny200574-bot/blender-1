@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "date_bogota": "2026-11-07T22:30:40.979477-05:00",
+  "manual_generation_off": true,
+  "automatic_recipe_off": true,
+  "live_payment_off": true,
+  "negative_off_test_rejected_before_network": true,
+  "ledger_unchanged_by_negative_test": true,
+  "reserved_usd": 0.0
+}

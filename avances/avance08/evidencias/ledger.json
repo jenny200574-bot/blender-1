@@ -1,0 +1,94 @@
+{
+  "step_cap_usd": 10,
+  "plan_cap_usd": 50,
+  "preventive_plan_stop_usd": 45,
+  "previous_plan_gross_usd": 0.669088,
+  "step_gross_usd": 0.22587500000000002,
+  "reserved_usd": 0.0,
+  "entries": [
+    {
+      "id": "1",
+      "purpose": "av08_2b01",
+      "date_bogota": "2026-11-07T22:38:41.567220-05:00",
+      "state": "NON200_NO_TOKEN_CHARGE",
+      "reserve_usd": 0.179271,
+      "prompt_sha256": "7c93d23f4215c065b86bfb4646341f4d4f99b5542495b8a66df7110eaf752bf8",
+      "schema_sha256": "e5f73c6b73d1cc64bfc80f37a4cca013e2b5b1806112e4413e548b641e51fa83",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0,
+      "settled_bogota": "2026-11-07T22:38:55.419308-05:00"
+    },
+    {
+      "id": "2",
+      "purpose": "av08_2b02",
+      "date_bogota": "2026-11-07T22:40:00.181234-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.1787095,
+      "prompt_sha256": "7c93d23f4215c065b86bfb4646341f4d4f99b5542495b8a66df7110eaf752bf8",
+      "schema_sha256": "e7fc8bc1361f7543fd4b91c39c295c8bb94d1f7ee5a2b64564d5dcc96f1d9e0b",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0490105,
+      "settled_bogota": "2026-11-07T22:40:31.277277-05:00"
+    },
+    {
+      "id": "3",
+      "purpose": "av08_2b03",
+      "date_bogota": "2026-11-07T22:41:53.597259-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.1782025,
+      "prompt_sha256": "62759aa8dfc742e9398822492c0bad74a9ed2b1a08806112535930425b3cc39b",
+      "schema_sha256": "b81cbc55382a188f5985e2881ca1bf9a570f11e8dac872af58cb92c8268bb919",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.042305,
+      "settled_bogota": "2026-11-07T22:42:13.740996-05:00"
+    },
+    {
+      "id": "4",
+      "purpose": "av08_physics02",
+      "date_bogota": "2026-11-07T22:42:22.685074-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.2322145,
+      "prompt_sha256": "072440c02957befe523f60507db4d8d590670cc6e6e1361b7d5d379c3c9f3e5f",
+      "schema_sha256": "058199cf1beba21668e3784c5f3438736f751812b42ddabba2cf8379855a675c",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0540545,
+      "settled_bogota": "2026-11-07T22:42:32.346867-05:00"
+    },
+    {
+      "id": "5",
+      "purpose": "av08_physics03",
+      "date_bogota": "2026-11-07T22:43:53.978966-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.261887,
+      "prompt_sha256": "be068a1f38ddf31b9deda27b5c23d5c8468102f65d9eb8bdc79b8e0c9ae04d34",
+      "schema_sha256": "058199cf1beba21668e3784c5f3438736f751812b42ddabba2cf8379855a675c",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0664595,
+      "settled_bogota": "2026-11-07T22:44:07.303389-05:00"
+    },
+    {
+      "id": "6",
+      "purpose": "av08_physics04",
+      "date_bogota": "2026-11-07T22:45:32.382889-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.1123065,
+      "prompt_sha256": "3220c6c889b29c0938dc68ecd44391110cf042fdf03d56eb2831158a793e2b4d",
+      "schema_sha256": "626ad2c63763ee53732309a8665877fc98ca3dd9a8114677141d3c051aae6505",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0104555,
+      "settled_bogota": "2026-11-07T22:45:41.595077-05:00"
+    },
+    {
+      "id": "7",
+      "purpose": "av08_contactos05",
+      "date_bogota": "2026-11-07T22:57:27.395535-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.105703,
+      "prompt_sha256": "d8834080b0022b5987b8c732bbcd166679c4f8bc7ddc1cd685fc64e371dfb05e",
+      "schema_sha256": "7456201af588ec86f46837dd39db3929dae57f7adcc920af8e3291176b489c26",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.00359,
+      "settled_bogota": "2026-11-07T22:57:42.136153-05:00"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "errors": [],
+  "negative_tests": [
+    {
+      "mutation": "root_speed_max_m_s",
+      "rejected": true
+    },
+    {
+      "mutation": "bone_length_error_m",
+      "rejected": true
+    },
+    {
+      "mutation": "joint_speed_max_deg_s",
+      "rejected": true
+    },
+    {
+      "mutation": "colliders",
+      "rejected": true
+    },
+    {
+      "mutation": "avian_margin1m",
+      "rejected": true
+    }
+  ],
+  "bounds_source": "AV08 conservative deterministic engineering sanity bounds, NOT modified oro thresholds",
+  "scene_physics_approved": false,
+  "colliders": 115,
+  "model_approved_flag_used": false
+}

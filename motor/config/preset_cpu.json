@@ -1,0 +1,10 @@
+{
+  "engine": "CYCLES",
+  "seed": 0,
+  "source": "Preset técnico CPU reproducible; no iluminación artística ni dimensiones ADN",
+  "diagnostic_resolution": [
+    320,
+    180
+  ],
+  "diagnostic_samples": 4
+}

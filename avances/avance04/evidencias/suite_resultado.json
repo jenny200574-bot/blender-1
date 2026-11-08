@@ -1,0 +1,43 @@
+{
+  "all_passed": false,
+  "tests_count": 197,
+  "rows": [
+    {
+      "test_file": "test_cpu.py",
+      "exit_code": 0
+    },
+    {
+      "test_file": "test_dev2.py",
+      "exit_code": 1
+    },
+    {
+      "test_file": "test_no_facial_v5.py",
+      "exit_code": 0
+    },
+    {
+      "test_file": "test_puentes_fisicos.py",
+      "exit_code": 0
+    },
+    {
+      "test_file": "test_t307.py",
+      "exit_code": 0
+    },
+    {
+      "test_file": "test_t314.py",
+      "exit_code": 0
+    },
+    {
+      "test_file": "test_t316.py",
+      "exit_code": 1
+    },
+    {
+      "test_file": "test_t317.py",
+      "exit_code": 0
+    },
+    {
+      "test_file": "test_traductor_adn.py",
+      "exit_code": 0
+    }
+  ],
+  "tolerances_changed": false
+}

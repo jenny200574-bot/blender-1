@@ -1,0 +1,70 @@
+{
+  "type": "object",
+  "properties": {
+    "resolutions": {
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "motion/respuesta_2b.json",
+              "motion/contacts",
+              "rules/source_parameters",
+              "entities/ch-piquito-030a/anatomy_profile",
+              "props/obj-libro-cuentos__e1-8/dna_ref",
+              "props/Ventana con vista al arcoíris/dna_ref",
+              "props/obj-cama/recipe",
+              "bindings/Centro de la habitación/reference_kind",
+              "props/obj-visor-spark/dna_ref",
+              "props/obj-cofre-dorado/recipe",
+              "environment/live_source",
+              "camera/inputs_4g",
+              "motion/semantic_index/approval",
+              "coordinates",
+              "ejes",
+              "luces",
+              "2B",
+              "iluminacion",
+              "motion/status",
+              "environment/live_data",
+              "lighting",
+              "camera/v3/0/PAN",
+              "camera/v5/0/CRANE",
+              "camera/v7/0/PAN"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "SOURCE",
+              "GENERATED",
+              "FALTA"
+            ]
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "status",
+          "source_refs",
+          "reason"
+        ]
+      }
+    }
+  },
+  "required": [
+    "resolutions"
+  ]
+}

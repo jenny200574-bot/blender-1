@@ -1,0 +1,25 @@
+{
+ "schema": "myia.glosario_4a2.v1",
+ "lugar_id": "esc-habitacion",
+ "entregado_por": "4a2",
+ "fecha": "2026-11-05T20:23:10-05:00",
+ "fuente": "molde.json (Blender 4a2) + escenario.json (4a1)",
+ "exterior": false,
+ "formas": {
+  "VENTANA_CON_VISTA_AL_ARCOIRIS": "Ventana con vista al arcoíris. Forma: compuesto. Tamaño: 1.6×0.15×1.3 m. Posición: x=2.25, y=3.95, z=0.9. Material: Madera pintada y barnizada estilo juguete 3D; color: Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6; textura: Satinada lisa con cantos muy redondeados y biselados suaves; encima: nada inventado",
+  "PISO": "Piso de la habitación. Forma: plano. Tamaño: 4.5×4.0×0.05 m. Posición: x=2.25, y=2.0, z=0.0. Material: Listones de madera clara cálida con acabado satinado suave; encima: nada inventado",
+  "CENTRO_DE_LA_HABITACION": "Centro de la habitación. Forma: cilindro. Tamaño: 2.2×2.2×0.02 m. Posición: x=2.25, y=2.0, z=0.01. Material: Tejido de algodón mate suave tipo tapete circular beige cálido; encima: nada inventado",
+  "PUERTA_DE_ENTRADA_DE_LA_HABITACION": "Puerta de entrada de la habitación. Forma: caja. Tamaño: 0.9×0.08×2.1 m. Posición: x=0.8, y=0.05, z=0.0. Material: Madera pintada y barnizada estilo juguete 3D; color: Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6; textura: Satinada lisa con cantos muy redondeados y biselados suaves; encima: nada inventado",
+  "MESA_DE_NOCHE_JUNTO_A_LA_CAMA": "Mesa de noche junto a la cama. Forma: caja. Tamaño: 0.5×0.45×0.55 m. Posición: x=0.4, y=3.45, z=0.0. Material: Madera pintada y barnizada estilo juguete 3D; color: Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6; textura: Satinada lisa con cantos muy redondeados y biselados suaves; encima: nada inventado"
+ },
+ "fondo_lejano": [
+  {
+   "que_es": "Cielo diurno despejado con nubes redondeadas y un gran arcoíris que cruza el horizonte sobre las copas de los árboles del jardín",
+   "direccion": "fondo",
+   "distancia_aprox_m": 80,
+   "tamano_aparente": "Grande, enmarcado de lado a lado a través de la ventana de 1,6 m de ancho de la pared del fondo"
+  }
+ ],
+ "materiales_fondo": null,
+ "faltas": []
+}

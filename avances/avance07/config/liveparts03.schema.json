@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"fx_dimensions_m": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3}, "glyph_py": {"type": "number"}}, "required": ["fx_dimensions_m", "glyph_py"]}

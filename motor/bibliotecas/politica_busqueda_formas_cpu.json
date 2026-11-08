@@ -1,0 +1,33 @@
+{
+  "minimum_score": 0.75,
+  "weights": {
+    "shape": 0.3,
+    "dimensions": 0.2,
+    "use": 0.2,
+    "words": 0.3
+  },
+  "synonyms": {
+    "meson": "escritorio",
+    "desk": "escritorio",
+    "laborar": "trabajar",
+    "work": "trabajar",
+    "asiento": "silla",
+    "wardrobe": "armario"
+  },
+  "stop_words": [
+    "de",
+    "para",
+    "un",
+    "una",
+    "el",
+    "la"
+  ],
+  "primitive_shapes": [
+    "BOX",
+    "ELLIPSOID",
+    "CYLINDER",
+    "CONE",
+    "TORUS",
+    "MESH"
+  ]
+}

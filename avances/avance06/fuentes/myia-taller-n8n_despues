@@ -1,0 +1,5 @@
+n8ntaller ALL=(root) NOPASSWD: /opt/myia-staging-arreglos-20261026/venv/bin/python /opt/myia-taller-n8n/cajas/paso00_cadena.py *
+n8ntaller ALL=(root) NOPASSWD: /opt/myia-staging-arreglos-20261026/venv/bin/python /opt/myia-taller-n8n/cajas/sello_pago.py *
+
+# AVANCE06: no intérprete arbitrario, sólo wrapper root-owned con validación estricta
+n8ntaller ALL=(root) NOPASSWD: /opt/myia-motor-v9/avance06_20261107/entrega/codigo/puente_json.sh *

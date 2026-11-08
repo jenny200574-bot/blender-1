@@ -1,0 +1,66 @@
+[
+ {
+  "personaje": "novia",
+  "accion_plan": "arrodillarse",
+  "movimiento": "arrodillarse",
+  "t0": 0.0,
+  "t1": 2.5,
+  "objetivo_punto": "kael.cabeza"
+ },
+ {
+  "personaje": "novia",
+  "accion_plan": "mirar",
+  "movimiento": "mantener_arrodillada_mirando",
+  "t0": 2.5,
+  "t1": 10.0,
+  "objetivo_punto": "kael.cabeza"
+ },
+ {
+  "personaje": "kael",
+  "accion_plan": "levantarse",
+  "movimiento": "levantarse_por_fases",
+  "t0": 0.0,
+  "t1": 4.2,
+  "objetivo_punto": "novia.cabeza"
+ },
+ {
+  "personaje": "kael",
+  "accion_plan": "acercarse",
+  "movimiento": "paso_corto_vacilante",
+  "t0": 4.2,
+  "t1": 5.5,
+  "objetivo_punto": "novia.cabeza"
+ },
+ {
+  "personaje": "alien",
+  "accion_plan": "quieto",
+  "movimiento": "quieto_firme",
+  "t0": 0.0,
+  "t1": 5.2,
+  "objetivo_punto": "kael.cabeza"
+ },
+ {
+  "personaje": "alien",
+  "accion_plan": "apuntar_arma",
+  "movimiento": "apuntar_lanza",
+  "t0": 5.2,
+  "t1": 8.0,
+  "objetivo_punto": "kael.pecho_c"
+ },
+ {
+  "personaje": "alien",
+  "accion_plan": "quieto",
+  "movimiento": "mantener_apuntando_lanza",
+  "t0": 8.0,
+  "t1": 10.0,
+  "objetivo_punto": "kael.pecho_c"
+ },
+ {
+  "personaje": "kael",
+  "accion_plan": "mirar",
+  "movimiento": "mirar_brazalete",
+  "t0": 5.5,
+  "t1": 10.0,
+  "objetivo_punto": "brazalete.centro"
+ }
+]

@@ -1,0 +1,1444 @@
+{
+  "objects": [
+    {
+      "id": "obj-libro-cuentos__e1-8",
+      "source_refs": [
+        "source_4b1_current[0]",
+        "source_4a2_mold_book_variants[0]",
+        "measured_inventory.objects[2]"
+      ],
+      "frase_sello": "Libro infantil abierto con páginas crema y tapas azul noche, decorado con acentos dorados y letras mágicas flotantes sobre las hojas.",
+      "dimensions_m": [
+        0.4,
+        0.26,
+        0.04
+      ],
+      "parts": [
+        {
+          "id": "av07.book.cover",
+          "role": "tapa dura",
+          "shape": "CYLINDER",
+          "px": 0,
+          "py": 0,
+          "pz": -0.01,
+          "rx": 0,
+          "ry": 90,
+          "rz": 0,
+          "dx": 0.02,
+          "dy": 0.26,
+          "dz": 0.4,
+          "r": 0.106,
+          "g": 0.133,
+          "b": 0.251,
+          "a": 1,
+          "metallic": 0,
+          "roughness": 0.8,
+          "transmission": 0,
+          "emission": 0,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.book.page_left",
+          "role": "página izquierda",
+          "shape": "ELLIPSOID",
+          "px": -0.09,
+          "py": 0,
+          "pz": 0.01,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 0.18,
+          "dy": 0.24,
+          "dz": 0.02,
+          "r": 0.949,
+          "g": 0.886,
+          "b": 0.808,
+          "a": 1,
+          "metallic": 0,
+          "roughness": 1,
+          "transmission": 0,
+          "emission": 0,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.book.page_right",
+          "role": "página derecha",
+          "shape": "ELLIPSOID",
+          "px": 0.09,
+          "py": 0,
+          "pz": 0.01,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 0.18,
+          "dy": 0.24,
+          "dz": 0.02,
+          "r": 0.949,
+          "g": 0.886,
+          "b": 0.808,
+          "a": 1,
+          "metallic": 0,
+          "roughness": 1,
+          "transmission": 0,
+          "emission": 0,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.book.accent_gold",
+          "role": "lomo dorado",
+          "shape": "CYLINDER",
+          "px": 0,
+          "py": 0,
+          "pz": -0.015,
+          "rx": 0,
+          "ry": 90,
+          "rz": 0,
+          "dx": 0.01,
+          "dy": 0.26,
+          "dz": 0.05,
+          "r": 0.961,
+          "g": 0.773,
+          "b": 0.259,
+          "a": 1,
+          "metallic": 0.8,
+          "roughness": 0.3,
+          "transmission": 0,
+          "emission": 0.2,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.book.letter_a",
+          "role": "letter",
+          "shape": "POINT_TUBE",
+          "px": -0.1,
+          "py": 0,
+          "pz": 0.015,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.184,
+          "g": 0.49,
+          "b": 0.882,
+          "a": 1,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.5,
+          "resolution": 8,
+          "tip_ratio": 0,
+          "radius_m": 0.003,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": [
+            {
+              "x": -0.01,
+              "y": -0.02,
+              "z": 0
+            },
+            {
+              "x": 0,
+              "y": 0.02,
+              "z": 0
+            },
+            {
+              "x": 0.01,
+              "y": -0.02,
+              "z": 0
+            },
+            {
+              "x": -0.005,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": 0.005,
+              "y": 0,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "id": "av07.book.letter_e",
+          "role": "letter",
+          "shape": "POINT_TUBE",
+          "px": 0.05,
+          "py": 0.05,
+          "pz": 0.015,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.839,
+          "g": 0.2,
+          "b": 0.541,
+          "a": 1,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.5,
+          "resolution": 8,
+          "tip_ratio": 0,
+          "radius_m": 0.003,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": [
+            {
+              "x": 0.01,
+              "y": 0.02,
+              "z": 0
+            },
+            {
+              "x": -0.01,
+              "y": 0.02,
+              "z": 0
+            },
+            {
+              "x": -0.01,
+              "y": -0.02,
+              "z": 0
+            },
+            {
+              "x": 0.01,
+              "y": -0.02,
+              "z": 0
+            },
+            {
+              "x": -0.01,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "id": "av07.book.letter_o",
+          "role": "letter",
+          "shape": "POINT_TUBE",
+          "px": 0.05,
+          "py": -0.05,
+          "pz": 0.015,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.231,
+          "g": 0.667,
+          "b": 0.29,
+          "a": 1,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.5,
+          "resolution": 8,
+          "tip_ratio": 0,
+          "radius_m": 0.003,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": [
+            {
+              "x": 0,
+              "y": 0.02,
+              "z": 0
+            },
+            {
+              "x": 0.015,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": 0,
+              "y": -0.02,
+              "z": 0
+            },
+            {
+              "x": -0.015,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": 0,
+              "y": 0.02,
+              "z": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Centro de la habitación",
+      "source_refs": [
+        "source_4a2_elements[2]",
+        "source_4a2_glossary.formas.CENTRO_DE_LA_HABITACION",
+        "measured_inventory.objects[1]"
+      ],
+      "frase_sello": "Tapete circular beige de tejido de algodón suave ubicado en el centro de la habitación.",
+      "dimensions_m": [
+        2.2,
+        2.2,
+        0.02
+      ],
+      "parts": [
+        {
+          "id": "av07.rug.main",
+          "role": "tapete",
+          "shape": "CYLINDER",
+          "px": 0,
+          "py": 0,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 2.2,
+          "dy": 2.2,
+          "dz": 0.02,
+          "r": 0.961,
+          "g": 0.941,
+          "b": 0.863,
+          "a": 1,
+          "metallic": 0,
+          "roughness": 1,
+          "transmission": 0,
+          "emission": 0,
+          "resolution": 32,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        }
+      ]
+    },
+    {
+      "id": "obj-visor-spark",
+      "source_refs": [
+        "source_4b1_current[1]",
+        "measured_inventory.objects[3]"
+      ],
+      "frase_sello": "Gafas-visor tecnológicas infantiles con pantalla curva translúcida, marco superior azul y patillas ergonómicas.",
+      "dimensions_m": [
+        0.16,
+        0.12,
+        0.06
+      ],
+      "parts": [
+        {
+          "id": "av07.visor.lens",
+          "role": "lens_panoramic",
+          "shape": "CYLINDER",
+          "px": 0.0,
+          "py": 0.04,
+          "pz": 0.0,
+          "rx": 0.0,
+          "ry": 0.0,
+          "rz": 0.0,
+          "dx": 0.16,
+          "dy": 0.04,
+          "dz": 0.05,
+          "r": 0.561,
+          "g": 0.827,
+          "b": 1.0,
+          "a": 0.7,
+          "metallic": 0.0,
+          "roughness": 0.1,
+          "transmission": 0.9,
+          "emission": 0.2,
+          "resolution": 32,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.frame_top",
+          "role": "frame",
+          "shape": "ELLIPSOID",
+          "px": 0.0,
+          "py": 0.04,
+          "pz": 0.025,
+          "rx": 0.0,
+          "ry": 0.0,
+          "rz": 0.0,
+          "dx": 0.16,
+          "dy": 0.04,
+          "dz": 0.01,
+          "r": 0.184,
+          "g": 0.49,
+          "b": 0.882,
+          "a": 1.0,
+          "metallic": 0.3,
+          "roughness": 0.3,
+          "transmission": 0.0,
+          "emission": 0.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.nose",
+          "role": "nose_bridge",
+          "shape": "ELLIPSOID",
+          "px": 0.0,
+          "py": 0.05,
+          "pz": -0.02,
+          "rx": 0.0,
+          "ry": 0.0,
+          "rz": 0.0,
+          "dx": 0.035,
+          "dy": 0.02,
+          "dz": 0.02,
+          "r": 0.184,
+          "g": 0.49,
+          "b": 0.882,
+          "a": 1.0,
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "transmission": 0.0,
+          "emission": 0.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.temple_l",
+          "role": "temple_left",
+          "shape": "CYLINDER",
+          "px": -0.075,
+          "py": -0.02,
+          "pz": 0.01,
+          "rx": 90.0,
+          "ry": 0.0,
+          "rz": 0.0,
+          "dx": 0.01,
+          "dy": 0.02,
+          "dz": 0.08,
+          "r": 0.184,
+          "g": 0.49,
+          "b": 0.882,
+          "a": 1.0,
+          "metallic": 0.2,
+          "roughness": 0.4,
+          "transmission": 0.0,
+          "emission": 0.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.temple_r",
+          "role": "temple_right",
+          "shape": "CYLINDER",
+          "px": 0.075,
+          "py": -0.02,
+          "pz": 0.01,
+          "rx": 90.0,
+          "ry": 0.0,
+          "rz": 0.0,
+          "dx": 0.01,
+          "dy": 0.02,
+          "dz": 0.08,
+          "r": 0.184,
+          "g": 0.49,
+          "b": 0.882,
+          "a": 1.0,
+          "metallic": 0.2,
+          "roughness": 0.4,
+          "transmission": 0.0,
+          "emission": 0.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.emitter",
+          "role": "emitter",
+          "shape": "CYLINDER",
+          "px": 0.07,
+          "py": 0.04,
+          "pz": 0.01,
+          "rx": 0.0,
+          "ry": 90.0,
+          "rz": 0.0,
+          "dx": 0.015,
+          "dy": 0.02,
+          "dz": 0.02,
+          "r": 0.561,
+          "g": 0.827,
+          "b": 1.0,
+          "a": 1.0,
+          "metallic": 0.5,
+          "roughness": 0.2,
+          "transmission": 0.0,
+          "emission": 1.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        }
+      ]
+    },
+    {
+      "id": "Ventana con vista al arcoíris",
+      "source_refs": [
+        "source_4a2_elements[0]",
+        "source_4a2_glossary.formas.VENTANA_CON_VISTA_AL_ARCOIRIS",
+        "measured_inventory.objects[0]"
+      ],
+      "frase_sello": "Ventana de madera con marco abierto, cristal central y vista de arcoíris de siete bandas individuales.",
+      "dimensions_m": [
+        1.6,
+        0.15,
+        1.3
+      ],
+      "parts": [
+        {
+          "id": "av07.window.frame.left",
+          "role": "frame",
+          "shape": "CYLINDER",
+          "px": -0.775,
+          "py": 0.0,
+          "pz": 0.0,
+          "rx": 0.0,
+          "ry": 0.0,
+          "rz": 0.0,
+          "dx": 0.05,
+          "dy": 0.15,
+          "dz": 1.3,
+          "r": 0.784,
+          "g": 0.541,
+          "b": 0.333,
+          "a": 1.0,
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "transmission": 0.0,
+          "emission": 0.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.window.frame.right",
+          "role": "frame",
+          "shape": "CYLINDER",
+          "px": 0.775,
+          "py": 0.0,
+          "pz": 0.0,
+          "rx": 0.0,
+          "ry": 0.0,
+          "rz": 0.0,
+          "dx": 0.05,
+          "dy": 0.15,
+          "dz": 1.3,
+          "r": 0.784,
+          "g": 0.541,
+          "b": 0.333,
+          "a": 1.0,
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "transmission": 0.0,
+          "emission": 0.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.window.frame.top",
+          "role": "frame",
+          "shape": "CYLINDER",
+          "px": 0.0,
+          "py": 0.0,
+          "pz": 0.625,
+          "rx": 0.0,
+          "ry": 90.0,
+          "rz": 0.0,
+          "dx": 0.05,
+          "dy": 0.15,
+          "dz": 1.6,
+          "r": 0.784,
+          "g": 0.541,
+          "b": 0.333,
+          "a": 1.0,
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "transmission": 0.0,
+          "emission": 0.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.window.frame.bottom",
+          "role": "frame",
+          "shape": "CYLINDER",
+          "px": 0.0,
+          "py": 0.0,
+          "pz": -0.625,
+          "rx": 0.0,
+          "ry": 90.0,
+          "rz": 0.0,
+          "dx": 0.05,
+          "dy": 0.15,
+          "dz": 1.6,
+          "r": 0.784,
+          "g": 0.541,
+          "b": 0.333,
+          "a": 1.0,
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "transmission": 0.0,
+          "emission": 0.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.window.glass",
+          "role": "glass",
+          "shape": "ELLIPSOID",
+          "px": 0.0,
+          "py": 0.0,
+          "pz": 0.0,
+          "rx": 0.0,
+          "ry": 0.0,
+          "rz": 0.0,
+          "dx": 1.5,
+          "dy": 0.01,
+          "dz": 1.2,
+          "r": 0.8,
+          "g": 0.9,
+          "b": 1.0,
+          "a": 0.3,
+          "metallic": 0.0,
+          "roughness": 0.05,
+          "transmission": 0.95,
+          "emission": 0.0,
+          "resolution": 16,
+          "tip_ratio": 0.0,
+          "radius_m": 0.0,
+          "plane_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.window.rainbow.red",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.06,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 1.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0.012,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.7,
+              "y": 0,
+              "z": -0.4
+            },
+            {
+              "x": -0.68,
+              "y": 0,
+              "z": -0.21
+            },
+            {
+              "x": -0.61,
+              "y": 0,
+              "z": -0.04
+            },
+            {
+              "x": -0.52,
+              "y": 0,
+              "z": 0.13
+            },
+            {
+              "x": -0.38,
+              "y": 0,
+              "z": 0.28
+            },
+            {
+              "x": -0.21,
+              "y": 0,
+              "z": 0.38
+            },
+            {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.42
+            },
+            {
+              "x": 0.21,
+              "y": 0,
+              "z": 0.38
+            },
+            {
+              "x": 0.38,
+              "y": 0,
+              "z": 0.28
+            },
+            {
+              "x": 0.52,
+              "y": 0,
+              "z": 0.13
+            },
+            {
+              "x": 0.61,
+              "y": 0,
+              "z": -0.04
+            },
+            {
+              "x": 0.68,
+              "y": 0,
+              "z": -0.21
+            },
+            {
+              "x": 0.7,
+              "y": 0,
+              "z": -0.4
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.orange",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.05,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 1.0,
+          "g": 0.5,
+          "b": 0.0,
+          "a": 1.0,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0.012,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.65,
+              "y": 0,
+              "z": -0.4
+            },
+            {
+              "x": -0.63,
+              "y": 0,
+              "z": -0.22
+            },
+            {
+              "x": -0.56,
+              "y": 0,
+              "z": -0.06
+            },
+            {
+              "x": -0.48,
+              "y": 0,
+              "z": 0.09
+            },
+            {
+              "x": -0.35,
+              "y": 0,
+              "z": 0.23
+            },
+            {
+              "x": -0.2,
+              "y": 0,
+              "z": 0.32
+            },
+            {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.36
+            },
+            {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.32
+            },
+            {
+              "x": 0.35,
+              "y": 0,
+              "z": 0.23
+            },
+            {
+              "x": 0.48,
+              "y": 0,
+              "z": 0.09
+            },
+            {
+              "x": 0.56,
+              "y": 0,
+              "z": -0.06
+            },
+            {
+              "x": 0.63,
+              "y": 0,
+              "z": -0.22
+            },
+            {
+              "x": 0.65,
+              "y": 0,
+              "z": -0.4
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.yellow",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.04,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 1.0,
+          "g": 1.0,
+          "b": 0.0,
+          "a": 1.0,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0.012,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.6,
+              "y": 0,
+              "z": -0.4
+            },
+            {
+              "x": -0.58,
+              "y": 0,
+              "z": -0.23
+            },
+            {
+              "x": -0.52,
+              "y": 0,
+              "z": -0.08
+            },
+            {
+              "x": -0.44,
+              "y": 0,
+              "z": 0.05
+            },
+            {
+              "x": -0.32,
+              "y": 0,
+              "z": 0.18
+            },
+            {
+              "x": -0.19,
+              "y": 0,
+              "z": 0.26
+            },
+            {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.3
+            },
+            {
+              "x": 0.19,
+              "y": 0,
+              "z": 0.26
+            },
+            {
+              "x": 0.32,
+              "y": 0,
+              "z": 0.18
+            },
+            {
+              "x": 0.44,
+              "y": 0,
+              "z": 0.05
+            },
+            {
+              "x": 0.52,
+              "y": 0,
+              "z": -0.08
+            },
+            {
+              "x": 0.58,
+              "y": 0,
+              "z": -0.23
+            },
+            {
+              "x": 0.6,
+              "y": 0,
+              "z": -0.4
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.green",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.03,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.0,
+          "g": 1.0,
+          "b": 0.0,
+          "a": 1.0,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0.012,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.55,
+              "y": 0,
+              "z": -0.4
+            },
+            {
+              "x": -0.53,
+              "y": 0,
+              "z": -0.24
+            },
+            {
+              "x": -0.47,
+              "y": 0,
+              "z": -0.1
+            },
+            {
+              "x": -0.4,
+              "y": 0,
+              "z": 0.01
+            },
+            {
+              "x": -0.29,
+              "y": 0,
+              "z": 0.13
+            },
+            {
+              "x": -0.18,
+              "y": 0,
+              "z": 0.2
+            },
+            {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.24
+            },
+            {
+              "x": 0.18,
+              "y": 0,
+              "z": 0.2
+            },
+            {
+              "x": 0.29,
+              "y": 0,
+              "z": 0.13
+            },
+            {
+              "x": 0.4,
+              "y": 0,
+              "z": 0.01
+            },
+            {
+              "x": 0.47,
+              "y": 0,
+              "z": -0.1
+            },
+            {
+              "x": 0.53,
+              "y": 0,
+              "z": -0.24
+            },
+            {
+              "x": 0.55,
+              "y": 0,
+              "z": -0.4
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.blue",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.02,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.0,
+          "g": 0.0,
+          "b": 1.0,
+          "a": 1.0,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0.012,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.5,
+              "y": 0,
+              "z": -0.4
+            },
+            {
+              "x": -0.48,
+              "y": 0,
+              "z": -0.25
+            },
+            {
+              "x": -0.43,
+              "y": 0,
+              "z": -0.12
+            },
+            {
+              "x": -0.36,
+              "y": 0,
+              "z": -0.03
+            },
+            {
+              "x": -0.26,
+              "y": 0,
+              "z": 0.08
+            },
+            {
+              "x": -0.17,
+              "y": 0,
+              "z": 0.14
+            },
+            {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.18
+            },
+            {
+              "x": 0.17,
+              "y": 0,
+              "z": 0.14
+            },
+            {
+              "x": 0.26,
+              "y": 0,
+              "z": 0.08
+            },
+            {
+              "x": 0.36,
+              "y": 0,
+              "z": -0.03
+            },
+            {
+              "x": 0.43,
+              "y": 0,
+              "z": -0.12
+            },
+            {
+              "x": 0.48,
+              "y": 0,
+              "z": -0.25
+            },
+            {
+              "x": 0.5,
+              "y": 0,
+              "z": -0.4
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.indigo",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.01,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.29,
+          "g": 0.0,
+          "b": 0.51,
+          "a": 1.0,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0.012,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.45,
+              "y": 0,
+              "z": -0.4
+            },
+            {
+              "x": -0.43,
+              "y": 0,
+              "z": -0.26
+            },
+            {
+              "x": -0.38,
+              "y": 0,
+              "z": -0.14
+            },
+            {
+              "x": -0.32,
+              "y": 0,
+              "z": -0.07
+            },
+            {
+              "x": -0.23,
+              "y": 0,
+              "z": 0.03
+            },
+            {
+              "x": -0.16,
+              "y": 0,
+              "z": 0.08
+            },
+            {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.12
+            },
+            {
+              "x": 0.16,
+              "y": 0,
+              "z": 0.08
+            },
+            {
+              "x": 0.23,
+              "y": 0,
+              "z": 0.03
+            },
+            {
+              "x": 0.32,
+              "y": 0,
+              "z": -0.07
+            },
+            {
+              "x": 0.38,
+              "y": 0,
+              "z": -0.14
+            },
+            {
+              "x": 0.43,
+              "y": 0,
+              "z": -0.26
+            },
+            {
+              "x": 0.45,
+              "y": 0,
+              "z": -0.4
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.violet",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.0,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.5,
+          "g": 0.0,
+          "b": 0.5,
+          "a": 1.0,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0.012,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.4,
+              "y": 0,
+              "z": -0.4
+            },
+            {
+              "x": -0.38,
+              "y": 0,
+              "z": -0.27
+            },
+            {
+              "x": -0.34,
+              "y": 0,
+              "z": -0.16
+            },
+            {
+              "x": -0.28,
+              "y": 0,
+              "z": -0.11
+            },
+            {
+              "x": -0.2,
+              "y": 0,
+              "z": -0.02
+            },
+            {
+              "x": -0.15,
+              "y": 0,
+              "z": 0.02
+            },
+            {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.06
+            },
+            {
+              "x": 0.15,
+              "y": 0,
+              "z": 0.02
+            },
+            {
+              "x": 0.2,
+              "y": 0,
+              "z": -0.02
+            },
+            {
+              "x": 0.28,
+              "y": 0,
+              "z": -0.11
+            },
+            {
+              "x": 0.34,
+              "y": 0,
+              "z": -0.16
+            },
+            {
+              "x": 0.38,
+              "y": 0,
+              "z": -0.27
+            },
+            {
+              "x": 0.4,
+              "y": 0,
+              "z": -0.4
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "axes": {
+    "status": "SOURCE",
+    "unit": "m",
+    "up": "+Z",
+    "forward": "+Y",
+    "origin": "front_left_floor",
+    "source_refs": [
+      "measured_inventory.unit_system",
+      "source_4a2_elements"
+    ],
+    "reason": "Unidades métricas confirmadas por campos 4a2 y extents de inventario. Eje forward +Y define profundidad hacia la pared del fondo (y=3.95)."
+  },
+  "identity_notes": [
+    "Fichas generadas Argon para revisión de inventario 4b1/4a2.",
+    "No se asume equivalencia con sellos gdc previos debido a discrepancias en medidas.",
+    "Diseño de letras animables en libro y arcoíris de 7 bandas en ventana incluido.",
+    "Diseño Argon generado para visor y ventana",
+    "Marco de ventana compuesto por 4 piezas cilíndricas para asegurar hueco central",
+    "Escala métrica 1:1 basada en inventario 4b1 y 4a2"
+  ],
+  "physical_missing": [
+    "Falta anclaje y colisiones para el esqueleto aviar Piquito",
+    "Falta certificación de anclaje de Piquito (skeleton_Piquito_generated19) al hombro de personajes.",
+    "Falta representación física declarativa del visor",
+    "Falta representación física declarativa para colisiones."
+  ]
+}

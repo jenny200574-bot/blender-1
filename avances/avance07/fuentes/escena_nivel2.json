@@ -1,0 +1,952 @@
+{
+  "esquema": "Nivel 2 escena",
+  "ID_ESCENA": {
+    "label": "ESCENA 1",
+    "numero": "1",
+    "numeros_disponibles": [
+      "1",
+      "2",
+      "3",
+      "8",
+      "9"
+    ],
+    "lugar_id": "esc-habitacion",
+    "nombre": "Habitación",
+    "fuente": "4a1.id + número escena pedido"
+  },
+  "TIPO_ENTORNO": {
+    "valor": "interior",
+    "int_ext_4a1": "INT",
+    "fuente": "4a1.int_ext (+nombre)"
+  },
+  "ESTILO_FONDO_INGLES": {
+    "valor": "wood laminate floor, painted plaster walls",
+    "fuente": "derivado_script_desde_4a1_materiales",
+    "nota": "4a1 no produce ESTILO_FONDO_INGLES. Script deriva palabras EN de materiales. No se inventa atmósfera/paleta.",
+    "filtro_anti_moss_aplicado": true
+  },
+  "ATMOSFERA_INGLES": {
+    "valor": "Warm daylight streaming through the window mixed with soft amber ceiling light and golden magical bloom on the chest, empty space for characters in the center.",
+    "insumo_4a1_ES": "Comienza apacible y cálida de lectura infantil; tras los dos rayos morados se vuelve desaturada y sorprendida, y luego cobra energía heroica con el aterrizaje de las cuatro luces de colores y la aparición del cofre dorado.",
+    "fuente": "4a4 → atmosfera_4a4.json (frases de luz/clima/color del prompt base)",
+    "cobertura_diccionario": 0.49,
+    "restos_sin_traducir": [
+      "apacible",
+      "cálida",
+      "aterrizaje",
+      "aparición"
+    ],
+    "estimacion_ai_por_escena": {
+      "para": "traducir atmosfera ES → frase EN corta de mood (image prompt)",
+      "tokens_in_est": 120,
+      "tokens_out_est": 40,
+      "modelo_ref": "LLM barato tipo mini (p.ej. gpt-4o-mini / equivalente)",
+      "usd_est_por_escena": 0.0002,
+      "usd_est_nota": "Orden de magnitud ~US$0.0001–0.0004/escena a tarifas mini 2026; confirmar con Ricardo antes de cablear. Cero llamadas hechas."
+    },
+    "cambios_por_escena_en": {}
+  },
+  "PALETA_ESCENA_INGLES": {
+    "valor": "warm white inicio que pasa gris frío tras segundo ZAP, warm amber soft, Destellos blue, magenta, verde, amarillo golden, warm honey oak, Crema beige soft zócalo warm white",
+    "fuente": "derivado_determinista_desde_4a1_luces+materiales"
+  },
+  "CLIMA_Y_LUZ_ESCENA": {
+    "valor": "Hora: Día. Clima: Despejado con arcoíris que se vuelve gris tras el rayo de Don Caos. Ambiente: Comienza cálido y luminoso, pierde calidez cuando el rayo morado vuelve gris el arcoíris y recupera un foco mágico dorado con la aparición del cofre y los cuatro héroes.. Luces: Luz natural diurna por ventana: Blanco cálido #FFF4D6 al inicio que pasa a gris frío #B0B7BC tras el segundo ZAP, intensidad alta; Lámpara colgante de techo: Ámbar cálido suave #FFC978, intensidad media; Resplandor mágico de aterrizaje y cofre dorado: Destellos azul #2F7DE1, magenta #D6338A, verde #3BAA4A, amarillo #FFC928 y dorado #F5C542, intensidad alta. Sombras: Suaves y difusas con oclusión ambiental blanda y luz de recorte (rim light) sobre los personajes.. Luz principal desde fuera de cuadro (el molde no muestra lámparas ni ventanas encendidas).",
+    "fuente": "4a1.luz_por_escena + ambiente_vivo.ambiente_por_escena",
+    "hex_luz_en_fuente": [
+      {
+        "tipo": "Luz natural diurna por ventana",
+        "hex": [
+          "#FFF4D6",
+          "#B0B7BC"
+        ],
+        "nota": "hex de luz ya en 4a1"
+      },
+      {
+        "tipo": "Lámpara colgante de techo",
+        "hex": [
+          "#FFC978"
+        ],
+        "nota": "hex de luz ya en 4a1"
+      },
+      {
+        "tipo": "Resplandor mágico de aterrizaje y cofre dorado",
+        "hex": [
+          "#2F7DE1",
+          "#D6338A",
+          "#3BAA4A",
+          "#FFC928",
+          "#F5C542"
+        ],
+        "nota": "hex de luz ya en 4a1"
+      }
+    ],
+    "mold_luz_fuera_de_cuadro": true,
+    "gaps": [],
+    "crudo": {
+      "hora": "Día",
+      "clima": "Despejado con arcoíris que se vuelve gris tras el rayo de Don Caos",
+      "ambiente": "Comienza cálido y luminoso, pierde calidez cuando el rayo morado vuelve gris el arcoíris y recupera un foco mágico dorado con la aparición del cofre y los cuatro héroes.",
+      "fuentes": [
+        {
+          "color": "Blanco cálido #FFF4D6 al inicio que pasa a gris frío #B0B7BC tras el segundo ZAP",
+          "encendida": true,
+          "intensidad": "alta",
+          "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m) entrando hacia el centro",
+          "tipo": "Luz natural diurna por ventana"
+        },
+        {
+          "color": "Ámbar cálido suave #FFC978",
+          "encendida": true,
+          "intensidad": "media",
+          "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+          "tipo": "Lámpara colgante de techo"
+        },
+        {
+          "color": "Destellos azul #2F7DE1, magenta #D6338A, verde #3BAA4A, amarillo #FFC928 y dorado #F5C542",
+          "encendida": true,
+          "intensidad": "alta",
+          "posicion": "Centro de la habitación (x=2,25 m, y=2,0 m, z=0,4 m)}{\"",
+          "tipo": "Resplandor mágico de aterrizaje y cofre dorado"
+        }
+      ],
+      "sombras": "Suaves y difusas con oclusión ambiental blanda y luz de recorte (rim light) sobre los personajes."
+    }
+  },
+  "CLIMA_Y_LUZ_POR_ESCENA": {
+    "1": {
+      "valor": "Hora: Día. Clima: Despejado con arcoíris que se vuelve gris tras el rayo de Don Caos. Ambiente: Comienza cálido y luminoso, pierde calidez cuando el rayo morado vuelve gris el arcoíris y recupera un foco mágico dorado con la aparición del cofre y los cuatro héroes.. Luces: Luz natural diurna por ventana: Blanco cálido #FFF4D6 al inicio que pasa a gris frío #B0B7BC tras el segundo ZAP, intensidad alta; Lámpara colgante de techo: Ámbar cálido suave #FFC978, intensidad media; Resplandor mágico de aterrizaje y cofre dorado: Destellos azul #2F7DE1, magenta #D6338A, verde #3BAA4A, amarillo #FFC928 y dorado #F5C542, intensidad alta. Sombras: Suaves y difusas con oclusión ambiental blanda y luz de recorte (rim light) sobre los personajes.. Luz principal desde fuera de cuadro (el molde no muestra lámparas ni ventanas encendidas).",
+      "fuente": "4a1.luz_por_escena + ambiente_vivo.ambiente_por_escena",
+      "hex_luz_en_fuente": [
+        {
+          "tipo": "Luz natural diurna por ventana",
+          "hex": [
+            "#FFF4D6",
+            "#B0B7BC"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        },
+        {
+          "tipo": "Lámpara colgante de techo",
+          "hex": [
+            "#FFC978"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        },
+        {
+          "tipo": "Resplandor mágico de aterrizaje y cofre dorado",
+          "hex": [
+            "#2F7DE1",
+            "#D6338A",
+            "#3BAA4A",
+            "#FFC928",
+            "#F5C542"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        }
+      ],
+      "mold_luz_fuera_de_cuadro": true,
+      "gaps": [],
+      "crudo": {
+        "hora": "Día",
+        "clima": "Despejado con arcoíris que se vuelve gris tras el rayo de Don Caos",
+        "ambiente": "Comienza cálido y luminoso, pierde calidez cuando el rayo morado vuelve gris el arcoíris y recupera un foco mágico dorado con la aparición del cofre y los cuatro héroes.",
+        "fuentes": [
+          {
+            "color": "Blanco cálido #FFF4D6 al inicio que pasa a gris frío #B0B7BC tras el segundo ZAP",
+            "encendida": true,
+            "intensidad": "alta",
+            "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m) entrando hacia el centro",
+            "tipo": "Luz natural diurna por ventana"
+          },
+          {
+            "color": "Ámbar cálido suave #FFC978",
+            "encendida": true,
+            "intensidad": "media",
+            "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+            "tipo": "Lámpara colgante de techo"
+          },
+          {
+            "color": "Destellos azul #2F7DE1, magenta #D6338A, verde #3BAA4A, amarillo #FFC928 y dorado #F5C542",
+            "encendida": true,
+            "intensidad": "alta",
+            "posicion": "Centro de la habitación (x=2,25 m, y=2,0 m, z=0,4 m)}{\"",
+            "tipo": "Resplandor mágico de aterrizaje y cofre dorado"
+          }
+        ],
+        "sombras": "Suaves y difusas con oclusión ambiental blanda y luz de recorte (rim light) sobre los personajes."
+      }
+    },
+    "2": {
+      "valor": "Hora: Día. Clima: Exterior gris sin color. Ambiente: Interior ligeramente apagado en saturación ambiental para que resalte el brillo neón celeste del holograma de las 5 estrellas y los colores de los héroes.. Luces: Luz diurna gris por ventana: Gris azulado neutro #B0B7BC, intensidad media; Lámpara colgante de techo: Ámbar tenue #FFD89B, intensidad baja; Holograma del visor de Spark: Celeste holograma #8FD3FF con destellos amarillo, verde, azul y magenta en las estrellas, intensidad alta. Sombras: Suaves proyectadas hacia el frente con reflejo celeste en los rostros de los personajes.. Luz principal desde fuera de cuadro (el molde no muestra lámparas ni ventanas encendidas).",
+      "fuente": "4a1.luz_por_escena + ambiente_vivo.ambiente_por_escena",
+      "hex_luz_en_fuente": [
+        {
+          "tipo": "Luz diurna gris por ventana",
+          "hex": [
+            "#B0B7BC"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        },
+        {
+          "tipo": "Lámpara colgante de techo",
+          "hex": [
+            "#FFD89B"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        },
+        {
+          "tipo": "Holograma del visor de Spark",
+          "hex": [
+            "#8FD3FF"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        }
+      ],
+      "mold_luz_fuera_de_cuadro": true,
+      "gaps": [],
+      "crudo": {
+        "hora": "Día",
+        "clima": "Exterior gris sin color",
+        "ambiente": "Interior ligeramente apagado en saturación ambiental para que resalte el brillo neón celeste del holograma de las 5 estrellas y los colores de los héroes.",
+        "fuentes": [
+          {
+            "color": "Gris azulado neutro #B0B7BC",
+            "encendida": true,
+            "intensidad": "media",
+            "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m)}{\"",
+            "tipo": "Luz diurna gris por ventana"
+          },
+          {
+            "color": "Ámbar tenue #FFD89B",
+            "encendida": true,
+            "intensidad": "baja",
+            "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+            "tipo": "Lámpara colgante de techo"
+          },
+          {
+            "color": "Celeste holograma #8FD3FF con destellos amarillo, verde, azul y magenta en las estrellas",
+            "encendida": true,
+            "intensidad": "alta",
+            "posicion": "Frente a Spark en el centro de la habitación (x=1,65 m, y=1,6 m, z=0,95 m)}{\"",
+            "tipo": "Holograma del visor de Spark"
+          }
+        ],
+        "sombras": "Suaves proyectadas hacia el frente con reflejo celeste en los rostros de los personajes."
+      }
+    },
+    "3": {
+      "valor": "Hora: Día. Clima: Exterior gris sin color. Ambiente: Dinámico y juguetón; iluminación uniforme en toda la habitación para ver con claridad los cinco escondites (almohada, lámpara, lápiz, piso y armario).. Luces: Luz diurna tamizada por ventana: Blanco neutro grisáceo #C5CCD1, intensidad media; Lámpara colgante de techo: Blanco cálido suave #FFE0A3, intensidad media; Estela luminosa del Pincel Mágico y Rayo Confundidor: Amarillo brillante #FFC928 en los trazos de Pintor y chispazo morado #6B2FA0 en el disparo de Don Caos, intensidad alta. Sombras: Blandas y limpias bajo los muebles y las vocales 3D al saltar.. Luz principal desde fuera de cuadro (el molde no muestra lámparas ni ventanas encendidas).",
+      "fuente": "4a1.luz_por_escena + ambiente_vivo.ambiente_por_escena",
+      "hex_luz_en_fuente": [
+        {
+          "tipo": "Luz diurna tamizada por ventana",
+          "hex": [
+            "#C5CCD1"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        },
+        {
+          "tipo": "Lámpara colgante de techo",
+          "hex": [
+            "#FFE0A3"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        },
+        {
+          "tipo": "Estela luminosa del Pincel Mágico y Rayo Confundidor",
+          "hex": [
+            "#FFC928",
+            "#6B2FA0"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        }
+      ],
+      "mold_luz_fuera_de_cuadro": true,
+      "gaps": [],
+      "crudo": {
+        "hora": "Día",
+        "clima": "Exterior gris sin color",
+        "ambiente": "Dinámico y juguetón; iluminación uniforme en toda la habitación para ver con claridad los cinco escondites (almohada, lámpara, lápiz, piso y armario).",
+        "fuentes": [
+          {
+            "color": "Blanco neutro grisáceo #C5CCD1",
+            "encendida": true,
+            "intensidad": "media",
+            "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m)}{\"",
+            "tipo": "Luz diurna tamizada por ventana"
+          },
+          {
+            "color": "Blanco cálido suave #FFE0A3",
+            "encendida": true,
+            "intensidad": "media",
+            "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+            "tipo": "Lámpara colgante de techo"
+          },
+          {
+            "color": "Amarillo brillante #FFC928 en los trazos de Pintor y chispazo morado #6B2FA0 en el disparo de Don Caos",
+            "encendida": true,
+            "intensidad": "alta",
+            "posicion": "Zona central de acción (x=2,25 m, y=1,8 m, z=0,8 m)}{\"",
+            "tipo": "Estela luminosa del Pincel Mágico y Rayo Confundidor"
+          }
+        ],
+        "sombras": "Blandas y limpias bajo los muebles y las vocales 3D al saltar."
+      }
+    },
+    "8": {
+      "valor": "Hora: Día. Clima: Pasa de gris a soleado radiante al abrirse el cofre. Ambiente: Comienza expectante frente al cofre y estalla en una iluminación festiva, cálida y multicolor cuando se abren los candados y salen volando las letras, números y colores.. Luces: Luz solar por ventana: Pasa de neutro #C5CCD1 a dorado cálido #FFE39E al abrirse el cofre, intensidad alta; Lámpara colgante de techo: Ámbar cálido #FFC978, intensidad media; Resplandor mágico del Cofre del Abecedario, Pincel y Visor: Celeste #8FD3FF, magenta #D6338A y dorado #F5C542, intensidad alta. Sombras: Suaves con fuerte luz de contorno dorada y bloom luminoso alrededor del cofre abierto.. Luz principal desde fuera de cuadro (el molde no muestra lámparas ni ventanas encendidas).",
+      "fuente": "4a1.luz_por_escena + ambiente_vivo.ambiente_por_escena",
+      "hex_luz_en_fuente": [
+        {
+          "tipo": "Luz solar por ventana",
+          "hex": [
+            "#C5CCD1",
+            "#FFE39E"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        },
+        {
+          "tipo": "Lámpara colgante de techo",
+          "hex": [
+            "#FFC978"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        },
+        {
+          "tipo": "Resplandor mágico del Cofre del Abecedario, Pincel y Visor",
+          "hex": [
+            "#8FD3FF",
+            "#D6338A",
+            "#F5C542"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        }
+      ],
+      "mold_luz_fuera_de_cuadro": true,
+      "gaps": [],
+      "crudo": {
+        "hora": "Día",
+        "clima": "Pasa de gris a soleado radiante al abrirse el cofre",
+        "ambiente": "Comienza expectante frente al cofre y estalla en una iluminación festiva, cálida y multicolor cuando se abren los candados y salen volando las letras, números y colores.",
+        "fuentes": [
+          {
+            "color": "Pasa de neutro #C5CCD1 a dorado cálido #FFE39E al abrirse el cofre",
+            "encendida": true,
+            "intensidad": "alta",
+            "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m)}{\"",
+            "tipo": "Luz solar por ventana"
+          },
+          {
+            "color": "Ámbar cálido #FFC978",
+            "encendida": true,
+            "intensidad": "media",
+            "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+            "tipo": "Lámpara colgante de techo"
+          },
+          {
+            "color": "Celeste #8FD3FF, magenta #D6338A y dorado #F5C542",
+            "encendida": true,
+            "intensidad": "alta",
+            "posicion": "Centro de la habitación (x=2,25 m, y=2,0 m, z=0,5 m)}{\"",
+            "tipo": "Resplandor mágico del Cofre del Abecedario, Pincel y Visor"
+          }
+        ],
+        "sombras": "Suaves con fuerte luz de contorno dorada y bloom luminoso alrededor del cofre abierto."
+      }
+    },
+    "9": {
+      "valor": "Hora: Día. Clima: Soleado y despejado con el arcoíris restaurado. Ambiente: Luminoso, cálido y alegre de celebración doméstica tras haber recuperado el abecedario, los colores y los números.. Luces: Luz solar cálida por ventana: Dorado cálido #FFE6A8, intensidad alta; Lámpara colgante de techo: Ámbar cálido #FFC978, intensidad media. Sombras: Suaves, cálidas y redondeadas en el piso alrededor del papel caído.. Luz principal desde fuera de cuadro (el molde no muestra lámparas ni ventanas encendidas).",
+      "fuente": "4a1.luz_por_escena + ambiente_vivo.ambiente_por_escena",
+      "hex_luz_en_fuente": [
+        {
+          "tipo": "Luz solar cálida por ventana",
+          "hex": [
+            "#FFE6A8"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        },
+        {
+          "tipo": "Lámpara colgante de techo",
+          "hex": [
+            "#FFC978"
+          ],
+          "nota": "hex de luz ya en 4a1"
+        }
+      ],
+      "mold_luz_fuera_de_cuadro": true,
+      "gaps": [],
+      "crudo": {
+        "hora": "Día",
+        "clima": "Soleado y despejado con el arcoíris restaurado",
+        "ambiente": "Luminoso, cálido y alegre de celebración doméstica tras haber recuperado el abecedario, los colores y los números.",
+        "fuentes": [
+          {
+            "color": "Dorado cálido #FFE6A8",
+            "encendida": true,
+            "intensidad": "alta",
+            "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m)}{\"",
+            "tipo": "Luz solar cálida por ventana"
+          },
+          {
+            "color": "Ámbar cálido #FFC978",
+            "encendida": true,
+            "intensidad": "media",
+            "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+            "tipo": "Lámpara colgante de techo"
+          }
+        ],
+        "sombras": "Suaves, cálidas y redondeadas en el piso alrededor del papel caído."
+      }
+    }
+  },
+  "MATERIALES_ESCENA": {
+    "lineas": [
+      "Paredes: Mampostería estucada y pintada con zócalo inferior de madera, color Crema beige suave con zócalo blanco cálido, Mate lisa y suave con oclusión ambiental blanda en las esquinas",
+      "PISO: Piso de la habitación. Forma: plano. Tamaño: 4.5×4.0×0.05 m. Posición: x=2.25, y=2.0, z=0.0. Material: Listones de madera clara cálida con acabado satinado suave; encima: nada inventado"
+    ],
+    "texto": "Paredes: Mampostería estucada y pintada con zócalo inferior de madera, color Crema beige suave con zócalo blanco cálido, Mate lisa y suave con oclusión ambiental blanda en las esquinas. PISO: Piso de la habitación. Forma: plano. Tamaño: 4.5×4.0×0.05 m. Posición: x=2.25, y=2.0, z=0.0. Material: Listones de madera clara cálida con acabado satinado suave; encima: nada inventado.",
+    "hex_en_fuente": [
+      {
+        "donde": "materiales_texturas.color",
+        "superficie": "Piso",
+        "hex": [
+          "#D9A773"
+        ],
+        "nota": "hex en fuente 4a1; no inventado"
+      },
+      {
+        "donde": "materiales_texturas.color",
+        "superficie": "Paredes",
+        "hex": [
+          "#F5E6D3",
+          "#FFF8EE"
+        ],
+        "nota": "hex en fuente 4a1; no inventado"
+      },
+      {
+        "donde": "materiales_texturas.color",
+        "superficie": "Techo",
+        "hex": [
+          "#FAF3E8"
+        ],
+        "nota": "hex en fuente 4a1; no inventado"
+      },
+      {
+        "donde": "materiales_texturas.color",
+        "superficie": "Muebles de madera (cama, armario, mesa de noche, marcos de puerta y ventana, zócalos y estanterías)}{\"",
+        "hex": [
+          "#C88A55",
+          "#F2E2CE",
+          "#7EB6E6"
+        ],
+        "nota": "hex en fuente 4a1; no inventado"
+      },
+      {
+        "donde": "materiales_texturas.color",
+        "superficie": "Textiles (tendido de cama, almohada, cortinas y alfombra central)}{\"",
+        "hex": [
+          "#FFE28A",
+          "#5B9BD5",
+          "#E8D3B9"
+        ],
+        "nota": "hex en fuente 4a1; no inventado"
+      }
+    ],
+    "gaps": [],
+    "fuente": "glosario_formas (+4a1 materiales como respaldo)"
+  },
+  "GLOSARIO_FORMAS": {
+    "formas": {
+      "VENTANA_CON_VISTA_AL_ARCOIRIS": "Ventana con vista al arcoíris. Forma: compuesto. Tamaño: 1.6×0.15×1.3 m. Posición: x=2.25, y=3.95, z=0.9. Material: Madera pintada y barnizada estilo juguete 3D; color: Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6; textura: Satinada lisa con cantos muy redondeados y biselados suaves; encima: nada inventado",
+      "PISO": "Piso de la habitación. Forma: plano. Tamaño: 4.5×4.0×0.05 m. Posición: x=2.25, y=2.0, z=0.0. Material: Listones de madera clara cálida con acabado satinado suave; encima: nada inventado",
+      "CENTRO_DE_LA_HABITACION": "Centro de la habitación. Forma: cilindro. Tamaño: 2.2×2.2×0.02 m. Posición: x=2.25, y=2.0, z=0.01. Material: Tejido de algodón mate suave tipo tapete circular beige cálido; encima: nada inventado",
+      "PUERTA_DE_ENTRADA_DE_LA_HABITACION": "Puerta de entrada de la habitación. Forma: caja. Tamaño: 0.9×0.08×2.1 m. Posición: x=0.8, y=0.05, z=0.0. Material: Madera pintada y barnizada estilo juguete 3D; color: Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6; textura: Satinada lisa con cantos muy redondeados y biselados suaves; encima: nada inventado",
+      "MESA_DE_NOCHE_JUNTO_A_LA_CAMA": "Mesa de noche junto a la cama. Forma: caja. Tamaño: 0.5×0.45×0.55 m. Posición: x=0.4, y=3.45, z=0.0. Material: Madera pintada y barnizada estilo juguete 3D; color: Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6; textura: Satinada lisa con cantos muy redondeados y biselados suaves; encima: nada inventado"
+    },
+    "fuente": "4a2 → glosario_4a2.json",
+    "count": 5,
+    "path": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/moldes/esc-habitacion/glosario_4a2.json"
+  },
+  "ANCLA_ESCENA": {
+    "path": "SIN_ANCLA",
+    "frase_que_copia": "De la ancla de escena copia solo el acabado de pintura de los materiales del entorno, la iluminación y el clima de esta escena. El tamaño de los personajes, la forma del set y el ángulo de la cámara salen únicamente del molde (Imagen 1). No copies poses ni encuadre de esta ancla. El vestuario manda por las hojas + la descripción en palabras.",
+    "fuente": "SIN_ANCLA (4a1/4a5 no son ancla de escena)",
+    "candidatos_4a5": [
+      "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4a5/esc-habitacion.png",
+      "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4a5/esc-habitacion__v2@base.png",
+      "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4a5/esc-habitacion__v3@base.png"
+    ]
+  },
+  "PERSONAJES": [
+    {
+      "nombre": "Spark",
+      "personaje_id": "ch-spark-468e",
+      "sheet_path": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/spark/referencia-cliente/refs/76f2c9cad7c45e6a.jpg",
+      "escenas": {
+        "1": {
+          "ropa_inicio": [
+            "visor transparente azul (explicito)",
+            "pijama de una pieza azul con rayos pequeños amarillos estampados (deducido: config_canal)",
+            "pantuflas con forma de cohete (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "visor transparente azul (explicito)",
+            "pijama de una pieza azul con rayos pequeños amarillos estampados (deducido: config_canal)",
+            "pantuflas con forma de cohete (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-visor"
+          ]
+        },
+        "2": {
+          "ropa_inicio": [
+            "visor transparente azul (heredado)",
+            "pijama de una pieza azul con rayos pequeños amarillos estampados (deducido: config_canal)",
+            "pantuflas con forma de cohete (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "visor transparente azul (heredado)",
+            "pijama de una pieza azul con rayos pequeños amarillos estampados (deducido: config_canal)",
+            "pantuflas con forma de cohete (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-visor"
+          ]
+        },
+        "8": {
+          "ropa_inicio": [
+            "visor transparente azul (heredado)",
+            "pijama de una pieza azul con rayos pequeños amarillos estampados (deducido: config_canal)",
+            "pantuflas con forma de cohete (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "visor transparente azul (heredado)",
+            "pijama de una pieza azul con rayos pequeños amarillos estampados (deducido: config_canal)",
+            "pantuflas con forma de cohete (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-visor"
+          ]
+        },
+        "9": {
+          "ropa_inicio": [
+            "visor transparente azul (heredado)",
+            "pijama de una pieza azul con rayos pequeños amarillos estampados (deducido: config_canal)",
+            "pantuflas con forma de cohete (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "visor transparente azul (heredado)",
+            "pijama de una pieza azul con rayos pequeños amarillos estampados (deducido: config_canal)",
+            "pantuflas con forma de cohete (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-visor"
+          ]
+        }
+      },
+      "fuente": "2C → vestuario_por_escena.json",
+      "DESC_ROPA": "visor transparente azul (explicito); pijama de una pieza azul con rayos pequeños amarillos estampados (deducido: config_canal); pantuflas con forma de cohete (deducido: config_canal)"
+    },
+    {
+      "nombre": "Valentina",
+      "personaje_id": "ch-valentina-a9be",
+      "sheet_path": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/valentina/referencia-cliente/refs/85876d21180a93bf.jpg",
+      "escenas": {
+        "1": {
+          "ropa_inicio": [
+            "pijama magenta con corazones pequeños rosados (deducido: config_canal)",
+            "capa corta de color rosa hasta la cintura (deducido: config_canal)",
+            "lazos magenta en dos moños altos (deducido: config_canal)",
+            "pantuflas de conejo rosado (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama magenta con corazones pequeños rosados (deducido: config_canal)",
+            "capa corta de color rosa hasta la cintura (deducido: config_canal)",
+            "lazos magenta en dos moños altos (deducido: config_canal)",
+            "pantuflas de conejo rosado (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-escudo-de-valentina"
+          ]
+        },
+        "2": {
+          "ropa_inicio": [
+            "pijama magenta con corazones pequeños rosados (deducido: config_canal)",
+            "capa corta de color rosa hasta la cintura (deducido: config_canal)",
+            "lazos magenta en dos moños altos (deducido: config_canal)",
+            "pantuflas de conejo rosado (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama magenta con corazones pequeños rosados (deducido: config_canal)",
+            "capa corta de color rosa hasta la cintura (deducido: config_canal)",
+            "lazos magenta en dos moños altos (deducido: config_canal)",
+            "pantuflas de conejo rosado (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-escudo-de-valentina"
+          ]
+        },
+        "8": {
+          "ropa_inicio": [
+            "pijama magenta con corazones pequeños rosados (deducido: config_canal)",
+            "capa corta de color rosa hasta la cintura (deducido: config_canal)",
+            "lazos magenta en dos moños altos (deducido: config_canal)",
+            "pantuflas de conejo rosado (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama magenta con corazones pequeños rosados (deducido: config_canal)",
+            "capa corta de color rosa hasta la cintura (deducido: config_canal)",
+            "lazos magenta en dos moños altos (deducido: config_canal)",
+            "pantuflas de conejo rosado (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-escudo-de-valentina"
+          ]
+        },
+        "9": {
+          "ropa_inicio": [
+            "pijama magenta con corazones pequeños rosados (deducido: config_canal)",
+            "capa corta de color rosa hasta la cintura (deducido: config_canal)",
+            "lazos magenta en dos moños altos (deducido: config_canal)",
+            "pantuflas de conejo rosado (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama magenta con corazones pequeños rosados (deducido: config_canal)",
+            "capa corta de color rosa hasta la cintura (deducido: config_canal)",
+            "lazos magenta en dos moños altos (deducido: config_canal)",
+            "pantuflas de conejo rosado (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-escudo-de-valentina"
+          ]
+        }
+      },
+      "fuente": "2C → vestuario_por_escena.json",
+      "DESC_ROPA": "pijama magenta con corazones pequeños rosados (deducido: config_canal); capa corta de color rosa hasta la cintura (deducido: config_canal); lazos magenta en dos moños altos (deducido: config_canal); pantuflas de conejo rosado (deducido: config_canal)"
+    },
+    {
+      "nombre": "Eco",
+      "personaje_id": "ch-eco-eff3",
+      "sheet_path": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/eco/referencia-cliente/refs/2bf0919933769c21.jpg",
+      "escenas": {
+        "1": {
+          "ropa_inicio": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "objetos": []
+        },
+        "2": {
+          "ropa_inicio": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "objetos": []
+        },
+        "3": {
+          "ropa_inicio": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "objetos": []
+        },
+        "8": {
+          "ropa_inicio": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "objetos": []
+        },
+        "9": {
+          "ropa_inicio": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama verde con estampado de hojitas (deducido: config_canal)",
+            "diadema de hojas verdes (deducido: config_canal)",
+            "cinturón (deducido: config_canal)",
+            "pantuflas verdes con forma de rana (deducido: config_canal)"
+          ],
+          "objetos": []
+        }
+      },
+      "fuente": "2C → vestuario_por_escena.json",
+      "DESC_ROPA": "pijama verde con estampado de hojitas (deducido: config_canal); diadema de hojas verdes (deducido: config_canal); cinturón (deducido: config_canal); pantuflas verdes con forma de rana (deducido: config_canal)"
+    },
+    {
+      "nombre": "Piquito",
+      "personaje_id": "ch-piquito-030a",
+      "sheet_path": null,
+      "escenas": {
+        "1": {
+          "ropa_inicio": [],
+          "ropa_fin": [],
+          "objetos": []
+        },
+        "2": {
+          "ropa_inicio": [],
+          "ropa_fin": [],
+          "objetos": []
+        },
+        "3": {
+          "ropa_inicio": [],
+          "ropa_fin": [],
+          "objetos": []
+        },
+        "8": {
+          "ropa_inicio": [],
+          "ropa_fin": [],
+          "objetos": []
+        },
+        "9": {
+          "ropa_inicio": [],
+          "ropa_fin": [],
+          "objetos": []
+        }
+      },
+      "fuente": "2C → vestuario_por_escena.json",
+      "DESC_ROPA": "FALTA",
+      "gaps": [
+        "sin hoja/imagen de referencia en biblioteca"
+      ]
+    },
+    {
+      "nombre": "Pintor",
+      "personaje_id": "ch-pintor-bce0",
+      "sheet_path": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/pintor/referencia-cliente/refs/93763250e250ad55.jpg",
+      "escenas": {
+        "1": {
+          "ropa_inicio": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-pijama-pintor",
+            "obj-pincel-magico"
+          ]
+        },
+        "2": {
+          "ropa_inicio": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-pijama-pintor",
+            "obj-pincel-magico"
+          ]
+        },
+        "3": {
+          "ropa_inicio": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-pijama-pintor",
+            "obj-pincel-magico"
+          ]
+        },
+        "8": {
+          "ropa_inicio": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-pijama-pintor",
+            "obj-pincel-magico"
+          ]
+        },
+        "9": {
+          "ropa_inicio": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal)",
+            "boina roja ladeada (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-pijama-pintor",
+            "obj-pincel-magico"
+          ]
+        }
+      },
+      "fuente": "2C → vestuario_por_escena.json",
+      "DESC_ROPA": "pijama amarillo con manchitas de pintura de todos los colores (explicito/deducido: config_canal); boina roja ladeada (deducido: config_canal)"
+    },
+    {
+      "nombre": "Don Caos",
+      "personaje_id": "ch-don-caos-7adf",
+      "sheet_path": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/don-caos/referencia-cliente/refs/d3ddaeb70fed28cb.jpg",
+      "escenas": {
+        "1": {
+          "ropa_inicio": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-rayo-confundidor"
+          ]
+        },
+        "2": {
+          "ropa_inicio": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-rayo-confundidor"
+          ]
+        },
+        "3": {
+          "ropa_inicio": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-rayo-confundidor"
+          ]
+        },
+        "8": {
+          "ropa_inicio": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-manzanas",
+            "obj-rayo-confundidor"
+          ]
+        },
+        "9": {
+          "ropa_inicio": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "ropa_fin": [
+            "traje morado con botones desordenados (deducido: config_canal)",
+            "sombrero de copa torcido (deducido: config_canal)",
+            "bufanda larga a rayas (deducido: config_canal)"
+          ],
+          "objetos": [
+            "obj-libro-de-cuentos",
+            "obj-rayo-confundidor"
+          ]
+        }
+      },
+      "fuente": "2C → vestuario_por_escena.json",
+      "DESC_ROPA": "traje morado con botones desordenados (deducido: config_canal); sombrero de copa torcido (deducido: config_canal); bufanda larga a rayas (deducido: config_canal)"
+    }
+  ],
+  "meta": {
+    "path_4a1": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/moldes/esc-habitacion/escenario.json",
+    "fuente_archivo": "4a1",
+    "campos_top_4a1": [
+      "aberturas",
+      "ambiente_ascensos",
+      "ambiente_vivo",
+      "camaras_sugeridas",
+      "elementos",
+      "elementos_blender",
+      "fuente",
+      "horas",
+      "id",
+      "int_ext",
+      "luz_por_escena",
+      "materiales_texturas",
+      "medidas",
+      "nombre",
+      "objetos_del_lugar_posicion",
+      "objetos_tamano",
+      "planta",
+      "variantes"
+    ],
+    "filtro_estilo_urbano_interior": true,
+    "gaps": [
+      "ANCLA_ESCENA — pendiente aprobación humana entre 3 imágenes base de 4a5"
+    ],
+    "usd": 0,
+    "ai_calls": 0,
+    "esquema_ref": null,
+    "lee_de_origen": {
+      "4a2": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/moldes/esc-habitacion/glosario_4a2.json",
+      "2C": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/resultados/vestuario_por_escena.json",
+      "4a4": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/moldes/esc-habitacion/atmosfera_4a4.json",
+      "ancla_aprobada": null
+    }
+  }
+}

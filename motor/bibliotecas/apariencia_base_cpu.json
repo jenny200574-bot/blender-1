@@ -1,0 +1,253 @@
+{
+  "schema": "appearance_base_v1",
+  "version": 1,
+  "source": "Biblioteca base paramétrica CPU; t314; proporciones estilizadas de biblioteca, no medición de imagen",
+  "resolution": 24,
+  "palette": {
+    "piel": [
+      0.79,
+      0.58,
+      0.43,
+      1
+    ],
+    "morena": [
+      0.45,
+      0.24,
+      0.13,
+      1
+    ],
+    "bronceada": [
+      0.68,
+      0.41,
+      0.22,
+      1
+    ],
+    "clara": [
+      0.94,
+      0.76,
+      0.63,
+      1
+    ],
+    "blanco": [
+      0.96,
+      0.96,
+      0.96,
+      1
+    ],
+    "negro": [
+      0.035,
+      0.025,
+      0.025,
+      1
+    ],
+    "castaño": [
+      0.16,
+      0.065,
+      0.025,
+      1
+    ],
+    "gris": [
+      0.55,
+      0.55,
+      0.58,
+      1
+    ],
+    "marron": [
+      0.25,
+      0.1,
+      0.035,
+      1
+    ],
+    "rojo": [
+      0.8,
+      0.035,
+      0.025,
+      1
+    ],
+    "rojiza": [
+      0.85,
+      0.14,
+      0.1,
+      1
+    ],
+    "verde": [
+      0.12,
+      0.65,
+      0.16,
+      1
+    ],
+    "azul": [
+      0.025,
+      0.15,
+      0.65,
+      1
+    ],
+    "cian": [
+      0.02,
+      0.65,
+      0.85,
+      1
+    ],
+    "amarillo": [
+      1,
+      0.8,
+      0.035,
+      1
+    ],
+    "dorado": [
+      0.9,
+      0.62,
+      0.08,
+      1
+    ],
+    "morado": [
+      0.4,
+      0.06,
+      0.6,
+      1
+    ],
+    "purpura": [
+      0.45,
+      0.06,
+      0.65,
+      1
+    ],
+    "rosa": [
+      0.95,
+      0.18,
+      0.5,
+      1
+    ],
+    "naranja": [
+      1,
+      0.25,
+      0.02,
+      1
+    ],
+    "plata": [
+      0.65,
+      0.68,
+      0.7,
+      1
+    ]
+  },
+  "body_bones": {
+    "humanoid": {
+      "head": "cabeza",
+      "torso": "pecho",
+      "upper_arm_left": "brazo_L",
+      "upper_arm_right": "brazo_R",
+      "thigh_left": "muslo_L",
+      "thigh_right": "muslo_R",
+      "forearm_left": "antebrazo_L",
+      "forearm_right": "antebrazo_R",
+      "hand_left": "mano_L",
+      "hand_right": "mano_R",
+      "shin_left": "pierna_L",
+      "shin_right": "pierna_R",
+      "foot_left": "pie_L",
+      "foot_right": "pie_R"
+    },
+    "avian": {}
+  },
+  "profiles": {
+    "humanoid": {
+      "head_width": 0.76,
+      "head_depth": 0.78,
+      "eye_spacing": 0.22,
+      "eye_size": 0.14,
+      "nose_size": 0.12,
+      "mouth_width": 0.3,
+      "hair_depth": 0.22,
+      "torso_width": 0.24,
+      "torso_depth": 0.14,
+      "skin_source": "paleta de biblioteca cuando ADN no especifica RGB"
+    },
+    "avian": {
+      "head_width": 0.95,
+      "head_depth": 0.9,
+      "eye_spacing": 0.25,
+      "eye_size": 0.18,
+      "nose_size": 0.26,
+      "mouth_width": 0.2,
+      "hair_depth": 0.18,
+      "torso_width": 0.55,
+      "torso_depth": 0.5,
+      "skin_source": "plumaje de biblioteca ajustado al ADN"
+    }
+  },
+  "garments": [
+    {
+      "id": "suit",
+      "words": [
+        "enterizo",
+        "traje tactico",
+        "mono ajustado"
+      ],
+      "kind": "suit"
+    },
+    {
+      "id": "armor",
+      "words": [
+        "armadura",
+        "peto",
+        "hombreras"
+      ],
+      "kind": "armor"
+    },
+    {
+      "id": "dress",
+      "words": [
+        "vestido",
+        "falda"
+      ],
+      "kind": "skirt"
+    },
+    {
+      "id": "jacket",
+      "words": [
+        "casaca",
+        "chaqueta",
+        "cardigan"
+      ],
+      "kind": "jacket"
+    },
+    {
+      "id": "cape",
+      "words": [
+        "capa trasera",
+        "capa morada",
+        "capa rosa",
+        "poncho"
+      ],
+      "kind": "cape"
+    },
+    {
+      "id": "trousers",
+      "words": [
+        "pantalon",
+        "prenda inferior"
+      ],
+      "kind": "trousers"
+    },
+    {
+      "id": "shirt",
+      "words": [
+        "camisa",
+        "camiseta",
+        "prenda interior"
+      ],
+      "kind": "shirt"
+    }
+  ],
+  "gpu_slot": {
+    "enabled": false,
+    "input": [
+      "images_with_hash",
+      "dna_text",
+      "calibration_optional"
+    ],
+    "output": "appearance.geometry (same schema)",
+    "state": "ADAPTADOR_FUTURO_NO_IMPLEMENTADO_NO_REQUERIDO_CPU"
+  }
+}

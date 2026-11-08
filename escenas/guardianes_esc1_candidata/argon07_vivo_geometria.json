@@ -1,0 +1,270 @@
+{
+  "fx_dimensions_m": [
+    0.1,
+    0.1,
+    0.1,
+    0.1
+  ],
+  "cofre_additional_parts": [
+    {
+      "id": "av07.lock.color.shackle",
+      "role": "shackle_color",
+      "shape": "POINT_TUBE",
+      "px": -0.15,
+      "py": -0.19,
+      "pz": 0.05,
+      "rx": 0,
+      "ry": 0,
+      "rz": 0,
+      "dx": 0.08,
+      "dy": 0.01,
+      "dz": 0.05,
+      "r": 0.56,
+      "g": 0.83,
+      "b": 1,
+      "a": 1,
+      "metallic": 0.8,
+      "roughness": 0.2,
+      "transmission": 0,
+      "emission": 0,
+      "resolution": 16,
+      "tip_ratio": 0,
+      "radius_m": 0.005,
+      "plane_normal": [
+        0,
+        1,
+        0
+      ],
+      "points": [
+        {
+          "x": -0.03,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": -0.03,
+          "y": 0,
+          "z": 0.04
+        },
+        {
+          "x": 0.03,
+          "y": 0,
+          "z": 0.04
+        },
+        {
+          "x": 0.03,
+          "y": 0,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "id": "av07.lock.number.shackle",
+      "role": "shackle_number",
+      "shape": "POINT_TUBE",
+      "px": 0,
+      "py": -0.19,
+      "pz": 0.05,
+      "rx": 0,
+      "ry": 0,
+      "rz": 0,
+      "dx": 0.08,
+      "dy": 0.01,
+      "dz": 0.05,
+      "r": 0.56,
+      "g": 0.83,
+      "b": 1,
+      "a": 1,
+      "metallic": 0.8,
+      "roughness": 0.2,
+      "transmission": 0,
+      "emission": 0,
+      "resolution": 16,
+      "tip_ratio": 0,
+      "radius_m": 0.005,
+      "plane_normal": [
+        0,
+        1,
+        0
+      ],
+      "points": [
+        {
+          "x": -0.03,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": -0.03,
+          "y": 0,
+          "z": 0.04
+        },
+        {
+          "x": 0.03,
+          "y": 0,
+          "z": 0.04
+        },
+        {
+          "x": 0.03,
+          "y": 0,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "id": "av07.lock.letter.shackle",
+      "role": "shackle_letter",
+      "shape": "POINT_TUBE",
+      "px": 0.15,
+      "py": -0.19,
+      "pz": 0.05,
+      "rx": 0,
+      "ry": 0,
+      "rz": 0,
+      "dx": 0.08,
+      "dy": 0.01,
+      "dz": 0.05,
+      "r": 0.56,
+      "g": 0.83,
+      "b": 1,
+      "a": 1,
+      "metallic": 0.8,
+      "roughness": 0.2,
+      "transmission": 0,
+      "emission": 0,
+      "resolution": 16,
+      "tip_ratio": 0,
+      "radius_m": 0.005,
+      "plane_normal": [
+        0,
+        1,
+        0
+      ],
+      "points": [
+        {
+          "x": -0.03,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": -0.03,
+          "y": 0,
+          "z": 0.04
+        },
+        {
+          "x": 0.03,
+          "y": 0,
+          "z": 0.04
+        },
+        {
+          "x": 0.03,
+          "y": 0,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "id": "av07.lock.number.glyph",
+      "role": "glyph_1",
+      "shape": "POINT_TUBE",
+      "px": 0,
+      "py": -0.21,
+      "pz": 0.01,
+      "rx": 90,
+      "ry": 0,
+      "rz": 0,
+      "dx": 0.02,
+      "dy": 0.04,
+      "dz": 0.01,
+      "r": 0.1,
+      "g": 0.8,
+      "b": 0.1,
+      "a": 1,
+      "metallic": 0,
+      "roughness": 0.5,
+      "transmission": 0,
+      "emission": 1,
+      "resolution": 16,
+      "tip_ratio": 0,
+      "radius_m": 0.003,
+      "plane_normal": [
+        0,
+        0,
+        1
+      ],
+      "points": [
+        {
+          "x": -0.01,
+          "y": 0.01,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.02,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -0.02,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "id": "av07.lock.letter.glyph",
+      "role": "glyph_m",
+      "shape": "POINT_TUBE",
+      "px": 0.15,
+      "py": -0.21,
+      "pz": 0.01,
+      "rx": 90,
+      "ry": 0,
+      "rz": 0,
+      "dx": 0.04,
+      "dy": 0.04,
+      "dz": 0.01,
+      "r": 0.84,
+      "g": 0.2,
+      "b": 0.54,
+      "a": 1,
+      "metallic": 0,
+      "roughness": 0.5,
+      "transmission": 0,
+      "emission": 1,
+      "resolution": 16,
+      "tip_ratio": 0,
+      "radius_m": 0.003,
+      "plane_normal": [
+        0,
+        0,
+        1
+      ],
+      "points": [
+        {
+          "x": -0.02,
+          "y": -0.02,
+          "z": 0
+        },
+        {
+          "x": -0.01,
+          "y": 0.02,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0.01,
+          "y": 0.02,
+          "z": 0
+        },
+        {
+          "x": 0.02,
+          "y": -0.02,
+          "z": 0
+        }
+      ]
+    }
+  ]
+}

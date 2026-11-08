@@ -1,0 +1,260 @@
+{
+  "resolutions": [
+    {
+      "campo": "coordinates",
+      "status": "FALTA",
+      "source_refs": [
+        "entrada_escena.json#/coordinates"
+      ],
+      "value": null,
+      "reason": "Ejes y unidades certificados ausentes. Módulo 01/4a2 no ha provisto la orientación oficial del mundo."
+    },
+    {
+      "campo": "entities/ch-piquito-030a/bird_dna",
+      "status": "PROPOSAL_GENERATED",
+      "source_refs": [
+        "adn_manifest.json#/ch-piquito-030a",
+        "referencias_adn/120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788.png"
+      ],
+      "value": {
+        "id": "ch-piquito-030a",
+        "anatomy": "avian",
+        "proportions": {
+          "height_m": 0.1,
+          "heads": 2.0
+        },
+        "rig": {
+          "bones": [
+            {
+              "id": "root",
+              "role": "root",
+              "parent": null,
+              "head": [
+                0,
+                0,
+                0
+              ],
+              "tail": [
+                0,
+                0,
+                0.02
+              ]
+            },
+            {
+              "id": "wing.L",
+              "role": "wing.L",
+              "parent": "root",
+              "head": [
+                0.03,
+                0,
+                0.05
+              ],
+              "tail": [
+                0.05,
+                -0.02,
+                0.04
+              ]
+            },
+            {
+              "id": "wing.R",
+              "role": "wing.R",
+              "parent": "root",
+              "head": [
+                -0.03,
+                0,
+                0.05
+              ],
+              "tail": [
+                -0.05,
+                -0.02,
+                0.04
+              ]
+            }
+          ]
+        },
+        "materials": [
+          {
+            "id": "body_feathers",
+            "rgba": [
+              1.0,
+              0.847,
+              0.302,
+              1.0
+            ],
+            "roughness": 0.8
+          }
+        ]
+      },
+      "reason": "Datos anatómicos estructurales faltantes en fuente; se genera propuesta basada en descripción visual de ADN descriptivo y referencia de imagen."
+    },
+    {
+      "campo": "props/obj-cofre-dorado/recipe",
+      "status": "PROPOSAL_GENERATED",
+      "source_refs": [
+        "adn_entidades.json#/records/gdc-cofre-abecedario"
+      ],
+      "value": {
+        "id": "obj-cofre-dorado",
+        "dna_ref": "gdc-cofre-abecedario",
+        "recipe": {
+          "parts": [
+            {
+              "id": "base_chest",
+              "shape": "MESH",
+              "dimensions_m": [
+                0.65,
+                0.42,
+                0.3
+              ],
+              "material": {
+                "rgba": [
+                  0.85,
+                  0.65,
+                  0.12,
+                  1.0
+                ],
+                "metallic": 0.8,
+                "roughness": 0.3
+              }
+            },
+            {
+              "id": "lid_chest",
+              "shape": "CYLINDER",
+              "dimensions_m": [
+                0.65,
+                0.42,
+                0.18
+              ],
+              "rotation_deg": [
+                0,
+                90,
+                0
+              ],
+              "resolution": 16
+            }
+          ]
+        }
+      },
+      "reason": "Escalera de despiece agotada. Se propone geometría Star para cofre basada en medidas de 65x42x48cm y descripción de sello."
+    }
+  ],
+  "object_recipes": [
+    {
+      "id": "obj-libro-cuentos__e1-8",
+      "query": {
+        "dimensions_m": [
+          0.36,
+          0.045,
+          0.24
+        ]
+      },
+      "recipe": {
+        "source": "ADN_ENTIDADES/gdc-libro-cuentos",
+        "parts": [
+          {
+            "id": "cover",
+            "shape": "BOX",
+            "dimensions_m": [
+              0.36,
+              0.01,
+              0.24
+            ],
+            "material": {
+              "rgba": [
+                0.0,
+                0.1,
+                0.3,
+                1.0
+              ]
+            }
+          },
+          {
+            "id": "pages",
+            "shape": "BOX",
+            "dimensions_m": [
+              0.35,
+              0.035,
+              0.23
+            ],
+            "material": {
+              "rgba": [
+                0.96,
+                0.96,
+                0.86,
+                1.0
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "camera_numeric": {
+    "shots": [
+      {
+        "id": "v3",
+        "objetivo": "ch-don-caos-7adf",
+        "segmentos": [
+          {
+            "t": [
+              9.0,
+              11.0
+            ],
+            "movimiento": "PAN",
+            "giro_grados": 45.0,
+            "status": "PROPOSAL_GENERATED",
+            "reason": "DSL no proveyó amplitud; se propone giro de 45 grados para cubrir ventana desde posición caos_inicio."
+          }
+        ]
+      }
+    ]
+  },
+  "live_scenery": {
+    "expected_states": [
+      {
+        "id": "rainbow_gray",
+        "object": "Ventana con vista al arcoíris",
+        "property": "material.saturation",
+        "t": 11.0,
+        "value": 0.0,
+        "source": "escenario_vivo.json#/state_for_scene"
+      }
+    ],
+    "state_bindings": [
+      {
+        "action_id": "a3",
+        "target": "Ventana con vista al arcoíris",
+        "key_ref": "rainbow_gray"
+      }
+    ]
+  },
+  "bird_dna": {
+    "ch-piquito-030a": {
+      "identity": "ch-piquito-030a",
+      "anatomy": "avian",
+      "roles": {
+        "root": "bone_01",
+        "head": "bone_02",
+        "beak": "bone_03"
+      }
+    }
+  },
+  "motion_program": {
+    "status": "JSON_TRUNCADO",
+    "producer": "2B/Argon",
+    "actions": []
+  },
+  "equivalences": [
+    {
+      "spatial_id": "obj-libro-cuentos__e1-8",
+      "dna_id": "gdc-libro-cuentos",
+      "confidence": 1.0,
+      "evidence": "Exact name match after normalization of capítulos identifiers"
+    }
+  ],
+  "remaining": [
+    "motion/respuesta_2b.json",
+    "rules/source_parameters",
+    "lighting/artistic_base"
+  ]
+}

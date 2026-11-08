@@ -1,0 +1,281 @@
+{
+  "version": "20261107-dev6-cpu+t316",
+  "fecha_bogota": "2026-11-07T10:53:11.365914-05:00",
+  "capabilities": [
+    {
+      "id": "entrada_16",
+      "mejora": "Entrada única y 16 etapas",
+      "activa": "sí",
+      "camino_real": "motor/orquestador.py → constructor_final.py",
+      "prueba": "evidencia/fixture_base_cpu_t314_sellado/resultado.json",
+      "limite": "Guardianes se frena en la misma compuerta por datos B; no es COMPLETO."
+    },
+    {
+      "id": "apariencia_base",
+      "mejora": "Texto ADN → caras, rasgos, pelo, gafas, ropa y materiales BASE_CPU",
+      "activa": "sí",
+      "camino_real": "traductor_adn.py → apariencia_base_cpu.py → apariencia_3d.py",
+      "prueba": "evidencia/fixture_base_cpu_t314_sellado/resultado.json; evidencia/t314_unitarias_sellado.log",
+      "limite": "Fidelidad de biblioteca aproximada, no reconstrucción de imagen."
+    },
+    {
+      "id": "binding_ropa",
+      "mejora": "Mangas/enterizos, prendas por segmentos, piel cubierta oculta, seguimiento de huesos",
+      "activa": "sí",
+      "camino_real": "apariencia_base_cpu.ligar; apariencia_3d.construir_parte",
+      "prueba": "evidencia/t314_unitarias_sellado.log; evidencia/verificacion_blender_t314_definitivo.json",
+      "limite": "Cotas con procedencia; no medidas del ADN inventadas."
+    },
+    {
+      "id": "apariencia_medida",
+      "mejora": "Construcción 3D medida conserva prioridad y validación estricta",
+      "activa": "sí",
+      "camino_real": "traductor_adn.py; superficies_adn.py",
+      "prueba": "evidencia/adn_t314_sellado.log",
+      "limite": "No exige cotas pintadas cuando se admite BASE_CPU."
+    },
+    {
+      "id": "gpu_imagen_3d",
+      "mejora": "Imagen a 3D GPU",
+      "activa": "no",
+      "camino_real": "hueco de extensión documentado",
+      "prueba": "motor/GUIA_BIBLIOTECAS_Y_PUENTES.md",
+      "limite": "Futuro; no ejecutado, no implementado extractor."
+    },
+    {
+      "id": "proveedor_recetas",
+      "mejora": "Argon receta: interruptor opcional, caché, ledger previo, validación y alta",
+      "activa": "sí implementado, sólo seco; envío OFF",
+      "camino_real": "argon_transporte.py; recetas_proveedor.py",
+      "prueba": "evidencia/t316_unitarias_cierre2.log; evidencia/ARGON_ESTIMACION_T316.json",
+      "limite": "No se enviaron llamadas ni se abrió la credencial en la prueba seca; no acredita respuesta real del proveedor."
+    },
+    {
+      "id": "argon_red",
+      "mejora": "Llamadas Argon reales",
+      "activa": "sí implementado, sólo seco; envío OFF",
+      "camino_real": "argon_transporte.py; recetas_proveedor.py",
+      "prueba": "evidencia/t316_unitarias_cierre2.log; evidencia/ARGON_ESTIMACION_T316.json",
+      "limite": "No se enviaron llamadas ni se abrió la credencial en la prueba seca; no acredita respuesta real del proveedor."
+    },
+    {
+      "id": "buscador_formas",
+      "mejora": "Exacta → similar/umbral → composición → proveedor → FALTA",
+      "activa": "sí",
+      "camino_real": "objetos_adn.py; buscador_formas.py; apariencia_3d.py",
+      "prueba": "evidencia/otro_universo_t314_sellado/resultado.json; evidencia/fixture_argon_mock_t314_sellado/resultado.json",
+      "limite": "Cama/cofre reales sin receta compatible; no terminar con bbox."
+    },
+    {
+      "id": "star_catalogo",
+      "mejora": "44 fórmulas /42 constructores, geometría detallada y anclas",
+      "activa": "sí",
+      "camino_real": "objetos_star.py; apariencia_3d.py",
+      "prueba": "evidencia/catalogo_t314_sellado/regresiones_catalogo.json; evidencia/contacto_guardianes_t316/detalle_entorno.json",
+      "limite": "41 fórmulas finalizables ×2 anclas =82 casos; no convertir caja/punto en acabado."
+    },
+    {
+      "id": "star_puntos",
+      "mejora": "World/local, pieza móvil, pivote, rotación XYZ, controles c e IK",
+      "activa": "sí",
+      "camino_real": "objetos_star.py; geometria.py",
+      "prueba": "evidencia/star_t314_sellado/regresiones.json",
+      "limite": "pieza_movil ausente: FALTA 4a2; sin alias por nombre."
+    },
+    {
+      "id": "star_materiales",
+      "mejora": "Bisel/material individual/vidrio/alpha",
+      "activa": "sí",
+      "camino_real": "apariencia_3d.py; objetos_star.py",
+      "prueba": "evidencia/star_t314_sellado/regresiones.json",
+      "limite": ""
+    },
+    {
+      "id": "arquitectura",
+      "mejora": "Muros, varios huecos, exterior; cables polilínea nombrada",
+      "activa": "sí",
+      "camino_real": "objetos_star.py",
+      "prueba": "evidencia/star_t314_sellado/regresiones.json; evidencia/t307_t314_sellado.log",
+      "limite": "Sin puntos de cable: FALTA, no haz genérico."
+    },
+    {
+      "id": "anatomia",
+      "mejora": "ADN → esqueleto, perfiles y rig de ave/ancla",
+      "activa": "sí",
+      "camino_real": "anatomia_perfiles.py; anatomia_aviar.py; perfiles_puente.py; anatomia_perfiles.aplicar_anclas",
+      "prueba": "evidencia/no_facial_t314_sellado.log; evidencia/movimientos_4g_t314_sellado/regresiones.json",
+      "limite": "Ave real/a10 sin datos de perfil, apoyo/ancla/lateralidad: B; no se coloca artificialmente."
+    },
+    {
+      "id": "cofre",
+      "mejora": "ADN OBJ → forma, puntos móviles y bisagras/a13",
+      "activa": "sí, capacidad",
+      "camino_real": "objetos_adn.py → objetos_star.py → constructor_final.py",
+      "prueba": "evidencia/star_t314_sellado/regresiones.json; evidencia/no_facial_t314_sellado.log",
+      "limite": "Cofre real/a13 no ejecutado por receta/pivotes faltantes."
+    },
+    {
+      "id": "perfiles_genericos",
+      "mejora": "Catálogos anatómicos sin nombre de identidad; originales archivados",
+      "activa": "sí",
+      "camino_real": "perfiles_catalogo.py etapa 3 y aplicar_puntos en constructor",
+      "prueba": "evidencia/fixture_perfil_puntos_t314/resultado.json; evidencia/verificacion_blender_t314_definitivo.json",
+      "limite": "bone_map explícito. Datos articulares preservados; no prometer remapeo automático de ejes AAOS."
+    },
+    {
+      "id": "vivo",
+      "mejora": "Binding 4a/4a4 y narrativa → objetos/propiedades/tiempos/estados",
+      "activa": "sí",
+      "camino_real": "vivo_binding.py; narrativa_estructurada.py; eventos.py",
+      "prueba": "evidencia/no_facial_t314_sellado.log; evidencia/dev2_t314_sellado.log",
+      "limite": "Fuente real aún sin valores/subpiezas/curvas suficientes B."
+    },
+    {
+      "id": "orden_entorno_luz",
+      "mejora": "Entorno geométrico antes de crear luces; emisores y World después",
+      "activa": "sí",
+      "camino_real": "constructor_final.py; eventos.separar_por_dependencias",
+      "prueba": "evidencia/fixture_base_cpu_t314_sellado/etapas_worker.json; evidencia/t314_unitarias_sellado.log",
+      "limite": "Se valida el grafo completo para impedir dos escritores entre particiones."
+    },
+    {
+      "id": "luz_global",
+      "mejora": "Perfil independiente por emisor, puente 3 canales por IDs, World/exposición, apagón CONSTANT",
+      "activa": "sí",
+      "camino_real": "luces_por_datos.py; luces_blender.py; eventos.py",
+      "prueba": "evidencia/t307_t314_sellado.log; evidencia/star_t314_sellado/regresiones.json",
+      "limite": "Guardianes sólo trae luz técnica provisional; falta artística B."
+    },
+    {
+      "id": "escalera_mov",
+      "mejora": "Argon → catálogo → Kimodo → CMU con retarget/pulida",
+      "activa": "sí",
+      "camino_real": "movimientos.py; indice_semantico.py; pulida_estricta.py",
+      "prueba": "evidencia/cpu_t314_sellado.log; evidencia/puentes_t314_sellado.log",
+      "limite": "Sin generación externa ni licencia bloqueante; revisión técnica obligatoria."
+    },
+    {
+      "id": "catalogo_crece",
+      "mejora": "Kimodo/CMU/retarget/video/Mixamo aprobados → catálogo y reuso primero",
+      "activa": "sí",
+      "camino_real": "catalogos_crecimiento.py; orquestador etapa 3/10; constructor tras revisión",
+      "prueba": "evidencia/fixture_movimiento_t314_sellado/resultado.json; evidencia/fixture_movimiento_t314_cierre_nuevo/catalogo_registro.json; evidencia/fixture_movimiento_t314_cierre_reuso/catalogo_reuso.json",
+      "limite": "Prueba sintética + BVH existente; no acredita generación externa real."
+    },
+    {
+      "id": "bvh_existente",
+      "mejora": "Registro BVH, esqueleto/perfil/duración/métricas/fuente/hash y deduplicación",
+      "activa": "sí",
+      "camino_real": "catalogos_crecimiento.py",
+      "prueba": "evidencia/bvh_existente_registro_reuso_t314.json",
+      "limite": "TEST_LIBRARY_ONLY; no se aprueban los 15 clips reales sin prueba técnica."
+    },
+    {
+      "id": "contactos_reglas",
+      "mejora": "Contactos, reglas vigentes y colliders declarados",
+      "activa": "sí",
+      "camino_real": "puentes_fisicos.py; reglas_binding.py; fisica_final.py",
+      "prueba": "evidencia/puentes_t314_sellado.log; evidencia/no_facial_t314_sellado.log",
+      "limite": "2B íntegro y siete parámetros de reglas reales siguen B."
+    },
+    {
+      "id": "broadphase",
+      "mejora": "Descarte AABB separado evita falso positivo de ray parity",
+      "activa": "sí",
+      "camino_real": "fisica_final.py",
+      "prueba": "evidencia/t314_unitarias_sellado.log; evidencia/fixture_base_cpu_t314_sellado/revision_final.json",
+      "limite": "Sin aumentar tolerancias ni mover fixture para hacerla pasar."
+    },
+    {
+      "id": "camara",
+      "mejora": "SB-4g: 28 comandos y variantes sin cámara sustitutiva",
+      "activa": "sí",
+      "camino_real": "puente_sb4g.py; camara_v2_blender.py",
+      "prueba": "evidencia/movimientos_4g_t314_sellado/regresiones.json",
+      "limite": "PAN v3/v7 y CRANE v5 sin amplitud real: B. Diagnóstico real con 4 tomas bloqueadas."
+    },
+    {
+      "id": "montaje",
+      "mejora": "CPU N tomas y transiciones visuales",
+      "activa": "sí",
+      "camino_real": "montaje_cpu.py",
+      "prueba": "evidencia/dev2_t314_sellado.log",
+      "limite": "No master parcial de Guardianes; J/L se entregan a Omni."
+    },
+    {
+      "id": "dialogos",
+      "mejora": "Tiempos guion/01/SB con hablante/texto/segundos/cuadros/toma",
+      "activa": "sí",
+      "camino_real": "dialogos.py etapa 3",
+      "prueba": "evidencia/guardianes_t314_sellado/tiempos_dialogo.json",
+      "limite": "11 intervenciones, cuatro cruzan corte; planificación, no alineación de grabación."
+    },
+    {
+      "id": "voz_labios",
+      "mejora": "Voz y lip-sync",
+      "activa": "no, fuera del motor",
+      "camino_real": "Omni posterior según t295",
+      "prueba": "CONTRATO_TIEMPOS_DIALOGO.schema.json",
+      "limite": "No requiere audio ni bloquea su ausencia."
+    },
+    {
+      "id": "ingesta_lote",
+      "mejora": "Carga por lote y cuarentena de recetas/poses/movimientos/perfiles/materiales",
+      "activa": "sí",
+      "camino_real": "importar_lote.py",
+      "prueba": "evidencia/ingesta_lotes_t314.json",
+      "limite": "Copiar no aprueba. Video a mocap: integración de resultado preparada; extractor no implementado."
+    },
+    {
+      "id": "guia",
+      "mejora": "Guía bibliotecas, puentes, hashes, lote y crecimiento",
+      "activa": "sí",
+      "camino_real": "motor/GUIA_BIBLIOTECAS_Y_PUENTES.md; README.md; LEEME.md",
+      "prueba": "evidencia/ingesta_lotes_t314.json",
+      "limite": ""
+    },
+    {
+      "id": "universal",
+      "mejora": "Nombres nuevos sin editar código y barrido automático",
+      "activa": "sí",
+      "camino_real": "motor/ entero",
+      "prueba": "evidencia/otro_universo_t314_sellado/resultado.json; evidencia/barrido_valores_fijos_t314_sellado.json",
+      "limite": "Fixture de otro universo, no otra escena real aprobada."
+    },
+    {
+      "id": "oro",
+      "mejora": "Oro heredado 23/23 exactas",
+      "activa": "sí",
+      "camino_real": "entrada única --regresion",
+      "prueba": "evidencia/oro_t314_sellado/metricas_oro.json",
+      "limite": "Igualdad histórica no convierte sus errores físicos en buena calidad."
+    },
+    {
+      "id": "213",
+      "mejora": "Subido y probado CPU en 213",
+      "activa": "no",
+      "camino_real": "carpeta nueva autorizada, sin tocar producción",
+      "prueba": "evidencia/213_t314_estado.json",
+      "limite": "Dos TIMEOUT; no upload, no cotejo remoto, no prueba remota."
+    }
+  ],
+  "scene_state": "BLOQUEADO",
+  "pending_A": 0,
+  "pending_B_rows": 24,
+  "pending_B_causes": 17,
+  "faces_clothes_A": 0,
+  "faces_clothes_fidelity_warnings": 12,
+  "spend_usd": 0,
+  "uploaded_213": false,
+  "production_approved": false,
+  "t316": {
+    "transport": "REAL_IMPLEMENTED_DRY_ONLY",
+    "planned_calls": 3,
+    "estimated_usd": 1.972168,
+    "reserve_usd": 1.985872,
+    "render": "EEVEE_CPU_LLVMPIPE",
+    "environment_star_instances": 5,
+    "unresolved_background_objects": 22,
+    "visual_quality_approved": false
+  }
+}

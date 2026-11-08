@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "scope": "CPU construction only, not esc1 nor physics/visual approval",
+  "bones": 19,
+  "meshes": 40,
+  "zmin_m": -3.2223881896165096e-10,
+  "zmax_m": 0.09990856796503067,
+  "official_height_m": 0.1,
+  "tolerance_m": 0.001,
+  "lights": [
+    {
+      "id": "av06.art.ventana_luz",
+      "energy_equal": true,
+      "size_equal": true,
+      "shape_equal": true
+    },
+    {
+      "id": "av06.art.centro_relleno",
+      "energy_equal": true,
+      "size_equal": true,
+      "shape_equal": true
+    },
+    {
+      "id": "av06.art.cofre_enfasis",
+      "energy_equal": true,
+      "size_equal": true,
+      "shape_equal": true
+    }
+  ],
+  "gpu_used": false
+}

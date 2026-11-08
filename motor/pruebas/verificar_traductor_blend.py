@@ -1,0 +1,4 @@
+import bpy,sys,json
+from pathlib import Path
+r=Path(__file__).resolve().parents[1];sys.path.insert(0,str(r/'motor'));from seguridad import guardar
+args=sys.argv[sys.argv.index('--')+1:];bpy.ops.wm.open_mainfile(filepath=args[0]);face=bpy.data.objects['cara_nueva_parametrica'];cloth=bpy.data.objects['ropa_nueva_con_grosor'];bsdf=face.data.materials[0].node_tree.nodes.get('Principled BSDF');checks={'face_real_mesh':face.type=='MESH' and len(face.data.vertices)>300,'clothes_real_mesh_with_thickness':cloth.type=='MESH' and len(cloth.data.vertices)>100,'skin_sss_from_data':abs(bsdf.inputs['Subsurface Weight'].default_value-.12)<1e-6,'face_clothes_different_materials':face.data.materials[0]!=cloth.data.materials[0]};guardar(Path(args[1]),{'checks':checks,'all_passed':all(checks.values()),'read_from_final_blend':True,'spend_usd':0});assert all(checks.values())

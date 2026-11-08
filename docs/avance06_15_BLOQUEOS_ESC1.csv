@@ -1,0 +1,16 @@
+campo,productor,codigo,mensaje
+motion/respuesta_2b.json,2B/Argon,JSON_TRUNCADO,JSON truncado: recuperar respuesta íntegra
+motion/contacts,01/2B + Star,CONTACTOS_DATOS_FALTANTES,Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía
+rules/source_parameters,biblioteca de reglas vigentes + 4a2/manifiesto,REGLAS_DATOS_FALTANTES,"No están en la fuente estos parámetros: allowed_collision_pairs, bone_length_error_m, colliders, com_accel_max_m_s2, joint_speed_max_deg_s, penetration_tolerance_m, reject_surface_intersections, root_accel_max_m_s2, root_speed_max_m_s, slip_max_m_per_frame"
+entities/ch-piquito-030a/anatomy_profile,ADN Maestro 03/04 + 01/Star puntos,PERFIL_ANATOMICO_DATOS,Falta margen físico vigente
+props/obj-libro-cuentos__e1-8/dna_ref,ADN OBJ/SELLO + 4a2,OBJETO_ADN_DATOS,Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres
+props/Ventana con vista al arcoíris/dna_ref,ADN OBJ/SELLO + 4a2,OBJETO_ADN_DATOS,Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres
+bindings/Centro de la habitación/reference_kind,4a2/manifiesto espacial,REFERENCIA_ESPACIAL_DATOS,Referencia sólo usada para mirar: falta declarar POINT u OBJECT. No pedir ADN de un lugar ni ocultar un mueble como si fuera un punto. Posición/bbox ya disponibles.
+props/obj-visor-spark/dna_ref,ADN OBJ/SELLO + 4a2,OBJETO_ADN_DATOS,Falta asociación exacta y única entre objeto espacial y ficha ADN; no aproximar nombres
+environment/live_source,4a4 + 01 + 4a2,VIVO_DATOS_FALTANTES,"Sólo llegaron estados narrativos inicio/fin; faltan subpiezas/materiales/valores/curvas para cambios de letras, color y FX. Los tiempos explícitos de 01 se reutilizan; no se piden otra vez."
+motion/semantic_index/approval,2B/Argon + biblioteca de movimientos,BIBLIOTECA_SIN_VALIDAR,"Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu"
+coordinates,01/4a2,DATO_FALTANTE,Ejes y unidades certificados ausentes
+ejes,01/4a2,PROVISIONAL,"Provisional técnico: +Y frente/+Z arriba, ejes no certificados"
+2B,2B/Argon,PROVISIONAL,"Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada"
+motion/status,2B/Argon,DATO_FALTANTE,Programa completo no acreditado
+environment/live_data,4a4 + 01 + 4a2,DATO_FALTANTE,Eventos no vinculados a propiedades/tiempos

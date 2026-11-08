@@ -1,0 +1,13 @@
+{
+  "schema": "anatomical_profile_v1",
+  "profile_id": "aviar_roles_demo",
+  "source": "Perfil de puntos por rol; dato sintético de integración, no dimensiones del ave real",
+  "units": "m",
+  "frame": "REST_BONE",
+  "puntos": {
+    "mirada_estructura": {
+      "hueso": "head",
+      "ext": "tail"
+    }
+  }
+}

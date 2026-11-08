@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "properties": {
+    "shots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "v1",
+              "v2",
+              "v3",
+              "v4",
+              "v5",
+              "v6",
+              "v7",
+              "v8",
+              "v9",
+              "v10",
+              "v11",
+              "v12"
+            ]
+          },
+          "t0": {
+            "type": "number"
+          },
+          "t1": {
+            "type": "number"
+          },
+          "keyframes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "t": {
+                  "type": "number"
+                },
+                "giro_grados": {
+                  "type": "number"
+                },
+                "inclinacion_grados": {
+                  "type": "number"
+                },
+                "lente_mm": {
+                  "type": "number",
+                  "minimum": 1
+                },
+                "altura_m": {
+                  "type": "number"
+                },
+                "distancia_m": {
+                  "type": "number",
+                  "minimum": 0.001
+                },
+                "source": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "t",
+                "giro_grados",
+                "inclinacion_grados",
+                "lente_mm",
+                "altura_m",
+                "distancia_m",
+                "source"
+              ]
+            },
+            "maxItems": 8
+          },
+          "segments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "index": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "movement": {
+                  "type": "string"
+                },
+                "degrees": {
+                  "type": "number"
+                },
+                "distance": {
+                  "type": "number"
+                },
+                "source": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "index",
+                "movement",
+                "source"
+              ]
+            },
+            "maxItems": 8
+          }
+        },
+        "required": [
+          "id",
+          "t0",
+          "t1",
+          "keyframes",
+          "segments"
+        ]
+      },
+      "minItems": 12,
+      "maxItems": 12
+    }
+  },
+  "required": [
+    "shots"
+  ]
+}

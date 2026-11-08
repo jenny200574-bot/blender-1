@@ -1,0 +1,1384 @@
+{
+ "escena": "1",
+ "fps": 8,
+ "duracion_s": 55.0,
+ "puntos": {
+  "caos_inicio": [
+   2.35,
+   2.75,
+   0.0
+  ],
+  "caos_ventana": [
+   2.55,
+   3.15,
+   0.0
+  ],
+  "caos_escondite": [
+   1.65,
+   3.3,
+   0.0
+  ],
+  "spark_aterrizaje": [
+   1.45,
+   1.75,
+   0.0
+  ],
+  "spark_cofre": [
+   1.65,
+   1.95,
+   0.0
+  ],
+  "pintor_aterrizaje": [
+   2.95,
+   1.65,
+   0.0
+  ],
+  "pintor_cofre": [
+   2.75,
+   1.85,
+   0.0
+  ],
+  "valentina_aterrizaje": [
+   2.75,
+   2.65,
+   0.0
+  ],
+  "valentina_cofre": [
+   2.55,
+   2.45,
+   0.0
+  ],
+  "eco_aterrizaje": [
+   3.25,
+   2.15,
+   0.0
+  ],
+  "eco_cofre": [
+   2.95,
+   2.1,
+   0.0
+  ]
+ },
+ "personajes": [
+  {
+   "id": "ch-don-caos-7adf",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      9.0
+     ],
+     "pos": [
+      "caos_inicio",
+      "caos_inicio"
+     ],
+     "rot": 187.0,
+     "tipo": "quieto",
+     "porque": "Apunta su rayo al libro de cuentos sobre la cama y se rie"
+    },
+    {
+     "t": [
+      9.0,
+      11.0
+     ],
+     "pos": [
+      "caos_inicio",
+      "caos_ventana"
+     ],
+     "rot": 60.0,
+     "tipo": "girar",
+     "porque": "Se vuelve hacia la ventana para disparar al arcoiris"
+    },
+    {
+     "t": [
+      11.0,
+      15.5
+     ],
+     "pos": [
+      "caos_ventana",
+      "caos_ventana"
+     ],
+     "rot": 60.0,
+     "tipo": "quieto",
+     "porque": "Celebra que borro los colores y los numeros y bosteza"
+    },
+    {
+     "t": [
+      15.5,
+      18.0
+     ],
+     "pos": [
+      "caos_ventana",
+      "caos_escondite"
+     ],
+     "rot": 170.0,
+     "tipo": "caminar",
+     "porque": "Se retira junto a la cama para esconderse al llegar los heroes"
+    },
+    {
+     "t": [
+      18.0,
+      55.0
+     ],
+     "pos": [
+      "caos_escondite",
+      "caos_escondite"
+     ],
+     "rot": -65.0,
+     "tipo": "quieto",
+     "porque": "Observa oculto junto a la cama mientras los heroes examinan el cofre"
+    }
+   ],
+   "version_personaje": {
+    "name": "referencia cliente",
+    "form": "fm-f4abf83e1d71",
+    "description": "Un personaje pequeñito, del tamaño de una mano, redondo como una ciruela, con piernas cortas y pies grandes. Lleva un traje morado con botones desordenados (uno amarillo, uno verde, uno rojo), un sombrero de copa torcido y una bufanda larga a rayas que siempre arrastra. Cejas gruesas y expresivas, bigote enrollado y ojos que giran cuando se le ocurre una travesura. Nunca da miedo: se ve gracioso. [Ref5 (personaje por confirmar): pistola de rayos = objeto_portado; el disparo es un efecto.]",
+    "never_changes": "Pelo gris despeinado, ropa morada y verde con parches, tenis rojos. Siempre con su pistola de rayos morada/plateada (Rayo Ordenador): SE QUEDA (orden de Ricardo)."
+   }
+  },
+  {
+   "id": "ch-spark-468e",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      18.0
+     ],
+     "pos": [
+      "spark_aterrizaje",
+      "spark_aterrizaje"
+     ],
+     "rot": 17.0,
+     "tipo": "quieto",
+     "porque": "Posicion previa a su llegada como luz azul"
+    },
+    {
+     "t": [
+      18.0,
+      30.0
+     ],
+     "pos": [
+      "spark_aterrizaje",
+      "spark_aterrizaje"
+     ],
+     "rot": 17.0,
+     "tipo": "quieto",
+     "porque": "Aterriza en la habitacion y revisa la alerta en su visor"
+    },
+    {
+     "t": [
+      30.0,
+      33.0
+     ],
+     "pos": [
+      "spark_aterrizaje",
+      "spark_cofre"
+     ],
+     "rot": 5.0,
+     "tipo": "caminar",
+     "porque": "Da un paso hacia el cofre dorado que aparece en el centro"
+    },
+    {
+     "t": [
+      33.0,
+      44.0
+     ],
+     "pos": [
+      "spark_cofre",
+      "spark_cofre"
+     ],
+     "rot": 5.0,
+     "tipo": "quieto",
+     "porque": "Escucha a Valentina y Eco hablando sobre el cofre"
+    },
+    {
+     "t": [
+      44.0,
+      46.0
+     ],
+     "pos": [
+      "spark_cofre",
+      "spark_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "girar",
+     "porque": "Gira lentamente hacia el frente"
+    },
+    {
+     "t": [
+      46.0,
+      55.0
+     ],
+     "pos": [
+      "spark_cofre",
+      "spark_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "quieto",
+     "porque": "Senala al frente y explica la mision final de la palabra magica"
+    }
+   ],
+   "version_personaje": {
+    "name": "referencia cliente",
+    "form": "fm-9d4b20e18ed9",
+    "description": "Un niño de unos seis años, delgado y un poquito más alto que los demás. Pelo castaño oscuro, despeinado hacia arriba como si tuviera electricidad. Lleva sobre los ojos un visor transparente azul que proyecta hologramas. Pijama de una pieza azul con rayos pequeños amarillos estampados y un bolsillo en el pecho donde guarda un lápiz y una lupa. Pantuflas con forma de cohete. Ojos cafés grandes y curiosos, sonrisa con una ceja levantada cuando piensa. [Ref3: tablet = objeto_portado de Spark; el holograma es un efecto, no va en el personaje.]",
+    "never_changes": "Casco azul con visor, traje azul con líneas naranjas y átomo en el pecho, cinturón y botas azules."
+   }
+  },
+  {
+   "id": "ch-valentina-a9be",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      18.0
+     ],
+     "pos": [
+      "valentina_aterrizaje",
+      "valentina_aterrizaje"
+     ],
+     "rot": -127.0,
+     "tipo": "quieto",
+     "porque": "Posicion previa a su llegada como luz magenta"
+    },
+    {
+     "t": [
+      18.0,
+      30.0
+     ],
+     "pos": [
+      "valentina_aterrizaje",
+      "valentina_aterrizaje"
+     ],
+     "rot": -127.0,
+     "tipo": "quieto",
+     "porque": "Aterriza y escucha el reporte de Spark y Pintor"
+    },
+    {
+     "t": [
+      30.0,
+      33.0
+     ],
+     "pos": [
+      "valentina_aterrizaje",
+      "valentina_cofre"
+     ],
+     "rot": -124.0,
+     "tipo": "caminar",
+     "porque": "Se acerca al cofre dorado recien aparecido"
+    },
+    {
+     "t": [
+      33.0,
+      44.0
+     ],
+     "pos": [
+      "valentina_cofre",
+      "valentina_cofre"
+     ],
+     "rot": -124.0,
+     "tipo": "quieto",
+     "porque": "Explica que el cofre guarda una palabra magica"
+    },
+    {
+     "t": [
+      44.0,
+      46.0
+     ],
+     "pos": [
+      "valentina_cofre",
+      "valentina_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "girar",
+     "porque": "Gira lentamente hacia el frente junto con el equipo"
+    },
+    {
+     "t": [
+      46.0,
+      55.0
+     ],
+     "pos": [
+      "valentina_cofre",
+      "valentina_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "quieto",
+     "porque": "Susurra al frente y acompana el cierre de Spark"
+    }
+   ],
+   "version_personaje": {
+    "name": "referencia cliente",
+    "form": "fm-fa8c867dbb19",
+    "description": "Una niña de unos seis años, de pelo negro rizado recogido en dos moños altos con lazos magenta. Lleva un pijama magenta con corazones pequeños rosados y una capa corta de color rosa que le llega a la cintura. En el brazo lleva el Escudo de la Empatía. Mejillas siempre sonrojadas, ojos negros grandes y expresivos, sonrisa amplia. Pantuflas de conejo rosado. [Ref2: Escudo de la Empatía = objeto_portado de Valentina.]",
+    "never_changes": "Casco morado, traje magenta/morado con líneas brillantes, botas magenta."
+   }
+  },
+  {
+   "id": "ch-eco-eff3",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      18.0
+     ],
+     "pos": [
+      "eco_aterrizaje",
+      "eco_aterrizaje"
+     ],
+     "rot": -171.0,
+     "tipo": "quieto",
+     "porque": "Posicion previa a su llegada como luz verde"
+    },
+    {
+     "t": [
+      18.0,
+      30.0
+     ],
+     "pos": [
+      "eco_aterrizaje",
+      "eco_aterrizaje"
+     ],
+     "rot": -171.0,
+     "tipo": "quieto",
+     "porque": "Aterriza con Piquito en el hombro y escucha a sus amigos"
+    },
+    {
+     "t": [
+      30.0,
+      33.0
+     ],
+     "pos": [
+      "eco_aterrizaje",
+      "eco_cofre"
+     ],
+     "rot": -172.0,
+     "tipo": "caminar",
+     "porque": "Se acerca al cofre dorado en el centro de la habitacion"
+    },
+    {
+     "t": [
+      33.0,
+      44.0
+     ],
+     "pos": [
+      "eco_cofre",
+      "eco_cofre"
+     ],
+     "rot": -172.0,
+     "tipo": "quieto",
+     "porque": "Dice con energia que solo alguien muy valiente puede abrir el cofre"
+    },
+    {
+     "t": [
+      44.0,
+      46.0
+     ],
+     "pos": [
+      "eco_cofre",
+      "eco_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "girar",
+     "porque": "Gira lentamente hacia el frente junto con los demas"
+    },
+    {
+     "t": [
+      46.0,
+      55.0
+     ],
+     "pos": [
+      "eco_cofre",
+      "eco_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "quieto",
+     "porque": "Senala al frente y escucha a Spark"
+    }
+   ],
+   "version_personaje": {
+    "name": "referencia cliente",
+    "form": "fm-6c0d19ded985",
+    "description": "Una niña de unos cinco años, la más bajita del equipo, de pelo castaño claro largo y lacio con una diadema de hojas verdes. Pijama verde con estampado de hojitas y una regadera pequeña colgada del cinturón. Lleva siempre a Piquito en el hombro. Ojos verdes, pecas en la nariz, sonrisa tranquila. Pantuflas verdes con forma de rana. [Ref1: lleva a Piquito (acompañante) en el hombro izquierdo.]",
+    "never_changes": "Traje verde de hojas, botas verdes, hojas en hombros y pecho, pelo verde largo. Piquito (pajarito AMARILLO #FFD84D) en el hombro izquierdo."
+   }
+  },
+  {
+   "id": "ch-pintor-bce0",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      18.0
+     ],
+     "pos": [
+      "pintor_aterrizaje",
+      "pintor_aterrizaje"
+     ],
+     "rot": 153.0,
+     "tipo": "quieto",
+     "porque": "Posicion previa a su llegada como luz amarilla"
+    },
+    {
+     "t": [
+      18.0,
+      30.0
+     ],
+     "pos": [
+      "pintor_aterrizaje",
+      "pintor_aterrizaje"
+     ],
+     "rot": 153.0,
+     "tipo": "quieto",
+     "porque": "Aterriza y exclama que es una emergencia de nivel arcoiris"
+    },
+    {
+     "t": [
+      30.0,
+      33.0
+     ],
+     "pos": [
+      "pintor_aterrizaje",
+      "pintor_cofre"
+     ],
+     "rot": 163.0,
+     "tipo": "caminar",
+     "porque": "Se acerca a ver el cofre dorado que aparece en el centro"
+    },
+    {
+     "t": [
+      33.0,
+      44.0
+     ],
+     "pos": [
+      "pintor_cofre",
+      "pintor_cofre"
+     ],
+     "rot": 163.0,
+     "tipo": "quieto",
+     "porque": "Observa el cofre mientras hablan Valentina y Eco"
+    },
+    {
+     "t": [
+      44.0,
+      46.0
+     ],
+     "pos": [
+      "pintor_cofre",
+      "pintor_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "girar",
+     "porque": "Gira lentamente hacia el frente con sus amigos"
+    },
+    {
+     "t": [
+      46.0,
+      55.0
+     ],
+     "pos": [
+      "pintor_cofre",
+      "pintor_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "quieto",
+     "porque": "Susurra al frente y escucha la promesa de Spark"
+    }
+   ],
+   "version_personaje": {
+    "name": "referencia cliente",
+    "form": "fm-1a6f16972865",
+    "description": "Un niño de unos cinco años, redondito y bajito, de pelo negro en forma de copete que parece la punta de un pincel. Pijama amarillo con manchitas de pintura de todos los colores, una boina roja ladeada y siempre un pincel detrás de la oreja. Manos y mejillas con pintura. Ojos cafés grandes, sonrisa traviesa. [Ref4: pincel = objeto_portado de Pintor; la estela es un efecto.]",
+    "never_changes": "Traje azul con «ABC» en la solapa, camisa amarilla, salpicaduras de pintura."
+   }
+  },
+  {
+   "id": "ch-piquito-030a",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      18.0
+     ],
+     "pos": [
+      "eco_aterrizaje",
+      "eco_aterrizaje"
+     ],
+     "rot": -171.0,
+     "tipo": "quieto",
+     "porque": "En el hombro izquierdo de Eco antes de aterrizar"
+    },
+    {
+     "t": [
+      18.0,
+      30.0
+     ],
+     "pos": [
+      "eco_aterrizaje",
+      "eco_aterrizaje"
+     ],
+     "rot": -171.0,
+     "tipo": "quieto",
+     "porque": "Aterriza posado en el hombro izquierdo de Eco"
+    },
+    {
+     "t": [
+      30.0,
+      33.0
+     ],
+     "pos": [
+      "eco_aterrizaje",
+      "eco_cofre"
+     ],
+     "rot": -172.0,
+     "tipo": "acoplarse",
+     "porque": "Va en el hombro izquierdo de Eco cuando ella se acerca al cofre"
+    },
+    {
+     "t": [
+      33.0,
+      44.0
+     ],
+     "pos": [
+      "eco_cofre",
+      "eco_cofre"
+     ],
+     "rot": -172.0,
+     "tipo": "quieto",
+     "porque": "Mira el cofre dorado desde el hombro izquierdo de Eco"
+    },
+    {
+     "t": [
+      44.0,
+      46.0
+     ],
+     "pos": [
+      "eco_cofre",
+      "eco_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "girar",
+     "porque": "Gira con Eco hacia el frente"
+    },
+    {
+     "t": [
+      46.0,
+      55.0
+     ],
+     "pos": [
+      "eco_cofre",
+      "eco_cofre"
+     ],
+     "rot": -90.0,
+     "tipo": "quieto",
+     "porque": "Mira al frente desde el hombro izquierdo de Eco"
+    }
+   ],
+   "version_personaje": {
+    "name": "referencia cliente",
+    "form": "fm-a36983467703",
+    "description": "Un pajarito redondo como una pelotita, del tamaño de un puño, con alas cortitas, pico pequeño y triangular y dos plumitas de copete. No habla: se expresa con gestos (se tapa los ojos, aplaude con las alas, se esponja cuando se ofende). [Acompañante de Eco; sin imagen propia, solo aparece en ref1 sobre el hombro izquierdo de Eco.]",
+    "never_changes": "Pajarito AMARILLO (cuerpo #FFD84D, pecho #FFF1A8), pico y patas naranja #F2792A, copete amarillo con punta naranja, redondo como una pelotita, del tamaño de un puño, siempre en el hombro izquierdo de Eco. NUNCA naranja de cuerpo (la ref1 del cliente lo trae naranja: manda la biblia y la orden de Ricardo, amarillo #FFD84D)."
+   }
+  }
+ ],
+ "tomas_plan": [],
+ "ejes": [],
+ "avisos_argon": [],
+ "escenario_id": "esc-habitacion",
+ "escenario_elegido_por": "base.json (el mismo molde que usa el 02)",
+ "origen": "corrida del 01 (Argon)",
+ "parametros_3d": {
+  "ch-don-caos-7adf": {
+   "controles": {
+    "colores.piel": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.cara": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.pelo": [
+     0.75,
+     0.75,
+     0.78
+    ],
+    "colores.ropa_superior": [
+     0.45,
+     0.2,
+     0.6
+    ],
+    "colores.ropa_inferior": [
+     0.4,
+     0.18,
+     0.55
+    ],
+    "colores.zapatos": [
+     0.8,
+     0.15,
+     0.15
+    ],
+    "capa": {
+     "color": [
+      0.45,
+      0.15,
+      0.58
+     ],
+     "largo_m": 0.7,
+     "rasgada": true
+    },
+    "gordura": {
+     "torso": 1.25,
+     "cadera": 1.25,
+     "piernas": 0.85,
+     "brazos": 0.95,
+     "cara": 1.15,
+     "pies": 1.35,
+     "sombrero_copa_torcido": true,
+     "bufanda_rayas": true,
+     "bigote_enrollado": true,
+     "pistola_rayos": true,
+     "botones_colores": [
+      "amarillo",
+      "verde",
+      "rojo"
+     ]
+    }
+   },
+   "origen": "Argon (diccionario)"
+  },
+  "ch-spark-468e": {
+   "controles": {
+    "gordura": {
+     "torso": 0.88,
+     "cadera": 0.82,
+     "piernas": 0.86,
+     "brazos": 0.88,
+     "cara": 0.85
+    },
+    "colores.piel": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.cara": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.pelo": [
+     0.28,
+     0.18,
+     0.12
+    ],
+    "colores.ropa_superior": [
+     0.1,
+     0.48,
+     0.82
+    ],
+    "colores.ropa_inferior": [
+     0.08,
+     0.42,
+     0.75
+    ],
+    "colores.zapatos": [
+     0.12,
+     0.52,
+     0.85
+    ],
+    "gafas": {
+     "gafas": true,
+     "gafas_color": [
+      0.2,
+      0.75,
+      1.0
+     ]
+    }
+   },
+   "origen": "Argon (diccionario)"
+  },
+  "ch-valentina-a9be": {
+   "controles": {
+    "gordura": {
+     "torso": 0.88,
+     "cadera": 0.82,
+     "piernas": 0.86,
+     "brazos": 0.88,
+     "cara": 0.85
+    },
+    "colores.piel": [
+     0.78,
+     0.52,
+     0.38
+    ],
+    "colores.cara": [
+     0.78,
+     0.52,
+     0.38
+    ],
+    "pelo_largo": {
+     "ocultar_pelo_base": true,
+     "largo_m": 0.45,
+     "color": [
+      0.12,
+      0.08,
+      0.1
+     ]
+    },
+    "colores.ropa_superior": [
+     0.72,
+     0.18,
+     0.58
+    ],
+    "colores.ropa_inferior": [
+     0.65,
+     0.15,
+     0.52
+    ],
+    "colores.zapatos": [
+     0.78,
+     0.2,
+     0.6
+    ],
+    "capa": {
+     "color": [
+      0.95,
+      0.45,
+      0.7
+     ],
+     "largo_m": 0.45,
+     "rasgada": false
+    },
+    "pulsera": {
+     "muneca": "izquierda",
+     "color": [
+      0.85,
+      0.2,
+      0.6
+     ],
+     "escudo_empatia": true,
+     "monos_altos_lazos_magenta": true,
+     "pantuflas_conejo": true
+    }
+   },
+   "origen": "Argon (diccionario)"
+  },
+  "ch-eco-eff3": {
+   "controles": {
+    "gordura": {
+     "torso": 0.88,
+     "cadera": 0.82,
+     "piernas": 0.86,
+     "brazos": 0.88,
+     "cara": 0.85
+    },
+    "colores.piel": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.cara": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "pelo_largo": {
+     "ocultar_pelo_base": true,
+     "largo_m": 0.45,
+     "color": [
+      0.18,
+      0.58,
+      0.25
+     ]
+    },
+    "colores.ropa_superior": [
+     0.15,
+     0.52,
+     0.28
+    ],
+    "colores.ropa_inferior": [
+     0.14,
+     0.48,
+     0.25
+    ],
+    "colores.zapatos": [
+     0.16,
+     0.55,
+     0.3
+    ]
+   },
+   "origen": "Argon (diccionario)"
+  },
+  "ch-pintor-bce0": {
+   "controles": {
+    "colores.piel": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.cara": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.ropa_inferior": [
+     0.18,
+     0.28,
+     0.58
+    ],
+    "colores.pelo": [
+     0.05,
+     0.05,
+     0.05
+    ],
+    "colores.ropa_superior": [
+     0.95,
+     0.82,
+     0.15
+    ],
+    "colores.zapatos": [
+     0.32,
+     0.2,
+     0.15
+    ],
+    "gordura": {
+     "torso": 1.22,
+     "cadera": 1.2,
+     "piernas": 0.9,
+     "brazos": 0.95,
+     "cara": 1.12,
+     "copete_pincel": true,
+     "boina_roja_ladeada": true,
+     "pincel_oreja": true,
+     "manchas_pintura_multicolor": true,
+     "solapa_abc": true
+    }
+   },
+   "origen": "Argon (diccionario)"
+  },
+  "ch-piquito-030a": {
+   "controles": {
+    "colores.ropa_superior": [
+     1.0,
+     0.85,
+     0.3
+    ],
+    "colores.zapatos": [
+     0.95,
+     0.47,
+     0.16
+    ]
+   },
+   "origen": "Argon (diccionario)"
+  }
+ },
+ "revision_argon": [
+  {
+   "chequeo": "contradicciones",
+   "resultado": "ok",
+   "detalle": "Todas las acciones y dialogos siguen fielmente el guion de la escena 1 sin omisiones."
+  },
+  {
+   "chequeo": "alineacion_set",
+   "resultado": "ok",
+   "detalle": "Todos los puntos estan dentro de floor_bounds y libres de colisiones con la cama, el cofre, el armario y la mesa de dibujo."
+  },
+  {
+   "chequeo": "continuidad_posiciones",
+   "resultado": "ok",
+   "detalle": "Los segmentos de los seis personajes cubren de 0.0 a 55.0 segundos sin saltos y con velocidades de caminata suaves."
+  },
+  {
+   "chequeo": "tiempos",
+   "resultado": "ok",
+   "detalle": "La duracion de 55 segundos se reparte de forma continua entre los dialogos y acciones del prologo."
+  },
+  {
+   "chequeo": "poses",
+   "resultado": "ok",
+   "detalle": "Todas las poses pertenecen a POSE_LIBRARY y concuerdan con los verbos de accion."
+  },
+  {
+   "chequeo": "miradas_y_emociones",
+   "resultado": "ok",
+   "detalle": "Las miradas y emociones reflejan cada reaccion de los personajes sin mencionar terminos de rodaje."
+  },
+  {
+   "chequeo": "objetos_y_cambios",
+   "resultado": "ok",
+   "detalle": "Se utilizan los objetos reales del set como el libro de cuentos, la ventana, el visor y el cofre dorado."
+  },
+  {
+   "chequeo": "hechos",
+   "resultado": "ok",
+   "detalle": "Se registran todos los hechos primarios y secundarios requeridos para la continuidad con la escena 2."
+  }
+ ],
+ "avisos_codigo": [
+  "ch-don-caos-7adf: se mueve entre 9 y 11 s sin un beat que lo explique",
+  "ch-spark-468e: se mueve entre 30 y 33 s sin un beat que lo explique",
+  "ch-valentina-a9be: se mueve entre 30 y 33 s sin un beat que lo explique",
+  "ch-eco-eff3: se mueve entre 30 y 33 s sin un beat que lo explique",
+  "ch-pintor-bce0: se mueve entre 30 y 33 s sin un beat que lo explique",
+  "ch-piquito-030a: se mueve entre 30 y 33 s sin un beat que lo explique"
+ ],
+ "version_01": "accion_v1",
+ "aspecto": [
+  1920,
+  1080
+ ],
+ "solo_accion": true,
+ "normalizaciones_codigo": [
+  "acciones[0] a1.mirada: id oficial «obj-libro-cuentos__e1-8» → «libro cuentos» (contrato: palabras sin números)",
+  "acciones[1] a2.mirada: id oficial «obj-libro-cuentos__e1-8» → «libro cuentos» (contrato: palabras sin números)",
+  "acciones[2] a3.mirada: id oficial «Ventana con vista al arcoíris» → «Ventana con vista al arcoíris» (contrato: palabras sin números)",
+  "acciones[3] a4.mirada: id oficial «Ventana con vista al arcoíris» → «Ventana con vista al arcoíris» (contrato: palabras sin números)",
+  "acciones[4] a5.mirada: id oficial «obj-cama» → «cama» (contrato: palabras sin números)",
+  "acciones[5] a6.mirada: id oficial «Centro de la habitación» → «Centro de la habitación» (contrato: palabras sin números)",
+  "acciones[6] a7.mirada: id oficial «Centro de la habitación» → «Centro de la habitación» (contrato: palabras sin números)",
+  "acciones[7] a8.mirada: id oficial «Centro de la habitación» → «Centro de la habitación» (contrato: palabras sin números)",
+  "acciones[8] a9.mirada: id oficial «Centro de la habitación» → «Centro de la habitación» (contrato: palabras sin números)",
+  "acciones[9] a10.mirada: id oficial «Centro de la habitación» → «Centro de la habitación» (contrato: palabras sin números)",
+  "acciones[10] a11.mirada: id oficial «obj-visor-spark» → «visor spark» (contrato: palabras sin números)",
+  "acciones[11] a12.mirada: id oficial «ch-spark-468e» → «Spark» (contrato: palabras sin números)",
+  "acciones[13] a14.mirada: id oficial «obj-cofre-dorado» → «cofre dorado» (contrato: palabras sin números)",
+  "acciones[15] a16.mirada: id oficial «ch-valentina-a9be» → «Valentina» (contrato: palabras sin números)"
+ ],
+ "acciones": [
+  {
+   "id": "a1",
+   "t": [
+    0.0,
+    3.0
+   ],
+   "actor": "ch-don-caos-7adf",
+   "accion": "poder",
+   "pose": "senalando",
+   "mirada": "libro cuentos",
+   "emocion": "travieso",
+   "objeto": "obj-libro-cuentos__e1-8",
+   "cambio": "mover",
+   "cita": "Un rayo morado cruza la pantalla. Las letras salen volando como mariposas y la página queda en blanco.",
+   "mirada_id": "obj-libro-cuentos__e1-8"
+  },
+  {
+   "id": "a2",
+   "t": [
+    3.0,
+    9.0
+   ],
+   "actor": "ch-don-caos-7adf",
+   "accion": "hablar",
+   "pose": "de_pie",
+   "mirada": "libro cuentos",
+   "emocion": "divertido",
+   "objeto": "",
+   "cambio": "",
+   "cita": "¡Jajajá! ¡Sin letras no hay cuentos! ¡Y sin cuentos… todos a la cama sin leer!",
+   "mirada_id": "obj-libro-cuentos__e1-8"
+  },
+  {
+   "id": "a3",
+   "t": [
+    9.0,
+    11.0
+   ],
+   "actor": "ch-don-caos-7adf",
+   "accion": "poder",
+   "pose": "senalando",
+   "mirada": "Ventana con vista al arcoíris",
+   "emocion": "burlon",
+   "objeto": "Ventana con vista al arcoíris",
+   "cambio": "",
+   "cita": "Otro ZAP. Ahora el arcoíris de la ventana se vuelve gris.",
+   "mirada_id": "Ventana con vista al arcoíris"
+  },
+  {
+   "id": "a4",
+   "t": [
+    11.0,
+    15.5
+   ],
+   "actor": "ch-don-caos-7adf",
+   "accion": "hablar",
+   "pose": "de_pie",
+   "mirada": "Ventana con vista al arcoíris",
+   "emocion": "aburrido",
+   "objeto": "",
+   "cambio": "",
+   "cita": "¡Y adiós colores! ¡Y adiós números! Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+   "mirada_id": "Ventana con vista al arcoíris"
+  },
+  {
+   "id": "a5",
+   "t": [
+    15.5,
+    18.0
+   ],
+   "actor": "ch-don-caos-7adf",
+   "accion": "caminar",
+   "pose": "caminando",
+   "mirada": "cama",
+   "emocion": "satisfecho",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+   "mirada_id": "obj-cama"
+  },
+  {
+   "id": "a6",
+   "t": [
+    18.0,
+    21.0
+   ],
+   "actor": "ch-spark-468e",
+   "accion": "aparecer",
+   "pose": "de_pie",
+   "mirada": "Centro de la habitación",
+   "emocion": "alerta",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+   "mirada_id": "Centro de la habitación"
+  },
+  {
+   "id": "a7",
+   "t": [
+    18.0,
+    21.0
+   ],
+   "actor": "ch-valentina-a9be",
+   "accion": "aparecer",
+   "pose": "de_pie",
+   "mirada": "Centro de la habitación",
+   "emocion": "alerta",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+   "mirada_id": "Centro de la habitación"
+  },
+  {
+   "id": "a8",
+   "t": [
+    18.0,
+    21.0
+   ],
+   "actor": "ch-eco-eff3",
+   "accion": "aparecer",
+   "pose": "de_pie",
+   "mirada": "Centro de la habitación",
+   "emocion": "alerta",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+   "mirada_id": "Centro de la habitación"
+  },
+  {
+   "id": "a9",
+   "t": [
+    18.0,
+    21.0
+   ],
+   "actor": "ch-pintor-bce0",
+   "accion": "aparecer",
+   "pose": "de_pie",
+   "mirada": "Centro de la habitación",
+   "emocion": "alerta",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+   "mirada_id": "Centro de la habitación"
+  },
+  {
+   "id": "a10",
+   "t": [
+    18.0,
+    21.0
+   ],
+   "actor": "ch-piquito-030a",
+   "accion": "aparecer",
+   "pose": "de_pie",
+   "mirada": "Centro de la habitación",
+   "emocion": "alerta",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+   "mirada_id": "Centro de la habitación"
+  },
+  {
+   "id": "a11",
+   "t": [
+    21.0,
+    25.0
+   ],
+   "actor": "ch-spark-468e",
+   "accion": "hablar",
+   "pose": "de_pie",
+   "mirada": "visor spark",
+   "emocion": "preocupado",
+   "objeto": "obj-visor-spark",
+   "cambio": "",
+   "cita": "Alerta. Nivel de letras en el mundo: cero.",
+   "mirada_id": "obj-visor-spark"
+  },
+  {
+   "id": "a12",
+   "t": [
+    25.0,
+    30.0
+   ],
+   "actor": "ch-pintor-bce0",
+   "accion": "hablar",
+   "pose": "senalando",
+   "mirada": "Spark",
+   "emocion": "alarmado",
+   "objeto": "",
+   "cambio": "",
+   "cita": "¡Cero letras! ¡Cero colores! ¡Cero todo! ¡Esto es una emergencia de nivel arcoíris!",
+   "mirada_id": "ch-spark-468e"
+  },
+  {
+   "id": "a13",
+   "t": [
+    30.0,
+    33.0
+   ],
+   "actor": "",
+   "accion": "aparecer",
+   "pose": "",
+   "mirada": "",
+   "emocion": "",
+   "objeto": "obj-cofre-dorado",
+   "cambio": "aparecer",
+   "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra."
+  },
+  {
+   "id": "a14",
+   "t": [
+    30.0,
+    33.0
+   ],
+   "actor": "ch-spark-468e",
+   "accion": "mirar",
+   "pose": "de_pie",
+   "mirada": "cofre dorado",
+   "emocion": "sorprendido",
+   "objeto": "obj-cofre-dorado",
+   "cambio": "",
+   "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra.",
+   "mirada_id": "obj-cofre-dorado"
+  },
+  {
+   "id": "a15",
+   "t": [
+    33.0,
+    40.0
+   ],
+   "actor": "ch-valentina-a9be",
+   "accion": "hablar",
+   "pose": "de_pie",
+   "mirada": "al frente",
+   "emocion": "serena",
+   "objeto": "obj-cofre-dorado",
+   "cambio": "",
+   "cita": "Esperen… este cofre guarda una palabra mágica. Si alguien la lee en voz alta, todo vuelve a la normalidad."
+  },
+  {
+   "id": "a16",
+   "t": [
+    40.0,
+    44.0
+   ],
+   "actor": "ch-eco-eff3",
+   "accion": "hablar",
+   "pose": "de_pie",
+   "mirada": "Valentina",
+   "emocion": "entusiasmada",
+   "objeto": "",
+   "cambio": "",
+   "cita": "¡Pero solo puede abrirlo alguien muy valiente!",
+   "mirada_id": "ch-valentina-a9be"
+  },
+  {
+   "id": "a17",
+   "t": [
+    44.0,
+    46.0
+   ],
+   "actor": "ch-spark-468e",
+   "accion": "girar",
+   "pose": "de_pie",
+   "mirada": "al frente",
+   "emocion": "decidido",
+   "objeto": "",
+   "cambio": "",
+   "cita": "…¡TÚ!"
+  },
+  {
+   "id": "a18",
+   "t": [
+    44.0,
+    46.0
+   ],
+   "actor": "ch-valentina-a9be",
+   "accion": "girar",
+   "pose": "de_pie",
+   "mirada": "al frente",
+   "emocion": "decidida",
+   "objeto": "",
+   "cambio": "",
+   "cita": "…¡TÚ!"
+  },
+  {
+   "id": "a19",
+   "t": [
+    44.0,
+    46.0
+   ],
+   "actor": "ch-eco-eff3",
+   "accion": "girar",
+   "pose": "de_pie",
+   "mirada": "al frente",
+   "emocion": "decidida",
+   "objeto": "",
+   "cambio": "",
+   "cita": "…¡TÚ!"
+  },
+  {
+   "id": "a20",
+   "t": [
+    44.0,
+    46.0
+   ],
+   "actor": "ch-pintor-bce0",
+   "accion": "girar",
+   "pose": "de_pie",
+   "mirada": "al frente",
+   "emocion": "decidido",
+   "objeto": "",
+   "cambio": "",
+   "cita": "…¡TÚ!"
+  },
+  {
+   "id": "a21",
+   "t": [
+    46.0,
+    48.0
+   ],
+   "actor": "ch-spark-468e",
+   "accion": "hablar",
+   "pose": "senalando",
+   "mirada": "al frente",
+   "emocion": "emocionado",
+   "objeto": "",
+   "cambio": "",
+   "cita": "…¡TÚ!"
+  },
+  {
+   "id": "a22",
+   "t": [
+    46.0,
+    48.0
+   ],
+   "actor": "ch-valentina-a9be",
+   "accion": "hablar",
+   "pose": "senalando",
+   "mirada": "al frente",
+   "emocion": "emocionada",
+   "objeto": "",
+   "cambio": "",
+   "cita": "…¡TÚ!"
+  },
+  {
+   "id": "a23",
+   "t": [
+    46.0,
+    48.0
+   ],
+   "actor": "ch-eco-eff3",
+   "accion": "hablar",
+   "pose": "senalando",
+   "mirada": "al frente",
+   "emocion": "emocionada",
+   "objeto": "",
+   "cambio": "",
+   "cita": "…¡TÚ!"
+  },
+  {
+   "id": "a24",
+   "t": [
+    46.0,
+    48.0
+   ],
+   "actor": "ch-pintor-bce0",
+   "accion": "hablar",
+   "pose": "senalando",
+   "mirada": "al frente",
+   "emocion": "emocionado",
+   "objeto": "",
+   "cambio": "",
+   "cita": "…¡TÚ!"
+  },
+  {
+   "id": "a25",
+   "t": [
+    48.0,
+    55.0
+   ],
+   "actor": "ch-spark-468e",
+   "accion": "hablar",
+   "pose": "de_pie",
+   "mirada": "al frente",
+   "emocion": "misterioso",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Al final de esta misión, tú vas a leer tu primera palabra mágica. Y no te voy a decir cuál es… todavía."
+  }
+ ],
+ "hechos": [
+  {
+   "hecho": "Don Caos borra con su rayo las letras del libro de cuentos sobre la cama",
+   "personaje": "ch-don-caos-7adf",
+   "t": 3.0
+  },
+  {
+   "hecho": "Don Caos borra el color del arcoiris de la ventana y asegura que tambien borro los numeros",
+   "personaje": "ch-don-caos-7adf",
+   "t": 11.0
+  },
+  {
+   "hecho": "Los cuatro Guardianes aterrizan en la habitacion como luces de colores con Piquito en el hombro izquierdo de Eco",
+   "personaje": "ch-spark-468e",
+   "t": 21.0
+  },
+  {
+   "hecho": "Aparece el cofre dorado con tres candados en el centro de la habitacion",
+   "personaje": "",
+   "t": 33.0
+  },
+  {
+   "hecho": "Los Guardianes descubren que el cofre guarda una palabra magica que devolvera todo a la normalidad al leerla en voz alta",
+   "personaje": "ch-valentina-a9be",
+   "t": 40.0
+  }
+ ],
+ "zona_escena_xy": null,
+ "camaras": "las elige el 06 sobre la animación (el 01 solo dirige la acción)",
+ "de": "argon (revalidado accion_v1)",
+ "respuesta": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/cubos/01/respuestas/esc_1.txt"
+}

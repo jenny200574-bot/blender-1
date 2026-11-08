@@ -1,0 +1,14 @@
+test_all_appearance_numbers_from_model (__main__.Tests.test_all_appearance_numbers_from_model) ... ok
+test_bone_numbers_unchanged (__main__.Tests.test_bone_numbers_unchanged) ... ok
+test_cpu_blocks_and_blender_build_passed (__main__.Tests.test_cpu_blocks_and_blender_build_passed) ... ok
+test_gold_23_unchanged_core (__main__.Tests.test_gold_23_unchanged_core) ... ok
+test_ledger_and_switches (__main__.Tests.test_ledger_and_switches) ... ok
+test_light_numbers_from_model (__main__.Tests.test_light_numbers_from_model) ... ok
+test_manifest_assets_sources (__main__.Tests.test_manifest_assets_sources) ... ok
+test_no_2b_fabrication (__main__.Tests.test_no_2b_fabrication) ... ok
+test_no_physics_or_coordinates_invention (__main__.Tests.test_no_physics_or_coordinates_invention) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.026s
+
+OK

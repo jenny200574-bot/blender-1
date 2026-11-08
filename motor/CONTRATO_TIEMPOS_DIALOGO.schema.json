@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "version",
+    "estado",
+    "fps",
+    "dialogos",
+    "genera_voz",
+    "genera_lipsync"
+  ],
+  "properties": {
+    "genera_voz": {
+      "const": false
+    },
+    "genera_lipsync": {
+      "const": false
+    },
+    "dialogos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "hablante",
+          "texto",
+          "inicio_s",
+          "fin_s",
+          "inicio_cuadro",
+          "fin_cuadro",
+          "tomas",
+          "por_toma",
+          "fuente"
+        ],
+        "properties": {
+          "hablante": {
+            "type": "string",
+            "minLength": 1
+          },
+          "texto": {
+            "type": "string",
+            "minLength": 1
+          },
+          "inicio_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "fin_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "inicio_cuadro": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "fin_cuadro": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "tomas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

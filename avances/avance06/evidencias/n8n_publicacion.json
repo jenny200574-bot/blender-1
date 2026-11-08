@@ -1,0 +1,21 @@
+{
+  "workflow_id": "debwaH9svFMoTnOf",
+  "node_count": 577,
+  "changed_node_ids": [
+    "d64ab9c2-79e7-4eaf-93e3-a9bcb7bd0a35",
+    "98167dd6-7b07-49d6-a3c6-6e562d75126f",
+    "666d9a81-6fa0-445f-9b55-09300934c125",
+    "dfb4b9d3-7b34-4250-ae0f-00860d0d527a",
+    "07bfa467-e0e1-4674-b90e-b04e596d0176",
+    "7b08ecd4-8b88-4c51-90fd-312930ad38df"
+  ],
+  "connections_unchanged": true,
+  "saved_version": "06d22a09-e7fa-40ff-9335-d81b6222a995",
+  "published_version": "06d22a09-e7fa-40ff-9335-d81b6222a995",
+  "published": true,
+  "mode": "JSON opt-in formato_adn=ako_json/v1; legacy requests unchanged",
+  "live_paid_gate": "pago_adn_json.off retained; no arbitrary additional live spending",
+  "final_readback_version": "06d22a09-e7fa-40ff-9335-d81b6222a995",
+  "final_readback_published_version": "06d22a09-e7fa-40ff-9335-d81b6222a995",
+  "final_readback_matches": true
+}

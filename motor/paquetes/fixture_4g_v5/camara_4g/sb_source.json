@@ -1,0 +1,105 @@
+{
+  "vinetas": [
+    {
+      "vineta": "shot_A",
+      "t_abs": [
+        0,
+        1
+      ],
+      "objetivo": "bird_fixture",
+      "angulo": "EYELEVEL",
+      "lado_objetivo": "C",
+      "keyframes": [
+        {
+          "t": 0,
+          "plano": "FS",
+          "lente_mm": 28,
+          "giro_grados": 0
+        },
+        {
+          "t": 1,
+          "plano": "FS",
+          "lente_mm": 28,
+          "giro_grados": 0
+        }
+      ],
+      "segmentos": [
+        {
+          "t_abs": [
+            0,
+            0.5
+          ],
+          "movimiento": "PAN",
+          "args": {
+            "degrees": 3,
+            "dir_lr": "R"
+          },
+          "curva": "suave_entrada_salida"
+        },
+        {
+          "t_abs": [
+            0.5,
+            1
+          ],
+          "movimiento": "CRANE",
+          "args": {
+            "distance": 0.02,
+            "dir_ud": "UP"
+          },
+          "curva": "suave_entrada_salida"
+        }
+      ],
+      "transicion_salida": "CORTE"
+    },
+    {
+      "vineta": "shot_B",
+      "t_abs": [
+        1,
+        2
+      ],
+      "objetivo": "bird_fixture",
+      "angulo": "EYELEVEL",
+      "lado_objetivo": "C",
+      "keyframes": [
+        {
+          "t": 1,
+          "plano": "FS",
+          "lente_mm": 28,
+          "giro_grados": 0
+        },
+        {
+          "t": 2,
+          "plano": "FS",
+          "lente_mm": 28,
+          "giro_grados": 0
+        }
+      ],
+      "segmentos": [
+        {
+          "t_abs": [
+            1,
+            1.5
+          ],
+          "movimiento": "TRACK",
+          "args": {
+            "screen": "L2R"
+          },
+          "curva": "suave_entrada_salida"
+        },
+        {
+          "t_abs": [
+            1.5,
+            2
+          ],
+          "movimiento": "DOLLYZOOM",
+          "args": {
+            "distance": 0.02,
+            "dir_io": "OUT"
+          },
+          "curva": "suave_entrada_salida"
+        }
+      ],
+      "transicion_salida": "CORTE"
+    }
+  ]
+}

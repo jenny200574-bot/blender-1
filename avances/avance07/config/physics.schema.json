@@ -1,0 +1,88 @@
+{
+  "type": "object",
+  "properties": {
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "bone_length_error_m",
+              "root_speed_max_m_s",
+              "root_accel_max_m_s2",
+              "com_accel_max_m_s2",
+              "slip_max_m_per_frame",
+              "joint_speed_max_deg_s",
+              "penetration_tolerance_m",
+              "reject_surface_intersections",
+              "colliders",
+              "allowed_collision_pairs",
+              "Piquito.balance_margin_m",
+              "Piquito.attachment",
+              "Piquito.support_intervals"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "SOURCE",
+              "DERIVED",
+              "FALTA"
+            ]
+          },
+          "value_json": {
+            "type": "string"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "state",
+          "value_json",
+          "source_refs",
+          "reason"
+        ]
+      }
+    },
+    "twoB_missing": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "producer": {
+            "type": "string"
+          },
+          "existing_evidence": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "needed",
+          "producer",
+          "existing_evidence"
+        ]
+      }
+    }
+  },
+  "required": [
+    "rows",
+    "twoB_missing"
+  ]
+}

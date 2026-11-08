@@ -1,0 +1,1 @@
+Completa contrato World para diseño artístico av06_light02. Sólo elegir ID nuevo namespaced av06.art.world* y alpha World RGBA0..1 explícito; RGB/strength/exposure ya generados no se cambian. Como World de habitación opaco, decidir alpha apropiado. source Argon_GENERATED. No medición ni certificación. JSON.

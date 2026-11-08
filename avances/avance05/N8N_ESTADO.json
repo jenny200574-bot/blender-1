@@ -1,0 +1,11 @@
+{
+  "workflow_id": "debwaH9svFMoTnOf",
+  "nodes": 577,
+  "active": true,
+  "sha256_content_actual": "d7721ba7c5ee76fcc51fbcb9186f34147c84ce3cd7e04f076cce570335636fdb",
+  "sha256_content_avance04": "d7721ba7c5ee76fcc51fbcb9186f34147c84ce3cd7e04f076cce570335636fdb",
+  "identical_nodes_connections_settings": true,
+  "modified_live_this_phase": false,
+  "backup_box": "/workspace/avance05/n8n/workflow_final_sin_cambios.json",
+  "backup_excluded_from_delivery": "No se necesita duplicar credenciales potenciales embebidas para evidenciar ausencia de modificaciones."
+}

@@ -1,0 +1,414 @@
+{
+  "nombre": "brazalete_tecnologico",
+  "tipo": "objeto",
+  "fuente_adn": "Aro rigido cerrado de una pieza, sin broches ni bisagras; anillo circular grueso tubular achatado, bordes biselados suaves. Chasis: aleacion gris plomo oscuro / azul pizarra apagado, mate satinado. Emision: cian / azul electrico neon con bloom suave. Grabados exteriores: rombo doble concentrico al centro; a cada lado dos lineas paralelas de circuito.",
+  "tamano_m_por_defecto": [
+    0.09,
+    0.09,
+    0.035
+  ],
+  "medidas_adn": {
+    "ancho_m": [
+      0.07,
+      0.12
+    ],
+    "fondo_m": [
+      0.07,
+      0.12
+    ],
+    "alto_m": [
+      0.02,
+      0.05
+    ]
+  },
+  "materiales": {
+    "chasis": {
+      "base": [
+        0.12,
+        0.14,
+        0.18
+      ],
+      "rough": 0.38,
+      "metal": 0.85,
+      "emit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emit_strength": 0.0,
+      "alpha": 1.0,
+      "desgaste": {
+        "tipo": "organico",
+        "fuerza": 0.15,
+        "escala": 2.0
+      }
+    },
+    "interior": {
+      "base": [
+        0.05,
+        0.06,
+        0.08
+      ],
+      "rough": 0.6,
+      "metal": 0.4,
+      "emit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emit_strength": 0.0,
+      "alpha": 1.0,
+      "desgaste": {
+        "tipo": "organico",
+        "fuerza": 0.0,
+        "escala": 1.0
+      }
+    },
+    "circuito_cian": {
+      "base": [
+        0.1,
+        0.92,
+        1.0
+      ],
+      "rough": 0.2,
+      "metal": 0.0,
+      "emit": [
+        0.1,
+        0.92,
+        1.0
+      ],
+      "emit_strength": 18.0,
+      "alpha": 1.0,
+      "desgaste": {
+        "tipo": "vertical",
+        "fuerza": 0.0,
+        "escala": 1.0
+      }
+    }
+  },
+  "piezas": [
+    {
+      "tipo": "toro",
+      "id": "aro",
+      "pos": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "dim": [
+        0.96,
+        0.96,
+        0.85
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "verts": 24,
+      "material": "chasis",
+      "repetir": {
+        "patron": "ninguno",
+        "n": 1,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "cilindro",
+      "id": "revestimiento_interno",
+      "pos": [
+        0.0,
+        0.0,
+        0.1
+      ],
+      "dim": [
+        0.76,
+        0.76,
+        0.8
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "verts": 20,
+      "material": "interior",
+      "repetir": {
+        "patron": "ninguno",
+        "n": 1,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "toro",
+      "id": "linea_cian",
+      "pos": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "dim": [
+        1.0,
+        1.0,
+        0.18
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "verts": 24,
+      "material": "circuito_cian",
+      "repetir": {
+        "patron": "pila_z",
+        "n": 2,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.28,
+        "centrado": true,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "prisma",
+      "id": "rombo_central",
+      "pos": [
+        0.0,
+        -0.49,
+        0.22
+      ],
+      "dim": [
+        0.22,
+        0.06,
+        0.56
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        0.0,
+        45.0,
+        0.0
+      ],
+      "verts": 4,
+      "material": "circuito_cian",
+      "repetir": {
+        "patron": "ninguno",
+        "n": 1,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "caja",
+      "id": "glifos",
+      "pos": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "dim": [
+        0.06,
+        0.06,
+        0.3
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "verts": 0,
+      "material": "circuito_cian",
+      "repetir": {
+        "patron": "radial",
+        "n": 8,
+        "paso_m": 0.0,
+        "f": 0.49,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 22.5,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    }
+  ],
+  "bisagras": [],
+  "luces": [
+    {
+      "tipo": "point",
+      "pos": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "energy": 8.0,
+      "color": [
+        0.1,
+        0.9,
+        1.0
+      ],
+      "size": 0.05
+    }
+  ],
+  "mundo": {
+    "color_cenit": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "color_horizonte": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fuerza": 0.0,
+    "estrellas_densidad": 0.0,
+    "estrellas_brillo": 0.0,
+    "estrellas_escala": 0.0
+  },
+  "puntos_requeridos": [
+    "brazalete.centro"
+  ],
+  "requisitos_adn": [
+    {
+      "tipo": "pieza",
+      "id": "aro",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "Aro rigido cerrado de una pieza, sin broches ni bisagras; anillo circular grueso tubular achatado"
+    },
+    {
+      "tipo": "pieza",
+      "id": "rombo_central",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "Grabados exteriores: rombo doble concentrico al centro; a cada lado dos lineas paralelas de circuito"
+    },
+    {
+      "tipo": "material_metal",
+      "id": "",
+      "material": "chasis",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "Chasis: aleacion gris plomo oscuro / azul pizarra apagado, mate satinado"
+    },
+    {
+      "tipo": "emision",
+      "id": "",
+      "material": "circuito_cian",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "Emision: cian / azul electrico neon con bloom suave"
+    },
+    {
+      "tipo": "luz",
+      "id": "",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "Activo: luz cian intensa constante, rebote turquesa sobre el aro y la muneca/mano"
+    },
+    {
+      "tipo": "punto",
+      "id": "",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "brazalete.centro",
+      "cita": "brazalete.centro"
+    }
+  ],
+  "esquema": "formula_puntos.v2",
+  "puntos_nombrados": {
+    "brazalete.centro": [
+      0.0,
+      0.0,
+      0.5
+    ]
+  },
+  "meta": {
+    "origen": "ia (Argon gemini-4-argon)",
+    "fecha": "2026-11-04",
+    "escena": "esc11",
+    "llamada": "2a-obj-r0",
+    "validado": true
+  }
+}

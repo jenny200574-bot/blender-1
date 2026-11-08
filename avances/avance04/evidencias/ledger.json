@@ -1,0 +1,20 @@
+{
+  "gross_usd": 0.0759895,
+  "reserved_usd": 0.0,
+  "entries": [
+    {
+      "id": "1",
+      "date_bogota": "2026-11-07T20:46:42.098016-05:00",
+      "state": "SETTLED",
+      "purpose": "Guardianes esc1 data repair",
+      "model": "gemini-3-flash-preview",
+      "reserve_usd": 0.301266,
+      "prompt_sha256": "f3c7d32432c546416fa11d88be41d78a4e2bf6940431f21df2f3e8b8c0733914",
+      "gross_usd": 0.0759895,
+      "date_settled_bogota": "2026-11-07T20:46:54.831414-05:00"
+    }
+  ],
+  "cap_usd": 50,
+  "preventive_stop_usd": 45,
+  "previous_plan_generation_usd": 0
+}

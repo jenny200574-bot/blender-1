@@ -1,0 +1,93 @@
+{
+  "shot_A": {
+    "encuadre": [
+      [
+        "FS",
+        {}
+      ],
+      [
+        "EYELEVEL",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 28
+        }
+      ],
+      [
+        "CENTER",
+        {}
+      ],
+      [
+        "TRIPOD",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        0,
+        0.5,
+        "PAN",
+        {
+          "degrees": 3,
+          "dir_lr": "R"
+        }
+      ],
+      [
+        0.5,
+        1,
+        "CRANE",
+        {
+          "distance": 0.02,
+          "dir_ud": "UP"
+        }
+      ]
+    ]
+  },
+  "shot_B": {
+    "encuadre": [
+      [
+        "FS",
+        {}
+      ],
+      [
+        "EYELEVEL",
+        {}
+      ],
+      [
+        "LENS",
+        {
+          "mm": 28
+        }
+      ],
+      [
+        "CENTER",
+        {}
+      ],
+      [
+        "TRIPOD",
+        {}
+      ]
+    ],
+    "movimiento": [
+      [
+        1,
+        1.5,
+        "TRACK",
+        {
+          "screen": "L2R"
+        }
+      ],
+      [
+        1.5,
+        2,
+        "DOLLYZOOM",
+        {
+          "distance": 0.02,
+          "dir_io": "OUT"
+        }
+      ]
+    ]
+  }
+}

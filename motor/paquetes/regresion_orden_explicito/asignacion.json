@@ -1,0 +1,66 @@
+[
+  {
+    "personaje": "entidad_1",
+    "accion_plan": "arrodillarse",
+    "movimiento": "arrodillarse",
+    "t0": 0.0,
+    "t1": 2.5,
+    "objetivo_punto": "entidad_0.cabeza"
+  },
+  {
+    "personaje": "entidad_1",
+    "accion_plan": "mirar",
+    "movimiento": "mantener_arrodillada_mirando",
+    "t0": 2.5,
+    "t1": 10.0,
+    "objetivo_punto": "entidad_0.cabeza"
+  },
+  {
+    "personaje": "entidad_0",
+    "accion_plan": "levantarse",
+    "movimiento": "levantarse_por_fases",
+    "t0": 0.0,
+    "t1": 4.2,
+    "objetivo_punto": "entidad_1.cabeza"
+  },
+  {
+    "personaje": "entidad_0",
+    "accion_plan": "acercarse",
+    "movimiento": "paso_corto_vacilante",
+    "t0": 4.2,
+    "t1": 5.5,
+    "objetivo_punto": "entidad_1.cabeza"
+  },
+  {
+    "personaje": "entidad_2",
+    "accion_plan": "quieto",
+    "movimiento": "quieto_firme",
+    "t0": 0.0,
+    "t1": 5.2,
+    "objetivo_punto": "entidad_0.cabeza"
+  },
+  {
+    "personaje": "entidad_2",
+    "accion_plan": "apuntar_arma",
+    "movimiento": "apuntar_lanza",
+    "t0": 5.2,
+    "t1": 8.0,
+    "objetivo_punto": "entidad_0.pecho_c"
+  },
+  {
+    "personaje": "entidad_2",
+    "accion_plan": "quieto",
+    "movimiento": "mantener_apuntando_lanza",
+    "t0": 8.0,
+    "t1": 10.0,
+    "objetivo_punto": "entidad_0.pecho_c"
+  },
+  {
+    "personaje": "entidad_0",
+    "accion_plan": "mirar",
+    "movimiento": "mirar_brazalete",
+    "t0": 5.5,
+    "t1": 10.0,
+    "objetivo_punto": "brazalete.centro"
+  }
+]

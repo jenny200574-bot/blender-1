@@ -1,0 +1,134 @@
+{
+  "schema": "anatomical_profile_v1",
+  "profile_id": "humanoide_adulto",
+  "format_role": "puntos_cuerpo",
+  "units": "m",
+  "frame": "REST_BONE",
+  "source": {
+    "original_sha256": "9bf5b33d3b7fde8e11b018bf408a49376211ce8211bc2832e94d3175ffe5408f",
+    "range_source": null
+  },
+  "examples": [
+    {
+      "example_id": "ejemplo_heredado_01",
+      "original_path": "bibliotecas/star/catalogos/archivo/20261107_102336_239716/kael_puntos_cuerpo.json",
+      "sha256": "9bf5b33d3b7fde8e11b018bf408a49376211ce8211bc2832e94d3175ffe5408f",
+      "identity": "Kael",
+      "source_model": "/workspace/PRUEBA_ESC6_20261031/05_moldes_motor_puntos/motor_local/lib/biblioteca_vrm/HairSample_Male.vrm"
+    }
+  ],
+  "uso": "Puntos nombrados del cuerpo para IK a destinos (teclado.agarre, silla.asiento, etc.). Coordenadas en T-pose (bind); se actualizan leyendo el hueso en runtime.",
+  "puntos": {
+    "cabeza.mirada": {
+      "hueso": "J_Bip_C_Head",
+      "ext": "head",
+      "uso": "hacia dónde mira / origen de mirada"
+    },
+    "cabeza.cima": {
+      "hueso": "J_Bip_C_Head",
+      "ext": "tail",
+      "uso": "tope de cabeza"
+    },
+    "cuello": {
+      "hueso": "J_Bip_C_Neck",
+      "ext": "head",
+      "uso": "base del cuello"
+    },
+    "espina.1": {
+      "hueso": "J_Bip_C_Spine",
+      "ext": "head",
+      "uso": "columna baja"
+    },
+    "espina.2": {
+      "hueso": "J_Bip_C_Chest",
+      "ext": "head",
+      "uso": "columna media"
+    },
+    "espina.3": {
+      "hueso": "J_Bip_C_UpperChest",
+      "ext": "head",
+      "uso": "columna alta"
+    },
+    "cadera.centro": {
+      "hueso": "J_Bip_C_Hips",
+      "ext": "head",
+      "uso": "pelvis; sentarse → silla.asiento"
+    },
+    "clavicula_L": {
+      "hueso": "J_Bip_L_Shoulder",
+      "ext": "head"
+    },
+    "clavicula_R": {
+      "hueso": "J_Bip_R_Shoulder",
+      "ext": "head"
+    },
+    "hombro_L": {
+      "hueso": "J_Bip_L_UpperArm",
+      "ext": "head"
+    },
+    "hombro_R": {
+      "hueso": "J_Bip_R_UpperArm",
+      "ext": "head"
+    },
+    "codo_L": {
+      "hueso": "J_Bip_L_LowerArm",
+      "ext": "head"
+    },
+    "codo_R": {
+      "hueso": "J_Bip_R_LowerArm",
+      "ext": "head"
+    },
+    "muneca_L": {
+      "hueso": "J_Bip_L_Hand",
+      "ext": "head"
+    },
+    "muneca_R": {
+      "hueso": "J_Bip_R_Hand",
+      "ext": "head"
+    },
+    "mano_L.palma": {
+      "hueso": "J_Bip_L_Hand",
+      "ext": "tail",
+      "uso": "IK mano izq → teclado.agarre / PC.boton"
+    },
+    "mano_R.palma": {
+      "hueso": "J_Bip_R_Hand",
+      "ext": "tail",
+      "uso": "IK mano der → teclado.agarre / PC.boton"
+    },
+    "cadera_L": {
+      "hueso": "J_Bip_L_UpperLeg",
+      "ext": "head"
+    },
+    "cadera_R": {
+      "hueso": "J_Bip_R_UpperLeg",
+      "ext": "head"
+    },
+    "rodilla_L": {
+      "hueso": "J_Bip_L_LowerLeg",
+      "ext": "head"
+    },
+    "rodilla_R": {
+      "hueso": "J_Bip_R_LowerLeg",
+      "ext": "head"
+    },
+    "tobillo_L": {
+      "hueso": "J_Bip_L_Foot",
+      "ext": "head"
+    },
+    "tobillo_R": {
+      "hueso": "J_Bip_R_Foot",
+      "ext": "head"
+    },
+    "pie_L.planta": {
+      "hueso": "J_Bip_L_ToeBase",
+      "ext": "head",
+      "uso": "apoyo en piso"
+    },
+    "pie_R.planta": {
+      "hueso": "J_Bip_R_ToeBase",
+      "ext": "head",
+      "uso": "apoyo en piso"
+    }
+  }
+}

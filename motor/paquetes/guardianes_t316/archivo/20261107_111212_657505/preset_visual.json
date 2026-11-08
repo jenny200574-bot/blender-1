@@ -1,0 +1,63 @@
+{
+  "engine": "BLENDER_EEVEE",
+  "software_cpu": true,
+  "samples": 32,
+  "resolution": [
+    320,
+    180
+  ],
+  "world_color": [
+    0.06,
+    0.07,
+    0.1
+  ],
+  "world_strength": 0.42,
+  "exposure": 0.5,
+  "view_transform": "AgX",
+  "look": "AgX - Medium High Contrast",
+  "source": "t316 técnico autorizado; World de biblioteca Star v2; exposición neutra, no dato artístico de escena; dos emisores técnicos de biblioteca, posición derivada de medidas reales del cuarto, NO luz artística del SB",
+  "bevel_width_m": 0.008,
+  "bevel_segments": 3,
+  "technical_lights": [
+    {
+      "id": "preview_key",
+      "position_m": [
+        3.2399999999999998,
+        3.04,
+        2.2399999999999998
+      ],
+      "target_m": [
+        2.25,
+        2.0,
+        1.4
+      ],
+      "energy": 1600,
+      "size_m": 1.8,
+      "color": [
+        1,
+        0.94,
+        0.84
+      ]
+    },
+    {
+      "id": "preview_fill",
+      "position_m": [
+        0.99,
+        0.88,
+        1.8199999999999998
+      ],
+      "target_m": [
+        2.25,
+        2.0,
+        1.4
+      ],
+      "energy": 650,
+      "size_m": 2.2,
+      "color": [
+        0.84,
+        0.91,
+        1
+      ]
+    }
+  ]
+}

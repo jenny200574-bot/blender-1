@@ -1,0 +1,8 @@
+{
+  "tests": 13,
+  "passed": true,
+  "legacy_model_fixture": "gemini-4-argon",
+  "new_provider_fixture": "gemini-3-flash-preview",
+  "assertions_and_tolerances_changed": false,
+  "new_network_calls": 0
+}

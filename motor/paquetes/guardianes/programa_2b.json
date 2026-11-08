@@ -1,0 +1,183 @@
+{
+  "iniciales": {
+    "ch-eco-eff3": "p_de_pie_base",
+    "ch-pintor-bce0": "p_de_pie_base",
+    "ch-spark-468e": "p_de_pie_base",
+    "ch-valentina-a9be": "p_de_pie_base",
+    "ch-don-caos-7adf": "p_de_pie_base"
+  },
+  "anclas": [],
+  "faltantes": [],
+  "notas": "Respuesta truncada; sólo elementos completos recuperados por motor sin nueva llamada",
+  "coverage": {
+    "needed": 52,
+    "covered": 52,
+    "missing": []
+  },
+  "issues": [
+    {
+      "recovery": {
+        "truncated": true,
+        "partial_array": "asignacion",
+        "fields_recovered": [
+          "poses",
+          "movimientos",
+          "asignacion"
+        ],
+        "no_incomplete_items_used": true
+      },
+      "note": "respuesta incompleta; derivaciones sólo técnicas, nunca aprobación"
+    },
+    {
+      "native_catalog_reuse": [
+        {
+          "action_id": "a9",
+          "reused_from": "a6",
+          "movement": "m_aterrizar_alerta",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "a19",
+          "reused_from": "a18",
+          "movement": "m_giro_decidido",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "a20",
+          "reused_from": "a17",
+          "movement": "m_giro_decidido",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "a23",
+          "reused_from": "a22",
+          "movement": "m_senalar_tu",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "a24",
+          "reused_from": "a21",
+          "movement": "m_senalar_tu",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-eco-eff3_2",
+          "reused_from": "segmento_01_ch-don-caos-7adf_3",
+          "movement": "m_caminar_ciclo",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-eco-eff3_3",
+          "reused_from": "segmento_01_ch-eco-eff3_0",
+          "movement": "m_reposo_base",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-eco-eff3_4",
+          "reused_from": "segmento_01_ch-spark-468e_4",
+          "movement": "m_giro_pasos",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-eco-eff3_5",
+          "reused_from": "segmento_01_ch-eco-eff3_0",
+          "movement": "m_reposo_base",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-pintor-bce0_0",
+          "reused_from": "segmento_01_ch-don-caos-7adf_0",
+          "movement": "m_reposo_base",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-pintor-bce0_1",
+          "reused_from": "segmento_01_ch-pintor-bce0_0",
+          "movement": "m_reposo_base",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-pintor-bce0_2",
+          "reused_from": "segmento_01_ch-don-caos-7adf_3",
+          "movement": "m_caminar_ciclo",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-pintor-bce0_3",
+          "reused_from": "segmento_01_ch-pintor-bce0_0",
+          "movement": "m_reposo_base",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-pintor-bce0_4",
+          "reused_from": "segmento_01_ch-spark-468e_4",
+          "movement": "m_giro_pasos",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "segmento_01_ch-pintor-bce0_5",
+          "reused_from": "segmento_01_ch-pintor-bce0_0",
+          "movement": "m_reposo_base",
+          "policy": "misma conducta inequívoca; preferencia mismo actor; tiempos fuente intactos"
+        },
+        {
+          "action_id": "a12",
+          "movement": "m_hablar_alarmado",
+          "policy": "selector motor: verbo exacto + emoción; margen>=.12",
+          "confidence": 1.0,
+          "production_approved": false
+        },
+        {
+          "action_id": "a16",
+          "movement": "m_hablar_entusiasta",
+          "policy": "selector motor: verbo exacto + emoción; margen>=.12",
+          "confidence": 0.8181818181818182,
+          "production_approved": false
+        }
+      ]
+    },
+    {
+      "PROVISIONAL_INITIAL_FROM_FIRST_2B_PHASE": {
+        "id": "ch-eco-eff3",
+        "pose": "p_de_pie_base",
+        "source_action": "segmento_01_ch-eco-eff3_0"
+      },
+      "not_source_approved": true
+    },
+    {
+      "PROVISIONAL_INITIAL_FROM_FIRST_2B_PHASE": {
+        "id": "ch-pintor-bce0",
+        "pose": "p_de_pie_base",
+        "source_action": "segmento_01_ch-pintor-bce0_0"
+      },
+      "not_source_approved": true
+    },
+    {
+      "PROVISIONAL_INITIAL_FROM_FIRST_2B_PHASE": {
+        "id": "ch-spark-468e",
+        "pose": "p_de_pie_base",
+        "source_action": "segmento_01_ch-spark-468e_0"
+      },
+      "not_source_approved": true
+    },
+    {
+      "PROVISIONAL_INITIAL_FROM_FIRST_2B_PHASE": {
+        "id": "ch-valentina-a9be",
+        "pose": "p_de_pie_base",
+        "source_action": "segmento_01_ch-valentina-a9be_0"
+      },
+      "not_source_approved": true
+    },
+    {
+      "PROVISIONAL_INITIAL_FROM_FIRST_2B_PHASE": {
+        "id": "ch-don-caos-7adf",
+        "pose": "p_de_pie_base",
+        "source_action": "segmento_01_ch-don-caos-7adf_0"
+      },
+      "not_source_approved": true
+    }
+  ],
+  "response_sha256": "b797c6cfa7573827d26abd5ec46b126d01920d7422be7147d891d7ca78219cd4",
+  "producer": "motor/investigar_2b.py",
+  "physics_validated": false
+}

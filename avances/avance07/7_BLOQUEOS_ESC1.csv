@@ -1,0 +1,8 @@
+﻿codigo,campo,modulo,mensaje
+JSON_TRUNCADO,motion/respuesta_2b.json,2B/Argon,JSON truncado: recuperar respuesta íntegra
+CONTACTOS_DATOS_FALTANTES,motion/contacts,01/2B + Star,Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía
+REGLAS_DATOS_FALTANTES,rules/source_parameters,biblioteca de reglas vigentes + 4a2/manifiesto,"No están en la fuente estos parámetros: allowed_collision_pairs, bone_length_error_m, colliders, penetration_tolerance_m, reject_surface_intersections, root_accel_max_m_s2, root_speed_max_m_s"
+PERFIL_ANATOMICO_DATOS,entities/ch-piquito-030a/anatomy_profile,ADN Maestro 03/04 + 01/Star puntos,Falta margen físico vigente
+BIBLIOTECA_SIN_VALIDAR,motion/semantic_index/approval,2B/Argon + biblioteca de movimientos,"Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu"
+PROVISIONAL,2B,2B/Argon,"Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada"
+DATO_FALTANTE,motion/status,2B/Argon,Programa completo no acreditado

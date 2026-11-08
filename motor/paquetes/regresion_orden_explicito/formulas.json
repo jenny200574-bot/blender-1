@@ -1,0 +1,2948 @@
+{
+  "brazalete_tecnologico": {
+    "nombre": "brazalete_tecnologico",
+    "tipo": "objeto",
+    "fuente_adn": "Aro rigido cerrado de una pieza, sin broches ni bisagras; anillo circular grueso tubular achatado, bordes biselados suaves. Chasis: aleacion gris plomo oscuro / azul pizarra apagado, mate satinado. Emision: cian / azul electrico neon con bloom suave. Grabados exteriores: rombo doble concentrico al centro; a cada lado dos lineas paralelas de circuito.",
+    "tamano_m_por_defecto": [
+      0.09,
+      0.09,
+      0.035
+    ],
+    "medidas_adn": {
+      "ancho_m": [
+        0.07,
+        0.12
+      ],
+      "fondo_m": [
+        0.07,
+        0.12
+      ],
+      "alto_m": [
+        0.02,
+        0.05
+      ]
+    },
+    "materiales": {
+      "chasis": {
+        "base": [
+          0.12,
+          0.14,
+          0.18
+        ],
+        "rough": 0.38,
+        "metal": 0.85,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "organico",
+          "fuerza": 0.15,
+          "escala": 2.0
+        }
+      },
+      "interior": {
+        "base": [
+          0.05,
+          0.06,
+          0.08
+        ],
+        "rough": 0.6,
+        "metal": 0.4,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "organico",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      },
+      "circuito_cian": {
+        "base": [
+          0.1,
+          0.92,
+          1.0
+        ],
+        "rough": 0.2,
+        "metal": 0.0,
+        "emit": [
+          0.1,
+          0.92,
+          1.0
+        ],
+        "emit_strength": 18.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      }
+    },
+    "piezas": [
+      {
+        "tipo": "toro",
+        "id": "aro",
+        "pos": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "dim": [
+          0.96,
+          0.96,
+          0.85
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 24,
+        "material": "chasis",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "cilindro",
+        "id": "revestimiento_interno",
+        "pos": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "dim": [
+          0.76,
+          0.76,
+          0.8
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 20,
+        "material": "interior",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "toro",
+        "id": "linea_cian",
+        "pos": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "dim": [
+          1.0,
+          1.0,
+          0.18
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 24,
+        "material": "circuito_cian",
+        "repetir": {
+          "patron": "pila_z",
+          "n": 2,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.28,
+          "centrado": true,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "prisma",
+        "id": "rombo_central",
+        "pos": [
+          0.0,
+          -0.49,
+          0.22
+        ],
+        "dim": [
+          0.22,
+          0.06,
+          0.56
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          45.0,
+          0.0
+        ],
+        "verts": 4,
+        "material": "circuito_cian",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "glifos",
+        "pos": [
+          0.0,
+          0.0,
+          0.35
+        ],
+        "dim": [
+          0.06,
+          0.06,
+          0.3
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "circuito_cian",
+        "repetir": {
+          "patron": "radial",
+          "n": 8,
+          "paso_m": 0.0,
+          "f": 0.49,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 22.5,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      }
+    ],
+    "bisagras": [],
+    "luces": [
+      {
+        "tipo": "point",
+        "pos": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "energy": 8.0,
+        "color": [
+          0.1,
+          0.9,
+          1.0
+        ],
+        "size": 0.05
+      }
+    ],
+    "mundo": {
+      "color_cenit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_horizonte": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fuerza": 0.0,
+      "estrellas_densidad": 0.0,
+      "estrellas_brillo": 0.0,
+      "estrellas_escala": 0.0
+    },
+    "puntos_requeridos": [
+      "brazalete.centro"
+    ],
+    "requisitos_adn": [
+      {
+        "tipo": "pieza",
+        "id": "aro",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Aro rigido cerrado de una pieza, sin broches ni bisagras; anillo circular grueso tubular achatado"
+      },
+      {
+        "tipo": "pieza",
+        "id": "rombo_central",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Grabados exteriores: rombo doble concentrico al centro; a cada lado dos lineas paralelas de circuito"
+      },
+      {
+        "tipo": "material_metal",
+        "id": "",
+        "material": "chasis",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Chasis: aleacion gris plomo oscuro / azul pizarra apagado, mate satinado"
+      },
+      {
+        "tipo": "emision",
+        "id": "",
+        "material": "circuito_cian",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Emision: cian / azul electrico neon con bloom suave"
+      },
+      {
+        "tipo": "luz",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Activo: luz cian intensa constante, rebote turquesa sobre el aro y la muneca/mano"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "brazalete.centro",
+        "cita": "brazalete.centro"
+      }
+    ],
+    "esquema": "formula_puntos.v2",
+    "puntos_nombrados": {
+      "brazalete.centro": [
+        0.0,
+        0.0,
+        0.5
+      ]
+    },
+    "meta": {
+      "origen": "ia (Argon gemini-4-argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "llamada": "2a-obj-r0",
+      "validado": true
+    }
+  },
+  "skyline_neon": {
+    "nombre": "skyline_neon",
+    "tipo": "objeto",
+    "fuente_adn": "La silueta de la ciudad está representada por un degradado horizontal de resplandores y formas rectangulares difusas en tono azul cian brillante y turquesa eléctrico justo detrás del muro, simulando el resplandor nocturno de edificios lejanos.",
+    "tamano_m_por_defecto": [
+      28.0,
+      2.5,
+      12.0
+    ],
+    "medidas_adn": {
+      "ancho_m": [
+        16.0,
+        45.0
+      ],
+      "fondo_m": [
+        1.0,
+        6.0
+      ],
+      "alto_m": [
+        6.0,
+        20.0
+      ]
+    },
+    "materiales": {
+      "edificio": {
+        "base": [
+          0.03,
+          0.05,
+          0.09
+        ],
+        "rough": 0.85,
+        "metal": 0.1,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      },
+      "neon_cian": {
+        "base": [
+          0.1,
+          0.85,
+          0.95
+        ],
+        "rough": 0.3,
+        "metal": 0.0,
+        "emit": [
+          0.1,
+          0.85,
+          1.0
+        ],
+        "emit_strength": 6.5,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      },
+      "halo_turquesa": {
+        "base": [
+          0.05,
+          0.7,
+          0.85
+        ],
+        "rough": 0.5,
+        "metal": 0.0,
+        "emit": [
+          0.05,
+          0.75,
+          0.9
+        ],
+        "emit_strength": 3.0,
+        "alpha": 0.35,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      }
+    },
+    "piezas": [
+      {
+        "tipo": "caja",
+        "id": "bloque",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dim": [
+          0.1,
+          0.8,
+          1.0
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "edificio",
+        "repetir": {
+          "patron": "fila_x",
+          "n": 8,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [
+            0.65,
+            0.85,
+            0.55,
+            1.0,
+            0.75,
+            0.9,
+            0.6,
+            0.8
+          ],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": true,
+          "semilla": 1
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "ventanas",
+        "pos": [
+          0.0,
+          -0.45,
+          0.0
+        ],
+        "dim": [
+          0.09,
+          0.04,
+          0.06
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "neon_cian",
+        "repetir": {
+          "patron": "fila_x",
+          "n": 8,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [
+            0.65,
+            0.85,
+            0.55,
+            1.0,
+            0.75,
+            0.9,
+            0.6,
+            0.8
+          ],
+          "en_tope": true,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": true,
+          "semilla": 2
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "resplandor_horizonte",
+        "pos": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "dim": [
+          1.0,
+          0.1,
+          0.35
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "halo_turquesa",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      }
+    ],
+    "bisagras": [],
+    "luces": [],
+    "mundo": {
+      "color_cenit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_horizonte": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fuerza": 0.0,
+      "estrellas_densidad": 0.0,
+      "estrellas_brillo": 0.0,
+      "estrellas_escala": 0.0
+    },
+    "puntos_requeridos": [
+      "skyline.base"
+    ],
+    "requisitos_adn": [
+      {
+        "tipo": "pieza",
+        "id": "bloque",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "formas rectangulares difusas en tono azul cian brillante y turquesa eléctrico justo detrás del muro"
+      },
+      {
+        "tipo": "emision",
+        "id": "",
+        "material": "neon_cian",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "resplandores y formas rectangulares difusas en tono azul cian brillante y turquesa eléctrico"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "skyline.base",
+        "cita": "skyline.base"
+      }
+    ],
+    "esquema": "formula_puntos.v2",
+    "puntos_nombrados": {
+      "skyline.base": [
+        0.0,
+        -0.5,
+        0.0
+      ]
+    },
+    "meta": {
+      "origen": "ia (Argon gemini-4-argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "llamada": "2a-esc-r2",
+      "validado": true
+    }
+  },
+  "antena_mastil": {
+    "nombre": "antena_mastil",
+    "esquema": "formula_declarativa.v1",
+    "version": "nueva/pendiente_revision",
+    "autor": "Ako (demostración de lo que debe producir la IA)",
+    "fuente_adn": "(no está en el ADN de azotea; fórmula disponible para otros ADN)",
+    "tamano_m_por_defecto": [
+      0.8,
+      0.8,
+      5.0
+    ],
+    "materiales": {
+      "metal": {
+        "base": [
+          0.4,
+          0.42,
+          0.45
+        ],
+        "rough": 0.4,
+        "metal": 0.9
+      },
+      "baliza": {
+        "base": [
+          0.1,
+          0.9,
+          1
+        ],
+        "emit": [
+          0.1,
+          0.9,
+          1
+        ],
+        "emit_strength": 20
+      }
+    },
+    "piezas": [
+      {
+        "tipo": "cilindro",
+        "id": "mastil",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "dim": [
+          0.08,
+          0.08,
+          1
+        ],
+        "material": "metal"
+      },
+      {
+        "tipo": "caja",
+        "id": "travesano",
+        "pos": [
+          0,
+          0,
+          0.5
+        ],
+        "dim": [
+          1,
+          0.03,
+          0.01
+        ],
+        "material": "metal",
+        "repetir": {
+          "patron": "pila_z",
+          "n": 4,
+          "paso_f": 0.12
+        }
+      },
+      {
+        "tipo": "esfera",
+        "id": "baliza",
+        "pos": [
+          0,
+          0,
+          1.0
+        ],
+        "dim": [
+          0.1,
+          0.1,
+          0.02
+        ],
+        "material": "baliza"
+      }
+    ],
+    "puntos_nombrados": {
+      "antena.punta": [
+        0,
+        0,
+        1
+      ]
+    },
+    "luces": [],
+    "nota": ""
+  },
+  "murete_cornisa": {
+    "nombre": "murete_cornisa",
+    "tipo": "objeto",
+    "fuente_adn": "Un muro bajo de concreto que delimita la azotea y cruza horizontalmente la escena. Presenta un borde o cornisa superior plana, de tono más claro y sutilmente metálico. La superficie de concreto gris muestra manchas verticales oscuras causadas por escurrimiento de agua, humedad.",
+    "tamano_m_por_defecto": [
+      12.0,
+      0.25,
+      1.05
+    ],
+    "medidas_adn": {
+      "ancho_m": [
+        2.0,
+        20.0
+      ],
+      "fondo_m": [
+        0.15,
+        0.5
+      ],
+      "alto_m": [
+        0.8,
+        1.3
+      ]
+    },
+    "materiales": {
+      "concreto": {
+        "base": [
+          0.22,
+          0.23,
+          0.25
+        ],
+        "rough": 0.9,
+        "metal": 0.0,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.6,
+          "escala": 3.0
+        }
+      },
+      "cornisa": {
+        "base": [
+          0.45,
+          0.47,
+          0.5
+        ],
+        "rough": 0.45,
+        "metal": 0.65,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.2,
+          "escala": 2.0
+        }
+      }
+    },
+    "piezas": [
+      {
+        "tipo": "caja",
+        "id": "muro",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dim": [
+          1.0,
+          1.0,
+          0.94
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "concreto",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "cornisa",
+        "pos": [
+          0.0,
+          0.0,
+          0.94
+        ],
+        "dim": [
+          1.0,
+          1.25,
+          0.06
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "cornisa",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      }
+    ],
+    "bisagras": [],
+    "luces": [],
+    "mundo": {
+      "color_cenit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_horizonte": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fuerza": 0.0,
+      "estrellas_densidad": 0.0,
+      "estrellas_brillo": 0.0,
+      "estrellas_escala": 0.0
+    },
+    "puntos_requeridos": [
+      "murete.borde",
+      "murete.esquina"
+    ],
+    "requisitos_adn": [
+      {
+        "tipo": "pieza",
+        "id": "muro",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Un muro bajo de concreto que delimita la azotea"
+      },
+      {
+        "tipo": "pieza",
+        "id": "cornisa",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Presenta un borde o cornisa superior plana, de tono más claro y sutilmente metálico"
+      },
+      {
+        "tipo": "material_metal",
+        "id": "",
+        "material": "cornisa",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "borde o cornisa superior plana, de tono más claro y sutilmente metálico"
+      },
+      {
+        "tipo": "desgaste",
+        "id": "",
+        "material": "concreto",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "La superficie de concreto gris muestra manchas verticales oscuras causadas por escurrimiento de agua, humedad"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "murete.borde",
+        "cita": "murete.borde"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "murete.esquina",
+        "cita": "murete.esquina"
+      }
+    ],
+    "esquema": "formula_puntos.v2",
+    "puntos_nombrados": {
+      "murete.borde": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "murete.esquina": [
+        -0.5,
+        0.0,
+        1.0
+      ]
+    },
+    "meta": {
+      "origen": "ia (Argon gemini-4-argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "llamada": "2a-esc-r2",
+      "validado": true
+    }
+  },
+  "lanza_doble_punta": {
+    "nombre": "lanza_doble_punta",
+    "tipo": "objeto",
+    "fuente_adn": "Lanza magica/tecnologica SIMETRICA de doble punta; se estrecha desde un abultamiento central hacia dos puntas muy afiladas; todo el cuerpo son hebras trenzadas helicoidales. Largo ~1.80-2.00 m (~1.90 m). Nucleo central: esfera / vacio negro absoluto, mate, en el centro exacto. Activa: aura violeta/magenta/lavanda, anillos y orbitas concentricos translucidos lavanda/cian claro.",
+    "tamano_m_por_defecto": [
+      0.16,
+      0.16,
+      1.9
+    ],
+    "medidas_adn": {
+      "ancho_m": [
+        0.1,
+        0.28
+      ],
+      "fondo_m": [
+        0.1,
+        0.28
+      ],
+      "alto_m": [
+        1.8,
+        2.0
+      ]
+    },
+    "materiales": {
+      "nucleo": {
+        "base": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rough": 1.0,
+        "metal": 0.0,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "organico",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      },
+      "hebra": {
+        "base": [
+          0.24,
+          0.06,
+          0.48
+        ],
+        "rough": 0.28,
+        "metal": 0.65,
+        "emit": [
+          0.55,
+          0.18,
+          1.0
+        ],
+        "emit_strength": 4.5,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.2,
+          "escala": 4.0
+        }
+      },
+      "punta": {
+        "base": [
+          0.55,
+          0.22,
+          0.95
+        ],
+        "rough": 0.2,
+        "metal": 0.5,
+        "emit": [
+          0.85,
+          0.35,
+          1.0
+        ],
+        "emit_strength": 18.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      },
+      "anillo": {
+        "base": [
+          0.75,
+          0.68,
+          1.0
+        ],
+        "rough": 0.2,
+        "metal": 0.0,
+        "emit": [
+          0.75,
+          0.65,
+          1.0
+        ],
+        "emit_strength": 6.5,
+        "alpha": 0.5,
+        "desgaste": {
+          "tipo": "organico",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      }
+    },
+    "piezas": [
+      {
+        "tipo": "esfera",
+        "id": "nucleo",
+        "pos": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "dim": [
+          0.55,
+          0.55,
+          0.05
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 16,
+        "material": "nucleo",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "cono",
+        "id": "cuerpo_sup",
+        "pos": [
+          0.0,
+          0.0,
+          0.52
+        ],
+        "dim": [
+          0.38,
+          0.38,
+          0.38
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 12,
+        "material": "hebra",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "cono",
+        "id": "cuerpo_inf",
+        "pos": [
+          0.0,
+          0.0,
+          0.48
+        ],
+        "dim": [
+          0.38,
+          0.38,
+          0.38
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          180.0,
+          0.0,
+          0.0
+        ],
+        "verts": 12,
+        "material": "hebra",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "cilindro",
+        "id": "hebras_espiral",
+        "pos": [
+          0.0,
+          0.0,
+          0.12
+        ],
+        "dim": [
+          0.1,
+          0.1,
+          0.76
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          2.0,
+          0.0,
+          0.0
+        ],
+        "verts": 8,
+        "material": "hebra",
+        "repetir": {
+          "patron": "radial",
+          "n": 4,
+          "paso_m": 0.0,
+          "f": 0.14,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "cono",
+        "id": "punta_sup",
+        "pos": [
+          0.0,
+          0.0,
+          0.9
+        ],
+        "dim": [
+          0.2,
+          0.2,
+          0.1
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 12,
+        "material": "punta",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "cono",
+        "id": "punta_inf",
+        "pos": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "dim": [
+          0.2,
+          0.2,
+          0.1
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          180.0,
+          0.0,
+          0.0
+        ],
+        "verts": 12,
+        "material": "punta",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "toro",
+        "id": "anillos",
+        "pos": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "dim": [
+          0.45,
+          0.45,
+          0.006
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          8.0,
+          0.0,
+          0.0
+        ],
+        "verts": 24,
+        "material": "anillo",
+        "repetir": {
+          "patron": "pila_z",
+          "n": 3,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.14,
+          "centrado": true,
+          "semilla": 0
+        }
+      }
+    ],
+    "bisagras": [],
+    "luces": [
+      {
+        "tipo": "point",
+        "pos": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "energy": 55.0,
+        "color": [
+          0.7,
+          0.3,
+          1.0
+        ],
+        "size": 0.15
+      }
+    ],
+    "mundo": {
+      "color_cenit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_horizonte": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fuerza": 0.0,
+      "estrellas_densidad": 0.0,
+      "estrellas_brillo": 0.0,
+      "estrellas_escala": 0.0
+    },
+    "puntos_requeridos": [
+      "lanza.agarre",
+      "lanza.punta",
+      "lanza.punta_inf"
+    ],
+    "requisitos_adn": [
+      {
+        "tipo": "pieza",
+        "id": "nucleo",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Nucleo central: esfera / vacio negro absoluto, mate, en el centro exacto"
+      },
+      {
+        "tipo": "pieza",
+        "id": "punta_sup",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "se estrecha desde un abultamiento central hacia dos puntas muy afiladas"
+      },
+      {
+        "tipo": "pieza",
+        "id": "anillos",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "anillos y orbitas concentricos translucidos lavanda/cian claro"
+      },
+      {
+        "tipo": "material_metal",
+        "id": "",
+        "material": "hebra",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Hebras violeta oscuro, purpura y azul electrico/marino, satinadas (metalico/cristalino/biologico)"
+      },
+      {
+        "tipo": "emision",
+        "id": "",
+        "material": "punta",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Activa (por defecto): aura violeta/magenta/lavanda, sobre todo en las puntas"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "lanza.agarre",
+        "cita": "lanza.agarre"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "lanza.punta",
+        "cita": "lanza.punta"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "lanza.punta_inf",
+        "cita": "lanza.punta_inf"
+      }
+    ],
+    "esquema": "formula_puntos.v2",
+    "puntos_nombrados": {
+      "lanza.agarre": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "lanza.punta": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lanza.punta_inf": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "meta": {
+      "origen": "ia (Argon gemini-4-argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "llamada": "2a-obj-r1",
+      "validado": true
+    }
+  },
+  "piso_losas_juntas": {
+    "nombre": "piso_losas_juntas",
+    "tipo": "objeto",
+    "fuente_adn": "Pavimento de grandes losas o baldosas cuadradas/rectangulares de concreto de tono gris oscuro y desgastado. Separadas por líneas de ranuras profundas, oscuras y continuas en una cuadrícula ortogonal. Textura porosa con manchas orgánicas irregulares y oscuras de suciedad, humedad acumulada.",
+    "tamano_m_por_defecto": [
+      16.0,
+      16.0,
+      0.02
+    ],
+    "medidas_adn": {
+      "ancho_m": [
+        10.0,
+        24.0
+      ],
+      "fondo_m": [
+        10.0,
+        24.0
+      ],
+      "alto_m": [
+        0.01,
+        0.1
+      ]
+    },
+    "materiales": {
+      "concreto": {
+        "base": [
+          0.15,
+          0.16,
+          0.18
+        ],
+        "rough": 0.88,
+        "metal": 0.0,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "organico",
+          "fuerza": 0.65,
+          "escala": 2.5
+        }
+      },
+      "junta": {
+        "base": [
+          0.03,
+          0.03,
+          0.035
+        ],
+        "rough": 0.95,
+        "metal": 0.0,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "organico",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      },
+      "mancha_humedad": {
+        "base": [
+          0.06,
+          0.07,
+          0.08
+        ],
+        "rough": 0.7,
+        "metal": 0.0,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "organico",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      }
+    },
+    "piezas": [
+      {
+        "tipo": "caja",
+        "id": "losa",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dim": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "concreto",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "junta_x",
+        "pos": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "dim": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dim_m": [
+          0.0,
+          0.025,
+          0.005
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "junta",
+        "repetir": {
+          "patron": "rejilla_y",
+          "n": 1,
+          "paso_m": 1.6,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": true,
+          "semilla": 11
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "junta_y",
+        "pos": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "dim": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "dim_m": [
+          0.025,
+          0.0,
+          0.005
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "junta",
+        "repetir": {
+          "patron": "rejilla_x",
+          "n": 1,
+          "paso_m": 1.6,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": true,
+          "semilla": 11
+        }
+      },
+      {
+        "tipo": "cilindro",
+        "id": "manchas",
+        "pos": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "dim": [
+          0.12,
+          0.09,
+          0.0
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.002
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 16,
+        "material": "mancha_humedad",
+        "repetir": {
+          "patron": "dispersion",
+          "n": 18,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.42,
+            0.42,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 42
+        }
+      }
+    ],
+    "bisagras": [],
+    "luces": [],
+    "mundo": {
+      "color_cenit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_horizonte": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fuerza": 0.0,
+      "estrellas_densidad": 0.0,
+      "estrellas_brillo": 0.0,
+      "estrellas_escala": 0.0
+    },
+    "puntos_requeridos": [
+      "piso.centro"
+    ],
+    "requisitos_adn": [
+      {
+        "tipo": "pieza",
+        "id": "losa",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Pavimento de grandes losas o baldosas cuadradas/rectangulares de concreto de tono gris oscuro"
+      },
+      {
+        "tipo": "pieza",
+        "id": "junta_x",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Separadas por líneas de ranuras profundas, oscuras y continuas en una cuadrícula ortogonal"
+      },
+      {
+        "tipo": "desgaste",
+        "id": "",
+        "material": "concreto",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Textura porosa con manchas orgánicas irregulares y oscuras de suciedad, humedad acumulada, desgaste y pisadas"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "piso.centro",
+        "cita": "piso.centro"
+      }
+    ],
+    "esquema": "formula_puntos.v2",
+    "puntos_nombrados": {
+      "piso.centro": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "piso.nivel": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "meta": {
+      "origen": "ia (Argon gemini-4-argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "llamada": "2a-esc-r2",
+      "validado": true
+    }
+  },
+  "tanque_agua_elevado": {
+    "nombre": "tanque_agua_elevado",
+    "tipo": "objeto",
+    "fuente_adn": "Estructura en el borde derecho: Se asoman los soportes verticales de una estructura de apariencia metálica (viga e inicio de plataforma o tanque elevado). Key Light (Luz Principal): Proviene de una fuente intensa de luz azulada/lunar fría en la parte superior derecha.",
+    "tamano_m_por_defecto": [
+      2.2,
+      2.2,
+      4.6
+    ],
+    "medidas_adn": {
+      "ancho_m": [
+        1.5,
+        3.5
+      ],
+      "fondo_m": [
+        1.5,
+        3.5
+      ],
+      "alto_m": [
+        3.5,
+        6.0
+      ]
+    },
+    "materiales": {
+      "metal": {
+        "base": [
+          0.25,
+          0.28,
+          0.32
+        ],
+        "rough": 0.45,
+        "metal": 0.85,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.3,
+          "escala": 2.0
+        }
+      },
+      "tanque": {
+        "base": [
+          0.2,
+          0.24,
+          0.28
+        ],
+        "rough": 0.55,
+        "metal": 0.7,
+        "emit": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "emit_strength": 0.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.25,
+          "escala": 2.0
+        }
+      }
+    },
+    "piezas": [
+      {
+        "tipo": "cilindro",
+        "id": "pata",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dim": [
+          0.06,
+          0.06,
+          0.55
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 16,
+        "material": "metal",
+        "repetir": {
+          "patron": "esquinas",
+          "n": 4,
+          "paso_m": 0.0,
+          "f": 0.42,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 1
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "plataforma",
+        "pos": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "dim": [
+          1.0,
+          1.0,
+          0.04
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "metal",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "cilindro",
+        "id": "cuerpo",
+        "pos": [
+          0.0,
+          0.0,
+          0.59
+        ],
+        "dim": [
+          0.85,
+          0.85,
+          0.35
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 24,
+        "material": "tanque",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "cono",
+        "id": "tapa",
+        "pos": [
+          0.0,
+          0.0,
+          0.94
+        ],
+        "dim": [
+          0.88,
+          0.88,
+          0.06
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 24,
+        "material": "tanque",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      }
+    ],
+    "bisagras": [],
+    "luces": [
+      {
+        "tipo": "area",
+        "pos": [
+          0.8,
+          -0.5,
+          1.8
+        ],
+        "energy": 1200.0,
+        "color": [
+          0.65,
+          0.82,
+          1.0
+        ],
+        "size": 3.5
+      }
+    ],
+    "mundo": {
+      "color_cenit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_horizonte": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fuerza": 0.0,
+      "estrellas_densidad": 0.0,
+      "estrellas_brillo": 0.0,
+      "estrellas_escala": 0.0
+    },
+    "puntos_requeridos": [
+      "tanque.plataforma"
+    ],
+    "requisitos_adn": [
+      {
+        "tipo": "pieza",
+        "id": "plataforma",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "soportes verticales de una estructura de apariencia metálica (viga e inicio de plataforma o tanque elevado)"
+      },
+      {
+        "tipo": "material_metal",
+        "id": "",
+        "material": "metal",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "soportes verticales de una estructura de apariencia metálica"
+      },
+      {
+        "tipo": "luz",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Key Light (Luz Principal): Proviene de una fuente intensa de luz azulada/lunar fría en la parte superior derecha"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "tanque.plataforma",
+        "cita": "tanque.plataforma"
+      }
+    ],
+    "esquema": "formula_puntos.v2",
+    "puntos_nombrados": {
+      "tanque.plataforma": [
+        0.0,
+        0.0,
+        0.55
+      ]
+    },
+    "meta": {
+      "origen": "ia (Argon gemini-4-argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "llamada": "2a-esc-r2",
+      "validado": true
+    }
+  },
+  "prision_octogonal": {
+    "nombre": "prision_octogonal",
+    "tipo": "objeto",
+    "fuente_adn": "Celda de contencion electromagnetica traslucida. PRISMA OCTOGONAL VERTICAL: base octogonal en el suelo, techo octogonal plano, 8 columnas/aristas verticales y 8 paneles de fuerza. Escala: ~2.3 m de alto x ~1.6 m de diametro. Marcos: energia condensada violeta/purpura/magenta brillante. 8 paneles semitraslucidos magenta/violeta con fracturas de cristal y rayos blanco-purpura.",
+    "tamano_m_por_defecto": [
+      1.6,
+      1.6,
+      2.3
+    ],
+    "medidas_adn": {
+      "ancho_m": [
+        1.4,
+        1.85
+      ],
+      "fondo_m": [
+        1.4,
+        1.85
+      ],
+      "alto_m": [
+        2.0,
+        2.6
+      ]
+    },
+    "materiales": {
+      "marco": {
+        "base": [
+          0.35,
+          0.06,
+          0.48
+        ],
+        "rough": 0.3,
+        "metal": 0.65,
+        "emit": [
+          0.8,
+          0.18,
+          1.0
+        ],
+        "emit_strength": 3.5,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      },
+      "arista": {
+        "base": [
+          0.12,
+          0.02,
+          0.18
+        ],
+        "rough": 0.35,
+        "metal": 0.75,
+        "emit": [
+          0.5,
+          0.1,
+          0.75
+        ],
+        "emit_strength": 1.2,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      },
+      "panel": {
+        "base": [
+          0.75,
+          0.2,
+          0.9
+        ],
+        "rough": 0.15,
+        "metal": 0.0,
+        "emit": [
+          0.65,
+          0.12,
+          0.95
+        ],
+        "emit_strength": 0.4,
+        "alpha": 0.2,
+        "desgaste": {
+          "tipo": "organico",
+          "fuerza": 0.25,
+          "escala": 3.0
+        }
+      },
+      "grieta": {
+        "base": [
+          1.0,
+          0.88,
+          1.0
+        ],
+        "rough": 0.1,
+        "metal": 0.0,
+        "emit": [
+          1.0,
+          0.82,
+          1.0
+        ],
+        "emit_strength": 12.0,
+        "alpha": 1.0,
+        "desgaste": {
+          "tipo": "vertical",
+          "fuerza": 0.0,
+          "escala": 1.0
+        }
+      }
+    },
+    "piezas": [
+      {
+        "tipo": "prisma",
+        "id": "base",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dim": [
+          0.98,
+          0.98,
+          0.04
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          22.5
+        ],
+        "verts": 8,
+        "material": "marco",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "prisma",
+        "id": "tope",
+        "pos": [
+          0.0,
+          0.0,
+          0.96
+        ],
+        "dim": [
+          0.98,
+          0.98,
+          0.04
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          22.5
+        ],
+        "verts": 8,
+        "material": "marco",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "columna",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dim": [
+          0.055,
+          0.055,
+          1.0
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "arista",
+        "repetir": {
+          "patron": "radial",
+          "n": 8,
+          "paso_m": 0.0,
+          "f": 0.46,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "filo_columna",
+        "pos": [
+          0.0,
+          0.0,
+          0.02
+        ],
+        "dim": [
+          0.022,
+          0.022,
+          0.96
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "marco",
+        "repetir": {
+          "patron": "radial",
+          "n": 8,
+          "paso_m": 0.0,
+          "f": 0.475,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "prisma",
+        "id": "campo",
+        "pos": [
+          0.0,
+          0.0,
+          0.04
+        ],
+        "dim": [
+          0.94,
+          0.94,
+          0.92
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          22.5
+        ],
+        "verts": 8,
+        "material": "panel",
+        "repetir": {
+          "patron": "ninguno",
+          "n": 1,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "caja",
+        "id": "grieta",
+        "pos": [
+          0.0,
+          0.0,
+          0.32
+        ],
+        "dim": [
+          0.01,
+          0.01,
+          0.34
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          8.0,
+          0.0
+        ],
+        "verts": 0,
+        "material": "grieta",
+        "repetir": {
+          "patron": "radial",
+          "n": 8,
+          "paso_m": 0.0,
+          "f": 0.42,
+          "f_xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 22.5,
+          "paso_f": 0.0,
+          "centrado": false,
+          "semilla": 0
+        }
+      },
+      {
+        "tipo": "esfera",
+        "id": "particulas",
+        "pos": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "dim": [
+          0.02,
+          0.02,
+          0.02
+        ],
+        "dim_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "verts": 8,
+        "material": "grieta",
+        "repetir": {
+          "patron": "dispersion",
+          "n": 14,
+          "paso_m": 0.0,
+          "f": 0.0,
+          "f_xyz": [
+            0.38,
+            0.38,
+            0.4
+          ],
+          "alturas_f": [],
+          "en_tope": false,
+          "desfase_deg": 0.0,
+          "paso_f": 0.0,
+          "centrado": true,
+          "semilla": 7
+        }
+      }
+    ],
+    "bisagras": [],
+    "luces": [
+      {
+        "tipo": "point",
+        "pos": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "energy": 180.0,
+        "color": [
+          0.75,
+          0.2,
+          1.0
+        ],
+        "size": 0.35
+      }
+    ],
+    "mundo": {
+      "color_cenit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_horizonte": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fuerza": 0.0,
+      "estrellas_densidad": 0.0,
+      "estrellas_brillo": 0.0,
+      "estrellas_escala": 0.0
+    },
+    "puntos_requeridos": [
+      "prision.centro",
+      "prision.tope"
+    ],
+    "requisitos_adn": [
+      {
+        "tipo": "lados",
+        "id": "",
+        "material": "",
+        "pieza": "campo",
+        "n": 8,
+        "nombre": "",
+        "cita": "PRISMA OCTOGONAL VERTICAL: base octogonal en el suelo, techo octogonal plano, 8 columnas/aristas verticales y 8 paneles de fuerza"
+      },
+      {
+        "tipo": "pieza",
+        "id": "columna",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "8 columnas/aristas verticales y 8 paneles de fuerza"
+      },
+      {
+        "tipo": "emision",
+        "id": "",
+        "material": "marco",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "Marcos (8 columnas + anillos superior e inferior): energia condensada violeta/purpura/magenta brillante"
+      },
+      {
+        "tipo": "emision",
+        "id": "",
+        "material": "grieta",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "8 paneles semitraslucidos magenta/violeta con fracturas de cristal y rayos blanco-purpura"
+      },
+      {
+        "tipo": "luz",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "",
+        "cita": "rebote de luz violeta/magenta sobre las baldosas"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "prision.centro",
+        "cita": "prision.centro"
+      },
+      {
+        "tipo": "punto",
+        "id": "",
+        "material": "",
+        "pieza": "",
+        "n": 0,
+        "nombre": "prision.tope",
+        "cita": "prision.tope"
+      }
+    ],
+    "esquema": "formula_puntos.v2",
+    "puntos_nombrados": {
+      "prision.centro": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "prision.tope": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "meta": {
+      "origen": "ia (Argon gemini-4-argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "llamada": "2a-obj-r1",
+      "validado": true
+    }
+  },
+  "aire_acondicionado": {
+    "nombre": "aire_acondicionado",
+    "esquema": "formula_declarativa.v1",
+    "version": "nueva/pendiente_revision",
+    "autor": "Ako (demostración de lo que debe producir la IA)",
+    "fuente_adn": "(no está en el ADN de azotea; fórmula disponible para otros ADN)",
+    "tamano_m_por_defecto": [
+      1.0,
+      0.7,
+      0.8
+    ],
+    "materiales": {
+      "carcasa": {
+        "base": [
+          0.55,
+          0.56,
+          0.55
+        ],
+        "rough": 0.6,
+        "metal": 0.3
+      },
+      "rejilla": {
+        "base": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "rough": 0.8
+      }
+    },
+    "piezas": [
+      {
+        "tipo": "caja",
+        "id": "carcasa",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "dim": [
+          1,
+          1,
+          1
+        ],
+        "material": "carcasa"
+      },
+      {
+        "tipo": "cilindro",
+        "id": "ventilador",
+        "pos": [
+          0,
+          0,
+          1.0
+        ],
+        "dim": [
+          0.6,
+          0.6,
+          0.02
+        ],
+        "material": "rejilla"
+      }
+    ],
+    "puntos_nombrados": {
+      "hvac.tope": [
+        0,
+        0,
+        1
+      ]
+    },
+    "luces": [],
+    "nota": ""
+  },
+  "cielo_nocturno_estrellado": {
+    "nombre": "cielo_nocturno_estrellado",
+    "tipo": "mundo",
+    "fuente_adn": "Cielo nocturno de tono azul cobalto profundo y oscuro, en degradado hacia un tono más claro cerca de la línea del muro. Está cubierto por multitud de estrellas pequeñas de brillo tenue e irregular.",
+    "tamano_m_por_defecto": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "materiales": {},
+    "piezas": [],
+    "requisitos_adn": [
+      {
+        "tipo": "emision",
+        "cita": "Cielo nocturno de tono azul cobalto profundo y oscuro, en degradado hacia un tono más claro cerca de la línea del muro. Está cubierto por multitud de estrellas pequeñas"
+      }
+    ],
+    "bisagras": [],
+    "luces": [],
+    "mundo": {
+      "color_cenit": [
+        0.015,
+        0.035,
+        0.11
+      ],
+      "color_horizonte": [
+        0.06,
+        0.16,
+        0.32
+      ],
+      "estrellas_brillo": 0.65,
+      "estrellas_densidad": 0.025,
+      "estrellas_escala": 120.0,
+      "fuerza": 0.85
+    },
+    "esquema": "formula_puntos.v2",
+    "puntos_nombrados": {},
+    "meta": {
+      "origen": "ia (Argon gemini-4-argon)",
+      "fecha": "2026-11-04",
+      "escena": "esc11",
+      "llamada": "2a-esc-r0",
+      "validado": true
+    }
+  }
+}

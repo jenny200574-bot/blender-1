@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"left_dy": {"type": "number"}, "left_dz": {"type": "number"}, "right_dy": {"type": "number"}, "right_dz": {"type": "number"}}, "required": ["left_dy", "left_dz", "right_dy", "right_dz"]}

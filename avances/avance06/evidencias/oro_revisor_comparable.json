@@ -1,0 +1,97 @@
+{
+  "naturalidad": {
+    "entidad_0": {
+      "equilibrio_cuadros_fuera": 1,
+      "equilibrio_cuadros_fuera_4cm_fijo": 1,
+      "equilibrio_max_fuera_m": 0.119,
+      "resbale_pie_max_cm_cuadro": 9.28,
+      "resbale_pie_medio_cm_cuadro": 0.117,
+      "saltitos_cuadros": 1,
+      "vel_subida_cadera_max_m_s": 1.0
+    },
+    "entidad_1": {
+      "equilibrio_cuadros_fuera": 1,
+      "equilibrio_cuadros_fuera_4cm_fijo": 1,
+      "equilibrio_max_fuera_m": 0.107,
+      "resbale_pie_max_cm_cuadro": 6.44,
+      "resbale_pie_medio_cm_cuadro": 0.049,
+      "saltitos_cuadros": 0,
+      "vel_subida_cadera_max_m_s": 0.21
+    },
+    "entidad_2": {
+      "equilibrio_cuadros_fuera": 0,
+      "equilibrio_cuadros_fuera_4cm_fijo": 0,
+      "equilibrio_max_fuera_m": 0.0,
+      "resbale_pie_max_cm_cuadro": 0,
+      "resbale_pie_medio_cm_cuadro": 0.0,
+      "saltitos_cuadros": 0,
+      "vel_subida_cadera_max_m_s": 0.02
+    }
+  },
+  "fisica": {
+    "entidad_0": {
+      "acel_com_max_m_s2": 35.16,
+      "cuadros_acel_excesiva": 12,
+      "limites_entrada": {
+        "masa_kg": 68.0,
+        "par_max_hombro_Nm": 55.0,
+        "aceleracion_max_com_m_s2": 20.0,
+        "vel_max_deg_s": 260.0,
+        "fuerza_rel": 0.85,
+        "par_max_cadera_Nm": 130.0,
+        "tipo_cuerpo": "Joven de 1.72 m, complexión media ligeramente robusta, no atlético y físicamente agotado.",
+        "como_se_mueve": "Movimientos pesados, trabajosos y con temblor muscular; necesita apoyarse en manos, cadera y rodillas para subir su centro de masa paso a paso, con desaceleraciones bruscas al cambiar de apoyo en el suelo.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:45:14-05:00",
+        "escena": "esc11",
+        "validado": false,
+        "_recortado_por_regla_bloqueada": {
+          "aceleracion_max_com_m_s2": 36.0
+        }
+      }
+    },
+    "entidad_1": {
+      "acel_com_max_m_s2": 26.77,
+      "cuadros_acel_excesiva": 5,
+      "limites_entrada": {
+        "masa_kg": 52.0,
+        "par_max_hombro_Nm": 38.0,
+        "aceleracion_max_com_m_s2": 20.0,
+        "vel_max_deg_s": 240.0,
+        "fuerza_rel": 0.7,
+        "par_max_cadera_Nm": 95.0,
+        "tipo_cuerpo": "Joven delgada y esbelta de 1.65 m, extremidades finas y centro de masa ligero.",
+        "como_se_mueve": "Movimientos suaves y contenidos; al dejarse caer de rodillas desciende por gravedad y frena al contactar las rodillas con el suelo.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:45:14-05:00",
+        "escena": "esc11",
+        "validado": false,
+        "_recortado_por_regla_bloqueada": {
+          "aceleracion_max_com_m_s2": 28.0
+        }
+      }
+    },
+    "entidad_2": {
+      "acel_com_max_m_s2": 2.58,
+      "cuadros_acel_excesiva": 0,
+      "limites_entrada": {
+        "masa_kg": 88.0,
+        "par_max_hombro_Nm": 110.0,
+        "aceleracion_max_com_m_s2": 12.0,
+        "vel_max_deg_s": 320.0,
+        "fuerza_rel": 1.45,
+        "par_max_cadera_Nm": 220.0,
+        "tipo_cuerpo": "Humanoide atlético de 1.90 m, hombros anchos, cintura estrecha, extremidades largas y musculatura densa con armadura.",
+        "como_se_mueve": "Postura marcial, firme y precisa; gran control del núcleo y hombros capaces de cargar y sostener una lanza pesada a la altura del hombro/cuello sin oscilación.",
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:45:14-05:00",
+        "escena": "esc11",
+        "validado": false
+      }
+    }
+  },
+  "huesos_max_pct": 0.000762715230067479,
+  "vel_ang_max_deg_s": 243.0,
+  "no_aprobado": true,
+  "pendientes": []
+}

@@ -1,0 +1,7 @@
+{
+  "presupuesto_total_usd": 3,
+  "argon_automatico": false,
+  "max_workers": 8,
+  "tokens_salida_estimados_por_receta": 2000,
+  "tokens_margen_grupo": 3000
+}

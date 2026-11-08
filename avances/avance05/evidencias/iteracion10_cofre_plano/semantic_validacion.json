@@ -1,0 +1,186 @@
+{
+  "passed": false,
+  "errors": [
+    "Part ID must have global object namespace: cuerpo_base",
+    "Part ID must have global object namespace: tapa_abovedada",
+    "Part ID must have global object namespace: candado_color",
+    "Part ID must have global object namespace: candado_numero",
+    "Part ID must have global object namespace: candado_letra",
+    "Generated model not centered in declared local frame: [0.0, 0.24, 0.009999999999999995]",
+    "Geometría no coincide con medidas ADN: [0.65, 0.48, 0.43999999999999995]"
+  ],
+  "metrics": null,
+  "recipe": {
+    "id": "obj-cofre-dorado",
+    "source": "Argon_GENERATED:gdc-cofre-abecedario",
+    "parts": [
+      {
+        "id": "cuerpo_base",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 32,
+        "tip_ratio": 1.0,
+        "position_m": [
+          0.0,
+          0.15,
+          0.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.65,
+          0.3,
+          0.42
+        ],
+        "material": {
+          "rgba": [
+            0.85,
+            0.65,
+            0.15,
+            1.0
+          ],
+          "metallic": 0.9,
+          "roughness": 0.3
+        }
+      },
+      {
+        "id": "tapa_abovedada",
+        "shape": "ELLIPSOID",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 32,
+        "tip_ratio": 0.0,
+        "position_m": [
+          0.0,
+          0.39,
+          0.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.65,
+          0.18,
+          0.42
+        ],
+        "material": {
+          "rgba": [
+            1.0,
+            0.84,
+            0.0,
+            1.0
+          ],
+          "metallic": 1.0,
+          "roughness": 0.2
+        }
+      },
+      {
+        "id": "candado_color",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 16,
+        "tip_ratio": 1.0,
+        "position_m": [
+          -0.15,
+          0.25,
+          0.21
+        ],
+        "rotation_deg": [
+          90.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.08,
+          0.04,
+          0.08
+        ],
+        "material": {
+          "rgba": [
+            0.9,
+            0.1,
+            0.1,
+            1.0
+          ],
+          "metallic": 0.8,
+          "roughness": 0.4
+        }
+      },
+      {
+        "id": "candado_numero",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 16,
+        "tip_ratio": 1.0,
+        "position_m": [
+          0.0,
+          0.25,
+          0.21
+        ],
+        "rotation_deg": [
+          90.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.08,
+          0.04,
+          0.08
+        ],
+        "material": {
+          "rgba": [
+            0.1,
+            0.8,
+            0.1,
+            1.0
+          ],
+          "metallic": 0.8,
+          "roughness": 0.4
+        }
+      },
+      {
+        "id": "candado_letra",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 16,
+        "tip_ratio": 1.0,
+        "position_m": [
+          0.15,
+          0.25,
+          0.21
+        ],
+        "rotation_deg": [
+          90.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.08,
+          0.04,
+          0.08
+        ],
+        "material": {
+          "rgba": [
+            0.1,
+            0.1,
+            0.9,
+            1.0
+          ],
+          "metallic": 0.8,
+          "roughness": 0.4
+        }
+      }
+    ]
+  },
+  "expected_dimensions_m": [
+    0.65,
+    0.42,
+    0.48
+  ],
+  "no_values_modified": true,
+  "assembly": "Only grouping named scalar components into vectors/materials"
+}

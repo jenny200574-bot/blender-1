@@ -1,0 +1,142 @@
+{
+  "step_cap_usd": 10,
+  "plan_cap_usd": 50,
+  "preventive_plan_stop_usd": 45,
+  "previous_plan_gross_usd": 0.2042645,
+  "step_gross_usd": 0.27226399999999995,
+  "reserved_usd": 0.0,
+  "entries": [
+    {
+      "id": "1",
+      "purpose": "av06_bird01",
+      "date_bogota": "2026-11-07T21:39:27.688723-05:00",
+      "state": "NON200_NO_TOKEN_CHARGE",
+      "reserve_usd": 0.1216405,
+      "prompt_sha256": "e487ab1fb13aa8dea80f4ea9e84dd6392f1776b917be52ebb08305d861961c61",
+      "schema_sha256": "e78d292e5e0000d8061da97ddbad856fc2535e0180030e0721296420d6e234f9",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0,
+      "settled_bogota": "2026-11-07T21:39:32.368045-05:00"
+    },
+    {
+      "id": "2",
+      "purpose": "av06_light01",
+      "date_bogota": "2026-11-07T21:39:27.693707-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.1364285,
+      "prompt_sha256": "195d7ce1fe323e213a7fc63f002861b21d2195bd90a5f44bf010ed129c69e352",
+      "schema_sha256": "5ff3a3508a90a658406a399911f189350f4cb745d2eea92c12c6f48a579a9952",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.023686,
+      "settled_bogota": "2026-11-07T21:39:33.775365-05:00"
+    },
+    {
+      "id": "3",
+      "purpose": "av06_live01",
+      "date_bogota": "2026-11-07T21:39:27.762729-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.1781385,
+      "prompt_sha256": "e0aad5eae9e7da9c8f2fdaf4f1d6ef31a8531c48606ffc90c126f3b2808d88fc",
+      "schema_sha256": "132a3cca3ace3be31629403b57401d2e23040ea083ed99a355f9e9d389930159",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.04264,
+      "settled_bogota": "2026-11-07T21:39:38.131225-05:00"
+    },
+    {
+      "id": "4",
+      "purpose": "av06_audit01",
+      "date_bogota": "2026-11-07T21:39:27.834108-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.1952605,
+      "prompt_sha256": "673eadda23d447cf091d727ddb4dcaa2382c9b663c9ef9b8357a6c46658e6b68",
+      "schema_sha256": "15e0e58de859c89a042df602af6ff0491e2c4e4003330ecbf7653c318ae0d9fd",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.051467,
+      "settled_bogota": "2026-11-07T21:39:38.810758-05:00"
+    },
+    {
+      "id": "5",
+      "purpose": "av06_bird02",
+      "date_bogota": "2026-11-07T21:40:34.008584-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.118895,
+      "prompt_sha256": "774cecb44e016e72df0b68a1fcf97a1aede0f0ad52f67f1cce49dcc432fb9f44",
+      "schema_sha256": "3f1138e9ec74699c922401e8f9670b87879de1fd6d9be8a2d24a819656aab95d",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0146665,
+      "settled_bogota": "2026-11-07T21:41:03.682056-05:00"
+    },
+    {
+      "id": "6",
+      "purpose": "av06_audit02",
+      "date_bogota": "2026-11-07T21:41:37.856160-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.199467,
+      "prompt_sha256": "022497f6da53532ca14e05c13aa447ea75fba74aa597a5670aa65f17c19e4213",
+      "schema_sha256": "404d0f1d9b15ae8ae030abf0f8924626538ba29ea91fcf2b8331fcb781cf3dfb",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.053316,
+      "settled_bogota": "2026-11-07T21:41:49.438254-05:00"
+    },
+    {
+      "id": "7",
+      "purpose": "av06_light02",
+      "date_bogota": "2026-11-07T21:41:37.889865-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.136601,
+      "prompt_sha256": "98b02f323f5a68fd88c7b9561ad09c6f0983aa2df5b6ad224e2dacaf21bf926e",
+      "schema_sha256": "14d7fe05e74192e3aff1df8e0e8bfeecd3f0dcaff3f5bd8ae0678e38c4d72575",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0238215,
+      "settled_bogota": "2026-11-07T21:41:42.227766-05:00"
+    },
+    {
+      "id": "8",
+      "purpose": "av06_bird_appearance01",
+      "date_bogota": "2026-11-07T21:42:31.952307-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.122275,
+      "prompt_sha256": "2fe26f21d0b1a5b957d825e2b2492fc6c74331c4ff764a5a4911b2b316661cc3",
+      "schema_sha256": "b10e84459c588a8a4df03d335c29d2357a9baeb4bf0649e19762ffc9e1b9ca7e",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0237205,
+      "settled_bogota": "2026-11-07T21:42:56.489729-05:00"
+    },
+    {
+      "id": "9",
+      "purpose": "av06_bird_appearance02",
+      "date_bogota": "2026-11-07T21:44:14.666900-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.1297855,
+      "prompt_sha256": "81aa0f2bf6d3def71833574e80ec66838751b81f3a999406664354becafbd817",
+      "schema_sha256": "b10e84459c588a8a4df03d335c29d2357a9baeb4bf0649e19762ffc9e1b9ca7e",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0313495,
+      "settled_bogota": "2026-11-07T21:44:42.304910-05:00"
+    },
+    {
+      "id": "10",
+      "purpose": "av06_crest03",
+      "date_bogota": "2026-11-07T21:45:41.072967-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.09982,
+      "prompt_sha256": "8cb27409572ac7f825bf2573ffb528fdce1704bd2a09e8ceea0378b691a2b873",
+      "schema_sha256": "190d4e39d2156ad152b90fc0402eae991f3fb4e1389f18b30b96f424ec094511",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0057615,
+      "settled_bogota": "2026-11-07T21:45:52.221760-05:00"
+    },
+    {
+      "id": "11",
+      "purpose": "av06_lightworld03",
+      "date_bogota": "2026-11-07T21:48:15.759857-05:00",
+      "state": "SETTLED",
+      "reserve_usd": 0.099622,
+      "prompt_sha256": "2655e84bc0ae40a669b9c26b8cefb3ba2867ee3e6529e9de8bd107accef260a3",
+      "schema_sha256": "cf87a9d5d6465d1c7c019c693f4c1d79298811f1326123a4cd30a5f23a08964f",
+      "model": "gemini-3-flash-preview",
+      "gross_usd": 0.0018355,
+      "settled_bogota": "2026-11-07T21:48:21.435406-05:00"
+    }
+  ]
+}

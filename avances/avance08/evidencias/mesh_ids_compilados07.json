@@ -1,0 +1,2064 @@
+{
+  "character_meshes": {
+    "ch-don-caos-7adf": [
+      {
+        "id": "ch-don-caos-7adf.base.face",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.eye_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.007200000000000001,
+          0.0028800000000000006,
+          0.0064800000000000005
+        ]
+      },
+      {
+        "id": "ch-don-caos-7adf.base.iris_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.003960000000000001,
+          0.00108,
+          0.004680000000000001
+        ]
+      },
+      {
+        "id": "ch-don-caos-7adf.base.pupil_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.0018000000000000002,
+          0.0007200000000000002,
+          0.0028800000000000006
+        ]
+      },
+      {
+        "id": "ch-don-caos-7adf.base.brow_-1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.eye_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.007200000000000001,
+          0.0028800000000000006,
+          0.0064800000000000005
+        ]
+      },
+      {
+        "id": "ch-don-caos-7adf.base.iris_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.003960000000000001,
+          0.00108,
+          0.004680000000000001
+        ]
+      },
+      {
+        "id": "ch-don-caos-7adf.base.pupil_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.0018000000000000002,
+          0.0007200000000000002,
+          0.0028800000000000006
+        ]
+      },
+      {
+        "id": "ch-don-caos-7adf.base.brow_1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.nose",
+        "role": "face",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.009257142857142856,
+          0.011108571428571428,
+          0.009257142857142856
+        ]
+      },
+      {
+        "id": "ch-don-caos-7adf.base.mouth",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.body",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.thigh-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.shin-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.upper_arm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.forearm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.hand-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.thigh1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.shin1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.upper_arm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.forearm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.hand1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.jacket",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.jacket_upper_arm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.jacket_forearm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.jacket_upper_arm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.jacket_forearm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.cape",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.trousersthigh-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.trousersshin-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.trousersthigh1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.trousersshin1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.shirt",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.shirt_upper_arm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.shirt_upper_arm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.shoe_-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.shoe_1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-don-caos-7adf.base.hair",
+        "role": "hair",
+        "shape": "MESH",
+        "dimensions_m": null
+      }
+    ],
+    "ch-spark-468e": [
+      {
+        "id": "ch-spark-468e.base.face",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.eye_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.03248,
+          0.012992000000000002,
+          0.029232
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.iris_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.017864,
+          0.0048720000000000005,
+          0.021112000000000002
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.pupil_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.00812,
+          0.0032480000000000005,
+          0.012992000000000002
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.brow_-1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.eye_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.03248,
+          0.012992000000000002,
+          0.029232
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.iris_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.017864,
+          0.0048720000000000005,
+          0.021112000000000002
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.pupil_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.00812,
+          0.0032480000000000005,
+          0.012992000000000002
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.brow_1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.nose",
+        "role": "face",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.027839999999999997,
+          0.03340799999999999,
+          0.027839999999999997
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.mouth",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.body",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.thigh-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.shin-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.upper_arm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.forearm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.hand-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.thigh1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.shin1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.upper_arm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.forearm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.hand1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_upper_arm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_forearm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_thigh_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_shin_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_hand_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_upper_arm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_forearm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_thigh_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_shin_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.suit_hand_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.armor",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.armor_upper_arm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.armor_forearm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.armor_upper_arm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.armor_forearm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.shoe_-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.shoe_1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.hair",
+        "role": "hair",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.helmet",
+        "role": "accessory",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-spark-468e.base.glassesgafas-1",
+        "role": "accessory",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.08352,
+          0.00928,
+          0.057999999999999996
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.glassesgafas1",
+        "role": "accessory",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.08352,
+          0.00928,
+          0.057999999999999996
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.glassesvisor-1",
+        "role": "accessory",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.08352,
+          0.00928,
+          0.057999999999999996
+        ]
+      },
+      {
+        "id": "ch-spark-468e.base.glassesvisor1",
+        "role": "accessory",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.08352,
+          0.00928,
+          0.057999999999999996
+        ]
+      }
+    ],
+    "ch-valentina-a9be": [
+      {
+        "id": "ch-valentina-a9be.base.face",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.eye_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.03484444444444445,
+          0.01393777777777778,
+          0.031360000000000006
+        ]
+      },
+      {
+        "id": "ch-valentina-a9be.base.iris_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01916444444444445,
+          0.005226666666666667,
+          0.022648888888888892
+        ]
+      },
+      {
+        "id": "ch-valentina-a9be.base.pupil_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.008711111111111112,
+          0.003484444444444445,
+          0.01393777777777778
+        ]
+      },
+      {
+        "id": "ch-valentina-a9be.base.brow_-1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.eye_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.03484444444444445,
+          0.01393777777777778,
+          0.031360000000000006
+        ]
+      },
+      {
+        "id": "ch-valentina-a9be.base.iris_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01916444444444445,
+          0.005226666666666667,
+          0.022648888888888892
+        ]
+      },
+      {
+        "id": "ch-valentina-a9be.base.pupil_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.008711111111111112,
+          0.003484444444444445,
+          0.01393777777777778
+        ]
+      },
+      {
+        "id": "ch-valentina-a9be.base.brow_1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.nose",
+        "role": "face",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.0448,
+          0.053759999999999995,
+          0.0448
+        ]
+      },
+      {
+        "id": "ch-valentina-a9be.base.mouth",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.body",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.thigh-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.shin-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.upper_arm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.forearm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.hand-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.thigh1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.shin1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.upper_arm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.forearm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.hand1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_upper_arm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_forearm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_thigh_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_shin_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_hand_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_upper_arm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_forearm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_thigh_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_shin_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.suit_hand_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.armor",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.armor_upper_arm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.armor_forearm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.armor_upper_arm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.armor_forearm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.shoe_-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.shoe_1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.hair",
+        "role": "hair",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.hair_long",
+        "role": "hair",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-valentina-a9be.base.helmet",
+        "role": "accessory",
+        "shape": "MESH",
+        "dimensions_m": null
+      }
+    ],
+    "ch-eco-eff3": [
+      {
+        "id": "ch-eco-eff3.base.face",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.eye_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.02196923076923077,
+          0.008787692307692307,
+          0.019772307692307693
+        ]
+      },
+      {
+        "id": "ch-eco-eff3.base.iris_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.012083076923076924,
+          0.0032953846153846154,
+          0.01428
+        ]
+      },
+      {
+        "id": "ch-eco-eff3.base.pupil_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.005492307692307692,
+          0.0021969230769230768,
+          0.008787692307692307
+        ]
+      },
+      {
+        "id": "ch-eco-eff3.base.brow_-1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.eye_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.02196923076923077,
+          0.008787692307692307,
+          0.019772307692307693
+        ]
+      },
+      {
+        "id": "ch-eco-eff3.base.iris_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.012083076923076924,
+          0.0032953846153846154,
+          0.01428
+        ]
+      },
+      {
+        "id": "ch-eco-eff3.base.pupil_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.005492307692307692,
+          0.0021969230769230768,
+          0.008787692307692307
+        ]
+      },
+      {
+        "id": "ch-eco-eff3.base.brow_1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.nose",
+        "role": "face",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01883076923076923,
+          0.022596923076923077,
+          0.01883076923076923
+        ]
+      },
+      {
+        "id": "ch-eco-eff3.base.mouth",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.body",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.thigh-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.shin-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.upper_arm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.forearm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.hand-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.thigh1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.shin1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.upper_arm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.forearm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.hand1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_upper_arm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_forearm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_thigh_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_shin_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_hand_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_upper_arm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_forearm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_thigh_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_shin_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.suit_hand_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.armor",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.armor_upper_arm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.armor_forearm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.armor_upper_arm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.armor_forearm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.trousersthigh-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.trousersshin-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.trousersthigh1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.trousersshin1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.shoe_-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.shoe_1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.hair",
+        "role": "hair",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-eco-eff3.base.hair_long",
+        "role": "hair",
+        "shape": "MESH",
+        "dimensions_m": null
+      }
+    ],
+    "ch-pintor-bce0": [
+      {
+        "id": "ch-pintor-bce0.base.face",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.eye_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.022830769230769234,
+          0.009132307692307695,
+          0.020547692307692312
+        ]
+      },
+      {
+        "id": "ch-pintor-bce0.base.iris_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01255692307692308,
+          0.003424615384615385,
+          0.014840000000000002
+        ]
+      },
+      {
+        "id": "ch-pintor-bce0.base.pupil_-1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.005707692307692309,
+          0.0022830769230769237,
+          0.009132307692307695
+        ]
+      },
+      {
+        "id": "ch-pintor-bce0.base.brow_-1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.eye_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.022830769230769234,
+          0.009132307692307695,
+          0.020547692307692312
+        ]
+      },
+      {
+        "id": "ch-pintor-bce0.base.iris_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01255692307692308,
+          0.003424615384615385,
+          0.014840000000000002
+        ]
+      },
+      {
+        "id": "ch-pintor-bce0.base.pupil_1",
+        "role": "eyes",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.005707692307692309,
+          0.0022830769230769237,
+          0.009132307692307695
+        ]
+      },
+      {
+        "id": "ch-pintor-bce0.base.brow_1",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.nose",
+        "role": "face",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01956923076923077,
+          0.023483076923076922,
+          0.01956923076923077
+        ]
+      },
+      {
+        "id": "ch-pintor-bce0.base.mouth",
+        "role": "face",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.body",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.thigh-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.shin-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.upper_arm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.forearm-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.hand-1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.thigh1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.shin1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.upper_arm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.forearm1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.hand1",
+        "role": "body_cover",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.trousersthigh-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.trousersshin-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.trousersthigh1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.trousersshin1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.shirt",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.shirt_upper_arm_left",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.shirt_upper_arm_right",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.shoe_-1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.shoe_1",
+        "role": "clothes",
+        "shape": "MESH",
+        "dimensions_m": null
+      },
+      {
+        "id": "ch-pintor-bce0.base.hair",
+        "role": "hair",
+        "shape": "MESH",
+        "dimensions_m": null
+      }
+    ],
+    "ch-piquito-030a": [
+      {
+        "id": "ch-piquito-030a.argon.body",
+        "role": "body",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.05,
+          0.05,
+          0.055
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.head",
+        "role": "head",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.048,
+          0.048,
+          0.048
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.beak",
+        "role": "beak",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.01,
+          0.01,
+          0.014
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.chest.1",
+        "role": "chest.1",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01,
+          0.005,
+          0.01
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.chest.2",
+        "role": "chest.2",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01,
+          0.005,
+          0.01
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.chest.3",
+        "role": "chest.3",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01,
+          0.005,
+          0.01
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.chest.4",
+        "role": "chest.4",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.01,
+          0.005,
+          0.01
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.eye_white.L",
+        "role": "eye_white.L",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.014,
+          0.004,
+          0.014
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.eye_white.R",
+        "role": "eye_white.R",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.014,
+          0.004,
+          0.014
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.iris.L",
+        "role": "iris.L",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.008,
+          0.002,
+          0.008
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.iris.R",
+        "role": "iris.R",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.008,
+          0.002,
+          0.008
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.pupil.L",
+        "role": "pupil.L",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.004,
+          0.002,
+          0.004
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.pupil.R",
+        "role": "pupil.R",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.004,
+          0.002,
+          0.004
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.brow.L",
+        "role": "brow.L",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.012,
+          0.002,
+          0.002
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.brow.R",
+        "role": "brow.R",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.012,
+          0.002,
+          0.002
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.crest.1",
+        "role": "crest.1",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.01,
+          0.01,
+          0.01
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.crest.2",
+        "role": "crest.2",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.007,
+          0.007,
+          0.008
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.wing.L.base",
+        "role": "wing.L.base",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.008,
+          0.024,
+          0.018
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.wing.R.base",
+        "role": "wing.R.base",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.008,
+          0.024,
+          0.018
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.wing.L.tip.1",
+        "role": "wing.L.tip.1",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.005,
+          0.005,
+          0.012
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.wing.L.tip.2",
+        "role": "wing.L.tip.2",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.005,
+          0.005,
+          0.012
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.wing.L.tip.3",
+        "role": "wing.L.tip.3",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.005,
+          0.005,
+          0.012
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.wing.R.tip.1",
+        "role": "wing.R.tip.1",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.005,
+          0.005,
+          0.012
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.wing.R.tip.2",
+        "role": "wing.R.tip.2",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.005,
+          0.005,
+          0.012
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.wing.R.tip.3",
+        "role": "wing.R.tip.3",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.005,
+          0.005,
+          0.012
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.tail.1",
+        "role": "tail.1",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.008,
+          0.008,
+          0.018
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.tail.2",
+        "role": "tail.2",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.008,
+          0.008,
+          0.018
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.tail.3",
+        "role": "tail.3",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.008,
+          0.008,
+          0.018
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.leg.L",
+        "role": "leg.L",
+        "shape": "CYLINDER",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.006
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.leg.R",
+        "role": "leg.R",
+        "shape": "CYLINDER",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.006
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.foot.L",
+        "role": "foot.L",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.008,
+          0.008,
+          0.004
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.foot.R",
+        "role": "foot.R",
+        "shape": "ELLIPSOID",
+        "dimensions_m": [
+          0.008,
+          0.008,
+          0.004
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.toe.L.front1",
+        "role": "toe.L.front1",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.008
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.toe.L.front2",
+        "role": "toe.L.front2",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.008
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.toe.L.front3",
+        "role": "toe.L.front3",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.008
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.toe.L.back",
+        "role": "toe.L.back",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.005
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.toe.R.front1",
+        "role": "toe.R.front1",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.008
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.toe.R.front2",
+        "role": "toe.R.front2",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.008
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.toe.R.front3",
+        "role": "toe.R.front3",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.008
+        ]
+      },
+      {
+        "id": "ch-piquito-030a.argon.toe.R.back",
+        "role": "toe.R.back",
+        "shape": "CONE",
+        "dimensions_m": [
+          0.004,
+          0.004,
+          0.005
+        ]
+      }
+    ]
+  },
+  "prop_meshes": {
+    "av07.fx.blue": [
+      {
+        "id": "av07.fx.blue.glow",
+        "role": "FX_SPARK",
+        "shape": "ELLIPSOID"
+      }
+    ],
+    "av07.fx.magenta": [
+      {
+        "id": "av07.fx.magenta.glow",
+        "role": "FX_VALENTINA",
+        "shape": "ELLIPSOID"
+      }
+    ],
+    "av07.fx.green": [
+      {
+        "id": "av07.fx.green.glow",
+        "role": "FX_ECO",
+        "shape": "ELLIPSOID"
+      }
+    ],
+    "av07.fx.yellow": [
+      {
+        "id": "av07.fx.yellow.glow",
+        "role": "FX_PINTOR",
+        "shape": "ELLIPSOID"
+      }
+    ],
+    "obj-libro-cuentos__e1-8": [
+      {
+        "id": "av07.book.cover",
+        "role": "tapa dura",
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "av07.book.page_left",
+        "role": "página izquierda",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.book.page_right",
+        "role": "página derecha",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.book.accent_gold",
+        "role": "lomo dorado",
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "av07.book.letter_a",
+        "role": "letter",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.book.letter_e",
+        "role": "letter",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.book.letter_o",
+        "role": "letter",
+        "shape": "MESH"
+      }
+    ],
+    "Ventana con vista al arcoíris": [
+      {
+        "id": "av07.window.frame.left",
+        "role": "frame",
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "av07.window.frame.right",
+        "role": "frame",
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "av07.window.frame.top",
+        "role": "frame",
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "av07.window.frame.bottom",
+        "role": "frame",
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "av07.window.glass",
+        "role": "glass",
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "av07.window.rainbow.red",
+        "role": "rainbow",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.window.rainbow.orange",
+        "role": "rainbow",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.window.rainbow.yellow",
+        "role": "rainbow",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.window.rainbow.green",
+        "role": "rainbow",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.window.rainbow.blue",
+        "role": "rainbow",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.window.rainbow.indigo",
+        "role": "rainbow",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.window.rainbow.violet",
+        "role": "rainbow",
+        "shape": "MESH"
+      }
+    ],
+    "obj-cama": [
+      {
+        "id": "obj-cama.cabecero",
+        "role": null,
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "obj-cama.piecero",
+        "role": null,
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "obj-cama.estructura",
+        "role": null,
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "obj-cama.colchon",
+        "role": null,
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "obj-cama.pata_fl",
+        "role": null,
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "obj-cama.pata_fr",
+        "role": null,
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "obj-cama.pata_bl",
+        "role": null,
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "obj-cama.pata_br",
+        "role": null,
+        "shape": "CYLINDER"
+      }
+    ],
+    "Centro de la habitación": [
+      {
+        "id": "av07.rug.main",
+        "role": "tapete",
+        "shape": "CYLINDER"
+      }
+    ],
+    "obj-visor-spark": [
+      {
+        "id": "av07.visor.lens",
+        "role": "lens_panoramic",
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "av07.visor.frame_top",
+        "role": "frame",
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "av07.visor.nose",
+        "role": "nose_bridge",
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "av07.visor.temple_l",
+        "role": "temple_left",
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "av07.visor.temple_r",
+        "role": "temple_right",
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "av07.visor.emitter",
+        "role": "emitter",
+        "shape": "CYLINDER"
+      }
+    ],
+    "obj-cofre-dorado": [
+      {
+        "id": "obj-cofre-dorado.cuerpo",
+        "role": null,
+        "shape": "CYLINDER"
+      },
+      {
+        "id": "obj-cofre-dorado.tapa",
+        "role": null,
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "obj-cofre-dorado.candado_color",
+        "role": null,
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "obj-cofre-dorado.candado_numero",
+        "role": null,
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "obj-cofre-dorado.candado_letra",
+        "role": null,
+        "shape": "ELLIPSOID"
+      },
+      {
+        "id": "av07.lock.color.shackle",
+        "role": "shackle_color",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.lock.number.shackle",
+        "role": "shackle_number",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.lock.letter.shackle",
+        "role": "shackle_letter",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.lock.number.glyph",
+        "role": "glyph_1",
+        "shape": "MESH"
+      },
+      {
+        "id": "av07.lock.letter.glyph",
+        "role": "glyph_m",
+        "shape": "MESH"
+      }
+    ]
+  }
+}

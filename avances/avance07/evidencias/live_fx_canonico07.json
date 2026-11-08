@@ -1,0 +1,240 @@
+{
+  "props": [
+    {
+      "id": "av07.fx.blue",
+      "position_m": [
+        1.45,
+        1.75,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "geometry": [
+        {
+          "id": "av07.fx.blue.glow",
+          "role": "FX_SPARK",
+          "shape": "ELLIPSOID",
+          "position_m": [
+            0,
+            0,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "dimensions_m": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "resolution": 16,
+          "material": {
+            "rgba": [
+              0,
+              0.5,
+              1,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.5,
+            "transmission": 0,
+            "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+            "emission_rgba": [
+              0,
+              0.5,
+              1,
+              1
+            ],
+            "emission_strength": 5
+          },
+          "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+          "normals": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "scope": "New visual FX design, color-to-hero assignment is design not a literal source assertion"
+    },
+    {
+      "id": "av07.fx.magenta",
+      "position_m": [
+        2.75,
+        2.65,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "geometry": [
+        {
+          "id": "av07.fx.magenta.glow",
+          "role": "FX_VALENTINA",
+          "shape": "ELLIPSOID",
+          "position_m": [
+            0,
+            0,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "dimensions_m": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "resolution": 16,
+          "material": {
+            "rgba": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.5,
+            "transmission": 0,
+            "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+            "emission_rgba": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "emission_strength": 5
+          },
+          "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+          "normals": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "scope": "New visual FX design, color-to-hero assignment is design not a literal source assertion"
+    },
+    {
+      "id": "av07.fx.green",
+      "position_m": [
+        3.25,
+        2.15,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "geometry": [
+        {
+          "id": "av07.fx.green.glow",
+          "role": "FX_ECO",
+          "shape": "ELLIPSOID",
+          "position_m": [
+            0,
+            0,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "dimensions_m": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "resolution": 16,
+          "material": {
+            "rgba": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.5,
+            "transmission": 0,
+            "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+            "emission_rgba": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "emission_strength": 5
+          },
+          "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+          "normals": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "scope": "New visual FX design, color-to-hero assignment is design not a literal source assertion"
+    },
+    {
+      "id": "av07.fx.yellow",
+      "position_m": [
+        2.95,
+        1.65,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "geometry": [
+        {
+          "id": "av07.fx.yellow.glow",
+          "role": "FX_PINTOR",
+          "shape": "ELLIPSOID",
+          "position_m": [
+            0,
+            0,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "dimensions_m": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "resolution": 16,
+          "material": {
+            "rgba": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.5,
+            "transmission": 0,
+            "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+            "emission_rgba": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "emission_strength": 5
+          },
+          "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+          "normals": "SMOOTH"
+        }
+      ],
+      "source": "argon07_vivo_plantillas.json + argon07_vivo_geometria.json; GENERATED design; action intervals source01 exact; not visual/physics certification",
+      "scope": "New visual FX design, color-to-hero assignment is design not a literal source assertion"
+    }
+  ]
+}

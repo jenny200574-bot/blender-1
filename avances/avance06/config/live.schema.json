@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"status": {"type": "string", "enum": ["COMPLETE", "PARTIAL", "FALTA"]}, "source": {"type": "string"}, "live_payload_json": {"type": "string"}, "missing_json": {"type": "string"}}, "required": ["status", "source", "live_payload_json", "missing_json"]}

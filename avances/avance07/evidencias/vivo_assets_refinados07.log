@@ -1,0 +1,6 @@
+Blender 4.2.3 LTS (hash 0e22e4fcea03 built 2024-10-14 23:31:34)
+Info: Total files 0 | Changed 0 | Failed 0
+Info: Saved "assets_vivo07_refinado.blend"
+{"passed": true, "mesh_count": 40, "nonmanifold": [], "data_tracks_verified": 22, "assertions_verified": 54, "not_built_actors": ["ch-don-caos-7adf", "ch-spark-468e", "ch-valentina-a9be", "ch-eco-eff3", "ch-pintor-bce0", "ch-piquito-030a"], "full_esc1_preview_passed": false, "physics_or_2B_approved": false, "production_approved": false, "gpu_used": false, "scope": "REAL CPU Blender mesh/material/animation assertions for assets only; no fake actor placeholders; full scene remains gated"}
+
+Blender quit

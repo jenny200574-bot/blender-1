@@ -1,0 +1,189 @@
+{
+  "passed": true,
+  "errors": [],
+  "metrics": {
+    "passed": true,
+    "dimensions_m": [
+      0.65,
+      0.42,
+      0.48
+    ],
+    "tolerance_m": 0.001,
+    "part_count": 5,
+    "boxes": false,
+    "query_sha256": "ef272ce7227018d648c93f4c75c7f74aa65d81a08e006b341c5cd20ec2892ed8"
+  },
+  "recipe": {
+    "id": "obj-cofre-dorado",
+    "source": "Argon_GENERATED:gdc-cofre-abecedario",
+    "parts": [
+      {
+        "id": "obj-cofre-dorado.cuerpo",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 32,
+        "tip_ratio": 1.0,
+        "position_m": [
+          0.0,
+          0.0,
+          -0.09
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.65,
+          0.42,
+          0.3
+        ],
+        "material": {
+          "rgba": [
+            0.85,
+            0.65,
+            0.15,
+            1.0
+          ],
+          "metallic": 0.9,
+          "roughness": 0.3
+        }
+      },
+      {
+        "id": "obj-cofre-dorado.tapa",
+        "shape": "ELLIPSOID",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 32,
+        "tip_ratio": 0.0,
+        "position_m": [
+          0.0,
+          0.0,
+          0.15
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.65,
+          0.42,
+          0.18
+        ],
+        "material": {
+          "rgba": [
+            1.0,
+            0.84,
+            0.0,
+            1.0
+          ],
+          "metallic": 1.0,
+          "roughness": 0.2
+        }
+      },
+      {
+        "id": "obj-cofre-dorado.candado_color",
+        "shape": "ELLIPSOID",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 16,
+        "tip_ratio": 0.0,
+        "position_m": [
+          -0.15,
+          -0.19,
+          0.01
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.08,
+          0.04,
+          0.08
+        ],
+        "material": {
+          "rgba": [
+            0.9,
+            0.1,
+            0.1,
+            1.0
+          ],
+          "metallic": 0.8,
+          "roughness": 0.4
+        }
+      },
+      {
+        "id": "obj-cofre-dorado.candado_numero",
+        "shape": "ELLIPSOID",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 16,
+        "tip_ratio": 0.0,
+        "position_m": [
+          0.0,
+          -0.19,
+          0.01
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.08,
+          0.04,
+          0.08
+        ],
+        "material": {
+          "rgba": [
+            0.1,
+            0.8,
+            0.1,
+            1.0
+          ],
+          "metallic": 0.8,
+          "roughness": 0.4
+        }
+      },
+      {
+        "id": "obj-cofre-dorado.candado_letra",
+        "shape": "ELLIPSOID",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "resolution": 16,
+        "tip_ratio": 0.0,
+        "position_m": [
+          0.15,
+          -0.19,
+          0.01
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.08,
+          0.04,
+          0.08
+        ],
+        "material": {
+          "rgba": [
+            0.1,
+            0.1,
+            0.9,
+            1.0
+          ],
+          "metallic": 0.8,
+          "roughness": 0.4
+        }
+      }
+    ]
+  },
+  "expected_dimensions_m": [
+    0.65,
+    0.42,
+    0.48
+  ],
+  "no_values_modified": true,
+  "assembly": "Only grouping named scalar components into vectors/materials"
+}

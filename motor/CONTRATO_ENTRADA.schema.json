@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "clock": {
+      "type": "object"
+    },
+    "coordinates": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "appearance": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "spec": {
+            "type": "object"
+          },
+          "dna_record": {
+            "type": "object",
+            "description": "ADN/SELLO literal. construction_3d medida tiene prioridad. Si falta, BASE_CPU textual autorizado con library_dimensions y hashes; no afirma reconstrucción exacta de imagen.",
+            "properties": {
+              "source": {
+                "type": [
+                  "string",
+                  "object"
+                ]
+              },
+              "source_data": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  },
+                  "construction_3d": {
+                    "type": "object",
+                    "required": [
+                      "source",
+                      "face_surfaces",
+                      "garments",
+                      "required_roles",
+                      "fact_bindings"
+                    ],
+                    "properties": {
+                      "source": {
+                        "type": [
+                          "string",
+                          "object"
+                        ]
+                      },
+                      "face_surfaces": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "garments": {
+                        "type": "array",
+                        "description": "Vestuario o cobertura corporal por rol, sin forzar ropa humana.",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "details": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "required_roles": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "fact_bindings": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "environment": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "motion": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "camera": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "shots": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "lighting": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "audio": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "requirements": {
+      "type": "object",
+      "properties": {
+        "entity_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "libraries": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "required_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provisional": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "description": "Entrada universal. Construcción medida o apariencia BASE_CPU t314 con cotas y procedencia de biblioteca, fidelidad AVISO; anatomía/anclas/datos físicos nunca inventados. Voz/labios Omni posterior t295, audio opcional. Entrega tiempos_dialogo.json desde guion/01/SB."
+}

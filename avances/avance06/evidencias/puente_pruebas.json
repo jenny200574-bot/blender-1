@@ -1,0 +1,26 @@
+[
+  {
+    "command": "generador_json estado",
+    "exit": 0,
+    "stdout": "{\"ok\": true, \"gross_usd\": 0, \"reserved_usd\": 0, \"cap_usd\": 10, \"off\": true}\n",
+    "stderr": ""
+  },
+  {
+    "command": "generador_json ejecutar missing_job",
+    "exit": 1,
+    "stdout": "{\"ok\": false, \"error\": \"job not approved\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": "generador_json ejecutar ../../etc/passwd",
+    "exit": 0,
+    "stdout": "{\"ok\": false, \"error\": \"comando no permitido\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": "generador_json estado;id",
+    "exit": 0,
+    "stdout": "{\"ok\": false, \"error\": \"comando no permitido\"}\n",
+    "stderr": ""
+  }
+]

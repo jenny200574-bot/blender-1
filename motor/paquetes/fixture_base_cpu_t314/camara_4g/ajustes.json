@@ -1,0 +1,14 @@
+{
+  "encuadre_fraccion_altura_visible": {
+    "EWS": 8.0,
+    "WS": 2.2,
+    "FS": 1.15,
+    "MFS": 0.85,
+    "COWBOY": 0.8,
+    "MS": 0.55,
+    "MCU": 0.38,
+    "CU": 0.22,
+    "ECU": 0.1
+  },
+  "source_sha256": "81daad9bdd6b97713e57664a93ddca6d558235c8b06ccfa4c4b9b82618a1b512"
+}

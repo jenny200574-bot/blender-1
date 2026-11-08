@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"keys": {"type": "array", "items": {"type": "object", "properties": {"t": {"type": "number"}, "dx": {"type": "number"}, "dy": {"type": "number"}, "dz": {"type": "number"}, "curve": {"type": "string", "enum": ["SMOOTH", "LINEAR"]}}, "required": ["t", "dx", "dy", "dz", "curve"]}}}, "required": ["keys"]}

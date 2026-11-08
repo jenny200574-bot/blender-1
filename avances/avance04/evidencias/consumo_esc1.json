@@ -1,0 +1,34 @@
+{
+  "date_bogota": "2026-11-07T20:46:54.829375-05:00",
+  "model": "gemini-3-flash-preview",
+  "input_tokens": 140363,
+  "output_tokens_including_thoughts": 1936,
+  "cached_input_tokens": 0,
+  "gross_usd": 0.0759895,
+  "net_usd_expected_after_credits": 0,
+  "net_invoice_verified": false,
+  "finish": "FinishReason.STOP",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1936,
+    "candidates_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 1936
+      }
+    ],
+    "prompt_token_count": 140363,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 140363
+      }
+    ],
+    "thoughts_token_count": null,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 142299,
+    "traffic_type": "ON_DEMAND"
+  }
+}

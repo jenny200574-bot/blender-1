@@ -1,0 +1,2233 @@
+{
+  "schema_version": "1.0",
+  "job_id": "FIXTURE_NO_GUARDIANES",
+  "scene": "synthetic_cpu",
+  "clock": {
+    "fps": 8,
+    "duration_s": 2,
+    "rounding": "half_up"
+  },
+  "coordinates": {
+    "unit": "m",
+    "up": "Z",
+    "forward": "-Y",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "source": "fixture_sintetico.json"
+  },
+  "entities": [
+    {
+      "id": "bird_fixture",
+      "type": "CHARACTER",
+      "anatomy": "avian",
+      "rig": {
+        "bones": [
+          {
+            "id": "root",
+            "head": [
+              0,
+              0,
+              0.4
+            ],
+            "tail": [
+              0,
+              0,
+              0.55
+            ],
+            "parent": null,
+            "role": "root",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "neck",
+            "head": [
+              0,
+              0,
+              0.55
+            ],
+            "tail": [
+              0,
+              0,
+              0.78
+            ],
+            "parent": "root",
+            "role": "neck",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "head",
+            "head": [
+              0,
+              0,
+              0.78
+            ],
+            "tail": [
+              0,
+              0,
+              1.0
+            ],
+            "parent": "neck",
+            "role": "head",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "beak",
+            "head": [
+              0,
+              -0.1,
+              0.9
+            ],
+            "tail": [
+              0,
+              -0.25,
+              0.9
+            ],
+            "parent": "head",
+            "role": "beak",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "tail",
+            "head": [
+              0,
+              0.12,
+              0.5
+            ],
+            "tail": [
+              0,
+              0.4,
+              0.55
+            ],
+            "parent": "root",
+            "role": "tail",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "wing.L",
+            "head": [
+              -0.12,
+              0,
+              0.65
+            ],
+            "tail": [
+              -0.4,
+              0,
+              0.55
+            ],
+            "parent": "root",
+            "role": "wing.L",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "leg.L",
+            "head": [
+              -0.12,
+              0,
+              0.4
+            ],
+            "tail": [
+              -0.12,
+              0,
+              0.14
+            ],
+            "parent": "root",
+            "role": "leg.L",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "foot.L",
+            "head": [
+              -0.12,
+              0,
+              0.14
+            ],
+            "tail": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "parent": "leg.L",
+            "role": "foot.L",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.front1",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.18,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.front1",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.front2",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.12,
+              0.29000000000000004,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.front2",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.front3",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.06,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.front3",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.back",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.12,
+              0.03,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.back",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "wing.R",
+            "head": [
+              0.12,
+              0,
+              0.65
+            ],
+            "tail": [
+              0.4,
+              0,
+              0.55
+            ],
+            "parent": "root",
+            "role": "wing.R",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "leg.R",
+            "head": [
+              0.12,
+              0,
+              0.4
+            ],
+            "tail": [
+              0.12,
+              0,
+              0.14
+            ],
+            "parent": "root",
+            "role": "leg.R",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "foot.R",
+            "head": [
+              0.12,
+              0,
+              0.14
+            ],
+            "tail": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "parent": "leg.R",
+            "role": "foot.R",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.front1",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.06,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.front1",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.front2",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.12,
+              0.29000000000000004,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.front2",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.front3",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.18,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.front3",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.back",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.12,
+              0.03,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.back",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          }
+        ]
+      },
+      "appearance": {
+        "geometry": {
+          "parts": [
+            {
+              "id": "bird_body",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.4,
+                0.35,
+                0.55
+              ],
+              "position_m": [
+                0,
+                0,
+                0.53
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "body"
+            },
+            {
+              "id": "bird_head",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.35,
+                0.35,
+                0.35
+              ],
+              "position_m": [
+                0,
+                0,
+                0.9
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "head"
+            },
+            {
+              "id": "eye_l",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.08,
+                0.045,
+                0.08
+              ],
+              "position_m": [
+                -0.09,
+                -0.155,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "eye"
+            },
+            {
+              "id": "eye_r",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.08,
+                0.045,
+                0.08
+              ],
+              "position_m": [
+                0.09,
+                -0.155,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "eye"
+            },
+            {
+              "id": "pupil_l",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.035,
+                0.025,
+                0.035
+              ],
+              "position_m": [
+                -0.09,
+                -0.18,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.03,
+                  0.015,
+                  0.01,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "pupil"
+            },
+            {
+              "id": "pupil_r",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.035,
+                0.025,
+                0.035
+              ],
+              "position_m": [
+                0.09,
+                -0.18,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.03,
+                  0.015,
+                  0.01,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "pupil"
+            },
+            {
+              "id": "scarf",
+              "shape": "TORUS",
+              "dimensions_m": [
+                1,
+                1,
+                1
+              ],
+              "position_m": [
+                0,
+                0,
+                0.75
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.5,
+                  0.02,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "clothes",
+              "major_radius_m": 0.16,
+              "minor_radius_m": 0.025
+            },
+            {
+              "id": "wingmesh_L",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.12,
+                0.1,
+                0.35
+              ],
+              "position_m": [
+                0,
+                -0.15,
+                0
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "wing",
+              "bone": "wing.L"
+            },
+            {
+              "id": "wingmesh_R",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.12,
+                0.1,
+                0.35
+              ],
+              "position_m": [
+                0,
+                -0.15,
+                0
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "wing",
+              "bone": "wing.R"
+            },
+            {
+              "id": "bill",
+              "shape": "CONE",
+              "dimensions_m": [
+                0.12,
+                0.12,
+                0.2
+              ],
+              "position_m": [
+                0,
+                -0.2,
+                0.9
+              ],
+              "rotation_deg": [
+                90,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  1,
+                  0.2,
+                  0.02,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "beak",
+              "tip_ratio": 0
+            }
+          ],
+          "required_roles": [
+            "body",
+            "head",
+            "eye",
+            "pupil",
+            "clothes",
+            "beak",
+            "wing"
+          ],
+          "source": "fixture_sintetico.json",
+          "final_appearance_ref": "SOLO_FIXTURE_SINTETICO_NO_APROBACION_ARTISTICA"
+        },
+        "rostros_finales": {
+          "asset": "fixture_sintetico.json",
+          "source": "fixture_sintetico.json"
+        },
+        "ropa_final": {
+          "asset": "fixture_sintetico.json",
+          "source": "fixture_sintetico.json"
+        }
+      },
+      "points": [
+        {
+          "id": "centre",
+          "position_m": [
+            0,
+            0,
+            0.6
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "ground_l",
+          "position_m": [
+            -0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "ground_r",
+          "position_m": [
+            0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_a",
+          "position_m": [
+            -0.3,
+            -0.2,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_b",
+          "position_m": [
+            0.3,
+            -0.2,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_c",
+          "position_m": [
+            0.3,
+            0.35,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_d",
+          "position_m": [
+            -0.3,
+            0.35,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        }
+      ],
+      "physics": {
+        "bone_mass_kg": {
+          "root": 1,
+          "neck": 1,
+          "head": 1,
+          "beak": 1,
+          "tail": 1,
+          "wing.L": 1,
+          "leg.L": 1,
+          "foot.L": 1,
+          "toe.L.front1": 1,
+          "toe.L.front2": 1,
+          "toe.L.front3": 1,
+          "toe.L.back": 1,
+          "wing.R": 1,
+          "leg.R": 1,
+          "foot.R": 1,
+          "toe.R.front1": 1,
+          "toe.R.front2": 1,
+          "toe.R.front3": 1,
+          "toe.R.back": 1
+        },
+        "balance_margin_m": 0.04,
+        "support_intervals": [
+          {
+            "t0": 0,
+            "t1": 2,
+            "mode": "supported",
+            "support_points": [
+              "support_fixture.support_a",
+              "support_fixture.support_b",
+              "support_fixture.support_c",
+              "support_fixture.support_d"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "requirements": {
+    "entity_ids": [
+      "bird_fixture"
+    ],
+    "object_refs": []
+  },
+  "environment": {
+    "mode": "geometry",
+    "geometry": [
+      {
+        "id": "floor",
+        "shape": "BOX",
+        "dimensions_m": [
+          5,
+          5,
+          0.1
+        ],
+        "position_m": [
+          0,
+          0,
+          -0.05
+        ],
+        "rotation_deg": [
+          0,
+          0,
+          0
+        ],
+        "resolution": 12,
+        "material": {
+          "rgba": [
+            0.25,
+            0.3,
+            0.35,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.45
+        },
+        "source": "fixture_sintetico.json",
+        "role": "geometry"
+      },
+      {
+        "position_m": [
+          1,
+          2,
+          0.4
+        ],
+        "rotation_deg": [
+          20,
+          30,
+          40
+        ],
+        "material": {
+          "rgba": [
+            0.12,
+            0.38,
+            0.75,
+            1
+          ],
+          "metallic": 0.2,
+          "roughness": 0.35,
+          "source": "fixture técnico, no escena real"
+        },
+        "source": "fixture técnico",
+        "id": "pieza_desconocida_fixture",
+        "shape": "STAR_FORMULA",
+        "formula": "escritorio_patas",
+        "dimensions_m": [
+          1.5,
+          0.7,
+          0.75
+        ],
+        "ancla_z": "base",
+        "materials_catalog": {
+          "_nota": "Material de RENDER por fórmula (PBR procedural) v2. Incluye light_energy / fill defaults documentados en ESQUEMA.",
+          "_defaults_exposicion": {
+            "world_color": [
+              0.06,
+              0.07,
+              0.1
+            ],
+            "world_strength": 0.42,
+            "view_exposure": 0.85,
+            "view_gamma": 1.0,
+            "fill_energy_plafon_factor": 1.0,
+            "oscuridad_legible": {
+              "world_strength_min": 0.22,
+              "monitor_energy_min_factor": 0.55,
+              "nota": "Con plafón off el mundo no baja de world_strength_min; monitores mantienen factor mínimo para legibilidad de formas."
+            },
+            "nota_v2": "Exposición genérica para moldes legibles sin quemar pantallas. Ajustable por datos, no por escena.",
+            "view_transform": "Standard",
+            "view_look": "None"
+          },
+          "plano": {
+            "base": [
+              0.48,
+              0.34,
+              0.2
+            ],
+            "rough": 0.48,
+            "nombre": "madera_laminada_o_suelo"
+          },
+          "caja": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "bbox": {
+            "base": [
+              0.55,
+              0.55,
+              0.58
+            ],
+            "rough": 0.6,
+            "nombre": "bloque_neutro"
+          },
+          "cilindro": {
+            "base": [
+              0.35,
+              0.36,
+              0.38
+            ],
+            "rough": 0.4,
+            "metal": 0.5,
+            "nombre": "metal"
+          },
+          "punto": {
+            "base": [
+              1,
+              0,
+              1
+            ],
+            "rough": 1,
+            "nombre": "marcador"
+          },
+          "muros_caja_con_huecos": {
+            "base": [
+              0.82,
+              0.8,
+              0.76
+            ],
+            "rough": 0.85,
+            "nombre": "yeso"
+          },
+          "puerta_bisagra": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "ventana_marco_vidrio": {
+            "base": [
+              0.28,
+              0.18,
+              0.1
+            ],
+            "rough": 0.45,
+            "nombre": "marco_madera"
+          },
+          "cortina_enrollable": {
+            "base": [
+              0.45,
+              0.4,
+              0.48
+            ],
+            "rough": 0.8,
+            "nombre": "tela"
+          },
+          "escritorio_patas": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.48,
+            "nombre": "madera"
+          },
+          "silla_giratoria_ergonomica": {
+            "base": [
+              0.22,
+              0.28,
+              0.38
+            ],
+            "rough": 0.75,
+            "nombre": "tela_oficina"
+          },
+          "silla_simple": {
+            "base": [
+              0.35,
+              0.3,
+              0.25
+            ],
+            "rough": 0.7,
+            "nombre": "silla_terraza"
+          },
+          "mesa_simple": {
+            "base": [
+              0.4,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "cama_marco_colchon": {
+            "base": [
+              0.4,
+              0.3,
+              0.22
+            ],
+            "rough": 0.55,
+            "nombre": "madera_cama"
+          },
+          "almohada_simple": {
+            "base": [
+              0.88,
+              0.86,
+              0.82
+            ],
+            "rough": 0.9,
+            "nombre": "tela_almohada"
+          },
+          "manta_simple": {
+            "base": [
+              0.35,
+              0.42,
+              0.55
+            ],
+            "rough": 0.85,
+            "nombre": "tela_manta"
+          },
+          "armario_2puertas": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "estanteria_abierta": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "monitor_pantalla": {
+            "base": [
+              0.12,
+              0.12,
+              0.13
+            ],
+            "rough": 0.35,
+            "nombre": "plastico",
+            "pantalla_emit": [
+              0.08,
+              0.75,
+              0.95
+            ],
+            "pantalla_energy": 3.2,
+            "area_light_energy": 10.0
+          },
+          "torre_pc": {
+            "base": [
+              0.15,
+              0.15,
+              0.16
+            ],
+            "rough": 0.4,
+            "nombre": "plastico"
+          },
+          "teclado_simple": {
+            "base": [
+              0.15,
+              0.15,
+              0.16
+            ],
+            "rough": 0.4,
+            "nombre": "plastico"
+          },
+          "cables_haz": {
+            "base": [
+              0.18,
+              0.18,
+              0.2
+            ],
+            "rough": 0.55,
+            "nombre": "cable",
+            "emit_on": [
+              0.05,
+              0.85,
+              1.0
+            ],
+            "point_light_energy": 10.0,
+            "emit": [
+              0.05,
+              0.9,
+              1.0
+            ],
+            "emit_strength": 2.0
+          },
+          "lampara_arquitecto": {
+            "base": [
+              0.35,
+              0.36,
+              0.38
+            ],
+            "rough": 0.35,
+            "metal": 0.7,
+            "nombre": "metal",
+            "light_energy": 8.0
+          },
+          "columna_estructural": {
+            "base": [
+              0.72,
+              0.7,
+              0.66
+            ],
+            "rough": 0.8,
+            "nombre": "hormigon"
+          },
+          "papelera_cilindro": {
+            "base": [
+              0.4,
+              0.42,
+              0.45
+            ],
+            "rough": 0.35,
+            "metal": 0.7,
+            "nombre": "metal"
+          },
+          "perchero_pie": {
+            "base": [
+              0.35,
+              0.36,
+              0.38
+            ],
+            "rough": 0.4,
+            "metal": 0.6,
+            "nombre": "metal"
+          },
+          "plafon_area": {
+            "base": [
+              0.95,
+              0.9,
+              0.75
+            ],
+            "rough": 0.4,
+            "emit": [
+              1.0,
+              0.9,
+              0.7
+            ],
+            "emit_strength": 1.8,
+            "nombre": "plafon_calido",
+            "light_energy": 95.0,
+            "light_color": [
+              1.0,
+              0.92,
+              0.75
+            ]
+          },
+          "bloque_edificio": {
+            "base": [
+              0.55,
+              0.52,
+              0.48
+            ],
+            "rough": 0.7,
+            "nombre": "fachada"
+          },
+          "muro_plano": {
+            "base": [
+              0.62,
+              0.6,
+              0.56
+            ],
+            "rough": 0.75,
+            "nombre": "muro_exterior"
+          },
+          "arbol_simple": {
+            "base": [
+              0.2,
+              0.35,
+              0.15
+            ],
+            "rough": 0.85,
+            "nombre": "follaje"
+          },
+          "rack_servidores": {
+            "base": [
+              0.15,
+              0.18,
+              0.22
+            ],
+            "rough": 0.4,
+            "metal": 0.6,
+            "nombre": "rack",
+            "emit": [
+              0.1,
+              0.4,
+              1.0
+            ],
+            "emit_strength": 1.5
+          },
+          "farola_poste": {
+            "base": [
+              0.25,
+              0.25,
+              0.28
+            ],
+            "rough": 0.4,
+            "metal": 0.7,
+            "nombre": "farola",
+            "light_energy": 40.0,
+            "light_color": [
+              1.0,
+              0.92,
+              0.7
+            ]
+          },
+          "banco_calle": {
+            "base": [
+              0.35,
+              0.28,
+              0.18
+            ],
+            "rough": 0.6,
+            "nombre": "banco"
+          },
+          "auto_simple": {
+            "base": [
+              0.25,
+              0.28,
+              0.35
+            ],
+            "rough": 0.35,
+            "metal": 0.4,
+            "nombre": "carroceria"
+          },
+          "papelera_calle": {
+            "base": [
+              0.3,
+              0.55,
+              0.35
+            ],
+            "rough": 0.5,
+            "nombre": "papelera_verde"
+          },
+          "letrero_calle": {
+            "base": [
+              0.7,
+              0.7,
+              0.72
+            ],
+            "rough": 0.5,
+            "nombre": "letrero"
+          },
+          "semaforo_calle": {
+            "base": [
+              0.15,
+              0.15,
+              0.16
+            ],
+            "rough": 0.4,
+            "metal": 0.6,
+            "nombre": "semaforo"
+          },
+          "bolardo_calle": {
+            "base": [
+              0.55,
+              0.5,
+              0.35
+            ],
+            "rough": 0.5,
+            "metal": 0.3,
+            "nombre": "bolardo"
+          },
+          "hidrante_calle": {
+            "base": [
+              0.7,
+              0.12,
+              0.1
+            ],
+            "rough": 0.45,
+            "metal": 0.5,
+            "nombre": "hidrante"
+          },
+          "jardinera_calle": {
+            "base": [
+              0.45,
+              0.35,
+              0.25
+            ],
+            "rough": 0.7,
+            "nombre": "jardinera"
+          },
+          "bicicletero_calle": {
+            "base": [
+              0.4,
+              0.4,
+              0.42
+            ],
+            "rough": 0.4,
+            "metal": 0.8,
+            "nombre": "bicicletero"
+          },
+          "parada_autobus": {
+            "base": [
+              0.5,
+              0.55,
+              0.6
+            ],
+            "rough": 0.5,
+            "nombre": "parada"
+          },
+          "quiosco_calle": {
+            "base": [
+              0.55,
+              0.25,
+              0.2
+            ],
+            "rough": 0.6,
+            "nombre": "quiosco"
+          },
+          "toldo_calle": {
+            "base": [
+              0.65,
+              0.2,
+              0.15
+            ],
+            "rough": 0.8,
+            "nombre": "toldo"
+          }
+        },
+        "points": [
+          {
+            "id": "contacto_sin_alias",
+            "position_m": [
+              0,
+              0,
+              0
+            ],
+            "rotation_deg": [
+              0,
+              0,
+              0
+            ],
+            "frame": "WORLD",
+            "source": "fixture técnico"
+          }
+        ],
+        "pivots": [],
+        "controls": []
+      }
+    ],
+    "events": [
+      {
+        "object": "prop_base",
+        "property": "material.base_color",
+        "material": "prop_base_material",
+        "source": "fixture_sintetico.json",
+        "keys": [
+          {
+            "t": 0,
+            "value": [
+              1,
+              0.1,
+              0,
+              1
+            ],
+            "curve": "LINEAR"
+          },
+          {
+            "t": 2,
+            "value": [
+              0.2,
+              0.2,
+              0.2,
+              1
+            ],
+            "curve": "LINEAR"
+          }
+        ]
+      },
+      {
+        "object": "support_fixture",
+        "property": "location",
+        "source": "fixture_sintetico.json",
+        "keys": [
+          {
+            "t": 0,
+            "value": [
+              0,
+              0,
+              0
+            ],
+            "curve": "LINEAR"
+          },
+          {
+            "t": 2,
+            "value": [
+              0.03,
+              0,
+              0
+            ],
+            "curve": "LINEAR"
+          }
+        ]
+      }
+    ],
+    "live_data": {
+      "status": "complete",
+      "changes": []
+    }
+  },
+  "props": [
+    {
+      "id": "prop_fixture",
+      "position_m": [
+        1.1,
+        0,
+        0
+      ],
+      "geometry": [
+        {
+          "id": "prop_base",
+          "shape": "BOX",
+          "dimensions_m": [
+            0.5,
+            0.3,
+            0.3
+          ],
+          "position_m": [
+            0,
+            0,
+            0.15
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "resolution": 12,
+          "material": {
+            "rgba": [
+              0.95,
+              0.7,
+              0.05,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.45
+          },
+          "source": "fixture_sintetico.json",
+          "role": "geometry"
+        },
+        {
+          "id": "prop_lid",
+          "shape": "BOX",
+          "dimensions_m": [
+            0.5,
+            0.3,
+            0.04
+          ],
+          "position_m": [
+            0,
+            0,
+            0.32
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "resolution": 12,
+          "material": {
+            "rgba": [
+              0.95,
+              0.7,
+              0.05,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.45
+          },
+          "source": "fixture_sintetico.json",
+          "role": "geometry"
+        }
+      ],
+      "points": [
+        {
+          "id": "hinge",
+          "position_m": [
+            0,
+            0.15,
+            0.3
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        }
+      ],
+      "hinges": [
+        {
+          "id": "lid_hinge",
+          "pivot_m": [
+            0,
+            0.15,
+            0.3
+          ],
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "parts": [
+            "prop_lid"
+          ],
+          "min_deg": 0,
+          "max_deg": 60,
+          "keys": [
+            {
+              "t": 0,
+              "c": 0,
+              "curve": "LINEAR"
+            },
+            {
+              "t": 2,
+              "c": 1,
+              "curve": "LINEAR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "support_fixture",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "geometry": [],
+      "points": [
+        {
+          "id": "left",
+          "position_m": [
+            -0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "right",
+          "position_m": [
+            0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_a",
+          "position_m": [
+            -0.18,
+            0.03,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_b",
+          "position_m": [
+            0.18,
+            0.03,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_c",
+          "position_m": [
+            0.18,
+            0.29,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_d",
+          "position_m": [
+            -0.18,
+            0.29,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        }
+      ],
+      "hinges": []
+    }
+  ],
+  "contacts": [
+    {
+      "entity": "bird_fixture",
+      "bone": "foot.L",
+      "target_point": "support_fixture.left",
+      "chain_length": 2,
+      "iterations": 128,
+      "t0": 0,
+      "t1": 2,
+      "tolerance_m": 0.0001,
+      "source": "fixture_sintetico.json"
+    },
+    {
+      "entity": "bird_fixture",
+      "bone": "foot.R",
+      "target_point": "support_fixture.right",
+      "chain_length": 2,
+      "iterations": 128,
+      "t0": 0,
+      "t1": 2,
+      "tolerance_m": 0.0001,
+      "source": "fixture_sintetico.json"
+    }
+  ],
+  "fx_events": [],
+  "motion": {
+    "status": "complete",
+    "catalog": "fixture_sintetico.json",
+    "assignments": "asignaciones.json",
+    "requests": [
+      {
+        "entity": "bird_fixture",
+        "action": "wing_open",
+        "anatomy": "avian",
+        "emotion": "neutral",
+        "load": "none",
+        "support": "feet",
+        "context": "flat"
+      }
+    ],
+    "candidates": [
+      {
+        "entity": "bird_fixture",
+        "action": "wing_open",
+        "anatomy": "avian",
+        "emotion": "neutral",
+        "load": "none",
+        "support": "feet",
+        "context": "flat",
+        "id": "authored_wing",
+        "provider": "argon",
+        "license_ref": "CREACION_SINTETICA_DE_PRUEBA_NO_BIBLIOTECA",
+        "approval_ref": "SOLO_PRUEBA_CPU",
+        "tracks": [
+          {
+            "bone": "wing.L",
+            "keys": [
+              {
+                "t": 0,
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "curve": "SMOOTH"
+              },
+              {
+                "t": 1,
+                "value": [
+                  15,
+                  0,
+                  0
+                ],
+                "curve": "SMOOTH"
+              },
+              {
+                "t": 2,
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "curve": "SMOOTH"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "camera": {
+    "shots": [
+      {
+        "id": "shot_A",
+        "t0": 0,
+        "t1": 1,
+        "transition": "CORTE",
+        "trajectory": {
+          "mode": "STATIC",
+          "position": [
+            0,
+            -4,
+            1.8
+          ],
+          "target": [
+            0,
+            0,
+            0.6
+          ],
+          "lens_mm": 28
+        },
+        "sensor_width_mm": 36,
+        "clip_start_m": 0.01,
+        "clip_end_m": 100,
+        "smoothing": 0,
+        "roll_deg": 0,
+        "handheld_amount": 0,
+        "check_points": [
+          "bird_fixture.centre"
+        ],
+        "ndc_margin": 0.03,
+        "ray_epsilon_m": 0.001,
+        "occlusion_allowed_objects": [
+          "bird_body",
+          "bird_head",
+          "eye_l",
+          "eye_r",
+          "pupil_l",
+          "pupil_r",
+          "scarf",
+          "wingmesh_L",
+          "wingmesh_R",
+          "bill"
+        ],
+        "min_clearance_m": 0.05,
+        "axis180": null,
+        "subjects": [
+          {
+            "id": "bird_fixture",
+            "scope": "FULL"
+          }
+        ]
+      },
+      {
+        "id": "shot_B",
+        "t0": 1,
+        "t1": 2,
+        "transition": {
+          "type": "FUNDIDO",
+          "duration_s": 0.25
+        },
+        "trajectory": {
+          "mode": "PAN",
+          "position": [
+            0,
+            -4,
+            1.8
+          ],
+          "target": [
+            0,
+            0,
+            0.6
+          ],
+          "lens_mm": 28,
+          "degrees": 15
+        },
+        "sensor_width_mm": 36,
+        "clip_start_m": 0.01,
+        "clip_end_m": 100,
+        "smoothing": 0,
+        "roll_deg": 0,
+        "handheld_amount": 0,
+        "check_points": [
+          "bird_fixture.centre"
+        ],
+        "ndc_margin": 0.03,
+        "ray_epsilon_m": 0.001,
+        "occlusion_allowed_objects": [
+          "bird_body",
+          "bird_head",
+          "eye_l",
+          "eye_r",
+          "pupil_l",
+          "pupil_r",
+          "scarf",
+          "wingmesh_L",
+          "wingmesh_R",
+          "bill"
+        ],
+        "min_clearance_m": 0.05,
+        "axis180": null,
+        "subjects": [
+          {
+            "id": "bird_fixture",
+            "scope": "FULL"
+          }
+        ]
+      }
+    ],
+    "transition_semantics": "incoming"
+  },
+  "lighting": {
+    "base": [
+      {
+        "id": "key_light",
+        "type": "AREA",
+        "position_m": [
+          0,
+          -2,
+          4
+        ],
+        "rotation_deg": [
+          25,
+          0,
+          0
+        ],
+        "energy": 400,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "exposure": 0,
+    "view_transform": "Standard",
+    "events": [
+      {
+        "object": "key_light",
+        "property": "energy",
+        "source": "fixture_sintetico.json",
+        "keys": [
+          {
+            "t": 0,
+            "value": 400,
+            "curve": "LINEAR"
+          },
+          {
+            "t": 2,
+            "value": 100,
+            "curve": "LINEAR"
+          }
+        ]
+      }
+    ],
+    "source": "fixture_sintetico.json"
+  },
+  "rules": {
+    "bone_length_error_m": 1e-05,
+    "root_speed_max_m_s": 5,
+    "root_accel_max_m_s2": 20,
+    "com_accel_max_m_s2": 20,
+    "joint_speed_max_deg_s": 900,
+    "slip_max_m_per_frame": 0.05,
+    "colliders": [
+      "bird_body",
+      "floor",
+      "prop_base"
+    ],
+    "allowed_collision_pairs": [],
+    "penetration_tolerance_m": 0.001,
+    "reject_surface_intersections": true,
+    "contact_pairs": [
+      [
+        "floor",
+        "prop_base"
+      ]
+    ]
+  },
+  "actions": [
+    {
+      "id": "dialog_1",
+      "accion": "hablar",
+      "actor": "bird_fixture",
+      "t": [
+        0.5,
+        1.5
+      ],
+      "cita": "Texto sintético para comprobar el archivo de tiempos. No se genera voz."
+    }
+  ],
+  "segments": [],
+  "render": {
+    "engine": "CYCLES",
+    "resolution": [
+      128,
+      128
+    ],
+    "samples": 1,
+    "seed": 42
+  },
+  "required_capabilities": [
+    "rostros_finales",
+    "ropa_final"
+  ],
+  "libraries": [],
+  "fixture_only": true,
+  "assets": [
+    {
+      "path": "asignaciones.json",
+      "sha256": "4d380bd12c592bc30f0150d84e1aab8cbd415f5787d1aee879591a1fb9f6abce",
+      "bytes": 42
+    },
+    {
+      "path": "fixture_sintetico.json",
+      "sha256": "3c89e6a7fc4c20cefa952d265919afde3a207aba7df21949a99e320bda7606b0",
+      "bytes": 120
+    }
+  ],
+  "sources": [
+    {
+      "module": "fixture_autogenerado_NO_MODULO_REAL",
+      "path": "fixture_sintetico.json",
+      "sha256": "3c89e6a7fc4c20cefa952d265919afde3a207aba7df21949a99e320bda7606b0"
+    }
+  ]
+}

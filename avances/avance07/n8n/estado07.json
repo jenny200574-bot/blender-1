@@ -1,0 +1,11 @@
+{
+  "id": "debwaH9svFMoTnOf",
+  "nodes": 577,
+  "versionId": "06d22a09-e7fa-40ff-9335-d81b6222a995",
+  "activeVersionId": "06d22a09-e7fa-40ff-9335-d81b6222a995",
+  "active": true,
+  "published_matches_saved": true,
+  "workflow_modified_in_AV07": false,
+  "source_backup_root_only_not_delivered": "/workspace/avance07/n8n/workflow_leido_privado.json",
+  "workflow_sha256": "7eda03c23da8b9a5091d7f2e8f40771e7380429fb8b01785267e19ea84794c8f"
+}

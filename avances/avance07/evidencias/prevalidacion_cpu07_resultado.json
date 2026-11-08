@@ -1,0 +1,1940 @@
+{
+  "date_bogota": "2026-11-07T22:22:42.185596-05:00",
+  "estado": "BLOQUEADO",
+  "faltantes": 15,
+  "errores": [
+    {
+      "codigo": "JSON_TRUNCADO",
+      "severidad": "BLOQUEO",
+      "campo": "motion/respuesta_2b.json",
+      "modulo": "2B/Argon",
+      "mensaje": "JSON truncado: recuperar respuesta íntegra",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "JSON truncado: recuperar respuesta íntegra",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CONTACTOS_DATOS_FALTANTES",
+      "severidad": "BLOQUEO",
+      "campo": "motion/contacts",
+      "modulo": "01/2B + Star",
+      "mensaje": "Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta lista completa explícita de contactos/anclas; no convertir ausencia/truncamiento en lista vacía",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "REGLAS_DATOS_FALTANTES",
+      "severidad": "BLOQUEO",
+      "campo": "rules/source_parameters",
+      "modulo": "biblioteca de reglas vigentes + 4a2/manifiesto",
+      "mensaje": "No están en la fuente estos parámetros: allowed_collision_pairs, bone_length_error_m, colliders, penetration_tolerance_m, reject_surface_intersections, root_accel_max_m_s2, root_speed_max_m_s",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": [
+        "allowed_collision_pairs",
+        "bone_length_error_m",
+        "colliders",
+        "penetration_tolerance_m",
+        "reject_surface_intersections",
+        "root_accel_max_m_s2",
+        "root_speed_max_m_s"
+      ],
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "PERFIL_ANATOMICO_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "entities/ch-piquito-030a/anatomy_profile",
+      "modulo": "ADN Maestro 03/04 + 01/Star puntos",
+      "mensaje": "Falta margen físico vigente",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Falta margen físico vigente",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": "adn_manifest.json",
+      "causa": "perfil_anatomico:ch-piquito-030a",
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-libro-cuentos__e1-8/recipe",
+      "modulo": "ADN OBJ/SELLO + catálogo de formas",
+      "mensaje": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-libro-cuentos__e1-8",
+      "source_record": "obj-libro-cuentos__e1-8",
+      "search_receipt": {
+        "state": "FALTA",
+        "object": "obj-libro-cuentos__e1-8",
+        "step": 5,
+        "score": null,
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "missing": [
+          "Interruptor .off presente"
+        ],
+        "attempts": [
+          {
+            "step": 1,
+            "recipe": null,
+            "state": "NOT_FOUND_OR_BBOX"
+          },
+          {
+            "step": 2,
+            "recipe": "almohada_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "arbol_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "armario_2puertas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "auto_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "banco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bicicletero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bloque_edificio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bolardo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cables_haz",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cama_marco_colchon",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "columna_estructural",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cortina_enrollable",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "escritorio_patas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "estanteria_abierta",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "farola_poste",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "hidrante_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "jardinera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "lampara_arquitecto",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "letrero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "manta_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "mesa_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "monitor_pantalla",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muro_plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muros_caja_con_huecos",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "parada_autobus",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "perchero_pie",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plafon_area",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "puerta_bisagra",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "quiosco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "rack_servidores",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "semaforo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_giratoria_ergonomica",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "teclado_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "toldo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "torre_pc",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "ventana_marco_vidrio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 3,
+            "state": "INCOMPLETE_PARTS",
+            "parts": [
+              "av07.book.letter_a",
+              "av07.book.letter_e",
+              "av07.book.letter_o"
+            ]
+          },
+          {
+            "step": 4,
+            "state": "OFF",
+            "reason": "Interruptor .off presente"
+          }
+        ],
+        "spent_usd": 0
+      },
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/Ventana con vista al arcoíris/recipe",
+      "modulo": "ADN OBJ/SELLO + catálogo de formas",
+      "mensaje": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:Ventana con vista al arcoíris",
+      "source_record": "Ventana con vista al arcoíris",
+      "search_receipt": {
+        "state": "FALTA",
+        "object": "Ventana con vista al arcoíris",
+        "step": 5,
+        "score": null,
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "missing": [
+          "Interruptor .off presente"
+        ],
+        "attempts": [
+          {
+            "step": 1,
+            "recipe": null,
+            "state": "NOT_FOUND_OR_BBOX"
+          },
+          {
+            "step": 2,
+            "recipe": "ventana_marco_vidrio",
+            "score": 0.24285714285714285,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.14285714285714285
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "almohada_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "arbol_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "armario_2puertas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "auto_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "banco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bicicletero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bloque_edificio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bolardo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cables_haz",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cama_marco_colchon",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "columna_estructural",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cortina_enrollable",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "escritorio_patas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "estanteria_abierta",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "farola_poste",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "hidrante_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "jardinera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "lampara_arquitecto",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "letrero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "manta_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "mesa_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "monitor_pantalla",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muro_plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muros_caja_con_huecos",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "parada_autobus",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "perchero_pie",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plafon_area",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "puerta_bisagra",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "quiosco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "rack_servidores",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "semaforo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_giratoria_ergonomica",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "teclado_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "toldo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "torre_pc",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 3,
+            "state": "INCOMPLETE_PARTS",
+            "parts": [
+              "av07.window.rainbow.red",
+              "av07.window.rainbow.orange",
+              "av07.window.rainbow.yellow",
+              "av07.window.rainbow.green",
+              "av07.window.rainbow.blue",
+              "av07.window.rainbow.indigo",
+              "av07.window.rainbow.violet"
+            ]
+          },
+          {
+            "step": 4,
+            "state": "OFF",
+            "reason": "Interruptor .off presente"
+          }
+        ],
+        "spent_usd": 0
+      },
+      "grupo": "B"
+    },
+    {
+      "codigo": "OBJETO_ADN_DATOS",
+      "severidad": "BLOQUEO",
+      "campo": "props/obj-cofre-dorado/recipe",
+      "modulo": "ADN OBJ/SELLO + catálogo de formas",
+      "mensaje": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Escalera agotada sin receta compatible ni despiece medido. ADN/medidas/referencia están conservados; faltan receta/despiece/puntos de la forma descrita. Proveedor Argon por defecto activo, sin gasto real en programación.",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "causa": "objeto:obj-cofre-dorado",
+      "source_record": "gdc-cofre-abecedario",
+      "search_receipt": {
+        "state": "FALTA",
+        "object": "obj-cofre-dorado",
+        "step": 5,
+        "score": null,
+        "producer": "ADN OBJ/SELLO + 4a2",
+        "missing": [
+          "Interruptor .off presente"
+        ],
+        "attempts": [
+          {
+            "step": 1,
+            "recipe": null,
+            "state": "NOT_FOUND_OR_BBOX"
+          },
+          {
+            "step": 2,
+            "recipe": "plafon_area",
+            "score": 0.20405405405405408,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.013513513513513514
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "almohada_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "arbol_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "armario_2puertas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "auto_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "banco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bicicletero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bloque_edificio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "bolardo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cables_haz",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cama_marco_colchon",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "columna_estructural",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "cortina_enrollable",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "escritorio_patas",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "estanteria_abierta",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "farola_poste",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "hidrante_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "jardinera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "lampara_arquitecto",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "letrero_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "manta_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "mesa_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "monitor_pantalla",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muro_plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "muros_caja_con_huecos",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "papelera_cilindro",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "parada_autobus",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "perchero_pie",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "plano",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "puerta_bisagra",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "quiosco_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "rack_servidores",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "semaforo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_giratoria_ergonomica",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "silla_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "teclado_simple",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "toldo_calle",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "torre_pc",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 2,
+            "recipe": "ventana_marco_vidrio",
+            "score": 0.2,
+            "components": {
+              "shape": 0.0,
+              "dimensions": 1.0,
+              "use": 0.0,
+              "words": 0.0
+            },
+            "conflict": true,
+            "minimum": 0.75
+          },
+          {
+            "step": 3,
+            "state": "INCOMPLETE_PARTS",
+            "parts": [
+              "av07.lock.color.shackle",
+              "av07.lock.number.shackle",
+              "av07.lock.letter.shackle",
+              "av07.lock.number.glyph",
+              "av07.lock.letter.glyph"
+            ]
+          },
+          {
+            "step": 4,
+            "state": "OFF",
+            "reason": "Interruptor .off presente"
+          }
+        ],
+        "spent_usd": 0
+      },
+      "grupo": "B"
+    },
+    {
+      "codigo": "BIBLIOTECA_SIN_VALIDAR",
+      "severidad": "BLOQUEO",
+      "campo": "motion/semantic_index/approval",
+      "modulo": "2B/Argon + biblioteca de movimientos",
+      "mensaje": "Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Faltan validación/aprobación técnica comprobables de movimientos: m_aterrizar_alerta, m_bostezo_caos, m_caminar_ciclo, m_disparo_caos, m_giro_decidido, m_giro_pasos, m_hablar_alarmado, m_hablar_entusiasta, m_hablar_misterioso, m_hablar_serena, m_hablar_visor, m_mirar_sorpresa, m_reposo_base, m_risa_caos, m_senalar_tu",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "movement_ids": [
+        "m_aterrizar_alerta",
+        "m_bostezo_caos",
+        "m_caminar_ciclo",
+        "m_disparo_caos",
+        "m_giro_decidido",
+        "m_giro_pasos",
+        "m_hablar_alarmado",
+        "m_hablar_entusiasta",
+        "m_hablar_misterioso",
+        "m_hablar_serena",
+        "m_hablar_visor",
+        "m_mirar_sorpresa",
+        "m_reposo_base",
+        "m_risa_caos",
+        "m_senalar_tu"
+      ],
+      "grupo": "B"
+    },
+    {
+      "codigo": "PROVISIONAL",
+      "severidad": "BLOQUEO",
+      "campo": "2B",
+      "modulo": "2B/Argon",
+      "mensaje": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "DATO_FALTANTE",
+      "severidad": "BLOQUEO",
+      "campo": "motion/status",
+      "modulo": "2B/Argon",
+      "mensaje": "Programa completo no acreditado",
+      "tipo": "completar dato",
+      "dato_encontrado": null,
+      "dato_esperado": "Programa completo no acreditado",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CONFLICTO",
+      "severidad": "BLOQUEO",
+      "campo": "events/27",
+      "modulo": "motor temporal",
+      "mensaje": "Dos escritores para la misma propiedad",
+      "tipo": "conflicto",
+      "dato_encontrado": null,
+      "dato_esperado": "Dos escritores para la misma propiedad",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CONFLICTO",
+      "severidad": "BLOQUEO",
+      "campo": "events/28",
+      "modulo": "motor temporal",
+      "mensaje": "Dos escritores para la misma propiedad",
+      "tipo": "conflicto",
+      "dato_encontrado": null,
+      "dato_esperado": "Dos escritores para la misma propiedad",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CONFLICTO",
+      "severidad": "BLOQUEO",
+      "campo": "events/29",
+      "modulo": "motor temporal",
+      "mensaje": "Dos escritores para la misma propiedad",
+      "tipo": "conflicto",
+      "dato_encontrado": null,
+      "dato_esperado": "Dos escritores para la misma propiedad",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CONFLICTO",
+      "severidad": "BLOQUEO",
+      "campo": "events/30",
+      "modulo": "motor temporal",
+      "mensaje": "Dos escritores para la misma propiedad",
+      "tipo": "conflicto",
+      "dato_encontrado": null,
+      "dato_esperado": "Dos escritores para la misma propiedad",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    },
+    {
+      "codigo": "CONFLICTO",
+      "severidad": "BLOQUEO",
+      "campo": "events/31",
+      "modulo": "motor temporal",
+      "mensaje": "Dos escritores para la misma propiedad",
+      "tipo": "conflicto",
+      "dato_encontrado": null,
+      "dato_esperado": "Dos escritores para la misma propiedad",
+      "accion": "Revisar y completar desde el productor indicado; no inventar",
+      "fuente": null,
+      "grupo": "B"
+    }
+  ],
+  "master": null,
+  "full_cpu_preview_passed": false,
+  "gpu_used": false,
+  "paid_network_calls_in_preflight": 0,
+  "production_approved": false
+}

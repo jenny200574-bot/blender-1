@@ -1,0 +1,243 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "NARRATIVE_COMPLETE_PHYSICS_PENDING"
+      ]
+    },
+    "assignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "personaje": {
+            "type": "string"
+          },
+          "accion_plan": {
+            "type": "string"
+          },
+          "movimiento": {
+            "type": "string",
+            "enum": [
+              "m_aterrizar_alerta",
+              "m_bostezo_caos",
+              "m_caminar_ciclo",
+              "m_disparo_caos",
+              "m_giro_decidido",
+              "m_giro_pasos",
+              "m_hablar_alarmado",
+              "m_hablar_entusiasta",
+              "m_hablar_misterioso",
+              "m_hablar_serena",
+              "m_hablar_visor",
+              "m_mirar_sorpresa",
+              "m_reposo_base",
+              "m_risa_caos",
+              "m_senalar_tu"
+            ]
+          },
+          "t0": {
+            "type": "number"
+          },
+          "t1": {
+            "type": "number"
+          },
+          "capa": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "support_in_source": {
+            "type": "string",
+            "enum": [
+              "DIRECT",
+              "SOURCE01",
+              "UNSUPPORTED"
+            ]
+          }
+        },
+        "required": [
+          "personaje",
+          "accion_plan",
+          "movimiento",
+          "t0",
+          "t1",
+          "capa",
+          "evidence",
+          "support_in_source"
+        ]
+      },
+      "minItems": 52,
+      "maxItems": 52
+    },
+    "movement_audit": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "m_aterrizar_alerta",
+              "m_bostezo_caos",
+              "m_caminar_ciclo",
+              "m_disparo_caos",
+              "m_giro_decidido",
+              "m_giro_pasos",
+              "m_hablar_alarmado",
+              "m_hablar_entusiasta",
+              "m_hablar_misterioso",
+              "m_hablar_serena",
+              "m_hablar_visor",
+              "m_mirar_sorpresa",
+              "m_reposo_base",
+              "m_risa_caos",
+              "m_senalar_tu"
+            ]
+          },
+          "narrative_fit": {
+            "type": "string",
+            "enum": [
+              "SUPPORTED",
+              "PARTIAL",
+              "UNSUPPORTED"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "structural_only": {
+            "type": "boolean"
+          },
+          "missing_for_physical_approval": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "narrative_fit",
+          "evidence",
+          "structural_only",
+          "missing_for_physical_approval"
+        ]
+      },
+      "minItems": 15,
+      "maxItems": 15
+    },
+    "contact_intents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entity": {
+            "type": "string"
+          },
+          "effector_or_attachment": {
+            "type": "string"
+          },
+          "target_entity_or_object": {
+            "type": "string"
+          },
+          "side": {
+            "type": "string"
+          },
+          "t0": {
+            "type": "number"
+          },
+          "t1": {
+            "type": "number"
+          },
+          "source_quote": {
+            "type": "string"
+          },
+          "missing_execution_parameters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "entity",
+          "effector_or_attachment",
+          "target_entity_or_object",
+          "side",
+          "t0",
+          "t1",
+          "source_quote",
+          "missing_execution_parameters"
+        ]
+      }
+    },
+    "initials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entity": {
+            "type": "string"
+          },
+          "pose": {
+            "type": "string",
+            "enum": [
+              "p_alarma_manos",
+              "p_alerta_pie",
+              "p_aterriza_flex",
+              "p_bostezo_mano",
+              "p_camina_1",
+              "p_camina_2",
+              "p_camina_3",
+              "p_camina_4",
+              "p_de_pie_base",
+              "p_disparo_ext",
+              "p_disparo_prep",
+              "p_energia_puno",
+              "p_habla_suave",
+              "p_risa_pecho",
+              "p_senalar_frente",
+              "p_sorpresa_cofre",
+              "p_visor_toque"
+            ]
+          },
+          "source": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "entity",
+          "pose",
+          "source"
+        ]
+      },
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "source_conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "status",
+    "assignments",
+    "movement_audit",
+    "contact_intents",
+    "initials",
+    "source_conflicts",
+    "unresolved"
+  ]
+}

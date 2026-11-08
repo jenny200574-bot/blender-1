@@ -1,0 +1,16 @@
+test_dialogo_no_se_repite_si_cruza_corte (dev2_runtime.Tests.test_dialogo_no_se_repite_si_cruza_corte) ... ok
+test_dialogos_reales_11_y_cortes (dev2_runtime.Tests.test_dialogos_reales_11_y_cortes) ... ok
+test_equilibrio_fuera_y_dentro (dev2_runtime.Tests.test_equilibrio_fuera_y_dentro) ... ok
+test_falta_texto_es_dato_01 (dev2_runtime.Tests.test_falta_texto_es_dato_01) ... ok
+test_fixture_unica_16_etapas (dev2_runtime.Tests.test_fixture_unica_16_etapas) ... ok
+test_material_dos_escritores_bloquea (dev2_runtime.Tests.test_material_dos_escritores_bloquea) ... ok
+test_montaje_fundido_cuenta_y_no_es_corte (dev2_runtime.Tests.test_montaje_fundido_cuenta_y_no_es_corte) ... ok
+test_oclusor_no_genera_video_parcial (dev2_runtime.Tests.test_oclusor_no_genera_video_parcial) ... ok
+test_off_montaje_no_se_ignora (dev2_runtime.Tests.test_off_montaje_no_se_ignora) ... ok
+test_salida_omni_jl_sin_audio_no_bloquea (dev2_runtime.Tests.test_salida_omni_jl_sin_audio_no_bloquea) ... ok
+test_transicion_saliente_no_se_adelanta (dev2_runtime.Tests.test_transicion_saliente_no_se_adelanta) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 3.667s
+
+OK

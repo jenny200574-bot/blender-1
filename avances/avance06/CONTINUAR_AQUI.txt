@@ -1,0 +1,12 @@
+AVANCE06 NO FINAL: esc1 BLOQUEADO15; VIDEO=null; GPU no reanudada.
+Bruto faseUS$0.2722640; acumulado conocidoUS$0.4765285; tope fase10 no agotado; reservas0.
+Leer INFORME_AVANCE_06.md y15_BLOQUEOS_ESC1.csv.
+Puente nuevo instalado y visudoPASS. Workflow publicado06d22a09-e7fa-40ff-9335-d81b6222a995; nuevo JSON opt-in formato_adn=ako_json/v1; legado conservado.
+Pago ADN vivo sigue off; no confundir publicado con gasto automático habilitado.
+CandidataVPS /opt/myia-motor-v9/avance06_20261107/esc1_candidata/entrada_escena.json.
+Piquito19huesos/40piezas construido CPU y luces3AREA+World correctas, pero faltan física/anclaje; no marcar aprobación.
+2B fuente original truncada, recuperación histórica no acredita completitud/contactos ni aprobación. Archivos2B intactos; no inventar.
+Vivo01 rechazado23errores; no aplicarlo. Auditoría02 correcta como FALTA, no generador de certificados.
+No repetir appliers de una sola ejecución ni trabajos ya liquidados. Se respaldaron los estados intermedios.
+Sólo reanudar pul0wcedwdkwm7 cuando pase previaCPU real deesc1; detener tras uso, jamás eliminar/terminar.
+Oro23/23 y16pruebas adicionales ya finalizaron. Ningún job pagado abierto.

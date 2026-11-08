@@ -1,0 +1,44 @@
+{
+  "PISTA": "PISTA INMI (2026-10-29): orden 74 — catálogo GENÉRICO de tipos de plano (convención de cine; no es de ningún canal ni episodio). Los números son VALORES INICIALES ajustables por Ricardo/Argon, no medidas de la historia. alto_cuadro = cuánto alto del personaje entra en el cuadro (en alturas del personaje); centro = a qué altura del personaje apunta la cámara (fracción de su altura).",
+  "fuente": "convención de cine (plano general / medio / primer plano / sobre el hombro); valores iniciales del taller orden 74",
+  "tipos": [
+    {
+      "id": "PG",
+      "nombre": "Plano general",
+      "usa_camara_molde": true,
+      "descripcion": "La cámara del molde de Blender tal cual (lugar, mira y lente del molde): muestra el lugar y a todos.",
+      "personajes_min": 0
+    },
+    {
+      "id": "PM",
+      "nombre": "Plano medio",
+      "usa_camara_molde": false,
+      "alto_cuadro": 0.62,
+      "centro": 0.76,
+      "descripcion": "De la cintura a la cabeza. La cámara sale del mismo lado (dirección) que la cámara del molde, a la altura de los ojos.",
+      "personajes_min": 1
+    },
+    {
+      "id": "PP",
+      "nombre": "Primer plano",
+      "usa_camara_molde": false,
+      "alto_cuadro": 0.3,
+      "centro": 0.88,
+      "descripcion": "Cabeza y hombros. Misma dirección que la cámara del molde.",
+      "personajes_min": 1
+    },
+    {
+      "id": "OTS",
+      "nombre": "Sobre el hombro",
+      "usa_camara_molde": false,
+      "alto_cuadro": 0.7,
+      "centro": 0.8,
+      "detras_m_en_alturas": 0.35,
+      "lado_hombro_en_alturas": 0.14,
+      "alto_camara": 0.9,
+      "descripcion": "Detrás del hombro de quien escucha, mirando a quien habla. El hombro se elige del lado bueno del eje de 180°.",
+      "personajes_min": 2
+    }
+  ],
+  "ojos_en_alturas": 0.93
+}

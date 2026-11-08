@@ -1,0 +1,7 @@
+{
+  "estado": "VALIDADO",
+  "faltantes": 0,
+  "errores": [],
+  "scope": "Native data preflight only; not actual CPU scene preview",
+  "gpu_used": false
+}

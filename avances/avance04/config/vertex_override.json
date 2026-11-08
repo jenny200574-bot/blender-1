@@ -1,0 +1,18 @@
+{
+  "project": "${GCP_PROJECT_ID}",
+  "location": "global",
+  "model": "gemini-3-flash-preview",
+  "endpoint": "https://aiplatform.googleapis.com",
+  "credential_file": "${VERTEX_SA_FILE}",
+  "scope": "isolated_avance04_not_live_yet",
+  "gross_tariff_usd_per_million": {
+    "input": 0.5,
+    "output_including_thoughts": 3.0
+  },
+  "price_source": "https://cloud.google.com/model-garden/pricing",
+  "authorized_cap_usd": 50,
+  "preventive_stop_usd": 45,
+  "max_output_tokens": 32768,
+  "timeout_s": 900,
+  "automatic_paid_calls": false
+}

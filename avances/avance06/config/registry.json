@@ -1,0 +1,57 @@
+{
+  "av06_bird01": {
+    "schema": "bird.schema.json",
+    "prompt": "bird_prompt.txt",
+    "sources": "bird_sources.json"
+  },
+  "av06_light01": {
+    "schema": "light.schema.json",
+    "prompt": "light_prompt.txt",
+    "sources": "light_sources.json"
+  },
+  "av06_live01": {
+    "schema": "live.schema.json",
+    "prompt": "live_prompt.txt",
+    "sources": "live_sources.json"
+  },
+  "av06_audit01": {
+    "schema": "audit.schema.json",
+    "prompt": "audit_prompt.txt",
+    "sources": "audit_sources.json"
+  },
+  "av06_bird02": {
+    "schema": "bird_compact.schema.json",
+    "prompt": "bird2_prompt.txt",
+    "sources": "bird2_sources.json"
+  },
+  "av06_light02": {
+    "schema": "light2.schema.json",
+    "prompt": "light2_prompt.txt",
+    "sources": "light_sources.json"
+  },
+  "av06_audit02": {
+    "schema": "audit2.schema.json",
+    "prompt": "audit2_prompt.txt",
+    "sources": "audit2_sources.json"
+  },
+  "av06_bird_appearance01": {
+    "schema": "bird_appearance.schema.json",
+    "prompt": "appearance_prompt.txt",
+    "sources": "appearance_sources.json"
+  },
+  "av06_bird_appearance02": {
+    "schema": "bird_appearance.schema.json",
+    "prompt": "appearance2_prompt.txt",
+    "sources": "appearance2_sources.json"
+  },
+  "av06_crest03": {
+    "schema": "crest.schema.json",
+    "prompt": "crest_prompt.txt",
+    "sources": "crest_sources.json"
+  },
+  "av06_lightworld03": {
+    "schema": "world.schema.json",
+    "prompt": "world_prompt.txt",
+    "sources": "world_sources.json"
+  }
+}

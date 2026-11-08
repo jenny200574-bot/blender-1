@@ -1,0 +1,138 @@
+{
+  "api_generation_succeeded": true,
+  "root_normalized_from_single_list": true,
+  "ready_to_apply": false,
+  "expected_missing_fields": 24,
+  "exact_fields_addressed": 2,
+  "error_count": 31,
+  "errors": [
+    {
+      "field": "2B",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "bindings/Centro de la habitación/reference_kind",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "camera/inputs_4g",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "camera/v3/0/PAN",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "camera/v5/0/CRANE",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "camera/v7/0/PAN",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "ejes",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "entities/ch-piquito-030a/anatomy_profile",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "environment/live_data",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "environment/live_source",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "iluminacion",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "lighting",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "luces",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "motion/contacts",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "motion/respuesta_2b.json",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "motion/semantic_index/approval",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "motion/status",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "props/Ventana con vista al arcoíris/dna_ref",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "props/obj-cama/recipe",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "props/obj-libro-cuentos__e1-8/dna_ref",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "props/obj-visor-spark/dna_ref",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "rules/source_parameters",
+      "reason": "No exact resolution supplied"
+    },
+    {
+      "field": "object_recipes/obj-libro-cuentos__e1-8",
+      "reason": "Pieza incompleta"
+    },
+    {
+      "field": "entities/ch-piquito-030a/bird_dna",
+      "reason": "Especificación ósea incompleta"
+    },
+    {
+      "field": "entities/ch-piquito-030a/bird_dna",
+      "reason": "Especificación ósea incompleta"
+    },
+    {
+      "field": "entities/ch-piquito-030a/bird_dna",
+      "reason": "Especificación ósea incompleta"
+    },
+    {
+      "field": "entities/ch-piquito-030a/bird_dna",
+      "reason": "Incomplete avian rig; missing beak,foot.L,foot.R,head,leg.L,leg.R,neck,tail,toe.L.back,toe.L.front1,toe.L.front2,toe.L.front3,toe.R.back,toe.R.front1,toe.R.front2,toe.R.front3"
+    },
+    {
+      "field": "live_scenery",
+      "reason": "Unsupported property material.saturation"
+    },
+    {
+      "field": "live_scenery",
+      "reason": "Expected-state contract incomplete"
+    },
+    {
+      "field": "camera_numeric",
+      "reason": "Missing shots v1,v10,v11,v12,v2,v4,v5,v6,v7,v8,v9"
+    },
+    {
+      "field": "equivalences",
+      "reason": "No verifiable JSON-pointer evidence; fuzzy normalization is not identity proof"
+    }
+  ],
+  "applied_fields": 0,
+  "production_approved": false,
+  "model_used": "gemini-3-flash-preview",
+  "not_gemini_4_argon": true
+}

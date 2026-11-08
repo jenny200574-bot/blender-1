@@ -1,0 +1,1387 @@
+{
+  "scene": "guardianes_esc1",
+  "fps": 24,
+  "duration_s": 55.0,
+  "environment": {
+    "mode": "blend",
+    "path": "set.blend",
+    "sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733",
+    "visibility": {
+      "luz_esc1_0": false,
+      "luz_esc1_1": false,
+      "luz_esc1_2": false,
+      "luz_esc2_0": false,
+      "luz_esc2_1": false,
+      "luz_esc2_2": false,
+      "luz_esc3_0": false,
+      "luz_esc3_1": false,
+      "luz_esc3_2": false,
+      "luz_esc8_0": false,
+      "luz_esc8_1": false,
+      "luz_esc8_2": false,
+      "luz_esc9_0": false,
+      "luz_esc9_1": false
+    },
+    "live": "escenario_vivo.json"
+  },
+  "actors": [
+    {
+      "id": "ch-don-caos-7adf",
+      "spec": {
+        "id": "ch-don-caos-7adf",
+        "altura_m": 0.18,
+        "cabezas": 3.5,
+        "complexion": "delgado",
+        "atletico": false,
+        "extras": [],
+        "citas": {
+          "altura": "Estatura ~0.18 m",
+          "cabezas": "~3.5 cabezas",
+          "complexion": "delgado"
+        },
+        "altura_referencia_perfil_m": 1.72
+      },
+      "profile": {
+        "retraso_tronco_s": 0.002,
+        "retraso_brazos_s": 0.003,
+        "umbral_fase_intermedia_deg": 45.0,
+        "suavizado_inicio_fin": 0.25,
+        "vel_max_deg_s": 900,
+        "anclaje_pies": 1,
+        "margen_equilibrio_m": 0.04,
+        "correccion_equilibrio_max_deg": 12.0,
+        "vel_vertical_max_m_s": 0.9,
+        "masa_rel": 0.3,
+        "temblor_deg": 0,
+        "vuela": 0,
+        "cola_contrapeso": 0,
+        "cuadrupedo": 0,
+        "anclaje_excursion_max_m": 0.65
+      },
+      "colors": {
+        "columna": [
+          0.45,
+          0.2,
+          0.6
+        ],
+        "pecho": [
+          0.45,
+          0.2,
+          0.6
+        ],
+        "cuello": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "cabeza": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "clavicula": [
+          0.45,
+          0.2,
+          0.6
+        ],
+        "brazo": [
+          0.45,
+          0.2,
+          0.6
+        ],
+        "antebrazo": [
+          0.45,
+          0.2,
+          0.6
+        ],
+        "mano": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "muslo": [
+          0.4,
+          0.18,
+          0.55
+        ],
+        "pierna": [
+          0.4,
+          0.18,
+          0.55
+        ],
+        "pie": [
+          0.8,
+          0.15,
+          0.15
+        ]
+      },
+      "initial_pose_id": "p_de_pie_base",
+      "segments": [
+        {
+          "t0": 0.0,
+          "t1": 9.0,
+          "p0": [
+            2.35,
+            2.75,
+            0.0
+          ],
+          "p1": [
+            2.35,
+            2.75,
+            0.0
+          ],
+          "yaw": 187.0
+        },
+        {
+          "t0": 9.0,
+          "t1": 11.0,
+          "p0": [
+            2.35,
+            2.75,
+            0.0
+          ],
+          "p1": [
+            2.55,
+            3.15,
+            0.0
+          ],
+          "yaw": 60.0
+        },
+        {
+          "t0": 11.0,
+          "t1": 15.5,
+          "p0": [
+            2.55,
+            3.15,
+            0.0
+          ],
+          "p1": [
+            2.55,
+            3.15,
+            0.0
+          ],
+          "yaw": 60.0
+        },
+        {
+          "t0": 15.5,
+          "t1": 18.0,
+          "p0": [
+            2.55,
+            3.15,
+            0.0
+          ],
+          "p1": [
+            1.65,
+            3.3,
+            0.0
+          ],
+          "yaw": 170.0
+        },
+        {
+          "t0": 18.0,
+          "t1": 55.0,
+          "p0": [
+            1.65,
+            3.3,
+            0.0
+          ],
+          "p1": [
+            1.65,
+            3.3,
+            0.0
+          ],
+          "yaw": -65.0
+        }
+      ],
+      "floor_z": 0,
+      "appearance": {
+        "colores.piel": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "colores.cara": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "colores.pelo": [
+          0.75,
+          0.75,
+          0.78
+        ],
+        "colores.ropa_superior": [
+          0.45,
+          0.2,
+          0.6
+        ],
+        "colores.ropa_inferior": [
+          0.4,
+          0.18,
+          0.55
+        ],
+        "colores.zapatos": [
+          0.8,
+          0.15,
+          0.15
+        ],
+        "capa": {
+          "color": [
+            0.45,
+            0.15,
+            0.58
+          ],
+          "largo_m": 0.7,
+          "rasgada": true
+        },
+        "gordura": {
+          "torso": 1.25,
+          "cadera": 1.25,
+          "piernas": 0.85,
+          "brazos": 0.95,
+          "cara": 1.15,
+          "pies": 1.35,
+          "sombrero_copa_torcido": true,
+          "bufanda_rayas": true,
+          "bigote_enrollado": true,
+          "pistola_rayos": true,
+          "botones_colores": [
+            "amarillo",
+            "verde",
+            "rojo"
+          ]
+        }
+      },
+      "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+      "solver_policy": {
+        "foot_anchoring": true
+      }
+    },
+    {
+      "id": "ch-spark-468e",
+      "spec": {
+        "id": "ch-spark-468e",
+        "altura_m": 1.16,
+        "cabezas": 5.0,
+        "complexion": "delgado",
+        "atletico": false,
+        "extras": [],
+        "citas": {
+          "altura": "Estatura ~1.16 m",
+          "cabezas": "~5.0 cabezas",
+          "complexion": "delgado"
+        },
+        "altura_referencia_perfil_m": 1.72
+      },
+      "profile": {
+        "retraso_tronco_s": 0.026,
+        "retraso_brazos_s": 0.051,
+        "umbral_fase_intermedia_deg": 45.0,
+        "suavizado_inicio_fin": 0.25,
+        "vel_max_deg_s": 389.0,
+        "anclaje_pies": 1,
+        "margen_equilibrio_m": 0.04,
+        "correccion_equilibrio_max_deg": 12.0,
+        "vel_vertical_max_m_s": 0.9,
+        "masa_rel": 0.3,
+        "temblor_deg": 0,
+        "vuela": 0,
+        "cola_contrapeso": 0,
+        "cuadrupedo": 0,
+        "anclaje_excursion_max_m": 0.65
+      },
+      "colors": {
+        "columna": [
+          0.1,
+          0.48,
+          0.82
+        ],
+        "pecho": [
+          0.1,
+          0.48,
+          0.82
+        ],
+        "cuello": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "cabeza": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "clavicula": [
+          0.1,
+          0.48,
+          0.82
+        ],
+        "brazo": [
+          0.1,
+          0.48,
+          0.82
+        ],
+        "antebrazo": [
+          0.1,
+          0.48,
+          0.82
+        ],
+        "mano": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "muslo": [
+          0.08,
+          0.42,
+          0.75
+        ],
+        "pierna": [
+          0.08,
+          0.42,
+          0.75
+        ],
+        "pie": [
+          0.12,
+          0.52,
+          0.85
+        ]
+      },
+      "initial_pose_id": "p_de_pie_base",
+      "segments": [
+        {
+          "t0": 0.0,
+          "t1": 18.0,
+          "p0": [
+            1.45,
+            1.75,
+            0.0
+          ],
+          "p1": [
+            1.45,
+            1.75,
+            0.0
+          ],
+          "yaw": 17.0
+        },
+        {
+          "t0": 18.0,
+          "t1": 30.0,
+          "p0": [
+            1.45,
+            1.75,
+            0.0
+          ],
+          "p1": [
+            1.45,
+            1.75,
+            0.0
+          ],
+          "yaw": 17.0
+        },
+        {
+          "t0": 30.0,
+          "t1": 33.0,
+          "p0": [
+            1.45,
+            1.75,
+            0.0
+          ],
+          "p1": [
+            1.65,
+            1.95,
+            0.0
+          ],
+          "yaw": 5.0
+        },
+        {
+          "t0": 33.0,
+          "t1": 44.0,
+          "p0": [
+            1.65,
+            1.95,
+            0.0
+          ],
+          "p1": [
+            1.65,
+            1.95,
+            0.0
+          ],
+          "yaw": 5.0
+        },
+        {
+          "t0": 44.0,
+          "t1": 46.0,
+          "p0": [
+            1.65,
+            1.95,
+            0.0
+          ],
+          "p1": [
+            1.65,
+            1.95,
+            0.0
+          ],
+          "yaw": -90.0
+        },
+        {
+          "t0": 46.0,
+          "t1": 55.0,
+          "p0": [
+            1.65,
+            1.95,
+            0.0
+          ],
+          "p1": [
+            1.65,
+            1.95,
+            0.0
+          ],
+          "yaw": -90.0
+        }
+      ],
+      "floor_z": 0,
+      "appearance": {
+        "gordura": {
+          "torso": 0.88,
+          "cadera": 0.82,
+          "piernas": 0.86,
+          "brazos": 0.88,
+          "cara": 0.85
+        },
+        "colores.piel": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "colores.cara": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "colores.pelo": [
+          0.28,
+          0.18,
+          0.12
+        ],
+        "colores.ropa_superior": [
+          0.1,
+          0.48,
+          0.82
+        ],
+        "colores.ropa_inferior": [
+          0.08,
+          0.42,
+          0.75
+        ],
+        "colores.zapatos": [
+          0.12,
+          0.52,
+          0.85
+        ],
+        "gafas": {
+          "gafas": true,
+          "gafas_color": [
+            0.2,
+            0.75,
+            1.0
+          ]
+        }
+      },
+      "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+      "solver_policy": {
+        "foot_anchoring": true
+      }
+    },
+    {
+      "id": "ch-valentina-a9be",
+      "spec": {
+        "id": "ch-valentina-a9be",
+        "altura_m": 1.12,
+        "cabezas": 4.5,
+        "complexion": "delgado",
+        "atletico": false,
+        "extras": [],
+        "citas": {
+          "altura": "Estatura ~1.12 m",
+          "cabezas": "~4.5 cabezas",
+          "complexion": "delgado"
+        },
+        "altura_referencia_perfil_m": 1.72
+      },
+      "profile": {
+        "retraso_tronco_s": 0.024,
+        "retraso_brazos_s": 0.048,
+        "umbral_fase_intermedia_deg": 45.0,
+        "suavizado_inicio_fin": 0.25,
+        "vel_max_deg_s": 402.0,
+        "anclaje_pies": 1,
+        "margen_equilibrio_m": 0.04,
+        "correccion_equilibrio_max_deg": 12.0,
+        "vel_vertical_max_m_s": 0.9,
+        "masa_rel": 0.3,
+        "temblor_deg": 0,
+        "vuela": 0,
+        "cola_contrapeso": 0,
+        "cuadrupedo": 0,
+        "anclaje_excursion_max_m": 0.65
+      },
+      "colors": {
+        "columna": [
+          0.72,
+          0.18,
+          0.58
+        ],
+        "pecho": [
+          0.72,
+          0.18,
+          0.58
+        ],
+        "cuello": [
+          0.78,
+          0.52,
+          0.38
+        ],
+        "cabeza": [
+          0.78,
+          0.52,
+          0.38
+        ],
+        "clavicula": [
+          0.72,
+          0.18,
+          0.58
+        ],
+        "brazo": [
+          0.72,
+          0.18,
+          0.58
+        ],
+        "antebrazo": [
+          0.72,
+          0.18,
+          0.58
+        ],
+        "mano": [
+          0.78,
+          0.52,
+          0.38
+        ],
+        "muslo": [
+          0.65,
+          0.15,
+          0.52
+        ],
+        "pierna": [
+          0.65,
+          0.15,
+          0.52
+        ],
+        "pie": [
+          0.78,
+          0.2,
+          0.6
+        ]
+      },
+      "initial_pose_id": "p_de_pie_base",
+      "segments": [
+        {
+          "t0": 0.0,
+          "t1": 18.0,
+          "p0": [
+            2.75,
+            2.65,
+            0.0
+          ],
+          "p1": [
+            2.75,
+            2.65,
+            0.0
+          ],
+          "yaw": -127.0
+        },
+        {
+          "t0": 18.0,
+          "t1": 30.0,
+          "p0": [
+            2.75,
+            2.65,
+            0.0
+          ],
+          "p1": [
+            2.75,
+            2.65,
+            0.0
+          ],
+          "yaw": -127.0
+        },
+        {
+          "t0": 30.0,
+          "t1": 33.0,
+          "p0": [
+            2.75,
+            2.65,
+            0.0
+          ],
+          "p1": [
+            2.55,
+            2.45,
+            0.0
+          ],
+          "yaw": -124.0
+        },
+        {
+          "t0": 33.0,
+          "t1": 44.0,
+          "p0": [
+            2.55,
+            2.45,
+            0.0
+          ],
+          "p1": [
+            2.55,
+            2.45,
+            0.0
+          ],
+          "yaw": -124.0
+        },
+        {
+          "t0": 44.0,
+          "t1": 46.0,
+          "p0": [
+            2.55,
+            2.45,
+            0.0
+          ],
+          "p1": [
+            2.55,
+            2.45,
+            0.0
+          ],
+          "yaw": -90.0
+        },
+        {
+          "t0": 46.0,
+          "t1": 55.0,
+          "p0": [
+            2.55,
+            2.45,
+            0.0
+          ],
+          "p1": [
+            2.55,
+            2.45,
+            0.0
+          ],
+          "yaw": -90.0
+        }
+      ],
+      "floor_z": 0,
+      "appearance": {
+        "gordura": {
+          "torso": 0.88,
+          "cadera": 0.82,
+          "piernas": 0.86,
+          "brazos": 0.88,
+          "cara": 0.85
+        },
+        "colores.piel": [
+          0.78,
+          0.52,
+          0.38
+        ],
+        "colores.cara": [
+          0.78,
+          0.52,
+          0.38
+        ],
+        "pelo_largo": {
+          "ocultar_pelo_base": true,
+          "largo_m": 0.45,
+          "color": [
+            0.12,
+            0.08,
+            0.1
+          ]
+        },
+        "colores.ropa_superior": [
+          0.72,
+          0.18,
+          0.58
+        ],
+        "colores.ropa_inferior": [
+          0.65,
+          0.15,
+          0.52
+        ],
+        "colores.zapatos": [
+          0.78,
+          0.2,
+          0.6
+        ],
+        "capa": {
+          "color": [
+            0.95,
+            0.45,
+            0.7
+          ],
+          "largo_m": 0.45,
+          "rasgada": false
+        },
+        "pulsera": {
+          "muneca": "izquierda",
+          "color": [
+            0.85,
+            0.2,
+            0.6
+          ],
+          "escudo_empatia": true,
+          "monos_altos_lazos_magenta": true,
+          "pantuflas_conejo": true
+        }
+      },
+      "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+      "solver_policy": {
+        "foot_anchoring": true
+      }
+    },
+    {
+      "id": "ch-eco-eff3",
+      "spec": {
+        "id": "ch-eco-eff3",
+        "altura_m": 1.02,
+        "cabezas": 6.5,
+        "complexion": "delgado",
+        "atletico": false,
+        "extras": [],
+        "citas": {
+          "altura": "Estatura ~1.02 m",
+          "cabezas": "~6.5 cabezas",
+          "complexion": "delgado"
+        },
+        "altura_referencia_perfil_m": 1.72
+      },
+      "profile": {
+        "retraso_tronco_s": 0.021,
+        "retraso_brazos_s": 0.042,
+        "umbral_fase_intermedia_deg": 45.0,
+        "suavizado_inicio_fin": 0.25,
+        "vel_max_deg_s": 437.0,
+        "anclaje_pies": 1,
+        "margen_equilibrio_m": 0.04,
+        "correccion_equilibrio_max_deg": 12.0,
+        "vel_vertical_max_m_s": 0.9,
+        "masa_rel": 0.3,
+        "temblor_deg": 0,
+        "vuela": 0,
+        "cola_contrapeso": 0,
+        "cuadrupedo": 0,
+        "anclaje_excursion_max_m": 0.65
+      },
+      "colors": {
+        "columna": [
+          0.15,
+          0.52,
+          0.28
+        ],
+        "pecho": [
+          0.15,
+          0.52,
+          0.28
+        ],
+        "cuello": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "cabeza": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "clavicula": [
+          0.15,
+          0.52,
+          0.28
+        ],
+        "brazo": [
+          0.15,
+          0.52,
+          0.28
+        ],
+        "antebrazo": [
+          0.15,
+          0.52,
+          0.28
+        ],
+        "mano": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "muslo": [
+          0.14,
+          0.48,
+          0.25
+        ],
+        "pierna": [
+          0.14,
+          0.48,
+          0.25
+        ],
+        "pie": [
+          0.16,
+          0.55,
+          0.3
+        ]
+      },
+      "initial_pose_id": "p_de_pie_base",
+      "segments": [
+        {
+          "t0": 0.0,
+          "t1": 18.0,
+          "p0": [
+            3.25,
+            2.15,
+            0.0
+          ],
+          "p1": [
+            3.25,
+            2.15,
+            0.0
+          ],
+          "yaw": -171.0
+        },
+        {
+          "t0": 18.0,
+          "t1": 30.0,
+          "p0": [
+            3.25,
+            2.15,
+            0.0
+          ],
+          "p1": [
+            3.25,
+            2.15,
+            0.0
+          ],
+          "yaw": -171.0
+        },
+        {
+          "t0": 30.0,
+          "t1": 33.0,
+          "p0": [
+            3.25,
+            2.15,
+            0.0
+          ],
+          "p1": [
+            2.95,
+            2.1,
+            0.0
+          ],
+          "yaw": -172.0
+        },
+        {
+          "t0": 33.0,
+          "t1": 44.0,
+          "p0": [
+            2.95,
+            2.1,
+            0.0
+          ],
+          "p1": [
+            2.95,
+            2.1,
+            0.0
+          ],
+          "yaw": -172.0
+        },
+        {
+          "t0": 44.0,
+          "t1": 46.0,
+          "p0": [
+            2.95,
+            2.1,
+            0.0
+          ],
+          "p1": [
+            2.95,
+            2.1,
+            0.0
+          ],
+          "yaw": -90.0
+        },
+        {
+          "t0": 46.0,
+          "t1": 55.0,
+          "p0": [
+            2.95,
+            2.1,
+            0.0
+          ],
+          "p1": [
+            2.95,
+            2.1,
+            0.0
+          ],
+          "yaw": -90.0
+        }
+      ],
+      "floor_z": 0,
+      "appearance": {
+        "gordura": {
+          "torso": 0.88,
+          "cadera": 0.82,
+          "piernas": 0.86,
+          "brazos": 0.88,
+          "cara": 0.85
+        },
+        "colores.piel": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "colores.cara": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "pelo_largo": {
+          "ocultar_pelo_base": true,
+          "largo_m": 0.45,
+          "color": [
+            0.18,
+            0.58,
+            0.25
+          ]
+        },
+        "colores.ropa_superior": [
+          0.15,
+          0.52,
+          0.28
+        ],
+        "colores.ropa_inferior": [
+          0.14,
+          0.48,
+          0.25
+        ],
+        "colores.zapatos": [
+          0.16,
+          0.55,
+          0.3
+        ]
+      },
+      "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+      "solver_policy": {
+        "foot_anchoring": true
+      }
+    },
+    {
+      "id": "ch-pintor-bce0",
+      "spec": {
+        "id": "ch-pintor-bce0",
+        "altura_m": 1.06,
+        "cabezas": 6.5,
+        "complexion": "delgado",
+        "atletico": false,
+        "extras": [],
+        "citas": {
+          "altura": "Estatura ~1.06 m",
+          "cabezas": "~6.5 cabezas",
+          "complexion": "delgado"
+        },
+        "altura_referencia_perfil_m": 1.72
+      },
+      "profile": {
+        "retraso_tronco_s": 0.022,
+        "retraso_brazos_s": 0.045,
+        "umbral_fase_intermedia_deg": 45.0,
+        "suavizado_inicio_fin": 0.25,
+        "vel_max_deg_s": 422.0,
+        "anclaje_pies": 1,
+        "margen_equilibrio_m": 0.04,
+        "correccion_equilibrio_max_deg": 12.0,
+        "vel_vertical_max_m_s": 0.9,
+        "masa_rel": 0.3,
+        "temblor_deg": 0,
+        "vuela": 0,
+        "cola_contrapeso": 0,
+        "cuadrupedo": 0,
+        "anclaje_excursion_max_m": 0.65
+      },
+      "colors": {
+        "columna": [
+          0.95,
+          0.82,
+          0.15
+        ],
+        "pecho": [
+          0.95,
+          0.82,
+          0.15
+        ],
+        "cuello": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "cabeza": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "clavicula": [
+          0.95,
+          0.82,
+          0.15
+        ],
+        "brazo": [
+          0.95,
+          0.82,
+          0.15
+        ],
+        "antebrazo": [
+          0.95,
+          0.82,
+          0.15
+        ],
+        "mano": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "muslo": [
+          0.18,
+          0.28,
+          0.58
+        ],
+        "pierna": [
+          0.18,
+          0.28,
+          0.58
+        ],
+        "pie": [
+          0.32,
+          0.2,
+          0.15
+        ]
+      },
+      "initial_pose_id": "p_de_pie_base",
+      "segments": [
+        {
+          "t0": 0.0,
+          "t1": 18.0,
+          "p0": [
+            2.95,
+            1.65,
+            0.0
+          ],
+          "p1": [
+            2.95,
+            1.65,
+            0.0
+          ],
+          "yaw": 153.0
+        },
+        {
+          "t0": 18.0,
+          "t1": 30.0,
+          "p0": [
+            2.95,
+            1.65,
+            0.0
+          ],
+          "p1": [
+            2.95,
+            1.65,
+            0.0
+          ],
+          "yaw": 153.0
+        },
+        {
+          "t0": 30.0,
+          "t1": 33.0,
+          "p0": [
+            2.95,
+            1.65,
+            0.0
+          ],
+          "p1": [
+            2.75,
+            1.85,
+            0.0
+          ],
+          "yaw": 163.0
+        },
+        {
+          "t0": 33.0,
+          "t1": 44.0,
+          "p0": [
+            2.75,
+            1.85,
+            0.0
+          ],
+          "p1": [
+            2.75,
+            1.85,
+            0.0
+          ],
+          "yaw": 163.0
+        },
+        {
+          "t0": 44.0,
+          "t1": 46.0,
+          "p0": [
+            2.75,
+            1.85,
+            0.0
+          ],
+          "p1": [
+            2.75,
+            1.85,
+            0.0
+          ],
+          "yaw": -90.0
+        },
+        {
+          "t0": 46.0,
+          "t1": 55.0,
+          "p0": [
+            2.75,
+            1.85,
+            0.0
+          ],
+          "p1": [
+            2.75,
+            1.85,
+            0.0
+          ],
+          "yaw": -90.0
+        }
+      ],
+      "floor_z": 0,
+      "appearance": {
+        "colores.piel": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "colores.cara": [
+          0.96,
+          0.78,
+          0.65
+        ],
+        "colores.ropa_inferior": [
+          0.18,
+          0.28,
+          0.58
+        ],
+        "colores.pelo": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "colores.ropa_superior": [
+          0.95,
+          0.82,
+          0.15
+        ],
+        "colores.zapatos": [
+          0.32,
+          0.2,
+          0.15
+        ],
+        "gordura": {
+          "torso": 1.22,
+          "cadera": 1.2,
+          "piernas": 0.9,
+          "brazos": 0.95,
+          "cara": 1.12,
+          "copete_pincel": true,
+          "boina_roja_ladeada": true,
+          "pincel_oreja": true,
+          "manchas_pintura_multicolor": true,
+          "solapa_abc": true
+        }
+      },
+      "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+      "solver_policy": {
+        "foot_anchoring": true
+      }
+    }
+  ],
+  "props": [],
+  "catalog": "catalogo_poses_escena.json",
+  "assignments": "asignacion_para_motor.json",
+  "camera": {
+    "mode": "auto_inside",
+    "source": "AUTOMATICA, NO SB",
+    "cause": "a: cámara/SB no entregados",
+    "clip_end": 1000,
+    "sensor_width_mm": 36,
+    "margin": 2.1,
+    "direction": [
+      0,
+      -2,
+      1.2
+    ],
+    "candidates": [
+      "cam_01_esc1",
+      "cam_02_esc1",
+      "cam_03_esc2",
+      "cam_04_esc2",
+      "cam_05_esc3",
+      "cam_06_esc3",
+      "cam_07_esc8",
+      "cam_08_esc8",
+      "cam_09_esc9",
+      "cam_10_esc9",
+      "cam_planta"
+    ],
+    "lens_limits": [
+      10.0,
+      50.0
+    ],
+    "margin_fraction": 0.05,
+    "floor_z": 0.0
+  },
+  "solver": {
+    "slerp_raiz": false,
+    "contacto_apoyos": true,
+    "ik_piso_suave": false,
+    "piso_suave": false,
+    "equilibrio_memoria": false,
+    "anclaje_mismo_cuadro": false,
+    "orden_medicion": false
+  },
+  "rules": {
+    "layers": [
+      "base",
+      "locomocion",
+      "gesto"
+    ],
+    "root_mode": "segments",
+    "kimodo_source": "pendiente retarget universal; catálogo 2B cacheado, NO pulida nueva"
+  },
+  "render": {
+    "samples": 8,
+    "width": 960,
+    "height": 540,
+    "world_color": [
+      0.22,
+      0.22,
+      0.22
+    ],
+    "view_transform": "AgX",
+    "lights": [
+      {
+        "id": "luz_tecnica",
+        "type": "SUN",
+        "pos": [
+          0,
+          0,
+          20
+        ],
+        "rot_deg": [
+          20,
+          -25,
+          -25
+        ],
+        "energy": 2.0,
+        "color": [
+          1,
+          0.94,
+          0.86
+        ],
+        "size": 5
+      },
+      {
+        "id": "relleno_tecnico",
+        "type": "SUN",
+        "pos": [
+          0,
+          0,
+          20
+        ],
+        "rot_deg": [
+          30,
+          15,
+          125
+        ],
+        "energy": 0.65,
+        "color": [
+          0.8,
+          0.9,
+          1
+        ],
+        "size": 5
+      },
+      {
+        "id": "relleno_interior_tecnico",
+        "type": "AREA",
+        "pos": [
+          2.25,
+          2.0,
+          2.6
+        ],
+        "rot_deg": [
+          0,
+          0,
+          0
+        ],
+        "energy": 180.0,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "size": 2.5
+      }
+    ],
+    "exposure": 0.0
+  },
+  "provisional": [
+    {
+      "campo": "ejes",
+      "modulo": "01/4a2",
+      "mensaje": "Provisional técnico: +Y frente/+Z arriba, ejes no certificados"
+    },
+    {
+      "campo": "apariencia",
+      "modulo": "puente de apariencia",
+      "mensaje": "Cápsulas del rig con colores reales; controles de pelo/vestuario/gafas/FX conservados pero no todos geometrizados; NO calidad final"
+    },
+    {
+      "campo": "luces",
+      "modulo": "motor/configuración técnica",
+      "mensaje": "Luces CPU técnicas explícitas en entrada; no SB ni iluminación artística aprobada"
+    },
+    {
+      "campo": "ch-piquito-030a",
+      "modulo": "ADN/ancla",
+      "mensaje": "Ave excluida; no se eligió hombro ni rig humano"
+    },
+    {
+      "campo": "2B",
+      "modulo": "2B/Argon",
+      "mensaje": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada"
+    },
+    {
+      "campo": "iluminacion",
+      "modulo": "4a2/configuración técnica",
+      "mensaje": "El blend contiene luces de varias escenas simultáneas que lavan los RGB. Para esta previa se desactivan luces fuente por lista EXPLÍCITA y se aplican luces neutrales técnicas declaradas; no es luz artística aprobada."
+    },
+    {
+      "campo": "adn_entities",
+      "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+      "mensaje": "ADN de personajes y objetos añadido al paquete. Texto/medidas existen; la representación de ropa, rasgos, materiales por pieza y anclas ejecutables aún no está parametrizada. No se presenta la cápsula como apariencia final."
+    },
+    {
+      "campo": "changes/object,time,property,value",
+      "modulo": "4a/4a4 + 01",
+      "mensaje": "Llegan inicio/fin y variantes como texto, sin binding inequívoco a objetos Blender ni keyframes de propiedades. No se inventan."
+    }
+  ],
+  "adn_entities": "adn_entidades.json"
+}

@@ -1,0 +1,5705 @@
+{
+  "slots": [
+    "bone_length_error_m",
+    "root_speed_max_m_s",
+    "root_accel_max_m_s2",
+    "com_accel_max_m_s2",
+    "slip_max_m_per_frame",
+    "joint_speed_max_deg_s",
+    "penetration_tolerance_m",
+    "reject_surface_intersections",
+    "colliders",
+    "allowed_collision_pairs",
+    "Piquito.balance_margin_m",
+    "Piquito.attachment",
+    "Piquito.support_intervals"
+  ],
+  "locked_source_snapshot": {
+    "parameters": {
+      "aceleracion_max_com_m_s2": 20.0,
+      "vel_max_deg_s": 600.0,
+      "resbale_pie_max_cm_cuadro": 5.0,
+      "equilibrio_max_fuera_m": 0.06,
+      "equilibrio_cuadros_fuera_max": 2,
+      "saltitos_max": 0
+    },
+    "original_source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/motor/catalogo_reglas_validacion/reglas.json",
+    "original_sha256": "691d8fd8980d6dc029f7ae3df2f86b574103c234b15641ea0f793e60ed3d35d2",
+    "copy_policy": "Sólo topes bloqueados: no trasladar excepciones por personajes/escenarios"
+  },
+  "historical_catalog_NOT_current_approval": {
+    "_nota": "Catálogo de reglas de validación de coherencia de escena (crece solo). origen: codigo | ia | humano.",
+    "reglas": {
+      "dentro_de_limites": {
+        "tipo": "dentro_de_limites",
+        "descripcion": "Todo objeto queda dentro del piso y del lado interior de los muros (salvo que el ADN lo ponga afuera)",
+        "parametros": {
+          "tolerancia_m": 0.02,
+          "exentos_formula": [
+            "skyline_neon",
+            "piso_losas_juntas",
+            "murete_cornisa"
+          ]
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 2,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "apoyado_en_piso": {
+        "tipo": "apoyado_en_piso",
+        "descripcion": "Objetos de escena tocan el piso: ni flotan ni se hunden (patas del tanque al piso)",
+        "parametros": {
+          "tolerancia_m": 0.03,
+          "exentos_formula": [
+            "skyline_neon"
+          ]
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 0,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "sin_interseccion_objetos": {
+        "tipo": "sin_interseccion_objetos",
+        "descripcion": "Los objetos no se atraviesan entre sí",
+        "parametros": {
+          "tolerancia_m": 0.02,
+          "exentos_formula": [
+            "piso_losas_juntas",
+            "skyline_neon"
+          ],
+          "pares_permitidos": [
+            [
+              "murete_cornisa",
+              "murete_cornisa"
+            ]
+          ]
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 2,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "personaje_no_atraviesa": {
+        "tipo": "personaje_no_atraviesa",
+        "descripcion": "Ningún personaje atraviesa un objeto en ningún cuadro (salvo la Novia dentro de la prisión)",
+        "parametros": {
+          "margen_m": 0.05,
+          "permitidos": [
+            [
+              "novia",
+              "prision_octogonal"
+            ]
+          ],
+          "exentos_formula": [
+            "piso_losas_juntas",
+            "skyline_neon"
+          ]
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 0,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "escala_vs_adn": {
+        "tipo": "escala_vs_adn",
+        "descripcion": "El tamaño construido coincide con el pedido por el ADN/colocación",
+        "parametros": {
+          "tolerancia_rel": 0.3
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 1,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "visible_en_camara": {
+        "tipo": "visible_en_camara",
+        "descripcion": "Lo que el plan necesita visible entra en cuadro y no queda detrás de un muro",
+        "parametros": {
+          "cuadros": [
+            1,
+            120,
+            240
+          ],
+          "requeridos": [
+            "personajes",
+            "prision_octogonal",
+            "tanque_agua_elevado"
+          ]
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 0,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "lado_correcto_muro": {
+        "tipo": "lado_correcto_muro",
+        "descripcion": "Objetos de la azotea quedan del mismo lado del muro que la cámara",
+        "parametros": {
+          "exentos_formula": [
+            "skyline_neon",
+            "murete_cornisa",
+            "piso_losas_juntas"
+          ]
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 0,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "objeto_mano_toca": {
+        "tipo": "objeto_mano_toca",
+        "descripcion": "El objeto en la mano toca la mano en todos los cuadros",
+        "parametros": {
+          "max_dist_m": 0.08
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 0,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "luz_con_objeto": {
+        "tipo": "luz_con_objeto",
+        "descripcion": "Cada luz pertenece a un objeto o está junto a uno",
+        "parametros": {
+          "max_dist_m": 0.6,
+          "exentas_tipo": [
+            "SUN"
+          ]
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 0,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "posicion_vs_plan": {
+        "tipo": "posicion_vs_plan",
+        "descripcion": "Vista cenital: los personajes empiezan donde dice el plan",
+        "parametros": {
+          "tolerancia_m": 0.35
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T09:32:04-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 0,
+        "historial": [],
+        "ultima": {
+          "fecha": "2026-11-05T00:34:04+01:00",
+          "fallas": 0
+        }
+      },
+      "ia_poligono_apoyo_incorporacion": {
+        "tipo": "sugerida",
+        "descripcion": "Al levantarse del suelo en fase lateral (entre tendido y cuadrupedia), el personaje debe mantener al menos tres puntos de contacto distribuidos (manos y rodillas/muslos) que encierren la proyección vertical del centro de masa con margen positivo.",
+        "parametros": {},
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:37:12-05:00",
+        "version": 1,
+        "activa": false,
+        "fallas_total": 0,
+        "historial": [],
+        "estado": "pendiente de programar"
+      },
+      "ia_postura_arpon_altura_mano": {
+        "tipo": "sugerida",
+        "descripcion": "En toda acción de apuntar o preparar una lanza para arrojar como arpón/jabalina, la mano portadora debe situarse a una altura igual o superior al hombro (Z_mano >= Z_hombro - 0.05 m) con el codo flexionado hacia atrás y el brazo opuesto adelantado como contrapeso y guía.",
+        "parametros": {},
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:37:12-05:00",
+        "version": 1,
+        "activa": false,
+        "fallas_total": 0,
+        "historial": [],
+        "estado": "pendiente de programar"
+      },
+      "ia_altura_mano_arpon_bajo_coronilla": {
+        "tipo": "sugerida",
+        "descripcion": "Cuando un personaje apunta una lanza como arpón (mano_a_altura_de_hombro=true), la mano de agarre debe situarse entre 0.0 y 0.30 m por encima de la articulación del hombro y al menos 0.08 m por debajo de la coronilla para evitar que parezca alzada sobre la cabeza.",
+        "parametros": {},
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:45:14-05:00",
+        "version": 1,
+        "activa": false,
+        "fallas_total": 0,
+        "historial": [],
+        "estado": "pendiente de programar"
+      },
+      "ia_poligono_amplio_transicion_suelo": {
+        "tipo": "sugerida",
+        "descripcion": "En las fases intermedias de levantarse desde el suelo (de lado y cuadrupedia), las manos y rodillas deben tener abducción lateral suficiente (≥18-30°) y declararse junto con los pies/piernas en contacto para que el polígono de sustentación encierre las oscilaciones del centro de masa.",
+        "parametros": {},
+        "origen": "ia (Argon)",
+        "fecha": "2026-11-04T09:45:14-05:00",
+        "version": 1,
+        "activa": false,
+        "fallas_total": 0,
+        "historial": [],
+        "estado": "pendiente de programar"
+      },
+      "limites_fisicos_bloqueados": {
+        "tipo": "limites_fisicos",
+        "descripcion": "Topes físicos humanos BLOQUEADOS: Argon ni el motor pueden subirlos para pasar la validación. Solo Ricardo puede cambiarlos (editar a mano con bloqueada_por='Ricardo').",
+        "parametros": {
+          "aceleracion_max_com_m_s2": 20.0,
+          "vel_max_deg_s": 600.0,
+          "resbale_pie_max_cm_cuadro": 5.0,
+          "equilibrio_max_fuera_m": 0.06,
+          "equilibrio_cuadros_fuera_max": 2,
+          "saltitos_max": 0
+        },
+        "bloqueada": true,
+        "bloqueada_por": "Ricardo t297u (aprobó v9: topes físicos bloqueados, COM ~20 m/s²)",
+        "origen": "humano",
+        "fecha": "2026-11-04T10:02:53-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 0,
+        "historial": []
+      },
+      "tiempos_accion": {
+        "tipo": "tiempos",
+        "descripcion": "Tiempos de cada acción: coherentes con la narración, palabras de ritmo (factor mínimo) y duración mínima por fase según los topes físicos bloqueados",
+        "parametros": {
+          "tolerancia_s": 0.5,
+          "cobertura_min": 0.5,
+          "tipos_estado": [
+            "quieto",
+            "mirar"
+          ],
+          "verbos_accion": {
+            "levantarse": [
+              "se levanta",
+              "levantarse",
+              "se incorpora",
+              "ponerse de pie",
+              "queda de pie"
+            ],
+            "arrodillarse": [
+              "de rodillas",
+              "arrodill"
+            ],
+            "acercarse": [
+              "paso",
+              "se acerca",
+              "avanza",
+              "camina"
+            ],
+            "mirar": [
+              "mira",
+              "mirada"
+            ],
+            "apuntar_arma": [
+              "apunt"
+            ],
+            "quieto": [
+              "permanece",
+              "quieto",
+              "firme"
+            ],
+            "sentarse": [
+              "se sienta"
+            ],
+            "caer": [
+              "cae ",
+              "se cae"
+            ],
+            "correr": [
+              "corre"
+            ]
+          },
+          "palabras_ritmo": {
+            "lentamente": 1.5,
+            "despacio": 1.5,
+            "lento": 1.4,
+            "con esfuerzo": 1.3,
+            "con dificultad": 1.3,
+            "pesad": 1.2,
+            "temblor": 1.15,
+            "apenas": 1.15,
+            "rapid": 0.7,
+            "de golpe": 0.6,
+            "de un salto": 0.6
+          },
+          "margen": 1.1,
+          "k_acel": 5.77,
+          "k_vel": 1.875
+        },
+        "origen": "codigo",
+        "fecha": "2026-11-04T12:28:02-05:00",
+        "version": 1,
+        "activa": true,
+        "fallas_total": 3,
+        "historial": [],
+        "script": "validar_tiempos.py",
+        "ultima": {
+          "fecha": "2026-11-05T00:28:56+01:00",
+          "fallas": 0
+        }
+      }
+    }
+  },
+  "Piquito_source01": {
+    "id": "ch-piquito-030a",
+    "altura": null,
+    "estado": {},
+    "segmentos": [
+      {
+        "t": [
+          0.0,
+          18.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_aterrizaje"
+        ],
+        "rot": -171.0,
+        "tipo": "quieto",
+        "porque": "En el hombro izquierdo de Eco antes de aterrizar"
+      },
+      {
+        "t": [
+          18.0,
+          30.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_aterrizaje"
+        ],
+        "rot": -171.0,
+        "tipo": "quieto",
+        "porque": "Aterriza posado en el hombro izquierdo de Eco"
+      },
+      {
+        "t": [
+          30.0,
+          33.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_cofre"
+        ],
+        "rot": -172.0,
+        "tipo": "acoplarse",
+        "porque": "Va en el hombro izquierdo de Eco cuando ella se acerca al cofre"
+      },
+      {
+        "t": [
+          33.0,
+          44.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -172.0,
+        "tipo": "quieto",
+        "porque": "Mira el cofre dorado desde el hombro izquierdo de Eco"
+      },
+      {
+        "t": [
+          44.0,
+          46.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "girar",
+        "porque": "Gira con Eco hacia el frente"
+      },
+      {
+        "t": [
+          46.0,
+          55.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "quieto",
+        "porque": "Mira al frente desde el hombro izquierdo de Eco"
+      }
+    ],
+    "version_personaje": {
+      "name": "referencia cliente",
+      "form": "fm-a36983467703",
+      "description": "Un pajarito redondo como una pelotita, del tamaño de un puño, con alas cortitas, pico pequeño y triangular y dos plumitas de copete. No habla: se expresa con gestos (se tapa los ojos, aplaude con las alas, se esponja cuando se ofende). [Acompañante de Eco; sin imagen propia, solo aparece en ref1 sobre el hombro izquierdo de Eco.]",
+      "never_changes": "Pajarito AMARILLO (cuerpo #FFD84D, pecho #FFF1A8), pico y patas naranja #F2792A, copete amarillo con punta naranja, redondo como una pelotita, del tamaño de un puño, siempre en el hombro izquierdo de Eco. NUNCA naranja de cuerpo (la ref1 del cliente lo trae naranja: manda la biblia y la orden de Ricardo, amarillo #FFD84D)."
+    }
+  },
+  "Piquito_skeleton_generated": {
+    "units": "m",
+    "rig": {
+      "bones": [
+        {
+          "id": "ch-piquito-030a.root",
+          "role": "root",
+          "parent": null,
+          "head": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tail": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "limits_deg": [
+            [
+              -180,
+              180
+            ],
+            [
+              -180,
+              180
+            ],
+            [
+              -180,
+              180
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.neck",
+          "role": "neck",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "tail": [
+            0.0,
+            0.0,
+            0.055
+          ],
+          "limits_deg": [
+            [
+              -15,
+              15
+            ],
+            [
+              -15,
+              15
+            ],
+            [
+              -20,
+              20
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.head",
+          "role": "head",
+          "parent": "ch-piquito-030a.neck",
+          "head": [
+            0.0,
+            0.0,
+            0.055
+          ],
+          "tail": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "limits_deg": [
+            [
+              -30,
+              30
+            ],
+            [
+              -30,
+              30
+            ],
+            [
+              -45,
+              45
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.beak",
+          "role": "beak",
+          "parent": "ch-piquito-030a.head",
+          "head": [
+            0.0,
+            0.02,
+            0.075
+          ],
+          "tail": [
+            0.0,
+            0.035,
+            0.075
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -5,
+              5
+            ],
+            [
+              -5,
+              5
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.tail",
+          "role": "tail",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            0.0,
+            -0.02,
+            0.02
+          ],
+          "tail": [
+            0.0,
+            -0.045,
+            0.035
+          ],
+          "limits_deg": [
+            [
+              -20,
+              20
+            ],
+            [
+              -20,
+              20
+            ],
+            [
+              -30,
+              30
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.wing.L",
+          "role": "wing.L",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            0.025,
+            0.0,
+            0.04
+          ],
+          "tail": [
+            0.04,
+            -0.015,
+            0.03
+          ],
+          "limits_deg": [
+            [
+              -45,
+              90
+            ],
+            [
+              -30,
+              30
+            ],
+            [
+              -45,
+              45
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.wing.R",
+          "role": "wing.R",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            -0.025,
+            0.0,
+            0.04
+          ],
+          "tail": [
+            -0.04,
+            -0.015,
+            0.03
+          ],
+          "limits_deg": [
+            [
+              -45,
+              90
+            ],
+            [
+              -30,
+              30
+            ],
+            [
+              -45,
+              45
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.leg.L",
+          "role": "leg.L",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            0.015,
+            0.0,
+            0.01
+          ],
+          "tail": [
+            0.015,
+            0.0,
+            0.005
+          ],
+          "limits_deg": [
+            [
+              -30,
+              30
+            ],
+            [
+              -15,
+              15
+            ],
+            [
+              -15,
+              15
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.leg.R",
+          "role": "leg.R",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            -0.015,
+            0.0,
+            0.01
+          ],
+          "tail": [
+            -0.015,
+            0.0,
+            0.005
+          ],
+          "limits_deg": [
+            [
+              -30,
+              30
+            ],
+            [
+              -15,
+              15
+            ],
+            [
+              -15,
+              15
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.foot.L",
+          "role": "foot.L",
+          "parent": "ch-piquito-030a.leg.L",
+          "head": [
+            0.015,
+            0.0,
+            0.005
+          ],
+          "tail": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -20,
+              40
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.foot.R",
+          "role": "foot.R",
+          "parent": "ch-piquito-030a.leg.R",
+          "head": [
+            -0.015,
+            0.0,
+            0.005
+          ],
+          "tail": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -20,
+              40
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.L.front1",
+          "role": "toe.L.front1",
+          "parent": "ch-piquito-030a.foot.L",
+          "head": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            0.01,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.L.front2",
+          "role": "toe.L.front2",
+          "parent": "ch-piquito-030a.foot.L",
+          "head": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            0.015,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.L.front3",
+          "role": "toe.L.front3",
+          "parent": "ch-piquito-030a.foot.L",
+          "head": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            0.02,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.L.back",
+          "role": "toe.L.back",
+          "parent": "ch-piquito-030a.foot.L",
+          "head": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            0.015,
+            -0.005,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.R.front1",
+          "role": "toe.R.front1",
+          "parent": "ch-piquito-030a.foot.R",
+          "head": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            -0.02,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.R.front2",
+          "role": "toe.R.front2",
+          "parent": "ch-piquito-030a.foot.R",
+          "head": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            -0.015,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.R.front3",
+          "role": "toe.R.front3",
+          "parent": "ch-piquito-030a.foot.R",
+          "head": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            -0.01,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.R.back",
+          "role": "toe.R.back",
+          "parent": "ch-piquito-030a.foot.R",
+          "head": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            -0.015,
+            -0.005,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        }
+      ]
+    },
+    "bone_radii_m": {
+      "ch-piquito-030a.root": 0.025,
+      "ch-piquito-030a.neck": 0.02,
+      "ch-piquito-030a.head": 0.025,
+      "ch-piquito-030a.beak": 0.005,
+      "ch-piquito-030a.tail": 0.01,
+      "ch-piquito-030a.wing.L": 0.01,
+      "ch-piquito-030a.wing.R": 0.01,
+      "ch-piquito-030a.leg.L": 0.004,
+      "ch-piquito-030a.leg.R": 0.004,
+      "ch-piquito-030a.foot.L": 0.004,
+      "ch-piquito-030a.foot.R": 0.004,
+      "ch-piquito-030a.toe.L.front1": 0.002,
+      "ch-piquito-030a.toe.L.front2": 0.002,
+      "ch-piquito-030a.toe.L.front3": 0.002,
+      "ch-piquito-030a.toe.L.back": 0.002,
+      "ch-piquito-030a.toe.R.front1": 0.002,
+      "ch-piquito-030a.toe.R.front2": 0.002,
+      "ch-piquito-030a.toe.R.front3": 0.002,
+      "ch-piquito-030a.toe.R.back": 0.002
+    },
+    "source": "Argon_GENERATED_ch-piquito-030a",
+    "status": "GENERATED_DESIGN_VALIDATED_TOPOLOGY_ONLY",
+    "missing_physics_and_anchor_source": "Falta representacion fisica declarativa. No se certifica anclaje al hombro de Eco ni colisiones; unicamente se declara la estructura de huesos y apariencia propuesta segun ADN y orden de Ricardo."
+  },
+  "full_2B_recovered_only_NOT_complete": {
+    "poses": [
+      {
+        "nombre": "p_de_pie_base",
+        "descripcion": "Postura erguida equilibrada en reposo activo con brazos relajados.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 2,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": 2,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 0,
+            "abd": 2,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 4,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 0,
+            "abd": 2,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 4,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 6,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 6,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_aterriza_flex",
+        "descripcion": "Recepcion de aterrizaje con rodillas flexionadas y brazos abiertos equilibrando.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": 10,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": -8,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": -4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 0,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 20,
+            "abd": 35,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 35,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": -10,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 0,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 20,
+            "abd": 35,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 35,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": -10,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 38,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 65,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": 15,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 38,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 65,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": 15,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_alerta_pie",
+        "descripcion": "Postura de guardia alerta tras aterrizar mirando al frente.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": 4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": -2,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 2,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 18,
+            "abd": 15,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 40,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 2,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 18,
+            "abd": 15,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 40,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 12,
+            "abd": 7,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 20,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -5,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 12,
+            "abd": 7,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 20,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -5,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_disparo_prep",
+        "descripcion": "Prepara el brazo derecho con pistola de rayos y tronco girado con travesura.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 4,
+            "abd": 0,
+            "giro": -12
+          },
+          {
+            "hueso": "pecho",
+            "flex": 4,
+            "abd": 0,
+            "giro": -10
+          },
+          {
+            "hueso": "cuello",
+            "flex": 2,
+            "abd": 0,
+            "giro": 15
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 4,
+            "abd": 0,
+            "giro": 5
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 0,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 25,
+            "abd": 20,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 45,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 5,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 65,
+            "abd": 15,
+            "giro": -10
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 55,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 10,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 10,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 16,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -5,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 6,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -5,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_disparo_ext",
+        "descripcion": "Extiende el brazo derecho apuntando/disparando el rayo hacia el objetivo.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 6,
+            "abd": 0,
+            "giro": 8
+          },
+          {
+            "hueso": "pecho",
+            "flex": 6,
+            "abd": 0,
+            "giro": 8
+          },
+          {
+            "hueso": "cuello",
+            "flex": -4,
+            "abd": 0,
+            "giro": -10
+          },
+          {
+            "hueso": "cabeza",
+            "flex": -2,
+            "abd": 0,
+            "giro": -5
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": -4,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": -10,
+            "abd": 28,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 30,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": -15,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 10,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 92,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 8,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 14,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 18,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 4,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 10,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_risa_pecho",
+        "descripcion": "Risa burlona echando el torso ligeramente atras con manos abiertas.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": -8,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": -8,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": 6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 8,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 4,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 38,
+            "abd": 22,
+            "giro": -15
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 65,
+            "abd": 0,
+            "giro": 20
+          },
+          {
+            "hueso": "mano_L",
+            "flex": -10,
+            "abd": 10,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 4,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 38,
+            "abd": 22,
+            "giro": 15
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 65,
+            "abd": 0,
+            "giro": -20
+          },
+          {
+            "hueso": "mano_R",
+            "flex": -10,
+            "abd": 10,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 6,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 6,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_bostezo_mano",
+        "descripcion": "Bostezo de aburrimiento llevando la mano izquierda cerca de la boca.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": -4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": -4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": -10,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": -12,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 8,
+            "abd": 10,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 75,
+            "abd": 12,
+            "giro": -25
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 110,
+            "abd": 0,
+            "giro": 30
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 15,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 0,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 10,
+            "abd": 12,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 20,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 6,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 6,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_visor_toque",
+        "descripcion": "Mano derecha alzada al lateral del casco para consultar el visor con preocupacion.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": 6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": 10,
+            "abd": 0,
+            "giro": -8
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 12,
+            "abd": 0,
+            "giro": -8
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 0,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 12,
+            "abd": 10,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 25,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 8,
+            "abd": 12,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 78,
+            "abd": 22,
+            "giro": 25
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 108,
+            "abd": 0,
+            "giro": -20
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 10,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 8,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 14,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 8,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 14,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_alarma_manos",
+        "descripcion": "Gesto rapido y alarmado con ambos brazos levantados y abiertos.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 6,
+            "abd": 0,
+            "giro": 10
+          },
+          {
+            "hueso": "pecho",
+            "flex": 6,
+            "abd": 0,
+            "giro": 10
+          },
+          {
+            "hueso": "cuello",
+            "flex": -4,
+            "abd": 0,
+            "giro": 15
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 0,
+            "abd": 0,
+            "giro": 10
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 6,
+            "abd": 12,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 62,
+            "abd": 35,
+            "giro": -15
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 55,
+            "abd": 0,
+            "giro": 20
+          },
+          {
+            "hueso": "mano_L",
+            "flex": -15,
+            "abd": 10,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 6,
+            "abd": 12,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 78,
+            "abd": 25,
+            "giro": 10
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 25,
+            "abd": 0,
+            "giro": -10
+          },
+          {
+            "hueso": "mano_R",
+            "flex": -10,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 10,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 16,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 10,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 16,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_sorpresa_cofre",
+        "descripcion": "Inclinacion sutil de asombro mirando hacia el cofre con manos abiertas.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 8,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": 6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": 8,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 10,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 4,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 28,
+            "abd": 22,
+            "giro": -10
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 48,
+            "abd": 0,
+            "giro": 15
+          },
+          {
+            "hueso": "mano_L",
+            "flex": -12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 4,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 28,
+            "abd": 22,
+            "giro": 10
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 48,
+            "abd": 0,
+            "giro": -15
+          },
+          {
+            "hueso": "mano_R",
+            "flex": -12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 10,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 16,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 10,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 16,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_habla_suave",
+        "descripcion": "Gesto explicativo suave y calido con manos abiertas a media altura.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 3,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": 3,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": 0,
+            "abd": 2,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 2,
+            "abd": 3,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 3,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 32,
+            "abd": 14,
+            "giro": -20
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 58,
+            "abd": 0,
+            "giro": 35
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 5,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 3,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 36,
+            "abd": 16,
+            "giro": 20
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 62,
+            "abd": 0,
+            "giro": -35
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 5,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 6,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 6,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_energia_puno",
+        "descripcion": "Gesto entusiasta de valentia cerrando el antebrazo derecho con energia.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 2,
+            "abd": 0,
+            "giro": 6
+          },
+          {
+            "hueso": "pecho",
+            "flex": 4,
+            "abd": 0,
+            "giro": 6
+          },
+          {
+            "hueso": "cuello",
+            "flex": -2,
+            "abd": 0,
+            "giro": 10
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 0,
+            "abd": 0,
+            "giro": 8
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 2,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 20,
+            "abd": 16,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 45,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 8,
+            "abd": 10,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 68,
+            "abd": 18,
+            "giro": 15
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 88,
+            "abd": 0,
+            "giro": -25
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 8,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 8,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 14,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 8,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 14,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_senalar_frente",
+        "descripcion": "Brazo derecho extendido al frente senalando directamente al espectador.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 5,
+            "abd": 0,
+            "giro": 4
+          },
+          {
+            "hueso": "pecho",
+            "flex": 5,
+            "abd": 0,
+            "giro": 4
+          },
+          {
+            "hueso": "cuello",
+            "flex": -2,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 0,
+            "abd": 6,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 14,
+            "abd": 14,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 28,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 8,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 86,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": -5,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 8,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 14,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 8,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 14,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -6,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_camina_1",
+        "descripcion": "Ciclo de caminata fase 1: contacto derecho adelante e izquierdo atras.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 4,
+            "abd": 0,
+            "giro": -4
+          },
+          {
+            "hueso": "pecho",
+            "flex": 4,
+            "abd": 0,
+            "giro": -4
+          },
+          {
+            "hueso": "cuello",
+            "flex": 0,
+            "abd": 0,
+            "giro": 4
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 2,
+            "abd": 3,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 22,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 25,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": -2,
+            "abd": 3,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": -14,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 18,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": -14,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 18,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 24,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": 8,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_camina_2",
+        "descripcion": "Ciclo de caminata fase 2: apoyo derecho y paso de pierna izquierda en el aire.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": 4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 0,
+            "abd": 3,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 4,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 20,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 0,
+            "abd": 3,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 4,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 20,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 18,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 42,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": 5,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 6,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 14,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -4,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_camina_3",
+        "descripcion": "Ciclo de caminata fase 3: contacto izquierdo adelante y derecho atras.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 4,
+            "abd": 0,
+            "giro": 4
+          },
+          {
+            "hueso": "pecho",
+            "flex": 4,
+            "abd": 0,
+            "giro": 4
+          },
+          {
+            "hueso": "cuello",
+            "flex": 0,
+            "abd": 0,
+            "giro": -4
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": -2,
+            "abd": 3,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": -14,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 18,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 2,
+            "abd": 3,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 22,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 25,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 24,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 12,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": 8,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": -14,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 18,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": -12,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L",
+          "pie_R"
+        ]
+      },
+      {
+        "nombre": "p_camina_4",
+        "descripcion": "Ciclo de caminata fase 4: apoyo izquierdo y paso de pierna derecha en el aire.",
+        "angulos": [
+          {
+            "hueso": "columna",
+            "flex": 4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pecho",
+            "flex": 4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cuello",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "cabeza",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_L",
+            "flex": 0,
+            "abd": 3,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_L",
+            "flex": 4,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_L",
+            "flex": 20,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_L",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "clavicula_R",
+            "flex": 0,
+            "abd": 3,
+            "giro": 0
+          },
+          {
+            "hueso": "brazo_R",
+            "flex": 4,
+            "abd": 8,
+            "giro": 0
+          },
+          {
+            "hueso": "antebrazo_R",
+            "flex": 20,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "mano_R",
+            "flex": 0,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_L",
+            "flex": 6,
+            "abd": 4,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_L",
+            "flex": 14,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_L",
+            "flex": -4,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "muslo_R",
+            "flex": 18,
+            "abd": 5,
+            "giro": 0
+          },
+          {
+            "hueso": "pierna_R",
+            "flex": 42,
+            "abd": 0,
+            "giro": 0
+          },
+          {
+            "hueso": "pie_R",
+            "flex": 5,
+            "abd": 0,
+            "giro": 0
+          }
+        ],
+        "raiz": [
+          0,
+          0,
+          0
+        ],
+        "apoyos": [
+          "pie_L"
+        ]
+      }
+    ],
+    "movimientos": [
+      {
+        "nombre": "m_reposo_base",
+        "descripcion": "Mantiene postura erguida de reposo estable sobre ambos pies.",
+        "fases": [
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 0.5,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_caminar_ciclo",
+        "descripcion": "Ciclo completo de caminata natural alternando piernas y brazos en 5 fases cerradas.",
+        "fases": [
+          {
+            "pose": "p_camina_1",
+            "t_fin_frac": 0.2,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": false,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_camina_2",
+            "t_fin_frac": 0.45,
+            "apoyos": [
+              "pie_R"
+            ],
+            "anclar_apoyo": false,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_camina_3",
+            "t_fin_frac": 0.7,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": false,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_camina_4",
+            "t_fin_frac": 0.9,
+            "apoyos": [
+              "pie_L"
+            ],
+            "anclar_apoyo": false,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_camina_1",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": false,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.8
+      },
+      {
+        "nombre": "m_giro_pasos",
+        "descripcion": "Acompana el giro sobre el sitio con alternancia de pies y brazos.",
+        "fases": [
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 0.2,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": false,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_camina_2",
+            "t_fin_frac": 0.5,
+            "apoyos": [
+              "pie_R"
+            ],
+            "anclar_apoyo": false,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_camina_4",
+            "t_fin_frac": 0.8,
+            "apoyos": [
+              "pie_L"
+            ],
+            "anclar_apoyo": false,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": false,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.8
+      },
+      {
+        "nombre": "m_disparo_caos",
+        "descripcion": "Apunta y dispara su pistola de rayos con gesto travieso y burlon.",
+        "fases": [
+          {
+            "pose": "p_disparo_prep",
+            "t_fin_frac": 0.3,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_disparo_ext",
+            "t_fin_frac": 0.75,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_disparo_prep",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_risa_caos",
+        "descripcion": "Rie de forma burlona y gesticula mientras habla divertido.",
+        "fases": [
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 0.2,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_risa_pecho",
+            "t_fin_frac": 0.55,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_habla_suave",
+            "t_fin_frac": 0.85,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_bostezo_caos",
+        "descripcion": "Habla con desden, bosteza llevandose la mano a la boca y recupera postura.",
+        "fases": [
+          {
+            "pose": "p_habla_suave",
+            "t_fin_frac": 0.3,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_bostezo_mano",
+            "t_fin_frac": 0.7,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_aterrizar_alerta",
+        "descripcion": "Amortigua la llegada flexionando rodillas y se incorpora en guardia alerta.",
+        "fases": [
+          {
+            "pose": "p_aterriza_flex",
+            "t_fin_frac": 0.35,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_alerta_pie",
+            "t_fin_frac": 0.75,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_hablar_visor",
+        "descripcion": "Lleva la mano derecha al visor del casco con preocupacion mientras reporta la alerta.",
+        "fases": [
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 0.2,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_visor_toque",
+            "t_fin_frac": 0.75,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_alerta_pie",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_hablar_alarmado",
+        "descripcion": "Gesticula rapidamente con brazos abiertos y senalando hacia Spark en estado de alarma.",
+        "fases": [
+          {
+            "pose": "p_alarma_manos",
+            "t_fin_frac": 0.35,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_senalar_frente",
+            "t_fin_frac": 0.7,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_alarma_manos",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [
+          {
+            "tipo": "mirar",
+            "desde": "cabeza",
+            "hacia": "ch-spark-468e.cabeza",
+            "t_ini_frac": 0.0,
+            "t_fin_frac": 1.0
+          }
+        ],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.5,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_mirar_sorpresa",
+        "descripcion": "Reacciona con sorpresa inclinando levemente el torso y abriendo antebrazos.",
+        "fases": [
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 0.25,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_sorpresa_cofre",
+            "t_fin_frac": 0.75,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_sorpresa_cofre",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_hablar_serena",
+        "descripcion": "Explica con calma y suavidad abriendo las manos hacia adelante.",
+        "fases": [
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 0.2,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_habla_suave",
+            "t_fin_frac": 0.6,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_hablar_entusiasta",
+        "descripcion": "Habla con gran energia levantando el antebrazo derecho y mirando a Valentina.",
+        "fases": [
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 0.2,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_energia_puno",
+            "t_fin_frac": 0.7,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_alerta_pie",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [
+          {
+            "tipo": "mirar",
+            "desde": "cabeza",
+            "hacia": "ch-valentina-a9be.cabeza",
+            "t_ini_frac": 0.0,
+            "t_fin_frac": 1.0
+          }
+        ],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_giro_decidido",
+        "descripcion": "Acompana el giro lento hacia camara con postura decidida de torso y brazos.",
+        "fases": [
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 0.4,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_alerta_pie",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_senalar_tu",
+        "descripcion": "Senala directamente al frente con emocion al decir TU.",
+        "fases": [
+          {
+            "pose": "p_alerta_pie",
+            "t_fin_frac": 0.2,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_senalar_frente",
+            "t_fin_frac": 0.65,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_senalar_frente",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      },
+      {
+        "nombre": "m_hablar_misterioso",
+        "descripcion": "Habla hacia la camara con tono misterioso y gesto pausado.",
+        "fases": [
+          {
+            "pose": "p_senalar_frente",
+            "t_fin_frac": 0.2,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_habla_suave",
+            "t_fin_frac": 0.65,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          },
+          {
+            "pose": "p_de_pie_base",
+            "t_fin_frac": 1.0,
+            "apoyos": [
+              "pie_L",
+              "pie_R"
+            ],
+            "anclar_apoyo": true,
+            "desplazamiento_m": 0.0
+          }
+        ],
+        "objetivos": [],
+        "excepciones": {
+          "vuela": false,
+          "rapido": false,
+          "golpe": false
+        },
+        "temblor_deg": 0.0,
+        "ciclo_s": 0.0
+      }
+    ],
+    "asignacion": [
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "segmento_01_ch-don-caos-7adf_0",
+        "movimiento": "m_reposo_base",
+        "t0": 0.0,
+        "t1": 9.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "a1",
+        "movimiento": "m_disparo_caos",
+        "t0": 0.0,
+        "t1": 3.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "a2",
+        "movimiento": "m_risa_caos",
+        "t0": 3.0,
+        "t1": 9.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "segmento_01_ch-don-caos-7adf_1",
+        "movimiento": "m_caminar_ciclo",
+        "t0": 9.0,
+        "t1": 11.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "muslo_R",
+          "pierna_R",
+          "pie_R",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "a3",
+        "movimiento": "m_disparo_caos",
+        "t0": 9.0,
+        "t1": 11.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "segmento_01_ch-don-caos-7adf_2",
+        "movimiento": "m_reposo_base",
+        "t0": 11.0,
+        "t1": 15.5,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "a4",
+        "movimiento": "m_bostezo_caos",
+        "t0": 11.0,
+        "t1": 15.5,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "segmento_01_ch-don-caos-7adf_3",
+        "movimiento": "m_caminar_ciclo",
+        "t0": 15.5,
+        "t1": 18.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "muslo_R",
+          "pierna_R",
+          "pie_R",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "a5",
+        "movimiento": "m_caminar_ciclo",
+        "t0": 15.5,
+        "t1": 18.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "muslo_R",
+          "pierna_R",
+          "pie_R",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-don-caos-7adf",
+        "accion_plan": "segmento_01_ch-don-caos-7adf_4",
+        "movimiento": "m_reposo_base",
+        "t0": 18.0,
+        "t1": 55.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "segmento_01_ch-spark-468e_0",
+        "movimiento": "m_reposo_base",
+        "t0": 0.0,
+        "t1": 18.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "segmento_01_ch-spark-468e_1",
+        "movimiento": "m_reposo_base",
+        "t0": 18.0,
+        "t1": 30.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "a6",
+        "movimiento": "m_aterrizar_alerta",
+        "t0": 18.0,
+        "t1": 21.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "a11",
+        "movimiento": "m_hablar_visor",
+        "t0": 21.0,
+        "t1": 25.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "segmento_01_ch-spark-468e_2",
+        "movimiento": "m_caminar_ciclo",
+        "t0": 30.0,
+        "t1": 33.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "muslo_R",
+          "pierna_R",
+          "pie_R",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "a14",
+        "movimiento": "m_mirar_sorpresa",
+        "t0": 30.0,
+        "t1": 33.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "segmento_01_ch-spark-468e_3",
+        "movimiento": "m_reposo_base",
+        "t0": 33.0,
+        "t1": 44.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "segmento_01_ch-spark-468e_4",
+        "movimiento": "m_giro_pasos",
+        "t0": 44.0,
+        "t1": 46.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "muslo_R",
+          "pierna_R",
+          "pie_R",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "a17",
+        "movimiento": "m_giro_decidido",
+        "t0": 44.0,
+        "t1": 46.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "segmento_01_ch-spark-468e_5",
+        "movimiento": "m_reposo_base",
+        "t0": 46.0,
+        "t1": 55.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "a21",
+        "movimiento": "m_senalar_tu",
+        "t0": 46.0,
+        "t1": 48.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-spark-468e",
+        "accion_plan": "a25",
+        "movimiento": "m_hablar_misterioso",
+        "t0": 48.0,
+        "t1": 55.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "segmento_01_ch-valentina-a9be_0",
+        "movimiento": "m_reposo_base",
+        "t0": 0.0,
+        "t1": 18.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "segmento_01_ch-valentina-a9be_1",
+        "movimiento": "m_reposo_base",
+        "t0": 18.0,
+        "t1": 30.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "a7",
+        "movimiento": "m_aterrizar_alerta",
+        "t0": 18.0,
+        "t1": 21.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "segmento_01_ch-valentina-a9be_2",
+        "movimiento": "m_caminar_ciclo",
+        "t0": 30.0,
+        "t1": 33.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "muslo_R",
+          "pierna_R",
+          "pie_R",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "segmento_01_ch-valentina-a9be_3",
+        "movimiento": "m_reposo_base",
+        "t0": 33.0,
+        "t1": 44.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "a15",
+        "movimiento": "m_hablar_serena",
+        "t0": 33.0,
+        "t1": 40.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "segmento_01_ch-valentina-a9be_4",
+        "movimiento": "m_giro_pasos",
+        "t0": 44.0,
+        "t1": 46.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "muslo_R",
+          "pierna_R",
+          "pie_R",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "a18",
+        "movimiento": "m_giro_decidido",
+        "t0": 44.0,
+        "t1": 46.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "segmento_01_ch-valentina-a9be_5",
+        "movimiento": "m_reposo_base",
+        "t0": 46.0,
+        "t1": 55.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-valentina-a9be",
+        "accion_plan": "a22",
+        "movimiento": "m_senalar_tu",
+        "t0": 46.0,
+        "t1": 48.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "segmento_01_ch-eco-eff3_0",
+        "movimiento": "m_reposo_base",
+        "t0": 0.0,
+        "t1": 18.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "segmento_01_ch-eco-eff3_1",
+        "movimiento": "m_reposo_base",
+        "t0": 18.0,
+        "t1": 30.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "a8",
+        "movimiento": "m_aterrizar_alerta",
+        "t0": 18.0,
+        "t1": 21.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "pelvis",
+          "columna",
+          "pecho",
+          "cuello",
+          "cabeza",
+          "clavicula_L",
+          "brazo_L",
+          "antebrazo_L",
+          "mano_L",
+          "muslo_L",
+          "pierna_L",
+          "pie_L",
+          "clavicula_R",
+          "brazo_R",
+          "antebrazo_R",
+          "mano_R",
+          "muslo_R",
+          "pierna_R",
+          "pie_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "a9",
+        "movimiento": "m_aterrizar_alerta",
+        "t0": 18.0,
+        "t1": 21.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pecho",
+          "pelvis",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "a19",
+        "movimiento": "m_giro_decidido",
+        "t0": 44.0,
+        "t1": 46.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "pecho"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "a20",
+        "movimiento": "m_giro_decidido",
+        "t0": 44.0,
+        "t1": 46.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "pecho"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "a23",
+        "movimiento": "m_senalar_tu",
+        "t0": 46.0,
+        "t1": 48.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "pecho"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "a24",
+        "movimiento": "m_senalar_tu",
+        "t0": 46.0,
+        "t1": 48.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "pecho"
+        ],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "segmento_01_ch-eco-eff3_2",
+        "movimiento": "m_caminar_ciclo",
+        "t0": 30.0,
+        "t1": 33.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "clavicula_L",
+          "clavicula_R",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "segmento_01_ch-eco-eff3_3",
+        "movimiento": "m_reposo_base",
+        "t0": 33.0,
+        "t1": 44.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pecho",
+          "pelvis",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "segmento_01_ch-eco-eff3_4",
+        "movimiento": "m_giro_pasos",
+        "t0": 44.0,
+        "t1": 46.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "clavicula_L",
+          "clavicula_R",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "segmento_01_ch-eco-eff3_5",
+        "movimiento": "m_reposo_base",
+        "t0": 46.0,
+        "t1": 55.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pecho",
+          "pelvis",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "segmento_01_ch-pintor-bce0_0",
+        "movimiento": "m_reposo_base",
+        "t0": 0.0,
+        "t1": 18.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pecho",
+          "pelvis",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "segmento_01_ch-pintor-bce0_1",
+        "movimiento": "m_reposo_base",
+        "t0": 18.0,
+        "t1": 30.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pecho",
+          "pelvis",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "segmento_01_ch-pintor-bce0_2",
+        "movimiento": "m_caminar_ciclo",
+        "t0": 30.0,
+        "t1": 33.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "clavicula_L",
+          "clavicula_R",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "segmento_01_ch-pintor-bce0_3",
+        "movimiento": "m_reposo_base",
+        "t0": 33.0,
+        "t1": 44.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pecho",
+          "pelvis",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "segmento_01_ch-pintor-bce0_4",
+        "movimiento": "m_giro_pasos",
+        "t0": 44.0,
+        "t1": 46.0,
+        "objetivo_punto": "",
+        "capa": "locomocion",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "clavicula_L",
+          "clavicula_R",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "segmento_01_ch-pintor-bce0_5",
+        "movimiento": "m_reposo_base",
+        "t0": 46.0,
+        "t1": 55.0,
+        "objetivo_punto": "",
+        "capa": "base",
+        "huesos": [
+          "antebrazo_L",
+          "antebrazo_R",
+          "brazo_L",
+          "brazo_R",
+          "cabeza",
+          "clavicula_L",
+          "clavicula_R",
+          "columna",
+          "cuello",
+          "mano_L",
+          "mano_R",
+          "muslo_L",
+          "muslo_R",
+          "pecho",
+          "pelvis",
+          "pie_L",
+          "pie_R",
+          "pierna_L",
+          "pierna_R"
+        ],
+        "_source_kind": "segmento_01"
+      },
+      {
+        "personaje": "ch-pintor-bce0",
+        "accion_plan": "a12",
+        "movimiento": "m_hablar_alarmado",
+        "t0": 25.0,
+        "t1": 30.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [],
+        "_source_kind": "accion_01"
+      },
+      {
+        "personaje": "ch-eco-eff3",
+        "accion_plan": "a16",
+        "movimiento": "m_hablar_entusiasta",
+        "t0": 40.0,
+        "t1": 44.0,
+        "objetivo_punto": "",
+        "capa": "gesto",
+        "huesos": [],
+        "_source_kind": "accion_01"
+      }
+    ],
+    "_recovery": {
+      "truncated": true,
+      "partial_array": "asignacion",
+      "fields_recovered": [
+        "poses",
+        "movimientos",
+        "asignacion"
+      ],
+      "no_incomplete_items_used": true
+    },
+    "iniciales": [],
+    "anclas": [],
+    "faltantes": [],
+    "notas": "Respuesta truncada; sólo elementos completos recuperados por motor sin nueva llamada"
+  },
+  "twoB_raw_tail": "cula_L\",\"brazo_L\",\"antebrazo_L\",\"mano_L\",\"clavicula_R\",\"brazo_R\",\"antebrazo_R\",\"mano_R\"]},{\"personaje\":\"ch-valentina-a9be\",\"accion_plan\":\"a18\",\"movimiento\":\"m_giro_decidido\",\"t0\":44.0,\"t1\":46.0,\"objetivo_punto\":\"\",\"capa\":\"gesto\",\"huesos\":[\"columna\",\"pecho\",\"cuello\",\"cabeza\",\"clavicula_L\",\"brazo_L\",\"antebrazo_L\",\"mano_L\",\"clavicula_R\",\"brazo_R\",\"antebrazo_R\",\"mano_R\"]},{\"personaje\":\"ch-valentina-a9be\",\"accion_plan\":\"segmento_01_ch-valentina-a9be_5\",\"movimiento\":\"m_reposo_base\",\"t0\":46.0,\"t1\":55.0,\"objetivo_punto\":\"\",\"capa\":\"base\",\"huesos\":[\"pelvis\",\"columna\",\"pecho\",\"cuello\",\"cabeza\",\"clavicula_L\",\"brazo_L\",\"antebrazo_L\",\"mano_L\",\"muslo_L\",\"pierna_L\",\"pie_L\",\"clavicula_R\",\"brazo_R\",\"antebrazo_R\",\"mano_R\",\"muslo_R\",\"pierna_R\",\"pie_R\"]},{\"personaje\":\"ch-valentina-a9be\",\"accion_plan\":\"a22\",\"movimiento\":\"m_senalar_tu\",\"t0\":46.0,\"t1\":48.0,\"objetivo_punto\":\"\",\"capa\":\"gesto\",\"huesos\":[\"columna\",\"pecho\",\"cuello\",\"cabeza\",\"clavicula_L\",\"brazo_L\",\"antebrazo_L\",\"mano_L\",\"clavicula_R\",\"brazo_R\",\"antebrazo_R\",\"mano_R\"]},{\"personaje\":\"ch-eco-eff3\",\"accion_plan\":\"segmento_01_ch-eco-eff3_0\",\"movimiento\":\"m_reposo_base\",\"t0\":0.0,\"t1\":18.0,\"objetivo_punto\":\"\",\"capa\":\"base\",\"huesos\":[\"pelvis\",\"columna\",\"pecho\",\"cuello\",\"cabeza\",\"clavicula_L\",\"brazo_L\",\"antebrazo_L\",\"mano_L\",\"muslo_L\",\"pierna_L\",\"pie_L\",\"clavicula_R\",\"brazo_R\",\"antebrazo_R\",\"mano_R\",\"muslo_R\",\"pierna_R\",\"pie_R\"]},{\"personaje\":\"ch-eco-eff3\",\"accion_plan\":\"segmento_01_ch-eco-eff3_1\",\"movimiento\":\"m_reposo_base\",\"t0\":18.0,\"t1\":30.0,\"objetivo_punto\":\"\",\"capa\":\"base\",\"huesos\":[\"pelvis\",\"columna\",\"pecho\",\"cuello\",\"cabeza\",\"clavicula_L\",\"brazo_L\",\"antebrazo_L\",\"mano_L\",\"muslo_L\",\"pierna_L\",\"pie_L\",\"clavicula_R\",\"brazo_R\",\"antebrazo_R\",\"mano_R\",\"muslo_R\",\"pierna_R\",\"pie_R\"]},{\"personaje\":\"ch-eco-eff3\",\"accion_plan\":\"a8\",\"movimiento\":\"m_aterrizar_alerta\",\"t0\":18.0,\"t1\":21.0,\"objetivo_punto\":\"\",\"capa\":\"gesto\",\"huesos\":[\"pelvis\",\"columna\",\"pecho\",\"cuello\",\"cabeza\",\"clavicula_L\",\"brazo_L\",\"antebrazo_L\",\"mano_L\",\"muslo_L\",\"pierna_L\",\"pie_L\",\"clavicula_R\",\"brazo_R\",\"antebrazo_R\",\"mano_R\",\"muslo_R\",\"pierna_R\",\"pie_R\"]},{\"personaje\":\"ch-eco-eff3\",\"accion_plan\":\"segmento_01_ch-eco-eff3_2\",\"movimiento\":\"m_caminar_ciclo\",\"t0\":30.0,\"t1",
+  "twoB_top_level_required": [
+    "poses",
+    "movimientos",
+    "asignacion",
+    "iniciales",
+    "anclas",
+    "faltantes"
+  ],
+  "source_actions": [
+    {
+      "id": "a1",
+      "t": [
+        0.0,
+        3.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "poder",
+      "pose": "senalando",
+      "mirada": "libro cuentos",
+      "emocion": "travieso",
+      "objeto": "obj-libro-cuentos__e1-8",
+      "cambio": "mover",
+      "cita": "Un rayo morado cruza la pantalla. Las letras salen volando como mariposas y la página queda en blanco.",
+      "mirada_id": "obj-libro-cuentos__e1-8"
+    },
+    {
+      "id": "a2",
+      "t": [
+        3.0,
+        9.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "libro cuentos",
+      "emocion": "divertido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Jajajá! ¡Sin letras no hay cuentos! ¡Y sin cuentos… todos a la cama sin leer!",
+      "mirada_id": "obj-libro-cuentos__e1-8"
+    },
+    {
+      "id": "a3",
+      "t": [
+        9.0,
+        11.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "poder",
+      "pose": "senalando",
+      "mirada": "Ventana con vista al arcoíris",
+      "emocion": "burlon",
+      "objeto": "Ventana con vista al arcoíris",
+      "cambio": "",
+      "cita": "Otro ZAP. Ahora el arcoíris de la ventana se vuelve gris.",
+      "mirada_id": "Ventana con vista al arcoíris"
+    },
+    {
+      "id": "a4",
+      "t": [
+        11.0,
+        15.5
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "Ventana con vista al arcoíris",
+      "emocion": "aburrido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Y adiós colores! ¡Y adiós números! Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+      "mirada_id": "Ventana con vista al arcoíris"
+    },
+    {
+      "id": "a5",
+      "t": [
+        15.5,
+        18.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "caminar",
+      "pose": "caminando",
+      "mirada": "cama",
+      "emocion": "satisfecho",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+      "mirada_id": "obj-cama"
+    },
+    {
+      "id": "a6",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a7",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a8",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a9",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a10",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-piquito-030a",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a11",
+      "t": [
+        21.0,
+        25.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "visor spark",
+      "emocion": "preocupado",
+      "objeto": "obj-visor-spark",
+      "cambio": "",
+      "cita": "Alerta. Nivel de letras en el mundo: cero.",
+      "mirada_id": "obj-visor-spark"
+    },
+    {
+      "id": "a12",
+      "t": [
+        25.0,
+        30.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "Spark",
+      "emocion": "alarmado",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Cero letras! ¡Cero colores! ¡Cero todo! ¡Esto es una emergencia de nivel arcoíris!",
+      "mirada_id": "ch-spark-468e"
+    },
+    {
+      "id": "a13",
+      "t": [
+        30.0,
+        33.0
+      ],
+      "actor": "",
+      "accion": "aparecer",
+      "pose": "",
+      "mirada": "",
+      "emocion": "",
+      "objeto": "obj-cofre-dorado",
+      "cambio": "aparecer",
+      "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra."
+    },
+    {
+      "id": "a14",
+      "t": [
+        30.0,
+        33.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "mirar",
+      "pose": "de_pie",
+      "mirada": "cofre dorado",
+      "emocion": "sorprendido",
+      "objeto": "obj-cofre-dorado",
+      "cambio": "",
+      "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra.",
+      "mirada_id": "obj-cofre-dorado"
+    },
+    {
+      "id": "a15",
+      "t": [
+        33.0,
+        40.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "serena",
+      "objeto": "obj-cofre-dorado",
+      "cambio": "",
+      "cita": "Esperen… este cofre guarda una palabra mágica. Si alguien la lee en voz alta, todo vuelve a la normalidad."
+    },
+    {
+      "id": "a16",
+      "t": [
+        40.0,
+        44.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "Valentina",
+      "emocion": "entusiasmada",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Pero solo puede abrirlo alguien muy valiente!",
+      "mirada_id": "ch-valentina-a9be"
+    },
+    {
+      "id": "a17",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a18",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidida",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a19",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidida",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a20",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a21",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionado",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a22",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionada",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a23",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionada",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a24",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionado",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a25",
+      "t": [
+        48.0,
+        55.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "misterioso",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Al final de esta misión, tú vas a leer tu primera palabra mágica. Y no te voy a decir cuál es… todavía."
+    }
+  ]
+}

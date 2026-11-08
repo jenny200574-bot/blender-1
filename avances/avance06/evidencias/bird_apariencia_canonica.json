@@ -1,0 +1,1406 @@
+{
+  "id": "ch-piquito-030a",
+  "source": "Argon_GENERATED",
+  "parts": [
+    {
+      "id": "ch-piquito-030a.argon.body",
+      "feature": "body",
+      "shape": "ELLIPSOID",
+      "bind_role": "root",
+      "position_m": [
+        0.0,
+        0.0,
+        0.03
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.05,
+        0.05,
+        0.055
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          0.8470588235,
+          0.3019607843,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.5
+      },
+      "resolution": 24,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "body"
+    },
+    {
+      "id": "ch-piquito-030a.argon.head",
+      "feature": "head",
+      "shape": "ELLIPSOID",
+      "bind_role": "head",
+      "position_m": [
+        0.0,
+        0.0,
+        0.075
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.048,
+        0.048,
+        0.048
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          0.8470588235,
+          0.3019607843,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.5
+      },
+      "resolution": 24,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "head"
+    },
+    {
+      "id": "ch-piquito-030a.argon.beak",
+      "feature": "beak",
+      "shape": "CONE",
+      "bind_role": "beak",
+      "position_m": [
+        0.0,
+        0.024,
+        0.075
+      ],
+      "rotation_deg": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.01,
+        0.01,
+        0.014
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "beak"
+    },
+    {
+      "id": "ch-piquito-030a.argon.chest.1",
+      "feature": "chest.1",
+      "shape": "ELLIPSOID",
+      "bind_role": "root",
+      "position_m": [
+        -0.012,
+        0.022,
+        0.045
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.01,
+        0.005,
+        0.01
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          0.9450980392,
+          0.6588235294,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "chest.1"
+    },
+    {
+      "id": "ch-piquito-030a.argon.chest.2",
+      "feature": "chest.2",
+      "shape": "ELLIPSOID",
+      "bind_role": "root",
+      "position_m": [
+        -0.004,
+        0.022,
+        0.042
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.01,
+        0.005,
+        0.01
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          0.9450980392,
+          0.6588235294,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "chest.2"
+    },
+    {
+      "id": "ch-piquito-030a.argon.chest.3",
+      "feature": "chest.3",
+      "shape": "ELLIPSOID",
+      "bind_role": "root",
+      "position_m": [
+        0.004,
+        0.022,
+        0.042
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.01,
+        0.005,
+        0.01
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          0.9450980392,
+          0.6588235294,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "chest.3"
+    },
+    {
+      "id": "ch-piquito-030a.argon.chest.4",
+      "feature": "chest.4",
+      "shape": "ELLIPSOID",
+      "bind_role": "root",
+      "position_m": [
+        0.012,
+        0.022,
+        0.045
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.01,
+        0.005,
+        0.01
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          0.9450980392,
+          0.6588235294,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "chest.4"
+    },
+    {
+      "id": "ch-piquito-030a.argon.eye_white.L",
+      "feature": "eye_white.L",
+      "shape": "ELLIPSOID",
+      "bind_role": "head",
+      "position_m": [
+        0.016,
+        0.02,
+        0.082
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.014,
+        0.004,
+        0.014
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.2
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "eye_white.L"
+    },
+    {
+      "id": "ch-piquito-030a.argon.eye_white.R",
+      "feature": "eye_white.R",
+      "shape": "ELLIPSOID",
+      "bind_role": "head",
+      "position_m": [
+        -0.016,
+        0.02,
+        0.082
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.014,
+        0.004,
+        0.014
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.2
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "eye_white.R"
+    },
+    {
+      "id": "ch-piquito-030a.argon.iris.L",
+      "feature": "iris.L",
+      "shape": "ELLIPSOID",
+      "bind_role": "head",
+      "position_m": [
+        0.016,
+        0.023,
+        0.082
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.008,
+        0.002,
+        0.008
+      ],
+      "material": {
+        "rgba": [
+          0.4,
+          0.2,
+          0.1,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.3
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "iris.L"
+    },
+    {
+      "id": "ch-piquito-030a.argon.iris.R",
+      "feature": "iris.R",
+      "shape": "ELLIPSOID",
+      "bind_role": "head",
+      "position_m": [
+        -0.016,
+        0.023,
+        0.082
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.008,
+        0.002,
+        0.008
+      ],
+      "material": {
+        "rgba": [
+          0.4,
+          0.2,
+          0.1,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.3
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "iris.R"
+    },
+    {
+      "id": "ch-piquito-030a.argon.pupil.L",
+      "feature": "pupil.L",
+      "shape": "ELLIPSOID",
+      "bind_role": "head",
+      "position_m": [
+        0.016,
+        0.024,
+        0.082
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.002,
+        0.004
+      ],
+      "material": {
+        "rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.1
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "pupil.L"
+    },
+    {
+      "id": "ch-piquito-030a.argon.pupil.R",
+      "feature": "pupil.R",
+      "shape": "ELLIPSOID",
+      "bind_role": "head",
+      "position_m": [
+        -0.016,
+        0.024,
+        0.082
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.002,
+        0.004
+      ],
+      "material": {
+        "rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.1
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "pupil.R"
+    },
+    {
+      "id": "ch-piquito-030a.argon.brow.L",
+      "feature": "brow.L",
+      "shape": "ELLIPSOID",
+      "bind_role": "head",
+      "position_m": [
+        0.016,
+        0.021,
+        0.091
+      ],
+      "rotation_deg": [
+        15.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.012,
+        0.002,
+        0.002
+      ],
+      "material": {
+        "rgba": [
+          0.3,
+          0.15,
+          0.05,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.8
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "brow.L"
+    },
+    {
+      "id": "ch-piquito-030a.argon.brow.R",
+      "feature": "brow.R",
+      "shape": "ELLIPSOID",
+      "bind_role": "head",
+      "position_m": [
+        -0.016,
+        0.021,
+        0.091
+      ],
+      "rotation_deg": [
+        15.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.012,
+        0.002,
+        0.002
+      ],
+      "material": {
+        "rgba": [
+          0.3,
+          0.15,
+          0.05,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.8
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "brow.R"
+    },
+    {
+      "id": "ch-piquito-030a.argon.crest.1",
+      "feature": "crest.1",
+      "shape": "CONE",
+      "bind_role": "head",
+      "position_m": [
+        0.0,
+        -0.005,
+        0.0935
+      ],
+      "rotation_deg": [
+        -20.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          0.8470588235,
+          0.3019607843,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.7
+      },
+      "resolution": 16,
+      "tip_ratio": 0.2,
+      "source": "Argon_GENERATED",
+      "role": "crest.1"
+    },
+    {
+      "id": "ch-piquito-030a.argon.crest.2",
+      "feature": "crest.2",
+      "shape": "CONE",
+      "bind_role": "head",
+      "position_m": [
+        0.0,
+        -0.01,
+        0.0945
+      ],
+      "rotation_deg": [
+        -40.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.007,
+        0.007,
+        0.008
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.7
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "crest.2"
+    },
+    {
+      "id": "ch-piquito-030a.argon.wing.L.base",
+      "feature": "wing.L.base",
+      "shape": "ELLIPSOID",
+      "bind_role": "wing.L",
+      "position_m": [
+        0.026,
+        0.0,
+        0.04
+      ],
+      "rotation_deg": [
+        0.0,
+        15.0,
+        -10.0
+      ],
+      "dimensions_m": [
+        0.008,
+        0.024,
+        0.018
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          0.8470588235,
+          0.3019607843,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.7
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "wing.L.base"
+    },
+    {
+      "id": "ch-piquito-030a.argon.wing.R.base",
+      "feature": "wing.R.base",
+      "shape": "ELLIPSOID",
+      "bind_role": "wing.R",
+      "position_m": [
+        -0.026,
+        0.0,
+        0.04
+      ],
+      "rotation_deg": [
+        0.0,
+        -15.0,
+        10.0
+      ],
+      "dimensions_m": [
+        0.008,
+        0.024,
+        0.018
+      ],
+      "material": {
+        "rgba": [
+          1.0,
+          0.8470588235,
+          0.3019607843,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.7
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "wing.R.base"
+    },
+    {
+      "id": "ch-piquito-030a.argon.wing.L.tip.1",
+      "feature": "wing.L.tip.1",
+      "shape": "CONE",
+      "bind_role": "wing.L",
+      "position_m": [
+        0.028,
+        -0.012,
+        0.038
+      ],
+      "rotation_deg": [
+        -15.0,
+        0.0,
+        15.0
+      ],
+      "dimensions_m": [
+        0.005,
+        0.005,
+        0.012
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "wing.L.tip.1"
+    },
+    {
+      "id": "ch-piquito-030a.argon.wing.L.tip.2",
+      "feature": "wing.L.tip.2",
+      "shape": "CONE",
+      "bind_role": "wing.L",
+      "position_m": [
+        0.028,
+        -0.008,
+        0.032
+      ],
+      "rotation_deg": [
+        -15.0,
+        0.0,
+        15.0
+      ],
+      "dimensions_m": [
+        0.005,
+        0.005,
+        0.012
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "wing.L.tip.2"
+    },
+    {
+      "id": "ch-piquito-030a.argon.wing.L.tip.3",
+      "feature": "wing.L.tip.3",
+      "shape": "CONE",
+      "bind_role": "wing.L",
+      "position_m": [
+        0.028,
+        -0.004,
+        0.026
+      ],
+      "rotation_deg": [
+        -15.0,
+        0.0,
+        15.0
+      ],
+      "dimensions_m": [
+        0.005,
+        0.005,
+        0.012
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "wing.L.tip.3"
+    },
+    {
+      "id": "ch-piquito-030a.argon.wing.R.tip.1",
+      "feature": "wing.R.tip.1",
+      "shape": "CONE",
+      "bind_role": "wing.R",
+      "position_m": [
+        -0.028,
+        -0.012,
+        0.038
+      ],
+      "rotation_deg": [
+        -15.0,
+        0.0,
+        -15.0
+      ],
+      "dimensions_m": [
+        0.005,
+        0.005,
+        0.012
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "wing.R.tip.1"
+    },
+    {
+      "id": "ch-piquito-030a.argon.wing.R.tip.2",
+      "feature": "wing.R.tip.2",
+      "shape": "CONE",
+      "bind_role": "wing.R",
+      "position_m": [
+        -0.028,
+        -0.008,
+        0.032
+      ],
+      "rotation_deg": [
+        -15.0,
+        0.0,
+        -15.0
+      ],
+      "dimensions_m": [
+        0.005,
+        0.005,
+        0.012
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "wing.R.tip.2"
+    },
+    {
+      "id": "ch-piquito-030a.argon.wing.R.tip.3",
+      "feature": "wing.R.tip.3",
+      "shape": "CONE",
+      "bind_role": "wing.R",
+      "position_m": [
+        -0.028,
+        -0.004,
+        0.026
+      ],
+      "rotation_deg": [
+        -15.0,
+        0.0,
+        -15.0
+      ],
+      "dimensions_m": [
+        0.005,
+        0.005,
+        0.012
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "wing.R.tip.3"
+    },
+    {
+      "id": "ch-piquito-030a.argon.tail.1",
+      "feature": "tail.1",
+      "shape": "CONE",
+      "bind_role": "tail",
+      "position_m": [
+        -0.008,
+        -0.03,
+        0.022
+      ],
+      "rotation_deg": [
+        -50.0,
+        0.0,
+        15.0
+      ],
+      "dimensions_m": [
+        0.008,
+        0.008,
+        0.018
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "tail.1"
+    },
+    {
+      "id": "ch-piquito-030a.argon.tail.2",
+      "feature": "tail.2",
+      "shape": "CONE",
+      "bind_role": "tail",
+      "position_m": [
+        0.0,
+        -0.035,
+        0.022
+      ],
+      "rotation_deg": [
+        -50.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.008,
+        0.008,
+        0.018
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "tail.2"
+    },
+    {
+      "id": "ch-piquito-030a.argon.tail.3",
+      "feature": "tail.3",
+      "shape": "CONE",
+      "bind_role": "tail",
+      "position_m": [
+        0.008,
+        -0.03,
+        0.022
+      ],
+      "rotation_deg": [
+        -50.0,
+        0.0,
+        -15.0
+      ],
+      "dimensions_m": [
+        0.008,
+        0.008,
+        0.018
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.1,
+        "roughness": 0.6
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "tail.3"
+    },
+    {
+      "id": "ch-piquito-030a.argon.leg.L",
+      "feature": "leg.L",
+      "shape": "CYLINDER",
+      "bind_role": "leg.L",
+      "position_m": [
+        0.015,
+        0.0,
+        0.008
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.006
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 1.0,
+      "source": "Argon_GENERATED",
+      "role": "leg.L"
+    },
+    {
+      "id": "ch-piquito-030a.argon.leg.R",
+      "feature": "leg.R",
+      "shape": "CYLINDER",
+      "bind_role": "leg.R",
+      "position_m": [
+        -0.015,
+        0.0,
+        0.008
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.006
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 1.0,
+      "source": "Argon_GENERATED",
+      "role": "leg.R"
+    },
+    {
+      "id": "ch-piquito-030a.argon.foot.L",
+      "feature": "foot.L",
+      "shape": "ELLIPSOID",
+      "bind_role": "foot.L",
+      "position_m": [
+        0.015,
+        0.0,
+        0.004
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.008,
+        0.008,
+        0.004
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "foot.L"
+    },
+    {
+      "id": "ch-piquito-030a.argon.foot.R",
+      "feature": "foot.R",
+      "shape": "ELLIPSOID",
+      "bind_role": "foot.R",
+      "position_m": [
+        -0.015,
+        0.0,
+        0.004
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.008,
+        0.008,
+        0.004
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "foot.R"
+    },
+    {
+      "id": "ch-piquito-030a.argon.toe.L.front1",
+      "feature": "toe.L.front1",
+      "shape": "CONE",
+      "bind_role": "toe.L.front1",
+      "position_m": [
+        0.01,
+        0.008,
+        0.002
+      ],
+      "rotation_deg": [
+        90.0,
+        0.0,
+        20.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.008
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "toe.L.front1"
+    },
+    {
+      "id": "ch-piquito-030a.argon.toe.L.front2",
+      "feature": "toe.L.front2",
+      "shape": "CONE",
+      "bind_role": "toe.L.front2",
+      "position_m": [
+        0.015,
+        0.01,
+        0.002
+      ],
+      "rotation_deg": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.008
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "toe.L.front2"
+    },
+    {
+      "id": "ch-piquito-030a.argon.toe.L.front3",
+      "feature": "toe.L.front3",
+      "shape": "CONE",
+      "bind_role": "toe.L.front3",
+      "position_m": [
+        0.02,
+        0.008,
+        0.002
+      ],
+      "rotation_deg": [
+        90.0,
+        0.0,
+        -20.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.008
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "toe.L.front3"
+    },
+    {
+      "id": "ch-piquito-030a.argon.toe.L.back",
+      "feature": "toe.L.back",
+      "shape": "CONE",
+      "bind_role": "toe.L.back",
+      "position_m": [
+        0.015,
+        -0.005,
+        0.002
+      ],
+      "rotation_deg": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.005
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "toe.L.back"
+    },
+    {
+      "id": "ch-piquito-030a.argon.toe.R.front1",
+      "feature": "toe.R.front1",
+      "shape": "CONE",
+      "bind_role": "toe.R.front1",
+      "position_m": [
+        -0.02,
+        0.008,
+        0.002
+      ],
+      "rotation_deg": [
+        90.0,
+        0.0,
+        20.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.008
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "toe.R.front1"
+    },
+    {
+      "id": "ch-piquito-030a.argon.toe.R.front2",
+      "feature": "toe.R.front2",
+      "shape": "CONE",
+      "bind_role": "toe.R.front2",
+      "position_m": [
+        -0.015,
+        0.01,
+        0.002
+      ],
+      "rotation_deg": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.008
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "toe.R.front2"
+    },
+    {
+      "id": "ch-piquito-030a.argon.toe.R.front3",
+      "feature": "toe.R.front3",
+      "shape": "CONE",
+      "bind_role": "toe.R.front3",
+      "position_m": [
+        -0.01,
+        0.008,
+        0.002
+      ],
+      "rotation_deg": [
+        90.0,
+        0.0,
+        -20.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.008
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "toe.R.front3"
+    },
+    {
+      "id": "ch-piquito-030a.argon.toe.R.back",
+      "feature": "toe.R.back",
+      "shape": "CONE",
+      "bind_role": "toe.R.back",
+      "position_m": [
+        -0.015,
+        -0.005,
+        0.002
+      ],
+      "rotation_deg": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_m": [
+        0.004,
+        0.004,
+        0.005
+      ],
+      "material": {
+        "rgba": [
+          0.9490196078,
+          0.4745098039,
+          0.1647058824,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4
+      },
+      "resolution": 16,
+      "tip_ratio": 0.0,
+      "source": "Argon_GENERATED",
+      "role": "toe.R.back"
+    }
+  ]
+}

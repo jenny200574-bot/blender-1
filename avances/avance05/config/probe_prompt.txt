@@ -1,0 +1,1 @@
+Devuelve el objeto requerido con ok=true.

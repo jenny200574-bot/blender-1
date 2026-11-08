@@ -1,0 +1,2619 @@
+{
+  "source_4b1_current": [
+    {
+      "objeto_id": "obj-libro-cuentos",
+      "forma": {
+        "tipo": "compuesto",
+        "descripcion": "Libro de cuentos infantil ilustrado de tapa dura, presentado abierto en dos pliegos simétricos con lomo curvo grueso, esquinas redondeadas biseladas y bloque de hojas gruesas de cartulina.",
+        "partes": [
+          "Tapa dura y contratapa con bordes biselados",
+          "Lomo curvo reforzado",
+          "Bloque de páginas gruesas abiertas",
+          "Ilustraciones y letras mágicas en las páginas"
+        ]
+      },
+      "tamano": {
+        "ancho_cm": 40,
+        "fondo_cm": 26,
+        "alto_cm": 4,
+        "relativo_al_personaje": "Abierto mide más del doble de la estatura de Don Caos (18 cm), quien lo lee apoyado frente a él como un atril; para los niños de 6 años equivale al ancho de su torso sobre el regazo",
+        "personaje_id": "ch-don-caos-7adf",
+        "origen": "deducido",
+        "justificacion": "Medidas estándar de álbum ilustrado preescolar abierto; según config_canal Don Caos mide 18 cm (tamaño de una mano), por lo que el libro abierto supera su tamaño.",
+        "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+      },
+      "materiales": [
+        {
+          "parte": "Tapa dura y lomo",
+          "material": "Cartón rígido forrado en tela mate",
+          "acabado": "Mate suave con filetes decorativos en dorado satinado",
+          "color": "Azul noche #1B2240 con detalles en Dorado #F5C542",
+          "origen": "deducido",
+          "justificacion": "Deducido de config_canal (style_fijo: matte fabrics, satin anodized metals y paleta oficial Azul noche #1B2240 y Dorado #F5C542).",
+          "cita": "falta"
+        },
+        {
+          "parte": "Bloque de páginas",
+          "material": "Papel grueso tipo cartulina infantil",
+          "acabado": "Mate cálido sin reflejos especulares duros",
+          "color": "Blanco crema cálido",
+          "origen": "explicito",
+          "justificacion": "El guion indica explícitamente que la página queda en blanco cuando el rayo borra las letras.",
+          "cita": "Las letras salen volando como mariposas y la página queda en blanco."
+        },
+        {
+          "parte": "Contenido impreso de las páginas",
+          "material": "Tinta impresa con sutil luminosidad mágica",
+          "acabado": "Satinado con leve brillo emisivo al restaurarse",
+          "color": "Multicolor vivo (azul #2F7DE1, magenta #D6338A, verde #3BAA4A, amarillo #FFC928, naranja #F2792Aзите)](#",
+          "origen": "explicito",
+          "justificacion": "El guion establece que las letras, colores y números regresan al libro y llenan sus páginas de nuevo; tonos tomados de config_canal.",
+          "cita": "Las páginas se llenan de nuevo."
+        }
+      ],
+      "usos": [
+        {
+          "personaje_id": "ch-don-caos-7adf",
+          "escenas": [
+            "9"
+          ],
+          "como_lo_usa": "Lo lee feliz durante la celebración final tras haber aprendido a leer su primera palabra junto al grupo",
+          "mano": "falta",
+          "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+        }
+      ],
+      "apariciones": [
+        {
+          "escena": "1",
+          "escenario_id": "esc-habitacion",
+          "quien_lo_tiene": "nadie",
+          "estado": "Abierto sobre la cama pasando a páginas en blanco",
+          "como_se_ve": "Inicia abierto sobre la cama con las letras temblando en sus páginas; tras el disparo del rayo morado, las letras salen volando como mariposas y las hojas quedan totalmente en blanco.",
+          "cambio_respecto_anterior": "Primera aparición: pierde todas sus letras y queda en blanco.",
+          "origen": "explicito",
+          "cita": "Las letras salen volando como mariposas y la página queda en blanco."
+        },
+        {
+          "escena": "8",
+          "escenario_id": "esc-habitacion",
+          "quien_lo_tiene": "nadie",
+          "estado": "Abierto y restaurado con letras, colores y números",
+          "como_se_ve": "Abierto en la habitación recibiendo el vuelo mágico de letras, colores y números que salen del cofre hasta que sus páginas vuelven a llenarse por completo.",
+          "cambio_respecto_anterior": "Pasa de tener las páginas en blanco a recuperar todas sus letras, colores y números.",
+          "origen": "explicito",
+          "cita": "Las páginas se llenan de nuevo."
+        },
+        {
+          "escena": "9",
+          "escenario_id": "esc-habitacion",
+          "quien_lo_tiene": "ch-don-caos-7adf",
+          "estado": "Abierto y completo, leído por Don Caos",
+          "como_se_ve": "Abierto con sus páginas llenas de color y contenido mientras Don Caos lo lee con expresión feliz.",
+          "cambio_respecto_anterior": "Pasa de estar sin lector a ser leído directamente por Don Caos.",
+          "origen": "explicito",
+          "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+        }
+      ],
+      "epoca_estilo": {
+        "epoca": "Contemporánea atemporal infantil",
+        "estilo": "Animación 3D CGI estilizada con bordes biselados suaves, geometría sin líneas de contorno y texturas táctiles cálidas",
+        "region": "Latinoamérica (Colombia, ámbito doméstico cálido preescolar) - config_canal",
+        "origen": "deducido",
+        "justificacion": "Deducido de config_canal (style_fijo 3D CGI estilizado, idioma es-CO y premisa de espacios domésticos cálidos).",
+        "cita": "falta"
+      },
+      "referencias_reales": [
+        {
+          "referencia": "Álbumes ilustrados preescolares de tapa dura en cartoné cosido",
+          "que_tomar": "Las tapas gruesas de esquinas redondeadas seguras para niños pequeños, el lomo curvo pronunciado y las páginas de alto gramaje que mantienen una curvatura firme al abrirse"
+        },
+        {
+          "referencia": "Libros de cuentos mágicos en aperturas de películas de animación 3D CGI familiar",
+          "que_tomar": "Los adornos dorados simples en las esquinas de la cubierta azul profundo y la iluminación cálida sobre el papel crema"
+        }
+      ],
+      "prompt_imagen": "Single complete open children's hardcover storybook, centered, 3/4 angled view, isolated on a smooth plain warm beige background. High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges, chunky rounded preschool-friendly proportions and soft ambient occlusion. Thick deep night-blue matte fabric hardcover (#1B2240) with subtle satin golden corner trim (#F5C542) and a curved spine, thick warm cream cardstock pages curving gently open, decorated with vibrant colorful abstract storybook illustrations in cyan blue, magenta, leaf green and golden yellow without any readable text or letters. Volumetric soft studio lighting with warm rim lights and subtle bloom. Clear scale, no people, no text, no letters, no numbers, no logos.",
+      "prompt_negativo": "photorealistic rendering, live-action photo, anime style, flat 2D vector look, sharp corners, torn pages, old dusty paper, dark horror lighting, people, hands, characters, readable text, letters, numbers, words, calligraphy, captions, watermarks, logos, busy background, multiple books, cropped object",
+      "prompts_por_estado": [
+        {
+          "estado": "Abierto con páginas en blanco",
+          "escenas": [
+            "1",
+            "8"
+          ],
+          "prompt_imagen": "Single complete open children's hardcover storybook with completely blank pages, centered, 3/4 angled view, isolated on a smooth plain warm beige background. High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges, chunky rounded preschool-friendly proportions and soft ambient occlusion. Thick deep night-blue matte fabric hardcover (#1B2240) with subtle satin golden corner trim (#F5C542) and a curved spine, thick warm cream cardstock pages curving gently open and completely empty and blank white-cream with no illustrations. Volumetric soft studio lighting with warm rim lights and subtle bloom. Clear scale, no people, no text, no letters, no numbers, no logos."
+        },
+        {
+          "estado": "Abierto y restaurado con color",
+          "escenas": [
+            "1",
+            "8",
+            "9"
+          ],
+          "prompt_imagen": "Single complete open children's hardcover storybook, centered, 3/4 angled view, isolated on a smooth plain warm beige background. High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges, chunky rounded preschool-friendly proportions and soft ambient occlusion. Thick deep night-blue matte fabric hardcover (#1B2240) with subtle satin golden corner trim (#F5C542) and a curved spine, thick warm cream cardstock pages curving gently open, glowing softly with vibrant colorful abstract storybook illustrations in cyan blue, magenta, leaf green and golden yellow without any readable text or letters. Volumetric soft studio lighting with warm rim lights, magical golden glow and subtle bloom. Clear scale, no people, no text, no letters, no numbers, no logos."
+        }
+      ]
+    },
+    {
+      "objeto_id": "obj-visor-spark",
+      "forma": {
+        "tipo": "compuesto",
+        "descripcion": "Gafas-visor tecnológicas infantiles de una sola pantalla curva panorámica translúcida, con montura superior biselada, puente nasal ergonómico redondeado y dos patillas laterales gruesas con botón emisor e indicador luminoso.",
+        "partes": [
+          "Pantalla curva panorámica translúcida",
+          "Marco superior biselado",
+          "Puente nasal redondeado",
+          "Patillas laterales ergonómicas",
+          "Módulo lateral con botón de activación, proyector holográfico y luz de alerta"
+        ]
+      },
+      "tamano": {
+        "ancho_cm": 16,
+        "fondo_cm": 12,
+        "alto_cm": 6,
+        "relativo_al_personaje": "Abarca de sien a sien el ancho de los ojos de Spark sobre el puente de su nariz, cubriendo el tercio medio de su cabeza estilizada de niño de 6 años",
+        "personaje_id": "ch-spark-468e",
+        "origen": "deducido",
+        "justificacion": "Deducido de config_canal: Spark es un niño de 6 años con cabeza grande redondeada estilo 3D CGI y lleva el visor colocado sobre los ojos.",
+        "cita": "falta"
+      },
+      "materiales": [
+        {
+          "parte": "Pantalla curva panorámica",
+          "material": "Policarbonato acrílico translúcido",
+          "acabado": "Brillante translúcido con resplandor emisivo neón",
+          "color": "Celeste holograma #8FD3FF con matiz Azul Spark #2F7DE1",
+          "origen": "deducido",
+          "justificacion": "Deducido de config_canal (personajes: visor transparente azul que proyecta hologramas; style_fijo: glossy translucent plastics, neon emissive glow y paleta Celeste holograma #8FD3FF).",
+          "cita": "falta"
+        },
+        {
+          "parte": "Marco superior y patillas laterales",
+          "material": "Plástico ABS y metal anodizado",
+          "acabado": "Satinado liso con bordes redondeados biselados",
+          "color": "Azul Spark #2F7DE1 con detalles blanco perla",
+          "origen": "deducido",
+          "justificacion": "Deducido de config_canal (style_fijo: satin anodized metals, smooth beveled edges y color dominante de Spark #2F7DE1).",
+          "cita": "falta"
+        },
+        {
+          "parte": "Indicador luminoso y proyector",
+          "material": "Cristal LED emisivo",
+          "acabado": "Brillo neón intenso",
+          "color": "Celeste #8FD3FF en estado normal/proyección y rojo intenso en modo alarma",
+          "origen": "explicito",
+          "justificacion": "El guion indica explícitamente que proyecta un holograma azul en la escena 2 y que parpadea en rojo con una alarma en la escena 4.",
+          "cita": "El visor de Spark parpadea en rojo."
+        }
+      ],
+      "usos": [
+        {
+          "personaje_id": "ch-spark-468e",
+          "escenas": [
+            "1",
+            "2",
+            "4",
+            "5"
+          ],
+          "como_lo_usa": "Lo lleva sobre los ojos para leer alertas de nivel de letras, proyectar hologramas educativos azules, recibir alarmas rojas y ajustarlo sobre su rostro",
+          "mano": "falta",
+          "cita": "Spark activa su visor."
+        }
+      ],
+      "apariciones": [
+        {
+          "escena": "1",
+          "escenario_id": "esc-habitacion",
+          "quien_lo_tiene": "ch-spark-468e",
+          "estado": "Encendido en modo lectura de alerta",
+          "como_se_ve": "Colocado sobre los ojos de Spark con brillo azul celeste mientras él consulta la alerta de nivel cero de letras.",
+          "cambio_respecto_anterior": "Primera aparición: encendido sobre los ojos de Spark al aterrizar en la habitación.",
+          "origen": "explicito",
+          "cita": "preocupado, mirando su visor"
+        },
+        {
+          "escena": "2",
+          "escenario_id": "esc-habitacion",
+          "quien_lo_tiene": "ch-spark-468e",
+          "estado": "Activado proyectando holograma azul",
+          "como_se_ve": "Emite un haz de luz celeste brillante hacia el frente proyectando el mapa holográfico con las 5 estrellas en fila.",
+          "cambio_respecto_anterior": "Pasa de lectura interna a proyectar un holograma azul externo.",
+          "origen": "explicito",
+          "cita": "Spark activa su visor."
+        },
+        {
+          "escena": "4",
+          "escenario_id": "esc-jardin",
+          "quien_lo_tiene": "ch-spark-468e",
+          "estado": "En modo alarma parpadeando en rojo",
+          "como_se_ve": "Puesto en el rostro de Spark, cambia su resplandor celeste por destellos rojos intermitentes sincronizados con un pitido de alarma.",
+          "cambio_respecto_anterior": "Cambia de color azul celeste a parpadeo rojo de emergencia.",
+          "origen": "explicito",
+          "cita": "El visor de Spark parpadea en rojo."
+        },
+        {
+          "escena": "5",
+          "escenario_id": "esc-cocina",
+          "quien_lo_tiene": "ch-spark-468e",
+          "estado": "Activo en modo proyección de hologramas",
+          "como_se_ve": "Spark se lo ajusta y el visor vuelve a brillar en azul celeste, proyectando hologramas de un T-Rex, números y estrellas para sumar.",
+          "cambio_respecto_anterior": "Deja de parpadear en rojo y recupera su luz azul de proyección holográfica.",
+          "origen": "explicito",
+          "cita": "ajustándose el visor"
+        }
+      ],
+      "epoca_estilo": {
+        "epoca": "Contemporánea con tecnología futurista infantil amigable",
+        "estilo": "Animación 3D CGI estilizada con plásticos translúcidos brillantes, bordes gruesos redondeados sin aristas y brillo emisivo neón",
+        "region": "Latinoamérica (Colombia) - config_canal",
+        "origen": "deducido",
+        "justificacion": "Deducido de config_canal (style_fijo: glossy translucent plastics, satin anodized metals, neon emissive glow).",
+        "cita": "falta"
+      },
+      "referencias_reales": [
+        {
+          "referencia": "Gafas deportivas infantiles envolventes de policarbonato transparente coloreado",
+          "que_tomar": "La lente continua de una sola pieza curva sin montura inferior, el puente nasal suave integrado y las patillas gruesas seguras sin piezas metálicas punzantes"
+        },
+        {
+          "referencia": "Visores de realidad aumentada de juguete y animación 3D infantil",
+          "que_tomar": "La ceja superior biselada en azul satinado, el botón lateral circular para activar hologramas y el resplandor interno cian en el cristal"
+        }
+      ],
+      "prompt_imagen": "Single complete futuristic child visor goggles, centered, 3/4 view, isolated on a smooth plain warm beige background. High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges, chunky rounded toy-safe proportions and soft ambient occlusion. One-piece curved panoramic lens made of glossy translucent cyan-blue plastic (#8FD3FF) with soft neon emissive glow, framed along the top brow and ergonomic side temples by satin anodized royal blue metal and matte plastic (#2F7DE1) with a round side activation button. Volumetric soft studio lighting with strong rim lights and subtle bloom. Clear preschool wearable scale, no people, no face, no text, no letters, no numbers, no logos.",
+      "prompt_negativo": "photorealistic rendering, live-action photo, anime style, flat 2D vector look, sharp edges, tactical military goggles, dark lighting, human head, face, eyes, mannequin, characters, readable text, letters, numbers, HUD text, watermarks, logos, busy background, cropped object",
+      "prompts_por_estado": [
+        {
+          "estado": "Encendido azul normal y proyección",
+          "escenas": [
+            "1",
+            "2",
+            "5"
+          ],
+          "prompt_imagen": "Single complete futuristic child visor goggles glowing cyan blue, centered, 3/4 view, isolated on a smooth plain warm beige background. High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges, chunky rounded toy-safe proportions and soft ambient occlusion. One-piece curved panoramic lens made of glossy translucent cyan-blue plastic (#8FD3FF) with bright cyan neon emissive glow, framed along the top brow and ergonomic side temples by satin anodized royal blue metal and matte plastic (#2F7DE1) with a glowing cyan side button. Volumetric soft studio lighting with strong rim lights and subtle bloom. Clear preschool wearable scale, no people, no face, no text, no letters, no numbers, no logos."
+        },
+        {
+          "estado": "En modo alarma parpadeando en rojo",
+          "escenas": [
+            "4"
+          ],
+          "prompt_imagen": "Single complete futuristic child visor goggles flashing in red alert state, centered, 3/4 view, isolated on a smooth plain warm beige background. High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges, chunky rounded toy-safe proportions and soft ambient occlusion. One-piece curved panoramic lens made of glossy translucent plastic illuminated with a bright warm red neon emissive alarm glow, framed along the top brow and ergonomic side temples by satin anodized royal blue metal and matte plastic (#2F7DE1) with a glowing red side alert indicator. Volumetric soft studio lighting with strong rim lights and soft red bloom. Clear preschool wearable scale, no people, no face, no text, no letters, no numbers, no logos."
+        }
+      ]
+    }
+  ],
+  "source_4a2_elements": [
+    {
+      "alto_m": 1.3,
+      "ancho_m": 1.6,
+      "cita": "Ahora el arcoíris de la ventana se vuelve gris.",
+      "fondo_m": 0.15,
+      "forma": "compuesto",
+      "justificacion": "Elemento de 4P requerido en la pared del fondo para mostrar el arcoíris que pasa de color a gris.",
+      "material": "Madera lacada blanco cálido y vidrio translúcido",
+      "nombre": "Ventana con vista al arcoíris",
+      "origen": "explicito",
+      "rotacion_grados": 180,
+      "x_m": 2.25,
+      "y_m": 3.95,
+      "z_m": 0.9
+    },
+    {
+      "alto_m": 0.05,
+      "ancho_m": 4.5,
+      "cita": "La O rueda por el piso como una pelota",
+      "fondo_m": 4.0,
+      "forma": "plano",
+      "justificacion": "Superficie base de la habitación nombrada en 4P por donde rueda la vocal O y caen objetos.",
+      "material": "Listones de madera clara cálida con acabado satinado suave",
+      "nombre": "Piso de la habitación",
+      "origen": "explicito",
+      "rotacion_grados": 0,
+      "x_m": 2.25,
+      "y_m": 2.0,
+      "z_m": 0.0
+    },
+    {
+      "alto_m": 0.02,
+      "ancho_m": 2.2,
+      "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes:",
+      "fondo_m": 2.2,
+      "forma": "cilindro",
+      "justificacion": "Zona central delimitada en 4P donde aterrizan las luces, aparece el cofre dorado y hacen fila las vocales.",
+      "material": "Tejido de algodón mate suave tipo tapete circular beige cálido",
+      "nombre": "Centro de la habitación",
+      "origen": "explicito",
+      "rotacion_grados": 0,
+      "x_m": 2.25,
+      "y_m": 2.0,
+      "z_m": 0.01
+    },
+    {
+      "alto_m": 2.1,
+      "ancho_m": 0.9,
+      "cita": "falta",
+      "fondo_m": 0.08,
+      "forma": "caja",
+      "justificacion": "Carpintería fija correspondiente a la abertura de entrada principal en la pared de frente.",
+      "material": "Madera pintada en beige cálido satinado con pomo redondeado dorado",
+      "nombre": "Puerta de entrada de la habitación",
+      "origen": "deducido",
+      "rotacion_grados": 0,
+      "x_m": 0.8,
+      "y_m": 0.05,
+      "z_m": 0.0
+    },
+    {
+      "alto_m": 0.55,
+      "ancho_m": 0.5,
+      "cita": "falta",
+      "fondo_m": 0.45,
+      "forma": "caja",
+      "justificacion": "Mueble de apoyo junto a la cabecera de la cama para sostener el lápiz donde se esconde la vocal I.",
+      "material": "Madera clara con bordes biselados suaves",
+      "nombre": "Mesa de noche junto a la cama",
+      "origen": "deducido",
+      "rotacion_grados": 90,
+      "x_m": 0.4,
+      "y_m": 3.45,
+      "z_m": 0.0
+    }
+  ],
+  "source_4a2_plan": {
+    "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes:",
+    "descripcion": "Dormitorio infantil acogedor de 4,5 m de ancho por 4,0 m de fondo. Entrada principal en la pared de frente a la izquierda; cama infantil adosada a la pared izquierda con mesa de noche al fondo; ventana amplia con vista al arcoíris en el centro de la pared del fondo; armario de madera en la pared derecha; zona central despejada con alfombra redonda donde aparece el cofre dorado y cuelga la lámpara de techo.",
+    "entrada_principal": "Puerta batiente de madera en la pared frente (y=0 m), a x=0,8 m de la esquina izquierda.",
+    "forma": "rectangular",
+    "justificacion": "Distribución deducida para dejar libre el centro donde aparece el cofre y permitir ver cama, ventana, lámpara y armario.",
+    "origen": "deducido"
+  },
+  "source_4a2_glossary": {
+    "schema": "myia.glosario_4a2.v1",
+    "lugar_id": "esc-habitacion",
+    "entregado_por": "4a2",
+    "fecha": "2026-11-05T20:23:10-05:00",
+    "fuente": "molde.json (Blender 4a2) + escenario.json (4a1)",
+    "exterior": false,
+    "formas": {
+      "VENTANA_CON_VISTA_AL_ARCOIRIS": "Ventana con vista al arcoíris. Forma: compuesto. Tamaño: 1.6×0.15×1.3 m. Posición: x=2.25, y=3.95, z=0.9. Material: Madera pintada y barnizada estilo juguete 3D; color: Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6; textura: Satinada lisa con cantos muy redondeados y biselados suaves; encima: nada inventado",
+      "PISO": "Piso de la habitación. Forma: plano. Tamaño: 4.5×4.0×0.05 m. Posición: x=2.25, y=2.0, z=0.0. Material: Listones de madera clara cálida con acabado satinado suave; encima: nada inventado",
+      "CENTRO_DE_LA_HABITACION": "Centro de la habitación. Forma: cilindro. Tamaño: 2.2×2.2×0.02 m. Posición: x=2.25, y=2.0, z=0.01. Material: Tejido de algodón mate suave tipo tapete circular beige cálido; encima: nada inventado",
+      "PUERTA_DE_ENTRADA_DE_LA_HABITACION": "Puerta de entrada de la habitación. Forma: caja. Tamaño: 0.9×0.08×2.1 m. Posición: x=0.8, y=0.05, z=0.0. Material: Madera pintada y barnizada estilo juguete 3D; color: Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6; textura: Satinada lisa con cantos muy redondeados y biselados suaves; encima: nada inventado",
+      "MESA_DE_NOCHE_JUNTO_A_LA_CAMA": "Mesa de noche junto a la cama. Forma: caja. Tamaño: 0.5×0.45×0.55 m. Posición: x=0.4, y=3.45, z=0.0. Material: Madera pintada y barnizada estilo juguete 3D; color: Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6; textura: Satinada lisa con cantos muy redondeados y biselados suaves; encima: nada inventado"
+    },
+    "fondo_lejano": [
+      {
+        "que_es": "Cielo diurno despejado con nubes redondeadas y un gran arcoíris que cruza el horizonte sobre las copas de los árboles del jardín",
+        "direccion": "fondo",
+        "distancia_aprox_m": 80,
+        "tamano_aparente": "Grande, enmarcado de lado a lado a través de la ventana de 1,6 m de ancho de la pared del fondo"
+      }
+    ],
+    "materiales_fondo": null,
+    "faltas": []
+  },
+  "source_4a2_mold_book_variants": [
+    {
+      "objeto_id": "obj-libro-cuentos",
+      "bloque": "obj-libro-cuentos__e1-8",
+      "escenas": [
+        "1",
+        "8"
+      ],
+      "x_m": 1.2,
+      "y_m": 2.6,
+      "z_m": 0.52
+    },
+    {
+      "objeto_id": "obj-libro-cuentos",
+      "bloque": "obj-libro-cuentos__e9",
+      "escenas": [
+        "9"
+      ],
+      "x_m": 2.0,
+      "y_m": 1.7,
+      "z_m": 0.2
+    }
+  ],
+  "measured_inventory": {
+    "unit_system": "METRIC",
+    "scale_length": 1.0,
+    "objects": [
+      {
+        "id": "Ventana con vista al arcoíris",
+        "type": "MESH",
+        "position_m": [
+          3.049999952316284,
+          4.025000095367432,
+          1.5499999523162842
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          -3.141592502593994
+        ],
+        "dimensions_m": [
+          1.600000023841858,
+          0.15000000596046448,
+          1.2999999523162842
+        ],
+        "parent": null,
+        "hidden": false,
+        "material_names": [
+          "el_0"
+        ],
+        "bbox_world_m": {
+          "min": [
+            2.25,
+            3.950000047683716,
+            0.8999999761581421
+          ],
+          "max": [
+            3.8499999046325684,
+            4.100000381469727,
+            2.1999998092651367
+          ]
+        },
+        "vertices": 8,
+        "faces": 6
+      },
+      {
+        "id": "Centro de la habitación",
+        "type": "MESH",
+        "position_m": [
+          3.3499999046325684,
+          3.0999999046325684,
+          0.019999999552965164
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          2.200000047683716,
+          2.200000047683716,
+          0.019999999552965164
+        ],
+        "parent": null,
+        "hidden": false,
+        "material_names": [
+          "el_2"
+        ],
+        "bbox_world_m": {
+          "min": [
+            2.25,
+            1.9999998807907104,
+            0.009999999776482582
+          ],
+          "max": [
+            4.449999809265137,
+            4.199999809265137,
+            0.029999999329447746
+          ]
+        },
+        "vertices": 64,
+        "faces": 34
+      },
+      {
+        "id": "obj-libro-cuentos__e1-8",
+        "type": "MESH",
+        "position_m": [
+          1.2000000476837158,
+          2.5999999046325684,
+          0.5400000214576721
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.2617993950843811
+        ],
+        "dimensions_m": [
+          0.4000000059604645,
+          0.2600000202655792,
+          0.03999999910593033
+        ],
+        "parent": null,
+        "hidden": false,
+        "material_names": [
+          "obj_5"
+        ],
+        "bbox_world_m": {
+          "min": [
+            0.9731684327125549,
+            2.42266583442688,
+            0.5200000405311584
+          ],
+          "max": [
+            1.4268317222595215,
+            2.777333974838257,
+            0.5600000023841858
+          ]
+        },
+        "vertices": 8,
+        "faces": 6
+      },
+      {
+        "id": "obj-visor-spark",
+        "type": "MESH",
+        "position_m": [
+          1.649999976158142,
+          1.850000023841858,
+          0.9800000190734863
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          -3.141592502593994
+        ],
+        "dimensions_m": [
+          0.1599999964237213,
+          0.11999999731779099,
+          0.05999999865889549
+        ],
+        "parent": null,
+        "hidden": false,
+        "material_names": [
+          "obj_7"
+        ],
+        "bbox_world_m": {
+          "min": [
+            1.5699999332427979,
+            1.7899999618530273,
+            0.9500000476837158
+          ],
+          "max": [
+            1.7300000190734863,
+            1.9100000858306885,
+            1.0099999904632568
+          ]
+        },
+        "vertices": 8,
+        "faces": 6
+      }
+    ]
+  },
+  "current_existing_seals": [
+    {
+      "id": "gdc-visor",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-visor.json",
+      "source_data": {
+        "id": "gdc-visor",
+        "nombre": "visor",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "clase": "objeto",
+        "subclase": "historia",
+        "sellado": true,
+        "version": 2,
+        "creado": "2026-11-06T03:35:43+01:00",
+        "por": "t467u programa 00→SELLO OBJ",
+        "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-visor.png",
+        "imagen_sha256": "716eab0d3ea1fdf1c1bb8ec76e57be645ce8df6e7b5c0b15cfc869a70ca2e853",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 16,
+          "fondo_cm": 12,
+          "alto_cm": 6.5
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+        "ids_capitulo": [
+          "obj-visor"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-visor"
+        ],
+        "frase_sello": "Gafas visor sci-fi envolventes de diseño estilizado 3D, montura gruesa de bordes redondeados en plástico mate azul cobalto con paneles de acento en blanco hueso en las cejas, bisagras y borde inferior de las patillas. Lente continua semitransparente de una pieza y nodo circular central superior con emisión luminosa en azul cian brillante (o rojo neón en modo alarma), complementado con un indicador LED horizontal color naranja ámbar incrustado en cada sien.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-visor",
+        "obj-visor"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    },
+    {
+      "id": "gdc-libro-cuentos",
+      "type": "OBJECT",
+      "source": "/workspace/MOTOR_v9_desde_PC/v9_universal_calidad_20261106/paquetes/biblioteca_objetos_lectura_213/gdc-libro-cuentos.json",
+      "source_data": {
+        "id": "gdc-libro-cuentos",
+        "nombre": "Libro de cuentos",
+        "clase": "objeto",
+        "subclase": "historia",
+        "dueno": null,
+        "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-libro-de-cuentos.png",
+        "nunca_cambia": "Libro de cuentos abierto sobre la cama; sus letras salen volando como mariposas (guion T01E01, gancho).",
+        "canal": "cn-los-guardianes-de-la-9fb323be",
+        "sellado": true,
+        "version": 2,
+        "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO; falta imagen de referencia (no hay en material del cliente)",
+        "creado": "2026-11-02T16:50:00-05:00",
+        "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+        "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+        "imagen_sha256": "46251855a6c0a9eaff7971ee6a8f3b02024a38306d6dedcdd950522a879f4dcf",
+        "imagen_origen": "paso 00 4b2 (hoja pintada)",
+        "medidas_cm": {
+          "ancho_cm": 36,
+          "fondo_cm": 4.5,
+          "alto_cm": 24
+        },
+        "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+        "ids_capitulo": [
+          "obj-libro-de-cuentos"
+        ],
+        "conectado": {
+          "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+          "cuando": "2026-11-06T03:35:43+01:00"
+        },
+        "ids_canal": [
+          "obj-libro-de-cuentos"
+        ],
+        "imagen_ref_anterior": null,
+        "frase_sello": "Libro estilizado 3D de tapa dura y lomo grueso, con cubiertas de textura textil mate divididas en bloques geométricos de color azul marino oscuro (arriba), azul cian brillante (abajo) y azul medio (lomo). Incorpora cuatro cantoneras metálicas doradas redondeadas en las esquinas exteriores, gruesas páginas color crema y una cinta marcapáginas naranja con corte en V que sobresale por el borde inferior. Al abrirse en su estado mágico activo, las páginas en blanco se iluminan con formas abstractas multicolores, emitiendo un brillo cálido y partículas doradas flotantes.",
+        "actualizado": "2026-11-06T04:03:13+01:00",
+        "origen": "sellar"
+      },
+      "exact_aliases": [
+        "obj-libro-de-cuentos",
+        "obj-libro-de-cuentos"
+      ],
+      "association": "Se incluyen fichas del canal; sólo aliases exactos permiten conectar una entidad de escena. No se adivinan nombres.",
+      "field_report": {
+        "fields_present": [
+          "frase_sello",
+          "nunca_cambia",
+          "medidas_cm"
+        ],
+        "missing": [
+          {
+            "campo": "geometria_3d",
+            "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+            "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+          }
+        ],
+        "can_build": false
+      }
+    }
+  ],
+  "skeleton_Piquito_generated19": {
+    "units": "m",
+    "rig": {
+      "bones": [
+        {
+          "id": "ch-piquito-030a.root",
+          "role": "root",
+          "parent": null,
+          "head": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tail": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "limits_deg": [
+            [
+              -180,
+              180
+            ],
+            [
+              -180,
+              180
+            ],
+            [
+              -180,
+              180
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.neck",
+          "role": "neck",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "tail": [
+            0.0,
+            0.0,
+            0.055
+          ],
+          "limits_deg": [
+            [
+              -15,
+              15
+            ],
+            [
+              -15,
+              15
+            ],
+            [
+              -20,
+              20
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.head",
+          "role": "head",
+          "parent": "ch-piquito-030a.neck",
+          "head": [
+            0.0,
+            0.0,
+            0.055
+          ],
+          "tail": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "limits_deg": [
+            [
+              -30,
+              30
+            ],
+            [
+              -30,
+              30
+            ],
+            [
+              -45,
+              45
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.beak",
+          "role": "beak",
+          "parent": "ch-piquito-030a.head",
+          "head": [
+            0.0,
+            0.02,
+            0.075
+          ],
+          "tail": [
+            0.0,
+            0.035,
+            0.075
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -5,
+              5
+            ],
+            [
+              -5,
+              5
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.tail",
+          "role": "tail",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            0.0,
+            -0.02,
+            0.02
+          ],
+          "tail": [
+            0.0,
+            -0.045,
+            0.035
+          ],
+          "limits_deg": [
+            [
+              -20,
+              20
+            ],
+            [
+              -20,
+              20
+            ],
+            [
+              -30,
+              30
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.wing.L",
+          "role": "wing.L",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            0.025,
+            0.0,
+            0.04
+          ],
+          "tail": [
+            0.04,
+            -0.015,
+            0.03
+          ],
+          "limits_deg": [
+            [
+              -45,
+              90
+            ],
+            [
+              -30,
+              30
+            ],
+            [
+              -45,
+              45
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.wing.R",
+          "role": "wing.R",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            -0.025,
+            0.0,
+            0.04
+          ],
+          "tail": [
+            -0.04,
+            -0.015,
+            0.03
+          ],
+          "limits_deg": [
+            [
+              -45,
+              90
+            ],
+            [
+              -30,
+              30
+            ],
+            [
+              -45,
+              45
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.leg.L",
+          "role": "leg.L",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            0.015,
+            0.0,
+            0.01
+          ],
+          "tail": [
+            0.015,
+            0.0,
+            0.005
+          ],
+          "limits_deg": [
+            [
+              -30,
+              30
+            ],
+            [
+              -15,
+              15
+            ],
+            [
+              -15,
+              15
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.leg.R",
+          "role": "leg.R",
+          "parent": "ch-piquito-030a.root",
+          "head": [
+            -0.015,
+            0.0,
+            0.01
+          ],
+          "tail": [
+            -0.015,
+            0.0,
+            0.005
+          ],
+          "limits_deg": [
+            [
+              -30,
+              30
+            ],
+            [
+              -15,
+              15
+            ],
+            [
+              -15,
+              15
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.foot.L",
+          "role": "foot.L",
+          "parent": "ch-piquito-030a.leg.L",
+          "head": [
+            0.015,
+            0.0,
+            0.005
+          ],
+          "tail": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -20,
+              40
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.foot.R",
+          "role": "foot.R",
+          "parent": "ch-piquito-030a.leg.R",
+          "head": [
+            -0.015,
+            0.0,
+            0.005
+          ],
+          "tail": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -20,
+              40
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.L.front1",
+          "role": "toe.L.front1",
+          "parent": "ch-piquito-030a.foot.L",
+          "head": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            0.01,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.L.front2",
+          "role": "toe.L.front2",
+          "parent": "ch-piquito-030a.foot.L",
+          "head": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            0.015,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.L.front3",
+          "role": "toe.L.front3",
+          "parent": "ch-piquito-030a.foot.L",
+          "head": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            0.02,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.L.back",
+          "role": "toe.L.back",
+          "parent": "ch-piquito-030a.foot.L",
+          "head": [
+            0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            0.015,
+            -0.005,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.R.front1",
+          "role": "toe.R.front1",
+          "parent": "ch-piquito-030a.foot.R",
+          "head": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            -0.02,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.R.front2",
+          "role": "toe.R.front2",
+          "parent": "ch-piquito-030a.foot.R",
+          "head": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            -0.015,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.R.front3",
+          "role": "toe.R.front3",
+          "parent": "ch-piquito-030a.foot.R",
+          "head": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            -0.01,
+            0.015,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        },
+        {
+          "id": "ch-piquito-030a.toe.R.back",
+          "role": "toe.R.back",
+          "parent": "ch-piquito-030a.foot.R",
+          "head": [
+            -0.015,
+            0.005,
+            0.0
+          ],
+          "tail": [
+            -0.015,
+            -0.005,
+            0.0
+          ],
+          "limits_deg": [
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ],
+            [
+              -10,
+              10
+            ]
+          ],
+          "source": "Argon_GENERATED_ch-piquito-030a"
+        }
+      ]
+    },
+    "bone_radii_m": {
+      "ch-piquito-030a.root": 0.025,
+      "ch-piquito-030a.neck": 0.02,
+      "ch-piquito-030a.head": 0.025,
+      "ch-piquito-030a.beak": 0.005,
+      "ch-piquito-030a.tail": 0.01,
+      "ch-piquito-030a.wing.L": 0.01,
+      "ch-piquito-030a.wing.R": 0.01,
+      "ch-piquito-030a.leg.L": 0.004,
+      "ch-piquito-030a.leg.R": 0.004,
+      "ch-piquito-030a.foot.L": 0.004,
+      "ch-piquito-030a.foot.R": 0.004,
+      "ch-piquito-030a.toe.L.front1": 0.002,
+      "ch-piquito-030a.toe.L.front2": 0.002,
+      "ch-piquito-030a.toe.L.front3": 0.002,
+      "ch-piquito-030a.toe.L.back": 0.002,
+      "ch-piquito-030a.toe.R.front1": 0.002,
+      "ch-piquito-030a.toe.R.front2": 0.002,
+      "ch-piquito-030a.toe.R.front3": 0.002,
+      "ch-piquito-030a.toe.R.back": 0.002
+    },
+    "source": "Argon_GENERATED_ch-piquito-030a",
+    "status": "GENERATED_DESIGN_VALIDATED_TOPOLOGY_ONLY",
+    "missing_physics_and_anchor_source": "Falta representacion fisica declarativa. No se certifica anclaje al hombro de Eco ni colisiones; unicamente se declara la estructura de huesos y apariencia propuesta segun ADN y orden de Ricardo."
+  },
+  "source01_Piquito": {
+    "id": "ch-piquito-030a",
+    "altura": null,
+    "estado": {},
+    "segmentos": [
+      {
+        "t": [
+          0.0,
+          18.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_aterrizaje"
+        ],
+        "rot": -171.0,
+        "tipo": "quieto",
+        "porque": "En el hombro izquierdo de Eco antes de aterrizar"
+      },
+      {
+        "t": [
+          18.0,
+          30.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_aterrizaje"
+        ],
+        "rot": -171.0,
+        "tipo": "quieto",
+        "porque": "Aterriza posado en el hombro izquierdo de Eco"
+      },
+      {
+        "t": [
+          30.0,
+          33.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_cofre"
+        ],
+        "rot": -172.0,
+        "tipo": "acoplarse",
+        "porque": "Va en el hombro izquierdo de Eco cuando ella se acerca al cofre"
+      },
+      {
+        "t": [
+          33.0,
+          44.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -172.0,
+        "tipo": "quieto",
+        "porque": "Mira el cofre dorado desde el hombro izquierdo de Eco"
+      },
+      {
+        "t": [
+          44.0,
+          46.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "girar",
+        "porque": "Gira con Eco hacia el frente"
+      },
+      {
+        "t": [
+          46.0,
+          55.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "quieto",
+        "porque": "Mira al frente desde el hombro izquierdo de Eco"
+      }
+    ],
+    "version_personaje": {
+      "name": "referencia cliente",
+      "form": "fm-a36983467703",
+      "description": "Un pajarito redondo como una pelotita, del tamaño de un puño, con alas cortitas, pico pequeño y triangular y dos plumitas de copete. No habla: se expresa con gestos (se tapa los ojos, aplaude con las alas, se esponja cuando se ofende). [Acompañante de Eco; sin imagen propia, solo aparece en ref1 sobre el hombro izquierdo de Eco.]",
+      "never_changes": "Pajarito AMARILLO (cuerpo #FFD84D, pecho #FFF1A8), pico y patas naranja #F2792A, copete amarillo con punta naranja, redondo como una pelotita, del tamaño de un puño, siempre en el hombro izquierdo de Eco. NUNCA naranja de cuerpo (la ref1 del cliente lo trae naranja: manda la biblia y la orden de Ricardo, amarillo #FFD84D)."
+    }
+  },
+  "actions": [
+    {
+      "id": "a1",
+      "t": [
+        0.0,
+        3.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "poder",
+      "pose": "senalando",
+      "mirada": "libro cuentos",
+      "emocion": "travieso",
+      "objeto": "obj-libro-cuentos__e1-8",
+      "cambio": "mover",
+      "cita": "Un rayo morado cruza la pantalla. Las letras salen volando como mariposas y la página queda en blanco.",
+      "mirada_id": "obj-libro-cuentos__e1-8"
+    },
+    {
+      "id": "a2",
+      "t": [
+        3.0,
+        9.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "libro cuentos",
+      "emocion": "divertido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Jajajá! ¡Sin letras no hay cuentos! ¡Y sin cuentos… todos a la cama sin leer!",
+      "mirada_id": "obj-libro-cuentos__e1-8"
+    },
+    {
+      "id": "a3",
+      "t": [
+        9.0,
+        11.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "poder",
+      "pose": "senalando",
+      "mirada": "Ventana con vista al arcoíris",
+      "emocion": "burlon",
+      "objeto": "Ventana con vista al arcoíris",
+      "cambio": "",
+      "cita": "Otro ZAP. Ahora el arcoíris de la ventana se vuelve gris.",
+      "mirada_id": "Ventana con vista al arcoíris"
+    },
+    {
+      "id": "a4",
+      "t": [
+        11.0,
+        15.5
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "Ventana con vista al arcoíris",
+      "emocion": "aburrido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Y adiós colores! ¡Y adiós números! Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+      "mirada_id": "Ventana con vista al arcoíris"
+    },
+    {
+      "id": "a5",
+      "t": [
+        15.5,
+        18.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "caminar",
+      "pose": "caminando",
+      "mirada": "cama",
+      "emocion": "satisfecho",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+      "mirada_id": "obj-cama"
+    },
+    {
+      "id": "a6",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a7",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a8",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a9",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a10",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-piquito-030a",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a11",
+      "t": [
+        21.0,
+        25.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "visor spark",
+      "emocion": "preocupado",
+      "objeto": "obj-visor-spark",
+      "cambio": "",
+      "cita": "Alerta. Nivel de letras en el mundo: cero.",
+      "mirada_id": "obj-visor-spark"
+    },
+    {
+      "id": "a12",
+      "t": [
+        25.0,
+        30.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "Spark",
+      "emocion": "alarmado",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Cero letras! ¡Cero colores! ¡Cero todo! ¡Esto es una emergencia de nivel arcoíris!",
+      "mirada_id": "ch-spark-468e"
+    },
+    {
+      "id": "a13",
+      "t": [
+        30.0,
+        33.0
+      ],
+      "actor": "",
+      "accion": "aparecer",
+      "pose": "",
+      "mirada": "",
+      "emocion": "",
+      "objeto": "obj-cofre-dorado",
+      "cambio": "aparecer",
+      "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra."
+    },
+    {
+      "id": "a14",
+      "t": [
+        30.0,
+        33.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "mirar",
+      "pose": "de_pie",
+      "mirada": "cofre dorado",
+      "emocion": "sorprendido",
+      "objeto": "obj-cofre-dorado",
+      "cambio": "",
+      "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra.",
+      "mirada_id": "obj-cofre-dorado"
+    },
+    {
+      "id": "a15",
+      "t": [
+        33.0,
+        40.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "serena",
+      "objeto": "obj-cofre-dorado",
+      "cambio": "",
+      "cita": "Esperen… este cofre guarda una palabra mágica. Si alguien la lee en voz alta, todo vuelve a la normalidad."
+    },
+    {
+      "id": "a16",
+      "t": [
+        40.0,
+        44.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "Valentina",
+      "emocion": "entusiasmada",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Pero solo puede abrirlo alguien muy valiente!",
+      "mirada_id": "ch-valentina-a9be"
+    },
+    {
+      "id": "a17",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a18",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidida",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a19",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidida",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a20",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a21",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionado",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a22",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionada",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a23",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionada",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a24",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionado",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a25",
+      "t": [
+        48.0,
+        55.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "misterioso",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Al final de esta misión, tú vas a leer tu primera palabra mágica. Y no te voy a decir cuál es… todavía."
+    }
+  ],
+  "prior_rejected_objects": [
+    {
+      "id": "obj-visor-spark",
+      "source_refs": [
+        "source_4b1_current[1]",
+        "measured_inventory.objects[3]"
+      ],
+      "frase_sello": "Visor tecnológico infantil con lente panorámica celeste y marco ergonómico azul con emisor lateral.",
+      "dimensions_m": [
+        0.16,
+        0.12,
+        0.06
+      ],
+      "parts": [
+        {
+          "id": "av07.visor.lens",
+          "role": "lente panorámica",
+          "shape": "CYLINDER",
+          "px": 0,
+          "py": 0.04,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 0.16,
+          "dy": 0.04,
+          "dz": 0.06,
+          "r": 0.561,
+          "g": 0.827,
+          "b": 1,
+          "a": 0.6,
+          "metallic": 0,
+          "roughness": 0.1,
+          "transmission": 0.9,
+          "emission": 0.3,
+          "resolution": 32,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.frame",
+          "role": "marco superior",
+          "shape": "ELLIPSOID",
+          "px": 0,
+          "py": 0.03,
+          "pz": 0.025,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 0.16,
+          "dy": 0.06,
+          "dz": 0.01,
+          "r": 0.184,
+          "g": 0.49,
+          "b": 0.882,
+          "a": 1,
+          "metallic": 0.2,
+          "roughness": 0.4,
+          "transmission": 0,
+          "emission": 0,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.nose",
+          "role": "puente nasal",
+          "shape": "ELLIPSOID",
+          "px": 0,
+          "py": 0.05,
+          "pz": -0.01,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 0.04,
+          "dy": 0.02,
+          "dz": 0.02,
+          "r": 0.184,
+          "g": 0.49,
+          "b": 0.882,
+          "a": 1,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.temple_l",
+          "role": "patilla izquierda",
+          "shape": "CYLINDER",
+          "px": -0.075,
+          "py": -0.03,
+          "pz": 0,
+          "rx": 90,
+          "ry": 0,
+          "rz": 0,
+          "dx": 0.01,
+          "dy": 0.1,
+          "dz": 0.01,
+          "r": 0.184,
+          "g": 0.49,
+          "b": 0.882,
+          "a": 1,
+          "metallic": 0.2,
+          "roughness": 0.4,
+          "transmission": 0,
+          "emission": 0,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.temple_r",
+          "role": "patilla derecha",
+          "shape": "CYLINDER",
+          "px": 0.075,
+          "py": -0.03,
+          "pz": 0,
+          "rx": 90,
+          "ry": 0,
+          "rz": 0,
+          "dx": 0.01,
+          "dy": 0.1,
+          "dz": 0.01,
+          "r": 0.184,
+          "g": 0.49,
+          "b": 0.882,
+          "a": 1,
+          "metallic": 0.2,
+          "roughness": 0.4,
+          "transmission": 0,
+          "emission": 0,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.visor.emitter",
+          "role": "emisor",
+          "shape": "CYLINDER",
+          "px": 0.08,
+          "py": 0.04,
+          "pz": 0,
+          "rx": 0,
+          "ry": 90,
+          "rz": 0,
+          "dx": 0.02,
+          "dy": 0.02,
+          "dz": 0.01,
+          "r": 0.561,
+          "g": 0.827,
+          "b": 1,
+          "a": 1,
+          "metallic": 0.5,
+          "roughness": 0.2,
+          "transmission": 0,
+          "emission": 1,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        }
+      ]
+    },
+    {
+      "id": "Ventana con vista al arcoíris",
+      "source_refs": [
+        "source_4a2_elements[0]",
+        "source_4a2_glossary.formas.VENTANA_CON_VISTA_AL_ARCOIRIS",
+        "measured_inventory.objects[0]"
+      ],
+      "frase_sello": "Ventana de madera con arcoíris de siete bandas individuales y vista al horizonte.",
+      "dimensions_m": [
+        1.6,
+        0.15,
+        1.3
+      ],
+      "parts": [
+        {
+          "id": "av07.window.frame",
+          "role": "marco",
+          "shape": "CYLINDER",
+          "px": 0,
+          "py": 0,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1.6,
+          "dy": 0.15,
+          "dz": 1.3,
+          "r": 0.784,
+          "g": 0.541,
+          "b": 0.333,
+          "a": 1,
+          "metallic": 0,
+          "roughness": 0.6,
+          "transmission": 0,
+          "emission": 0,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.window.glass",
+          "role": "cristal",
+          "shape": "ELLIPSOID",
+          "px": 0,
+          "py": 0.05,
+          "pz": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1.5,
+          "dy": 0.01,
+          "dz": 1.2,
+          "r": 0.494,
+          "g": 0.714,
+          "b": 0.902,
+          "a": 0.3,
+          "metallic": 0,
+          "roughness": 0,
+          "transmission": 0.95,
+          "emission": 0,
+          "resolution": 16,
+          "tip_ratio": 0,
+          "radius_m": 0,
+          "plane_normal": [
+            0,
+            0,
+            1
+          ],
+          "points": []
+        },
+        {
+          "id": "av07.window.rainbow.red",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.06,
+          "pz": -0.3,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.9,
+          "g": 0.1,
+          "b": 0.1,
+          "a": 0.8,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 12,
+          "tip_ratio": 0,
+          "radius_m": 0.02,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.6,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": -0.55,
+              "y": 0,
+              "z": 0.2
+            },
+            {
+              "x": -0.45,
+              "y": 0,
+              "z": 0.35
+            },
+            {
+              "x": -0.3,
+              "y": 0,
+              "z": 0.45
+            },
+            {
+              "x": -0.1,
+              "y": 0,
+              "z": 0.5
+            },
+            {
+              "x": 0.1,
+              "y": 0,
+              "z": 0.5
+            },
+            {
+              "x": 0.3,
+              "y": 0,
+              "z": 0.45
+            },
+            {
+              "x": 0.45,
+              "y": 0,
+              "z": 0.35
+            },
+            {
+              "x": 0.55,
+              "y": 0,
+              "z": 0.2
+            },
+            {
+              "x": 0.6,
+              "y": 0,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.orange",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.061,
+          "pz": -0.3,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.95,
+          "g": 0.5,
+          "b": 0.1,
+          "a": 0.8,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 12,
+          "tip_ratio": 0,
+          "radius_m": 0.02,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.56,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": -0.5,
+              "y": 0,
+              "z": 0.18
+            },
+            {
+              "x": -0.4,
+              "y": 0,
+              "z": 0.32
+            },
+            {
+              "x": -0.25,
+              "y": 0,
+              "z": 0.42
+            },
+            {
+              "x": -0.05,
+              "y": 0,
+              "z": 0.46
+            },
+            {
+              "x": 0.05,
+              "y": 0,
+              "z": 0.46
+            },
+            {
+              "x": 0.25,
+              "y": 0,
+              "z": 0.42
+            },
+            {
+              "x": 0.4,
+              "y": 0,
+              "z": 0.32
+            },
+            {
+              "x": 0.5,
+              "y": 0,
+              "z": 0.18
+            },
+            {
+              "x": 0.56,
+              "y": 0,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.yellow",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.062,
+          "pz": -0.3,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.95,
+          "g": 0.9,
+          "b": 0.1,
+          "a": 0.8,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 12,
+          "tip_ratio": 0,
+          "radius_m": 0.02,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.52,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": -0.45,
+              "y": 0,
+              "z": 0.16
+            },
+            {
+              "x": -0.35,
+              "y": 0,
+              "z": 0.28
+            },
+            {
+              "x": -0.2,
+              "y": 0,
+              "z": 0.38
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 0.42
+            },
+            {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.38
+            },
+            {
+              "x": 0.35,
+              "y": 0,
+              "z": 0.28
+            },
+            {
+              "x": 0.45,
+              "y": 0,
+              "z": 0.16
+            },
+            {
+              "x": 0.52,
+              "y": 0,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.green",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.063,
+          "pz": -0.3,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.2,
+          "g": 0.8,
+          "b": 0.2,
+          "a": 0.8,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 12,
+          "tip_ratio": 0,
+          "radius_m": 0.02,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.48,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": -0.4,
+              "y": 0,
+              "z": 0.14
+            },
+            {
+              "x": -0.3,
+              "y": 0,
+              "z": 0.24
+            },
+            {
+              "x": -0.15,
+              "y": 0,
+              "z": 0.34
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 0.38
+            },
+            {
+              "x": 0.15,
+              "y": 0,
+              "z": 0.34
+            },
+            {
+              "x": 0.3,
+              "y": 0,
+              "z": 0.24
+            },
+            {
+              "x": 0.4,
+              "y": 0,
+              "z": 0.14
+            },
+            {
+              "x": 0.48,
+              "y": 0,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.blue",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.064,
+          "pz": -0.3,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.1,
+          "g": 0.3,
+          "b": 0.9,
+          "a": 0.8,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 12,
+          "tip_ratio": 0,
+          "radius_m": 0.02,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.44,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": -0.35,
+              "y": 0,
+              "z": 0.12
+            },
+            {
+              "x": -0.25,
+              "y": 0,
+              "z": 0.2
+            },
+            {
+              "x": -0.1,
+              "y": 0,
+              "z": 0.3
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 0.34
+            },
+            {
+              "x": 0.1,
+              "y": 0,
+              "z": 0.3
+            },
+            {
+              "x": 0.25,
+              "y": 0,
+              "z": 0.2
+            },
+            {
+              "x": 0.35,
+              "y": 0,
+              "z": 0.12
+            },
+            {
+              "x": 0.44,
+              "y": 0,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.indigo",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.065,
+          "pz": -0.3,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.3,
+          "g": 0,
+          "b": 0.5,
+          "a": 0.8,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 12,
+          "tip_ratio": 0,
+          "radius_m": 0.02,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.4,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": -0.3,
+              "y": 0,
+              "z": 0.1
+            },
+            {
+              "x": -0.2,
+              "y": 0,
+              "z": 0.16
+            },
+            {
+              "x": -0.05,
+              "y": 0,
+              "z": 0.26
+            },
+            {
+              "x": 0.05,
+              "y": 0,
+              "z": 0.26
+            },
+            {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.16
+            },
+            {
+              "x": 0.3,
+              "y": 0,
+              "z": 0.1
+            },
+            {
+              "x": 0.4,
+              "y": 0,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "id": "av07.window.rainbow.violet",
+          "role": "rainbow",
+          "shape": "POINT_TUBE",
+          "px": 0,
+          "py": 0.066,
+          "pz": -0.3,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "dx": 1,
+          "dy": 1,
+          "dz": 1,
+          "r": 0.5,
+          "g": 0,
+          "b": 0.5,
+          "a": 0.8,
+          "metallic": 0,
+          "roughness": 0.5,
+          "transmission": 0,
+          "emission": 0.4,
+          "resolution": 12,
+          "tip_ratio": 0,
+          "radius_m": 0.02,
+          "plane_normal": [
+            0,
+            1,
+            0
+          ],
+          "points": [
+            {
+              "x": -0.36,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": -0.25,
+              "y": 0,
+              "z": 0.08
+            },
+            {
+              "x": -0.15,
+              "y": 0,
+              "z": 0.12
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "z": 0.22
+            },
+            {
+              "x": 0.15,
+              "y": 0,
+              "z": 0.12
+            },
+            {
+              "x": 0.25,
+              "y": 0,
+              "z": 0.08
+            },
+            {
+              "x": 0.36,
+              "y": 0,
+              "z": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "quantitative_rejection": [
+    {
+      "object": "obj-visor-spark",
+      "error": "Geometría no coincide con medidas ADN: [0.165, 0.095, 0.1]"
+    },
+    {
+      "object": "Ventana con vista al arcoíris",
+      "error": "Geometría no coincide con medidas ADN: [1.6, 0.161, 1.3]"
+    }
+  ],
+  "prior_axes": {
+    "status": "SOURCE",
+    "unit": "m",
+    "up": "+Z",
+    "forward": "+Y",
+    "origin": "front_left_floor",
+    "source_refs": [
+      "measured_inventory.unit_system",
+      "source_4a2_plan.descripcion"
+    ],
+    "reason": "Inventario medido confirma sistema métrico; el forward +Y se deduce de la posición de la ventana en el fondo (y=3.95) y la puerta al frente (y=0.05)."
+  }
+}

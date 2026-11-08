@@ -1,0 +1,1 @@
+{"original_frame_py": 0.04, "original_frame_dy": 0.045, "official_object_depth_m": 0.12, "other_parts_min_y": -0.06, "max_y_official": 0.06, "calculation": "max allowed centered part dy = 2*(.12/2 - .04) = .04; lower bound y=.02. This is source-derived clearance; no changed source dimensions."}

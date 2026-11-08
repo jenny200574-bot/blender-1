@@ -1,0 +1,182 @@
+{
+  "status": "incomplete",
+  "producer": "4a. Escenarios → 4a4. Prompts escenario vivo (Argon, pago) + 01",
+  "source": "escenario_vivo_fuentes/4a_escenarios.json",
+  "scene": "1",
+  "base_environment_id": "esc-habitacion",
+  "source_raw": {
+    "id": "esc-habitacion",
+    "nombre": "Habitación",
+    "int_ext": "INT",
+    "escenas": [
+      "1",
+      "2",
+      "3",
+      "8",
+      "9"
+    ],
+    "horas": [
+      "Día"
+    ],
+    "climas": [
+      "Arcoíris exterior que se vuelve gris",
+      "Desconocido",
+      "Gris sin color"
+    ],
+    "solo_recuerdo_o_pantalla": false,
+    "elementos": [
+      {
+        "nombre": "Ventana con vista al arcoíris",
+        "cita": "Ahora el arcoíris de la ventana se vuelve gris.",
+        "escenas": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "nombre": "Centro de la habitación",
+        "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes:",
+        "escenas": [
+          "1",
+          "2",
+          "3",
+          "8",
+          "9"
+        ]
+      },
+      {
+        "nombre": "Piso de la habitación",
+        "cita": "[La O rueda por el piso como una pelota]",
+        "escenas": [
+          "1",
+          "2",
+          "3",
+          "8",
+          "9"
+        ]
+      }
+    ],
+    "variantes_estado": [
+      {
+        "variante": "Inicial con color (libro con letras en la cama y arcoíris en la ventana)",
+        "escenas": [
+          "1"
+        ],
+        "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+      },
+      {
+        "variante": "Sin letras ni colores (página en blanco, arcoíris gris en la ventana y cofre cerrado)",
+        "escenas": [
+          "1",
+          "2",
+          "3",
+          "8"
+        ],
+        "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+      },
+      {
+        "variante": "Restaurada en celebración (confeti de colores, cofre abierto y libro lleno de nuevo)",
+        "escenas": [
+          "8",
+          "9"
+        ],
+        "cita": "Del cofre salen volando todas las letras, los colores y los números."
+      }
+    ],
+    "estado_por_escena": [
+      {
+        "escena": "1",
+        "inicio": [
+          "Libro de cuentos abierto sobre la cama con letras temblando",
+          "Arcoíris con color en la ventana"
+        ],
+        "fin": [
+          "Libro de cuentos con la página en blanco",
+          "Arcoíris de la ventana vuelto gris",
+          "Cuatro luces de colores aterrizadas como héroes",
+          "Cofre dorado cerrado con tres candados en el centro de la habitación"
+        ],
+        "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+      },
+      {
+        "escena": "2",
+        "inicio": [
+          "Libro de cuentos en blanco sobre la cama",
+          "Arcoíris de la ventana gris",
+          "Cofre dorado cerrado en el centro de la habitación"
+        ],
+        "fin": [
+          "Libro de cuentos en blanco sobre la cama",
+          "Arcoíris de la ventana gris",
+          "Cofre dorado cerrado en el centro de la habitación",
+          "Holograma azul con 5 estrellas apagadas proyectado desde el visor de Spark"
+        ],
+        "cita": "Un holograma azul muestra un mapa con 5 estrellas apagadas en fila."
+      },
+      {
+        "escena": "3",
+        "inicio": [
+          "Arcoíris de la ventana gris",
+          "Cofre dorado cerrado en el centro de la habitación",
+          "Vocales escondidas en almohada, lámpara, lápiz, piso y armario"
+        ],
+        "fin": [
+          "Arcoíris de la ventana gris",
+          "Cofre dorado cerrado en el centro de la habitación",
+          "Las 5 vocales reunidas en fila pero todas de color gris"
+        ],
+        "cita": "Don Caos las escondió en esta habitación."
+      },
+      {
+        "escena": "8",
+        "inicio": [
+          "Cofre dorado cerrado con tres candados en el centro de la habitación",
+          "Libro de cuentos en blanco"
+        ],
+        "fin": [
+          "Explosión de confeti de colores en la habitación",
+          "Cofre dorado abierto con los tres candados destrabados",
+          "Letras, colores y números devueltos a las páginas del libro"
+        ],
+        "cita": "Los tres candados se abren: clic, clic, clic."
+      },
+      {
+        "escena": "9",
+        "inicio": [
+          "Habitación en celebración con confeti",
+          "Cofre abierto y libro de cuentos restaurado"
+        ],
+        "fin": [
+          "Papel con los números del 6 al 10 caído en el piso",
+          "Corte al marco de la pantalla final"
+        ],
+        "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+      }
+    ],
+    "fuente": "4p",
+    "investigacion": null
+  },
+  "state_for_scene": {
+    "escena": "1",
+    "inicio": [
+      "Libro de cuentos abierto sobre la cama con letras temblando",
+      "Arcoíris con color en la ventana"
+    ],
+    "fin": [
+      "Libro de cuentos con la página en blanco",
+      "Arcoíris de la ventana vuelto gris",
+      "Cuatro luces de colores aterrizadas como héroes",
+      "Cofre dorado cerrado con tres candados en el centro de la habitación"
+    ],
+    "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+  },
+  "changes": [],
+  "missing": [
+    {
+      "campo": "changes/object,time,property,value",
+      "modulo": "4a/4a4 + 01",
+      "mensaje": "Llegan inicio/fin y variantes como texto, sin binding inequívoco a objetos Blender ni keyframes de propiedades. No se inventan."
+    }
+  ]
+}

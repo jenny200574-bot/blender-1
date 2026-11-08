@@ -1,0 +1,954 @@
+{
+  "schema": "anatomical_profile_v1",
+  "profile_id": "humanoide_adulto",
+  "format_role": "articulaciones",
+  "units": "m",
+  "frame": "REST_BONE",
+  "source": {
+    "original_sha256": "4b8c52bd6d15ad3556208418c3b81ea1b32e40b9b15595bcec351519d7d900c5",
+    "range_source": {
+      "nombre": "AAOS (American Academy of Orthopaedic Surgeons) — Normal ROM values",
+      "cita": "Supplementary Digital Content 1, Plast Reconstr Surg Glob Open 2020 (Hendriks et al.), tabular AAOS norms; cross-checked with Norkin & White, Measurement of Joint Motion (goniometry).",
+      "url": "https://cdn-links.lww.com/permalink/prsgo/b/prsgo_8_6_2020_04_17_hendriks_gox-d-20-00155r2_sdc1.pdf",
+      "notas": "Valores clínicos de referencia, no promedio poblacional. Pronación/supinación y rotaciones de hombro/cadera: AAOS/AMA vía Norkin & White. Elevación de clavícula: ~40° clínico habitual (no figura en la tabla AAOS de extremidades; marcado como tal)."
+    }
+  },
+  "examples": [
+    {
+      "example_id": "ejemplo_heredado_01",
+      "original_path": "bibliotecas/star/catalogos/archivo/20261107_102336_240622/kael_articulaciones.json",
+      "sha256": "4b8c52bd6d15ad3556208418c3b81ea1b32e40b9b15595bcec351519d7d900c5",
+      "identity": "Kael",
+      "source_model": "FALTA_en_paquete (VRM no incluido; motor maniquí no lo necesita)"
+    }
+  ],
+  "premisa": "Como la hoja: cada articulación es una 'hoja'. c=0 reposo (ángulo rest_deg sobre el bind T-pose del VRM), c=1 máximo real del cuerpo humano. El motor recorta c a [0,1] y nunca pasa el tope. El torso reparte α entre varios huesos como la hoja.",
+  "c_rango": [
+    0.0,
+    1.0
+  ],
+  "fuente_rangos": {
+    "nombre": "AAOS (American Academy of Orthopaedic Surgeons) — Normal ROM values",
+    "cita": "Supplementary Digital Content 1, Plast Reconstr Surg Glob Open 2020 (Hendriks et al.), tabular AAOS norms; cross-checked with Norkin & White, Measurement of Joint Motion (goniometry).",
+    "url": "https://cdn-links.lww.com/permalink/prsgo/b/prsgo_8_6_2020_04_17_hendriks_gox-d-20-00155r2_sdc1.pdf",
+    "notas": "Valores clínicos de referencia, no promedio poblacional. Pronación/supinación y rotaciones de hombro/cadera: AAOS/AMA vía Norkin & White. Elevación de clavícula: ~40° clínico habitual (no figura en la tabla AAOS de extremidades; marcado como tal)."
+  },
+  "marco_local_vrm": {
+    "nota": "Personaje mira −Y, Z arriba, +X = izquierda del personaje. Ejes comprobados en Blender (+30°) y corregidos a la vista en las hojas c=0/0.33/0.66/1.",
+    "signo_flexion_columna_cuello": "eje local X positivo = flexión hacia adelante (mentón/torso hacia −Y)",
+    "signo_rodilla": "eje local X positivo = flexión (pie hacia atrás +Y)",
+    "signo_cadera_flexion": "eje local X negativo = flexión (muslo hacia adelante −Y)",
+    "signo_codo": "se elige en apply por lado; ver movimientos"
+  },
+  "articulaciones": {
+    "cuello": {
+      "huesos": [
+        "J_Bip_C_Neck"
+      ],
+      "movimientos": {
+        "flexion": {
+          "descripcion": "Mentón al pecho",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Neck",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 45,
+          "fuente": "AAOS neck flexion 45"
+        },
+        "extension": {
+          "descripcion": "Mirar arriba",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Neck",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 45,
+          "fuente": "AAOS neck extension 45"
+        },
+        "inclinacion_izq": {
+          "descripcion": "Oreja izquierda al hombro",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Neck",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 45,
+          "fuente": "AAOS neck lateral flexion 45"
+        },
+        "inclinacion_der": {
+          "descripcion": "Oreja derecha al hombro",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Neck",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 45,
+          "fuente": "AAOS neck lateral flexion 45"
+        },
+        "rotacion_izq": {
+          "descripcion": "Mirar a su izquierda (+X)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Neck",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 60,
+          "fuente": "AAOS neck rotation 60"
+        },
+        "rotacion_der": {
+          "descripcion": "Mirar a su derecha (−X)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Neck",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 60,
+          "fuente": "AAOS neck rotation 60"
+        }
+      }
+    },
+    "torso": {
+      "huesos": [
+        "J_Bip_C_Spine",
+        "J_Bip_C_Chest",
+        "J_Bip_C_UpperChest"
+      ],
+      "nota_hoja": "Como la hoja de 4 huesos: α total se reparte entre Spine/Chest/UpperChest (pesos 0.25/0.35/0.40). El primero lleva menos para que el arco no se quiebre en la cadera.",
+      "movimientos": {
+        "flexion": {
+          "descripcion": "Inclinarse adelante",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Spine",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 0.25
+            },
+            {
+              "hueso": "J_Bip_C_Chest",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 0.35
+            },
+            {
+              "hueso": "J_Bip_C_UpperChest",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 0.4
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 45,
+          "fuente": "AAOS trunk/thoracolumbar flex ~45–60; usamos 45 repartidos (seguro, no extremo)"
+        },
+        "extension": {
+          "descripcion": "Echar el torso atrás",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Spine",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 0.25
+            },
+            {
+              "hueso": "J_Bip_C_Chest",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 0.35
+            },
+            {
+              "hueso": "J_Bip_C_UpperChest",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 0.4
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 25,
+          "fuente": "Extensión lumbar clínica ~20–30; usamos 25"
+        },
+        "inclinacion_izq": {
+          "descripcion": "Inclinar torso a su izquierda",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Spine",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 0.3
+            },
+            {
+              "hueso": "J_Bip_C_Chest",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 0.35
+            },
+            {
+              "hueso": "J_Bip_C_UpperChest",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 0.35
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 30,
+          "fuente": "Lateral flexion trunk ~30"
+        },
+        "inclinacion_der": {
+          "descripcion": "Inclinar torso a su derecha",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Spine",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 0.3
+            },
+            {
+              "hueso": "J_Bip_C_Chest",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 0.35
+            },
+            {
+              "hueso": "J_Bip_C_UpperChest",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 0.35
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 30,
+          "fuente": "Lateral flexion trunk ~30"
+        },
+        "rotacion_izq": {
+          "descripcion": "Girar torso a su izquierda",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Spine",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 0.3
+            },
+            {
+              "hueso": "J_Bip_C_Chest",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 0.4
+            },
+            {
+              "hueso": "J_Bip_C_UpperChest",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 0.3
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 40,
+          "fuente": "Thoracolumbar rotation ~35–45"
+        },
+        "rotacion_der": {
+          "descripcion": "Girar torso a su derecha",
+          "ejes": [
+            {
+              "hueso": "J_Bip_C_Spine",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 0.3
+            },
+            {
+              "hueso": "J_Bip_C_Chest",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 0.4
+            },
+            {
+              "hueso": "J_Bip_C_UpperChest",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 0.3
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 40,
+          "fuente": "Thoracolumbar rotation ~35–45"
+        }
+      }
+    },
+    "clavicula_L": {
+      "huesos": [
+        "J_Bip_L_Shoulder"
+      ],
+      "movimientos": {
+        "elevacion": {
+          "descripcion": "Subir hombro/clavícula izquierda (encogerse)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_Shoulder",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 40,
+          "fuente": "Elevación escapular clínica ~40 (no en tabla AAOS de extremidades; habitual en exploración)"
+        }
+      }
+    },
+    "clavicula_R": {
+      "huesos": [
+        "J_Bip_R_Shoulder"
+      ],
+      "movimientos": {
+        "elevacion": {
+          "descripcion": "Subir hombro/clavícula derecha",
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_Shoulder",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 40,
+          "fuente": "Elevación escapular clínica ~40"
+        }
+      }
+    },
+    "hombro_L": {
+      "huesos": [
+        "J_Bip_L_UpperArm"
+      ],
+      "nota_tpose": "Bind VRM = T-pose (brazo en abducción ~90°). Los ángulos son relativos a ese bind. 'flexion' desde T-pose mueve el brazo adelante (−Y).",
+      "movimientos": {
+        "flexion": {
+          "descripcion": "Brazo adelante desde T-pose",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperArm",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 90,
+          "fuente": "AAOS shoulder flexion 180 total desde neutro anatómico; desde T-pose (ya a 90° abd) el tramo útil adelante ≈90"
+        },
+        "extension": {
+          "descripcion": "Brazo atrás desde T-pose",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperArm",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 60,
+          "fuente": "AAOS shoulder extension 60"
+        },
+        "abduccion_arriba": {
+          "descripcion": "Subir brazo por encima de la cabeza desde T-pose",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperArm",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 90,
+          "fuente": "AAOS abduction 180; desde T-pose (90) quedan ~90 hasta vertical"
+        },
+        "aduccion_abajo": {
+          "descripcion": "Bajar brazo al costado desde T-pose (hacia reposo de pie)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperArm",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 75,
+          "fuente": "De T-pose (~90 abd) a neutro anatómico (~15° del torso) ≈75°"
+        },
+        "rotacion_interna": {
+          "descripcion": "Rotar brazo hacia adentro (eje del hueso)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperArm",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 70,
+          "fuente": "AAOS/AMA medial (internal) rotation 70 (Norkin & White)"
+        },
+        "rotacion_externa": {
+          "descripcion": "Rotar brazo hacia afuera",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperArm",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 90,
+          "fuente": "AAOS/AMA lateral (external) rotation 90"
+        }
+      }
+    },
+    "hombro_R": {
+      "huesos": [
+        "J_Bip_R_UpperArm"
+      ],
+      "movimientos": {
+        "flexion": {
+          "descripcion": "Brazo adelante desde T-pose",
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperArm",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 90,
+          "fuente": "AAOS shoulder flexion; espejo del L"
+        },
+        "extension": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperArm",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 60,
+          "fuente": "AAOS shoulder extension 60"
+        },
+        "abduccion_arriba": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperArm",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 90,
+          "fuente": "AAOS abduction 180"
+        },
+        "aduccion_abajo": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperArm",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 75,
+          "fuente": "T-pose → neutro ≈75"
+        },
+        "rotacion_interna": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperArm",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 70,
+          "fuente": "AAOS/AMA IR 70"
+        },
+        "rotacion_externa": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperArm",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 90,
+          "fuente": "AAOS/AMA ER 90"
+        }
+      }
+    },
+    "codo_L": {
+      "huesos": [
+        "J_Bip_L_LowerArm"
+      ],
+      "movimientos": {
+        "flexion": {
+          "descripcion": "Doblar codo (mano hacia hombro)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_LowerArm",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 150,
+          "fuente": "AAOS elbow flexion 150",
+          "nota_eje": "Calibrado: eje Z signo -1.0 (minimiza dist mano-hombro a ~120°)"
+        }
+      }
+    },
+    "codo_R": {
+      "huesos": [
+        "J_Bip_R_LowerArm"
+      ],
+      "movimientos": {
+        "flexion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_LowerArm",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 150,
+          "fuente": "AAOS elbow flexion 150",
+          "nota_eje": "Calibrado: eje Z signo 1.0 (minimiza dist mano-hombro a ~120°)"
+        }
+      }
+    },
+    "antebrazo_L": {
+      "huesos": [
+        "J_Bip_L_LowerArm"
+      ],
+      "movimientos": {
+        "pronacion": {
+          "descripcion": "Girar palma hacia abajo/atrás (eje del antebrazo = Y)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_LowerArm",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 80,
+          "fuente": "AAOS forearm pronation 80"
+        },
+        "supinacion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_LowerArm",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 80,
+          "fuente": "AAOS forearm supination 80"
+        }
+      }
+    },
+    "antebrazo_R": {
+      "huesos": [
+        "J_Bip_R_LowerArm"
+      ],
+      "movimientos": {
+        "pronacion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_LowerArm",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 80,
+          "fuente": "AAOS forearm pronation 80"
+        },
+        "supinacion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_LowerArm",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 80,
+          "fuente": "AAOS forearm supination 80"
+        }
+      }
+    },
+    "muneca_L": {
+      "huesos": [
+        "J_Bip_L_Hand"
+      ],
+      "movimientos": {
+        "flexion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_Hand",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 80,
+          "fuente": "AAOS wrist flexion 80"
+        },
+        "extension": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_Hand",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 70,
+          "fuente": "AAOS wrist extension 70"
+        }
+      }
+    },
+    "muneca_R": {
+      "huesos": [
+        "J_Bip_R_Hand"
+      ],
+      "movimientos": {
+        "flexion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_Hand",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 80,
+          "fuente": "AAOS wrist flexion 80"
+        },
+        "extension": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_Hand",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 70,
+          "fuente": "AAOS wrist extension 70"
+        }
+      }
+    },
+    "cadera_L": {
+      "huesos": [
+        "J_Bip_L_UpperLeg"
+      ],
+      "movimientos": {
+        "flexion": {
+          "descripcion": "Muslo adelante (rodilla hacia pecho)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperLeg",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 120,
+          "fuente": "AAOS hip flexion 120"
+        },
+        "extension": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperLeg",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 20,
+          "fuente": "AAOS hip extension 20"
+        },
+        "abduccion": {
+          "descripcion": "Pierna hacia afuera (+X)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperLeg",
+              "eje": "Z",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 40,
+          "fuente": "AAOS hip abduction 40"
+        },
+        "rotacion_interna": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperLeg",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 45,
+          "fuente": "Hip IR clínico ~35–45 (AMA); usamos 45"
+        },
+        "rotacion_externa": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_UpperLeg",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 45,
+          "fuente": "Hip ER clínico ~45"
+        }
+      }
+    },
+    "cadera_R": {
+      "huesos": [
+        "J_Bip_R_UpperLeg"
+      ],
+      "movimientos": {
+        "flexion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperLeg",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 120,
+          "fuente": "AAOS hip flexion 120"
+        },
+        "extension": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperLeg",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 20,
+          "fuente": "AAOS hip extension 20"
+        },
+        "abduccion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperLeg",
+              "eje": "Z",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 40,
+          "fuente": "AAOS hip abduction 40"
+        },
+        "rotacion_interna": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperLeg",
+              "eje": "Y",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 45,
+          "fuente": "Hip IR ~45"
+        },
+        "rotacion_externa": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_UpperLeg",
+              "eje": "Y",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 45,
+          "fuente": "Hip ER ~45"
+        }
+      }
+    },
+    "rodilla_L": {
+      "huesos": [
+        "J_Bip_L_LowerLeg"
+      ],
+      "movimientos": {
+        "flexion": {
+          "descripcion": "Doblar rodilla (talón al glúteo)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_LowerLeg",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 135,
+          "fuente": "AAOS knee flexion 135"
+        }
+      }
+    },
+    "rodilla_R": {
+      "huesos": [
+        "J_Bip_R_LowerLeg"
+      ],
+      "movimientos": {
+        "flexion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_LowerLeg",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 135,
+          "fuente": "AAOS knee flexion 135"
+        }
+      }
+    },
+    "tobillo_L": {
+      "huesos": [
+        "J_Bip_L_Foot"
+      ],
+      "movimientos": {
+        "flexion_plantar": {
+          "descripcion": "Punta del pie abajo (de puntillas)",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_Foot",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 50,
+          "fuente": "AAOS ankle plantarflexion 50"
+        },
+        "dorsiflexion": {
+          "descripcion": "Punta del pie arriba",
+          "ejes": [
+            {
+              "hueso": "J_Bip_L_Foot",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 20,
+          "fuente": "AAOS ankle dorsiflexion 20"
+        }
+      }
+    },
+    "tobillo_R": {
+      "huesos": [
+        "J_Bip_R_Foot"
+      ],
+      "movimientos": {
+        "flexion_plantar": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_Foot",
+              "eje": "X",
+              "signo": 1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 50,
+          "fuente": "AAOS ankle plantarflexion 50"
+        },
+        "dorsiflexion": {
+          "ejes": [
+            {
+              "hueso": "J_Bip_R_Foot",
+              "eje": "X",
+              "signo": -1.0,
+              "peso": 1.0
+            }
+          ],
+          "rest_deg": 0,
+          "max_deg": 20,
+          "fuente": "AAOS ankle dorsiflexion 20"
+        }
+      }
+    }
+  },
+  "nota_fuente_vrm_original": "El JSON original apuntaba a un HairSample_Male.vrm de prueba; el motor de maniquí construye sin VRM."
+}

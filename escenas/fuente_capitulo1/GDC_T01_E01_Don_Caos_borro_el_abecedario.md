@@ -1,0 +1,214 @@
+Temporada 1 · Episodio 1
+¡Don Caos borró el abecedario!
+Ficha del episodio
+Don Caos borra las letras, los colores y los números del mundo, y el niño en casa tiene que ayudar a recuperarlos ganando 5 estrellas para abrir el Cofre del Abecedario.
+
+Convenciones del guion: [entre corchetes] = tono de voz, visuales, gráficos, B-roll y efectos. PAUSA INTERACTIVA = 3 segundos de silencio con música suave para que el niño responda en voz alta.
+1. Gancho y prólogo (0:00 – 1:00)
+[Plano cerrado: un libro de cuentos abierto sobre una cama. Silencio total. Las letras de la página empiezan a temblar.]
+[Sonido: ¡ZAP! Un rayo morado cruza la pantalla. Las letras salen volando como mariposas y la página queda en blanco.]
+DON CAOS: [riendo, con voz de malo que no da miedo] ¡Jajajá! ¡Sin letras no hay cuentos! ¡Y sin cuentos… todos a la cama sin leer!
+[Otro ZAP. Ahora el arcoíris de la ventana se vuelve gris.]
+DON CAOS: ¡Y adiós colores! ¡Y adiós números! Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.
+[Corte rápido. Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.]
+SPARK: [preocupado, mirando su visor] Alerta. Nivel de letras en el mundo: cero.
+PINTOR: [hablando rapidísimo] ¡Cero letras! ¡Cero colores! ¡Cero todo! ¡Esto es una emergencia de nivel arcoíris!
+[Plano: en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra.]
+VALENTINA: [suave, mirando a cámara] Esperen… este cofre guarda una palabra mágica. Si alguien la lee en voz alta, todo vuelve a la normalidad.
+ECO: [con energía] ¡Pero solo puede abrirlo alguien muy valiente!
+[Los cuatro héroes giran lentamente hacia la cámara.]
+TODOS: [susurrando] …¡TÚ!
+SPARK: Al final de esta misión, tú vas a leer tu primera palabra mágica. Y no te voy a decir cuál es… todavía.
+[Gráfico: título del episodio en letras que tiemblan: "¡DON CAOS BORRÓ EL ABECEDARIO!"]
+2. Mapa de ruta (1:00 – 2:00)
+[Spark activa su visor. Un holograma azul muestra un mapa con 5 estrellas apagadas en fila.]
+SPARK: [con energía de presentador] Para abrir el cofre necesitamos 5 estrellas. Cada una se gana con una misión.
+[Cada estrella se ilumina un segundo al nombrarla, con el color del héroe responsable.]
+PINTOR: ¡Estrella uno: rescatar las vocales! [Estrella amarilla parpadea]
+ECO: ¡Estrella dos: devolverle los colores a la naturaleza! [Estrella verde]
+SPARK: Estrella tres: contar y sumar. Estrella cuatro: restar. [Dos estrellas azules]
+VALENTINA: Y la estrella cinco… [pausa dramática, sonríe] …es la más especial. Es la que abre el cofre.
+[Gráfico fijo: el marcador de 5 estrellas apagadas se queda en la esquina superior derecha durante todo el video.]
+DON CAOS: [asomando la cabeza por debajo de la cama] Pfff. Nadie va a llegar a la estrella cinco. Es muuuy lejos. Mejor vayan a dormir.
+ECO: [a cámara, guiñando el ojo] ¿Tú te vas a dormir? ¡Noooo! ¿Estás listo? ¡Dime "listo"!
+PAUSA INTERACTIVA
+ECO: ¡Así me gusta! ¡Vamos!
+3. Bloque 1 – Rescate de las vocales con Pintor (2:00 – 5:00)
+Introducción
+[Pintor entra dando volteretas. Música alegre y rápida.]
+PINTOR: ¡Las vocales son las letras más importantes del mundo! Sin ellas no puedes decir ni "hola". Mira: sin vocales, "hola" suena… "hl". [hace un sonido raro] ¡Qué horror!
+[Gráfico: aparecen 5 siluetas vacías con forma de A, E, I, O, U.]
+PINTOR: Don Caos las escondió en esta habitación. ¡Ayúdame a buscarlas!
+Datos clave (una vocal cada 25 segundos)
+[Pintor dibuja en el aire con su Pincel Mágico. Cada dibujo cobra vida.]
+A: [La A aparece detrás de la almohada] ¡Una A! A de… [dibuja una abeja que zumba] ¡ABEJA! Dilo conmigo: ¡Aaaa! PAUSA INTERACTIVA
+E: [La E está colgada de la lámpara] ¡E de ELEFANTE! [Un elefantito sale de la E y barrita] ¡Eeee! PAUSA INTERACTIVA
+I: [La I es flaquita y estaba escondida dentro de un lápiz] ¡I de IGUANA! [Una iguana sube por la I] ¡Iiii! Es la vocal más flaca: tiene un puntito como sombrero.
+O: [La O rueda por el piso como una pelota] ¡O de OSO! [La O se convierte en la panza de un oso] ¡Oooo! Haz una O con tu boca. ¡Redondita!
+U: [Se oye un "uuuu" de fantasma desde el armario] ¡U de UVA! [Un racimo de uvas cuelga de la U] ¡Uuuu!
+Conflicto
+[ZAP. Don Caos dispara su Rayo Confundidor. La U da la vuelta y queda boca abajo.]
+DON CAOS: [burlón] ¡Ahora la U es una N! ¡Ja! ¡Nadie lo va a notar!
+PINTOR: [serio, poniendo las manos en la cintura] Ey, ey, ey. Tú sí lo notas, ¿verdad? ¿Esa U está bien o al revés? ¡Dime!
+PAUSA INTERACTIVA
+PINTOR: ¡Al revés! La U es como una taza: se abre hacia arriba para guardar cosas. [Dibuja una taza dentro de la U y la gira.]
+Resolución
+[Las 5 vocales hacen fila y saltan una por una como en un trampolín.]
+PINTOR: [cantando, ritmo de palmas] A, E, I, O, U… ¡las vocales sabes tú! A, E, I, O, U… ¡y las dices igual que yo! ¡Otra vez, más rápido!
+[Se repite la canción dos veces, la segunda más rápida. Texto en pantalla grande con cada vocal en un color distinto.]
+[Efecto: la primera estrella del marcador se enciende en amarillo. Sonido de campanita.]
+Enlace de intriga
+ECO: [preocupada, entrando corriendo con su pajarito] Pintor… las vocales volvieron. Pero mira… [señala] ¡son todas grises! Y no solo ellas. Algo muy raro le pasó a mi jardín.
+4. Bloque 2 – Los colores de la naturaleza con Eco (5:00 – 8:00)
+Introducción
+[B-roll: un jardín animado totalmente en blanco y negro. Las flores están tristes, cabizbajas.]
+ECO: [hablando bajito, como en un documental] Shhh. Las plantas me están hablando. [Pone la oreja en una flor.] Dicen que… extrañan sus colores.
+[El pajarito naranja (provisional: "Piquito") vuela a su hombro. Es lo único con color en la escena.]
+ECO: Piquito es el único que conserva su color. ¿De qué color es Piquito? ¡Dime!
+PAUSA INTERACTIVA
+ECO: ¡NARANJA! ¡Muy bien!
+Datos clave
+[Cada color vuelve con un "¡FLASH!" y un acorde musical.]
+ROJO: [Una fresa gris en el suelo] Las fresas son… ¡ROJAS! [La fresa se pinta de rojo y sonríe.] ¿Qué más es rojo? Mira a tu alrededor y búscalo. PAUSA INTERACTIVA
+AMARILLO: [El sol gris en el cielo] El sol es… ¡AMARILLO! Igual que el pijama de Pintor.
+AZUL: [Un río gris] El agua del río es… ¡AZUL! Y hay que cuidarla: cerrar la llave mientras te cepillas los dientes.
+Conflicto
+[ZAP. Don Caos lanza el rayo sobre la mesa. Aparece una montaña de dulces grises gigantes.]
+DON CAOS: [tentador, con voz melosa] ¿Para qué colores? ¡Coman solo dulces todo el día! ¡Y tiren los papelitos al piso!
+[Lanza un papel de dulce al suelo. El pajarito se tapa los ojos.]
+ECO: [seria pero amable] Don Caos, los dulces de vez en cuando están bien. Pero tu cuerpo necesita los colores de las frutas para crecer fuerte. ¡Y la basura va a la caneca!
+[Eco recoge el papel y lo encesta en una caneca de reciclaje. Sonido de canasta de baloncesto.]
+Resolución (la magia de mezclar)
+ECO: Pero todavía falta un color: el de las hojas. ¡Pintor, ayúdame!
+PINTOR: ¡Yo traigo el AMARILLO! [Dibuja una nube amarilla.]
+ECO: ¡Y yo el AZUL del río! [Lanza agua azul.]
+[Las dos nubes chocan en cámara lenta. ¡PUF! Explota en verde y todo el jardín se ilumina.]
+ECO + PINTOR: ¡Amarillo más azul… es VERDE!
+[Gráfico simple en pantalla: círculo amarillo + círculo azul = círculo verde.]
+ECO: Para celebrar: ¡ponte de pie! Salta como rana verde tres veces. ¡Uno, dos, tres!
+[Música de pausa activa, 10 segundos. Eco y Piquito saltan.]
+[Efecto: la segunda estrella se enciende en verde.]
+Enlace de intriga
+[Una alarma suena: "¡bip, bip, bip!" El visor de Spark parpadea en rojo.]
+SPARK: [alarmado] Equipo… tenemos un problema más grande. Don Caos se metió en la cocina. Y se está llevando… ¡los números!
+5. Bloque 3 – Contar y sumar con Spark (8:00 – 11:00)
+Introducción
+[Cocina. Un frutero vacío. Los números del 1 al 5 están pegados al techo, desordenados y de cabeza.]
+SPARK: [ajustándose el visor] Dato curioso: los números sirven para todo. Para saber cuántos años tienes, cuántas galletas hay… o cuántos dinosaurios caben en una cama. [Holograma de un T-Rex acostado en una cama diminuta.] Respuesta: ninguno. Es un T-Rex.
+Datos clave: contar del 1 al 5
+[Spark proyecta hologramas. Cada número baja del techo y se coloca en orden.]
+SPARK: Vamos a contar manzanas. Cuenta conmigo y levanta un dedito por cada una.
+[Las manzanas caen una a una en el frutero con un "¡plop!". El número grande aparece al lado. Una mano animada levanta los dedos.]
+SPARK: Uno… dos… tres… cuatro… ¡CINCO! ¡Una mano completa!
+PAUSA INTERACTIVA [Spark: "Muéstrame tu mano con cinco dedos"]
+Datos clave: sumar
+SPARK: Ahora, el truco de los científicos. Sumar es juntar. [Gráfico: el signo + aparece brillando.] Este signo se llama MÁS.
+[Holograma: 2 estrellas a la izquierda, 1 estrella a la derecha. Se juntan en el centro.]
+SPARK: Dos estrellas MÁS una estrella… se juntan… y ¿cuántas hay? Cuéntalas.
+PAUSA INTERACTIVA
+SPARK: ¡TRES! Dos más uno es igual a tres.
+[Gráfico grande: 2 + 1 = 3, con las estrellas debajo de cada número.]
+Conflicto
+[ZAP. El rayo golpea el holograma. El 3 se convierte en una E.]
+DON CAOS: [aplaudiendo] ¡Dos más uno es igual a… E! ¡Matemáticas de letras! ¡Soy un genio!
+SPARK: [mirando a cámara, levantando una ceja] ¿Tú qué opinas? ¿Eso es un número o una letra?
+PAUSA INTERACTIVA
+SPARK: ¡Una letra! Se parecen, pero la E mira hacia allá y el 3 mira hacia acá. [Holograma los pone lado a lado y el 3 se voltea a su lugar.]
+Resolución
+SPARK: Último reto. Tres manzanas MÁS dos manzanas. Usa tus deditos: tres en una mano… dos en la otra… ¡júntalos y cuenta!
+[Mano animada en pantalla haciendo lo mismo, lento.]
+PAUSA INTERACTIVA
+SPARK: ¡CINCO! Tres más dos es igual a cinco. ¡Ya piensas como científico!
+[Efecto: la tercera estrella se enciende en azul.]
+Enlace de intriga
+[Sonido: "ñam, ñam, ñam". Plano del frutero: faltan manzanas. Se ven migas que llevan hacia debajo de la mesa.]
+SPARK: [susurrando] Esperen… teníamos cinco manzanas. ¿Alguien está comiendo?
+6. Bloque 4 – La resta de las manzanas (11:00 – 12:30)
+Introducción
+[Eco levanta el mantel. Debajo de la mesa está Don Caos con la boca llena y dos corazones de manzana en la mano.]
+DON CAOS: [con la boca llena] …¿Qué? Yo no fui. Fue… el gato.
+ECO: [cruzando los brazos] No tenemos gato, Don Caos.
+Datos clave
+SPARK: Esto es perfecto para aprender a RESTAR. Restar es quitar. [Gráfico: el signo − aparece.] Este signo se llama MENOS.
+[Holograma: 5 manzanas en fila. Una mano morada se lleva 2, que desaparecen con un "¡ñam!".]
+SPARK: Teníamos cinco manzanas. Don Caos se comió dos. ¿Cuántas quedan? Cuéntalas.
+PAUSA INTERACTIVA
+SPARK: ¡TRES! Cinco menos dos es igual a tres.
+[Gráfico grande: 5 − 2 = 3.]
+SPARK: Truco con los dedos: levanta cinco. Ahora baja dos. ¿Cuántos quedan arriba?
+PAUSA INTERACTIVA
+SPARK: ¡Tres! Tu mano es una calculadora que siempre llevas contigo.
+Conflicto
+PINTOR: [hablando rapidísimo, enojado] ¡Don Caos, eres un desordenado, un flojo, un comemanzanas, un…!
+[Don Caos baja la cabeza. Música se corta. Silencio.]
+Resolución y enlace
+[Primer plano: el escudo de Valentina empieza a brillar azul suave, con un latido: "pum… pum…".]
+VALENTINA: [serena, levantando la mano] Pintor… espera. Mi escudo está brillando.
+[Efecto: la cuarta estrella se enciende en azul, pero titila débil.]
+VALENTINA: [mirando a Don Caos, susurrando] Mi escudo solo brilla así cuando alguien está muy triste. Y no es ninguno de nosotros.
+7. Valor oculto – El secreto de Don Caos con Valentina (12:30 – 14:00)
+Revelación no prometida: el villano no es malo, tiene miedo. Premia a quien se quedó con una herramienta emocional real para el niño.
+[Música suave de piano. Valentina se agacha a la altura de Don Caos. Luz cálida.]
+VALENTINA: [muy suave] Don Caos… ¿por qué borras las letras?
+DON CAOS: [silencio largo; luego, casi susurrando] Porque… yo nunca aprendí a leer. Y cuando todos leen y yo no… me da vergüenza. Si nadie puede leer, nadie se va a reír de mí.
+[Pausa dramática de 2 segundos. Los héroes se miran entre ellos.]
+PINTOR: [arrepentido, más lento que nunca] Ay… Don Caos. Perdón por gritarte.
+VALENTINA: [mirando a cámara] ¿Sabes qué? A veces cuando algo nos cuesta, nos enojamos o queremos rendirnos. Eso le pasa a todo el mundo. A los niños, a los papás… y hasta a los científicos locos.
+[El escudo de Valentina proyecta un globo rojo flotando.]
+VALENTINA: Cuando sientas eso, usa mi truco secreto: la Respiración del Globo. Hazlo conmigo.
+[Gráfico: un globo que se infla y se desinfla al ritmo de la respiración. Números 1-2-3 suaves.]
+VALENTINA: Llena tu pancita de aire, como un globo… uno, dos, tres. [pausa] Y ahora suéltalo despacito… fffff. Otra vez.
+PAUSA INTERACTIVA [8 segundos: dos respiraciones completas en pantalla]
+VALENTINA: Y después dite a ti mismo: "Todavía no lo sé… pero lo estoy aprendiendo". ¿Lo decimos juntos?
+TODOS (incluido Don Caos): "Todavía no lo sé… ¡pero lo estoy aprendiendo!"
+[Texto en pantalla con la frase. Don Caos sonríe por primera vez. El escudo de Valentina deja de latir y la cuarta estrella deja de titilar: brilla firme.]
+DON CAOS: [tímido] ¿Y… me enseñan a mí también?
+VALENTINA: [sonriendo, a cámara] Claro. Y tú vas a ayudarnos, porque ya sabes muchísimo.
+8. Bloque 5 – Leer y escribir la palabra secreta (14:00 – 15:45)
+Introducción
+[Todos frente al cofre. El tercer candado (el de la letra) muestra una figura: dos montañitas.]
+PINTOR: [emocionado, rapidísimo] ¡Conozco esa letra! ¡Es la M! Dos montañas juntitas: subo, bajo, subo, bajo.
+Datos clave: escribir la M
+[Pintor dibuja una M gigante en el aire, despacio. Una flecha animada muestra el orden del trazo: 1-2-3-4.]
+PINTOR: Levanta tu dedo índice. Vamos a escribirla en el aire: palito abajo… subo a la montaña… bajo… subo… ¡y bajo! ¡Otra vez!
+PAUSA INTERACTIVA [El trazo se repite dos veces con el niño]
+PINTOR: La M suena así: "Mmmm", como cuando algo está muy rico. ¡Mmmm!
+Datos clave: leer la sílaba
+SPARK: Ahora la parte científica. ¿Recuerdas la primera vocal que rescatamos? La de ABEJA.
+PAUSA INTERACTIVA
+SPARK: ¡La A! Si juntamos la M y la A… [Holograma: la M y la A se acercan y chocan con un brillo.]
+PINTOR: Mmm… aaa… ¡MA!
+[Gráfico grande: M + A = MA. Se lee tres veces, cada vez más rápido.]
+Conflicto
+[Don Caos levanta su Rayo Confundidor. Todos se congelan. Pausa dramática.]
+DON CAOS: [mira el rayo… y lo baja] No. Hoy no. [Lo guarda en el bolsillo.] Hoy quiero leer.
+Resolución (cierre de la brecha de curiosidad)
+VALENTINA: Don Caos, tú lee con nuestro amigo. [Señala a cámara.] Si ponemos MA… y otra vez MA… ¿qué dice?
+[En pantalla: MA | MA. Cada sílaba se ilumina al leerla.]
+DON CAOS + HÉROES: [lento] MA… MA…
+PAUSA INTERACTIVA [4 segundos]
+TODOS: [gritando de alegría] ¡MAMÁ!
+[Explosión de confeti de colores. Los tres candados se abren: clic, clic, clic. La quinta estrella se enciende en magenta y el marcador completo brilla.]
+SPARK: ¡Acabas de leer tu primera palabra! ¡Tú abriste el cofre!
+[Del cofre salen volando todas las letras, los colores y los números. Vuelven al libro del inicio. Las páginas se llenan de nuevo.]
+ECO: Y la palabra mágica era la persona que te cuida. Ve y dale un abrazo. ¡Te lo ganaste!
+9. Cierre sin rampa de salida (15:45 – 16:10)
+Del confeti pasamos directo al gancho del siguiente episodio y al CTA. Menos de 25 segundos.
+[Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel. Primer plano: dice "6, 7, 8, 9, 10" con un dibujo de su rayo.]
+SPARK: [frenando en seco, serio] Un momento… ¿Don Caos? ¿Qué es eso?
+DON CAOS: [silbando, nervioso] Nada. Unos números que… tomé prestados ayer.
+TODOS: [a cámara] ¡¿QUÉÉÉ?!
+[Corte a pantalla final. Música enérgica.]
+VALENTINA: [voz en off, cálida, dirigida a los adultos] Papá, mamá: si tu peque leyó "MAMÁ" hoy, suscríbanse juntos para no perderse la próxima misión.
+PINTOR: [rapidísimo] ¡Toca aquí para rescatar los números del 6 al 10! ¡Rápido, rápido!
+[Pantalla final 20 s: video sugerido a la izquierda (próximo episodio), botón de suscripción a la derecha. Los 5 personajes saludan dentro del marco.]
+10. Notas de producción y próximos episodios
+Para mantener la retención con niños pequeños
+Cambio visual cada 5 a 8 segundos: zoom, efecto, personaje nuevo o gráfico. Los niños de 3 a 6 años sueltan el video cuando la imagen se queda quieta.
+Una pausa interactiva cada 40 a 60 segundos como máximo. Si el niño responde en voz alta, se queda.
+Repetir cada concepto 3 veces (escuchar, decir, hacer). Es repetición útil, no paja.
+Mantener fijo el marcador de 5 estrellas: es el recordatorio visual de la recompensa final.
+Voz de Pintor acelerada solo en frases cortas. En los momentos de enseñanza, todos hablan lento.
+Al subir a YouTube marca el video como "creado para niños". Los comentarios quedan desactivados, por eso el CTA se dirige a los adultos y nunca pide comentar.
+Serie sugerida (misma estructura, un villano-problema por episodio)
+

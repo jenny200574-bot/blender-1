@@ -1,0 +1,17 @@
+{
+  "source_sha256": "eb2a39894dbe3559ed482d51f410d8fa8fa4a29c712aff2a872d71015312b1a1",
+  "assets_verified": 20,
+  "explicit_equivalences": {},
+  "paid_requests": 0,
+  "inferred_values": 0,
+  "adapter": "canonical_manifest_only",
+  "production_approved": false,
+  "attached_existing_camera_sources": [
+    "camara_4g/config.json",
+    "camara_4g/ajustes.json",
+    "camara_4g/commands.json",
+    "camara_4g/sb_scene.json",
+    "camara_4g/shot_types.json",
+    "camara_4g/elevations.json"
+  ]
+}

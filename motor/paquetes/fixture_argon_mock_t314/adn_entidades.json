@@ -1,0 +1,99 @@
+{
+  "records": [
+    {
+      "id": "ADN_nuevo_cuerpo_articulado",
+      "type": "OBJECT",
+      "exact_aliases": [
+        "prop_fixture"
+      ],
+      "source": "fixture_adn_obj_datos_v5",
+      "source_data": {
+        "dimensions_m": [
+          0.5,
+          0.3,
+          0.36
+        ],
+        "text": "Objeto sintético de dos piezas articuladas",
+        "shape_query": {
+          "text": "escultura ovoide con tapa de curva singular",
+          "required_features": [
+            "tapa_ovoide_unica"
+          ]
+        },
+        "construction_3d": {
+          "material": {
+            "rgba": [
+              0.95,
+              0.7,
+              0.05,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.45
+          },
+          "placement": {
+            "scene_object_id": "prop_fixture",
+            "position_m": [
+              1.1,
+              0,
+              0
+            ],
+            "rotation_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "points": [
+            {
+              "id": "hinge",
+              "position_m": [
+                0,
+                0.15,
+                0.3
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "source": "fixture_sintetico.json"
+            }
+          ],
+          "hinges": [
+            {
+              "id": "lid_hinge",
+              "pivot_m": [
+                0,
+                0.15,
+                0.3
+              ],
+              "axis": [
+                1,
+                0,
+                0
+              ],
+              "parts": [
+                "prop_lid"
+              ],
+              "min_deg": 0,
+              "max_deg": 60,
+              "keys": [
+                {
+                  "t": 0,
+                  "c": 0,
+                  "curve": "LINEAR"
+                },
+                {
+                  "t": 2,
+                  "c": 1,
+                  "curve": "LINEAR"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

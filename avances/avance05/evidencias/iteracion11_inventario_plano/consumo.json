@@ -1,0 +1,33 @@
+{
+  "date_bogota": "2026-11-07T21:04:50.159369-05:00",
+  "input_tokens": 58998,
+  "output_including_thoughts_tokens": 1540,
+  "cached_tokens": 0,
+  "gross_usd": 0.034119,
+  "net_expected_credits_usd": 0,
+  "invoice_verified": false,
+  "finish": "FinishReason.STOP",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1540,
+    "candidates_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 1540
+      }
+    ],
+    "prompt_token_count": 58998,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 58998
+      }
+    ],
+    "thoughts_token_count": null,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 60538,
+    "traffic_type": "ON_DEMAND"
+  }
+}

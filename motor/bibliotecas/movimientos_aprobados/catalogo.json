@@ -1,0 +1,958 @@
+{
+  "schema": "motion_catalog_v1",
+  "entries": [
+    {
+      "id": "b2b791090df37abf0a4563ff.0",
+      "path": "bvh/b2b791090df37abf0a4563ffb11b2fdd9040847c0f7e785659b07f56fbdd35bc.bvh",
+      "frames": 16,
+      "frame_time_s": 0.125,
+      "duration_s": 2.0,
+      "joint_names": [
+        "root",
+        "neck",
+        "head",
+        "beak",
+        "tail",
+        "wing.L",
+        "leg.L",
+        "foot.L",
+        "toe.L.front1",
+        "toe.L.front2",
+        "toe.L.front3",
+        "toe.L.back",
+        "wing.R",
+        "leg.R",
+        "foot.R",
+        "toe.R.front1",
+        "toe.R.front2",
+        "toe.R.front3",
+        "toe.R.back"
+      ],
+      "sha256": "b2b791090df37abf0a4563ffb11b2fdd9040847c0f7e785659b07f56fbdd35bc",
+      "origin": "kimodo",
+      "source": {
+        "provider_ref": null,
+        "scene_validation": "fixture",
+        "BVH": "exportado de rig revisado"
+      },
+      "prompt": "movimiento de prueba sin generación de red",
+      "skeleton": {
+        "bones": [
+          {
+            "id": "root",
+            "head": [
+              0,
+              0,
+              0.4
+            ],
+            "tail": [
+              0,
+              0,
+              0.55
+            ],
+            "parent": null,
+            "role": "root",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "neck",
+            "head": [
+              0,
+              0,
+              0.55
+            ],
+            "tail": [
+              0,
+              0,
+              0.78
+            ],
+            "parent": "root",
+            "role": "neck",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "head",
+            "head": [
+              0,
+              0,
+              0.78
+            ],
+            "tail": [
+              0,
+              0,
+              1.0
+            ],
+            "parent": "neck",
+            "role": "head",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "beak",
+            "head": [
+              0,
+              -0.1,
+              0.9
+            ],
+            "tail": [
+              0,
+              -0.25,
+              0.9
+            ],
+            "parent": "head",
+            "role": "beak",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "tail",
+            "head": [
+              0,
+              0.12,
+              0.5
+            ],
+            "tail": [
+              0,
+              0.4,
+              0.55
+            ],
+            "parent": "root",
+            "role": "tail",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "wing.L",
+            "head": [
+              -0.12,
+              0,
+              0.65
+            ],
+            "tail": [
+              -0.4,
+              0,
+              0.55
+            ],
+            "parent": "root",
+            "role": "wing.L",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "leg.L",
+            "head": [
+              -0.12,
+              0,
+              0.4
+            ],
+            "tail": [
+              -0.12,
+              0,
+              0.14
+            ],
+            "parent": "root",
+            "role": "leg.L",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "foot.L",
+            "head": [
+              -0.12,
+              0,
+              0.14
+            ],
+            "tail": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "parent": "leg.L",
+            "role": "foot.L",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.front1",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.18,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.front1",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.front2",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.12,
+              0.29000000000000004,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.front2",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.front3",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.06,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.front3",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.back",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.12,
+              0.03,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.back",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "wing.R",
+            "head": [
+              0.12,
+              0,
+              0.65
+            ],
+            "tail": [
+              0.4,
+              0,
+              0.55
+            ],
+            "parent": "root",
+            "role": "wing.R",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "leg.R",
+            "head": [
+              0.12,
+              0,
+              0.4
+            ],
+            "tail": [
+              0.12,
+              0,
+              0.14
+            ],
+            "parent": "root",
+            "role": "leg.R",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "foot.R",
+            "head": [
+              0.12,
+              0,
+              0.14
+            ],
+            "tail": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "parent": "leg.R",
+            "role": "foot.R",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.front1",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.06,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.front1",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.front2",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.12,
+              0.29000000000000004,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.front2",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.front3",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.18,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.front3",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.back",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.12,
+              0.03,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.back",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          }
+        ]
+      },
+      "profile": {
+        "bone_mass_kg": {
+          "root": 1,
+          "neck": 1,
+          "head": 1,
+          "beak": 1,
+          "tail": 1,
+          "wing.L": 1,
+          "leg.L": 1,
+          "foot.L": 1,
+          "toe.L.front1": 1,
+          "toe.L.front2": 1,
+          "toe.L.front3": 1,
+          "toe.L.back": 1,
+          "wing.R": 1,
+          "leg.R": 1,
+          "foot.R": 1,
+          "toe.R.front1": 1,
+          "toe.R.front2": 1,
+          "toe.R.front3": 1,
+          "toe.R.back": 1
+        },
+        "balance_margin_m": 0.04,
+        "support_intervals": [
+          {
+            "t0": 0,
+            "t1": 2,
+            "mode": "supported",
+            "support_points": [
+              "support_fixture.support_a",
+              "support_fixture.support_b",
+              "support_fixture.support_c",
+              "support_fixture.support_d"
+            ]
+          }
+        ],
+        "hop_vertical_max_m_s": 0.5
+      },
+      "metrics": {
+        "all_passed": true,
+        "errors": [],
+        "max_bone_length_error_m": 4.840921491444661e-08,
+        "max_contact_error_m": 1.4901161193847656e-08,
+        "physics": {
+          "locked_naturalness_trace": {
+            "bird_fixture": [
+              {
+                "frame": 1,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 2,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 3,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 4,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 5,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 6,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 7,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 8,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 9,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 10,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 11,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 12,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 13,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 14,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 15,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              },
+              {
+                "frame": 16,
+                "outside_m": 0,
+                "balance_margin_m": 0.04,
+                "hop": false
+              }
+            ]
+          },
+          "frames": 16,
+          "max_outside_support_m": 0,
+          "max_com_accel_m_s2": 0.011268498969385256,
+          "max_relative_slip_m_frame": 0,
+          "max_joint_speed_deg_s": 22.02978137535189,
+          "max_penetration_m": 0,
+          "all_passed": true,
+          "errors": [],
+          "com_trace": [
+            {
+              "frame": 1,
+              "com": {
+                "bird_fixture": [
+                  -2.74495071117542e-09,
+                  0.08921051025390625,
+                  0.3186841905117035
+                ]
+              }
+            },
+            {
+              "frame": 2,
+              "com": {
+                "bird_fixture": [
+                  0.0018475891556590796,
+                  0.08924011141061783,
+                  0.3187623918056488
+                ]
+              }
+            },
+            {
+              "frame": 3,
+              "com": {
+                "bird_fixture": [
+                  0.003654812229797244,
+                  0.08931813389062881,
+                  0.3189701437950134
+                ]
+              }
+            },
+            {
+              "frame": 4,
+              "com": {
+                "bird_fixture": [
+                  0.005445214454084635,
+                  0.08942825347185135,
+                  0.3192673623561859
+                ]
+              }
+            },
+            {
+              "frame": 5,
+              "com": {
+                "bird_fixture": [
+                  0.00723955687135458,
+                  0.08955400437116623,
+                  0.31961244344711304
+                ]
+              }
+            },
+            {
+              "frame": 6,
+              "com": {
+                "bird_fixture": [
+                  0.009051529690623283,
+                  0.08967895805835724,
+                  0.31996145844459534
+                ]
+              }
+            },
+            {
+              "frame": 7,
+              "com": {
+                "bird_fixture": [
+                  0.010886043310165405,
+                  0.08978709578514099,
+                  0.32026851177215576
+                ]
+              }
+            },
+            {
+              "frame": 8,
+              "com": {
+                "bird_fixture": [
+                  0.012740613892674446,
+                  0.08986297249794006,
+                  0.32048681378364563
+                ]
+              }
+            },
+            {
+              "frame": 9,
+              "com": {
+                "bird_fixture": [
+                  0.014609646052122116,
+                  0.08989161998033524,
+                  0.32056984305381775
+                ]
+              }
+            },
+            {
+              "frame": 10,
+              "com": {
+                "bird_fixture": [
+                  0.016490619629621506,
+                  0.08986297249794006,
+                  0.32048681378364563
+                ]
+              }
+            },
+            {
+              "frame": 11,
+              "com": {
+                "bird_fixture": [
+                  0.018386051058769226,
+                  0.08978709578514099,
+                  0.32026851177215576
+                ]
+              }
+            },
+            {
+              "frame": 12,
+              "com": {
+                "bird_fixture": [
+                  0.02030152827501297,
+                  0.08967895805835724,
+                  0.31996145844459534
+                ]
+              }
+            },
+            {
+              "frame": 13,
+              "com": {
+                "bird_fixture": [
+                  0.0222395621240139,
+                  0.08955400437116623,
+                  0.31961244344711304
+                ]
+              }
+            },
+            {
+              "frame": 14,
+              "com": {
+                "bird_fixture": [
+                  0.02419521100819111,
+                  0.08942825347185135,
+                  0.3192673623561859
+                ]
+              }
+            },
+            {
+              "frame": 15,
+              "com": {
+                "bird_fixture": [
+                  0.026154816150665283,
+                  0.08931813389062881,
+                  0.3189701437950134
+                ]
+              }
+            },
+            {
+              "frame": 16,
+              "com": {
+                "bird_fixture": [
+                  0.02809758670628071,
+                  0.08924011141061783,
+                  0.3187623918056488
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "signature": "7d8c5f6dfb2194fb9a69bdc442b7c7b23d19caf3e8f774f1fd34bf68d8ecf421",
+      "request": {
+        "entity": "bird_fixture",
+        "action": "wing_open",
+        "anatomy": "avian",
+        "emotion": "neutral",
+        "load": "none",
+        "support": "feet",
+        "context": "flat"
+      },
+      "tracks": [
+        {
+          "bone": "wing.L",
+          "keys": [
+            {
+              "t": 0,
+              "value": [
+                0,
+                0,
+                0
+              ],
+              "curve": "SMOOTH"
+            },
+            {
+              "t": 1,
+              "value": [
+                15,
+                0,
+                0
+              ],
+              "curve": "SMOOTH"
+            },
+            {
+              "t": 2,
+              "value": [
+                0,
+                0,
+                0
+              ],
+              "curve": "SMOOTH"
+            }
+          ]
+        }
+      ],
+      "created_at": "2026-11-07T10:36:38.549499-05:00",
+      "technical_approved": true
+    }
+  ]
+}

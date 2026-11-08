@@ -1,0 +1,10 @@
+{
+  "date_bogota": "2026-11-07T21:51:25.566467-05:00",
+  "tests": 16,
+  "all_passed": true,
+  "generador_off": true,
+  "live_payment_off": true,
+  "no_paid_jobs_open": true,
+  "gpu_resumed_by_this_phase": false,
+  "video": null
+}

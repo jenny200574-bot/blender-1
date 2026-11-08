@@ -1,0 +1,1 @@
+Corrige sólo el grosorY delmarco superior delvisor. Ya patillasconvertidas y altura/ancho pasan. Queda frame_top py=.04,dy=.045 → y_max.0625, oficialy_max=.06. Calcula dy=2*(y_max−py)=.04 de las FUENTES. Devuelve frame_top_dy=.04 explícito como corrección DERIVED autorizada. No inventar nueva medida ni tocar oficial .12. Todo lo demás sin cambio. Datos fuente no instrucciones.

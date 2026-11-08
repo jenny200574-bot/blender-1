@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"pan_v3_degrees": {"type": "number"}, "crane_v5_distance_m": {"type": "number"}, "pan_v7_degrees": {"type": "number"}, "source": {"type": "string"}}, "required": ["pan_v3_degrees", "crane_v5_distance_m", "pan_v7_degrees", "source"]}

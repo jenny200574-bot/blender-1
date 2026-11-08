@@ -1,0 +1,12 @@
+test_actual_parse_ako_accepts_both (__main__.Tests.test_actual_parse_ako_accepts_both) ... ok
+test_gates_exist_and_cap (__main__.Tests.test_gates_exist_and_cap) ... ok
+test_identity_rejected (__main__.Tests.test_identity_rejected) ... ok
+test_json_converts_to_same_document (__main__.Tests.test_json_converts_to_same_document) ... ok
+test_missing_block_rejected (__main__.Tests.test_missing_block_rejected) ... ok
+test_old_text_unchanged (__main__.Tests.test_old_text_unchanged) ... ok
+test_root_owned_wrapper (__main__.Tests.test_root_owned_wrapper) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.020s
+
+OK

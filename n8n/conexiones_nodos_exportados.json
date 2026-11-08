@@ -1,0 +1,320 @@
+{
+ "02 · leer": {
+  "main": [
+   [
+    {
+     "node": "02b · molde 3D por toma (gratis)",
+     "type": "main",
+     "index": 0
+    },
+    {
+     "node": "11 · híbrido cotizar (gratis)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "V · Argon video prompt (stub)": {
+  "main": [
+   [
+    {
+     "node": "VER · OK Ricardo (stub)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "PUENTE · PJ+voz → CUBO": {
+  "main": [
+   [
+    {
+     "node": "CUBO · 0 escribir PJ en disco",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO PJ · 1b armar pedido (gratis)": {
+  "main": [
+   [
+    {
+     "node": "SELLO PJ · 2 cotizar hoja Fase 1 + ADN Fase 2 · Maestro 02 (gratis)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO PJ · 2a leer cotización y tope": {
+  "main": [
+   [
+    {
+     "node": "SELLO PJ · ¿ADN en disco o pago habilitado por Ricardo?",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO PJ · 3c voz desde el perfil": {
+  "main": [
+   [
+    {
+     "node": "SELLO PJ · 4 validar (5 bloques + voz 9 rasgos)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO PJ · 4 validar (5 bloques + voz 9 rasgos)": {
+  "main": [
+   [
+    {
+     "node": "SELLO PJ · 4a ¿pasa?",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO PJ · 4c VER sellado": {
+  "main": [
+   [
+    {
+     "node": "CUBO · 1 cargar catálogo",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO OBJ · 1b armar pedido (gratis)": {
+  "main": [
+   [
+    {
+     "node": "SELLO OBJ · 2 cotizar ADN · Maestro 03 (gratis)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO OBJ · 2a leer cotización y tope": {
+  "main": [
+   [
+    {
+     "node": "SELLO OBJ · ¿ADN en disco o pago habilitado por Ricardo?",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO OBJ · 4 validar (5 bloques + párrafo)": {
+  "main": [
+   [
+    {
+     "node": "SELLO OBJ · 4a ¿pasa?",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO OBJ · 4c VER sellado": {
+  "main": [
+   [
+    {
+     "node": "SELLO OBJ · 4d resumen (todos, gratis)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO ESTILO · 1c armar pedido (gratis)": {
+  "main": [
+   [
+    {
+     "node": "SELLO ESTILO · 2 cotizar ADN · Maestro 05 (gratis)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO ESTILO · 2a leer cotización y tope": {
+  "main": [
+   [
+    {
+     "node": "SELLO ESTILO · ¿ADN en disco o pago habilitado por Ricardo?",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO ESTILO · 4 validar (5 bloques + párrafo)": {
+  "main": [
+   [
+    {
+     "node": "SELLO ESTILO · 4a ¿pasa?",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO ESTILO · 4c VER sellado": {
+  "main": [
+   [
+    {
+     "node": "CUBO · 1 cargar catálogo",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO PJ · 2b preparar hoja Fase 1 · Maestro 02 (sello_pago)": {
+  "main": [
+   [
+    {
+     "node": "SELLO PJ · 2b▶ sello_pago hoja (compuerta + tope + ledger)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO PJ · 3 preparar ADN Fase 2 · Maestro 02 (sello_pago)": {
+  "main": [
+   [
+    {
+     "node": "SELLO PJ · 3▶ sello_pago adn (compuerta + tope + ledger)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO PJ · 2c leer hoja": {
+  "main": [
+   [
+    {
+     "node": "SELLO PJ · 3 preparar ADN Fase 2 · Maestro 02 (sello_pago)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO PJ · 3a leer ADN": {
+  "main": [
+   [
+    {
+     "node": "SELLO PJ · 3b catálogo (voz del perfil)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO OBJ · 3 preparar ADN · Maestro 03/04 (sello_pago)": {
+  "main": [
+   [
+    {
+     "node": "SELLO OBJ · 3▶ sello_pago adn (compuerta + tope + ledger)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO OBJ · 3a leer ADN": {
+  "main": [
+   [
+    {
+     "node": "SELLO OBJ · 4 validar (5 bloques + párrafo)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO OBJ · 4d resumen (todos, gratis)": {
+  "main": [
+   [
+    {
+     "node": "CUBO · 1 cargar catálogo",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "00 → SELLO OBJ · lo pintado pasa al sello (gratis)": {
+  "main": [
+   [
+    {
+     "node": "00 → SELLO OBJ · ¿modo pagar?",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO ESTILO · 3 preparar ADN · Maestro 05 (sello_pago)": {
+  "main": [
+   [
+    {
+     "node": "SELLO ESTILO · 3▶ sello_pago adn (compuerta + tope + ledger)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "SELLO ESTILO · 3a leer ADN": {
+  "main": [
+   [
+    {
+     "node": "SELLO ESTILO · 4 validar (5 bloques + párrafo)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "00 → SELLO OBJ · marcar aprobación": {
+  "main": [
+   [
+    {
+     "node": "SELLO OBJ · 1b armar pedido (gratis)",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ },
+ "MOTOR · leer paquete": {
+  "main": [
+   []
+  ]
+ },
+ "02T · validar esquema y faltantes (gratis)": {
+  "main": [
+   [
+    {
+     "node": "02T · ¿entrada completa?",
+     "type": "main",
+     "index": 0
+    }
+   ]
+  ]
+ }
+}

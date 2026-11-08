@@ -1,0 +1,18 @@
+test_01_tarifa_existente (t316_legacy_fixture.Tests.test_01_tarifa_existente) ... ok
+test_02_sin_tramo_bloquea (t316_legacy_fixture.Tests.test_02_sin_tramo_bloquea) ... ok
+test_03_stream_1800_y_limite_real (t316_legacy_fixture.Tests.test_03_stream_1800_y_limite_real) ... ok
+test_04_seco_reserva_antes_y_libera (t316_legacy_fixture.Tests.test_04_seco_reserva_antes_y_libera) ... ok
+test_05_seco_bloquea_antes_de_cliente (t316_legacy_fixture.Tests.test_05_seco_bloquea_antes_de_cliente) ... ok
+test_06_off_bloquea_aun_habilitado (t316_legacy_fixture.Tests.test_06_off_bloquea_aun_habilitado) ... ok
+test_07_reserva_insuficiente_antes_cliente (t316_legacy_fixture.Tests.test_07_reserva_insuficiente_antes_cliente) ... ok
+test_08_stream_mock_descarta_thought_cobra_tokens (t316_legacy_fixture.Tests.test_08_stream_mock_descarta_thought_cobra_tokens) ... ok
+test_09_tope_total_3 (t316_legacy_fixture.Tests.test_09_tope_total_3) ... ok
+test_10_anatomia_no_certifica_datos_inferidos (t316_legacy_fixture.Tests.test_10_anatomia_no_certifica_datos_inferidos) ... ok
+test_current_provider_tariff (__main__.Flash3.test_current_provider_tariff) ... ok
+test_no_implicit_network (__main__.Flash3.test_no_implicit_network) ... ok
+test_token_gross_fixture (__main__.Flash3.test_token_gross_fixture) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.951s
+
+OK

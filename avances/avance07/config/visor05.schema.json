@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"frame_top_dy": {"type": "number"}}, "required": ["frame_top_dy"]}

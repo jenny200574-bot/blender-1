@@ -1,0 +1,309 @@
+
+=== test_cpu.py ===
+test_10s_no_divide (__main__.CPU.test_10s_no_divide) ... ok
+test_actor_omitido (__main__.CPU.test_actor_omitido) ... ok
+test_alias_ambiguo_no_adivina (__main__.CPU.test_alias_ambiguo_no_adivina) ... ok
+test_anatomia_no_soportada (__main__.CPU.test_anatomia_no_soportada) ... ok
+test_apagon_no_suavizar (__main__.CPU.test_apagon_no_suavizar) ... ok
+test_apariencia_no_opcional (__main__.CPU.test_apariencia_no_opcional) ... ok
+test_audio_ausente_no_bloquea (__main__.CPU.test_audio_ausente_no_bloquea) ... ok
+test_biblioteca_restringida_no_se_activa (__main__.CPU.test_biblioteca_restringida_no_se_activa) ... ok
+test_camara_ausente (__main__.CPU.test_camara_ausente) ... ok
+test_campo_ausente (__main__.CPU.test_campo_ausente) ... ok
+test_cero_es_valido (__main__.CPU.test_cero_es_valido) ... ok
+test_cobertura1320_sin_duplicar (__main__.CPU.test_cobertura1320_sin_duplicar) ... ok
+test_corte_seco_es_corte_exacto (__main__.CPU.test_corte_seco_es_corte_exacto) ... ok
+test_crane_altura_medida (__main__.CPU.test_crane_altura_medida) ... ok
+test_crane_sin_datos_bloquea (__main__.CPU.test_crane_sin_datos_bloquea) ... ok
+test_dos_escritores_luz (__main__.CPU.test_dos_escritores_luz) ... ok
+test_envoltorio_n8n (__main__.CPU.test_envoltorio_n8n) ... ok
+test_escalera_orden_y_revisor (__main__.CPU.test_escalera_orden_y_revisor) ... ok
+test_estructura_positiva (__main__.CPU.test_estructura_positiva) ... ok
+test_fin_escena_no_anticipado (__main__.CPU.test_fin_escena_no_anticipado) ... ok
+test_footlock_sin_fk_bloquea (__main__.CPU.test_footlock_sin_fk_bloquea) ... ok
+test_formato_incorrecto_bloquea (__main__.CPU.test_formato_incorrecto_bloquea) ... ok
+test_fuera_paquete (__main__.CPU.test_fuera_paquete) ... ok
+test_hash_distinto (__main__.CPU.test_hash_distinto) ... ok
+test_ids_duplicados (__main__.CPU.test_ids_duplicados) ... ok
+test_json_truncado (__main__.CPU.test_json_truncado) ... ok
+test_luz_reloj_global (__main__.CPU.test_luz_reloj_global) ... ok
+test_no_claves_repetidas (__main__.CPU.test_no_claves_repetidas) ... ok
+test_no_fundido_silencioso (__main__.CPU.test_no_fundido_silencioso) ... ok
+test_no_montaje_parcial (__main__.CPU.test_no_montaje_parcial) ... ok
+test_no_silencia_excepcion_pulida (__main__.CPU.test_no_silencia_excepcion_pulida) ... ok
+test_objeto_requerido_sin_binding (__main__.CPU.test_objeto_requerido_sin_binding) ... ok
+test_pan_posicion_fija (__main__.CPU.test_pan_posicion_fija) ... ok
+test_pan_sin_datos_bloquea (__main__.CPU.test_pan_sin_datos_bloquea) ... ok
+test_presupuesto0_sin_red (__main__.CPU.test_presupuesto0_sin_red) ... ok
+test_prop_no_humano (__main__.CPU.test_prop_no_humano) ... ok
+test_pulida_firma_real (__main__.CPU.test_pulida_firma_real) ... ok
+test_pulida_off_no_se_ignora (__main__.CPU.test_pulida_off_no_se_ignora) ... ok
+test_semantica_no_levantarse_para_caminar (__main__.CPU.test_semantica_no_levantarse_para_caminar) ... ok
+test_tiempo_ausente (__main__.CPU.test_tiempo_ausente) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.985s
+
+OK
+
+=== test_dev2.py ===
+test_dialogo_no_se_repite_si_cruza_corte (__main__.Tests.test_dialogo_no_se_repite_si_cruza_corte) ... ok
+test_dialogos_reales_11_y_cortes (__main__.Tests.test_dialogos_reales_11_y_cortes) ... ok
+test_equilibrio_fuera_y_dentro (__main__.Tests.test_equilibrio_fuera_y_dentro) ... ok
+test_falta_texto_es_dato_01 (__main__.Tests.test_falta_texto_es_dato_01) ... ok
+test_fixture_unica_16_etapas (__main__.Tests.test_fixture_unica_16_etapas) ... ok
+test_material_dos_escritores_bloquea (__main__.Tests.test_material_dos_escritores_bloquea) ... ok
+test_montaje_fundido_cuenta_y_no_es_corte (__main__.Tests.test_montaje_fundido_cuenta_y_no_es_corte) ... ERROR
+test_oclusor_no_genera_video_parcial (__main__.Tests.test_oclusor_no_genera_video_parcial) ... ERROR
+test_off_montaje_no_se_ignora (__main__.Tests.test_off_montaje_no_se_ignora) ... ok
+test_salida_omni_jl_sin_audio_no_bloquea (__main__.Tests.test_salida_omni_jl_sin_audio_no_bloquea) ... ok
+test_transicion_saliente_no_se_adelanta (__main__.Tests.test_transicion_saliente_no_se_adelanta) ... ok
+
+======================================================================
+ERROR: test_montaje_fundido_cuenta_y_no_es_corte (__main__.Tests.test_montaje_fundido_cuenta_y_no_es_corte)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/myia-motor-v9/avance04_20261107/MOTOR_UNICO_20261107/pruebas/test_dev2.py", line 43, in test_montaje_fundido_cuenta_y_no_es_corte
+    out=R/'evidencia/montaje_colores_dev2';out.mkdir(exist_ok=False);clips=[]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/opt/myia-motor-v9/avance04_20261107/MOTOR_UNICO_20261107/evidencia/montaje_colores_dev2'
+
+======================================================================
+ERROR: test_oclusor_no_genera_video_parcial (__main__.Tests.test_oclusor_no_genera_video_parcial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/myia-motor-v9/avance04_20261107/MOTOR_UNICO_20261107/pruebas/test_dev2.py", line 37, in test_oclusor_no_genera_video_parcial
+    original=R/'paquetes/fixture_aviar_integracion';pk=R/'paquetes/fixture_negativa_oclusor';pk.mkdir(exist_ok=False);d=leer(original/'entrada_escena.json')
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/opt/myia-motor-v9/avance04_20261107/MOTOR_UNICO_20261107/paquetes/fixture_negativa_oclusor'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.007s
+
+FAILED (errors=2)
+
+=== test_no_facial_v5.py ===
+test_4g_tiempos_relativos_y_absolutos_son_el_mismo_comando (__main__.T.test_4g_tiempos_relativos_y_absolutos_son_el_mismo_comando) ... ok
+test_4g_una_fuente_modificada_no_pasa_hash (__main__.T.test_4g_una_fuente_modificada_no_pasa_hash) ... ok
+test_ADN_objeto_sin_hash_no_se_lee (__main__.T.test_ADN_objeto_sin_hash_no_se_lee) ... ok
+test_anatomia_conecta_19_huesos_y_ancla_fuente (__main__.T.test_anatomia_conecta_19_huesos_y_ancla_fuente) ... ok
+test_anatomia_desconocida_sigue_A (__main__.T.test_anatomia_desconocida_sigue_A) ... ok
+test_ancla_sin_offset_B (__main__.T.test_ancla_sin_offset_B) ... ok
+test_apoyos_con_hueco_B (__main__.T.test_apoyos_con_hueco_B) ... ok
+test_calidad_sigue_obligatoria (__main__.T.test_calidad_sigue_obligatoria) ... ok
+test_consolidacion_12_cotas_son_6_causas_no_12 (__main__.T.test_consolidacion_12_cotas_son_6_causas_no_12) ... ok
+test_consolidacion_no_omite_A_no_faciales (__main__.T.test_consolidacion_no_omite_A_no_faciales) ... ok
+test_consolidacion_truncado_contactos_misma_causa (__main__.T.test_consolidacion_truncado_contactos_misma_causa) ... ok
+test_equilibrio_distancia_rechaza (__main__.T.test_equilibrio_distancia_rechaza) ... ok
+test_equilibrio_duracion_rechaza (__main__.T.test_equilibrio_duracion_rechaza) ... ok
+test_estado_narrativo_con_aserciones_trazables (__main__.T.test_estado_narrativo_con_aserciones_trazables) ... ok
+test_estado_narrativo_sin_asercion_no_se_declara_completo (__main__.T.test_estado_narrativo_sin_asercion_no_se_declara_completo) ... ok
+test_falta_dedo_no_se_disimula (__main__.T.test_falta_dedo_no_se_disimula) ... ok
+test_indexado_no_filtra_licencia (__main__.T.test_indexado_no_filtra_licencia) ... ok
+test_licencia_ausente_es_aviso_y_no_filtro (__main__.T.test_licencia_ausente_es_aviso_y_no_filtro) ... ok
+test_limites_inclusivos_y_aire_sin_hop (__main__.T.test_limites_inclusivos_y_aire_sin_hop) ... ok
+test_limits_malformados_B_sin_crash (__main__.T.test_limits_malformados_B_sin_crash) ... ok
+test_no_convertir_mueble_en_punto_por_ser_objeto_de_mirada (__main__.T.test_no_convertir_mueble_en_punto_por_ser_objeto_de_mirada) ... ok
+test_objeto_compuesto_por_ADN_llega_a_puntos_y_bisagras (__main__.T.test_objeto_compuesto_por_ADN_llega_a_puntos_y_bisagras) ... ok
+test_objeto_nombre_nuevo_no_adivina_alias (__main__.T.test_objeto_nombre_nuevo_no_adivina_alias) ... ok
+test_objeto_solo_mirada_con_binding_no_requiere_ADN (__main__.T.test_objeto_solo_mirada_con_binding_no_requiere_ADN) ... ok
+test_perfil_no_suministrado_es_B_no_rig_estimado (__main__.T.test_perfil_no_suministrado_es_B_no_rig_estimado) ... ok
+test_pesos_incompletos_B (__main__.T.test_pesos_incompletos_B) ... ok
+test_reglas_preservan_todos_los_topes (__main__.T.test_reglas_preservan_todos_los_topes) ... ok
+test_restriccion_legal_es_aviso_tecnica_no (__main__.T.test_restriccion_legal_es_aviso_tecnica_no) ... ok
+test_saltito_cero_rechaza_uno (__main__.T.test_saltito_cero_rechaza_uno) ... ok
+test_sin_aprobacion_tecnica_bloquea_aunque_licencia_si (__main__.T.test_sin_aprobacion_tecnica_bloquea_aunque_licencia_si) ... ok
+test_vivo_idempotente_un_solo_escritor (__main__.T.test_vivo_idempotente_un_solo_escritor) ... ok
+test_vivo_incompleto_es_dato_productor (__main__.T.test_vivo_incompleto_es_dato_productor) ... ok
+test_vivo_propiedad_no_implementada_sigue_A (__main__.T.test_vivo_propiedad_no_implementada_sigue_A) ... ok
+test_vivo_propiedades_y_tiempos_salen_de_01 (__main__.T.test_vivo_propiedades_y_tiempos_salen_de_01) ... ok
+test_vivo_sin_tiempo_no_lo_inventa (__main__.T.test_vivo_sin_tiempo_no_lo_inventa) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.103s
+
+OK
+
+=== test_puentes_fisicos.py ===
+test_collider_explicito_si_marcadores_no (__main__.Tests.test_collider_explicito_si_marcadores_no) ... ok
+test_collider_sin_rol_no_se_adivina_por_nombre (__main__.Tests.test_collider_sin_rol_no_se_adivina_por_nombre) ... ok
+test_contacto_espanol_conserva_actor_y_punto (__main__.Tests.test_contacto_espanol_conserva_actor_y_punto) ... ok
+test_contacto_tiempo_texto_no_crashea (__main__.Tests.test_contacto_tiempo_texto_no_crashea) ... ok
+test_fuente_guardianes_incompleta_sigue_bloqueada_sin_defaults (__main__.Tests.test_fuente_guardianes_incompleta_sigue_bloqueada_sin_defaults) ... ok
+test_intervalo_espanol_malformado_no_crashea (__main__.Tests.test_intervalo_espanol_malformado_no_crashea) ... ok
+test_limites_alias_contradictorios_bloquean (__main__.Tests.test_limites_alias_contradictorios_bloquean) ... ok
+test_manifest_no_diccionario_o_pieza_no_objeto_no_crashea (__main__.Tests.test_manifest_no_diccionario_o_pieza_no_objeto_no_crashea) ... ok
+test_no_convertir_contactos_ausentes_en_lista_vacia (__main__.Tests.test_no_convertir_contactos_ausentes_en_lista_vacia) ... ok
+test_no_inventar_umbral_ausente (__main__.Tests.test_no_inventar_umbral_ausente) ... ok
+test_programa_suelto_sin_hash_no_se_consume (__main__.Tests.test_programa_suelto_sin_hash_no_se_consume) ... ok
+test_reglas_canonicas_no_cambian_un_numero (__main__.Tests.test_reglas_canonicas_no_cambian_un_numero) ... ok
+test_reglas_espanol_conversion_cm_por_cuadro (__main__.Tests.test_reglas_espanol_conversion_cm_por_cuadro) ... ok
+test_resbale_texto_no_crashea (__main__.Tests.test_resbale_texto_no_crashea) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.046s
+
+OK
+
+=== test_t307.py ===
+test_apagon_intencional_es_constant_y_cero_real (__main__.Tests.test_apagon_intencional_es_constant_y_cero_real) ... ok
+test_aparicion_nombres_nuevos_01_no_inventa_trayectoria (__main__.Tests.test_aparicion_nombres_nuevos_01_no_inventa_trayectoria) ... ok
+test_bbox_exacto_no_se_publica (__main__.Tests.test_bbox_exacto_no_se_publica) ... ok
+test_bug_AttributeError_tipo_desconocido_descartado (__main__.Tests.test_bug_AttributeError_tipo_desconocido_descartado) ... ok
+test_canal_sin_mapa_es_falta (__main__.Tests.test_canal_sin_mapa_es_falta) ... ok
+test_catalogo_real_44_42 (__main__.Tests.test_catalogo_real_44_42) ... ok
+test_catalogo_real_busca_nombre_ajeno_por_forma_uso_medidas (__main__.Tests.test_catalogo_real_busca_nombre_ajeno_por_forma_uso_medidas) ... ok
+test_composicion_ejecutable (__main__.Tests.test_composicion_ejecutable) ... ok
+test_composicion_sin_medidas_no_inventa (__main__.Tests.test_composicion_sin_medidas_no_inventa) ... ok
+test_estado_faltante_no_usa_default (__main__.Tests.test_estado_faltante_no_usa_default) ... ok
+test_formato_tres_canales_por_mapa_no_alias (__main__.Tests.test_formato_tres_canales_por_mapa_no_alias) ... ok
+test_grafo_global_escritor_unico (__main__.Tests.test_grafo_global_escritor_unico) ... ok
+test_guardar_receta_declarativa_archiva_y_rechaza_codigo (__main__.Tests.test_guardar_receta_declarativa_archiva_y_rechaza_codigo) ... ok
+test_hueco_fuera_es_falta_no_recorte_inventado (__main__.Tests.test_hueco_fuera_es_falta_no_recorte_inventado) ... ok
+test_huecos_solapados_union (__main__.Tests.test_huecos_solapados_union) ... ok
+test_incompatibilidad_funcional_no_basta_color (__main__.Tests.test_incompatibilidad_funcional_no_basta_color) ... ok
+test_lamparas_sin_dependencias (__main__.Tests.test_lamparas_sin_dependencias) ... ok
+test_nombre_nuevo_receta_similar_y_escala (__main__.Tests.test_nombre_nuevo_receta_similar_y_escala) ... ok
+test_off_argon_impide_llamada_y_ledger (__main__.Tests.test_off_argon_impide_llamada_y_ledger) ... ok
+test_off_star_sin_prueba_cpu_bloquea (__main__.Tests.test_off_star_sin_prueba_cpu_bloquea) ... ok
+test_pieza_movil_y_marco_faltantes_identificados (__main__.Tests.test_pieza_movil_y_marco_faltantes_identificados) ... ok
+test_presencia_no_convierte_booleano_en_float (__main__.Tests.test_presencia_no_convierte_booleano_en_float) ... ok
+test_presencia_reaparicion_un_solo_escritor (__main__.Tests.test_presencia_reaparicion_un_solo_escritor) ... ok
+test_receta_exacta_primero (__main__.Tests.test_receta_exacta_primero) ... ok
+test_sin_ok_no_gasta_aunque_no_off (__main__.Tests.test_sin_ok_no_gasta_aunque_no_off) ... ok
+test_sinonimo_ingles_otro_nombre (__main__.Tests.test_sinonimo_ingles_otro_nombre) ... ok
+test_umbral_rechaza_menos_malo (__main__.Tests.test_umbral_rechaza_menos_malo) ... ok
+test_varios_huecos_sin_pared_prefijada (__main__.Tests.test_varios_huecos_sin_pared_prefijada) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.099s
+
+OK
+
+=== test_t314.py ===
+test_01_default_activo_ledger_previo_y_cache (__main__.Pruebas.test_01_default_activo_ledger_previo_y_cache) ... ok
+test_02_off_no_llamada (__main__.Pruebas.test_02_off_no_llamada) ... ok
+test_03_caja_no_guardada (__main__.Pruebas.test_03_caja_no_guardada) ... ok
+test_04_medidas_adn (__main__.Pruebas.test_04_medidas_adn) ... ok
+test_05_no_fiar_validated (__main__.Pruebas.test_05_no_fiar_validated) ... ok
+test_06_cache_tamper (__main__.Pruebas.test_06_cache_tamper) ... ok
+test_07_cap_total_y_reservas (__main__.Pruebas.test_07_cap_total_y_reservas) ... ok
+test_08_cargo_no_supera_reserva (__main__.Pruebas.test_08_cargo_no_supera_reserva) ... ok
+test_09_error_provider_falta (__main__.Pruebas.test_09_error_provider_falta) ... ok
+test_10_malla_abierta (__main__.Pruebas.test_10_malla_abierta) ... ok
+test_11_base_real_y_procedencia (__main__.Pruebas.test_11_base_real_y_procedencia) ... ok
+test_12_colores_texto_y_cabello_no_encabezado (__main__.Pruebas.test_12_colores_texto_y_cabello_no_encabezado) ... ok
+test_13_nombres_nuevos_no_cambian_formas (__main__.Pruebas.test_13_nombres_nuevos_no_cambian_formas) ... ok
+test_14_gafas_negadas (__main__.Pruebas.test_14_gafas_negadas) ... ok
+test_15_gpu_slot_off (__main__.Pruebas.test_15_gpu_slot_off) ... ok
+test_16_altura_ausente_no_inventada (__main__.Pruebas.test_16_altura_ausente_no_inventada) ... ok
+test_17_registro_bvh_campos_y_reuso (__main__.Pruebas.test_17_registro_bvh_campos_y_reuso) ... ok
+test_18_origenes_comunes (__main__.Pruebas.test_18_origenes_comunes) ... ok
+test_19_fallo_tecnico_no_se_guarda (__main__.Pruebas.test_19_fallo_tecnico_no_se_guarda) ... ok
+test_20_sin_metricas_no_sello (__main__.Pruebas.test_20_sin_metricas_no_sello) ... ok
+test_21_cache_movimiento_alterado (__main__.Pruebas.test_21_cache_movimiento_alterado) ... ok
+test_22_perfil_diferente_no_reusa (__main__.Pruebas.test_22_perfil_diferente_no_reusa) ... ok
+test_23_perfiles_genericos (__main__.Pruebas.test_23_perfiles_genericos) ... ok
+test_24_broadphase_no_falso_positivo (__main__.Pruebas.test_24_broadphase_no_falso_positivo) ... ok
+test_25_enterizo_cubre_brazos_piernas (__main__.Pruebas.test_25_enterizo_cubre_brazos_piernas) ... ok
+test_26_orden_entorno_luces_sin_alias (__main__.Pruebas.test_26_orden_entorno_luces_sin_alias) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.532s
+
+OK
+
+=== test_t316.py ===
+test_01_tarifa_existente (__main__.Tests.test_01_tarifa_existente) ... FAIL
+test_02_sin_tramo_bloquea (__main__.Tests.test_02_sin_tramo_bloquea) ... ok
+test_03_stream_1800_y_limite_real (__main__.Tests.test_03_stream_1800_y_limite_real) ... ok
+test_04_seco_reserva_antes_y_libera (__main__.Tests.test_04_seco_reserva_antes_y_libera) ... ok
+test_05_seco_bloquea_antes_de_cliente (__main__.Tests.test_05_seco_bloquea_antes_de_cliente) ... ok
+test_06_off_bloquea_aun_habilitado (__main__.Tests.test_06_off_bloquea_aun_habilitado) ... ok
+test_07_reserva_insuficiente_antes_cliente (__main__.Tests.test_07_reserva_insuficiente_antes_cliente) ... ok
+test_08_stream_mock_descarta_thought_cobra_tokens (__main__.Tests.test_08_stream_mock_descarta_thought_cobra_tokens) ... FAIL
+test_09_tope_total_3 (__main__.Tests.test_09_tope_total_3) ... ok
+test_10_anatomia_no_certifica_datos_inferidos (__main__.Tests.test_10_anatomia_no_certifica_datos_inferidos) ... ok
+
+======================================================================
+FAIL: test_01_tarifa_existente (__main__.Tests.test_01_tarifa_existente)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/myia-motor-v9/avance04_20261107/MOTOR_UNICO_20261107/pruebas/test_t316.py", line 12, in test_01_tarifa_existente
+    t=tarifa(self.r,self.cfg,'2026-11-07');self.assertEqual((t['entrada'],t['salida']),(2,10));t=tarifa(self.r,self.cfg,'2026-12-01');self.assertEqual((t['entrada'],t['salida']),(4,20))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (0.5, 3.0) != (2, 10)
+
+First differing element 0:
+0.5
+2
+
+- (0.5, 3.0)
++ (2, 10)
+
+======================================================================
+FAIL: test_08_stream_mock_descarta_thought_cobra_tokens (__main__.Tests.test_08_stream_mock_descarta_thought_cobra_tokens)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/myia-motor-v9/avance04_20261107/MOTOR_UNICO_20261107/pruebas/test_t316.py", line 28, in test_08_stream_mock_descarta_thought_cobra_tokens
+    t=Transport(self.r,lambda:NS(models=NS(generate_content_stream=stream)));q=t.quote(self.q);ref=Ledger(self.r/'evidencia/ledger.json').before(q['reserve_usd'],'test',mock=True);out=t(self.q,ref);self.assertEqual(out['source'],'fixture');self.assertAlmostEqual(out['_usage_usd'],.00029);self.assertEqual(seen,[65536])
+                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 8.2e-05 != 0.00029 within 7 places (0.00020800000000000001 difference)
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.009s
+
+FAILED (failures=2)
+
+=== test_t317.py ===
+test01_dry_no_provider (__main__.Tests.test01_dry_no_provider) ... ok
+test02_parallel_and_cache (__main__.Tests.test02_parallel_and_cache) ... ok
+test03_repair_only_failed (__main__.Tests.test03_repair_only_failed) ... ok
+test04_no_progress_falta (__main__.Tests.test04_no_progress_falta) ... ok
+test05_mock_real_root_rejected (__main__.Tests.test05_mock_real_root_rejected) ... ok
+test06_single_budget_not_fixed_three (__main__.Tests.test06_single_budget_not_fixed_three) ... ok
+test07_zero_budget_blocks (__main__.Tests.test07_zero_budget_blocks) ... ok
+test08_group_contracts (__main__.Tests.test08_group_contracts) ... ok
+test09_recipe_dimensions_rejected (__main__.Tests.test09_recipe_dimensions_rejected) ... ok
+test10_unfounded_certification_rejected (__main__.Tests.test10_unfounded_certification_rejected) ... ok
+test11_unknown_ids_rejected (__main__.Tests.test11_unknown_ids_rejected) ... ok
+test12_saturation_gate (__main__.Tests.test12_saturation_gate) ... /opt/myia-motor-v9/avance04_20261107/MOTOR_UNICO_20261107/motor/exposicion_auto.py:9: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  im=Image.open(file).convert('RGB');pixels=list(im.getdata());n=len(pixels);rows.append({'image':str(file),'pixels':n,'saturated_any':sum(max(p)>=threshold for p in pixels),'white_all':sum(min(p)>=threshold for p in pixels)})
+ok
+test13_quote_no_network (__main__.Tests.test13_quote_no_network) ... ok
+test14_transport_failure_repaired (__main__.Tests.test14_transport_failure_repaired) ... ok
+test15_off_preserved (__main__.Tests.test15_off_preserved) ... ok
+test16_background_cache_bridge (__main__.Tests.test16_background_cache_bridge) ... ok
+test17_ledger_decimal_sin_residuo_negativo (__main__.Tests.test17_ledger_decimal_sin_residuo_negativo) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.300s
+
+OK
+
+=== test_traductor_adn.py ===
+test_cada_hecho_tiene_geometria_citada (__main__.Tests.test_cada_hecho_tiene_geometria_citada) ... ok
+test_cara_malla_cerrada_no_capsula (__main__.Tests.test_cara_malla_cerrada_no_capsula) ... ok
+test_cobertura_animal_no_exige_ropa_humana (__main__.Tests.test_cobertura_animal_no_exige_ropa_humana) ... ok
+test_cota_malformada_B_no_crash_A (__main__.Tests.test_cota_malformada_B_no_crash_A) ... ok
+test_cotas_ausentes_son_B_no_adn_inexistente (__main__.Tests.test_cotas_ausentes_son_B_no_adn_inexistente) ... ok
+test_cotas_cm_y_hex_se_conservan (__main__.Tests.test_cotas_cm_y_hex_se_conservan) ... ok
+test_entrada_unica_inyecta_malla_y_material_no_se_saltea (__main__.Tests.test_entrada_unica_inyecta_malla_y_material_no_se_saltea) ... ok
+test_material_ausente_B_no_crash (__main__.Tests.test_material_ausente_B_no_crash) ... ok
+test_no_marcar_final_si_falta_un_rasgo (__main__.Tests.test_no_marcar_final_si_falta_un_rasgo) ... ok
+test_no_omitir_expresiones_ni_reglas_de_giro (__main__.Tests.test_no_omitir_expresiones_ni_reglas_de_giro) ... ok
+test_nombres_nuevos_mismas_cotas_misma_malla (__main__.Tests.test_nombres_nuevos_mismas_cotas_misma_malla) ... ok
+test_off_traductor_produccion_bloquea (__main__.Tests.test_off_traductor_produccion_bloquea) ... ok
+test_perfil_desordenado_bloquea (__main__.Tests.test_perfil_desordenado_bloquea) ... ok
+test_radio_menor_que_grosor_bloquea (__main__.Tests.test_radio_menor_que_grosor_bloquea) ... ok
+test_ropa_grosor_aberturas_manifold (__main__.Tests.test_ropa_grosor_aberturas_manifold) ... ok
+test_vinculos_o_color_malformados_son_B_no_crash (__main__.Tests.test_vinculos_o_color_malformados_son_B_no_crash) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.046s
+
+OK

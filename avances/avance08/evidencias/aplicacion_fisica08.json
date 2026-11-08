@@ -1,0 +1,13 @@
+{
+  "candidate_backup": "/opt/myia-motor-v9/avance08_20261107/esc1_antes_fisica08",
+  "source_2b_complete": true,
+  "physics_proposed_by_argon": true,
+  "sanity_passed": true,
+  "fixed_rules_unchanged": true,
+  "no_T317_values_imported": true,
+  "native_measured_left_shoulder_frame": true,
+  "external_ik_contacts": 0,
+  "explicit_rigid_attachment": true,
+  "movements_admitted_for_cpu_trial": 15,
+  "scene_physics_approved": false
+}

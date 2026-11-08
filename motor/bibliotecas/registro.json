@@ -1,0 +1,233 @@
+{
+  "files": [
+    {
+      "path": "bibliotecas/star/motor_puntos/src/video_o114_blender.py",
+      "sha256": "1552c74bbfd6d548014942d06022e806ffc964a8b1cdfbd353835235fd2c70b8",
+      "bytes": 93607,
+      "role": "fuente Star; no ejecutar script superior histórico",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/motor_puntos/src/convertir_v3_a_entrada.py",
+      "sha256": "adbdbab38f4972489390b608797e57dde56beeab739e4abfe1d99452243b121c",
+      "bytes": 13906,
+      "role": "fuente Star; no ejecutar script superior histórico",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/motor_puntos/src/_ik_block.py",
+      "sha256": "17b389d73d7ad80be67a1b8dfe50d46e8b8a0da2082801ec1b3111048fe5ad1b",
+      "bytes": 5803,
+      "role": "fuente Star; no ejecutar script superior histórico",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/motor_puntos/src/escenario/escenario_parametrico.py",
+      "sha256": "58cfaf4bafc8425a6594533d734d7f29933735b86a437912ffb4008a0c7521b0",
+      "bytes": 16362,
+      "role": "fuente Star; no ejecutar script superior histórico",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/motor_puntos/src/maniqui_huesos.py",
+      "sha256": "a3ef14620066028558cdab17ff0ceda9c57079daa033a46ab64b7db246445e8a",
+      "bytes": 12303,
+      "role": "fuente Star; no ejecutar script superior histórico",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/catalogos/archivo/20261107_102336_239716/kael_puntos_cuerpo.json",
+      "sha256": "9bf5b33d3b7fde8e11b018bf408a49376211ce8211bc2832e94d3175ffe5408f",
+      "bytes": 2359,
+      "role": "original archivado; ejemplo, no perfil ligado a personaje",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/catalogos/archivo/20261107_102336_240622/kael_articulaciones.json",
+      "sha256": "4b8c52bd6d15ad3556208418c3b81ea1b32e40b9b15595bcec351519d7d900c5",
+      "bytes": 24604,
+      "role": "original archivado; ejemplo, no perfil ligado a personaje",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/catalogos/archivo/20261107_102336_241099/catalogo_puntos_kael.json",
+      "sha256": "56f951039b3ce0102250b54e3b8e4de4b3bff45a620efbe557b9b219a94ee7a6",
+      "bytes": 1806,
+      "role": "original archivado; ejemplo, no perfil ligado a personaje",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/catalogos/lexico_acciones_a_targets.json",
+      "sha256": "c867d3f7fd912b63c05b38109e62f960f28632c8b12dd0be503416545c37921c",
+      "bytes": 3713,
+      "role": "fuente Star; no ejecutar script superior histórico",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/motor_puntos/src/poses_o114/poses_basicas.json",
+      "sha256": "aea0e81b9bf7420e3cf4cacb2508dd55e733b52b38ff9e3f755f09431ca28bc7",
+      "bytes": 6059,
+      "role": "fuente Star; no ejecutar script superior histórico",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/motor_puntos/src/poses_o114/poses_esc6_locales.json",
+      "sha256": "abb3c0b15ec33adcbfb8832c4d6ff6aec24322b0078ff10a5f637b7b76c17b56",
+      "bytes": 26558,
+      "role": "fuente Star; no ejecutar script superior histórico",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/mocap_kimodo.py",
+      "sha256": "91fbd7a99dfca8cf8eb6826cc0b629acf9b0338ce06549e1912d4cdb653cf256",
+      "bytes": 9938,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/catalogo_poses/catalogo_poses.json",
+      "sha256": "a738cbb1463d168b725c04e88b533d252dcf562a1e8b416aeb8248eeec13d5d2",
+      "bytes": 58544,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/catalogo_perfiles_movimiento/catalogo_perfiles_movimiento.json",
+      "sha256": "291fc10412dbc56a14ed3ede9ec15272dede3292333183a676a94463c79724cd",
+      "bytes": 18682,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/mocap/pulir_bvh_blender.py",
+      "sha256": "eb756bd82d0b97f29f2549441de305291382f3916b1c4021e9b9012c28e8c000",
+      "bytes": 6957,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/mocap/pulir_mocap.py",
+      "sha256": "aced520405c1a9a57f2bf8f023001c6e52d7897f761614eea7b21e4bd2ebfc45",
+      "bytes": 25055,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/mocap/bvh_retarget.py",
+      "sha256": "0b96c3ca4d178cf1b5cbfd8253755110735d7795c450b5b6b43ce8cc088a07dc",
+      "bytes": 8835,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/mocap/pulir_mocap_scipy_opt.py",
+      "sha256": "2088d89c82d70652538ba10a45f02e36d41a352932d0e8a47010862b397e33b9",
+      "bytes": 11980,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/mocap/cmu_indice.txt",
+      "sha256": "b611669b7e8e4cb653cbda3b47ebc42c4151d019e4d28f2ed3e052e4e240ffbd",
+      "bytes": 68400,
+      "role": "indice_cmu",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/mocap/kimodo_lib/rt_txt01_v1.json",
+      "sha256": "8b2b74fefa837875162d16cc022ce6c47895eb68e807d7533e7499fdd78efaa8",
+      "bytes": 14814,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/mocap/kimodo_lib/rt_txt01_v2_scipy.json",
+      "sha256": "2cd52f36477f82c1942ec9a3f3c23a8e23e4241a3289ce3fdaa79fdeb242b24a",
+      "bytes": 15117,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/kimodo/mocap/kimodo_lib/rt_txt01_v1_ang8.json",
+      "sha256": "006ee0ce69f6df4a0e441bb7a5adcf1ec79c4b0469b5bb127bbe7f3982596d9b",
+      "bytes": 14980,
+      "role": "fuente Kimodo/catalogo/pulida",
+      "approval_status": "SIN_VERIFICAR",
+      "license_status": "SIN_VERIFICAR",
+      "runtime_enabled": false
+    },
+    {
+      "path": "bibliotecas/star/catalogos/humanoide_adulto_puntos_cuerpo.json",
+      "sha256": "90f443d93a5f686d9b18ef595395f0202cd62c0f3b723925e30a95ad572c3497",
+      "bytes": 3316,
+      "role": "perfil anatómico genérico; requiere mapa de huesos explícito",
+      "approval_status": "VERIFICADA_ESTRUCTURA",
+      "license_status": "INFORMATIVA",
+      "runtime_enabled": true
+    },
+    {
+      "path": "bibliotecas/star/catalogos/humanoide_adulto_articulaciones.json",
+      "sha256": "682e90b91cfcd03d8151e60b20c615b61b7dc57f97f2b6f8ef6b55d5846d73eb",
+      "bytes": 25846,
+      "role": "perfil anatómico genérico; requiere mapa de huesos explícito",
+      "approval_status": "VERIFICADA_ESTRUCTURA",
+      "license_status": "INFORMATIVA",
+      "runtime_enabled": true
+    },
+    {
+      "path": "bibliotecas/star/catalogos/humanoide_adulto_puntos_y_controles.json",
+      "sha256": "4ae48b04cb0e18b4d3fd60a971cfdb47f35ccd5795f0c361357783b9f8c1a3c6",
+      "bytes": 3231,
+      "role": "perfil anatómico genérico; requiere mapa de huesos explícito",
+      "approval_status": "VERIFICADA_ESTRUCTURA",
+      "license_status": "INFORMATIVA",
+      "runtime_enabled": true
+    }
+  ],
+  "restricted_not_enabled": [
+    "poses_v6"
+  ],
+  "note": "Existencia/hash no prueba aprobación artística ni licencia comercial. Fuentes históricas no son backends universales ejecutables."
+}

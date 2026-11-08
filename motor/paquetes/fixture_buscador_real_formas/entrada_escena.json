@@ -1,0 +1,3452 @@
+{
+  "schema_version": "1.0",
+  "job_id": "FIXTURE_NO_GUARDIANES",
+  "scene": "canal_nebulosa_escena_rho",
+  "clock": {
+    "fps": 8,
+    "duration_s": 2,
+    "rounding": "half_up"
+  },
+  "coordinates": {
+    "unit": "m",
+    "up": "Z",
+    "forward": "-Y",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "source": "fixture_sintetico.json"
+  },
+  "entities": [
+    {
+      "id": "habitante_orion",
+      "type": "CHARACTER",
+      "anatomy": "avian",
+      "rig": {
+        "bones": [
+          {
+            "id": "root",
+            "head": [
+              0,
+              0,
+              0.4
+            ],
+            "tail": [
+              0,
+              0,
+              0.55
+            ],
+            "parent": null,
+            "role": "root",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "neck",
+            "head": [
+              0,
+              0,
+              0.55
+            ],
+            "tail": [
+              0,
+              0,
+              0.78
+            ],
+            "parent": "root",
+            "role": "neck",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "head",
+            "head": [
+              0,
+              0,
+              0.78
+            ],
+            "tail": [
+              0,
+              0,
+              1.0
+            ],
+            "parent": "neck",
+            "role": "head",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "beak",
+            "head": [
+              0,
+              -0.1,
+              0.9
+            ],
+            "tail": [
+              0,
+              -0.25,
+              0.9
+            ],
+            "parent": "head",
+            "role": "beak",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "tail",
+            "head": [
+              0,
+              0.12,
+              0.5
+            ],
+            "tail": [
+              0,
+              0.4,
+              0.55
+            ],
+            "parent": "root",
+            "role": "tail",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "wing.L",
+            "head": [
+              -0.12,
+              0,
+              0.65
+            ],
+            "tail": [
+              -0.4,
+              0,
+              0.55
+            ],
+            "parent": "root",
+            "role": "wing.L",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "leg.L",
+            "head": [
+              -0.12,
+              0,
+              0.4
+            ],
+            "tail": [
+              -0.12,
+              0,
+              0.14
+            ],
+            "parent": "root",
+            "role": "leg.L",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "foot.L",
+            "head": [
+              -0.12,
+              0,
+              0.14
+            ],
+            "tail": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "parent": "leg.L",
+            "role": "foot.L",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.front1",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.18,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.front1",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.front2",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.12,
+              0.29000000000000004,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.front2",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.front3",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.06,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.front3",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.L.back",
+            "head": [
+              -0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              -0.12,
+              0.03,
+              0.08
+            ],
+            "parent": "foot.L",
+            "role": "toe.L.back",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "wing.R",
+            "head": [
+              0.12,
+              0,
+              0.65
+            ],
+            "tail": [
+              0.4,
+              0,
+              0.55
+            ],
+            "parent": "root",
+            "role": "wing.R",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "leg.R",
+            "head": [
+              0.12,
+              0,
+              0.4
+            ],
+            "tail": [
+              0.12,
+              0,
+              0.14
+            ],
+            "parent": "root",
+            "role": "leg.R",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "foot.R",
+            "head": [
+              0.12,
+              0,
+              0.14
+            ],
+            "tail": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "parent": "leg.R",
+            "role": "foot.R",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.front1",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.06,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.front1",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.front2",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.12,
+              0.29000000000000004,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.front2",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.front3",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.18,
+              0.27,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.front3",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          },
+          {
+            "id": "toe.R.back",
+            "head": [
+              0.12,
+              0.15,
+              0.08
+            ],
+            "tail": [
+              0.12,
+              0.03,
+              0.08
+            ],
+            "parent": "foot.R",
+            "role": "toe.R.back",
+            "limits_deg": [
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ],
+              [
+                -90,
+                90
+              ]
+            ]
+          }
+        ]
+      },
+      "appearance": {
+        "geometry": {
+          "parts": [
+            {
+              "id": "bird_body",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.4,
+                0.35,
+                0.55
+              ],
+              "position_m": [
+                0,
+                0,
+                0.53
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "body"
+            },
+            {
+              "id": "bird_head",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.35,
+                0.35,
+                0.35
+              ],
+              "position_m": [
+                0,
+                0,
+                0.9
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "head"
+            },
+            {
+              "id": "eye_l",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.08,
+                0.045,
+                0.08
+              ],
+              "position_m": [
+                -0.09,
+                -0.155,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "eye"
+            },
+            {
+              "id": "eye_r",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.08,
+                0.045,
+                0.08
+              ],
+              "position_m": [
+                0.09,
+                -0.155,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "eye"
+            },
+            {
+              "id": "pupil_l",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.035,
+                0.025,
+                0.035
+              ],
+              "position_m": [
+                -0.09,
+                -0.18,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.03,
+                  0.015,
+                  0.01,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "pupil"
+            },
+            {
+              "id": "pupil_r",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.035,
+                0.025,
+                0.035
+              ],
+              "position_m": [
+                0.09,
+                -0.18,
+                0.94
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.03,
+                  0.015,
+                  0.01,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "pupil"
+            },
+            {
+              "id": "scarf",
+              "shape": "TORUS",
+              "dimensions_m": [
+                1,
+                1,
+                1
+              ],
+              "position_m": [
+                0,
+                0,
+                0.75
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.5,
+                  0.02,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "clothes",
+              "major_radius_m": 0.16,
+              "minor_radius_m": 0.025
+            },
+            {
+              "id": "wingmesh_L",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.12,
+                0.1,
+                0.35
+              ],
+              "position_m": [
+                0,
+                -0.15,
+                0
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "wing",
+              "bone": "wing.L"
+            },
+            {
+              "id": "wingmesh_R",
+              "shape": "ELLIPSOID",
+              "dimensions_m": [
+                0.12,
+                0.1,
+                0.35
+              ],
+              "position_m": [
+                0,
+                -0.15,
+                0
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "wing",
+              "bone": "wing.R"
+            },
+            {
+              "id": "bill",
+              "shape": "CONE",
+              "dimensions_m": [
+                0.12,
+                0.12,
+                0.2
+              ],
+              "position_m": [
+                0,
+                -0.2,
+                0.9
+              ],
+              "rotation_deg": [
+                90,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  1,
+                  0.2,
+                  0.02,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "beak",
+              "tip_ratio": 0
+            }
+          ],
+          "required_roles": [
+            "body",
+            "head",
+            "eye",
+            "pupil",
+            "clothes",
+            "beak",
+            "wing"
+          ],
+          "source": "fixture_sintetico.json",
+          "final_appearance_ref": "SOLO_FIXTURE_SINTETICO_NO_APROBACION_ARTISTICA"
+        },
+        "rostros_finales": {
+          "asset": "fixture_sintetico.json",
+          "source": "fixture_sintetico.json"
+        },
+        "ropa_final": {
+          "asset": "fixture_sintetico.json",
+          "source": "fixture_sintetico.json"
+        }
+      },
+      "points": [
+        {
+          "id": "centre",
+          "position_m": [
+            0,
+            0,
+            0.6
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "ground_l",
+          "position_m": [
+            -0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "ground_r",
+          "position_m": [
+            0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_a",
+          "position_m": [
+            -0.3,
+            -0.2,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_b",
+          "position_m": [
+            0.3,
+            -0.2,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_c",
+          "position_m": [
+            0.3,
+            0.35,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_d",
+          "position_m": [
+            -0.3,
+            0.35,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        }
+      ],
+      "physics": {
+        "bone_mass_kg": {
+          "root": 1,
+          "neck": 1,
+          "head": 1,
+          "beak": 1,
+          "tail": 1,
+          "wing.L": 1,
+          "leg.L": 1,
+          "foot.L": 1,
+          "toe.L.front1": 1,
+          "toe.L.front2": 1,
+          "toe.L.front3": 1,
+          "toe.L.back": 1,
+          "wing.R": 1,
+          "leg.R": 1,
+          "foot.R": 1,
+          "toe.R.front1": 1,
+          "toe.R.front2": 1,
+          "toe.R.front3": 1,
+          "toe.R.back": 1
+        },
+        "balance_margin_m": 0.04,
+        "support_intervals": [
+          {
+            "t0": 0,
+            "t1": 2,
+            "mode": "supported",
+            "support_points": [
+              "plataforma_tau.support_a",
+              "plataforma_tau.support_b",
+              "plataforma_tau.support_c",
+              "plataforma_tau.support_d"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "requirements": {
+    "entity_ids": [
+      "habitante_orion"
+    ],
+    "object_refs": []
+  },
+  "environment": {
+    "mode": "geometry",
+    "geometry": [
+      {
+        "id": "superficie_lambda",
+        "shape": "BOX",
+        "dimensions_m": [
+          5,
+          5,
+          0.1
+        ],
+        "position_m": [
+          0,
+          0,
+          -0.05
+        ],
+        "rotation_deg": [
+          0,
+          0,
+          0
+        ],
+        "resolution": 12,
+        "material": {
+          "rgba": [
+            0.25,
+            0.3,
+            0.35,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.45
+        },
+        "source": "fixture_sintetico.json",
+        "role": "geometry"
+      },
+      {
+        "id": "mueble_nebuloso",
+        "shape": "OBJECT_SEARCH",
+        "dimensions_m": [
+          0.8,
+          0.5,
+          0.55
+        ],
+        "position_m": [
+          0,
+          0.8,
+          0
+        ],
+        "rotation_deg": [
+          0,
+          0,
+          17
+        ],
+        "ancla_z": "base",
+        "material": {
+          "rgba": [
+            0.12,
+            0.35,
+            0.55,
+            1
+          ],
+          "roughness": 0.35,
+          "metallic": 0.1,
+          "source": "fixture de otro universo, no Guardianes"
+        },
+        "materials_catalog": {
+          "_nota": "Material de RENDER por fórmula (PBR procedural) v2. Incluye light_energy / fill defaults documentados en ESQUEMA.",
+          "_defaults_exposicion": {
+            "world_color": [
+              0.06,
+              0.07,
+              0.1
+            ],
+            "world_strength": 0.42,
+            "view_exposure": 0.85,
+            "view_gamma": 1.0,
+            "fill_energy_plafon_factor": 1.0,
+            "oscuridad_legible": {
+              "world_strength_min": 0.22,
+              "monitor_energy_min_factor": 0.55,
+              "nota": "Con plafón off el mundo no baja de world_strength_min; monitores mantienen factor mínimo para legibilidad de formas."
+            },
+            "nota_v2": "Exposición genérica para moldes legibles sin quemar pantallas. Ajustable por datos, no por escena.",
+            "view_transform": "Standard",
+            "view_look": "None"
+          },
+          "plano": {
+            "base": [
+              0.48,
+              0.34,
+              0.2
+            ],
+            "rough": 0.48,
+            "nombre": "madera_laminada_o_suelo"
+          },
+          "caja": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "bbox": {
+            "base": [
+              0.55,
+              0.55,
+              0.58
+            ],
+            "rough": 0.6,
+            "nombre": "bloque_neutro"
+          },
+          "cilindro": {
+            "base": [
+              0.35,
+              0.36,
+              0.38
+            ],
+            "rough": 0.4,
+            "metal": 0.5,
+            "nombre": "metal"
+          },
+          "punto": {
+            "base": [
+              1,
+              0,
+              1
+            ],
+            "rough": 1,
+            "nombre": "marcador"
+          },
+          "muros_caja_con_huecos": {
+            "base": [
+              0.82,
+              0.8,
+              0.76
+            ],
+            "rough": 0.85,
+            "nombre": "yeso"
+          },
+          "puerta_bisagra": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "ventana_marco_vidrio": {
+            "base": [
+              0.28,
+              0.18,
+              0.1
+            ],
+            "rough": 0.45,
+            "nombre": "marco_madera"
+          },
+          "cortina_enrollable": {
+            "base": [
+              0.45,
+              0.4,
+              0.48
+            ],
+            "rough": 0.8,
+            "nombre": "tela"
+          },
+          "escritorio_patas": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.48,
+            "nombre": "madera"
+          },
+          "silla_giratoria_ergonomica": {
+            "base": [
+              0.22,
+              0.28,
+              0.38
+            ],
+            "rough": 0.75,
+            "nombre": "tela_oficina"
+          },
+          "silla_simple": {
+            "base": [
+              0.35,
+              0.3,
+              0.25
+            ],
+            "rough": 0.7,
+            "nombre": "silla_terraza"
+          },
+          "mesa_simple": {
+            "base": [
+              0.4,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "cama_marco_colchon": {
+            "base": [
+              0.4,
+              0.3,
+              0.22
+            ],
+            "rough": 0.55,
+            "nombre": "madera_cama"
+          },
+          "almohada_simple": {
+            "base": [
+              0.88,
+              0.86,
+              0.82
+            ],
+            "rough": 0.9,
+            "nombre": "tela_almohada"
+          },
+          "manta_simple": {
+            "base": [
+              0.35,
+              0.42,
+              0.55
+            ],
+            "rough": 0.85,
+            "nombre": "tela_manta"
+          },
+          "armario_2puertas": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "estanteria_abierta": {
+            "base": [
+              0.42,
+              0.28,
+              0.16
+            ],
+            "rough": 0.5,
+            "nombre": "madera"
+          },
+          "monitor_pantalla": {
+            "base": [
+              0.12,
+              0.12,
+              0.13
+            ],
+            "rough": 0.35,
+            "nombre": "plastico",
+            "pantalla_emit": [
+              0.08,
+              0.75,
+              0.95
+            ],
+            "pantalla_energy": 3.2,
+            "area_light_energy": 10.0
+          },
+          "torre_pc": {
+            "base": [
+              0.15,
+              0.15,
+              0.16
+            ],
+            "rough": 0.4,
+            "nombre": "plastico"
+          },
+          "teclado_simple": {
+            "base": [
+              0.15,
+              0.15,
+              0.16
+            ],
+            "rough": 0.4,
+            "nombre": "plastico"
+          },
+          "cables_haz": {
+            "base": [
+              0.18,
+              0.18,
+              0.2
+            ],
+            "rough": 0.55,
+            "nombre": "cable",
+            "emit_on": [
+              0.05,
+              0.85,
+              1.0
+            ],
+            "point_light_energy": 10.0,
+            "emit": [
+              0.05,
+              0.9,
+              1.0
+            ],
+            "emit_strength": 2.0
+          },
+          "lampara_arquitecto": {
+            "base": [
+              0.35,
+              0.36,
+              0.38
+            ],
+            "rough": 0.35,
+            "metal": 0.7,
+            "nombre": "metal",
+            "light_energy": 8.0
+          },
+          "columna_estructural": {
+            "base": [
+              0.72,
+              0.7,
+              0.66
+            ],
+            "rough": 0.8,
+            "nombre": "hormigon"
+          },
+          "papelera_cilindro": {
+            "base": [
+              0.4,
+              0.42,
+              0.45
+            ],
+            "rough": 0.35,
+            "metal": 0.7,
+            "nombre": "metal"
+          },
+          "perchero_pie": {
+            "base": [
+              0.35,
+              0.36,
+              0.38
+            ],
+            "rough": 0.4,
+            "metal": 0.6,
+            "nombre": "metal"
+          },
+          "plafon_area": {
+            "base": [
+              0.95,
+              0.9,
+              0.75
+            ],
+            "rough": 0.4,
+            "emit": [
+              1.0,
+              0.9,
+              0.7
+            ],
+            "emit_strength": 1.8,
+            "nombre": "plafon_calido",
+            "light_energy": 95.0,
+            "light_color": [
+              1.0,
+              0.92,
+              0.75
+            ]
+          },
+          "bloque_edificio": {
+            "base": [
+              0.55,
+              0.52,
+              0.48
+            ],
+            "rough": 0.7,
+            "nombre": "fachada"
+          },
+          "muro_plano": {
+            "base": [
+              0.62,
+              0.6,
+              0.56
+            ],
+            "rough": 0.75,
+            "nombre": "muro_exterior"
+          },
+          "arbol_simple": {
+            "base": [
+              0.2,
+              0.35,
+              0.15
+            ],
+            "rough": 0.85,
+            "nombre": "follaje"
+          },
+          "rack_servidores": {
+            "base": [
+              0.15,
+              0.18,
+              0.22
+            ],
+            "rough": 0.4,
+            "metal": 0.6,
+            "nombre": "rack",
+            "emit": [
+              0.1,
+              0.4,
+              1.0
+            ],
+            "emit_strength": 1.5
+          },
+          "farola_poste": {
+            "base": [
+              0.25,
+              0.25,
+              0.28
+            ],
+            "rough": 0.4,
+            "metal": 0.7,
+            "nombre": "farola",
+            "light_energy": 40.0,
+            "light_color": [
+              1.0,
+              0.92,
+              0.7
+            ]
+          },
+          "banco_calle": {
+            "base": [
+              0.35,
+              0.28,
+              0.18
+            ],
+            "rough": 0.6,
+            "nombre": "banco"
+          },
+          "auto_simple": {
+            "base": [
+              0.25,
+              0.28,
+              0.35
+            ],
+            "rough": 0.35,
+            "metal": 0.4,
+            "nombre": "carroceria"
+          },
+          "papelera_calle": {
+            "base": [
+              0.3,
+              0.55,
+              0.35
+            ],
+            "rough": 0.5,
+            "nombre": "papelera_verde"
+          },
+          "letrero_calle": {
+            "base": [
+              0.7,
+              0.7,
+              0.72
+            ],
+            "rough": 0.5,
+            "nombre": "letrero"
+          },
+          "semaforo_calle": {
+            "base": [
+              0.15,
+              0.15,
+              0.16
+            ],
+            "rough": 0.4,
+            "metal": 0.6,
+            "nombre": "semaforo"
+          },
+          "bolardo_calle": {
+            "base": [
+              0.55,
+              0.5,
+              0.35
+            ],
+            "rough": 0.5,
+            "metal": 0.3,
+            "nombre": "bolardo"
+          },
+          "hidrante_calle": {
+            "base": [
+              0.7,
+              0.12,
+              0.1
+            ],
+            "rough": 0.45,
+            "metal": 0.5,
+            "nombre": "hidrante"
+          },
+          "jardinera_calle": {
+            "base": [
+              0.45,
+              0.35,
+              0.25
+            ],
+            "rough": 0.7,
+            "nombre": "jardinera"
+          },
+          "bicicletero_calle": {
+            "base": [
+              0.4,
+              0.4,
+              0.42
+            ],
+            "rough": 0.4,
+            "metal": 0.8,
+            "nombre": "bicicletero"
+          },
+          "parada_autobus": {
+            "base": [
+              0.5,
+              0.55,
+              0.6
+            ],
+            "rough": 0.5,
+            "nombre": "parada"
+          },
+          "quiosco_calle": {
+            "base": [
+              0.55,
+              0.25,
+              0.2
+            ],
+            "rough": 0.6,
+            "nombre": "quiosco"
+          },
+          "toldo_calle": {
+            "base": [
+              0.65,
+              0.2,
+              0.15
+            ],
+            "rough": 0.8,
+            "nombre": "toldo"
+          }
+        },
+        "source": "fixture sintético t300 + biblioteca Star; no escena real",
+        "points": [],
+        "query": {
+          "id": "mueble_nebuloso",
+          "shape": "rectangular",
+          "use": "laborar",
+          "words": [
+            "meson",
+            "dibujar"
+          ],
+          "dimensions_m": [
+            0.8,
+            0.5,
+            0.55
+          ],
+          "required_features": [
+            "support"
+          ],
+          "source": "ADN fixture otro universo"
+        },
+        "form_catalog": {
+          "recipes": [
+            {
+              "id": "caja",
+              "formula": "caja",
+              "builder": "f_caja",
+              "words": [
+                "caja"
+              ],
+              "uses": [],
+              "shapes": [],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": true,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_caja",
+                "line": 181
+              }
+            },
+            {
+              "id": "bbox",
+              "formula": "bbox",
+              "builder": "f_caja",
+              "words": [
+                "bbox"
+              ],
+              "uses": [],
+              "shapes": [],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": true,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_caja",
+                "line": 181
+              }
+            },
+            {
+              "id": "cilindro",
+              "formula": "cilindro",
+              "builder": "f_cil",
+              "words": [
+                "cilindro"
+              ],
+              "uses": [
+                "componer"
+              ],
+              "shapes": [
+                "cilindrica"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_cil",
+                "line": 187
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "plano",
+              "formula": "plano",
+              "builder": "f_plano",
+              "words": [
+                "plano",
+                "superficie"
+              ],
+              "uses": [
+                "componer"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_plano",
+                "line": 200
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "punto",
+              "formula": "punto",
+              "builder": "f_punto",
+              "words": [
+                "punto"
+              ],
+              "uses": [],
+              "shapes": [],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": true,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_punto",
+                "line": 214
+              }
+            },
+            {
+              "id": "muros_caja_con_huecos",
+              "formula": "muros_caja_con_huecos",
+              "builder": "f_muros",
+              "words": [
+                "muros",
+                "habitacion",
+                "huecos"
+              ],
+              "uses": [
+                "edificar"
+              ],
+              "shapes": [
+                "recinto"
+              ],
+              "features": [
+                "openings"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_muros",
+                "line": 249
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "puerta_bisagra",
+              "formula": "puerta_bisagra",
+              "builder": "f_puerta",
+              "words": [
+                "puerta",
+                "hoja",
+                "bisagra"
+              ],
+              "uses": [
+                "cerrar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [
+                "articulated",
+                "hinge"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_puerta",
+                "line": 327
+              },
+              "piece_parenting": [
+                {
+                  "parent_role": "bisagra",
+                  "child_roles": [
+                    "body",
+                    "panel",
+                    "pomo"
+                  ],
+                  "source": "Corrección de jerarquía de f_puerta; conserva pivot/medidas y crea articulación funcional sobre las piezas reales."
+                }
+              ],
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "ventana_marco_vidrio",
+              "formula": "ventana_marco_vidrio",
+              "builder": "f_ventana",
+              "words": [
+                "ventana",
+                "marco",
+                "vidrio"
+              ],
+              "uses": [
+                "iluminar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [
+                "glass"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_ventana",
+                "line": 344
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "cortina_enrollable",
+              "formula": "cortina_enrollable",
+              "builder": "f_cortina",
+              "words": [
+                "cortina",
+                "persiana"
+              ],
+              "uses": [
+                "cubrir"
+              ],
+              "shapes": [
+                "lamina"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_cortina",
+                "line": 369
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "escritorio_patas",
+              "formula": "escritorio_patas",
+              "builder": "f_escritorio",
+              "words": [
+                "escritorio",
+                "mesa",
+                "dibujar",
+                "estudiar"
+              ],
+              "uses": [
+                "trabajar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_escritorio",
+                "line": 389
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "mesa_simple",
+              "formula": "mesa_simple",
+              "builder": "f_mesa",
+              "words": [
+                "mesa",
+                "superficie",
+                "tablero"
+              ],
+              "uses": [
+                "apoyar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_mesa",
+                "line": 411
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "silla_giratoria_ergonomica",
+              "formula": "silla_giratoria_ergonomica",
+              "builder": "f_silla",
+              "words": [
+                "silla",
+                "giratoria",
+                "ergonomica"
+              ],
+              "uses": [
+                "sentarse"
+              ],
+              "shapes": [
+                "asiento"
+              ],
+              "features": [
+                "seating",
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_silla",
+                "line": 423
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "silla_simple",
+              "formula": "silla_simple",
+              "builder": "f_silla_simple",
+              "words": [
+                "silla",
+                "asiento"
+              ],
+              "uses": [
+                "sentarse"
+              ],
+              "shapes": [
+                "asiento"
+              ],
+              "features": [
+                "seating",
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_silla_simple",
+                "line": 449
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "cama_marco_colchon",
+              "formula": "cama_marco_colchon",
+              "builder": "f_cama",
+              "words": [
+                "cama",
+                "colchon",
+                "dormir"
+              ],
+              "uses": [
+                "dormir"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_cama",
+                "line": 463
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "almohada_simple",
+              "formula": "almohada_simple",
+              "builder": "f_almohada",
+              "words": [
+                "almohada",
+                "cojin"
+              ],
+              "uses": [
+                "dormir"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_almohada",
+                "line": 475
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "manta_simple",
+              "formula": "manta_simple",
+              "builder": "f_manta",
+              "words": [
+                "manta",
+                "cobija"
+              ],
+              "uses": [
+                "cubrir"
+              ],
+              "shapes": [
+                "lamina"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_manta",
+                "line": 480
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "armario_2puertas",
+              "formula": "armario_2puertas",
+              "builder": "f_armario",
+              "words": [
+                "armario",
+                "ropero",
+                "guardarropa"
+              ],
+              "uses": [
+                "almacenar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [
+                "storage"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_armario",
+                "line": 486
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "estanteria_abierta",
+              "formula": "estanteria_abierta",
+              "builder": "f_estanteria",
+              "words": [
+                "estanteria",
+                "librero",
+                "estante"
+              ],
+              "uses": [
+                "almacenar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [
+                "storage"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_estanteria",
+                "line": 500
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "monitor_pantalla",
+              "formula": "monitor_pantalla",
+              "builder": "f_monitor",
+              "words": [
+                "monitor",
+                "pantalla"
+              ],
+              "uses": [
+                "mostrar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_monitor",
+                "line": 518
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "torre_pc",
+              "formula": "torre_pc",
+              "builder": "f_torre",
+              "words": [
+                "torre",
+                "computadora",
+                "pc"
+              ],
+              "uses": [
+                "computar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_torre",
+                "line": 554
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "teclado_simple",
+              "formula": "teclado_simple",
+              "builder": "f_teclado",
+              "words": [
+                "teclado"
+              ],
+              "uses": [
+                "escribir"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_teclado",
+                "line": 564
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "cables_haz",
+              "formula": "cables_haz",
+              "builder": "f_cables",
+              "words": [
+                "cable",
+                "cables",
+                "conexion"
+              ],
+              "uses": [
+                "conectar"
+              ],
+              "shapes": [
+                "polilinea"
+              ],
+              "features": [
+                "polyline"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_cables",
+                "line": 577
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "lampara_arquitecto",
+              "formula": "lampara_arquitecto",
+              "builder": "f_lampara",
+              "words": [
+                "lampara",
+                "flexo"
+              ],
+              "uses": [
+                "iluminar"
+              ],
+              "shapes": [
+                "articulada"
+              ],
+              "features": [
+                "light"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_lampara",
+                "line": 604
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "columna_estructural",
+              "formula": "columna_estructural",
+              "builder": "f_columna",
+              "words": [
+                "columna",
+                "pilar"
+              ],
+              "uses": [
+                "sostener"
+              ],
+              "shapes": [
+                "prisma"
+              ],
+              "features": [
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_columna",
+                "line": 625
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "papelera_cilindro",
+              "formula": "papelera_cilindro",
+              "builder": "f_papelera",
+              "words": [
+                "papelera",
+                "basurero"
+              ],
+              "uses": [
+                "desechar"
+              ],
+              "shapes": [
+                "cilindrica"
+              ],
+              "features": [
+                "storage"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_papelera",
+                "line": 636
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "papelera_calle",
+              "formula": "papelera_calle",
+              "builder": "f_papelera",
+              "words": [
+                "papelera",
+                "basurero",
+                "calle"
+              ],
+              "uses": [
+                "desechar"
+              ],
+              "shapes": [
+                "cilindrica"
+              ],
+              "features": [
+                "storage"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_papelera",
+                "line": 636
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "perchero_pie",
+              "formula": "perchero_pie",
+              "builder": "f_perchero",
+              "words": [
+                "perchero",
+                "colgador"
+              ],
+              "uses": [
+                "colgar"
+              ],
+              "shapes": [
+                "poste"
+              ],
+              "features": [
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_perchero",
+                "line": 644
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "plafon_area",
+              "formula": "plafon_area",
+              "builder": "f_plafon",
+              "words": [
+                "plafon",
+                "techo",
+                "luz"
+              ],
+              "uses": [
+                "iluminar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [
+                "light"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_plafon",
+                "line": 660
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "bloque_edificio",
+              "formula": "bloque_edificio",
+              "builder": "f_edificio",
+              "words": [
+                "edificio",
+                "fachada"
+              ],
+              "uses": [
+                "edificar"
+              ],
+              "shapes": [
+                "prisma"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_edificio",
+                "line": 682
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "muro_plano",
+              "formula": "muro_plano",
+              "builder": "f_muro_plano",
+              "words": [
+                "muro",
+                "pared"
+              ],
+              "uses": [
+                "cerrar"
+              ],
+              "shapes": [
+                "lamina"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_muro_plano",
+                "line": 702
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "arbol_simple",
+              "formula": "arbol_simple",
+              "builder": "f_arbol",
+              "words": [
+                "arbol",
+                "copa",
+                "tronco"
+              ],
+              "uses": [
+                "vegetacion"
+              ],
+              "shapes": [
+                "ramificada"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_arbol",
+                "line": 707
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "rack_servidores",
+              "formula": "rack_servidores",
+              "builder": "f_rack",
+              "words": [
+                "rack",
+                "servidores"
+              ],
+              "uses": [
+                "almacenar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [
+                "storage"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_rack",
+                "line": 720
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "farola_poste",
+              "formula": "farola_poste",
+              "builder": "f_farola",
+              "words": [
+                "farola",
+                "alumbrado",
+                "poste"
+              ],
+              "uses": [
+                "iluminar"
+              ],
+              "shapes": [
+                "poste"
+              ],
+              "features": [
+                "light"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_farola",
+                "line": 730
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "banco_calle",
+              "formula": "banco_calle",
+              "builder": "f_banco",
+              "words": [
+                "banco",
+                "asiento",
+                "calle"
+              ],
+              "uses": [
+                "sentarse"
+              ],
+              "shapes": [
+                "asiento"
+              ],
+              "features": [
+                "seating",
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_banco",
+                "line": 751
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "auto_simple",
+              "formula": "auto_simple",
+              "builder": "f_auto",
+              "words": [
+                "automovil",
+                "carro",
+                "coche"
+              ],
+              "uses": [
+                "transportar"
+              ],
+              "shapes": [
+                "vehiculo"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_auto",
+                "line": 764
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "letrero_calle",
+              "formula": "letrero_calle",
+              "builder": "f_letrero",
+              "words": [
+                "letrero",
+                "senal"
+              ],
+              "uses": [
+                "mostrar"
+              ],
+              "shapes": [
+                "rectangular"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_letrero",
+                "line": 781
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "semaforo_calle",
+              "formula": "semaforo_calle",
+              "builder": "f_semaforo",
+              "words": [
+                "semaforo",
+                "trafico"
+              ],
+              "uses": [
+                "regular"
+              ],
+              "shapes": [
+                "poste"
+              ],
+              "features": [
+                "light"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_semaforo",
+                "line": 796
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "bolardo_calle",
+              "formula": "bolardo_calle",
+              "builder": "f_bolardo",
+              "words": [
+                "bolardo",
+                "barrera"
+              ],
+              "uses": [
+                "delimitar"
+              ],
+              "shapes": [
+                "poste"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_bolardo",
+                "line": 809
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "hidrante_calle",
+              "formula": "hidrante_calle",
+              "builder": "f_hidrante",
+              "words": [
+                "hidrante",
+                "agua"
+              ],
+              "uses": [
+                "agua"
+              ],
+              "shapes": [
+                "poste"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_hidrante",
+                "line": 823
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "jardinera_calle",
+              "formula": "jardinera_calle",
+              "builder": "f_jardinera",
+              "words": [
+                "jardinera",
+                "maceta"
+              ],
+              "uses": [
+                "vegetacion"
+              ],
+              "shapes": [
+                "recipiente"
+              ],
+              "features": [
+                "storage"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_jardinera",
+                "line": 833
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "bicicletero_calle",
+              "formula": "bicicletero_calle",
+              "builder": "f_bicicletero",
+              "words": [
+                "bicicletero",
+                "aparcabicicletas"
+              ],
+              "uses": [
+                "estacionar"
+              ],
+              "shapes": [
+                "curvada"
+              ],
+              "features": [
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_bicicletero",
+                "line": 844
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "parada_autobus",
+              "formula": "parada_autobus",
+              "builder": "f_parada",
+              "words": [
+                "parada",
+                "autobus",
+                "refugio"
+              ],
+              "uses": [
+                "esperar"
+              ],
+              "shapes": [
+                "cubierta"
+              ],
+              "features": [
+                "support"
+              ],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_parada",
+                "line": 858
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "quiosco_calle",
+              "formula": "quiosco_calle",
+              "builder": "f_quiosco",
+              "words": [
+                "quiosco",
+                "kiosco"
+              ],
+              "uses": [
+                "vender"
+              ],
+              "shapes": [
+                "recinto"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_quiosco",
+                "line": 869
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            },
+            {
+              "id": "toldo_calle",
+              "formula": "toldo_calle",
+              "builder": "f_toldo",
+              "words": [
+                "toldo",
+                "marquesina"
+              ],
+              "uses": [
+                "cubrir"
+              ],
+              "shapes": [
+                "cubierta"
+              ],
+              "features": [],
+              "scale_policy": "independent_axes",
+              "bbox_only": false,
+              "source": {
+                "path": "motor/heredado/star_src/src/motor_fondos.py",
+                "function": "f_toldo",
+                "line": 874
+              },
+              "semantic_metadata_source": "Índice técnico de las funciones de receta verificadas; no identidad de ningún objeto/escena ni aprobación artística"
+            }
+          ],
+          "source": "Catálogo AST verificable; semántica adicional se suministra por datos, sin adivinar por IDs",
+          "semantic_metadata_note": "Metadatos técnicos de forma/uso para búsqueda. Las dimensiones siguen viniendo del ADN de cada entrada. Ningún bbox se convierte en diseño final."
+        },
+        "search_policy": {
+          "minimum_score": 0.75,
+          "weights": {
+            "shape": 0.3,
+            "dimensions": 0.2,
+            "use": 0.2,
+            "words": 0.3
+          },
+          "synonyms": {
+            "meson": "escritorio",
+            "desk": "escritorio",
+            "laborar": "trabajar",
+            "work": "trabajar",
+            "asiento": "silla",
+            "wardrobe": "armario"
+          },
+          "stop_words": [
+            "de",
+            "para",
+            "un",
+            "una",
+            "el",
+            "la"
+          ],
+          "primitive_shapes": [
+            "BOX",
+            "ELLIPSOID",
+            "CYLINDER",
+            "CONE",
+            "TORUS"
+          ]
+        }
+      }
+    ],
+    "events": [
+      {
+        "object": "cuerpo_baul",
+        "property": "material.base_color",
+        "material": "cuerpo_baul_material",
+        "source": "fixture_sintetico.json",
+        "keys": [
+          {
+            "t": 0,
+            "value": [
+              1,
+              0.1,
+              0,
+              1
+            ],
+            "curve": "LINEAR"
+          },
+          {
+            "t": 2,
+            "value": [
+              0.2,
+              0.2,
+              0.2,
+              1
+            ],
+            "curve": "LINEAR"
+          }
+        ]
+      },
+      {
+        "object": "plataforma_tau",
+        "property": "location",
+        "source": "fixture_sintetico.json",
+        "keys": [
+          {
+            "t": 0,
+            "value": [
+              0,
+              0,
+              0
+            ],
+            "curve": "LINEAR"
+          },
+          {
+            "t": 2,
+            "value": [
+              0.03,
+              0,
+              0
+            ],
+            "curve": "LINEAR"
+          }
+        ]
+      },
+      {
+        "object": "luz_nueva_creada_despues",
+        "property": "energy",
+        "source": "regresión del orden: evento de entorno para una luz creada en etapa12",
+        "keys": [
+          {
+            "t": 0,
+            "value": 17,
+            "curve": "CONSTANT"
+          },
+          {
+            "t": 1,
+            "value": 0,
+            "curve": "CONSTANT"
+          }
+        ]
+      }
+    ],
+    "live_data": {
+      "status": "complete",
+      "changes": []
+    }
+  },
+  "props": [
+    {
+      "id": "baul_sigma",
+      "position_m": [
+        1.1,
+        0,
+        0
+      ],
+      "geometry": [
+        {
+          "id": "cuerpo_baul",
+          "shape": "BOX",
+          "dimensions_m": [
+            0.5,
+            0.3,
+            0.3
+          ],
+          "position_m": [
+            0,
+            0,
+            0.15
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "resolution": 12,
+          "material": {
+            "rgba": [
+              0.95,
+              0.7,
+              0.05,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.45
+          },
+          "source": "fixture_sintetico.json",
+          "role": "geometry"
+        },
+        {
+          "id": "hoja_baul",
+          "shape": "BOX",
+          "dimensions_m": [
+            0.5,
+            0.3,
+            0.04
+          ],
+          "position_m": [
+            0,
+            0,
+            0.32
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "resolution": 12,
+          "material": {
+            "rgba": [
+              0.95,
+              0.7,
+              0.05,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.45
+          },
+          "source": "fixture_sintetico.json",
+          "role": "geometry"
+        }
+      ],
+      "points": [
+        {
+          "id": "hinge",
+          "position_m": [
+            0,
+            0.15,
+            0.3
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        }
+      ],
+      "hinges": [
+        {
+          "id": "eje_zeta",
+          "pivot_m": [
+            0,
+            0.15,
+            0.3
+          ],
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "parts": [
+            "hoja_baul"
+          ],
+          "min_deg": 0,
+          "max_deg": 60,
+          "keys": [
+            {
+              "t": 0,
+              "c": 0,
+              "curve": "LINEAR"
+            },
+            {
+              "t": 2,
+              "c": 1,
+              "curve": "LINEAR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plataforma_tau",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "geometry": [],
+      "points": [
+        {
+          "id": "left",
+          "position_m": [
+            -0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "right",
+          "position_m": [
+            0.12,
+            0.15,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_a",
+          "position_m": [
+            -0.18,
+            0.03,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_b",
+          "position_m": [
+            0.18,
+            0.03,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_c",
+          "position_m": [
+            0.18,
+            0.29,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        },
+        {
+          "id": "support_d",
+          "position_m": [
+            -0.18,
+            0.29,
+            0.08
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "source": "fixture_sintetico.json"
+        }
+      ],
+      "hinges": []
+    }
+  ],
+  "contacts": [
+    {
+      "entity": "habitante_orion",
+      "bone": "foot.L",
+      "target_point": "plataforma_tau.left",
+      "chain_length": 2,
+      "iterations": 128,
+      "t0": 0,
+      "t1": 2,
+      "tolerance_m": 0.0001,
+      "source": "fixture_sintetico.json"
+    },
+    {
+      "entity": "habitante_orion",
+      "bone": "foot.R",
+      "target_point": "plataforma_tau.right",
+      "chain_length": 2,
+      "iterations": 128,
+      "t0": 0,
+      "t1": 2,
+      "tolerance_m": 0.0001,
+      "source": "fixture_sintetico.json"
+    }
+  ],
+  "fx_events": [],
+  "motion": {
+    "status": "complete",
+    "catalog": "fixture_sintetico.json",
+    "assignments": "asignaciones.json",
+    "requests": [
+      {
+        "entity": "habitante_orion",
+        "action": "wing_open",
+        "anatomy": "avian",
+        "emotion": "neutral",
+        "load": "none",
+        "support": "feet",
+        "context": "flat"
+      }
+    ],
+    "candidates": [
+      {
+        "entity": "habitante_orion",
+        "action": "wing_open",
+        "anatomy": "avian",
+        "emotion": "neutral",
+        "load": "none",
+        "support": "feet",
+        "context": "flat",
+        "id": "authored_wing",
+        "provider": "argon",
+        "license_ref": "CREACION_SINTETICA_DE_PRUEBA_NO_BIBLIOTECA",
+        "approval_ref": "SOLO_PRUEBA_CPU",
+        "tracks": [
+          {
+            "bone": "wing.L",
+            "keys": [
+              {
+                "t": 0,
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "curve": "SMOOTH"
+              },
+              {
+                "t": 1,
+                "value": [
+                  15,
+                  0,
+                  0
+                ],
+                "curve": "SMOOTH"
+              },
+              {
+                "t": 2,
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "curve": "SMOOTH"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "camera": {
+    "shots": [
+      {
+        "id": "plano_mu",
+        "t0": 0,
+        "t1": 1,
+        "transition": "CORTE",
+        "trajectory": {
+          "mode": "STATIC",
+          "position": [
+            0,
+            -4,
+            1.8
+          ],
+          "target": [
+            0,
+            0,
+            0.6
+          ],
+          "lens_mm": 28
+        },
+        "sensor_width_mm": 36,
+        "clip_start_m": 0.01,
+        "clip_end_m": 100,
+        "smoothing": 0,
+        "roll_deg": 0,
+        "handheld_amount": 0,
+        "check_points": [
+          "habitante_orion.centre"
+        ],
+        "ndc_margin": 0.03,
+        "ray_epsilon_m": 0.001,
+        "occlusion_allowed_objects": [
+          "bird_body",
+          "bird_head",
+          "eye_l",
+          "eye_r",
+          "pupil_l",
+          "pupil_r",
+          "scarf",
+          "wingmesh_L",
+          "wingmesh_R",
+          "bill"
+        ],
+        "min_clearance_m": 0.05,
+        "axis180": null,
+        "subjects": [
+          {
+            "id": "habitante_orion",
+            "scope": "FULL"
+          }
+        ]
+      },
+      {
+        "id": "plano_nu",
+        "t0": 1,
+        "t1": 2,
+        "transition": {
+          "type": "FUNDIDO",
+          "duration_s": 0.25
+        },
+        "trajectory": {
+          "mode": "PAN",
+          "position": [
+            0,
+            -4,
+            1.8
+          ],
+          "target": [
+            0,
+            0,
+            0.6
+          ],
+          "lens_mm": 28,
+          "degrees": 15
+        },
+        "sensor_width_mm": 36,
+        "clip_start_m": 0.01,
+        "clip_end_m": 100,
+        "smoothing": 0,
+        "roll_deg": 0,
+        "handheld_amount": 0,
+        "check_points": [
+          "habitante_orion.centre"
+        ],
+        "ndc_margin": 0.03,
+        "ray_epsilon_m": 0.001,
+        "occlusion_allowed_objects": [
+          "bird_body",
+          "bird_head",
+          "eye_l",
+          "eye_r",
+          "pupil_l",
+          "pupil_r",
+          "scarf",
+          "wingmesh_L",
+          "wingmesh_R",
+          "bill"
+        ],
+        "min_clearance_m": 0.05,
+        "axis180": null,
+        "subjects": [
+          {
+            "id": "habitante_orion",
+            "scope": "FULL"
+          }
+        ]
+      }
+    ],
+    "transition_semantics": "incoming"
+  },
+  "lighting": {
+    "base": [
+      {
+        "id": "emisor_kappa",
+        "type": "AREA",
+        "position_m": [
+          0,
+          -2,
+          4
+        ],
+        "rotation_deg": [
+          25,
+          0,
+          0
+        ],
+        "energy": 400,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "luz_nueva_creada_despues",
+        "type": "AREA",
+        "position_m": [
+          1,
+          -2,
+          3
+        ],
+        "rotation_deg": [
+          25,
+          0,
+          0
+        ],
+        "energy": 17,
+        "color": [
+          1,
+          0.6,
+          0.6
+        ]
+      }
+    ],
+    "exposure": 0,
+    "view_transform": "Standard",
+    "events": [
+      {
+        "object": "emisor_kappa",
+        "property": "energy",
+        "source": "fixture_sintetico.json",
+        "keys": [
+          {
+            "t": 0,
+            "value": 400,
+            "curve": "LINEAR"
+          },
+          {
+            "t": 2,
+            "value": 100,
+            "curve": "LINEAR"
+          }
+        ]
+      },
+      {
+        "object": "cosmos_elegido_por_entrada",
+        "property": "world.background_strength",
+        "source": "fixture de World por datos; cero real",
+        "keys": [
+          {
+            "t": 0,
+            "value": 0,
+            "curve": "LINEAR"
+          },
+          {
+            "t": 2,
+            "value": 0.1,
+            "curve": "LINEAR"
+          }
+        ]
+      }
+    ],
+    "source": "fixture_sintetico.json",
+    "world": {
+      "id": "cosmos_elegido_por_entrada",
+      "color_rgba": [
+        0.04,
+        0.06,
+        0.08,
+        1
+      ],
+      "strength": 0
+    }
+  },
+  "rules": {
+    "bone_length_error_m": 1e-05,
+    "root_speed_max_m_s": 5,
+    "root_accel_max_m_s2": 20,
+    "com_accel_max_m_s2": 20,
+    "joint_speed_max_deg_s": 900,
+    "slip_max_m_per_frame": 0.05,
+    "colliders": [
+      "bird_body",
+      "superficie_lambda",
+      "cuerpo_baul"
+    ],
+    "allowed_collision_pairs": [],
+    "penetration_tolerance_m": 0.001,
+    "reject_surface_intersections": true,
+    "contact_pairs": [
+      [
+        "superficie_lambda",
+        "cuerpo_baul"
+      ]
+    ]
+  },
+  "actions": [
+    {
+      "id": "dialog_1",
+      "accion": "hablar",
+      "actor": "habitante_orion",
+      "t": [
+        0.5,
+        1.5
+      ],
+      "cita": "Texto sintético para comprobar el archivo de tiempos. No se genera voz."
+    }
+  ],
+  "segments": [],
+  "render": {
+    "engine": "CYCLES",
+    "resolution": [
+      128,
+      128
+    ],
+    "samples": 1,
+    "seed": 42
+  },
+  "required_capabilities": [
+    "rostros_finales",
+    "ropa_final"
+  ],
+  "libraries": [],
+  "fixture_only": true,
+  "assets": [
+    {
+      "path": "asignaciones.json",
+      "sha256": "4d380bd12c592bc30f0150d84e1aab8cbd415f5787d1aee879591a1fb9f6abce",
+      "bytes": 42
+    },
+    {
+      "path": "fixture_sintetico.json",
+      "sha256": "3c89e6a7fc4c20cefa952d265919afde3a207aba7df21949a99e320bda7606b0",
+      "bytes": 120
+    }
+  ],
+  "sources": [
+    {
+      "module": "fixture_autogenerado_NO_MODULO_REAL",
+      "path": "fixture_sintetico.json",
+      "sha256": "3c89e6a7fc4c20cefa952d265919afde3a207aba7df21949a99e320bda7606b0"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "vinetas": [
+    {
+      "id": "shot_A",
+      "director_imagen": {
+        "en_cuadro": [
+          {
+            "id": "bird_fixture",
+            "orientacion": "frontal"
+          }
+        ]
+      },
+      "transicion_salida": {
+        "tipo": "CORTE"
+      }
+    },
+    {
+      "id": "shot_B",
+      "director_imagen": {
+        "en_cuadro": [
+          {
+            "id": "bird_fixture",
+            "orientacion": "frontal"
+          }
+        ]
+      },
+      "transicion_salida": {
+        "tipo": "CORTE"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "date_bogota": "2026-11-07T20:58:36.515560-05:00",
+  "phase": "network",
+  "type": "ClientError",
+  "code": "400",
+  "usage_received": false,
+  "safe_message": null
+}

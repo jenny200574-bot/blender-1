@@ -1,0 +1,9 @@
+INTERRUPTORES {"slerp_raiz": false, "contacto_apoyos": true, "ik_piso_suave": false, "piso_suave": false, "equilibrio_memoria": false, "anclaje_mismo_cuadro": false, "orden_medicion": false}
+FRAME 1 / 240
+FRAME 101 / 240
+FRAME 201 / 240
+Info: Saved as "escena.blend"
+NUCLEO_FISICO_TERMINADO /workspace/MOTOR_UNICO_20261107/evidencia/oro_t317_definitivo/escena.blend
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
+
+Blender quit

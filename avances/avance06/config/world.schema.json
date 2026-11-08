@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"source": {"type": "string"}, "world_id": {"type": "string"}, "world_a": {"type": "number"}}, "required": ["source", "world_id", "world_a"]}

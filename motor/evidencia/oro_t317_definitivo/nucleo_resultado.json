@@ -1,0 +1,9 @@
+{
+  "estado": "SOLO_BACKEND_FISICO",
+  "produccion_aprobada": false,
+  "fps": 24,
+  "frames": 240,
+  "source_provisional": [],
+  "final_camera": false,
+  "final_appearance": false
+}

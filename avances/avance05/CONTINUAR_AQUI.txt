@@ -1,0 +1,8 @@
+ESTADO NO FINAL: esc1 BLOQUEADO con 18 entradas; SIN VIDEO; n8n NO CAMBIADO.
+Leer INFORME_AVANCE_05.md, 31_ERRORES_Y_ESTADO.csv y N8N_INTEGRACION_PENDIENTE.md.
+Ledger autoritativo VPS: /opt/myia-motor-v9/avance05_20261107/entrega/evidencias/ledger.json.
+No repetir llamadas ya aceptadas: cámara08, inventario15, cofre16, cama17.
+No aplicar ninguna respuesta rechazada, ni marcar certificados/aprobados datos generados sin prueba independiente.
+Presupuesto restante fase reparación: US$2.871725; plan conocido consumido US$0.2042645.
+No reanudar GPU hasta que esc1 pase la previa CPU real. Sólo pod autorizado; detenerlo tras uso, nunca eliminarlo.
+Las ocho pruebas y oro23/23 ya terminaron correctamente; no hay jobs pagados abiertos.

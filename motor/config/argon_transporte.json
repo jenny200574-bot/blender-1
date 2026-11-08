@@ -1,0 +1,17 @@
+{
+  "client_module": "/opt/myia-motor-v9/avance04_20261107/MOTOR_UNICO_20261107/motor/vertex_client.py",
+  "client_sha256": "db4464cd969ad8c9984d4a44ae8207a1802b853b857e6109fc2612ff764c5200",
+  "price_source": "/workspace/STAR_MOTOR_UNIVERSAL_v2_20261030/src/cajas/precios_myia.json",
+  "price_source_sha256": "91bd479e875d1f5943138ab06737f5925b6a19512fa456ddf72929ee6c3724e2",
+  "model": "gemini-3-flash-preview",
+  "thinking_level": "LOW",
+  "max_output_tokens": 65536,
+  "timeout_s": 1800,
+  "dry_run": true,
+  "chars_per_token": 3,
+  "date_timezone": "America/Bogota",
+  "source": "AVANCE04 isolated Vertex; NOT live; automatic send remains off",
+  "existing_file": "${VERTEX_SA_FILE}",
+  "project": "${GCP_PROJECT_ID}",
+  "location": "global"
+}

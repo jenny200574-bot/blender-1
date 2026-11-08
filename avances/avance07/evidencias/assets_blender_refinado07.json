@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "scope": "REAL Blender CPU construction of4newsource-specific assets ONLY; not esc1 motion/physics/visual production approval",
+  "checks": [
+    {
+      "id": "obj-libro-cuentos__e1-8",
+      "passed": true,
+      "parts": 7,
+      "dimensions_m": [
+        0.4000002145767212,
+        0.2600001394748688,
+        0.039999961853027344
+      ],
+      "expected_dimensions_m": [
+        0.4,
+        0.26,
+        0.04
+      ],
+      "nonmanifold_parts": []
+    },
+    {
+      "id": "Centro de la habitación",
+      "passed": true,
+      "parts": 1,
+      "dimensions_m": [
+        2.1999998092651367,
+        2.1999999284744263,
+        0.019999999552965164
+      ],
+      "expected_dimensions_m": [
+        2.2,
+        2.2,
+        0.02
+      ],
+      "nonmanifold_parts": []
+    },
+    {
+      "id": "obj-visor-spark",
+      "passed": true,
+      "parts": 6,
+      "dimensions_m": [
+        0.16000010818243027,
+        0.11999989673495293,
+        0.059999942779541016
+      ],
+      "expected_dimensions_m": [
+        0.16,
+        0.12,
+        0.06
+      ],
+      "nonmanifold_parts": []
+    },
+    {
+      "id": "Ventana con vista al arcoíris",
+      "passed": true,
+      "parts": 12,
+      "dimensions_m": [
+        1.5999999046325684,
+        0.15000033378601074,
+        1.3000001311302185
+      ],
+      "expected_dimensions_m": [
+        1.6,
+        0.15,
+        1.3
+      ],
+      "nonmanifold_parts": []
+    }
+  ],
+  "gpu_used": false,
+  "production_approved": false
+}

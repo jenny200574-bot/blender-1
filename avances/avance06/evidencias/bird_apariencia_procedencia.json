@@ -1,0 +1,21 @@
+{
+  "base": "av06_bird_appearance02/respuesta.json",
+  "patch": "av06_crest03/respuesta.json",
+  "changes": [
+    {
+      "id": "ch-piquito-030a.argon.crest.1",
+      "field": "pz",
+      "old": 0.095,
+      "new": 0.0935,
+      "source": "av06_crest03/respuesta.json#/crest1_pz"
+    },
+    {
+      "id": "ch-piquito-030a.argon.crest.2",
+      "field": "pz",
+      "old": 0.097,
+      "new": 0.0945,
+      "source": "av06_crest03/respuesta.json#/crest2_pz"
+    }
+  ],
+  "manual_numeric_edits": false
+}

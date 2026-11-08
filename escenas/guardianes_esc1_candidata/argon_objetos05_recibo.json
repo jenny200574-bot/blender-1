@@ -1,0 +1,36 @@
+{
+  "fecha_bogota": "2026-11-07T21:09:36.092194-05:00",
+  "applied": [
+    {
+      "id": "obj-cofre-dorado",
+      "record_id": "gdc-cofre-abecedario",
+      "response_sha256": "f6fa41075e30421c88f82da0f51d7990e083a3d04bd93948cec9e22a3ddfd880",
+      "part_count": 5,
+      "dimensions_m": [
+        0.65,
+        0.42,
+        0.48
+      ],
+      "tolerance_m": 0.001,
+      "no_generated_number_changed": true,
+      "placement_from_measured_inventory": true
+    },
+    {
+      "id": "obj-cama",
+      "record_id": "gdc-cama-nino",
+      "response_sha256": "0082c99edb17573cf81a55450f60bb3a9d25ae915bbe72133e2653611e17c529",
+      "part_count": 8,
+      "dimensions_m": [
+        1.05,
+        1.9000000000000001,
+        0.8500000000000001
+      ],
+      "tolerance_m": 0.001,
+      "no_generated_number_changed": true,
+      "placement_from_measured_inventory": true
+    }
+  ],
+  "values_generated_not_measured": true,
+  "visual_approved": false,
+  "physics_approved": false
+}

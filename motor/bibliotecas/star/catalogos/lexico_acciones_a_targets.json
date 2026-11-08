@@ -1,0 +1,88 @@
+{
+  "_nota": "Plantillas UNIVERSALES: verbo/frase → lista de targets. No son poses nombradas. Si no hay match → FALTA.",
+  "plantillas": [
+    {
+      "id": "escribir_teclado",
+      "patrones": ["escrib", "tipea", "teclea", "abre los registros", "abre registro", "en el teclado", "usa el teclado"],
+      "targets": [
+        {"punto_actor": "mano_R", "hacia_objeto": "teclado.agarre", "c": 1.0, "ik": true},
+        {"punto_actor": "mano_L", "hacia_objeto": "teclado.agarre", "offset_m": [-0.08, 0.0, 0.0], "c": 0.9, "ik": true},
+        {"punto_actor": "torso", "canal": "inclinacion", "valor": "adelante", "c": 0.25}
+      ]
+    },
+    {
+      "id": "encender_pc",
+      "patrones": ["enciende el computador", "enciende la pc", "prende el computador", "boton del computador", "enciende el pc"],
+      "targets": [
+        {"punto_actor": "mano_R", "hacia_objeto": "computador.boton", "c": 1.0, "ik": true}
+      ]
+    },
+    {
+      "id": "tocar_monitor",
+      "patrones": ["toca el monitor", "señala el monitor", "senala el monitor", "mira el monitor de cerca", "se acerca al monitor"],
+      "targets": [
+        {"punto_actor": "cadera", "hacia_punto": "cerca_monitor", "c": 1.0, "ik": false},
+        {"punto_actor": "mano_R", "hacia_objeto": "monitor.frente", "c": 0.8, "ik": true}
+      ]
+    },
+    {
+      "id": "asustado",
+      "patrones": ["asustad", "tiene miedo", "por miedo", "temeros"],
+      "targets": [
+        {"punto_actor": "torso", "canal": "inclinacion", "valor": "atras", "c": 0.6},
+        {"punto_actor": "hombro_L", "canal": "subir", "c": 0.7},
+        {"punto_actor": "hombro_R", "canal": "subir", "c": 0.7},
+        {"punto_actor": "mano_L", "hacia_punto_actor": "pecho", "c": 0.55, "ik": true},
+        {"punto_actor": "mano_R", "hacia_punto_actor": "pecho", "offset_m": [0.05, 0, 0], "c": 0.4, "ik": true}
+      ]
+    },
+    {
+      "id": "hablando",
+      "patrones": ["dice:", "habl", "responde", "pregunta", "—", "explica"],
+      "targets": [
+        {"punto_actor": "cabeza", "canal": "giro", "valor": "der", "c": 0.15},
+        {"punto_actor": "mano_R", "canal": "subir", "c": 0.2}
+      ]
+    },
+    {
+      "id": "caminar_a",
+      "patrones": ["camina", "regresa", "se dirige", "va hacia", "entra", "llega", "se acerca a"],
+      "targets": [
+        {"punto_actor": "cadera", "hacia_punto": "_ruta_o_destino", "c": 1.0, "ik": false}
+      ],
+      "nota": "hacia_punto se rellena con destino del beat/ruta si existe; si no → FALTA destino"
+    },
+    {
+      "id": "sentarse",
+      "patrones": ["se sienta", "sentarse", "toma asiento"],
+      "targets": [
+        {"punto_actor": "cadera", "hacia_objeto": "silla.asiento", "c": 1.0, "ik": false},
+        {"punto_actor": "rodilla_L", "canal": "flexion", "c": 0.85},
+        {"punto_actor": "rodilla_R", "canal": "flexion", "c": 0.85}
+      ]
+    },
+    {
+      "id": "senalar",
+      "patrones": ["señala", "senala", "apunta", "indica"],
+      "targets": [
+        {"punto_actor": "mano_R", "hacia_punto": "_destino_senal", "c": 1.0, "ik": true}
+      ]
+    },
+    {
+      "id": "temblor_escenario",
+      "patrones": ["tiembla", "temblor", "sacude", "la habitación tiembla", "la habitacion tiembla", "terremoto", "sacudida"],
+      "evento_escenario": {
+        "punto": "escenario.temblor",
+        "canal": "amplitud_m",
+        "c": 0.7,
+        "frecuencia_hz": 6.0,
+        "amplitud_max_m": 0.04
+      },
+      "reaccion_actores": [
+        {"punto_actor": "rodilla_L", "canal": "flexion", "c_factor": 0.8},
+        {"punto_actor": "rodilla_R", "canal": "flexion", "c_factor": 0.8},
+        {"punto_actor": "torso", "canal": "inclinacion", "valor": "adelante", "c_factor": 0.3}
+      ]
+    }
+  ]
+}

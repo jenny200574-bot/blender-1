@@ -1,0 +1,165 @@
+{
+  "records": [
+    {
+      "id": "ADN_nuevo_cuerpo_articulado",
+      "type": "OBJECT",
+      "exact_aliases": [
+        "prop_fixture"
+      ],
+      "source": "fixture_adn_obj_datos_v5",
+      "source_data": {
+        "dimensions_m": [
+          0.5,
+          0.3,
+          0.36
+        ],
+        "text": "Objeto sintético de dos piezas articuladas",
+        "shape_query": {
+          "formula": "receta_nueva_ajena_al_catalogo",
+          "required_features": [
+            "articulated_fixture"
+          ]
+        },
+        "construction_3d": {
+          "parts": [
+            {
+              "id": "prop_base",
+              "shape": "BOX",
+              "dimensions_m": [
+                0.5,
+                0.3,
+                0.3
+              ],
+              "position_m": [
+                0,
+                0,
+                0.15
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "geometry"
+            },
+            {
+              "id": "prop_lid",
+              "shape": "BOX",
+              "dimensions_m": [
+                0.5,
+                0.3,
+                0.04
+              ],
+              "position_m": [
+                0,
+                0,
+                0.32
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "resolution": 12,
+              "material": {
+                "rgba": [
+                  0.95,
+                  0.7,
+                  0.05,
+                  1
+                ],
+                "metallic": 0,
+                "roughness": 0.45
+              },
+              "source": "fixture_sintetico.json",
+              "role": "geometry"
+            }
+          ],
+          "material": {
+            "rgba": [
+              0.95,
+              0.7,
+              0.05,
+              1
+            ],
+            "metallic": 0,
+            "roughness": 0.45
+          },
+          "placement": {
+            "scene_object_id": "prop_fixture",
+            "position_m": [
+              1.1,
+              0,
+              0
+            ],
+            "rotation_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "points": [
+            {
+              "id": "hinge",
+              "position_m": [
+                0,
+                0.15,
+                0.3
+              ],
+              "rotation_deg": [
+                0,
+                0,
+                0
+              ],
+              "source": "fixture_sintetico.json"
+            }
+          ],
+          "hinges": [
+            {
+              "id": "lid_hinge",
+              "pivot_m": [
+                0,
+                0.15,
+                0.3
+              ],
+              "axis": [
+                1,
+                0,
+                0
+              ],
+              "parts": [
+                "prop_lid"
+              ],
+              "min_deg": 0,
+              "max_deg": 60,
+              "keys": [
+                {
+                  "t": 0,
+                  "c": 0,
+                  "curve": "LINEAR"
+                },
+                {
+                  "t": 2,
+                  "c": 1,
+                  "curve": "LINEAR"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

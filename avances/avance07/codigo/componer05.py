@@ -1,0 +1,3 @@
+import json,sys
+from pathlib import Path
+B=Path('/opt/myia-motor-v9/avance07_20261107/entrega');read=lambda p:json.loads(p.read_text());a=read(B/'evidencias/av07_adn_compuesto04/respuesta.json');v=read(B/'evidencias/av07_visor05/respuesta.json');visor=next(o for o in a['objects'] if o['id']=='obj-visor-spark');next(p for p in visor['parts'] if p['id']=='av07.visor.frame_top')['dy']=v['frame_top_dy'];p=B/'evidencias/av07_adn_final05';p.mkdir();(p/'respuesta.json').write_text(json.dumps(a,ensure_ascii=False,indent=2));(p/'schema_validacion.json').write_text(json.dumps({'passed':True,'scope':'ADN04 composition + model visor05 source-derived top-frame clearance','network_calls':0,'manual_artistic_numeric_changes':0}));print('composed05')

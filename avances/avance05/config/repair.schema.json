@@ -1,0 +1,1351 @@
+{
+  "type": "object",
+  "properties": {
+    "resolutions": {
+      "type": "object",
+      "properties": {
+        "motion/respuesta_2b.json": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "motion/contacts": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "rules/source_parameters": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "entities/ch-piquito-030a/anatomy_profile": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "props/obj-libro-cuentos__e1-8/dna_ref": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "props/Ventana con vista al arcoíris/dna_ref": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "props/obj-cama/recipe": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "bindings/Centro de la habitación/reference_kind": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "props/obj-visor-spark/dna_ref": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "props/obj-cofre-dorado/recipe": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "environment/live_source": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "camera/inputs_4g": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "motion/semantic_index/approval": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "ejes": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "luces": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "2B": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "iluminacion": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "motion/status": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "environment/live_data": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "lighting": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "camera/v3/0/PAN": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "camera/v5/0/CRANE": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        },
+        "camera/v7/0/PAN": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "SOURCE",
+                "GENERATED",
+                "FALTA"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source_refs",
+            "reason"
+          ]
+        }
+      },
+      "required": [
+        "motion/respuesta_2b.json",
+        "motion/contacts",
+        "rules/source_parameters",
+        "entities/ch-piquito-030a/anatomy_profile",
+        "props/obj-libro-cuentos__e1-8/dna_ref",
+        "props/Ventana con vista al arcoíris/dna_ref",
+        "props/obj-cama/recipe",
+        "bindings/Centro de la habitación/reference_kind",
+        "props/obj-visor-spark/dna_ref",
+        "props/obj-cofre-dorado/recipe",
+        "environment/live_source",
+        "camera/inputs_4g",
+        "motion/semantic_index/approval",
+        "coordinates",
+        "ejes",
+        "luces",
+        "2B",
+        "iluminacion",
+        "motion/status",
+        "environment/live_data",
+        "lighting",
+        "camera/v3/0/PAN",
+        "camera/v5/0/CRANE",
+        "camera/v7/0/PAN"
+      ]
+    },
+    "object_recipes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "obj-cama",
+              "obj-cofre-dorado"
+            ]
+          },
+          "source": {
+            "type": "string"
+          },
+          "parts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "shape": {
+                  "type": "string",
+                  "enum": [
+                    "MESH",
+                    "ELLIPSOID",
+                    "CYLINDER",
+                    "CONE"
+                  ]
+                },
+                "position_m": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "rotation_deg": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "dimensions_m": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "resolution": {
+                  "type": "integer",
+                  "minimum": 8
+                },
+                "tip_ratio": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "vertices_m": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 3,
+                    "maxItems": 3
+                  }
+                },
+                "faces": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "material": {
+                  "type": "object",
+                  "properties": {
+                    "rgba": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "minItems": 4,
+                      "maxItems": 4
+                    },
+                    "metallic": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "roughness": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "rgba",
+                    "metallic",
+                    "roughness"
+                  ]
+                },
+                "source": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "shape",
+                "position_m",
+                "rotation_deg",
+                "dimensions_m",
+                "resolution",
+                "tip_ratio",
+                "vertices_m",
+                "faces",
+                "material",
+                "source"
+              ]
+            },
+            "maxItems": 40
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "parts"
+        ]
+      },
+      "maxItems": 2
+    },
+    "bird_profile": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "SOURCE",
+            "GENERATED",
+            "FALTA"
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "bones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string",
+                "enum": [
+                  "root",
+                  "neck",
+                  "head",
+                  "beak",
+                  "tail",
+                  "wing.L",
+                  "wing.R",
+                  "leg.L",
+                  "leg.R",
+                  "foot.L",
+                  "foot.R",
+                  "toe.L.front1",
+                  "toe.L.front2",
+                  "toe.L.front3",
+                  "toe.L.back",
+                  "toe.R.front1",
+                  "toe.R.front2",
+                  "toe.R.front3",
+                  "toe.R.back"
+                ]
+              },
+              "parent": {
+                "type": "string",
+                "nullable": true
+              },
+              "head": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "tail": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "limits_deg": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "source": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "role",
+              "parent",
+              "head",
+              "tail",
+              "limits_deg",
+              "source"
+            ]
+          },
+          "maxItems": 19
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "source",
+        "bones",
+        "missing"
+      ]
+    },
+    "camera_numeric": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "SOURCE",
+            "GENERATED",
+            "FALTA"
+          ]
+        },
+        "shots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "v1",
+                  "v2",
+                  "v3",
+                  "v4",
+                  "v5",
+                  "v6",
+                  "v7",
+                  "v8",
+                  "v9",
+                  "v10",
+                  "v11",
+                  "v12"
+                ]
+              },
+              "t0": {
+                "type": "number"
+              },
+              "t1": {
+                "type": "number"
+              },
+              "keyframes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "t": {
+                      "type": "number"
+                    },
+                    "giro_grados": {
+                      "type": "number"
+                    },
+                    "inclinacion_grados": {
+                      "type": "number"
+                    },
+                    "lente_mm": {
+                      "type": "number",
+                      "minimum": 1
+                    },
+                    "altura_m": {
+                      "type": "number"
+                    },
+                    "distancia_m": {
+                      "type": "number",
+                      "minimum": 0.001
+                    },
+                    "source": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "t",
+                    "giro_grados",
+                    "inclinacion_grados",
+                    "lente_mm",
+                    "altura_m",
+                    "distancia_m",
+                    "source"
+                  ]
+                },
+                "maxItems": 8
+              },
+              "segments": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "index": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "movement": {
+                      "type": "string"
+                    },
+                    "degrees": {
+                      "type": "number",
+                      "nullable": true
+                    },
+                    "distance": {
+                      "type": "number",
+                      "nullable": true
+                    },
+                    "source": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "index",
+                    "movement",
+                    "degrees",
+                    "distance",
+                    "source"
+                  ]
+                },
+                "maxItems": 8
+              }
+            },
+            "required": [
+              "id",
+              "t0",
+              "t1",
+              "keyframes",
+              "segments"
+            ]
+          },
+          "minItems": 12,
+          "maxItems": 12
+        }
+      },
+      "required": [
+        "status",
+        "shots"
+      ]
+    },
+    "live_scenery": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "SOURCE",
+            "GENERATED",
+            "FALTA"
+          ]
+        },
+        "changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "object": {
+                "type": "string"
+              },
+              "property": {
+                "type": "string",
+                "enum": [
+                  "material.base_color",
+                  "material.metallic",
+                  "material.roughness",
+                  "material.emission_color",
+                  "material.emission_strength",
+                  "location",
+                  "rotation_euler",
+                  "scale",
+                  "energy",
+                  "color",
+                  "hide_render",
+                  "world.background_color",
+                  "world.background_strength",
+                  "scene.exposure",
+                  "scene.gamma"
+                ]
+              },
+              "material": {
+                "type": "string",
+                "nullable": true
+              },
+              "keys": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "t": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "scalar": {
+                          "type": "number",
+                          "nullable": true
+                        },
+                        "vector": {
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          },
+                          "nullable": true
+                        },
+                        "boolean": {
+                          "type": "boolean",
+                          "nullable": true
+                        }
+                      },
+                      "required": [
+                        "scalar",
+                        "vector",
+                        "boolean"
+                      ]
+                    },
+                    "curve": {
+                      "type": "string",
+                      "enum": [
+                        "CONSTANT",
+                        "LINEAR",
+                        "SMOOTH"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "t",
+                    "value",
+                    "curve"
+                  ]
+                },
+                "maxItems": 20
+              },
+              "source": {
+                "type": "string"
+              },
+              "action_id": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "required": [
+              "object",
+              "property",
+              "material",
+              "keys",
+              "source",
+              "action_id"
+            ]
+          },
+          "maxItems": 30
+        },
+        "expected_states": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "object": {
+                "type": "string"
+              },
+              "property": {
+                "type": "string",
+                "enum": [
+                  "material.base_color",
+                  "material.metallic",
+                  "material.roughness",
+                  "material.emission_color",
+                  "material.emission_strength",
+                  "location",
+                  "rotation_euler",
+                  "scale",
+                  "energy",
+                  "color",
+                  "hide_render",
+                  "world.background_color",
+                  "world.background_strength",
+                  "scene.exposure",
+                  "scene.gamma"
+                ]
+              },
+              "material": {
+                "type": "string",
+                "nullable": true
+              },
+              "t": {
+                "type": "number"
+              },
+              "value": {
+                "type": "object",
+                "properties": {
+                  "scalar": {
+                    "type": "number",
+                    "nullable": true
+                  },
+                  "vector": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "nullable": true
+                  },
+                  "boolean": {
+                    "type": "boolean",
+                    "nullable": true
+                  }
+                },
+                "required": [
+                  "scalar",
+                  "vector",
+                  "boolean"
+                ]
+              },
+              "tolerance": {
+                "type": "number",
+                "minimum": 0
+              },
+              "source": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "object",
+              "property",
+              "material",
+              "t",
+              "value",
+              "tolerance",
+              "source"
+            ]
+          },
+          "maxItems": 30
+        },
+        "state_bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "assertion_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "text",
+              "assertion_ids"
+            ]
+          }
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "changes",
+        "expected_states",
+        "state_bindings",
+        "missing"
+      ]
+    },
+    "equivalences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "spatial_id": {
+            "type": "string"
+          },
+          "dna_id": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "adn_entidades.json"
+            ]
+          },
+          "spatial_pointer": {
+            "type": "string"
+          },
+          "dna_pointer": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "spatial_id",
+          "dna_id",
+          "source",
+          "spatial_pointer",
+          "dna_pointer"
+        ]
+      },
+      "maxItems": 8
+    },
+    "remaining": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "resolutions",
+    "object_recipes",
+    "bird_profile",
+    "camera_numeric",
+    "live_scenery",
+    "equivalences",
+    "remaining"
+  ]
+}

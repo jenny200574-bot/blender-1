@@ -1,0 +1,285 @@
+{
+  "passed": false,
+  "errors": [
+    "Part ID must have global object namespace: cama_estructura_base",
+    "Part ID must have global object namespace: cama_colchon",
+    "Part ID must have global object namespace: cama_cabecero",
+    "Part ID must have global object namespace: cama_piecero",
+    "Part ID must have global object namespace: cama_pata_fl",
+    "Part ID must have global object namespace: cama_pata_fr",
+    "Part ID must have global object namespace: cama_pata_bl",
+    "Part ID must have global object namespace: cama_pata_br",
+    "Generated model not centered in declared local frame: [0.0, 0.42500000000000004, 0.0]",
+    "Geometría no coincide con medidas ADN: [1.05, 0.8500000000000001, 1.9000000000000001]"
+  ],
+  "metrics": null,
+  "recipe": {
+    "id": "obj-cama",
+    "source": "Argon_GENERATED_gdc-cama-nino",
+    "parts": [
+      {
+        "id": "cama_estructura_base",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "resolution": 32,
+        "tip_ratio": 1.0,
+        "position_m": [
+          0.0,
+          0.15,
+          0.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          90.0
+        ],
+        "dimensions_m": [
+          0.1,
+          1.05,
+          1.9
+        ],
+        "material": {
+          "rgba": [
+            0.6,
+            0.4,
+            0.2,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8
+        }
+      },
+      {
+        "id": "cama_colchon",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "resolution": 32,
+        "tip_ratio": 1.0,
+        "position_m": [
+          0.0,
+          0.3,
+          0.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          90.0
+        ],
+        "dimensions_m": [
+          0.2,
+          1.0,
+          1.85
+        ],
+        "material": {
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.9
+        }
+      },
+      {
+        "id": "cama_cabecero",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "resolution": 32,
+        "tip_ratio": 1.0,
+        "position_m": [
+          0.0,
+          0.425,
+          -0.925
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          90.0
+        ],
+        "dimensions_m": [
+          0.85,
+          1.05,
+          0.05
+        ],
+        "material": {
+          "rgba": [
+            0.6,
+            0.4,
+            0.2,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.7
+        }
+      },
+      {
+        "id": "cama_piecero",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "resolution": 32,
+        "tip_ratio": 1.0,
+        "position_m": [
+          0.0,
+          0.2,
+          0.925
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          90.0
+        ],
+        "dimensions_m": [
+          0.4,
+          1.05,
+          0.05
+        ],
+        "material": {
+          "rgba": [
+            0.6,
+            0.4,
+            0.2,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.7
+        }
+      },
+      {
+        "id": "cama_pata_fl",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "resolution": 16,
+        "tip_ratio": 0.8,
+        "position_m": [
+          -0.475,
+          0.05,
+          0.875
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "material": {
+          "rgba": [
+            0.5,
+            0.3,
+            0.1,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.5
+        }
+      },
+      {
+        "id": "cama_pata_fr",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "resolution": 16,
+        "tip_ratio": 0.8,
+        "position_m": [
+          0.475,
+          0.05,
+          0.875
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "material": {
+          "rgba": [
+            0.5,
+            0.3,
+            0.1,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.5
+        }
+      },
+      {
+        "id": "cama_pata_bl",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "resolution": 16,
+        "tip_ratio": 0.8,
+        "position_m": [
+          -0.475,
+          0.05,
+          -0.875
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "material": {
+          "rgba": [
+            0.5,
+            0.3,
+            0.1,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.5
+        }
+      },
+      {
+        "id": "cama_pata_br",
+        "shape": "CYLINDER",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "resolution": 16,
+        "tip_ratio": 0.8,
+        "position_m": [
+          0.475,
+          0.05,
+          -0.875
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions_m": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "material": {
+          "rgba": [
+            0.5,
+            0.3,
+            0.1,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.5
+        }
+      }
+    ]
+  },
+  "expected_dimensions_m": [
+    1.05,
+    1.9,
+    0.85
+  ],
+  "no_values_modified": true,
+  "assembly": "Only grouping named scalar components into vectors/materials"
+}

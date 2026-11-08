@@ -1,0 +1,791 @@
+{
+  "root_id": "universo_nuevo",
+  "object": {
+    "position_m": [
+      1,
+      2,
+      0.4
+    ],
+    "rotation_deg": [
+      20,
+      30,
+      40
+    ],
+    "material": {
+      "rgba": [
+        0.12,
+        0.38,
+        0.75,
+        1
+      ],
+      "metallic": 0.2,
+      "roughness": 0.35,
+      "source": "fixture técnico, no escena real"
+    },
+    "source": "fixture técnico",
+    "id": "mueble_nuevo_rho",
+    "shape": "STAR_FORMULA",
+    "formula": "escritorio_patas",
+    "dimensions_m": [
+      1.5,
+      0.7,
+      0.75
+    ],
+    "ancla_z": "base",
+    "materials_catalog": {
+      "_nota": "Material de RENDER por fórmula (PBR procedural) v2. Incluye light_energy / fill defaults documentados en ESQUEMA.",
+      "_defaults_exposicion": {
+        "world_color": [
+          0.06,
+          0.07,
+          0.1
+        ],
+        "world_strength": 0.42,
+        "view_exposure": 0.85,
+        "view_gamma": 1.0,
+        "fill_energy_plafon_factor": 1.0,
+        "oscuridad_legible": {
+          "world_strength_min": 0.22,
+          "monitor_energy_min_factor": 0.55,
+          "nota": "Con plafón off el mundo no baja de world_strength_min; monitores mantienen factor mínimo para legibilidad de formas."
+        },
+        "nota_v2": "Exposición genérica para moldes legibles sin quemar pantallas. Ajustable por datos, no por escena.",
+        "view_transform": "Standard",
+        "view_look": "None"
+      },
+      "plano": {
+        "base": [
+          0.48,
+          0.34,
+          0.2
+        ],
+        "rough": 0.48,
+        "nombre": "madera_laminada_o_suelo"
+      },
+      "caja": {
+        "base": [
+          0.42,
+          0.28,
+          0.16
+        ],
+        "rough": 0.5,
+        "nombre": "madera"
+      },
+      "bbox": {
+        "base": [
+          0.55,
+          0.55,
+          0.58
+        ],
+        "rough": 0.6,
+        "nombre": "bloque_neutro"
+      },
+      "cilindro": {
+        "base": [
+          0.35,
+          0.36,
+          0.38
+        ],
+        "rough": 0.4,
+        "metal": 0.5,
+        "nombre": "metal"
+      },
+      "punto": {
+        "base": [
+          1,
+          0,
+          1
+        ],
+        "rough": 1,
+        "nombre": "marcador"
+      },
+      "muros_caja_con_huecos": {
+        "base": [
+          0.82,
+          0.8,
+          0.76
+        ],
+        "rough": 0.85,
+        "nombre": "yeso"
+      },
+      "puerta_bisagra": {
+        "base": [
+          0.42,
+          0.28,
+          0.16
+        ],
+        "rough": 0.5,
+        "nombre": "madera"
+      },
+      "ventana_marco_vidrio": {
+        "base": [
+          0.28,
+          0.18,
+          0.1
+        ],
+        "rough": 0.45,
+        "nombre": "marco_madera"
+      },
+      "cortina_enrollable": {
+        "base": [
+          0.45,
+          0.4,
+          0.48
+        ],
+        "rough": 0.8,
+        "nombre": "tela"
+      },
+      "escritorio_patas": {
+        "base": [
+          0.42,
+          0.28,
+          0.16
+        ],
+        "rough": 0.48,
+        "nombre": "madera"
+      },
+      "silla_giratoria_ergonomica": {
+        "base": [
+          0.22,
+          0.28,
+          0.38
+        ],
+        "rough": 0.75,
+        "nombre": "tela_oficina"
+      },
+      "silla_simple": {
+        "base": [
+          0.35,
+          0.3,
+          0.25
+        ],
+        "rough": 0.7,
+        "nombre": "silla_terraza"
+      },
+      "mesa_simple": {
+        "base": [
+          0.4,
+          0.28,
+          0.16
+        ],
+        "rough": 0.5,
+        "nombre": "madera"
+      },
+      "cama_marco_colchon": {
+        "base": [
+          0.4,
+          0.3,
+          0.22
+        ],
+        "rough": 0.55,
+        "nombre": "madera_cama"
+      },
+      "almohada_simple": {
+        "base": [
+          0.88,
+          0.86,
+          0.82
+        ],
+        "rough": 0.9,
+        "nombre": "tela_almohada"
+      },
+      "manta_simple": {
+        "base": [
+          0.35,
+          0.42,
+          0.55
+        ],
+        "rough": 0.85,
+        "nombre": "tela_manta"
+      },
+      "armario_2puertas": {
+        "base": [
+          0.42,
+          0.28,
+          0.16
+        ],
+        "rough": 0.5,
+        "nombre": "madera"
+      },
+      "estanteria_abierta": {
+        "base": [
+          0.42,
+          0.28,
+          0.16
+        ],
+        "rough": 0.5,
+        "nombre": "madera"
+      },
+      "monitor_pantalla": {
+        "base": [
+          0.12,
+          0.12,
+          0.13
+        ],
+        "rough": 0.35,
+        "nombre": "plastico",
+        "pantalla_emit": [
+          0.08,
+          0.75,
+          0.95
+        ],
+        "pantalla_energy": 3.2,
+        "area_light_energy": 10.0
+      },
+      "torre_pc": {
+        "base": [
+          0.15,
+          0.15,
+          0.16
+        ],
+        "rough": 0.4,
+        "nombre": "plastico"
+      },
+      "teclado_simple": {
+        "base": [
+          0.15,
+          0.15,
+          0.16
+        ],
+        "rough": 0.4,
+        "nombre": "plastico"
+      },
+      "cables_haz": {
+        "base": [
+          0.18,
+          0.18,
+          0.2
+        ],
+        "rough": 0.55,
+        "nombre": "cable",
+        "emit_on": [
+          0.05,
+          0.85,
+          1.0
+        ],
+        "point_light_energy": 10.0,
+        "emit": [
+          0.05,
+          0.9,
+          1.0
+        ],
+        "emit_strength": 2.0
+      },
+      "lampara_arquitecto": {
+        "base": [
+          0.35,
+          0.36,
+          0.38
+        ],
+        "rough": 0.35,
+        "metal": 0.7,
+        "nombre": "metal",
+        "light_energy": 8.0
+      },
+      "columna_estructural": {
+        "base": [
+          0.72,
+          0.7,
+          0.66
+        ],
+        "rough": 0.8,
+        "nombre": "hormigon"
+      },
+      "papelera_cilindro": {
+        "base": [
+          0.4,
+          0.42,
+          0.45
+        ],
+        "rough": 0.35,
+        "metal": 0.7,
+        "nombre": "metal"
+      },
+      "perchero_pie": {
+        "base": [
+          0.35,
+          0.36,
+          0.38
+        ],
+        "rough": 0.4,
+        "metal": 0.6,
+        "nombre": "metal"
+      },
+      "plafon_area": {
+        "base": [
+          0.95,
+          0.9,
+          0.75
+        ],
+        "rough": 0.4,
+        "emit": [
+          1.0,
+          0.9,
+          0.7
+        ],
+        "emit_strength": 1.8,
+        "nombre": "plafon_calido",
+        "light_energy": 95.0,
+        "light_color": [
+          1.0,
+          0.92,
+          0.75
+        ]
+      },
+      "bloque_edificio": {
+        "base": [
+          0.55,
+          0.52,
+          0.48
+        ],
+        "rough": 0.7,
+        "nombre": "fachada"
+      },
+      "muro_plano": {
+        "base": [
+          0.62,
+          0.6,
+          0.56
+        ],
+        "rough": 0.75,
+        "nombre": "muro_exterior"
+      },
+      "arbol_simple": {
+        "base": [
+          0.2,
+          0.35,
+          0.15
+        ],
+        "rough": 0.85,
+        "nombre": "follaje"
+      },
+      "rack_servidores": {
+        "base": [
+          0.15,
+          0.18,
+          0.22
+        ],
+        "rough": 0.4,
+        "metal": 0.6,
+        "nombre": "rack",
+        "emit": [
+          0.1,
+          0.4,
+          1.0
+        ],
+        "emit_strength": 1.5
+      },
+      "farola_poste": {
+        "base": [
+          0.25,
+          0.25,
+          0.28
+        ],
+        "rough": 0.4,
+        "metal": 0.7,
+        "nombre": "farola",
+        "light_energy": 40.0,
+        "light_color": [
+          1.0,
+          0.92,
+          0.7
+        ]
+      },
+      "banco_calle": {
+        "base": [
+          0.35,
+          0.28,
+          0.18
+        ],
+        "rough": 0.6,
+        "nombre": "banco"
+      },
+      "auto_simple": {
+        "base": [
+          0.25,
+          0.28,
+          0.35
+        ],
+        "rough": 0.35,
+        "metal": 0.4,
+        "nombre": "carroceria"
+      },
+      "papelera_calle": {
+        "base": [
+          0.3,
+          0.55,
+          0.35
+        ],
+        "rough": 0.5,
+        "nombre": "papelera_verde"
+      },
+      "letrero_calle": {
+        "base": [
+          0.7,
+          0.7,
+          0.72
+        ],
+        "rough": 0.5,
+        "nombre": "letrero"
+      },
+      "semaforo_calle": {
+        "base": [
+          0.15,
+          0.15,
+          0.16
+        ],
+        "rough": 0.4,
+        "metal": 0.6,
+        "nombre": "semaforo"
+      },
+      "bolardo_calle": {
+        "base": [
+          0.55,
+          0.5,
+          0.35
+        ],
+        "rough": 0.5,
+        "metal": 0.3,
+        "nombre": "bolardo"
+      },
+      "hidrante_calle": {
+        "base": [
+          0.7,
+          0.12,
+          0.1
+        ],
+        "rough": 0.45,
+        "metal": 0.5,
+        "nombre": "hidrante"
+      },
+      "jardinera_calle": {
+        "base": [
+          0.45,
+          0.35,
+          0.25
+        ],
+        "rough": 0.7,
+        "nombre": "jardinera"
+      },
+      "bicicletero_calle": {
+        "base": [
+          0.4,
+          0.4,
+          0.42
+        ],
+        "rough": 0.4,
+        "metal": 0.8,
+        "nombre": "bicicletero"
+      },
+      "parada_autobus": {
+        "base": [
+          0.5,
+          0.55,
+          0.6
+        ],
+        "rough": 0.5,
+        "nombre": "parada"
+      },
+      "quiosco_calle": {
+        "base": [
+          0.55,
+          0.25,
+          0.2
+        ],
+        "rough": 0.6,
+        "nombre": "quiosco"
+      },
+      "toldo_calle": {
+        "base": [
+          0.65,
+          0.2,
+          0.15
+        ],
+        "rough": 0.8,
+        "nombre": "toldo"
+      }
+    },
+    "points": [
+      {
+        "id": "contacto_sin_alias",
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "rotation_deg": [
+          0,
+          0,
+          0
+        ],
+        "frame": "WORLD",
+        "pieza_movil": "mueble_nuevo_rho.tablero",
+        "source": "fixture técnico"
+      }
+    ],
+    "pivots": [
+      {
+        "id": "pivote_elegido_por_dato",
+        "position_m": [
+          0,
+          0,
+          0.75
+        ],
+        "rotation_deg": [
+          0,
+          0,
+          0
+        ],
+        "pieces": [
+          "mueble_nuevo_rho.tablero"
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "id": "control_arbitrario",
+        "target_piece": "pivote_elegido_por_dato",
+        "property": "rotation_euler",
+        "units": "deg",
+        "range": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            90
+          ]
+        ],
+        "keys": [
+          {
+            "t": 0,
+            "c": 0,
+            "curve": "LINEAR"
+          },
+          {
+            "t": 1,
+            "c": 1,
+            "curve": "LINEAR"
+          }
+        ],
+        "source": "fixture técnico"
+      }
+    ]
+  },
+  "glass": {
+    "position_m": [
+      5,
+      0,
+      0.5
+    ],
+    "rotation_deg": [
+      0,
+      0,
+      0
+    ],
+    "material": {
+      "rgba": [
+        0.2,
+        0.4,
+        0.6,
+        0.3
+      ],
+      "metallic": 0.2,
+      "roughness": 0.35,
+      "source": "fixture técnico, no escena real",
+      "transmission": 0.82,
+      "alpha": 0.3,
+      "ior": 1.45
+    },
+    "source": "fixture técnico",
+    "id": "vidrio_delta",
+    "shape": "BOX",
+    "dimensions_m": [
+      0.1,
+      0.5,
+      1
+    ],
+    "resolution": 12,
+    "bevel": {
+      "width_m": 0.01,
+      "segments": 3,
+      "angle_deg": 30
+    }
+  },
+  "architecture": {
+    "position_m": [
+      0,
+      0,
+      0
+    ],
+    "rotation_deg": [
+      0,
+      0,
+      0
+    ],
+    "material": {
+      "rgba": [
+        0.12,
+        0.38,
+        0.75,
+        1
+      ],
+      "metallic": 0.2,
+      "roughness": 0.35,
+      "source": "fixture técnico, no escena real"
+    },
+    "source": "fixture técnico",
+    "id": "arquitectura_sigma",
+    "shape": "STAR_FORMULA",
+    "formula": "muros_caja_con_huecos",
+    "dimensions_m": [
+      3,
+      0.1,
+      2
+    ],
+    "ancla_z": "base",
+    "architecture": {
+      "walls": [
+        {
+          "position_m": [
+            8,
+            0,
+            0
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            45
+          ],
+          "material": {
+            "rgba": [
+              0.12,
+              0.38,
+              0.75,
+              1
+            ],
+            "metallic": 0.2,
+            "roughness": 0.35,
+            "source": "fixture técnico, no escena real"
+          },
+          "source": "fixture técnico",
+          "id": "pared_sin_nombre_convencional",
+          "width_m": 3,
+          "height_m": 2,
+          "thickness_m": 0.1,
+          "openings": [
+            {
+              "id": "apertura_x",
+              "rect_m": [
+                0.2,
+                0.3,
+                0.7,
+                1.5
+              ]
+            },
+            {
+              "id": "apertura_y",
+              "rect_m": [
+                1.5,
+                0.2,
+                2.5,
+                1.8
+              ]
+            }
+          ],
+          "resolution": 8
+        }
+      ],
+      "exterior_geometry": []
+    }
+  },
+  "wall_id": "pared_sin_nombre_convencional",
+  "hole_centers_local": [
+    [
+      0.4,
+      0.8
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "moving_piece": "mueble_nuevo_rho.tablero",
+  "pivot_id": "pivote_elegido_por_dato",
+  "rig_id": "robot_tecnico",
+  "rig": {
+    "bones": [
+      {
+        "id": "cadena_inicio",
+        "head": [
+          0,
+          0,
+          0
+        ],
+        "tail": [
+          0,
+          0,
+          1
+        ],
+        "parent": null,
+        "limits_deg": [
+          [
+            -180,
+            180
+          ],
+          [
+            -180,
+            180
+          ],
+          [
+            -180,
+            180
+          ]
+        ],
+        "role": "upper"
+      },
+      {
+        "id": "cadena_fin",
+        "head": [
+          0,
+          0,
+          1
+        ],
+        "tail": [
+          1,
+          0,
+          1
+        ],
+        "parent": "cadena_inicio",
+        "limits_deg": [
+          [
+            -180,
+            180
+          ],
+          [
+            -180,
+            180
+          ],
+          [
+            -180,
+            180
+          ]
+        ],
+        "role": "effector"
+      }
+    ]
+  },
+  "effector": "cadena_fin",
+  "fps": 8,
+  "duration_s": 1,
+  "point_local_rest": [
+    0.4,
+    0,
+    0.75
+  ],
+  "contact_tolerance_m": 0.001,
+  "minimum_point_travel_m": 0.3
+}

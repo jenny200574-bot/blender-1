@@ -1,0 +1,551 @@
+{
+  "nombre": "lanza_doble_punta",
+  "tipo": "objeto",
+  "fuente_adn": "Lanza magica/tecnologica SIMETRICA de doble punta; se estrecha desde un abultamiento central hacia dos puntas muy afiladas; todo el cuerpo son hebras trenzadas helicoidales. Largo ~1.80-2.00 m (~1.90 m). Nucleo central: esfera / vacio negro absoluto, mate, en el centro exacto. Activa: aura violeta/magenta/lavanda, anillos y orbitas concentricos translucidos lavanda/cian claro.",
+  "tamano_m_por_defecto": [
+    0.16,
+    0.16,
+    1.9
+  ],
+  "medidas_adn": {
+    "ancho_m": [
+      0.1,
+      0.28
+    ],
+    "fondo_m": [
+      0.1,
+      0.28
+    ],
+    "alto_m": [
+      1.8,
+      2.0
+    ]
+  },
+  "materiales": {
+    "nucleo": {
+      "base": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rough": 1.0,
+      "metal": 0.0,
+      "emit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emit_strength": 0.0,
+      "alpha": 1.0,
+      "desgaste": {
+        "tipo": "organico",
+        "fuerza": 0.0,
+        "escala": 1.0
+      }
+    },
+    "hebra": {
+      "base": [
+        0.24,
+        0.06,
+        0.48
+      ],
+      "rough": 0.28,
+      "metal": 0.65,
+      "emit": [
+        0.55,
+        0.18,
+        1.0
+      ],
+      "emit_strength": 4.5,
+      "alpha": 1.0,
+      "desgaste": {
+        "tipo": "vertical",
+        "fuerza": 0.2,
+        "escala": 4.0
+      }
+    },
+    "punta": {
+      "base": [
+        0.55,
+        0.22,
+        0.95
+      ],
+      "rough": 0.2,
+      "metal": 0.5,
+      "emit": [
+        0.85,
+        0.35,
+        1.0
+      ],
+      "emit_strength": 18.0,
+      "alpha": 1.0,
+      "desgaste": {
+        "tipo": "vertical",
+        "fuerza": 0.0,
+        "escala": 1.0
+      }
+    },
+    "anillo": {
+      "base": [
+        0.75,
+        0.68,
+        1.0
+      ],
+      "rough": 0.2,
+      "metal": 0.0,
+      "emit": [
+        0.75,
+        0.65,
+        1.0
+      ],
+      "emit_strength": 6.5,
+      "alpha": 0.5,
+      "desgaste": {
+        "tipo": "organico",
+        "fuerza": 0.0,
+        "escala": 1.0
+      }
+    }
+  },
+  "piezas": [
+    {
+      "tipo": "esfera",
+      "id": "nucleo",
+      "pos": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "dim": [
+        0.55,
+        0.55,
+        0.05
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "verts": 16,
+      "material": "nucleo",
+      "repetir": {
+        "patron": "ninguno",
+        "n": 1,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "cono",
+      "id": "cuerpo_sup",
+      "pos": [
+        0.0,
+        0.0,
+        0.52
+      ],
+      "dim": [
+        0.38,
+        0.38,
+        0.38
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "verts": 12,
+      "material": "hebra",
+      "repetir": {
+        "patron": "ninguno",
+        "n": 1,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "cono",
+      "id": "cuerpo_inf",
+      "pos": [
+        0.0,
+        0.0,
+        0.48
+      ],
+      "dim": [
+        0.38,
+        0.38,
+        0.38
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        180.0,
+        0.0,
+        0.0
+      ],
+      "verts": 12,
+      "material": "hebra",
+      "repetir": {
+        "patron": "ninguno",
+        "n": 1,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "cilindro",
+      "id": "hebras_espiral",
+      "pos": [
+        0.0,
+        0.0,
+        0.12
+      ],
+      "dim": [
+        0.1,
+        0.1,
+        0.76
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "verts": 8,
+      "material": "hebra",
+      "repetir": {
+        "patron": "radial",
+        "n": 4,
+        "paso_m": 0.0,
+        "f": 0.14,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "cono",
+      "id": "punta_sup",
+      "pos": [
+        0.0,
+        0.0,
+        0.9
+      ],
+      "dim": [
+        0.2,
+        0.2,
+        0.1
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "verts": 12,
+      "material": "punta",
+      "repetir": {
+        "patron": "ninguno",
+        "n": 1,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "cono",
+      "id": "punta_inf",
+      "pos": [
+        0.0,
+        0.0,
+        0.1
+      ],
+      "dim": [
+        0.2,
+        0.2,
+        0.1
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        180.0,
+        0.0,
+        0.0
+      ],
+      "verts": 12,
+      "material": "punta",
+      "repetir": {
+        "patron": "ninguno",
+        "n": 1,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.0,
+        "centrado": false,
+        "semilla": 0
+      }
+    },
+    {
+      "tipo": "toro",
+      "id": "anillos",
+      "pos": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "dim": [
+        0.45,
+        0.45,
+        0.006
+      ],
+      "dim_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rot_deg": [
+        8.0,
+        0.0,
+        0.0
+      ],
+      "verts": 24,
+      "material": "anillo",
+      "repetir": {
+        "patron": "pila_z",
+        "n": 3,
+        "paso_m": 0.0,
+        "f": 0.0,
+        "f_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alturas_f": [],
+        "en_tope": false,
+        "desfase_deg": 0.0,
+        "paso_f": 0.14,
+        "centrado": true,
+        "semilla": 0
+      }
+    }
+  ],
+  "bisagras": [],
+  "luces": [
+    {
+      "tipo": "point",
+      "pos": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "energy": 55.0,
+      "color": [
+        0.7,
+        0.3,
+        1.0
+      ],
+      "size": 0.15
+    }
+  ],
+  "mundo": {
+    "color_cenit": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "color_horizonte": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fuerza": 0.0,
+    "estrellas_densidad": 0.0,
+    "estrellas_brillo": 0.0,
+    "estrellas_escala": 0.0
+  },
+  "puntos_requeridos": [
+    "lanza.agarre",
+    "lanza.punta",
+    "lanza.punta_inf"
+  ],
+  "requisitos_adn": [
+    {
+      "tipo": "pieza",
+      "id": "nucleo",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "Nucleo central: esfera / vacio negro absoluto, mate, en el centro exacto"
+    },
+    {
+      "tipo": "pieza",
+      "id": "punta_sup",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "se estrecha desde un abultamiento central hacia dos puntas muy afiladas"
+    },
+    {
+      "tipo": "pieza",
+      "id": "anillos",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "anillos y orbitas concentricos translucidos lavanda/cian claro"
+    },
+    {
+      "tipo": "material_metal",
+      "id": "",
+      "material": "hebra",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "Hebras violeta oscuro, purpura y azul electrico/marino, satinadas (metalico/cristalino/biologico)"
+    },
+    {
+      "tipo": "emision",
+      "id": "",
+      "material": "punta",
+      "pieza": "",
+      "n": 0,
+      "nombre": "",
+      "cita": "Activa (por defecto): aura violeta/magenta/lavanda, sobre todo en las puntas"
+    },
+    {
+      "tipo": "punto",
+      "id": "",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "lanza.agarre",
+      "cita": "lanza.agarre"
+    },
+    {
+      "tipo": "punto",
+      "id": "",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "lanza.punta",
+      "cita": "lanza.punta"
+    },
+    {
+      "tipo": "punto",
+      "id": "",
+      "material": "",
+      "pieza": "",
+      "n": 0,
+      "nombre": "lanza.punta_inf",
+      "cita": "lanza.punta_inf"
+    }
+  ],
+  "esquema": "formula_puntos.v2",
+  "puntos_nombrados": {
+    "lanza.agarre": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "lanza.punta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "lanza.punta_inf": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "meta": {
+    "origen": "ia (Argon gemini-4-argon)",
+    "fecha": "2026-11-04",
+    "escena": "esc11",
+    "llamada": "2a-obj-r1",
+    "validado": true
+  }
+}

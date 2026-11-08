@@ -1,0 +1,1558 @@
+{
+  "recipes": {
+    "iteracion10_cofre_plano": {
+      "passed": false,
+      "errors": [
+        "Part ID must have global object namespace: cuerpo_base",
+        "Part ID must have global object namespace: tapa_abovedada",
+        "Part ID must have global object namespace: candado_color",
+        "Part ID must have global object namespace: candado_numero",
+        "Part ID must have global object namespace: candado_letra",
+        "Generated model not centered in declared local frame: [0.0, 0.24, 0.009999999999999995]",
+        "Geometría no coincide con medidas ADN: [0.65, 0.48, 0.43999999999999995]"
+      ],
+      "metrics": null,
+      "recipe": {
+        "id": "obj-cofre-dorado",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "parts": [
+          {
+            "id": "cuerpo_base",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.15,
+              0.0
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.65,
+              0.3,
+              0.42
+            ],
+            "material": {
+              "rgba": [
+                0.85,
+                0.65,
+                0.15,
+                1.0
+              ],
+              "metallic": 0.9,
+              "roughness": 0.3
+            }
+          },
+          {
+            "id": "tapa_abovedada",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 32,
+            "tip_ratio": 0.0,
+            "position_m": [
+              0.0,
+              0.39,
+              0.0
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.65,
+              0.18,
+              0.42
+            ],
+            "material": {
+              "rgba": [
+                1.0,
+                0.84,
+                0.0,
+                1.0
+              ],
+              "metallic": 1.0,
+              "roughness": 0.2
+            }
+          },
+          {
+            "id": "candado_color",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              -0.15,
+              0.25,
+              0.21
+            ],
+            "rotation_deg": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.08,
+              0.04,
+              0.08
+            ],
+            "material": {
+              "rgba": [
+                0.9,
+                0.1,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.8,
+              "roughness": 0.4
+            }
+          },
+          {
+            "id": "candado_numero",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.25,
+              0.21
+            ],
+            "rotation_deg": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.08,
+              0.04,
+              0.08
+            ],
+            "material": {
+              "rgba": [
+                0.1,
+                0.8,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.8,
+              "roughness": 0.4
+            }
+          },
+          {
+            "id": "candado_letra",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.15,
+              0.25,
+              0.21
+            ],
+            "rotation_deg": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.08,
+              0.04,
+              0.08
+            ],
+            "material": {
+              "rgba": [
+                0.1,
+                0.1,
+                0.9,
+                1.0
+              ],
+              "metallic": 0.8,
+              "roughness": 0.4
+            }
+          }
+        ]
+      },
+      "expected_dimensions_m": [
+        0.65,
+        0.42,
+        0.48
+      ],
+      "no_values_modified": true,
+      "assembly": "Only grouping named scalar components into vectors/materials"
+    },
+    "iteracion12_cama_plana": {
+      "passed": false,
+      "errors": [
+        "Part ID must have global object namespace: cama_estructura_base",
+        "Part ID must have global object namespace: cama_colchon",
+        "Part ID must have global object namespace: cama_cabecero",
+        "Part ID must have global object namespace: cama_piecero",
+        "Part ID must have global object namespace: cama_pata_fl",
+        "Part ID must have global object namespace: cama_pata_fr",
+        "Part ID must have global object namespace: cama_pata_bl",
+        "Part ID must have global object namespace: cama_pata_br",
+        "Generated model not centered in declared local frame: [0.0, 0.42500000000000004, 0.0]",
+        "Geometría no coincide con medidas ADN: [1.05, 0.8500000000000001, 1.9000000000000001]"
+      ],
+      "metrics": null,
+      "recipe": {
+        "id": "obj-cama",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "parts": [
+          {
+            "id": "cama_estructura_base",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.15,
+              0.0
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "dimensions_m": [
+              0.1,
+              1.05,
+              1.9
+            ],
+            "material": {
+              "rgba": [
+                0.6,
+                0.4,
+                0.2,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.8
+            }
+          },
+          {
+            "id": "cama_colchon",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.3,
+              0.0
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "dimensions_m": [
+              0.2,
+              1.0,
+              1.85
+            ],
+            "material": {
+              "rgba": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.9
+            }
+          },
+          {
+            "id": "cama_cabecero",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.425,
+              -0.925
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "dimensions_m": [
+              0.85,
+              1.05,
+              0.05
+            ],
+            "material": {
+              "rgba": [
+                0.6,
+                0.4,
+                0.2,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.7
+            }
+          },
+          {
+            "id": "cama_piecero",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.2,
+              0.925
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "dimensions_m": [
+              0.4,
+              1.05,
+              0.05
+            ],
+            "material": {
+              "rgba": [
+                0.6,
+                0.4,
+                0.2,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.7
+            }
+          },
+          {
+            "id": "cama_pata_fl",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 0.8,
+            "position_m": [
+              -0.475,
+              0.05,
+              0.875
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          },
+          {
+            "id": "cama_pata_fr",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 0.8,
+            "position_m": [
+              0.475,
+              0.05,
+              0.875
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          },
+          {
+            "id": "cama_pata_bl",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 0.8,
+            "position_m": [
+              -0.475,
+              0.05,
+              -0.875
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          },
+          {
+            "id": "cama_pata_br",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 0.8,
+            "position_m": [
+              0.475,
+              0.05,
+              -0.875
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          }
+        ]
+      },
+      "expected_dimensions_m": [
+        1.05,
+        1.9,
+        0.85
+      ],
+      "no_values_modified": true,
+      "assembly": "Only grouping named scalar components into vectors/materials"
+    },
+    "iteracion13_cofre_reparado": {
+      "passed": false,
+      "errors": [
+        "Generated model not centered in declared local frame: [0.0, -0.020000000000000004, 0.0]",
+        "Geometría no coincide con medidas ADN: [0.65, 0.45999999999999996, 0.48]"
+      ],
+      "metrics": null,
+      "recipe": {
+        "id": "obj-cofre-dorado",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "parts": [
+          {
+            "id": "obj-cofre-dorado.cuerpo",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.0,
+              -0.09
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.65,
+              0.42,
+              0.3
+            ],
+            "material": {
+              "rgba": [
+                0.85,
+                0.65,
+                0.15,
+                1.0
+              ],
+              "metallic": 0.9,
+              "roughness": 0.3
+            }
+          },
+          {
+            "id": "obj-cofre-dorado.tapa",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 32,
+            "tip_ratio": 0.0,
+            "position_m": [
+              0.0,
+              0.0,
+              0.15
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.65,
+              0.42,
+              0.18
+            ],
+            "material": {
+              "rgba": [
+                1.0,
+                0.84,
+                0.0,
+                1.0
+              ],
+              "metallic": 1.0,
+              "roughness": 0.2
+            }
+          },
+          {
+            "id": "obj-cofre-dorado.candado_color",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              -0.15,
+              -0.21,
+              0.01
+            ],
+            "rotation_deg": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.08,
+              0.04,
+              0.08
+            ],
+            "material": {
+              "rgba": [
+                0.9,
+                0.1,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.8,
+              "roughness": 0.4
+            }
+          },
+          {
+            "id": "obj-cofre-dorado.candado_numero",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              -0.21,
+              0.01
+            ],
+            "rotation_deg": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.08,
+              0.04,
+              0.08
+            ],
+            "material": {
+              "rgba": [
+                0.1,
+                0.8,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.8,
+              "roughness": 0.4
+            }
+          },
+          {
+            "id": "obj-cofre-dorado.candado_letra",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.15,
+              -0.21,
+              0.01
+            ],
+            "rotation_deg": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.08,
+              0.04,
+              0.08
+            ],
+            "material": {
+              "rgba": [
+                0.1,
+                0.1,
+                0.9,
+                1.0
+              ],
+              "metallic": 0.8,
+              "roughness": 0.4
+            }
+          }
+        ]
+      },
+      "expected_dimensions_m": [
+        0.65,
+        0.42,
+        0.48
+      ],
+      "no_values_modified": true,
+      "assembly": "Only grouping named scalar components into vectors/materials"
+    },
+    "iteracion14_cama_reparada": {
+      "passed": false,
+      "errors": [
+        "Generated model not centered in declared local frame: [0.0, 0.0, -0.21250000000000002]",
+        "Geometría no coincide con medidas ADN: [1.05, 2.9000000000000004, 2.0250000000000004]"
+      ],
+      "metrics": null,
+      "recipe": {
+        "id": "obj-cama",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "parts": [
+          {
+            "id": "obj-cama.estructura",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.0,
+              -0.275
+            ],
+            "rotation_deg": [
+              90.0,
+              0.0,
+              90.0
+            ],
+            "dimensions_m": [
+              1.05,
+              1.9,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.6,
+                0.4,
+                0.2,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.8
+            }
+          },
+          {
+            "id": "obj-cama.colchon",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.025,
+              -0.125
+            ],
+            "rotation_deg": [
+              90.0,
+              0.0,
+              90.0
+            ],
+            "dimensions_m": [
+              1.0,
+              1.85,
+              0.2
+            ],
+            "material": {
+              "rgba": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.9
+            }
+          },
+          {
+            "id": "obj-cama.cabecero",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              -0.925,
+              0.0
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "dimensions_m": [
+              1.05,
+              0.05,
+              0.85
+            ],
+            "material": {
+              "rgba": [
+                0.6,
+                0.4,
+                0.2,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.7
+            }
+          },
+          {
+            "id": "obj-cama.piecero",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.925,
+              -0.225
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "dimensions_m": [
+              1.05,
+              0.05,
+              0.4
+            ],
+            "material": {
+              "rgba": [
+                0.6,
+                0.4,
+                0.2,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.7
+            }
+          },
+          {
+            "id": "obj-cama.pata_fl",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 0.8,
+            "position_m": [
+              -0.475,
+              0.875,
+              -0.375
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          },
+          {
+            "id": "obj-cama.pata_fr",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 0.8,
+            "position_m": [
+              0.475,
+              0.875,
+              -0.375
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          },
+          {
+            "id": "obj-cama.pata_bl",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 0.8,
+            "position_m": [
+              -0.475,
+              -0.875,
+              -0.375
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          },
+          {
+            "id": "obj-cama.pata_br",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 0.8,
+            "position_m": [
+              0.475,
+              -0.875,
+              -0.375
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          }
+        ]
+      },
+      "expected_dimensions_m": [
+        1.05,
+        1.9,
+        0.85
+      ],
+      "no_values_modified": true,
+      "assembly": "Only grouping named scalar components into vectors/materials"
+    },
+    "iteracion16_cofre_reparado2": {
+      "passed": true,
+      "errors": [],
+      "metrics": {
+        "passed": true,
+        "dimensions_m": [
+          0.65,
+          0.42,
+          0.48
+        ],
+        "tolerance_m": 0.001,
+        "part_count": 5,
+        "boxes": false,
+        "query_sha256": "ef272ce7227018d648c93f4c75c7f74aa65d81a08e006b341c5cd20ec2892ed8"
+      },
+      "recipe": {
+        "id": "obj-cofre-dorado",
+        "source": "Argon_GENERATED:gdc-cofre-abecedario",
+        "parts": [
+          {
+            "id": "obj-cofre-dorado.cuerpo",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 32,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.0,
+              0.0,
+              -0.09
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.65,
+              0.42,
+              0.3
+            ],
+            "material": {
+              "rgba": [
+                0.85,
+                0.65,
+                0.15,
+                1.0
+              ],
+              "metallic": 0.9,
+              "roughness": 0.3
+            }
+          },
+          {
+            "id": "obj-cofre-dorado.tapa",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 32,
+            "tip_ratio": 0.0,
+            "position_m": [
+              0.0,
+              0.0,
+              0.15
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.65,
+              0.42,
+              0.18
+            ],
+            "material": {
+              "rgba": [
+                1.0,
+                0.84,
+                0.0,
+                1.0
+              ],
+              "metallic": 1.0,
+              "roughness": 0.2
+            }
+          },
+          {
+            "id": "obj-cofre-dorado.candado_color",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 16,
+            "tip_ratio": 0.0,
+            "position_m": [
+              -0.15,
+              -0.19,
+              0.01
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.08,
+              0.04,
+              0.08
+            ],
+            "material": {
+              "rgba": [
+                0.9,
+                0.1,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.8,
+              "roughness": 0.4
+            }
+          },
+          {
+            "id": "obj-cofre-dorado.candado_numero",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 16,
+            "tip_ratio": 0.0,
+            "position_m": [
+              0.0,
+              -0.19,
+              0.01
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.08,
+              0.04,
+              0.08
+            ],
+            "material": {
+              "rgba": [
+                0.1,
+                0.8,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.8,
+              "roughness": 0.4
+            }
+          },
+          {
+            "id": "obj-cofre-dorado.candado_letra",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED:gdc-cofre-abecedario",
+            "resolution": 16,
+            "tip_ratio": 0.0,
+            "position_m": [
+              0.15,
+              -0.19,
+              0.01
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.08,
+              0.04,
+              0.08
+            ],
+            "material": {
+              "rgba": [
+                0.1,
+                0.1,
+                0.9,
+                1.0
+              ],
+              "metallic": 0.8,
+              "roughness": 0.4
+            }
+          }
+        ]
+      },
+      "expected_dimensions_m": [
+        0.65,
+        0.42,
+        0.48
+      ],
+      "no_values_modified": true,
+      "assembly": "Only grouping named scalar components into vectors/materials"
+    },
+    "iteracion17_cama_reparada2": {
+      "passed": true,
+      "errors": [],
+      "metrics": {
+        "passed": true,
+        "dimensions_m": [
+          1.05,
+          1.9000000000000001,
+          0.8500000000000001
+        ],
+        "tolerance_m": 0.001,
+        "part_count": 8,
+        "boxes": false,
+        "query_sha256": "a8fbd191ea2b7b6e2744261b19db886894794b9886bf70c0774e500322d51b89"
+      },
+      "recipe": {
+        "id": "obj-cama",
+        "source": "Argon_GENERATED_gdc-cama-nino",
+        "parts": [
+          {
+            "id": "obj-cama.cabecero",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 0.0,
+            "position_m": [
+              0.0,
+              -0.925,
+              0.0
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              1.05,
+              0.05,
+              0.85
+            ],
+            "material": {
+              "rgba": [
+                0.6,
+                0.4,
+                0.2,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.8
+            }
+          },
+          {
+            "id": "obj-cama.piecero",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 0.0,
+            "position_m": [
+              0.0,
+              0.925,
+              -0.225
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              1.05,
+              0.05,
+              0.4
+            ],
+            "material": {
+              "rgba": [
+                0.6,
+                0.4,
+                0.2,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.8
+            }
+          },
+          {
+            "id": "obj-cama.estructura",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 0.0,
+            "position_m": [
+              0.0,
+              0.0,
+              -0.275
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              1.05,
+              1.8,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.6,
+                0.4,
+                0.2,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.8
+            }
+          },
+          {
+            "id": "obj-cama.colchon",
+            "shape": "ELLIPSOID",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 32,
+            "tip_ratio": 0.0,
+            "position_m": [
+              0.0,
+              0.025,
+              -0.125
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              1.0,
+              1.75,
+              0.2
+            ],
+            "material": {
+              "rgba": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.9
+            }
+          },
+          {
+            "id": "obj-cama.pata_fl",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              -0.475,
+              0.85,
+              -0.375
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          },
+          {
+            "id": "obj-cama.pata_fr",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.475,
+              0.85,
+              -0.375
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          },
+          {
+            "id": "obj-cama.pata_bl",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              -0.475,
+              -0.85,
+              -0.375
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          },
+          {
+            "id": "obj-cama.pata_br",
+            "shape": "CYLINDER",
+            "source": "Argon_GENERATED_gdc-cama-nino",
+            "resolution": 16,
+            "tip_ratio": 1.0,
+            "position_m": [
+              0.475,
+              -0.85,
+              -0.375
+            ],
+            "rotation_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "dimensions_m": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "material": {
+              "rgba": [
+                0.5,
+                0.3,
+                0.1,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.5
+            }
+          }
+        ]
+      },
+      "expected_dimensions_m": [
+        1.05,
+        1.9,
+        0.85
+      ],
+      "no_values_modified": true,
+      "assembly": "Only grouping named scalar components into vectors/materials"
+    }
+  },
+  "inventory": {
+    "passed": true,
+    "errors": [],
+    "rows": [
+      {
+        "campo": "motion/respuesta_2b.json",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea motion/respuesta_2b.json; la respuesta está truncada y no es un contrato ejecutable completo."
+      },
+      {
+        "campo": "motion/contacts",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "No se encontraron datos de contacto de personajes en las fuentes proporcionadas."
+      },
+      {
+        "campo": "rules/source_parameters",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El campo rules_source en entrada_escena.json es nulo; no hay parametros de reglas integrados."
+      },
+      {
+        "campo": "entities/ch-piquito-030a/anatomy_profile",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea anatomy_profile de ch-piquito-030a; los datos descriptivos no constituyen un activo 3D certificado."
+      },
+      {
+        "campo": "props/obj-libro-cuentos__e1-8/dna_ref",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea el ADN de obj-libro-cuentos; falta la representación declarativa vinculada para ejecución."
+      },
+      {
+        "campo": "props/Ventana con vista al arcoíris/dna_ref",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "Ventana con vista al arcoiris no tiene registro en adn_entidades.json, solo en bindings de escena."
+      },
+      {
+        "campo": "props/obj-cama/recipe",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea la receta de obj-cama; la geometría actual falló la validación contra las medidas del ADN."
+      },
+      {
+        "campo": "bindings/Centro de la habitación/reference_kind",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "No existe el campo reference_kind en los bindings de entrada_escena.json para el Centro de la habitacion."
+      },
+      {
+        "campo": "props/obj-visor-spark/dna_ref",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea el ADN de obj-visor-spark; pendiente extraccion de ADN Ako y vinculacion 3D."
+      },
+      {
+        "campo": "props/obj-cofre-dorado/recipe",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea la receta de obj-cofre-dorado; la geometría falló la validación técnica contra medidas ADN."
+      },
+      {
+        "campo": "environment/live_source",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea environment/live_source; el estatus es incompleto y falta el binding inequívoco de objetos."
+      },
+      {
+        "campo": "camera/inputs_4g",
+        "status": "SOURCE",
+        "source": "entrada_escena.json#/provisional/2/mensaje",
+        "reason": "Dato validado por SHA en AVANCE04 segun requerimiento de auditoria (aunque sea luz tecnica)."
+      },
+      {
+        "campo": "motion/semantic_index/approval",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "No existe aprobacion semantica; physics_validated es false en programa_2b.json."
+      },
+      {
+        "campo": "coordinates",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El campo coordinates en entrada_escena.json es nulo."
+      },
+      {
+        "campo": "ejes",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea el campo ejes; los ejes actuales (+Y frente/+Z arriba) no estan certificados."
+      },
+      {
+        "campo": "luces",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea el campo luces; las luces actuales son tecnicas y no hay iluminacion artistica aprobada."
+      },
+      {
+        "campo": "2B",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea 2B; la respuesta de Argon esta truncada y no ha sido recibida ni aprobada."
+      },
+      {
+        "campo": "iluminacion",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea iluminacion; se usan luces neutras tecnicas porque las luces fuente estan desactivadas."
+      },
+      {
+        "campo": "motion/status",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "No existe un campo de estatus de movimiento consolidado fuera de los segmentos individuales."
+      },
+      {
+        "campo": "environment/live_data",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "El motor bloquea environment/live_data; el estatus declarado en escenario_vivo.json es incomplete."
+      },
+      {
+        "campo": "lighting",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "No hay puntero lighting en las fuentes; se reporta como FALTA al estar bloqueado por el motor."
+      },
+      {
+        "campo": "camera/v3/0/PAN",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "La vineta v3 de storyboard_camara.json indica que los grados de PAN estan por decidir en 02N."
+      },
+      {
+        "campo": "camera/v5/0/CRANE",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "Aunque existe definicion de CRANE en v5, el motor bloquea campos de camara generada en esta auditoria de inventario."
+      },
+      {
+        "campo": "camera/v7/0/PAN",
+        "status": "FALTA",
+        "source": "FALTA_FUENTE",
+        "reason": "La vineta v7 de storyboard_camara.json indica que los grados de PAN estan por decidir en 02N."
+      }
+    ]
+  },
+  "production_approved": false
+}

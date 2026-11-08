@@ -1,0 +1,5502 @@
+{
+  "schema_version": "1.0",
+  "scene": "guardianes_esc1",
+  "clock": {
+    "fps": 24,
+    "duration_s": 55.0,
+    "rounding": "half_up"
+  },
+  "sources": [
+    {
+      "module": "preparar legado",
+      "path": "entrada.json",
+      "sha256": "1c93941dbd7a0e4bf74b35c8ad11aa7d983f695126e5a27a127e7e3046aa2795"
+    },
+    {
+      "module": "01",
+      "path": "source_01_integral.json",
+      "sha256": "9661b80e310e100aada93b5fe256accc350d1bd202b882ee2399747989b90896"
+    },
+    {
+      "module": "SB",
+      "path": "storyboard_camara.json",
+      "sha256": "3f9795bc8f0b2906080da69fce92299fc8ab2dd4fa6a6f55a70e057d4c7a3577"
+    },
+    {
+      "module": "4a2/medición Blender CPU",
+      "path": "inventario_set_medido.json",
+      "sha256": "ec835d17d50e0229909ed2dfb92789544db36feb10491ba9461d46e33b93f8e3",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    {
+      "module": "ADN/SELLO PJ/OBJ",
+      "path": "referencias_adn/53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7.png",
+      "sha256": "53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7"
+    },
+    {
+      "module": "ADN/SELLO PJ/OBJ",
+      "path": "referencias_adn/120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788.png",
+      "sha256": "120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788"
+    },
+    {
+      "module": "ADN/SELLO PJ/OBJ",
+      "path": "referencias_adn/e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c.png",
+      "sha256": "e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c"
+    },
+    {
+      "module": "ADN/SELLO PJ/OBJ",
+      "path": "referencias_adn/0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f.png",
+      "sha256": "0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f"
+    },
+    {
+      "module": "ADN/SELLO PJ/OBJ",
+      "path": "referencias_adn/18e192698074aea18f2b8026f126144ef4122b5ed935df3d9ad742010093e75c.png",
+      "sha256": "18e192698074aea18f2b8026f126144ef4122b5ed935df3d9ad742010093e75c"
+    },
+    {
+      "module": "ADN/SELLO PJ/OBJ",
+      "path": "referencias_adn/fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea.png",
+      "sha256": "fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea"
+    },
+    {
+      "module": "ADN/SELLO PJ/OBJ",
+      "path": "referencias_adn/79e9b2dc80de9d06788a5850e462d2e34dacea886596ad6124bec1a3df9468e8.png",
+      "sha256": "79e9b2dc80de9d06788a5850e462d2e34dacea886596ad6124bec1a3df9468e8"
+    }
+  ],
+  "coordinates": null,
+  "entities": [
+    {
+      "id": "ch-don-caos-7adf",
+      "type": "CHARACTER",
+      "anatomy": "humanoid",
+      "legacy": {
+        "id": "ch-don-caos-7adf",
+        "spec": {
+          "id": "ch-don-caos-7adf",
+          "altura_m": 0.18,
+          "cabezas": 3.5,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~0.18 m",
+            "cabezas": "~3.5 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.002,
+          "retraso_brazos_s": 0.003,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 900,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "pecho": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "cuello": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "cabeza": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "clavicula": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "brazo": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "antebrazo": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "mano": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "muslo": [
+            0.4,
+            0.18,
+            0.55
+          ],
+          "pierna": [
+            0.4,
+            0.18,
+            0.55
+          ],
+          "pie": [
+            0.8,
+            0.15,
+            0.15
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 9.0,
+            "p0": [
+              2.35,
+              2.75,
+              0.0
+            ],
+            "p1": [
+              2.35,
+              2.75,
+              0.0
+            ],
+            "yaw": 187.0
+          },
+          {
+            "t0": 9.0,
+            "t1": 11.0,
+            "p0": [
+              2.35,
+              2.75,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              3.15,
+              0.0
+            ],
+            "yaw": 60.0
+          },
+          {
+            "t0": 11.0,
+            "t1": 15.5,
+            "p0": [
+              2.55,
+              3.15,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              3.15,
+              0.0
+            ],
+            "yaw": 60.0
+          },
+          {
+            "t0": 15.5,
+            "t1": 18.0,
+            "p0": [
+              2.55,
+              3.15,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              3.3,
+              0.0
+            ],
+            "yaw": 170.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 55.0,
+            "p0": [
+              1.65,
+              3.3,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              3.3,
+              0.0
+            ],
+            "yaw": -65.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "colores.piel": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.cara": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.pelo": [
+            0.75,
+            0.75,
+            0.78
+          ],
+          "colores.ropa_superior": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "colores.ropa_inferior": [
+            0.4,
+            0.18,
+            0.55
+          ],
+          "colores.zapatos": [
+            0.8,
+            0.15,
+            0.15
+          ],
+          "capa": {
+            "color": [
+              0.45,
+              0.15,
+              0.58
+            ],
+            "largo_m": 0.7,
+            "rasgada": true
+          },
+          "gordura": {
+            "torso": 1.25,
+            "cadera": 1.25,
+            "piernas": 0.85,
+            "brazos": 0.95,
+            "cara": 1.15,
+            "pies": 1.35,
+            "sombrero_copa_torcido": true,
+            "bufanda_rayas": true,
+            "bigote_enrollado": true,
+            "pistola_rayos": true,
+            "botones_colores": [
+              "amarillo",
+              "verde",
+              "rojo"
+            ]
+          }
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      },
+      "dna_record": {
+        "id": "ch-don-caos-7adf",
+        "type": "CHARACTER",
+        "source": "adn_manifest.json",
+        "source_data": {
+          "id": "ch-don-caos-7adf",
+          "entity_type": "CHARACTER",
+          "height_m": 0.18,
+          "heads": 3.5,
+          "text": "1. Ficha Antropométrica:\n- Edad visual: 55-65 años.\n- Estatura aparente: 18 cm (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida) (diminuto, tamaño de una mano).\n- Complexión física: Delgada, ectomorfa y estilizada.\n- Proporción: 3,5 cabezas de alto.\n- Estilo de línea/sombreado: 3D CGI estilizado sin línea de contorno 2D. Sombreado volumétrico suave con dispersión subsuperficial en piel y texturas PBR definidas (satén, tela bordada y fieltro).\n\n2. Fisonomía Facial y Cabello:\n- Rostro: Piel clara, forma triangular invertida, pómulos marcados con rubor rosado y nariz grande, bulbosa y rojiza.\n- Cabello: Gris plateado, muy voluminoso, esculpido en mechones gruesos y puntiagudos abiertos en abanico.\n- Ojos: Grandes y redondos, iris marrón. Ojeras moradas profundas con una pequeña marca vertical azulada tipo lágrima de payaso bajo el centro de cada ojo.\n- Cejas: Gruesas, pobladas y de color gris oscuro.\n- Accesorios faciales fijos: Sin gafas, cicatrices ni pendientes (solo el maquillaje fijo de lágrima bajo los ojos).\n\n3. Paleta de Expresiones:\n- Normal: Cejas arqueadas relajadas, ojos muy abiertos y boca cerrada en media sonrisa asimétrica.\n- Feliz: Cejas elevadas en arco alto, ojos muy abiertos y boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n- Nervioso: Cejas arqueadas y juntas en el centro, ojos abiertos en tensión y boca entreabierta en mueca ondulada mostrando dientes; incluye dos gotas de sudor celestes en el lado izquierdo del rostro.\n- Enojado: Cejas fruncidas en ángulo agudo hacia abajo, párpados inferiores tensos y boca muy abierta gritando con dientes y lengua visibles.\n- Triste: Cejas caídas hacia los extremos exteriores, párpados superiores entrecerrados a la mitad y boca cerrada con las comisuras fuertemente arqueadas hacia abajo.\n\n4. Vestuario por Capas:\n- Prenda exterior: Capa trasera morada con agujeros, borde inferior dentado y dos parches cosidos (naranja y verde). Esclavina de bufón en los hombros rematada en picos con cascabeles dorados (mitad derecha morada, mitad izquierda verde con patrón damasco). Cuello alto rígido morado con reborde verde.\n- Prenda interior: Casaca entallada de bajo dentado dividida verticalmente: lado derecho verde lima con relieve damasco y bolsillo tipo bolsa morada con solapa marrón; lado izquierdo en satén morado liso con bolsillo plano turquesa. Mangas verdes con parches morados y puños vueltos en verde oscuro. Cierre central de tres botones (uno verde arriba, dos marrones abajo) y dos parches cuadrados en el pecho (azul a la derecha, verde a la izquierda).\n- Prenda inferior: Pantalón recto de satén morado cubierto de parches rectangulares con costuras visibles (amarillo, marrón y azul en pierna derecha; rojo, verde y ocre en pierna izquierda).\n- Calzado: Zapatillas deportivas de lona roja con puntera de goma blanca, suela blanca y cordones blancos.\n- Accesorio fijo: Pistola de rayos de juguete retrofuturista en la mano derecha, de cuerpo morado metálico, aletas rojas, anillos cobrizos en el cañón y esfera verde en la punta.\n\n5. Reglas de Giro:\n- Frente: Visibilidad total de la partición bicolor de la casaca, los tres botones centrales, bolsillos asimétricos y la pistola de rayos empuñada en la mano derecha.\n- Perfil: Nariz prominente proyectada hacia adelante, mechones de cabello dirigidos hacia atrás, caída diagonal de la capa hasta media pierna y bolsillo con solapa marrón visible en la cadera derecha.\n- Espaldas: La capa morada cubre todo el torso mostrando el borde dentado, agujeros y dos parches traseros (naranja a la izquierda, verde a la derecha). Esclavina dividida (verde a la izquierda, morada a la derecha) con cuatro cascabeles dorados visibles. Silueta limpia de accesorios ocultos.",
+          "adn_file": "adn/ADN_ch-don-caos-7adf.md",
+          "image_refs": [
+            {
+              "view": "hoja_aprobada",
+              "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-don-caos_18e192698074aea1.png",
+              "sha256": "18e192698074aea18f2b8026f126144ef4122b5ed935df3d9ad742010093e75c"
+            }
+          ]
+        },
+        "field_report": {
+          "fields_present": [
+            "text"
+          ],
+          "missing": [
+            {
+              "campo": "geometria_3d",
+              "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+              "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+            }
+          ],
+          "can_build": false
+        }
+      },
+      "anatomy_source": {
+        "method": "backend_legacy_rig_format",
+        "source": "entrada.json#/actors",
+        "note": "Clasificación del esqueleto humanoide existente; no afirma que la especie sea humana."
+      }
+    },
+    {
+      "id": "ch-spark-468e",
+      "type": "CHARACTER",
+      "anatomy": "humanoid",
+      "legacy": {
+        "id": "ch-spark-468e",
+        "spec": {
+          "id": "ch-spark-468e",
+          "altura_m": 1.16,
+          "cabezas": 5.0,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~1.16 m",
+            "cabezas": "~5.0 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.026,
+          "retraso_brazos_s": 0.051,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 389.0,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "pecho": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "cuello": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "cabeza": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "clavicula": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "brazo": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "antebrazo": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "mano": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "muslo": [
+            0.08,
+            0.42,
+            0.75
+          ],
+          "pierna": [
+            0.08,
+            0.42,
+            0.75
+          ],
+          "pie": [
+            0.12,
+            0.52,
+            0.85
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 18.0,
+            "p0": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "p1": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "yaw": 17.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 30.0,
+            "p0": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "p1": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "yaw": 17.0
+          },
+          {
+            "t0": 30.0,
+            "t1": 33.0,
+            "p0": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "yaw": 5.0
+          },
+          {
+            "t0": 33.0,
+            "t1": 44.0,
+            "p0": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "yaw": 5.0
+          },
+          {
+            "t0": 44.0,
+            "t1": 46.0,
+            "p0": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "yaw": -90.0
+          },
+          {
+            "t0": 46.0,
+            "t1": 55.0,
+            "p0": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "yaw": -90.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "gordura": {
+            "torso": 0.88,
+            "cadera": 0.82,
+            "piernas": 0.86,
+            "brazos": 0.88,
+            "cara": 0.85
+          },
+          "colores.piel": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.cara": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.pelo": [
+            0.28,
+            0.18,
+            0.12
+          ],
+          "colores.ropa_superior": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "colores.ropa_inferior": [
+            0.08,
+            0.42,
+            0.75
+          ],
+          "colores.zapatos": [
+            0.12,
+            0.52,
+            0.85
+          ],
+          "gafas": {
+            "gafas": true,
+            "gafas_color": [
+              0.2,
+              0.75,
+              1.0
+            ]
+          }
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      },
+      "dna_record": {
+        "id": "ch-spark-468e",
+        "type": "CHARACTER",
+        "source": "adn_manifest.json",
+        "source_data": {
+          "id": "ch-spark-468e",
+          "entity_type": "CHARACTER",
+          "height_m": 1.16,
+          "heads": 5.0,
+          "text": "1. Ficha Antropométrica:\n* **Edad visual y estatura:** Niño de 10 a 12 años, estatura infantil media (1.16 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida)).\n* **Complexión y proporción:** Delgada y atlética; canon estilizado de 5 cabezas de altura.\n* **Estilo de línea y sombreado:** Renderizado 3D CGI estilizado sin líneas de contorno 2D. Sombreado tridimensional suave con *subsurface scattering* en la piel, acabados metálicos satinados en armadura, texturas mate en tela táctil y canales emisivos de luz neón.\n\n2. Fisonomía Facial y Cabello:\n* **Forma del rostro y piel:** Rostro ovalado de mandíbula suave y redondeada; piel tez cálida bronceada clara; nariz pequeña y respingada.\n* **Cabello:** Color castaño oscuro modelado en bloques suaves. Corto en los laterales y nuca, con un tupé voluminoso de puntas suaves peinado hacia arriba y hacia la derecha.\n* **Ojos y cejas:** Ojos grandes y redondeados con iris marrón cálido. Cejas gruesas, tupidas y bien definidas en color castaño oscuro.\n* **Accesorios faciales fijos:** Casco tecnológico azul cian metálico de cobertura craneal completa con abertura inferior (deja nariz, boca y mentón libres). Incluye gafas/visor traslúcido celeste integrado y líneas de circuito naranjas luminosas.\n\n3. Paleta de Expresiones:\n* **Normal:** Cejas relajadas en arco neutro, ojos bien abiertos y sonrisa serena con labios cerrados.\n* **Feliz:** Cejas elevadas en arco alto, ojos muy abiertos y brillantes, boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n* **Nervioso:** Cejas arqueadas con extremos internos elevados en gesto de preocupación, ojos muy abiertos, boca pequeña entreabierta en tensión y gotas de sudor en las sienes.\n* **Enojado:** Cejas fruncidas en ángulo \"V\" profundo sobre los párpados, mirada intensa y boca completamente abierta gritando, mostrando dientes superiores, inferiores y lengua.\n* **Triste:** Cejas inclinadas hacia arriba en su parte interna, párpados superiores ligeramente caídos y boca cerrada formando una curva pronunciada hacia abajo.\n\n4. Vestuario por Capas:\n* **Prenda exterior / única (Traje táctico):** Enterizo ajustado al cuerpo sin holguras ni pliegues. Base en azul profundo mate con peto, hombreras y rodilleras hexagonales en azul cian metálico. Cuello alto rígido con borde naranja. Estampado luminoso de circuitos en naranja y cian; emblema de átomo naranja brillante en el centro del pecho.\n* **Brazos y manos:** Brazaletes cian metálico en los antebrazos con bordes gruesos en naranja mate. Guantes ajustados azules con placas protectoras cian y ribetes naranjas en el dorso.\n* **Accesorios de cintura:** Cinturón táctico rígido en naranja mate, con hebilla central hexagonal (borde naranja, centro cian) y dos cartucheras rectangulares planas en los costados.\n* **Calzado:** Botas rígidas a media pantorrilla en azul cian metálico, con borde superior grueso, tiras verticales en la caña y suela plana corrida en color naranja mate.\n\n5. Reglas de Giro:\n* **Frente:** Visibilidad total del visor traslúcido, parte inferior del rostro, emblema del átomo en el pecho, hebilla hexagonal del cinturón y rodilleras cian.\n* **Perfil:** Silueta limpia sin capas ni mochilas. Destaca el volumen frontal del visor, módulos auriculares circulares con aros de luz naranja en el casco y un emblema de círculos concéntricos naranjas sobre el hombro.\n* **Espaldas:** El casco cubre el cráneo con líneas naranjas simétricas, dejando ver solo un corte limpio de cabello castaño en la nuca. Torso trasero sin emblema central, con tirantes estructurales naranjas y líneas de circuito naranjas/cian que bajan simétricamente por espalda, glúteos y piernas. Cinturón trasero continuo sin hebilla.",
+          "adn_file": "adn/ADN_ch-spark-468e.md",
+          "image_refs": [
+            {
+              "view": "hoja_aprobada",
+              "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-spark_53de336edfd14517.png",
+              "sha256": "53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7"
+            }
+          ]
+        },
+        "field_report": {
+          "fields_present": [
+            "text"
+          ],
+          "missing": [
+            {
+              "campo": "geometria_3d",
+              "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+              "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+            }
+          ],
+          "can_build": false
+        }
+      },
+      "anatomy_source": {
+        "method": "backend_legacy_rig_format",
+        "source": "entrada.json#/actors",
+        "note": "Clasificación del esqueleto humanoide existente; no afirma que la especie sea humana."
+      }
+    },
+    {
+      "id": "ch-valentina-a9be",
+      "type": "CHARACTER",
+      "anatomy": "humanoid",
+      "legacy": {
+        "id": "ch-valentina-a9be",
+        "spec": {
+          "id": "ch-valentina-a9be",
+          "altura_m": 1.12,
+          "cabezas": 4.5,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~1.12 m",
+            "cabezas": "~4.5 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.024,
+          "retraso_brazos_s": 0.048,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 402.0,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "pecho": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "cuello": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "cabeza": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "clavicula": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "brazo": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "antebrazo": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "mano": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "muslo": [
+            0.65,
+            0.15,
+            0.52
+          ],
+          "pierna": [
+            0.65,
+            0.15,
+            0.52
+          ],
+          "pie": [
+            0.78,
+            0.2,
+            0.6
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 18.0,
+            "p0": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "yaw": -127.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 30.0,
+            "p0": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "yaw": -127.0
+          },
+          {
+            "t0": 30.0,
+            "t1": 33.0,
+            "p0": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "yaw": -124.0
+          },
+          {
+            "t0": 33.0,
+            "t1": 44.0,
+            "p0": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "yaw": -124.0
+          },
+          {
+            "t0": 44.0,
+            "t1": 46.0,
+            "p0": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "yaw": -90.0
+          },
+          {
+            "t0": 46.0,
+            "t1": 55.0,
+            "p0": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "yaw": -90.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "gordura": {
+            "torso": 0.88,
+            "cadera": 0.82,
+            "piernas": 0.86,
+            "brazos": 0.88,
+            "cara": 0.85
+          },
+          "colores.piel": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "colores.cara": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "pelo_largo": {
+            "ocultar_pelo_base": true,
+            "largo_m": 0.45,
+            "color": [
+              0.12,
+              0.08,
+              0.1
+            ]
+          },
+          "colores.ropa_superior": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "colores.ropa_inferior": [
+            0.65,
+            0.15,
+            0.52
+          ],
+          "colores.zapatos": [
+            0.78,
+            0.2,
+            0.6
+          ],
+          "capa": {
+            "color": [
+              0.95,
+              0.45,
+              0.7
+            ],
+            "largo_m": 0.45,
+            "rasgada": false
+          },
+          "pulsera": {
+            "muneca": "izquierda",
+            "color": [
+              0.85,
+              0.2,
+              0.6
+            ],
+            "escudo_empatia": true,
+            "monos_altos_lazos_magenta": true,
+            "pantuflas_conejo": true
+          }
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      },
+      "dna_record": {
+        "id": "ch-valentina-a9be",
+        "type": "CHARACTER",
+        "source": "adn_manifest.json",
+        "source_data": {
+          "id": "ch-valentina-a9be",
+          "entity_type": "CHARACTER",
+          "height_m": 1.12,
+          "heads": 4.5,
+          "text": "1. Ficha Antropométrica:\nEdad visual de 12 a 14 años, estatura aparente media-baja y complexión delgada estilizada, 1.12 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida). Proporción de 4.5 cabezas de altura. Acabado en estilo 3D CGI estilizado sin líneas de contorno 2D, utilizando sombreado suave con renderizado físico (PBR): piel con dispersión subsuperficial cálida, plásticos satinados en armadura, tela mate y circuitos con luminiscencia propia (emisivos).\n\n2. Fisonomía Facial y Cabello:\nRostro ovalado de mejillas suaves y piel morena cálida. Ojos grandes almendrados de iris marrón oscuro, nariz pequeña respingada y labios definidos color rosa terroso. Cejas castaño oscuro de grosor medio y arco definido. Cabello castaño muy oscuro, voluminoso y con ondas marcadas, que nace bajo el casco y llega hasta media espalda. Accesorio fijo: casco sci-fi púrpura de cara abierta (sin visor), con sujeción de mentón, orejeras circulares y líneas de circuito en rosa neón.\n\n3. Paleta de Expresiones:\n- Normal: Cejas relajadas en arco suave, ojos bien abiertos mirando al frente y sonrisa ligera con labios cerrados.\n- Feliz: Cejas elevadas, ojos brillantes ligeramente entrecerrados por los pómulos y sonrisa amplia abierta mostrando dientes superiores.\n- Nervioso: Cejas inclinadas mostrando preocupación, ojos muy abiertos mirando hacia su derecha, boca pequeña entreabierta y dos gotas de sudor celestes en el lado izquierdo del rostro.\n- Enojado: Ceño fruncido en ángulo agudo hacia el centro, apertura ocular máxima con mirada fija y boca abierta en forma trapezoidal (grito).\n- Triste: Extremos internos de las cejas elevados, párpados superiores ligeramente caídos y boca cerrada con comisuras hacia abajo en gesto de puchero.\n\n4. Vestuario por Capas:\n- Prenda única (Bodysuit): Traje enterizo futurista completamente ceñido, sin holgura, pliegues ni bolsillos. Combina paneles en magenta metálico (torso frontal y guantes integrados hasta medio antebrazo) con secciones en púrpura oscuro mate (brazos superiores, costados y piernas).\n- Estampados y detalles: Emblema de corazón rojo volumétrico con borde lila incrustado en el pecho. Trazos geométricos emisivos en rosa neón (estilo circuito impreso con pequeños nodos circulares) distribuidos simétricamente por torso, brazos y piernas.\n- Calzado: Botas rígidas a media pantorrilla en color magenta, de corte recto, suela baja color púrpura y circuitos iluminados en rosa neón en la caña y el empeine.\n\n5. Reglas de Giro:\n- Frente: Visibilidad exclusiva del corazón rojo en el pecho, la abertura en \"V\" del cuello del traje y dos mechones de cabello reposando sobre los hombros.\n- Perfil: Protagonismo del disco circular en el lateral del casco, volumen del cabello proyectado hacia atrás despejando el cuello y línea luminosa continua a lo largo del brazo y pierna exterior.\n- Espalda: El volumen del cabello ondulado cubre por completo la zona dorsal alta. El casco presenta tres líneas verticales de neón en la nuca; la zona lumbar, glúteos y piernas muestran continuidad simétrica de los circuitos brillantes. Silueta limpia, libre de capas o mochilas.",
+          "adn_file": "adn/ADN_ch-valentina-a9be.md",
+          "image_refs": [
+            {
+              "view": "hoja_aprobada",
+              "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-valentina_e3d8db772c0db601.png",
+              "sha256": "e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c"
+            }
+          ]
+        },
+        "field_report": {
+          "fields_present": [
+            "text"
+          ],
+          "missing": [
+            {
+              "campo": "geometria_3d",
+              "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+              "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+            }
+          ],
+          "can_build": false
+        }
+      },
+      "anatomy_source": {
+        "method": "backend_legacy_rig_format",
+        "source": "entrada.json#/actors",
+        "note": "Clasificación del esqueleto humanoide existente; no afirma que la especie sea humana."
+      }
+    },
+    {
+      "id": "ch-eco-eff3",
+      "type": "CHARACTER",
+      "anatomy": "humanoid",
+      "legacy": {
+        "id": "ch-eco-eff3",
+        "spec": {
+          "id": "ch-eco-eff3",
+          "altura_m": 1.02,
+          "cabezas": 6.5,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~1.02 m",
+            "cabezas": "~6.5 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.021,
+          "retraso_brazos_s": 0.042,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 437.0,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "pecho": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "cuello": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "cabeza": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "clavicula": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "brazo": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "antebrazo": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "mano": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "muslo": [
+            0.14,
+            0.48,
+            0.25
+          ],
+          "pierna": [
+            0.14,
+            0.48,
+            0.25
+          ],
+          "pie": [
+            0.16,
+            0.55,
+            0.3
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 18.0,
+            "p0": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "p1": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "yaw": -171.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 30.0,
+            "p0": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "p1": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "yaw": -171.0
+          },
+          {
+            "t0": 30.0,
+            "t1": 33.0,
+            "p0": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "yaw": -172.0
+          },
+          {
+            "t0": 33.0,
+            "t1": 44.0,
+            "p0": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "yaw": -172.0
+          },
+          {
+            "t0": 44.0,
+            "t1": 46.0,
+            "p0": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "yaw": -90.0
+          },
+          {
+            "t0": 46.0,
+            "t1": 55.0,
+            "p0": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "yaw": -90.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "gordura": {
+            "torso": 0.88,
+            "cadera": 0.82,
+            "piernas": 0.86,
+            "brazos": 0.88,
+            "cara": 0.85
+          },
+          "colores.piel": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.cara": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "pelo_largo": {
+            "ocultar_pelo_base": true,
+            "largo_m": 0.45,
+            "color": [
+              0.18,
+              0.58,
+              0.25
+            ]
+          },
+          "colores.ropa_superior": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "colores.ropa_inferior": [
+            0.14,
+            0.48,
+            0.25
+          ],
+          "colores.zapatos": [
+            0.16,
+            0.55,
+            0.3
+          ]
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      },
+      "dna_record": {
+        "id": "ch-eco-eff3",
+        "type": "CHARACTER",
+        "source": "adn_manifest.json",
+        "source_data": {
+          "id": "ch-eco-eff3",
+          "entity_type": "CHARACTER",
+          "height_m": 1.02,
+          "heads": 6.5,
+          "text": "1. Ficha Antropométrica:\n* **Edad visual:** 22-25 años.\n* **Estatura aparente:** 1.02 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida).\n* **Complexión física:** Atlética, estilizada y esbelta.\n* **Proporción:** 6.5 cabezas de altura (canon estilizado).\n* **Estilo de línea y sombreado:** Renderizado 3D CGI estilizado sin líneas de contorno (sin *lineart*). Piel con *subsurface scattering* cálido, iluminación suave con oclusión ambiental definida y materiales con acabados satinados/metálicos en el traje.\n\n2. Fisonomía Facial y Cabello:\n* **Forma del rostro:** Ovalado con tendencia a corazón, mejillas redondeadas con rubor rosado cálido, nariz pequeña respingada y mentón suave.\n* **Cabello:** Largo hasta media espalda, ondulado y voluminoso con raya lateral izquierda. Color verde esmeralda vibrante con brillos especulares en verde claro.\n* **Ojos:** Grandes y almendrados, iris color verde hoja brillante, pupilas grandes y pestañas superiores negras, densas y curvas.\n* **Cejas:** Grosor medio, arqueadas y definidas, en tono verde oscuro/castaño.\n* **Accesorios fijos:** Ninguno facial (sin gafas, cicatrices ni pendientes). Mascota fija: pequeño pájaro amarillo (tipo canario) posado sobre su hombro derecho.\n\n3. Paleta de Expresiones:\n* **Normal:** Cejas suavemente arqueadas en reposo, apertura ocular estándar con mirada cálida y boca cerrada en sonrisa ligera y serena.\n* **Feliz:** Cejas elevadas en arco alto, ojos muy abiertos y brillantes, boca abierta en sonrisa amplia mostrando la fila superior de dientes y la lengua.\n* **Nervioso:** Cejas arqueadas con extremos internos elevados en gesto de preocupación, ojos muy abiertos y tensos, boca entreabierta formando una pequeña curva descendente (incluye gota de sudor azul en la sien izquierda).\n* **Enojado:** Cejas fruncidas en ángulo agudo hacia el centro, párpados tensos con ojos completamente abiertos y boca muy abierta en grito, mostrando dientes superiores y lengua.\n* **Triste:** Cejas inclinadas hacia arriba en el centro (forma de \"V\" invertida), párpados superiores caídos con mirada baja y boca cerrada en puchero con comisuras hacia abajo.\n\n4. Vestuario por Capas:\n* **Prenda exterior/interior (Enterizo):** Traje completo (*bodysuit*) ultra ceñido de textura metálica satinada color verde esmeralda oscuro, sin holgura ni bolsillos. Cuello alto abierto en \"V\". Estampado luminoso del símbolo de reciclaje en verde claro centrado en el pecho.\n* **Apliques orgánicos (Armadura de hojas):** Hombreras formadas por hojas superpuestas en verde mate; corsé abdominal en \"V\" compuesto por hojas nervadas que se extienden hacia las caderas como faldones laterales; brazaletes de hojas en los antebrazos integrados a guantes completos color verde oscuro.\n* **Prenda inferior:** Integrada al enterizo, con costuras verticales en relieve que recorren el centro de los muslos hasta las rodillas.\n* **Calzado:** Botas altas hasta la rodilla en verde metálico con tacón cuadrado bajo. Caña cubierta por una gran hoja verde mate con nervaduras que termina en dos puntas bajo la rodilla.\n\n5. Reglas de Giro:\n* **De frente:** Visibilidad total del emblema de reciclaje en el pecho, el panel de hojas abdominal en \"V\" y el pájaro amarillo de frente sobre el hombro derecho.\n* **De perfil:** El cabello cae detrás del hombro despejando el rostro y el cuello; se aprecia la silueta del busto, la curvatura lumbar, el tacón de la bota y el perfil del pájaro amarillo.\n* **De espaldas:** El cabello cubre la zona dorsal alta hasta los omóplatos; cintura definida por un cinturón en \"V\" liso sin hojas centrales; costuras verticales recorren el centro de los glúteos y piernas; sin capas ni mochilas; el pájaro amarillo es visible de espaldas en el hombro derecho.",
+          "adn_file": "adn/ADN_ch-eco-eff3.md",
+          "image_refs": [
+            {
+              "view": "hoja_aprobada",
+              "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-eco_0597114f24f97a5d.png",
+              "sha256": "0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f"
+            }
+          ]
+        },
+        "field_report": {
+          "fields_present": [
+            "text"
+          ],
+          "missing": [
+            {
+              "campo": "geometria_3d",
+              "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+              "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+            }
+          ],
+          "can_build": false
+        }
+      },
+      "anatomy_source": {
+        "method": "backend_legacy_rig_format",
+        "source": "entrada.json#/actors",
+        "note": "Clasificación del esqueleto humanoide existente; no afirma que la especie sea humana."
+      }
+    },
+    {
+      "id": "ch-pintor-bce0",
+      "type": "CHARACTER",
+      "anatomy": "humanoid",
+      "legacy": {
+        "id": "ch-pintor-bce0",
+        "spec": {
+          "id": "ch-pintor-bce0",
+          "altura_m": 1.06,
+          "cabezas": 6.5,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~1.06 m",
+            "cabezas": "~6.5 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.022,
+          "retraso_brazos_s": 0.045,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 422.0,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "pecho": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "cuello": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "cabeza": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "clavicula": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "brazo": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "antebrazo": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "mano": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "muslo": [
+            0.18,
+            0.28,
+            0.58
+          ],
+          "pierna": [
+            0.18,
+            0.28,
+            0.58
+          ],
+          "pie": [
+            0.32,
+            0.2,
+            0.15
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 18.0,
+            "p0": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "yaw": 153.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 30.0,
+            "p0": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "yaw": 153.0
+          },
+          {
+            "t0": 30.0,
+            "t1": 33.0,
+            "p0": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "yaw": 163.0
+          },
+          {
+            "t0": 33.0,
+            "t1": 44.0,
+            "p0": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "yaw": 163.0
+          },
+          {
+            "t0": 44.0,
+            "t1": 46.0,
+            "p0": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "yaw": -90.0
+          },
+          {
+            "t0": 46.0,
+            "t1": 55.0,
+            "p0": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "yaw": -90.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "colores.piel": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.cara": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.ropa_inferior": [
+            0.18,
+            0.28,
+            0.58
+          ],
+          "colores.pelo": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "colores.ropa_superior": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "colores.zapatos": [
+            0.32,
+            0.2,
+            0.15
+          ],
+          "gordura": {
+            "torso": 1.22,
+            "cadera": 1.2,
+            "piernas": 0.9,
+            "brazos": 0.95,
+            "cara": 1.12,
+            "copete_pincel": true,
+            "boina_roja_ladeada": true,
+            "pincel_oreja": true,
+            "manchas_pintura_multicolor": true,
+            "solapa_abc": true
+          }
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      },
+      "dna_record": {
+        "id": "ch-pintor-bce0",
+        "type": "CHARACTER",
+        "source": "adn_manifest.json",
+        "source_data": {
+          "id": "ch-pintor-bce0",
+          "entity_type": "CHARACTER",
+          "height_m": 1.06,
+          "heads": 6.5,
+          "text": "1. Ficha Antropométrica:\n- Edad visual: 25 a 30 años.\n- Estatura y complexión: 1.06 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida), complexión delgada estilizada (ectomorfo).\n- Proporción: 6.5 cabezas de altura.\n- Estilo visual: 3D CGI estilizado, volúmenes suaves, sin línea de contorno, sombreado realista con dispersión subsuperficial (SSS) en la piel y materiales con microtextura.\n\n2. Fisonomía Facial y Cabello:\n- Rostro: Ovalado de mandíbula suave y mentón redondeado; piel clara de subtono cálido.\n- Cabello: Castaño claro, modelado en bloques suaves; corto en laterales y nuca, con tupé frontal voluminoso peinado hacia arriba y atrás.\n- Ojos: Grandes y almendrados, iris marrón cálido con brillos especulares definidos.\n- Cejas: Gruesas, color castaño, de geometría curva y bordes suavizados.\n- Accesorios faciales: Ninguno (rostro limpio sin gafas, cicatrices, vello facial ni pendientes).\n\n3. Paleta de Expresiones:\n- Normal: Cejas relajadas horizontales, apertura ocular media, boca cerrada con leve sonrisa simétrica.\n- Feliz: Cejas elevadas en arco, apertura ocular máxima, boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n- Nervioso: Cejas arqueadas con extremos internos elevados, ojos muy abiertos, boca entreabierta asimétrica mostrando dientes apretados, gotas de sudor translúcidas en las sienes.\n- Enojado: Cejas bajas fruncidas hacia el centro, párpados superiores tensos cubriendo parte del iris, boca abierta rectangular en gesto de grito mostrando dientes y lengua.\n- Triste: Cejas inclinadas con el interior elevado, párpados superiores caídos a media altura, boca cerrada con comisuras arqueadas hacia abajo.\n\n4. Vestuario por Capas:\n- Prenda exterior: Saco formal corte slim en tela azul marino mate, solapa de muesca, cierre de un botón y dos bolsillos laterales con tapeta. Textura salpicada con manchas de pintura neón (verde, amarillo, fucsia, cian y naranja).\n- Prenda interior: Camisa de vestir color amarillo mostaza, corte ajustado, cuello desabotonado sin corbata, puños asomando 1 cm bajo las mangas del saco.\n- Prenda inferior: Pantalón de vestir azul marino a juego con el saco, corte recto entallado, pliegue frontal suave y salpicaduras de pintura multicolor.\n- Calzado y accesorios: Zapatos Oxford de cuero marrón oscuro con suela baja y cordones finos. Reloj metálico dorado en la muñeca izquierda.\n\n5. Reglas de Giro:\n- Frente: Apertura en \"V\" de la camisa amarilla, solapas del saco, pliegue de los bolsillos frontales y esfera del reloj visible en la muñeca izquierda.\n- Perfil: Silueta pronunciada del tupé frontal y puente nasal recto; curva entallada de la espalda del saco; hilera de botones pequeños en el puño de la manga.\n- Espaldas: Costura vertical central que divide el saco, caída limpia sin aberturas ni bolsillos traseros visibles, capas de cabello escalonadas en la nuca y manchas de pintura distribuidas en hombros y pantorrillas.",
+          "adn_file": "adn/ADN_ch-pintor-bce0.md",
+          "image_refs": [
+            {
+              "view": "hoja_aprobada",
+              "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-pintor_fbdd0e2c29cf906f.png",
+              "sha256": "fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea"
+            }
+          ]
+        },
+        "field_report": {
+          "fields_present": [
+            "text"
+          ],
+          "missing": [
+            {
+              "campo": "geometria_3d",
+              "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+              "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+            }
+          ],
+          "can_build": false
+        }
+      },
+      "anatomy_source": {
+        "method": "backend_legacy_rig_format",
+        "source": "entrada.json#/actors",
+        "note": "Clasificación del esqueleto humanoide existente; no afirma que la especie sea humana."
+      }
+    },
+    {
+      "id": "ch-piquito-030a",
+      "type": "CHARACTER",
+      "anatomy": "avian",
+      "source": "source_01_integral.json",
+      "source_data": {
+        "id": "ch-piquito-030a",
+        "altura": null,
+        "estado": {},
+        "segmentos": [
+          {
+            "t": [
+              0.0,
+              18.0
+            ],
+            "pos": [
+              "eco_aterrizaje",
+              "eco_aterrizaje"
+            ],
+            "rot": -171.0,
+            "tipo": "quieto",
+            "porque": "En el hombro izquierdo de Eco antes de aterrizar"
+          },
+          {
+            "t": [
+              18.0,
+              30.0
+            ],
+            "pos": [
+              "eco_aterrizaje",
+              "eco_aterrizaje"
+            ],
+            "rot": -171.0,
+            "tipo": "quieto",
+            "porque": "Aterriza posado en el hombro izquierdo de Eco"
+          },
+          {
+            "t": [
+              30.0,
+              33.0
+            ],
+            "pos": [
+              "eco_aterrizaje",
+              "eco_cofre"
+            ],
+            "rot": -172.0,
+            "tipo": "acoplarse",
+            "porque": "Va en el hombro izquierdo de Eco cuando ella se acerca al cofre"
+          },
+          {
+            "t": [
+              33.0,
+              44.0
+            ],
+            "pos": [
+              "eco_cofre",
+              "eco_cofre"
+            ],
+            "rot": -172.0,
+            "tipo": "quieto",
+            "porque": "Mira el cofre dorado desde el hombro izquierdo de Eco"
+          },
+          {
+            "t": [
+              44.0,
+              46.0
+            ],
+            "pos": [
+              "eco_cofre",
+              "eco_cofre"
+            ],
+            "rot": -90.0,
+            "tipo": "girar",
+            "porque": "Gira con Eco hacia el frente"
+          },
+          {
+            "t": [
+              46.0,
+              55.0
+            ],
+            "pos": [
+              "eco_cofre",
+              "eco_cofre"
+            ],
+            "rot": -90.0,
+            "tipo": "quieto",
+            "porque": "Mira al frente desde el hombro izquierdo de Eco"
+          }
+        ],
+        "version_personaje": {
+          "name": "referencia cliente",
+          "form": "fm-a36983467703",
+          "description": "Un pajarito redondo como una pelotita, del tamaño de un puño, con alas cortitas, pico pequeño y triangular y dos plumitas de copete. No habla: se expresa con gestos (se tapa los ojos, aplaude con las alas, se esponja cuando se ofende). [Acompañante de Eco; sin imagen propia, solo aparece en ref1 sobre el hombro izquierdo de Eco.]",
+          "never_changes": "Pajarito AMARILLO (cuerpo #FFD84D, pecho #FFF1A8), pico y patas naranja #F2792A, copete amarillo con punta naranja, redondo como una pelotita, del tamaño de un puño, siempre en el hombro izquierdo de Eco. NUNCA naranja de cuerpo (la ref1 del cliente lo trae naranja: manda la biblia y la orden de Ricardo, amarillo #FFD84D)."
+        }
+      },
+      "dna_record": {
+        "id": "ch-piquito-030a",
+        "type": "CHARACTER",
+        "source": "adn_manifest.json",
+        "source_data": {
+          "id": "ch-piquito-030a",
+          "entity_type": "CHARACTER",
+          "height_m": 0.1,
+          "heads": 2.0,
+          "text": "1. Ficha Antropométrica:\n* **Edad visual:** Polluelo / ave infantil.\n* **Estatura aparente:** 10 cm (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida) (escala mascota de hombro).\n* **Complexión física:** Rechoncha, compacta y redondeada, con silueta en forma de pera.\n* **Proporción en cabezas:** 2 cabezas de alto (la cabeza representa el 50% de la altura total).\n* **Estilo de línea/sombreado:** 3D CGI estilizado sin línea de contorno. Sombreado suave con dispersión subsuperficial cálida, volúmenes plásticos limpios y textura mate sedosa.\n\n2. Fisonomía Facial y Cabello:\n* **Forma del rostro:** Esférica, fusionada directamente con el torso sin cuello divisorio, con mejillas abultadas y rubor anaranjado difuso.\n* **Cabello (Cresta):** Penacho central rígido compuesto por 3 plumas curvas de puntas redondeadas en color naranja rojizo (#FF6B2B).\n* **Geometría de ojos:** Grandes y circulares; esclerótica blanca, iris marrón cálido, pupila negra concéntrica y un único brillo especular blanco arriba a la izquierda.\n* **Grosor de cejas:** Medias, flotantes sobre el plumaje, de color marrón oscuro y bordes redondeados.\n* **Accesorios faciales fijos:** Sin accesorios. Pico corto, cónico y pequeño en el centro del rostro, color naranja medio.\n\n3. Paleta de Expresiones:\n* **Normal:** Cejas en arco suave simétrico, ojos abiertos al 100% mirando al frente, pico cerrado dibujando una sonrisa curva sutil.\n* **Feliz:** Cejas altas arqueadas, ojos cerrados formando dos arcos invertidos oscuros, pico abierto mostrando el interior bucal y lengua rosada.\n* **Nervioso:** Cejas oblicuas elevadas en el centro, ojos muy abiertos con el iris contraído, pico entreabierto con comisuras bajas, acompañado de 4 gotas de sudor celestes flotando a los lados de la cabeza.\n* **Enojado:** Cejas fruncidas en ángulo \"V\" pronunciado hacia el entrecejo, párpados superiores rectos cubriendo un tercio del ojo, pico completamente abierto en forma trapezoidal mostrando lengua e interior oscuro.\n* **Triste:** Cejas caídas hacia los extremos exteriores, párpados superiores bajos a media asta con mirada descendente, pico cerrado con comisura arqueada hacia abajo.\n\n4. Vestuario por Capas:\n* **Prenda exterior (Plumaje corporal):** Cuerpo desnudo cubierto de plumaje liso amarillo brillante (#FFD84D) de aspecto suave y continuo.\n* **Prenda interior (Pecho):** Detalle escultórico de 4 puntas de plumas superpuestas en relieve sobre la parte superior del pecho, del mismo tono amarillo (#FFD84D).\n* **Prenda inferior (Alas y Cola):** Alas cortas integradas a los costados, amarillas en la base con 3 plumas primarias en color naranja rojizo (#FF6B2B) en los extremos. Cola corta trasera formada por 3 plumas naranjas rojizas.\n* **Calzado (Patas):** Patas aviares cortas y delgadas de textura lisa color naranja amarronado, con 3 dedos frontales redondeados y 1 espolón trasero corto sin uñas diferenciadas.\n\n5. Reglas de Giro:\n* **De frente:** Visibles las 4 ondas de plumas en el pecho; las alas se ven pegadas al cuerpo mostrando solo el borde de las puntas naranjas; la cola queda completamente oculta tras el cuerpo.\n* **De perfil:** Silueta en \"S\" compacta con pecho prominente; la cresta revela sus 3 plumas escalonadas apuntando hacia atrás; el ala muestra claramente su división bicolor (hombro amarillo, 3 plumas inferiores naranjas); la cola sobresale en ángulo de 45 grados.\n* **De espaldas:** Cabeza y espalda completamente lisas en amarillo (#FFD84D) sin costuras ni plumas detalladas; la cola se despliega como un abanico simétrico de 3 pétalos naranjas en la base de la espalda, flanqueada por las puntas naranjas de ambas alas.",
+          "adn_file": "adn/ADN_ch-piquito-030a.md",
+          "image_refs": [
+            {
+              "view": "hoja_aprobada",
+              "path": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-piquito_120f2b6366694721.png",
+              "sha256": "120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788"
+            }
+          ]
+        },
+        "field_report": {
+          "fields_present": [
+            "text"
+          ],
+          "missing": [
+            {
+              "campo": "geometria_3d",
+              "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+              "mensaje": "ADN descriptivo conservado; falta representación 3D declarativa o activo 3D vinculado. No se inventa malla."
+            }
+          ],
+          "can_build": false
+        }
+      },
+      "anatomy_source": {
+        "method": "anatomia_explicita_en_ADN",
+        "source": "adn_manifest.json",
+        "citations": [
+          "dad visual:** Polluelo / ave infantil.",
+          "de contorno. Sombreado suave con dispersión subsuperficial cálida, volúme",
+          "ormal:** Cejas en arco suave simétrico, ojos abiertos al 100% mirando al ",
+          "e (#FFD84D) de aspecto suave y continuo.",
+          "Calzado (Patas):** Patas aviares cortas y delgadas de textura lisa color na"
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "mode": "blend",
+    "path": "set.blend",
+    "sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733",
+    "visibility": {
+      "luz_esc1_0": false,
+      "luz_esc1_1": false,
+      "luz_esc1_2": false,
+      "luz_esc2_0": false,
+      "luz_esc2_1": false,
+      "luz_esc2_2": false,
+      "luz_esc3_0": false,
+      "luz_esc3_1": false,
+      "luz_esc3_2": false,
+      "luz_esc8_0": false,
+      "luz_esc8_1": false,
+      "luz_esc8_2": false,
+      "luz_esc9_0": false,
+      "luz_esc9_1": false
+    },
+    "live": "escenario_vivo.json",
+    "live_data": {
+      "status": "incomplete",
+      "producer": "4a. Escenarios → 4a4. Prompts escenario vivo (Argon, pago) + 01",
+      "source": "escenario_vivo_fuentes/4a_escenarios.json",
+      "scene": "1",
+      "base_environment_id": "esc-habitacion",
+      "source_raw": {
+        "id": "esc-habitacion",
+        "nombre": "Habitación",
+        "int_ext": "INT",
+        "escenas": [
+          "1",
+          "2",
+          "3",
+          "8",
+          "9"
+        ],
+        "horas": [
+          "Día"
+        ],
+        "climas": [
+          "Arcoíris exterior que se vuelve gris",
+          "Desconocido",
+          "Gris sin color"
+        ],
+        "solo_recuerdo_o_pantalla": false,
+        "elementos": [
+          {
+            "nombre": "Ventana con vista al arcoíris",
+            "cita": "Ahora el arcoíris de la ventana se vuelve gris.",
+            "escenas": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          {
+            "nombre": "Centro de la habitación",
+            "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes:",
+            "escenas": [
+              "1",
+              "2",
+              "3",
+              "8",
+              "9"
+            ]
+          },
+          {
+            "nombre": "Piso de la habitación",
+            "cita": "[La O rueda por el piso como una pelota]",
+            "escenas": [
+              "1",
+              "2",
+              "3",
+              "8",
+              "9"
+            ]
+          }
+        ],
+        "variantes_estado": [
+          {
+            "variante": "Inicial con color (libro con letras en la cama y arcoíris en la ventana)",
+            "escenas": [
+              "1"
+            ],
+            "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+          },
+          {
+            "variante": "Sin letras ni colores (página en blanco, arcoíris gris en la ventana y cofre cerrado)",
+            "escenas": [
+              "1",
+              "2",
+              "3",
+              "8"
+            ],
+            "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+          },
+          {
+            "variante": "Restaurada en celebración (confeti de colores, cofre abierto y libro lleno de nuevo)",
+            "escenas": [
+              "8",
+              "9"
+            ],
+            "cita": "Del cofre salen volando todas las letras, los colores y los números."
+          }
+        ],
+        "estado_por_escena": [
+          {
+            "escena": "1",
+            "inicio": [
+              "Libro de cuentos abierto sobre la cama con letras temblando",
+              "Arcoíris con color en la ventana"
+            ],
+            "fin": [
+              "Libro de cuentos con la página en blanco",
+              "Arcoíris de la ventana vuelto gris",
+              "Cuatro luces de colores aterrizadas como héroes",
+              "Cofre dorado cerrado con tres candados en el centro de la habitación"
+            ],
+            "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+          },
+          {
+            "escena": "2",
+            "inicio": [
+              "Libro de cuentos en blanco sobre la cama",
+              "Arcoíris de la ventana gris",
+              "Cofre dorado cerrado en el centro de la habitación"
+            ],
+            "fin": [
+              "Libro de cuentos en blanco sobre la cama",
+              "Arcoíris de la ventana gris",
+              "Cofre dorado cerrado en el centro de la habitación",
+              "Holograma azul con 5 estrellas apagadas proyectado desde el visor de Spark"
+            ],
+            "cita": "Un holograma azul muestra un mapa con 5 estrellas apagadas en fila."
+          },
+          {
+            "escena": "3",
+            "inicio": [
+              "Arcoíris de la ventana gris",
+              "Cofre dorado cerrado en el centro de la habitación",
+              "Vocales escondidas en almohada, lámpara, lápiz, piso y armario"
+            ],
+            "fin": [
+              "Arcoíris de la ventana gris",
+              "Cofre dorado cerrado en el centro de la habitación",
+              "Las 5 vocales reunidas en fila pero todas de color gris"
+            ],
+            "cita": "Don Caos las escondió en esta habitación."
+          },
+          {
+            "escena": "8",
+            "inicio": [
+              "Cofre dorado cerrado con tres candados en el centro de la habitación",
+              "Libro de cuentos en blanco"
+            ],
+            "fin": [
+              "Explosión de confeti de colores en la habitación",
+              "Cofre dorado abierto con los tres candados destrabados",
+              "Letras, colores y números devueltos a las páginas del libro"
+            ],
+            "cita": "Los tres candados se abren: clic, clic, clic."
+          },
+          {
+            "escena": "9",
+            "inicio": [
+              "Habitación en celebración con confeti",
+              "Cofre abierto y libro de cuentos restaurado"
+            ],
+            "fin": [
+              "Papel con los números del 6 al 10 caído en el piso",
+              "Corte al marco de la pantalla final"
+            ],
+            "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+          }
+        ],
+        "fuente": "4p",
+        "investigacion": null
+      },
+      "state_for_scene": {
+        "escena": "1",
+        "inicio": [
+          "Libro de cuentos abierto sobre la cama con letras temblando",
+          "Arcoíris con color en la ventana"
+        ],
+        "fin": [
+          "Libro de cuentos con la página en blanco",
+          "Arcoíris de la ventana vuelto gris",
+          "Cuatro luces de colores aterrizadas como héroes",
+          "Cofre dorado cerrado con tres candados en el centro de la habitación"
+        ],
+        "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+      },
+      "changes": [],
+      "missing": [
+        {
+          "campo": "changes/object,time,property,value",
+          "modulo": "4a/4a4 + 01",
+          "mensaje": "Llegan inicio/fin y variantes como texto, sin binding inequívoco a objetos Blender ni keyframes de propiedades. No se inventan."
+        }
+      ]
+    }
+  },
+  "motion": {
+    "catalog": "catalogo_poses_escena.json",
+    "assignments": "asignacion_para_motor.json",
+    "status": null
+  },
+  "camera": {
+    "source": "storyboard_camara.json",
+    "shots": [
+      {
+        "id": "v1",
+        "t0": 0.0,
+        "t1": 3.0,
+        "transition": "CORTE",
+        "source_data": {
+          "vineta": "v1",
+          "t_abs": [
+            0.0,
+            3.0
+          ],
+          "objetivo": "ch-don-caos-7adf",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "HIGHANGLE",
+          "lado_objetivo": "L",
+          "segmentos": [
+            {
+              "t_abs": [
+                0.0,
+                1.0
+              ],
+              "movimiento": "STATIC",
+              "args": {},
+              "curva": "suave_salida"
+            },
+            {
+              "t_abs": [
+                1.0,
+                3.0
+              ],
+              "movimiento": "DOLLYIN",
+              "args": {
+                "size_range": [
+                  "MS",
+                  "MCU"
+                ],
+                "speed": "BRISK"
+              },
+              "curva": "suave_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 0.0,
+              "plano": "MS",
+              "lente_mm": 35.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 3.0,
+              "plano": "MCU",
+              "lente_mm": 35.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      },
+      {
+        "id": "v2",
+        "t0": 3.0,
+        "t1": 9.0,
+        "transition": "CORTE_SECO",
+        "source_data": {
+          "vineta": "v2",
+          "t_abs": [
+            3.0,
+            9.0
+          ],
+          "objetivo": "ch-don-caos-7adf",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "LOWANGLE",
+          "lado_objetivo": "L",
+          "segmentos": [
+            {
+              "t_abs": [
+                3.0,
+                9.0
+              ],
+              "movimiento": "DOLLYOUT",
+              "args": {
+                "size_range": [
+                  "CU",
+                  "MS"
+                ],
+                "speed": "SLOW"
+              },
+              "curva": "suave_entrada_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 3.0,
+              "plano": "CU",
+              "lente_mm": 24.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 9.0,
+              "plano": "MS",
+              "lente_mm": 24.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "CORTE_SECO"
+        }
+      },
+      {
+        "id": "v3",
+        "t0": 9.0,
+        "t1": 11.0,
+        "transition": "CORTE",
+        "source_data": {
+          "vineta": "v3",
+          "t_abs": [
+            9.0,
+            11.0
+          ],
+          "objetivo": "ch-don-caos-7adf",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "EYELEVEL",
+          "lado_objetivo": "L",
+          "segmentos": [
+            {
+              "t_abs": [
+                9.0,
+                11.0
+              ],
+              "movimiento": "PAN",
+              "args": {
+                "dir_lr": "R",
+                "speed": "BRISK"
+              },
+              "curva": "suave_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 9.0,
+              "plano": "WS",
+              "lente_mm": 24.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 11.0,
+              "plano": "WS",
+              "lente_mm": 24.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": "por decidir en 02N (el DSL no dio grados)"
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      },
+      {
+        "id": "v4",
+        "t0": 11.0,
+        "t1": 18.0,
+        "transition": "CORTE_SECO",
+        "source_data": {
+          "vineta": "v4",
+          "t_abs": [
+            11.0,
+            18.0
+          ],
+          "objetivo": "ch-don-caos-7adf",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "LOWANGLE",
+          "lado_objetivo": "L",
+          "segmentos": [
+            {
+              "t_abs": [
+                11.0,
+                15.5
+              ],
+              "movimiento": "STATIC",
+              "args": {},
+              "curva": "suave_entrada_salida"
+            },
+            {
+              "t_abs": [
+                15.5,
+                18.0
+              ],
+              "movimiento": "TRACK",
+              "args": {
+                "screen": "L2R",
+                "speed": "SLOW"
+              },
+              "curva": "suave_entrada_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 11.0,
+              "plano": "MS",
+              "lente_mm": 35.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 18.0,
+              "plano": "MS",
+              "lente_mm": 35.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "CORTE_SECO"
+        }
+      },
+      {
+        "id": "v5",
+        "t0": 18.0,
+        "t1": 21.0,
+        "transition": "CORTE",
+        "source_data": {
+          "vineta": "v5",
+          "t_abs": [
+            18.0,
+            21.0
+          ],
+          "objetivo": "ch-pintor-bce0",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "EYELEVEL",
+          "lado_objetivo": "R",
+          "segmentos": [
+            {
+              "t_abs": [
+                18.0,
+                21.0
+              ],
+              "movimiento": "CRANE",
+              "args": {
+                "dir_ud": "DOWN",
+                "speed": "BRISK"
+              },
+              "curva": "suave_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 18.0,
+              "plano": "WS",
+              "lente_mm": 24.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 21.0,
+              "plano": "WS",
+              "lente_mm": 24.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      },
+      {
+        "id": "v6",
+        "t0": 21.0,
+        "t1": 25.0,
+        "transition": "CORTE_SECO",
+        "source_data": {
+          "vineta": "v6",
+          "t_abs": [
+            21.0,
+            25.0
+          ],
+          "objetivo": "ch-spark-468e",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "LOWANGLE",
+          "lado_objetivo": "C",
+          "segmentos": [
+            {
+              "t_abs": [
+                21.0,
+                25.0
+              ],
+              "movimiento": "DOLLYIN",
+              "args": {
+                "size_range": [
+                  "MCU",
+                  "CU"
+                ],
+                "speed": "SLOW"
+              },
+              "curva": "suave_entrada_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 21.0,
+              "plano": "MCU",
+              "lente_mm": 35.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 25.0,
+              "plano": "CU",
+              "lente_mm": 35.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "CORTE_SECO"
+        }
+      },
+      {
+        "id": "v7",
+        "t0": 25.0,
+        "t1": 30.0,
+        "transition": "CORTE",
+        "source_data": {
+          "vineta": "v7",
+          "t_abs": [
+            25.0,
+            30.0
+          ],
+          "objetivo": "ch-pintor-bce0",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "EYELEVEL",
+          "lado_objetivo": "R",
+          "segmentos": [
+            {
+              "t_abs": [
+                25.0,
+                26.5
+              ],
+              "movimiento": "PAN",
+              "args": {
+                "dir_lr": "R",
+                "speed": "BRISK"
+              },
+              "curva": "suave_salida"
+            },
+            {
+              "t_abs": [
+                26.5,
+                30.0
+              ],
+              "movimiento": "STATIC",
+              "args": {},
+              "curva": "suave_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 25.0,
+              "plano": "MS",
+              "lente_mm": 28.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 26.5,
+              "plano": "MS",
+              "lente_mm": 28.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": "por decidir en 02N (el DSL no dio grados)"
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      },
+      {
+        "id": "v8",
+        "t0": 30.0,
+        "t1": 33.0,
+        "transition": "CORTE",
+        "source_data": {
+          "vineta": "v8",
+          "t_abs": [
+            30.0,
+            33.0
+          ],
+          "objetivo": "ch-valentina-a9be",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "HIGHANGLE",
+          "lado_objetivo": "L",
+          "segmentos": [
+            {
+              "t_abs": [
+                30.0,
+                33.0
+              ],
+              "movimiento": "DOLLYIN",
+              "args": {
+                "size_range": [
+                  "FS",
+                  "MS"
+                ],
+                "speed": "SLOW"
+              },
+              "curva": "suave_entrada_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 30.0,
+              "plano": "FS",
+              "lente_mm": 24.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 33.0,
+              "plano": "MS",
+              "lente_mm": 24.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      },
+      {
+        "id": "v9",
+        "t0": 33.0,
+        "t1": 40.0,
+        "transition": "CORTE",
+        "source_data": {
+          "vineta": "v9",
+          "t_abs": [
+            33.0,
+            40.0
+          ],
+          "objetivo": "ch-valentina-a9be",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "EYELEVEL",
+          "lado_objetivo": "L",
+          "segmentos": [
+            {
+              "t_abs": [
+                33.0,
+                36.0
+              ],
+              "movimiento": "STATIC",
+              "args": {},
+              "curva": "suave_entrada_salida"
+            },
+            {
+              "t_abs": [
+                36.0,
+                40.0
+              ],
+              "movimiento": "DOLLYIN",
+              "args": {
+                "size_range": [
+                  "MCU",
+                  "CU"
+                ],
+                "speed": "VSLOW"
+              },
+              "curva": "suave_entrada_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 33.0,
+              "plano": "MCU",
+              "lente_mm": 50.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 40.0,
+              "plano": "CU",
+              "lente_mm": 50.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      },
+      {
+        "id": "v10",
+        "t0": 40.0,
+        "t1": 44.0,
+        "transition": "CORTE",
+        "source_data": {
+          "vineta": "v10",
+          "t_abs": [
+            40.0,
+            44.0
+          ],
+          "objetivo": "ch-eco-eff3",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "LOWANGLE",
+          "lado_objetivo": "R",
+          "segmentos": [
+            {
+              "t_abs": [
+                40.0,
+                44.0
+              ],
+              "movimiento": "STATIC",
+              "args": {},
+              "curva": "lineal"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 40.0,
+              "plano": "MS",
+              "lente_mm": 35.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      },
+      {
+        "id": "v11",
+        "t0": 44.0,
+        "t1": 47.4,
+        "transition": "CORTE",
+        "source_data": {
+          "vineta": "v11",
+          "t_abs": [
+            44.0,
+            47.4
+          ],
+          "objetivo": "ch-valentina-a9be",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "EYELEVEL",
+          "lado_objetivo": "L",
+          "segmentos": [
+            {
+              "t_abs": [
+                44.0,
+                46.0
+              ],
+              "movimiento": "DOLLYIN",
+              "args": {
+                "size_range": [
+                  "FS",
+                  "MS"
+                ],
+                "speed": "SLOW"
+              },
+              "curva": "suave_entrada_salida"
+            },
+            {
+              "t_abs": [
+                46.0,
+                47.4
+              ],
+              "movimiento": "STATIC",
+              "args": {},
+              "curva": "suave_entrada_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 44.0,
+              "plano": "FS",
+              "lente_mm": 28.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 46.0,
+              "plano": "MS",
+              "lente_mm": 28.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "CORTE"
+        }
+      },
+      {
+        "id": "v12",
+        "t0": 47.4,
+        "t1": 55.0,
+        "transition": "FIN_ESCENA",
+        "source_data": {
+          "vineta": "v12",
+          "t_abs": [
+            47.4,
+            55.0
+          ],
+          "objetivo": "ch-spark-468e",
+          "altura_m": null,
+          "altura_fuente": "por medir en 02N",
+          "angulo": "LOWANGLE",
+          "lado_objetivo": "C",
+          "segmentos": [
+            {
+              "t_abs": [
+                47.4,
+                52.9
+              ],
+              "movimiento": "DOLLYIN",
+              "args": {
+                "size_range": [
+                  "CU",
+                  "ECU"
+                ],
+                "speed": "VSLOW"
+              },
+              "curva": "suave_entrada_salida"
+            },
+            {
+              "t_abs": [
+                52.9,
+                55.0
+              ],
+              "movimiento": "STATIC",
+              "args": {},
+              "curva": "suave_entrada_salida"
+            }
+          ],
+          "keyframes": [
+            {
+              "t": 47.4,
+              "plano": "CU",
+              "lente_mm": 50.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            },
+            {
+              "t": 52.9,
+              "plano": "ECU",
+              "lente_mm": 50.0,
+              "distancia_m": "por medir en 02N",
+              "giro_grados": 0
+            }
+          ],
+          "transicion_salida": "FIN_ESCENA"
+        }
+      }
+    ]
+  },
+  "lighting": null,
+  "audio": null,
+  "required_capabilities": [
+    "rostros_finales",
+    "ropa_final"
+  ],
+  "libraries": [
+    {
+      "id": "catalogo_escena",
+      "path": "catalogo_poses_escena.json",
+      "sha256": "bba713106554d660215d50cb36a0b6d0832b3aaab69daf1fb1880a53cdc87b2f",
+      "approval_status": "SIN_VERIFICAR"
+    }
+  ],
+  "legacy": {
+    "scene": "guardianes_esc1",
+    "fps": 24,
+    "duration_s": 55.0,
+    "environment": {
+      "mode": "blend",
+      "path": "set.blend",
+      "sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733",
+      "visibility": {
+        "luz_esc1_0": false,
+        "luz_esc1_1": false,
+        "luz_esc1_2": false,
+        "luz_esc2_0": false,
+        "luz_esc2_1": false,
+        "luz_esc2_2": false,
+        "luz_esc3_0": false,
+        "luz_esc3_1": false,
+        "luz_esc3_2": false,
+        "luz_esc8_0": false,
+        "luz_esc8_1": false,
+        "luz_esc8_2": false,
+        "luz_esc9_0": false,
+        "luz_esc9_1": false
+      },
+      "live": "escenario_vivo.json",
+      "live_data": {
+        "status": "incomplete",
+        "producer": "4a. Escenarios → 4a4. Prompts escenario vivo (Argon, pago) + 01",
+        "source": "escenario_vivo_fuentes/4a_escenarios.json",
+        "scene": "1",
+        "base_environment_id": "esc-habitacion",
+        "source_raw": {
+          "id": "esc-habitacion",
+          "nombre": "Habitación",
+          "int_ext": "INT",
+          "escenas": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9"
+          ],
+          "horas": [
+            "Día"
+          ],
+          "climas": [
+            "Arcoíris exterior que se vuelve gris",
+            "Desconocido",
+            "Gris sin color"
+          ],
+          "solo_recuerdo_o_pantalla": false,
+          "elementos": [
+            {
+              "nombre": "Ventana con vista al arcoíris",
+              "cita": "Ahora el arcoíris de la ventana se vuelve gris.",
+              "escenas": [
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            {
+              "nombre": "Centro de la habitación",
+              "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes:",
+              "escenas": [
+                "1",
+                "2",
+                "3",
+                "8",
+                "9"
+              ]
+            },
+            {
+              "nombre": "Piso de la habitación",
+              "cita": "[La O rueda por el piso como una pelota]",
+              "escenas": [
+                "1",
+                "2",
+                "3",
+                "8",
+                "9"
+              ]
+            }
+          ],
+          "variantes_estado": [
+            {
+              "variante": "Inicial con color (libro con letras en la cama y arcoíris en la ventana)",
+              "escenas": [
+                "1"
+              ],
+              "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+            },
+            {
+              "variante": "Sin letras ni colores (página en blanco, arcoíris gris en la ventana y cofre cerrado)",
+              "escenas": [
+                "1",
+                "2",
+                "3",
+                "8"
+              ],
+              "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+            },
+            {
+              "variante": "Restaurada en celebración (confeti de colores, cofre abierto y libro lleno de nuevo)",
+              "escenas": [
+                "8",
+                "9"
+              ],
+              "cita": "Del cofre salen volando todas las letras, los colores y los números."
+            }
+          ],
+          "estado_por_escena": [
+            {
+              "escena": "1",
+              "inicio": [
+                "Libro de cuentos abierto sobre la cama con letras temblando",
+                "Arcoíris con color en la ventana"
+              ],
+              "fin": [
+                "Libro de cuentos con la página en blanco",
+                "Arcoíris de la ventana vuelto gris",
+                "Cuatro luces de colores aterrizadas como héroes",
+                "Cofre dorado cerrado con tres candados en el centro de la habitación"
+              ],
+              "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+            },
+            {
+              "escena": "2",
+              "inicio": [
+                "Libro de cuentos en blanco sobre la cama",
+                "Arcoíris de la ventana gris",
+                "Cofre dorado cerrado en el centro de la habitación"
+              ],
+              "fin": [
+                "Libro de cuentos en blanco sobre la cama",
+                "Arcoíris de la ventana gris",
+                "Cofre dorado cerrado en el centro de la habitación",
+                "Holograma azul con 5 estrellas apagadas proyectado desde el visor de Spark"
+              ],
+              "cita": "Un holograma azul muestra un mapa con 5 estrellas apagadas en fila."
+            },
+            {
+              "escena": "3",
+              "inicio": [
+                "Arcoíris de la ventana gris",
+                "Cofre dorado cerrado en el centro de la habitación",
+                "Vocales escondidas en almohada, lámpara, lápiz, piso y armario"
+              ],
+              "fin": [
+                "Arcoíris de la ventana gris",
+                "Cofre dorado cerrado en el centro de la habitación",
+                "Las 5 vocales reunidas en fila pero todas de color gris"
+              ],
+              "cita": "Don Caos las escondió en esta habitación."
+            },
+            {
+              "escena": "8",
+              "inicio": [
+                "Cofre dorado cerrado con tres candados en el centro de la habitación",
+                "Libro de cuentos en blanco"
+              ],
+              "fin": [
+                "Explosión de confeti de colores en la habitación",
+                "Cofre dorado abierto con los tres candados destrabados",
+                "Letras, colores y números devueltos a las páginas del libro"
+              ],
+              "cita": "Los tres candados se abren: clic, clic, clic."
+            },
+            {
+              "escena": "9",
+              "inicio": [
+                "Habitación en celebración con confeti",
+                "Cofre abierto y libro de cuentos restaurado"
+              ],
+              "fin": [
+                "Papel con los números del 6 al 10 caído en el piso",
+                "Corte al marco de la pantalla final"
+              ],
+              "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+            }
+          ],
+          "fuente": "4p",
+          "investigacion": null
+        },
+        "state_for_scene": {
+          "escena": "1",
+          "inicio": [
+            "Libro de cuentos abierto sobre la cama con letras temblando",
+            "Arcoíris con color en la ventana"
+          ],
+          "fin": [
+            "Libro de cuentos con la página en blanco",
+            "Arcoíris de la ventana vuelto gris",
+            "Cuatro luces de colores aterrizadas como héroes",
+            "Cofre dorado cerrado con tres candados en el centro de la habitación"
+          ],
+          "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+        },
+        "changes": [],
+        "missing": [
+          {
+            "campo": "changes/object,time,property,value",
+            "modulo": "4a/4a4 + 01",
+            "mensaje": "Llegan inicio/fin y variantes como texto, sin binding inequívoco a objetos Blender ni keyframes de propiedades. No se inventan."
+          }
+        ]
+      }
+    },
+    "actors": [
+      {
+        "id": "ch-don-caos-7adf",
+        "spec": {
+          "id": "ch-don-caos-7adf",
+          "altura_m": 0.18,
+          "cabezas": 3.5,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~0.18 m",
+            "cabezas": "~3.5 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.002,
+          "retraso_brazos_s": 0.003,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 900,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "pecho": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "cuello": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "cabeza": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "clavicula": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "brazo": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "antebrazo": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "mano": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "muslo": [
+            0.4,
+            0.18,
+            0.55
+          ],
+          "pierna": [
+            0.4,
+            0.18,
+            0.55
+          ],
+          "pie": [
+            0.8,
+            0.15,
+            0.15
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 9.0,
+            "p0": [
+              2.35,
+              2.75,
+              0.0
+            ],
+            "p1": [
+              2.35,
+              2.75,
+              0.0
+            ],
+            "yaw": 187.0
+          },
+          {
+            "t0": 9.0,
+            "t1": 11.0,
+            "p0": [
+              2.35,
+              2.75,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              3.15,
+              0.0
+            ],
+            "yaw": 60.0
+          },
+          {
+            "t0": 11.0,
+            "t1": 15.5,
+            "p0": [
+              2.55,
+              3.15,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              3.15,
+              0.0
+            ],
+            "yaw": 60.0
+          },
+          {
+            "t0": 15.5,
+            "t1": 18.0,
+            "p0": [
+              2.55,
+              3.15,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              3.3,
+              0.0
+            ],
+            "yaw": 170.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 55.0,
+            "p0": [
+              1.65,
+              3.3,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              3.3,
+              0.0
+            ],
+            "yaw": -65.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "colores.piel": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.cara": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.pelo": [
+            0.75,
+            0.75,
+            0.78
+          ],
+          "colores.ropa_superior": [
+            0.45,
+            0.2,
+            0.6
+          ],
+          "colores.ropa_inferior": [
+            0.4,
+            0.18,
+            0.55
+          ],
+          "colores.zapatos": [
+            0.8,
+            0.15,
+            0.15
+          ],
+          "capa": {
+            "color": [
+              0.45,
+              0.15,
+              0.58
+            ],
+            "largo_m": 0.7,
+            "rasgada": true
+          },
+          "gordura": {
+            "torso": 1.25,
+            "cadera": 1.25,
+            "piernas": 0.85,
+            "brazos": 0.95,
+            "cara": 1.15,
+            "pies": 1.35,
+            "sombrero_copa_torcido": true,
+            "bufanda_rayas": true,
+            "bigote_enrollado": true,
+            "pistola_rayos": true,
+            "botones_colores": [
+              "amarillo",
+              "verde",
+              "rojo"
+            ]
+          }
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      },
+      {
+        "id": "ch-spark-468e",
+        "spec": {
+          "id": "ch-spark-468e",
+          "altura_m": 1.16,
+          "cabezas": 5.0,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~1.16 m",
+            "cabezas": "~5.0 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.026,
+          "retraso_brazos_s": 0.051,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 389.0,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "pecho": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "cuello": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "cabeza": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "clavicula": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "brazo": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "antebrazo": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "mano": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "muslo": [
+            0.08,
+            0.42,
+            0.75
+          ],
+          "pierna": [
+            0.08,
+            0.42,
+            0.75
+          ],
+          "pie": [
+            0.12,
+            0.52,
+            0.85
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 18.0,
+            "p0": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "p1": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "yaw": 17.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 30.0,
+            "p0": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "p1": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "yaw": 17.0
+          },
+          {
+            "t0": 30.0,
+            "t1": 33.0,
+            "p0": [
+              1.45,
+              1.75,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "yaw": 5.0
+          },
+          {
+            "t0": 33.0,
+            "t1": 44.0,
+            "p0": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "yaw": 5.0
+          },
+          {
+            "t0": 44.0,
+            "t1": 46.0,
+            "p0": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "yaw": -90.0
+          },
+          {
+            "t0": 46.0,
+            "t1": 55.0,
+            "p0": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "p1": [
+              1.65,
+              1.95,
+              0.0
+            ],
+            "yaw": -90.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "gordura": {
+            "torso": 0.88,
+            "cadera": 0.82,
+            "piernas": 0.86,
+            "brazos": 0.88,
+            "cara": 0.85
+          },
+          "colores.piel": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.cara": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.pelo": [
+            0.28,
+            0.18,
+            0.12
+          ],
+          "colores.ropa_superior": [
+            0.1,
+            0.48,
+            0.82
+          ],
+          "colores.ropa_inferior": [
+            0.08,
+            0.42,
+            0.75
+          ],
+          "colores.zapatos": [
+            0.12,
+            0.52,
+            0.85
+          ],
+          "gafas": {
+            "gafas": true,
+            "gafas_color": [
+              0.2,
+              0.75,
+              1.0
+            ]
+          }
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      },
+      {
+        "id": "ch-valentina-a9be",
+        "spec": {
+          "id": "ch-valentina-a9be",
+          "altura_m": 1.12,
+          "cabezas": 4.5,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~1.12 m",
+            "cabezas": "~4.5 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.024,
+          "retraso_brazos_s": 0.048,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 402.0,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "pecho": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "cuello": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "cabeza": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "clavicula": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "brazo": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "antebrazo": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "mano": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "muslo": [
+            0.65,
+            0.15,
+            0.52
+          ],
+          "pierna": [
+            0.65,
+            0.15,
+            0.52
+          ],
+          "pie": [
+            0.78,
+            0.2,
+            0.6
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 18.0,
+            "p0": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "yaw": -127.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 30.0,
+            "p0": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "yaw": -127.0
+          },
+          {
+            "t0": 30.0,
+            "t1": 33.0,
+            "p0": [
+              2.75,
+              2.65,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "yaw": -124.0
+          },
+          {
+            "t0": 33.0,
+            "t1": 44.0,
+            "p0": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "yaw": -124.0
+          },
+          {
+            "t0": 44.0,
+            "t1": 46.0,
+            "p0": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "yaw": -90.0
+          },
+          {
+            "t0": 46.0,
+            "t1": 55.0,
+            "p0": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "p1": [
+              2.55,
+              2.45,
+              0.0
+            ],
+            "yaw": -90.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "gordura": {
+            "torso": 0.88,
+            "cadera": 0.82,
+            "piernas": 0.86,
+            "brazos": 0.88,
+            "cara": 0.85
+          },
+          "colores.piel": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "colores.cara": [
+            0.78,
+            0.52,
+            0.38
+          ],
+          "pelo_largo": {
+            "ocultar_pelo_base": true,
+            "largo_m": 0.45,
+            "color": [
+              0.12,
+              0.08,
+              0.1
+            ]
+          },
+          "colores.ropa_superior": [
+            0.72,
+            0.18,
+            0.58
+          ],
+          "colores.ropa_inferior": [
+            0.65,
+            0.15,
+            0.52
+          ],
+          "colores.zapatos": [
+            0.78,
+            0.2,
+            0.6
+          ],
+          "capa": {
+            "color": [
+              0.95,
+              0.45,
+              0.7
+            ],
+            "largo_m": 0.45,
+            "rasgada": false
+          },
+          "pulsera": {
+            "muneca": "izquierda",
+            "color": [
+              0.85,
+              0.2,
+              0.6
+            ],
+            "escudo_empatia": true,
+            "monos_altos_lazos_magenta": true,
+            "pantuflas_conejo": true
+          }
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      },
+      {
+        "id": "ch-eco-eff3",
+        "spec": {
+          "id": "ch-eco-eff3",
+          "altura_m": 1.02,
+          "cabezas": 6.5,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~1.02 m",
+            "cabezas": "~6.5 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.021,
+          "retraso_brazos_s": 0.042,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 437.0,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "pecho": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "cuello": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "cabeza": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "clavicula": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "brazo": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "antebrazo": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "mano": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "muslo": [
+            0.14,
+            0.48,
+            0.25
+          ],
+          "pierna": [
+            0.14,
+            0.48,
+            0.25
+          ],
+          "pie": [
+            0.16,
+            0.55,
+            0.3
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 18.0,
+            "p0": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "p1": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "yaw": -171.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 30.0,
+            "p0": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "p1": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "yaw": -171.0
+          },
+          {
+            "t0": 30.0,
+            "t1": 33.0,
+            "p0": [
+              3.25,
+              2.15,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "yaw": -172.0
+          },
+          {
+            "t0": 33.0,
+            "t1": 44.0,
+            "p0": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "yaw": -172.0
+          },
+          {
+            "t0": 44.0,
+            "t1": 46.0,
+            "p0": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "yaw": -90.0
+          },
+          {
+            "t0": 46.0,
+            "t1": 55.0,
+            "p0": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              2.1,
+              0.0
+            ],
+            "yaw": -90.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "gordura": {
+            "torso": 0.88,
+            "cadera": 0.82,
+            "piernas": 0.86,
+            "brazos": 0.88,
+            "cara": 0.85
+          },
+          "colores.piel": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.cara": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "pelo_largo": {
+            "ocultar_pelo_base": true,
+            "largo_m": 0.45,
+            "color": [
+              0.18,
+              0.58,
+              0.25
+            ]
+          },
+          "colores.ropa_superior": [
+            0.15,
+            0.52,
+            0.28
+          ],
+          "colores.ropa_inferior": [
+            0.14,
+            0.48,
+            0.25
+          ],
+          "colores.zapatos": [
+            0.16,
+            0.55,
+            0.3
+          ]
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      },
+      {
+        "id": "ch-pintor-bce0",
+        "spec": {
+          "id": "ch-pintor-bce0",
+          "altura_m": 1.06,
+          "cabezas": 6.5,
+          "complexion": "delgado",
+          "atletico": false,
+          "extras": [],
+          "citas": {
+            "altura": "Estatura ~1.06 m",
+            "cabezas": "~6.5 cabezas",
+            "complexion": "delgado"
+          },
+          "altura_referencia_perfil_m": 1.72
+        },
+        "profile": {
+          "retraso_tronco_s": 0.022,
+          "retraso_brazos_s": 0.045,
+          "umbral_fase_intermedia_deg": 45.0,
+          "suavizado_inicio_fin": 0.25,
+          "vel_max_deg_s": 422.0,
+          "anclaje_pies": 1,
+          "margen_equilibrio_m": 0.04,
+          "correccion_equilibrio_max_deg": 12.0,
+          "vel_vertical_max_m_s": 0.9,
+          "masa_rel": 0.3,
+          "temblor_deg": 0,
+          "vuela": 0,
+          "cola_contrapeso": 0,
+          "cuadrupedo": 0,
+          "anclaje_excursion_max_m": 0.65
+        },
+        "colors": {
+          "columna": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "pecho": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "cuello": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "cabeza": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "clavicula": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "brazo": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "antebrazo": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "mano": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "muslo": [
+            0.18,
+            0.28,
+            0.58
+          ],
+          "pierna": [
+            0.18,
+            0.28,
+            0.58
+          ],
+          "pie": [
+            0.32,
+            0.2,
+            0.15
+          ]
+        },
+        "initial_pose_id": "p_de_pie_base",
+        "segments": [
+          {
+            "t0": 0.0,
+            "t1": 18.0,
+            "p0": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "yaw": 153.0
+          },
+          {
+            "t0": 18.0,
+            "t1": 30.0,
+            "p0": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "p1": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "yaw": 153.0
+          },
+          {
+            "t0": 30.0,
+            "t1": 33.0,
+            "p0": [
+              2.95,
+              1.65,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "yaw": 163.0
+          },
+          {
+            "t0": 33.0,
+            "t1": 44.0,
+            "p0": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "yaw": 163.0
+          },
+          {
+            "t0": 44.0,
+            "t1": 46.0,
+            "p0": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "yaw": -90.0
+          },
+          {
+            "t0": 46.0,
+            "t1": 55.0,
+            "p0": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "p1": [
+              2.75,
+              1.85,
+              0.0
+            ],
+            "yaw": -90.0
+          }
+        ],
+        "floor_z": 0,
+        "appearance": {
+          "colores.piel": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.cara": [
+            0.96,
+            0.78,
+            0.65
+          ],
+          "colores.ropa_inferior": [
+            0.18,
+            0.28,
+            0.58
+          ],
+          "colores.pelo": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "colores.ropa_superior": [
+            0.95,
+            0.82,
+            0.15
+          ],
+          "colores.zapatos": [
+            0.32,
+            0.2,
+            0.15
+          ],
+          "gordura": {
+            "torso": 1.22,
+            "cadera": 1.2,
+            "piernas": 0.9,
+            "brazos": 0.95,
+            "cara": 1.12,
+            "copete_pincel": true,
+            "boina_roja_ladeada": true,
+            "pincel_oreja": true,
+            "manchas_pintura_multicolor": true,
+            "solapa_abc": true
+          }
+        },
+        "profile_source": "calculado ADN; parámetros físicos técnicos declarados",
+        "solver_policy": {
+          "foot_anchoring": true
+        }
+      }
+    ],
+    "props": [],
+    "catalog": "catalogo_poses_escena.json",
+    "assignments": "asignacion_para_motor.json",
+    "camera": {
+      "mode": "auto_inside",
+      "source": "AUTOMATICA, NO SB",
+      "cause": "a: cámara/SB no entregados",
+      "clip_end": 1000,
+      "sensor_width_mm": 36,
+      "margin": 2.1,
+      "direction": [
+        0,
+        -2,
+        1.2
+      ],
+      "candidates": [
+        "cam_01_esc1",
+        "cam_02_esc1",
+        "cam_03_esc2",
+        "cam_04_esc2",
+        "cam_05_esc3",
+        "cam_06_esc3",
+        "cam_07_esc8",
+        "cam_08_esc8",
+        "cam_09_esc9",
+        "cam_10_esc9",
+        "cam_planta"
+      ],
+      "lens_limits": [
+        10.0,
+        50.0
+      ],
+      "margin_fraction": 0.05,
+      "floor_z": 0.0
+    },
+    "solver": {
+      "slerp_raiz": false,
+      "contacto_apoyos": true,
+      "ik_piso_suave": false,
+      "piso_suave": false,
+      "equilibrio_memoria": false,
+      "anclaje_mismo_cuadro": false,
+      "orden_medicion": false
+    },
+    "rules": {
+      "layers": [
+        "base",
+        "locomocion",
+        "gesto"
+      ],
+      "root_mode": "segments",
+      "kimodo_source": "pendiente retarget universal; catálogo 2B cacheado, NO pulida nueva"
+    },
+    "render": {
+      "samples": 8,
+      "width": 960,
+      "height": 540,
+      "world_color": [
+        0.22,
+        0.22,
+        0.22
+      ],
+      "view_transform": "AgX",
+      "lights": [
+        {
+          "id": "luz_tecnica",
+          "type": "SUN",
+          "pos": [
+            0,
+            0,
+            20
+          ],
+          "rot_deg": [
+            20,
+            -25,
+            -25
+          ],
+          "energy": 2.0,
+          "color": [
+            1,
+            0.94,
+            0.86
+          ],
+          "size": 5
+        },
+        {
+          "id": "relleno_tecnico",
+          "type": "SUN",
+          "pos": [
+            0,
+            0,
+            20
+          ],
+          "rot_deg": [
+            30,
+            15,
+            125
+          ],
+          "energy": 0.65,
+          "color": [
+            0.8,
+            0.9,
+            1
+          ],
+          "size": 5
+        },
+        {
+          "id": "relleno_interior_tecnico",
+          "type": "AREA",
+          "pos": [
+            2.25,
+            2.0,
+            2.6
+          ],
+          "rot_deg": [
+            0,
+            0,
+            0
+          ],
+          "energy": 180.0,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "size": 2.5
+        }
+      ],
+      "exposure": 0.0
+    },
+    "provisional": [
+      {
+        "campo": "ejes",
+        "modulo": "01/4a2",
+        "mensaje": "Provisional técnico: +Y frente/+Z arriba, ejes no certificados"
+      },
+      {
+        "campo": "apariencia",
+        "modulo": "puente de apariencia",
+        "mensaje": "Cápsulas del rig con colores reales; controles de pelo/vestuario/gafas/FX conservados pero no todos geometrizados; NO calidad final"
+      },
+      {
+        "campo": "luces",
+        "modulo": "motor/configuración técnica",
+        "mensaje": "Luces CPU técnicas explícitas en entrada; no SB ni iluminación artística aprobada"
+      },
+      {
+        "campo": "ch-piquito-030a",
+        "modulo": "ADN/ancla",
+        "mensaje": "Ave excluida; no se eligió hombro ni rig humano"
+      },
+      {
+        "campo": "2B",
+        "modulo": "2B/Argon",
+        "mensaje": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada"
+      },
+      {
+        "campo": "iluminacion",
+        "modulo": "4a2/configuración técnica",
+        "mensaje": "El blend contiene luces de varias escenas simultáneas que lavan los RGB. Para esta previa se desactivan luces fuente por lista EXPLÍCITA y se aplican luces neutrales técnicas declaradas; no es luz artística aprobada."
+      },
+      {
+        "campo": "adn_entities",
+        "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+        "mensaje": "ADN de personajes y objetos añadido al paquete. Texto/medidas existen; la representación de ropa, rasgos, materiales por pieza y anclas ejecutables aún no está parametrizada. No se presenta la cápsula como apariencia final."
+      },
+      {
+        "campo": "changes/object,time,property,value",
+        "modulo": "4a/4a4 + 01",
+        "mensaje": "Llegan inicio/fin y variantes como texto, sin binding inequívoco a objetos Blender ni keyframes de propiedades. No se inventan."
+      }
+    ],
+    "adn_entities": "adn_entidades.json"
+  },
+  "provisional": [
+    {
+      "campo": "ejes",
+      "modulo": "01/4a2",
+      "mensaje": "Provisional técnico: +Y frente/+Z arriba, ejes no certificados"
+    },
+    {
+      "campo": "apariencia",
+      "modulo": "puente de apariencia",
+      "mensaje": "Cápsulas del rig con colores reales; controles de pelo/vestuario/gafas/FX conservados pero no todos geometrizados; NO calidad final"
+    },
+    {
+      "campo": "luces",
+      "modulo": "motor/configuración técnica",
+      "mensaje": "Luces CPU técnicas explícitas en entrada; no SB ni iluminación artística aprobada"
+    },
+    {
+      "campo": "ch-piquito-030a",
+      "modulo": "ADN/ancla",
+      "mensaje": "Ave excluida; no se eligió hombro ni rig humano"
+    },
+    {
+      "campo": "2B",
+      "modulo": "2B/Argon",
+      "mensaje": "Respuesta existente truncada MAX_TOKENS; preview con catálogo en caché, no recepción completa ni aprobada"
+    },
+    {
+      "campo": "iluminacion",
+      "modulo": "4a2/configuración técnica",
+      "mensaje": "El blend contiene luces de varias escenas simultáneas que lavan los RGB. Para esta previa se desactivan luces fuente por lista EXPLÍCITA y se aplican luces neutrales técnicas declaradas; no es luz artística aprobada."
+    },
+    {
+      "campo": "adn_entities",
+      "modulo": "ADN Maestro 03/04 / puente ADN→3D",
+      "mensaje": "ADN de personajes y objetos añadido al paquete. Texto/medidas existen; la representación de ropa, rasgos, materiales por pieza y anclas ejecutables aún no está parametrizada. No se presenta la cápsula como apariencia final."
+    },
+    {
+      "campo": "changes/object,time,property,value",
+      "modulo": "4a/4a4 + 01",
+      "mensaje": "Llegan inicio/fin y variantes como texto, sin binding inequívoco a objetos Blender ni keyframes de propiedades. No se inventan."
+    }
+  ],
+  "job_id": "guardianes",
+  "requirements": {
+    "entity_ids": [
+      "ch-don-caos-7adf",
+      "ch-spark-468e",
+      "ch-valentina-a9be",
+      "ch-eco-eff3",
+      "ch-pintor-bce0",
+      "ch-piquito-030a"
+    ],
+    "object_refs": [
+      "obj-libro-cuentos__e1-8",
+      "Ventana con vista al arcoíris",
+      "obj-cama",
+      "Centro de la habitación",
+      "obj-visor-spark",
+      "obj-cofre-dorado"
+    ]
+  },
+  "assets": [
+    {
+      "path": "adn_entidades.json",
+      "sha256": "260067abc7401cc96daf1b28d5d48b70a44e3783754e27f4bcb7d9a5796e22be",
+      "bytes": 91790,
+      "type": "json"
+    },
+    {
+      "path": "adn_manifest.json",
+      "sha256": "45ba6276ea29a6ba309b38f748e542c0ce8be65fb174565465400ed7d042a8cf",
+      "bytes": 24007,
+      "type": "json"
+    },
+    {
+      "path": "asignacion_para_motor.json",
+      "sha256": "bbff8d41235c79d2a242b26123a5eb1a035194f23f68b3b72a1a95244f418d55",
+      "bytes": 27118,
+      "type": "json"
+    },
+    {
+      "path": "catalogo_poses_escena.json",
+      "sha256": "bba713106554d660215d50cb36a0b6d0832b3aaab69daf1fb1880a53cdc87b2f",
+      "bytes": 120553,
+      "type": "json"
+    },
+    {
+      "path": "entrada.json",
+      "sha256": "1c93941dbd7a0e4bf74b35c8ad11aa7d983f695126e5a27a127e7e3046aa2795",
+      "bytes": 27507,
+      "type": "json"
+    },
+    {
+      "path": "escenario_vivo.json",
+      "sha256": "e4a308a434aed17b574ae6c3df7016837e8f74a2507e74941f89cde2c7ee5d81",
+      "bytes": 5573,
+      "type": "json"
+    },
+    {
+      "path": "programa_2b.json",
+      "sha256": "3f4a22b9af9ee6db1bffb5978de04886e87f18302881e045960e41fe3e855895",
+      "bytes": 6446,
+      "type": "json"
+    },
+    {
+      "path": "respuesta_2b.json",
+      "sha256": "b797c6cfa7573827d26abd5ec46b126d01920d7422be7147d891d7ca78219cd4",
+      "bytes": 37945,
+      "type": "json"
+    },
+    {
+      "path": "set.blend",
+      "sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733",
+      "bytes": 170627,
+      "type": "blend"
+    },
+    {
+      "path": "source_01.json",
+      "sha256": "90bcc355800cc65b1bc356d148b77ee5651ba8b72bad2ba29652d7924421a604",
+      "bytes": 26709,
+      "type": "json"
+    },
+    {
+      "path": "source_01_integral.json",
+      "sha256": "9661b80e310e100aada93b5fe256accc350d1bd202b882ee2399747989b90896",
+      "bytes": 31453,
+      "type": "json"
+    },
+    {
+      "path": "storyboard_camara.json",
+      "sha256": "3f9795bc8f0b2906080da69fce92299fc8ab2dd4fa6a6f55a70e057d4c7a3577",
+      "bytes": 10371,
+      "type": "json"
+    },
+    {
+      "path": "inventario_set_medido.json",
+      "sha256": "ec835d17d50e0229909ed2dfb92789544db36feb10491ba9461d46e33b93f8e3",
+      "bytes": 93773,
+      "type": "application/json"
+    },
+    {
+      "path": "referencias_adn/53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7.png",
+      "sha256": "53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7",
+      "bytes": 1366177,
+      "type": "image/png"
+    },
+    {
+      "path": "referencias_adn/120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788.png",
+      "sha256": "120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788",
+      "bytes": 1122394,
+      "type": "image/png"
+    },
+    {
+      "path": "referencias_adn/e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c.png",
+      "sha256": "e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c",
+      "bytes": 1382894,
+      "type": "image/png"
+    },
+    {
+      "path": "referencias_adn/0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f.png",
+      "sha256": "0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f",
+      "bytes": 1382950,
+      "type": "image/png"
+    },
+    {
+      "path": "referencias_adn/18e192698074aea18f2b8026f126144ef4122b5ed935df3d9ad742010093e75c.png",
+      "sha256": "18e192698074aea18f2b8026f126144ef4122b5ed935df3d9ad742010093e75c",
+      "bytes": 1538093,
+      "type": "image/png"
+    },
+    {
+      "path": "referencias_adn/fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea.png",
+      "sha256": "fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea",
+      "bytes": 1322254,
+      "type": "image/png"
+    },
+    {
+      "path": "referencias_adn/79e9b2dc80de9d06788a5850e462d2e34dacea886596ad6124bec1a3df9468e8.png",
+      "sha256": "79e9b2dc80de9d06788a5850e462d2e34dacea886596ad6124bec1a3df9468e8",
+      "bytes": 996652,
+      "type": "image/png"
+    }
+  ],
+  "actions": [
+    {
+      "id": "a1",
+      "t": [
+        0.0,
+        3.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "poder",
+      "pose": "senalando",
+      "mirada": "libro cuentos",
+      "emocion": "travieso",
+      "objeto": "obj-libro-cuentos__e1-8",
+      "cambio": "mover",
+      "cita": "Un rayo morado cruza la pantalla. Las letras salen volando como mariposas y la página queda en blanco.",
+      "mirada_id": "obj-libro-cuentos__e1-8"
+    },
+    {
+      "id": "a2",
+      "t": [
+        3.0,
+        9.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "libro cuentos",
+      "emocion": "divertido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Jajajá! ¡Sin letras no hay cuentos! ¡Y sin cuentos… todos a la cama sin leer!",
+      "mirada_id": "obj-libro-cuentos__e1-8"
+    },
+    {
+      "id": "a3",
+      "t": [
+        9.0,
+        11.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "poder",
+      "pose": "senalando",
+      "mirada": "Ventana con vista al arcoíris",
+      "emocion": "burlon",
+      "objeto": "Ventana con vista al arcoíris",
+      "cambio": "",
+      "cita": "Otro ZAP. Ahora el arcoíris de la ventana se vuelve gris.",
+      "mirada_id": "Ventana con vista al arcoíris"
+    },
+    {
+      "id": "a4",
+      "t": [
+        11.0,
+        15.5
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "Ventana con vista al arcoíris",
+      "emocion": "aburrido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Y adiós colores! ¡Y adiós números! Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+      "mirada_id": "Ventana con vista al arcoíris"
+    },
+    {
+      "id": "a5",
+      "t": [
+        15.5,
+        18.0
+      ],
+      "actor": "ch-don-caos-7adf",
+      "accion": "caminar",
+      "pose": "caminando",
+      "mirada": "cama",
+      "emocion": "satisfecho",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Ahora el mundo es… [bosteza] …aburrido. Como a mí me gusta.",
+      "mirada_id": "obj-cama"
+    },
+    {
+      "id": "a6",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a7",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a8",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a9",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a10",
+      "t": [
+        18.0,
+        21.0
+      ],
+      "actor": "ch-piquito-030a",
+      "accion": "aparecer",
+      "pose": "de_pie",
+      "mirada": "Centro de la habitación",
+      "emocion": "alerta",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo.",
+      "mirada_id": "Centro de la habitación"
+    },
+    {
+      "id": "a11",
+      "t": [
+        21.0,
+        25.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "visor spark",
+      "emocion": "preocupado",
+      "objeto": "obj-visor-spark",
+      "cambio": "",
+      "cita": "Alerta. Nivel de letras en el mundo: cero.",
+      "mirada_id": "obj-visor-spark"
+    },
+    {
+      "id": "a12",
+      "t": [
+        25.0,
+        30.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "Spark",
+      "emocion": "alarmado",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Cero letras! ¡Cero colores! ¡Cero todo! ¡Esto es una emergencia de nivel arcoíris!",
+      "mirada_id": "ch-spark-468e"
+    },
+    {
+      "id": "a13",
+      "t": [
+        30.0,
+        33.0
+      ],
+      "actor": "",
+      "accion": "aparecer",
+      "pose": "",
+      "mirada": "",
+      "emocion": "",
+      "objeto": "obj-cofre-dorado",
+      "cambio": "aparecer",
+      "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra."
+    },
+    {
+      "id": "a14",
+      "t": [
+        30.0,
+        33.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "mirar",
+      "pose": "de_pie",
+      "mirada": "cofre dorado",
+      "emocion": "sorprendido",
+      "objeto": "obj-cofre-dorado",
+      "cambio": "",
+      "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra.",
+      "mirada_id": "obj-cofre-dorado"
+    },
+    {
+      "id": "a15",
+      "t": [
+        33.0,
+        40.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "serena",
+      "objeto": "obj-cofre-dorado",
+      "cambio": "",
+      "cita": "Esperen… este cofre guarda una palabra mágica. Si alguien la lee en voz alta, todo vuelve a la normalidad."
+    },
+    {
+      "id": "a16",
+      "t": [
+        40.0,
+        44.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "Valentina",
+      "emocion": "entusiasmada",
+      "objeto": "",
+      "cambio": "",
+      "cita": "¡Pero solo puede abrirlo alguien muy valiente!",
+      "mirada_id": "ch-valentina-a9be"
+    },
+    {
+      "id": "a17",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a18",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidida",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a19",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidida",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a20",
+      "t": [
+        44.0,
+        46.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "girar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "decidido",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a21",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionado",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a22",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-valentina-a9be",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionada",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a23",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-eco-eff3",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionada",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a24",
+      "t": [
+        46.0,
+        48.0
+      ],
+      "actor": "ch-pintor-bce0",
+      "accion": "hablar",
+      "pose": "senalando",
+      "mirada": "al frente",
+      "emocion": "emocionado",
+      "objeto": "",
+      "cambio": "",
+      "cita": "…¡TÚ!"
+    },
+    {
+      "id": "a25",
+      "t": [
+        48.0,
+        55.0
+      ],
+      "actor": "ch-spark-468e",
+      "accion": "hablar",
+      "pose": "de_pie",
+      "mirada": "al frente",
+      "emocion": "misterioso",
+      "objeto": "",
+      "cambio": "",
+      "cita": "Al final de esta misión, tú vas a leer tu primera palabra mágica. Y no te voy a decir cuál es… todavía."
+    }
+  ],
+  "points": {
+    "caos_inicio": [
+      2.35,
+      2.75,
+      0.0
+    ],
+    "caos_ventana": [
+      2.55,
+      3.15,
+      0.0
+    ],
+    "caos_escondite": [
+      1.65,
+      3.3,
+      0.0
+    ],
+    "spark_aterrizaje": [
+      1.45,
+      1.75,
+      0.0
+    ],
+    "spark_cofre": [
+      1.65,
+      1.95,
+      0.0
+    ],
+    "pintor_aterrizaje": [
+      2.95,
+      1.65,
+      0.0
+    ],
+    "pintor_cofre": [
+      2.75,
+      1.85,
+      0.0
+    ],
+    "valentina_aterrizaje": [
+      2.75,
+      2.65,
+      0.0
+    ],
+    "valentina_cofre": [
+      2.55,
+      2.45,
+      0.0
+    ],
+    "eco_aterrizaje": [
+      3.25,
+      2.15,
+      0.0
+    ],
+    "eco_cofre": [
+      2.95,
+      2.1,
+      0.0
+    ]
+  },
+  "facts": [
+    {
+      "hecho": "Don Caos borra con su rayo las letras del libro de cuentos sobre la cama",
+      "personaje": "ch-don-caos-7adf",
+      "t": 3.0
+    },
+    {
+      "hecho": "Don Caos borra el color del arcoiris de la ventana y asegura que tambien borro los numeros",
+      "personaje": "ch-don-caos-7adf",
+      "t": 11.0
+    },
+    {
+      "hecho": "Los cuatro Guardianes aterrizan en la habitacion como luces de colores con Piquito en el hombro izquierdo de Eco",
+      "personaje": "ch-spark-468e",
+      "t": 21.0
+    },
+    {
+      "hecho": "Aparece el cofre dorado con tres candados en el centro de la habitacion",
+      "personaje": "",
+      "t": 33.0
+    },
+    {
+      "hecho": "Los Guardianes descubren que el cofre guarda una palabra magica que devolvera todo a la normalidad al leerla en voz alta",
+      "personaje": "ch-valentina-a9be",
+      "t": 40.0
+    }
+  ],
+  "segments": [
+    {
+      "actor": "ch-don-caos-7adf",
+      "source_data": {
+        "t": [
+          0.0,
+          9.0
+        ],
+        "pos": [
+          "caos_inicio",
+          "caos_inicio"
+        ],
+        "rot": 187.0,
+        "tipo": "quieto",
+        "porque": "Apunta su rayo al libro de cuentos sobre la cama y se rie"
+      }
+    },
+    {
+      "actor": "ch-don-caos-7adf",
+      "source_data": {
+        "t": [
+          9.0,
+          11.0
+        ],
+        "pos": [
+          "caos_inicio",
+          "caos_ventana"
+        ],
+        "rot": 60.0,
+        "tipo": "girar",
+        "porque": "Se vuelve hacia la ventana para disparar al arcoiris"
+      }
+    },
+    {
+      "actor": "ch-don-caos-7adf",
+      "source_data": {
+        "t": [
+          11.0,
+          15.5
+        ],
+        "pos": [
+          "caos_ventana",
+          "caos_ventana"
+        ],
+        "rot": 60.0,
+        "tipo": "quieto",
+        "porque": "Celebra que borro los colores y los numeros y bosteza"
+      }
+    },
+    {
+      "actor": "ch-don-caos-7adf",
+      "source_data": {
+        "t": [
+          15.5,
+          18.0
+        ],
+        "pos": [
+          "caos_ventana",
+          "caos_escondite"
+        ],
+        "rot": 170.0,
+        "tipo": "caminar",
+        "porque": "Se retira junto a la cama para esconderse al llegar los heroes"
+      }
+    },
+    {
+      "actor": "ch-don-caos-7adf",
+      "source_data": {
+        "t": [
+          18.0,
+          55.0
+        ],
+        "pos": [
+          "caos_escondite",
+          "caos_escondite"
+        ],
+        "rot": -65.0,
+        "tipo": "quieto",
+        "porque": "Observa oculto junto a la cama mientras los heroes examinan el cofre"
+      }
+    },
+    {
+      "actor": "ch-spark-468e",
+      "source_data": {
+        "t": [
+          0.0,
+          18.0
+        ],
+        "pos": [
+          "spark_aterrizaje",
+          "spark_aterrizaje"
+        ],
+        "rot": 17.0,
+        "tipo": "quieto",
+        "porque": "Posicion previa a su llegada como luz azul"
+      }
+    },
+    {
+      "actor": "ch-spark-468e",
+      "source_data": {
+        "t": [
+          18.0,
+          30.0
+        ],
+        "pos": [
+          "spark_aterrizaje",
+          "spark_aterrizaje"
+        ],
+        "rot": 17.0,
+        "tipo": "quieto",
+        "porque": "Aterriza en la habitacion y revisa la alerta en su visor"
+      }
+    },
+    {
+      "actor": "ch-spark-468e",
+      "source_data": {
+        "t": [
+          30.0,
+          33.0
+        ],
+        "pos": [
+          "spark_aterrizaje",
+          "spark_cofre"
+        ],
+        "rot": 5.0,
+        "tipo": "caminar",
+        "porque": "Da un paso hacia el cofre dorado que aparece en el centro"
+      }
+    },
+    {
+      "actor": "ch-spark-468e",
+      "source_data": {
+        "t": [
+          33.0,
+          44.0
+        ],
+        "pos": [
+          "spark_cofre",
+          "spark_cofre"
+        ],
+        "rot": 5.0,
+        "tipo": "quieto",
+        "porque": "Escucha a Valentina y Eco hablando sobre el cofre"
+      }
+    },
+    {
+      "actor": "ch-spark-468e",
+      "source_data": {
+        "t": [
+          44.0,
+          46.0
+        ],
+        "pos": [
+          "spark_cofre",
+          "spark_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "girar",
+        "porque": "Gira lentamente hacia el frente"
+      }
+    },
+    {
+      "actor": "ch-spark-468e",
+      "source_data": {
+        "t": [
+          46.0,
+          55.0
+        ],
+        "pos": [
+          "spark_cofre",
+          "spark_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "quieto",
+        "porque": "Senala al frente y explica la mision final de la palabra magica"
+      }
+    },
+    {
+      "actor": "ch-valentina-a9be",
+      "source_data": {
+        "t": [
+          0.0,
+          18.0
+        ],
+        "pos": [
+          "valentina_aterrizaje",
+          "valentina_aterrizaje"
+        ],
+        "rot": -127.0,
+        "tipo": "quieto",
+        "porque": "Posicion previa a su llegada como luz magenta"
+      }
+    },
+    {
+      "actor": "ch-valentina-a9be",
+      "source_data": {
+        "t": [
+          18.0,
+          30.0
+        ],
+        "pos": [
+          "valentina_aterrizaje",
+          "valentina_aterrizaje"
+        ],
+        "rot": -127.0,
+        "tipo": "quieto",
+        "porque": "Aterriza y escucha el reporte de Spark y Pintor"
+      }
+    },
+    {
+      "actor": "ch-valentina-a9be",
+      "source_data": {
+        "t": [
+          30.0,
+          33.0
+        ],
+        "pos": [
+          "valentina_aterrizaje",
+          "valentina_cofre"
+        ],
+        "rot": -124.0,
+        "tipo": "caminar",
+        "porque": "Se acerca al cofre dorado recien aparecido"
+      }
+    },
+    {
+      "actor": "ch-valentina-a9be",
+      "source_data": {
+        "t": [
+          33.0,
+          44.0
+        ],
+        "pos": [
+          "valentina_cofre",
+          "valentina_cofre"
+        ],
+        "rot": -124.0,
+        "tipo": "quieto",
+        "porque": "Explica que el cofre guarda una palabra magica"
+      }
+    },
+    {
+      "actor": "ch-valentina-a9be",
+      "source_data": {
+        "t": [
+          44.0,
+          46.0
+        ],
+        "pos": [
+          "valentina_cofre",
+          "valentina_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "girar",
+        "porque": "Gira lentamente hacia el frente junto con el equipo"
+      }
+    },
+    {
+      "actor": "ch-valentina-a9be",
+      "source_data": {
+        "t": [
+          46.0,
+          55.0
+        ],
+        "pos": [
+          "valentina_cofre",
+          "valentina_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "quieto",
+        "porque": "Susurra al frente y acompana el cierre de Spark"
+      }
+    },
+    {
+      "actor": "ch-eco-eff3",
+      "source_data": {
+        "t": [
+          0.0,
+          18.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_aterrizaje"
+        ],
+        "rot": -171.0,
+        "tipo": "quieto",
+        "porque": "Posicion previa a su llegada como luz verde"
+      }
+    },
+    {
+      "actor": "ch-eco-eff3",
+      "source_data": {
+        "t": [
+          18.0,
+          30.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_aterrizaje"
+        ],
+        "rot": -171.0,
+        "tipo": "quieto",
+        "porque": "Aterriza con Piquito en el hombro y escucha a sus amigos"
+      }
+    },
+    {
+      "actor": "ch-eco-eff3",
+      "source_data": {
+        "t": [
+          30.0,
+          33.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_cofre"
+        ],
+        "rot": -172.0,
+        "tipo": "caminar",
+        "porque": "Se acerca al cofre dorado en el centro de la habitacion"
+      }
+    },
+    {
+      "actor": "ch-eco-eff3",
+      "source_data": {
+        "t": [
+          33.0,
+          44.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -172.0,
+        "tipo": "quieto",
+        "porque": "Dice con energia que solo alguien muy valiente puede abrir el cofre"
+      }
+    },
+    {
+      "actor": "ch-eco-eff3",
+      "source_data": {
+        "t": [
+          44.0,
+          46.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "girar",
+        "porque": "Gira lentamente hacia el frente junto con los demas"
+      }
+    },
+    {
+      "actor": "ch-eco-eff3",
+      "source_data": {
+        "t": [
+          46.0,
+          55.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "quieto",
+        "porque": "Senala al frente y escucha a Spark"
+      }
+    },
+    {
+      "actor": "ch-pintor-bce0",
+      "source_data": {
+        "t": [
+          0.0,
+          18.0
+        ],
+        "pos": [
+          "pintor_aterrizaje",
+          "pintor_aterrizaje"
+        ],
+        "rot": 153.0,
+        "tipo": "quieto",
+        "porque": "Posicion previa a su llegada como luz amarilla"
+      }
+    },
+    {
+      "actor": "ch-pintor-bce0",
+      "source_data": {
+        "t": [
+          18.0,
+          30.0
+        ],
+        "pos": [
+          "pintor_aterrizaje",
+          "pintor_aterrizaje"
+        ],
+        "rot": 153.0,
+        "tipo": "quieto",
+        "porque": "Aterriza y exclama que es una emergencia de nivel arcoiris"
+      }
+    },
+    {
+      "actor": "ch-pintor-bce0",
+      "source_data": {
+        "t": [
+          30.0,
+          33.0
+        ],
+        "pos": [
+          "pintor_aterrizaje",
+          "pintor_cofre"
+        ],
+        "rot": 163.0,
+        "tipo": "caminar",
+        "porque": "Se acerca a ver el cofre dorado que aparece en el centro"
+      }
+    },
+    {
+      "actor": "ch-pintor-bce0",
+      "source_data": {
+        "t": [
+          33.0,
+          44.0
+        ],
+        "pos": [
+          "pintor_cofre",
+          "pintor_cofre"
+        ],
+        "rot": 163.0,
+        "tipo": "quieto",
+        "porque": "Observa el cofre mientras hablan Valentina y Eco"
+      }
+    },
+    {
+      "actor": "ch-pintor-bce0",
+      "source_data": {
+        "t": [
+          44.0,
+          46.0
+        ],
+        "pos": [
+          "pintor_cofre",
+          "pintor_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "girar",
+        "porque": "Gira lentamente hacia el frente con sus amigos"
+      }
+    },
+    {
+      "actor": "ch-pintor-bce0",
+      "source_data": {
+        "t": [
+          46.0,
+          55.0
+        ],
+        "pos": [
+          "pintor_cofre",
+          "pintor_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "quieto",
+        "porque": "Susurra al frente y escucha la promesa de Spark"
+      }
+    },
+    {
+      "actor": "ch-piquito-030a",
+      "source_data": {
+        "t": [
+          0.0,
+          18.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_aterrizaje"
+        ],
+        "rot": -171.0,
+        "tipo": "quieto",
+        "porque": "En el hombro izquierdo de Eco antes de aterrizar"
+      }
+    },
+    {
+      "actor": "ch-piquito-030a",
+      "source_data": {
+        "t": [
+          18.0,
+          30.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_aterrizaje"
+        ],
+        "rot": -171.0,
+        "tipo": "quieto",
+        "porque": "Aterriza posado en el hombro izquierdo de Eco"
+      }
+    },
+    {
+      "actor": "ch-piquito-030a",
+      "source_data": {
+        "t": [
+          30.0,
+          33.0
+        ],
+        "pos": [
+          "eco_aterrizaje",
+          "eco_cofre"
+        ],
+        "rot": -172.0,
+        "tipo": "acoplarse",
+        "porque": "Va en el hombro izquierdo de Eco cuando ella se acerca al cofre"
+      }
+    },
+    {
+      "actor": "ch-piquito-030a",
+      "source_data": {
+        "t": [
+          33.0,
+          44.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -172.0,
+        "tipo": "quieto",
+        "porque": "Mira el cofre dorado desde el hombro izquierdo de Eco"
+      }
+    },
+    {
+      "actor": "ch-piquito-030a",
+      "source_data": {
+        "t": [
+          44.0,
+          46.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "girar",
+        "porque": "Gira con Eco hacia el frente"
+      }
+    },
+    {
+      "actor": "ch-piquito-030a",
+      "source_data": {
+        "t": [
+          46.0,
+          55.0
+        ],
+        "pos": [
+          "eco_cofre",
+          "eco_cofre"
+        ],
+        "rot": -90.0,
+        "tipo": "quieto",
+        "porque": "Mira al frente desde el hombro izquierdo de Eco"
+      }
+    }
+  ],
+  "bindings": {
+    "obj-libro-cuentos__e1-8": {
+      "scene_object_id": "obj-libro-cuentos__e1-8",
+      "position_m": [
+        1.2000000476837158,
+        2.5999999046325684,
+        0.5400000214576721
+      ],
+      "bbox_world_m": {
+        "min": [
+          0.9731684327125549,
+          2.42266583442688,
+          0.5200000405311584
+        ],
+        "max": [
+          1.4268317222595215,
+          2.777333974838257,
+          0.5600000023841858
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/19",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "Ventana con vista al arcoíris": {
+      "scene_object_id": "Ventana con vista al arcoíris",
+      "position_m": [
+        3.049999952316284,
+        4.025000095367432,
+        1.5499999523162842
+      ],
+      "bbox_world_m": {
+        "min": [
+          2.25,
+          3.950000047683716,
+          0.8999999761581421
+        ],
+        "max": [
+          3.8499999046325684,
+          4.100000381469727,
+          2.1999998092651367
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/10",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "obj-cama": {
+      "scene_object_id": "obj-cama",
+      "position_m": [
+        1.0499999523162842,
+        2.5999999046325684,
+        0.42500001192092896
+      ],
+      "bbox_world_m": {
+        "min": [
+          0.09999994188547134,
+          2.0749998092651367,
+          0.0
+        ],
+        "max": [
+          2.0,
+          3.125,
+          0.8500000238418579
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/14",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "Centro de la habitación": {
+      "scene_object_id": "Centro de la habitación",
+      "position_m": [
+        3.3499999046325684,
+        3.0999999046325684,
+        0.019999999552965164
+      ],
+      "bbox_world_m": {
+        "min": [
+          2.25,
+          1.9999998807907104,
+          0.009999999776482582
+        ],
+        "max": [
+          4.449999809265137,
+          4.199999809265137,
+          0.029999999329447746
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/11",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "obj-visor-spark": {
+      "scene_object_id": "obj-visor-spark",
+      "position_m": [
+        1.649999976158142,
+        1.850000023841858,
+        0.9800000190734863
+      ],
+      "bbox_world_m": {
+        "min": [
+          1.5699999332427979,
+          1.7899999618530273,
+          0.9500000476837158
+        ],
+        "max": [
+          1.7300000190734863,
+          1.9100000858306885,
+          1.0099999904632568
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/21",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    },
+    "obj-cofre-dorado": {
+      "scene_object_id": "obj-cofre-dorado",
+      "position_m": [
+        2.25,
+        2.0,
+        0.24500000476837158
+      ],
+      "bbox_world_m": {
+        "min": [
+          1.9499999284744263,
+          1.7999999523162842,
+          0.02000001072883606
+        ],
+        "max": [
+          2.549999952316284,
+          2.200000047683716,
+          0.4699999988079071
+        ]
+      },
+      "source": "inventario_set_medido.json#/objects/22",
+      "source_blend_sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733"
+    }
+  },
+  "finish_scope": {
+    "3d": "rostros y ropa finales según ADN",
+    "voice_lipsync": "Omni posterior; no bloquea motor",
+    "dialogue_timing": "guion/01/SB",
+    "authority": "Ricardo t295, 7-nov-2026 Bogotá"
+  },
+  "resolved_dna_image_refs": [
+    {
+      "entity": "ch-spark-468e",
+      "local_path": "referencias_adn/53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7.png",
+      "sha256": "53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7",
+      "original_path": "/workspace/REVISION_TRASPASO_20261104/entradas_SB_t896/datos/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-spark_53de336edfd14517.png",
+      "hash_matches_sello": true
+    },
+    {
+      "entity": "ch-piquito-030a",
+      "local_path": "referencias_adn/120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788.png",
+      "sha256": "120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788",
+      "original_path": "/workspace/REVISION_TRASPASO_20261104/entradas_SB_t896/datos/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-piquito_120f2b6366694721.png",
+      "hash_matches_sello": true
+    },
+    {
+      "entity": "ch-valentina-a9be",
+      "local_path": "referencias_adn/e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c.png",
+      "sha256": "e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c",
+      "original_path": "/workspace/REVISION_TRASPASO_20261104/entradas_SB_t896/datos/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-valentina_e3d8db772c0db601.png",
+      "hash_matches_sello": true
+    },
+    {
+      "entity": "ch-eco-eff3",
+      "local_path": "referencias_adn/0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f.png",
+      "sha256": "0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f",
+      "original_path": "/workspace/REVISION_TRASPASO_20261104/entradas_SB_t896/datos/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-eco_0597114f24f97a5d.png",
+      "hash_matches_sello": true
+    },
+    {
+      "entity": "ch-don-caos-7adf",
+      "local_path": "referencias_adn/18e192698074aea18f2b8026f126144ef4122b5ed935df3d9ad742010093e75c.png",
+      "sha256": "18e192698074aea18f2b8026f126144ef4122b5ed935df3d9ad742010093e75c",
+      "original_path": "/workspace/REVISION_TRASPASO_20261104/entradas_SB_t896/datos/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-don-caos_18e192698074aea1.png",
+      "hash_matches_sello": true
+    },
+    {
+      "entity": "ch-pintor-bce0",
+      "local_path": "referencias_adn/fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea.png",
+      "sha256": "fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea",
+      "original_path": "/workspace/REVISION_TRASPASO_20261104/entradas_SB_t896/datos/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-pintor_fbdd0e2c29cf906f.png",
+      "hash_matches_sello": true
+    },
+    {
+      "entity": "obj-cofre-dorado",
+      "local_path": "referencias_adn/79e9b2dc80de9d06788a5850e462d2e34dacea886596ad6124bec1a3df9468e8.png",
+      "sha256": "79e9b2dc80de9d06788a5850e462d2e34dacea886596ad6124bec1a3df9468e8",
+      "original_path": "/workspace/REVISION_TRASPASO_20261104/entradas_SB_t896/datos/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-cofre-dorado.png",
+      "hash_matches_sello": true
+    }
+  ],
+  "normalization_history": [
+    {
+      "source_asset": "53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7",
+      "action": "Referencia ya existente transportada al paquete; no solicitarla de nuevo ni confundirla con malla/calibración 3D"
+    },
+    {
+      "source_asset": "120f2b6366694721a3d8ee18529dd106c940e02064f92b366c632a614a1d7788",
+      "action": "Referencia ya existente transportada al paquete; no solicitarla de nuevo ni confundirla con malla/calibración 3D"
+    },
+    {
+      "source_asset": "e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c",
+      "action": "Referencia ya existente transportada al paquete; no solicitarla de nuevo ni confundirla con malla/calibración 3D"
+    },
+    {
+      "source_asset": "0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f",
+      "action": "Referencia ya existente transportada al paquete; no solicitarla de nuevo ni confundirla con malla/calibración 3D"
+    },
+    {
+      "source_asset": "18e192698074aea18f2b8026f126144ef4122b5ed935df3d9ad742010093e75c",
+      "action": "Referencia ya existente transportada al paquete; no solicitarla de nuevo ni confundirla con malla/calibración 3D"
+    },
+    {
+      "source_asset": "fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea",
+      "action": "Referencia ya existente transportada al paquete; no solicitarla de nuevo ni confundirla con malla/calibración 3D"
+    },
+    {
+      "source_asset": "79e9b2dc80de9d06788a5850e462d2e34dacea886596ad6124bec1a3df9468e8",
+      "action": "Referencia ya existente transportada al paquete; no solicitarla de nuevo ni confundirla con malla/calibración 3D"
+    }
+  ]
+}

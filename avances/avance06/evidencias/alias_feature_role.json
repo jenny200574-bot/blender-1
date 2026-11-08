@@ -1,0 +1,7 @@
+{
+  "mapping": "part.role = part.feature (exact model string)",
+  "reason": "Native geometry contract uses role, typed generator named the same semantic key feature",
+  "numeric_values_changed": false,
+  "part_count": 40,
+  "source": "av06_bird_appearance02 + av06_crest03"
+}

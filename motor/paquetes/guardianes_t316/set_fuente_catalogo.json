@@ -1,0 +1,377 @@
+{
+  "escenario_id": "esc-habitacion",
+  "molde_json": {
+    "path": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/moldes/esc-habitacion/molde.json",
+    "sha256": "cbeef9504d844d1bb2cbbc48ce35077ad93aff5fefc30c2de6e2308d35f79155",
+    "bytes": 12750,
+    "data": {
+      "ok": true,
+      "escenario_id": "esc-habitacion",
+      "medidas_m": [
+        4.5,
+        4.0,
+        2.8
+      ],
+      "exterior": false,
+      "abierto": false,
+      "fondo_lejano_no_modelado": [
+        {
+          "que_es": "Cielo diurno despejado con nubes redondeadas y un gran arcoíris que cruza el horizonte sobre las copas de los árboles del jardín",
+          "direccion": "fondo",
+          "distancia_aprox_m": 80,
+          "tamano_aparente": "Grande, enmarcado de lado a lado a través de la ventana de 1,6 m de ancho de la pared del fondo"
+        }
+      ],
+      "renders": [
+        "planta.png",
+        "cam_01_esc1.png",
+        "cam_02_esc1.png",
+        "cam_03_esc2.png",
+        "cam_04_esc2.png",
+        "cam_05_esc3.png",
+        "cam_06_esc3.png",
+        "cam_07_esc8.png",
+        "cam_08_esc8.png",
+        "cam_09_esc9.png",
+        "cam_10_esc9.png",
+        "luz_esc1.png",
+        "luz_esc2.png",
+        "luz_esc3.png",
+        "luz_esc8.png",
+        "luz_esc9.png"
+      ],
+      "tiempos_s": {
+        "planta.png": 3.3,
+        "cam_01_esc1.png": 0.9,
+        "cam_02_esc1.png": 0.8,
+        "cam_03_esc2.png": 1.6,
+        "cam_04_esc2.png": 1.2,
+        "cam_05_esc3.png": 1.6,
+        "cam_06_esc3.png": 1.1,
+        "cam_07_esc8.png": 1.1,
+        "cam_08_esc8.png": 1.1,
+        "cam_09_esc9.png": 0.9,
+        "cam_10_esc9.png": 1.1,
+        "luz_esc1.png": 16.0,
+        "luz_esc2.png": 17.1,
+        "luz_esc3.png": 16.6,
+        "luz_esc8.png": 16.5,
+        "luz_esc9.png": 16.2
+      },
+      "camaras": 10,
+      "escenas_con_luz": [
+        "1",
+        "2",
+        "3",
+        "8",
+        "9"
+      ],
+      "ambiente": {
+        "bloques": 24,
+        "paneles": 3,
+        "sin_volumen": 1,
+        "extras": 0,
+        "ascendidos_omitidos": 0,
+        "movidos_por_puerta": 0,
+        "vehiculos_repartidos": 0,
+        "repetidos_partidos": 1
+      },
+      "armado": [
+        "hueco puerta en pared frente: 0.90 × 2.10 m desde 0.00 m (centro 0.8 m)",
+        "hueco ventana en pared fondo: 1.60 × 1.30 m desde 0.90 m (centro 2.25 m)",
+        "sala 4.5 × 4 × 2.8 m (interior, planta rectangular)",
+        "«Ventana con vista al arcoíris»: compuesto 1.6×0.15×1.3 m en x=3.05, y=4.03, z=0.9, giro 180° (esquina (pegado al muro))",
+        "«Piso de la habitación»: es el piso/losa completa → ya está en la sala",
+        "«Centro de la habitación»: cilindro 2.2×2.2×0.02 m en x=3.35, y=3.10, z=0.01, giro 0° (esquina (pegado al muro))",
+        "«Puerta de entrada de la habitación»: caja 0.9×0.08×2.1 m en x=0.80, y=0.05, z=0, giro 0° (centro)",
+        "«Mesa de noche junto a la cama»: caja 0.45×0.5×0.55 m en x=0.65, y=3.68, z=0, giro 90° (esquina (pegado al muro))",
+        "objeto obj-cama: 1.05×1.9×0.85 m en x=1.05, y=2.6, z=0, giro 90°",
+        "objeto obj-almohada: 0.6×0.4×0.18 m en x=0.35, y=2.6, z=0.55, giro 90°",
+        "objeto obj-lampara: 0.45×0.45×0.6 m en x=2.25, y=2, z=2.2, giro 0°",
+        "objeto obj-lapiz: 0.025×0.18×0.025 m en x=0.4, y=3.45, z=0.55, giro 35°",
+        "objeto obj-armario: 1.1×0.58×1.75 m en x=4.15, y=2.6, z=0, giro 270°",
+        "objeto obj-libro-cuentos__e1-8: 0.4×0.26×0.04 m en x=1.2, y=2.6, z=0.52, giro 15°",
+        "objeto obj-libro-cuentos__e9: 0.4×0.26×0.04 m en x=2, y=1.7, z=0.2, giro 180°",
+        "objeto obj-visor-spark: 0.16×0.12×0.06 m en x=1.65, y=1.85, z=0.95, giro 180°",
+        "objeto obj-cofre-dorado: 0.6×0.4×0.45 m en x=2.25, y=2, z=0.02, giro 180°",
+        "objeto obj-candados-cofre: 0.36×0.04×0.14 m en x=2.25, y=1.78, z=0.28, giro 180°",
+        "objeto obj-pincel-magico: 0.025×0.025×0.18 m en x=2.65, y=1.8, z=0.7, giro 180°",
+        "objeto obj-vocales__e3: 0.16×0.06×0.22 m en x=2.25, y=1.4, z=0.02, giro 180°",
+        "objeto obj-vocales__e8: 0.16×0.06×0.22 m en x=1.75, y=2.3, z=0.65, giro 135°",
+        "objeto obj-rayo-confundidor__e1: 0.06×0.03×0.045 m en x=1.65, y=3, z=0.2, giro 225°",
+        "objeto obj-rayo-confundidor__e3: 0.06×0.03×0.045 m en x=3.3, y=2.3, z=0.2, giro 90°",
+        "objeto obj-rayo-confundidor__e8: 0.06×0.03×0.045 m en x=2, y=1.65, z=0.18, giro 0°",
+        "objeto obj-numeros-1-al-5: 0.14×0.06×0.2 m en x=1.85, y=2.25, z=0.7, giro 135°",
+        "objeto obj-papel-numeros: 0.06×0.002×0.045 m en x=2.05, y=1.55, z=0.02, giro 25°",
+        "ambiente «Estantería infantil baja de dos niveles»: grupo de 2 → 2 unidades a lo largo de su huella",
+        "ambiente «Par de cortinas de tela suave recogidas a los lados de la ventana» (amb-esc-habitacion-cortinas-ventana): compuesto 1.9×0.12×1.65 m en x=2.25, y=3.94, z=0.7 (pegado a pared fondo)",
+        "ambiente «Barra de cortinero de madera con remates esféricos» (amb-esc-habitacion-barra-cortinero): cilindro 2×0.08×0.08 m en x=2.25, y=3.96, z=2.32 (pegado a pared fondo)",
+        "ambiente «Edredón acolchado esponjoso doblado a los pies de la cama» (amb-esc-habitacion-edredon-acolchado): caja 0.45×1.05×0.14 m en x=1.75, y=2.60, z=0.52 (centro)",
+        "ambiente «Cojín decorativo con forma de estrella redondeada» (amb-esc-habitacion-cojin-estrella): compuesto 0.32×0.32×0.14 m en x=0.55, y=3.00, z=0.54 (centro)",
+        "ambiente «Vaso portalápices cilíndrico de madera» (amb-esc-habitacion-porta-lapices): cilindro 0.1×0.1×0.13 m en x=0.28, y=3.58, z=0.55 (centro)",
+        "ambiente «Luz quitamiedos con forma de nubecita sonriente» (amb-esc-habitacion-lamparita-noche): compuesto 0.16×0.12×0.14 m en x=0.26, y=3.30, z=0.55 (centro)",
+        "ambiente «Estantería infantil baja de dos niveles» (amb-esc-habitacion-estanteria-baja-1): caja 0.31875×0.34×0.78 m en x=1.14, y=3.78, z=0 (centro)",
+        "ambiente «Estantería infantil baja de dos niveles» (amb-esc-habitacion-estanteria-baja-2): caja 0.31875×0.34×0.78 m en x=0.76, y=3.78, z=0 (centro)",
+        "ambiente «Grupo de libros infantiles cerrados de lomos lisos sin texto» (amb-esc-habitacion-libros-apilados): caja 0.24×0.22×0.2 m en x=0.82, y=3.78, z=0.42 (centro)",
+        "ambiente «Pirámide de bloques geométricos de madera sin letras» (amb-esc-habitacion-bloques-geometricos): compuesto 0.25×0.18×0.16 m en x=0.80, y=3.78, z=0.78 (centro)",
+        "ambiente «Maceta redondeada de cerámica con plantita verde de hojas redondas» (amb-esc-habitacion-maceta-suculenta): compuesto 0.18×0.18×0.22 m en x=1.15, y=3.78, z=0.78 (centro)",
+        "ambiente «Baúl juguetero de madera con tapa cerrada y bordes redondeados» (amb-esc-habitacion-baul-juguetes): caja 0.72×0.42×0.48 m en x=3.45, y=3.72, z=0 (centro)",
+        "ambiente «Muñeco de peluche suave con forma de osito redondo sentado» (amb-esc-habitacion-peluche-oso): compuesto 0.24×0.22×0.28 m en x=3.35, y=3.72, z=0.48 (centro)",
+        "ambiente «Pelota blanda de gajos de colores» (amb-esc-habitacion-pelota-colores): compuesto 0.2×0.2×0.2 m en x=3.65, y=3.72, z=0.48 (centro)",
+        "ambiente «Cesta cilíndrica de tela tejida con asas de cuerda» (amb-esc-habitacion-cesta-tela): cilindro 0.36×0.36×0.4 m en x=4.15, y=3.62, z=0 (centro)",
+        "ambiente «Mesita infantil redonda de actividades» (amb-esc-habitacion-mesa-dibujo): cilindro 0.62×0.62×0.5 m en x=3.95, y=1.15, z=0 (centro)",
+        "ambiente «Banquito infantil redondo de cuatro patas» (amb-esc-habitacion-banquito-madera): cilindro 0.3×0.3×0.28 m en x=3.95, y=0.68, z=0 (centro)",
+        "ambiente «Cubilete bajo con crayones gruesos de cera» (amb-esc-habitacion-bote-crayones): cilindro 0.12×0.12×0.11 m en x=3.95, y=1.15, z=0.5 (centro)",
+        "ambiente «Repisa flotante de madera con soportes redondeados» (amb-esc-habitacion-repisa-pared-izquierda): caja 0.68×0.2×0.06 m en x=0.34, y=1.25, z=1.45 (pegado a pared izquierda)",
+        "ambiente «Avioncito de juguete de madera con hélice redondeada» (amb-esc-habitacion-avion-madera): compuesto 0.18×0.22×0.12 m en x=0.12, y=1.25, z=1.51 (centro)",
+        "ambiente «Perchero infantil de madera con tres pomos redondos» (amb-esc-habitacion-perchero-pared): compuesto 0.42×0.08×0.12 m en x=1.55, y=0.04, z=1.15 (pegado a pared frente)",
+        "ambiente «Interruptor de luz de placa redondeada» (amb-esc-habitacion-interruptor-luz): caja 0.08×0.02×0.12 m en x=1.36, y=0.01, z=1.05 (pegado a pared frente)",
+        "ambiente «Zócalo guardapolvo perimetral de madera de canto redondeado» (amb-esc-habitacion-zocalo-perimetral): compuesto 4.5×0.02×0.1 m en x=2.25, y=3.99, z=0 (pegado a pared fondo)",
+        "ambiente «Guirnalda festiva de banderines triangulares de tela» (amb-esc-habitacion-guirnalda-banderines): compuesto 2.4×0.02×0.18 m en x=2.25, y=3.99, z=2.48 (pegado a pared fondo)",
+        "fondo lejano (no se modela, se pinta): 1 · Cielo diurno despejado con nubes redondeadas y un gran arcoíris que cruza el horizonte sobre las copas de los árboles del jardín",
+        "ambiente vivo: 24 bloques (3 paneles de pared), 0 extras, 1 sin volumen (solo para pintar), 0 vehículos repartidos, 1 grupos partidos",
+        "luces escena 1: 3 fuentes (dia)",
+        "luces escena 2: 3 fuentes (dia)",
+        "luces escena 3: 3 fuentes (dia)",
+        "luces escena 8: 3 fuentes (dia)",
+        "luces escena 9: 2 fuentes (dia)",
+        "cámara 1 (escena 1): (1.8, 2.2, 0.85) → (1.2, 2.6, 0.55), 50 mm",
+        "cámara 2 (escena 1): (2.25, 0.6, 1) → (2.25, 2.2, 0.7), 35 mm",
+        "cámara 3 (escena 2): (2.25, 0.7, 1) → (2.1, 2, 0.9), 35 mm",
+        "cámara 4 (escena 2): (1.9, 2.1, 0.25) → (1.2, 2.6, 0.15), 50 mm",
+        "cámara 5 (escena 3): (2.25, 0.55, 1.05) → (2.25, 2.3, 0.9), 28 mm",
+        "cámara 6 (escena 3): (2.8, 0.8, 0.65) → (2.25, 1.5, 0.4), 35 mm",
+        "cámara 7 (escena 8): (2.25, 0.65, 0.95) → (2.25, 2, 0.6), 35 mm",
+        "cámara 8 (escena 8): (2.25, 1.35, 0.45) → (2, 2.1, 0.4), 50 mm",
+        "cámara 9 (escena 9): (2.15, 0.9, 0.85) → (2.1, 1.8, 0.5), 35 mm",
+        "cámara 10 (escena 9): (2.05, 1.25, 0.45) → (2.05, 1.55, 0.02), 50 mm"
+      ],
+      "avisos": [
+        "obj-lampara: atraviesa el techo (z 2.2 + alto 0.6 > 2.8)",
+        "cam_01_esc1: la cámara queda dentro de «obj-numeros-1-al-5» → se oculta en esa vista",
+        "cam_04_esc2: la cámara queda dentro de «obj-cama» → se oculta en esa vista"
+      ],
+      "segundos": 99.4,
+      "blender": "4.2.3 LTS",
+      "objetos_por_escena": [
+        {
+          "objeto_id": "obj-cama",
+          "bloque": "obj-cama",
+          "escenas": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9"
+          ],
+          "x_m": 1.05,
+          "y_m": 2.6,
+          "z_m": 0.0
+        },
+        {
+          "objeto_id": "obj-almohada",
+          "bloque": "obj-almohada",
+          "escenas": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9"
+          ],
+          "x_m": 0.35,
+          "y_m": 2.6,
+          "z_m": 0.55
+        },
+        {
+          "objeto_id": "obj-lampara",
+          "bloque": "obj-lampara",
+          "escenas": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9"
+          ],
+          "x_m": 2.25,
+          "y_m": 2.0,
+          "z_m": 2.2
+        },
+        {
+          "objeto_id": "obj-lapiz",
+          "bloque": "obj-lapiz",
+          "escenas": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9"
+          ],
+          "x_m": 0.4,
+          "y_m": 3.45,
+          "z_m": 0.55
+        },
+        {
+          "objeto_id": "obj-armario",
+          "bloque": "obj-armario",
+          "escenas": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9"
+          ],
+          "x_m": 4.15,
+          "y_m": 2.6,
+          "z_m": 0.0
+        },
+        {
+          "objeto_id": "obj-libro-cuentos",
+          "bloque": "obj-libro-cuentos__e1-8",
+          "escenas": [
+            "1",
+            "8"
+          ],
+          "x_m": 1.2,
+          "y_m": 2.6,
+          "z_m": 0.52
+        },
+        {
+          "objeto_id": "obj-libro-cuentos",
+          "bloque": "obj-libro-cuentos__e9",
+          "escenas": [
+            "9"
+          ],
+          "x_m": 2.0,
+          "y_m": 1.7,
+          "z_m": 0.2
+        },
+        {
+          "objeto_id": "obj-visor-spark",
+          "bloque": "obj-visor-spark",
+          "escenas": [
+            "1",
+            "2"
+          ],
+          "x_m": 1.65,
+          "y_m": 1.85,
+          "z_m": 0.95
+        },
+        {
+          "objeto_id": "obj-cofre-dorado",
+          "bloque": "obj-cofre-dorado",
+          "escenas": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9"
+          ],
+          "x_m": 2.25,
+          "y_m": 2.0,
+          "z_m": 0.02
+        },
+        {
+          "objeto_id": "obj-candados-cofre",
+          "bloque": "obj-candados-cofre",
+          "escenas": [
+            "1",
+            "2",
+            "3",
+            "8"
+          ],
+          "x_m": 2.25,
+          "y_m": 1.78,
+          "z_m": 0.28
+        },
+        {
+          "objeto_id": "obj-pincel-magico",
+          "bloque": "obj-pincel-magico",
+          "escenas": [
+            "3",
+            "8"
+          ],
+          "x_m": 2.65,
+          "y_m": 1.8,
+          "z_m": 0.7
+        },
+        {
+          "objeto_id": "obj-vocales",
+          "bloque": "obj-vocales__e3",
+          "escenas": [
+            "3"
+          ],
+          "x_m": 2.25,
+          "y_m": 1.4,
+          "z_m": 0.02
+        },
+        {
+          "objeto_id": "obj-vocales",
+          "bloque": "obj-vocales__e8",
+          "escenas": [
+            "8"
+          ],
+          "x_m": 1.75,
+          "y_m": 2.3,
+          "z_m": 0.65
+        },
+        {
+          "objeto_id": "obj-rayo-confundidor",
+          "bloque": "obj-rayo-confundidor__e1",
+          "escenas": [
+            "1"
+          ],
+          "x_m": 1.65,
+          "y_m": 3.0,
+          "z_m": 0.2
+        },
+        {
+          "objeto_id": "obj-rayo-confundidor",
+          "bloque": "obj-rayo-confundidor__e3",
+          "escenas": [
+            "3"
+          ],
+          "x_m": 3.3,
+          "y_m": 2.3,
+          "z_m": 0.2
+        },
+        {
+          "objeto_id": "obj-rayo-confundidor",
+          "bloque": "obj-rayo-confundidor__e8",
+          "escenas": [
+            "8"
+          ],
+          "x_m": 2.0,
+          "y_m": 1.65,
+          "z_m": 0.18
+        },
+        {
+          "objeto_id": "obj-numeros-1-al-5",
+          "bloque": "obj-numeros-1-al-5",
+          "escenas": [
+            "8"
+          ],
+          "x_m": 1.85,
+          "y_m": 2.25,
+          "z_m": 0.7
+        },
+        {
+          "objeto_id": "obj-papel-numeros",
+          "bloque": "obj-papel-numeros",
+          "escenas": [
+            "9"
+          ],
+          "x_m": 2.05,
+          "y_m": 1.55,
+          "z_m": 0.02
+        }
+      ],
+      "huella": "43d6c2ec3a3a7e14-c29506682ca07036",
+      "segundos_total": 100.8
+    }
+  },
+  "molde_blend": {
+    "path": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/moldes/esc-habitacion/molde.blend",
+    "sha256": "203f381a376673c1a26e3a3781e290969650d9983f191cbe45e23fcdb9465733",
+    "bytes": 170627
+  }
+}

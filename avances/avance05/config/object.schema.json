@@ -1,0 +1,152 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "shape": {
+            "type": "string",
+            "enum": [
+              "MESH",
+              "ELLIPSOID",
+              "CYLINDER",
+              "CONE"
+            ]
+          },
+          "position_m": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "rotation_deg": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "dimensions_m": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "resolution": {
+            "type": "integer",
+            "minimum": 8
+          },
+          "tip_ratio": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "vertices_m": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            }
+          },
+          "faces": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "material": {
+            "type": "object",
+            "properties": {
+              "rgba": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "metallic": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "roughness": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            },
+            "required": [
+              "rgba",
+              "metallic",
+              "roughness"
+            ]
+          },
+          "source": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "shape",
+          "position_m",
+          "rotation_deg",
+          "dimensions_m",
+          "resolution",
+          "tip_ratio",
+          "vertices_m",
+          "faces",
+          "material",
+          "source"
+        ]
+      },
+      "maxItems": 40
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "GENERATED",
+        "FALTA"
+      ]
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "source",
+    "parts",
+    "status",
+    "missing"
+  ]
+}

@@ -1,0 +1,432 @@
+{
+ "_nota": "Catálogo de perfiles de movimiento (3er catálogo, crece solo). Cada entrada: parametros + origen ia/humano/codigo + fecha + escena + personaje + validado + version + historial.",
+ "parametros_def": {
+  "retraso_tronco_s": "el tronco sigue a la cadera con este retraso",
+  "retraso_brazos_s": "brazos/cabeza siguen al tronco con este retraso",
+  "umbral_fase_intermedia_deg": "si dos poses clave difieren más, se inserta una intermedia",
+  "suavizado_inicio_fin": "fracción del tramo con arranque/frenado suave",
+  "vel_max_deg_s": "velocidad angular máxima de una articulación",
+  "anclaje_pies": "1 = el pie plantado queda fijo",
+  "margen_equilibrio_m": "tolerancia del centro de masa fuera del apoyo",
+  "correccion_equilibrio_max_deg": "cuánto puede inclinar tronco/cadera para equilibrar",
+  "vel_vertical_max_m_s": "velocidad vertical máx. de la cadera (evita saltitos)",
+  "masa_rel": "masa relativa (más masa = movimientos más lentos)",
+  "temblor_deg": "temblor de piernas por fatiga/miedo",
+  "vuela": "1 = puede volar: sin piso ni equilibrio",
+  "cola_contrapeso": "la cola se mueve contra el tronco para equilibrar",
+  "cuadrupedo": "1 = camina en 4 apoyos"
+ },
+ "perfiles": {
+  "kael": {
+   "personaje": "kael",
+   "parametros": {
+    "retraso_tronco_s": 0.056,
+    "retraso_brazos_s": 0.112,
+    "umbral_fase_intermedia_deg": 45.0,
+    "suavizado_inicio_fin": 0.25,
+    "vel_max_deg_s": 243.0,
+    "anclaje_pies": 1,
+    "margen_equilibrio_m": 0.04,
+    "correccion_equilibrio_max_deg": 12.0,
+    "vel_vertical_max_m_s": 0.9,
+    "masa_rel": 1.25,
+    "temblor_deg": 0,
+    "vuela": 0,
+    "cola_contrapeso": 0,
+    "cuadrupedo": 0
+   },
+   "origen": "codigo (base del esqueleto/ADN)",
+   "fecha": "2026-11-04T09:03:45-05:00",
+   "escena": "esc11",
+   "validado": true,
+   "version": 2,
+   "nota": "restaurado a la base: la versión IA empeoró el validador (21.24 -> 67.78)",
+   "metricas": {
+    "equilibrio_cuadros_fuera": 12,
+    "equilibrio_max_fuera_m": 0.158,
+    "resbale_pie_max_cm_cuadro": 18.49,
+    "resbale_pie_medio_cm_cuadro": 0.534,
+    "saltitos_cuadros": 0,
+    "vel_subida_cadera_max_m_s": 0.81,
+    "perfil_version": 0,
+    "equilibrio_cuadros_fuera_4cm_fijo": 12
+   },
+   "historial": [
+    {
+     "version": 1,
+     "parametros": {
+      "retraso_tronco_s": 0.08,
+      "retraso_brazos_s": 0.15,
+      "umbral_fase_intermedia_deg": 28.0,
+      "suavizado_inicio_fin": 0.35,
+      "vel_max_deg_s": 160.0,
+      "anclaje_pies": 1,
+      "margen_equilibrio_m": 0.08,
+      "correccion_equilibrio_max_deg": 24.0,
+      "vel_vertical_max_m_s": 0.55,
+      "masa_rel": 1.35,
+      "temblor_deg": 2.5,
+      "vuela": 0,
+      "cola_contrapeso": 0,
+      "cuadrupedo": 0
+     },
+     "origen": "ia",
+     "fecha": "2026-11-04T09:03:45-05:00",
+     "rechazado": true,
+     "metricas": {
+      "equilibrio_cuadros_fuera": 8,
+      "equilibrio_cuadros_fuera_4cm_fijo": 18,
+      "equilibrio_max_fuera_m": 0.161,
+      "resbale_pie_max_cm_cuadro": 19.55,
+      "resbale_pie_medio_cm_cuadro": 0.63,
+      "saltitos_cuadros": 8,
+      "vel_subida_cadera_max_m_s": 0.95,
+      "perfil_version": 1
+     }
+    },
+    {
+     "fisica_anterior": {
+      "masa_kg": 68.0,
+      "fuerza_rel": 0.85,
+      "par_max_hombro_Nm": 55.0,
+      "par_max_cadera_Nm": 130.0,
+      "aceleracion_max_com_m_s2": 8.5,
+      "vel_max_deg_s": 260.0,
+      "tipo_cuerpo": "Joven de 1.72 m, complexión media ligeramente robusta, no atlético y físicamente agotado.",
+      "como_se_mueve": "Movimientos pesados, trabajosos y con temblor muscular; necesita apoyarse en manos, cadera y rodillas para subir su centro de masa paso a paso sin impulsos explosivos.",
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04T09:37:12-05:00",
+      "escena": "esc11",
+      "validado": false
+     },
+     "fecha": "2026-11-04T09:03:45-05:00"
+    }
+   ],
+   "puntaje": 21.244999999999997,
+   "fisica": {
+    "masa_kg": 68.0,
+    "fuerza_rel": 0.85,
+    "par_max_hombro_Nm": 55.0,
+    "par_max_cadera_Nm": 130.0,
+    "aceleracion_max_com_m_s2": 36.0,
+    "vel_max_deg_s": 260.0,
+    "tipo_cuerpo": "Joven de 1.72 m, complexión media ligeramente robusta, no atlético y físicamente agotado.",
+    "como_se_mueve": "Movimientos pesados, trabajosos y con temblor muscular; necesita apoyarse en manos, cadera y rodillas para subir su centro de masa paso a paso, con desaceleraciones bruscas al cambiar de apoyo en el suelo.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:45:14-05:00",
+    "escena": "esc11",
+    "validado": false
+   }
+  },
+  "alien": {
+   "personaje": "alien",
+   "parametros": {
+    "retraso_tronco_s": 0.03,
+    "retraso_brazos_s": 0.06,
+    "umbral_fase_intermedia_deg": 35.0,
+    "suavizado_inicio_fin": 0.3,
+    "vel_max_deg_s": 180.0,
+    "anclaje_pies": 1,
+    "margen_equilibrio_m": 0.04,
+    "correccion_equilibrio_max_deg": 12.0,
+    "vel_vertical_max_m_s": 0.4,
+    "masa_rel": 1.25,
+    "temblor_deg": 0,
+    "vuela": 0,
+    "cola_contrapeso": 0,
+    "cuadrupedo": 0
+   },
+   "origen": "ia",
+   "fecha": "2026-11-04T09:03:45-05:00",
+   "escena": "esc11",
+   "validado": true,
+   "version": 1,
+   "nota": "marcha: estática, guardia firme e imponente sin desplazamiento | Guardián alto (1.90 m) y atlético con armadura pesada. Permanece completamente plantado en su sitio (anclaje_pies=1.0, temblor_deg=0) y solo realiza el gesto controlado y firme de apuntar su lanza horizontalmente con la mano derecha. Retrasos bajos (0.03 s y 0.06 s) para transmitir control muscular marcial y precisión sin oscilaciones innecesarias. | mocap: CMU 24_01 / 86_04 (firm martial guard stance, aim spear/staff horizontally one-handed with precision, immobile feet) — mantener centro de masa clavado y hombros estables.",
+   "metricas": {
+    "equilibrio_cuadros_fuera": 0,
+    "equilibrio_cuadros_fuera_4cm_fijo": 0,
+    "equilibrio_max_fuera_m": 0.0,
+    "resbale_pie_max_cm_cuadro": 0,
+    "resbale_pie_medio_cm_cuadro": 0.0,
+    "saltitos_cuadros": 0,
+    "vel_subida_cadera_max_m_s": 0.01,
+    "perfil_version": 1
+   },
+   "historial": [
+    {
+     "fisica_anterior": {
+      "masa_kg": 88.0,
+      "fuerza_rel": 1.45,
+      "par_max_hombro_Nm": 110.0,
+      "par_max_cadera_Nm": 220.0,
+      "aceleracion_max_com_m_s2": 12.0,
+      "vel_max_deg_s": 320.0,
+      "tipo_cuerpo": "Humanoide atlético de 1.90 m, hombros anchos, cintura estrecha, extremidades largas y musculatura densa con armadura.",
+      "como_se_mueve": "Postura marcial, firme y precisa; gran control del núcleo y hombros capaces de cargar y sostener una lanza pesada por encima del hombro sin oscilación.",
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04T09:37:12-05:00",
+      "escena": "esc11",
+      "validado": false
+     },
+     "fecha": "2026-11-04T09:03:45-05:00"
+    }
+   ],
+   "puntaje": 0.0,
+   "fisica": {
+    "masa_kg": 88.0,
+    "fuerza_rel": 1.45,
+    "par_max_hombro_Nm": 110.0,
+    "par_max_cadera_Nm": 220.0,
+    "aceleracion_max_com_m_s2": 12.0,
+    "vel_max_deg_s": 320.0,
+    "tipo_cuerpo": "Humanoide atlético de 1.90 m, hombros anchos, cintura estrecha, extremidades largas y musculatura densa con armadura.",
+    "como_se_mueve": "Postura marcial, firme y precisa; gran control del núcleo y hombros capaces de cargar y sostener una lanza pesada a la altura del hombro/cuello sin oscilación.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:45:14-05:00",
+    "escena": "esc11",
+    "validado": false
+   }
+  },
+  "novia": {
+   "personaje": "novia",
+   "parametros": {
+    "retraso_tronco_s": 0.07,
+    "retraso_brazos_s": 0.14,
+    "umbral_fase_intermedia_deg": 30.0,
+    "suavizado_inicio_fin": 0.35,
+    "vel_max_deg_s": 190.0,
+    "anclaje_pies": 1,
+    "margen_equilibrio_m": 0.05,
+    "correccion_equilibrio_max_deg": 16.0,
+    "vel_vertical_max_m_s": 0.5,
+    "masa_rel": 0.8,
+    "temblor_deg": 1.2,
+    "vuela": 0,
+    "cola_contrapeso": 0,
+    "cuadrupedo": 0
+   },
+   "origen": "ia",
+   "fecha": "2026-11-04T09:03:45-05:00",
+   "escena": "esc11",
+   "validado": true,
+   "version": 1,
+   "nota": "marcha: desfallecimiento suave de rodillas en el sitio y postura de súplica | Joven esbelta y ligera (1.65 m, masa_rel 0.8) que pierde las fuerzas y cae de rodillas suplicando. Se reduce umbral_fase_intermedia_deg a 30° y vel_vertical_max_m_s a 0.5 m/s con suavizado 0.35 para que el descenso de rodillas sea fluido, sin saltitos ni deslizamiento brusco, agregando un leve temblor_deg de 1.2° por vulnerabilidad emocional y mayor retraso en brazos/cabeza (0.14 s) para enfatizar el desvanecimiento. | mocap: CMU 91_28 / 141_12 (kneel down weakly in place, pleading gesture looking forward) — suavizar la recepción de las rodillas en el suelo y mantener el torso ligeramente inclinado hacia Kael.",
+   "metricas": {
+    "equilibrio_cuadros_fuera": 0,
+    "equilibrio_cuadros_fuera_4cm_fijo": 0,
+    "equilibrio_max_fuera_m": 0.004,
+    "resbale_pie_max_cm_cuadro": 1.25,
+    "resbale_pie_medio_cm_cuadro": 0.013,
+    "saltitos_cuadros": 0,
+    "vel_subida_cadera_max_m_s": 0.21,
+    "perfil_version": 1
+   },
+   "historial": [
+    {
+     "fisica_anterior": {
+      "masa_kg": 52.0,
+      "fuerza_rel": 0.7,
+      "par_max_hombro_Nm": 38.0,
+      "par_max_cadera_Nm": 95.0,
+      "aceleracion_max_com_m_s2": 9.5,
+      "vel_max_deg_s": 240.0,
+      "tipo_cuerpo": "Joven delgada y esbelta de 1.65 m, extremidades finas y centro de masa ligero.",
+      "como_se_mueve": "Movimientos suaves y contenidos; al dejarse caer de rodillas desciende con fluidez amortiguando con piernas y caderas.",
+      "origen": "ia (Argon)",
+      "fecha": "2026-11-04T09:37:12-05:00",
+      "escena": "esc11",
+      "validado": false
+     },
+     "fecha": "2026-11-04T09:03:45-05:00"
+    }
+   ],
+   "puntaje": 0.625,
+   "fisica": {
+    "masa_kg": 52.0,
+    "fuerza_rel": 0.7,
+    "par_max_hombro_Nm": 38.0,
+    "par_max_cadera_Nm": 95.0,
+    "aceleracion_max_com_m_s2": 28.0,
+    "vel_max_deg_s": 240.0,
+    "tipo_cuerpo": "Joven delgada y esbelta de 1.65 m, extremidades finas y centro de masa ligero.",
+    "como_se_mueve": "Movimientos suaves y contenidos; al dejarse caer de rodillas desciende por gravedad y frena al contactar las rodillas con el suelo.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:45:14-05:00",
+    "escena": "esc11",
+    "validado": false
+   }
+  }
+ },
+ "acciones": {
+  "levantarse_por_fases": [
+   {
+    "masa_objeto_kg": 0.0,
+    "requiere_anticipacion": true,
+    "anticipacion_retroceso_m": 0.08,
+    "mano_a_altura_de_hombro": false,
+    "aceleracion_max_com_m_s2": 9.0,
+    "contrapeso": "El tronco se inclina hacia adelante y hacia el lado de la mano de apoyo mientras la cadera y el muslo derecho permanecen anclados al suelo, manteniendo el centro de masa dentro del triángulo mano-cadera-rodilla.",
+    "fisica_real": "Para levantarse desde el suelo estando exhausto, el cuerpo rueda de lado manteniendo la pelvis y el muslo en el piso, apoya la mano bajo el hombro para empujar el torso, pasa a cuadrupedia repartiendo el peso en cuatro apoyos y finalmente adelanta un pie para subir la cadera por palanca femoral.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:37:12-05:00",
+    "escena": "esc11",
+    "ronda": 0
+   },
+   {
+    "masa_objeto_kg": 0.0,
+    "requiere_anticipacion": true,
+    "anticipacion_retroceso_m": 0.08,
+    "mano_a_altura_de_hombro": false,
+    "aceleracion_max_com_m_s2": 36.0,
+    "contrapeso": "El tronco se mantiene bajo e inclinado hacia las manos mientras la cadera y ambas rodillas siguen en el suelo, encerrando el centro de masa dentro del polígono de manos y rodillas/muslos.",
+    "fisica_real": "Para levantarse desde el suelo estando exhausto, el cuerpo gira de lado apoyando las manos separadas bajo los hombros con la pelvis y rodillas bajas, pasa a cuadrupedia amplia y adelanta un pie para subir la cadera.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:45:14-05:00",
+    "escena": "esc11",
+    "ronda": 1
+   }
+  ],
+  "apuntar_lanza": [
+   {
+    "masa_objeto_kg": 3.2,
+    "requiere_anticipacion": true,
+    "anticipacion_retroceso_m": 0.35,
+    "mano_a_altura_de_hombro": true,
+    "aceleracion_max_com_m_s2": 6.0,
+    "contrapeso": "El pie izquierdo se adelanta y el derecho queda atrás; el tronco gira hacia la derecha en la carga y el brazo izquierdo se extiende hacia adelante hacia Kael para equilibrar el par de la lanza alzada detrás del hombro derecho.",
+    "fisica_real": "Para apuntar una lanza de 1.90 m como arpón/jabalina lista para lanzar, primero hay una anticipación llevando el hombro y la mano derecha hacia atrás y arriba con torsión axial del torso, y luego se fija la mano derecha a la altura del hombro/oreja con el codo flexionado atrás (~90°) mientras el brazo izquierdo apunta al blanco.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:37:12-05:00",
+    "escena": "esc11",
+    "ronda": 0
+   },
+   {
+    "masa_objeto_kg": 3.2,
+    "requiere_anticipacion": true,
+    "anticipacion_retroceso_m": 0.35,
+    "mano_a_altura_de_hombro": true,
+    "aceleracion_max_com_m_s2": 6.0,
+    "contrapeso": "El pie izquierdo se adelanta y el derecho queda atrás; el tronco gira hacia la derecha en la carga y el brazo izquierdo se extiende hacia adelante hacia Kael para equilibrar el par de la lanza a la altura del hombro derecho.",
+    "fisica_real": "Para apuntar una lanza de 1.90 m como arpón lista para lanzar sin alzarla sobre la cabeza, se realiza una anticipación llevando el hombro y la mano derecha hacia atrás y luego se posiciona la mano derecha unos 12-18 cm sobre el hombro (bajo la oreja, lejos de la coronilla) con el codo flexionado atrás (~90°) mientras el brazo izquierdo apunta al pecho de Kael.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:45:14-05:00",
+    "escena": "esc11",
+    "ronda": 1
+   }
+  ],
+  "mantener_apuntando_lanza": [
+   {
+    "masa_objeto_kg": 3.2,
+    "requiere_anticipacion": false,
+    "anticipacion_retroceso_m": 0.0,
+    "mano_a_altura_de_hombro": true,
+    "aceleracion_max_com_m_s2": 2.5,
+    "contrapeso": "Base bípeda amplia con piernas ligeramente flexionadas y brazo izquierdo extendido al frente compensando el peso de la lanza sobre el hombro derecho.",
+    "fisica_real": "Contracción isométrica de deltoides, trapecio y core para sostener la lanza sobre el hombro derecho apuntando hacia abajo y adelante en dirección al pecho de Kael.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:37:12-05:00",
+    "escena": "esc11",
+    "ronda": 0
+   },
+   {
+    "masa_objeto_kg": 3.2,
+    "requiere_anticipacion": false,
+    "anticipacion_retroceso_m": 0.0,
+    "mano_a_altura_de_hombro": true,
+    "aceleracion_max_com_m_s2": 2.5,
+    "contrapeso": "Base bípeda amplia con piernas ligeramente flexionadas y brazo izquierdo extendido al frente compensando el peso de la lanza junto al hombro derecho.",
+    "fisica_real": "Contracción isométrica de deltoides, trapecio y core para sostener la lanza entre 0.10 y 0.20 m sobre el hombro derecho apuntando hacia el pecho de Kael.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:45:14-05:00",
+    "escena": "esc11",
+    "ronda": 1
+   }
+  ],
+  "quieto_firme": [
+   {
+    "masa_objeto_kg": 3.2,
+    "requiere_anticipacion": false,
+    "anticipacion_retroceso_m": 0.0,
+    "mano_a_altura_de_hombro": false,
+    "aceleracion_max_com_m_s2": 2.0,
+    "contrapeso": "Postura erguida simétrica con peso repartido en ambos pies y lanza cerca del centro de gravedad.",
+    "fisica_real": "Equilibrio estático bípedo con mínimo gasto energético sosteniendo la lanza por su centro de masa.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:37:12-05:00",
+    "escena": "esc11",
+    "ronda": 0
+   },
+   {
+    "masa_objeto_kg": 3.2,
+    "requiere_anticipacion": false,
+    "anticipacion_retroceso_m": 0.0,
+    "mano_a_altura_de_hombro": false,
+    "aceleracion_max_com_m_s2": 2.0,
+    "contrapeso": "Postura erguida simétrica con peso repartido en ambos pies y lanza cerca del centro de gravedad.",
+    "fisica_real": "Equilibrio estático bípedo con mínimo gasto energético sosteniendo la lanza por su centro de masa.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:45:14-05:00",
+    "escena": "esc11",
+    "ronda": 1
+   }
+  ],
+  "arrodillarse": [
+   {
+    "masa_objeto_kg": 0.0,
+    "requiere_anticipacion": true,
+    "anticipacion_retroceso_m": 0.05,
+    "mano_a_altura_de_hombro": false,
+    "aceleracion_max_com_m_s2": 10.5,
+    "contrapeso": "Inclinación leve del torso hacia adelante al flexionar caderas y rodillas para mantener la proyección del centro de masa sobre la base de sustentación.",
+    "fisica_real": "Descenso controlado asistido por gravedad mediante contracción excéntrica de cuádriceps y glúteos hasta apoyar ambas rodillas en el suelo.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:37:12-05:00",
+    "escena": "esc11",
+    "ronda": 0
+   },
+   {
+    "masa_objeto_kg": 0.0,
+    "requiere_anticipacion": false,
+    "anticipacion_retroceso_m": 0.0,
+    "mano_a_altura_de_hombro": false,
+    "aceleracion_max_com_m_s2": 28.0,
+    "contrapeso": "Inclinación leve del torso hacia adelante al flexionar caderas y rodillas para mantener la proyección del centro de masa sobre la base de sustentación.",
+    "fisica_real": "Descenso directo a favor de la gravedad sin requerir retroceso de anticipación, frenando al apoyar ambas rodillas en el suelo.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:45:14-05:00",
+    "escena": "esc11",
+    "ronda": 1
+   }
+  ],
+  "acercarse": [
+   {
+    "masa_objeto_kg": 0.0,
+    "requiere_anticipacion": true,
+    "anticipacion_retroceso_m": 0.04,
+    "mano_a_altura_de_hombro": false,
+    "aceleracion_max_com_m_s2": 6.5,
+    "contrapeso": "Desplazamiento lateral y frontal de la pelvis hacia el pie de apoyo antes de levantar el pie que avanza.",
+    "fisica_real": "Paso corto y pesado donde el centro de masa cae ligeramente hacia adelante y es frenado por el pie adelantado.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:37:12-05:00",
+    "escena": "esc11",
+    "ronda": 0
+   }
+  ],
+  "mirar": [
+   {
+    "masa_objeto_kg": 0.0,
+    "requiere_anticipacion": false,
+    "anticipacion_retroceso_m": 0.0,
+    "mano_a_altura_de_hombro": false,
+    "aceleracion_max_com_m_s2": 3.0,
+    "contrapeso": "Estabilidad postural mantenida en la base actual (de pie o arrodillada) mientras solo rotan cuello y brazo.",
+    "fisica_real": "Rotación cervical suave combinada con flexión de codo para llevar el antebrazo al campo visual.",
+    "origen": "ia (Argon)",
+    "fecha": "2026-11-04T09:37:12-05:00",
+    "escena": "esc11",
+    "ronda": 0
+   }
+  ]
+ }
+}

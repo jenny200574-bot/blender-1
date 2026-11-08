@@ -1,0 +1,32 @@
+{
+  "features": {
+    "adn_geometria": true,
+    "apariencia_datos": true,
+    "fx_datos": true,
+    "escenario_vivo": true,
+    "objetos_datos": true,
+    "slerp_raiz": true,
+    "ik_piso_suave": true,
+    "piso_suave": true,
+    "equilibrio_memoria": true,
+    "fase_apoyo": true,
+    "mocap_kimodo": true
+  },
+  "solver_keys": [
+    "slerp_raiz",
+    "ik_piso_suave",
+    "piso_suave",
+    "equilibrio_memoria",
+    "fase_apoyo"
+  ],
+  "render": {
+    "engine": "CYCLES",
+    "samples": 64,
+    "resolution": [
+      1280,
+      720
+    ],
+    "diagnostic_lighting": false
+  },
+  "source": "Orden Ricardo: activar por etapas; render de producción sólo con iluminación de escena completa."
+}

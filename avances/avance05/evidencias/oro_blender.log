@@ -1,0 +1,10 @@
+INTERRUPTORES {"slerp_raiz": false, "contacto_apoyos": true, "ik_piso_suave": false, "piso_suave": false, "equilibrio_memoria": false, "anclaje_mismo_cuadro": false, "orden_medicion": false}
+FRAME 1 / 240
+FRAME 101 / 240
+FRAME 201 / 240
+Blender 4.2.3 LTS (hash 0e22e4fcea03 built 2024-10-14 23:31:34)
+Info: Total files 0 | Changed 0 | Failed 0
+Info: Saved "escena.blend"
+NUCLEO_FISICO_TERMINADO /opt/myia-motor-v9/avance05_20261107/oro_av05/escena.blend
+
+Blender quit

@@ -1,0 +1,250 @@
+{
+  "version": "camara_v2_rig",
+  "_nota": "Configuración del resolutor/validador de cámara v2 (fase 4g). Sin nombres de canal, escena ni personaje. Cada valor tiene su motivo.",
+  "roles_hueso": {
+    "cabeza": [
+      "cabeza"
+    ],
+    "pecho": [
+      "pecho"
+    ],
+    "pies": [
+      "pie_L",
+      "pie_R"
+    ]
+  },
+  "_roles_hueso": "Huesos del rig que genera el propio motor (esqueleto_adn.py). Si un rig no los trae: faltante, no se inventa anatomía.",
+  "frente_rig": "pies",
+  "_frente_rig": "El frente real se mide con la dirección horizontal de los huesos de pie (talón→punta). Alternativa medida: eje +Y local del armature (convención de armar.py línea 200).",
+  "tabla_encuadre": "ajustes_sb.encuadre_fraccion_altura_visible",
+  "_tabla_encuadre": "Misma tabla del traductor SB: qué parte de la altura MEDIDA cabe en el alto del cuadro en cada plano.",
+  "aire_cabeza_ndc": 0.06,
+  "margen_ndc": 0.02,
+  "x_por_lado": {
+    "L": 0.38,
+    "C": 0.5,
+    "R": 0.62
+  },
+  "_x_por_lado": "lado del SB (L/C/R, relativo a pantalla) → posición horizontal del centro del objetivo en el cuadro.",
+  "orientacion_a_acimut": [
+    {
+      "contiene": [
+        "espalda"
+      ],
+      "grados": 180
+    },
+    {
+      "contiene": [
+        "perfil",
+        "derech"
+      ],
+      "grados": 90
+    },
+    {
+      "contiene": [
+        "perfil",
+        "izquierd"
+      ],
+      "grados": -90
+    },
+    {
+      "contiene": [
+        "tres cuartos",
+        "derech"
+      ],
+      "grados": 40
+    },
+    {
+      "contiene": [
+        "tres cuartos",
+        "izquierd"
+      ],
+      "grados": -40
+    },
+    {
+      "contiene": [
+        "3/4",
+        "derech"
+      ],
+      "grados": 40
+    },
+    {
+      "contiene": [
+        "3/4",
+        "izquierd"
+      ],
+      "grados": -40
+    },
+    {
+      "contiene": [
+        "frontal"
+      ],
+      "grados": 0
+    },
+    {
+      "contiene": [
+        "de frente"
+      ],
+      "grados": 0
+    }
+  ],
+  "_orientacion_a_acimut": "Texto 'orientacion' del SB (cómo se ve el personaje desde cámara) → acimut de la cámara alrededor del frente MEDIDO del personaje; positivo = cámara hacia la derecha del personaje (se le ve el lado derecho). Si el texto no está en la tabla: aviso y se usa el frente medido (0).",
+  "busqueda_acimut_deg": [
+    0,
+    15,
+    -15,
+    30,
+    -30,
+    45,
+    -45,
+    60,
+    -60,
+    75,
+    -75
+  ],
+  "busqueda_factor_distancia": [
+    1.0,
+    0.85,
+    1.2,
+    0.7,
+    1.45
+  ],
+  "reparaciones_max": 55,
+  "_reparaciones": "Reparación acotada: solo acimut alrededor del pedido y distancia dentro de estos factores; nunca mueve personajes, objetos ni ADN; lente del SB se respeta.",
+  "max_angulo_cara_deg": 110,
+  "_max_angulo_cara_deg": "Si la cámara queda a más de este ángulo del frente medido y el SB no pidió espalda, se considera 'de espaldas'.",
+  "holgura_max_m": 0.15,
+  "holgura_frac_distancia": 0.3,
+  "_holgura": "Cámara dentro/pegada a geometría si su punto más cercano está a menos de min(holgura_max_m, holgura_frac_distancia×distancia). 0.15 m es el criterio 'dentro_de_objeto' de camaras_o113_blender.py (paso 05). Además ≤ 0.25 × altura medida del objetivo (escala: una figura de 0.18 m se filma a centímetros del piso). Dentro de un volumen cerrado = siempre bloqueada.",
+  "visibilidad_min": 0.8,
+  "region_en_cuadro_min": 0.9,
+  "muestras_por_s": 4,
+  "puntos_region": 36,
+  "track_desplazamiento_min_m": 0.05,
+  "tolerancia_escala_adn": 0.1,
+  "_tolerancia_escala_adn": "Diferencia relativa altura medida vs ADN a partir de la cual se avisa (sin cambiar el ADN).",
+  "planos_requieren_cabeza": [
+    "ECU",
+    "CU",
+    "MCU",
+    "MS"
+  ],
+  "toma_max_s": 10,
+  "holgura_frac_altura": 0.25,
+  "alturas_hueso": {
+    "ANKLELEVEL": {
+      "huesos": [
+        "pie_L",
+        "pie_R"
+      ],
+      "punto": "head"
+    },
+    "KNEELEVEL": {
+      "huesos": [
+        "pierna_L",
+        "pierna_R"
+      ],
+      "punto": "head"
+    },
+    "HIPLEVEL": {
+      "huesos": [
+        "muslo_L",
+        "muslo_R"
+      ],
+      "punto": "head"
+    },
+    "CHESTLEVEL": {
+      "huesos": [
+        "pecho"
+      ],
+      "punto": "head"
+    },
+    "SHOULDERLEVEL": {
+      "huesos": [
+        "brazo_L",
+        "brazo_R"
+      ],
+      "punto": "head"
+    },
+    "EYELEVEL_ALTURA": {
+      "huesos": [
+        "cabeza"
+      ],
+      "punto": "centro_malla"
+    }
+  },
+  "_alturas_hueso": "CAMERA_HEIGHT del DSL → altura de la cámara = altura MEDIDA del hueso del rig en ese cuadro (no medidas humanas fijas). GROUNDLEVEL = piso medido + holgura. ELEVATED/AERIAL necesitan dato (metros) o se avisa.",
+  "elevacion_extra": {
+    "BIRDSEYE": "TOPDOWN"
+  },
+  "_elevacion_extra": "BIRDSEYE escribe camera.pitch VERTICAL_DOWN igual que TOPDOWN en el registro DSL: usa la misma fila de preparar/config.json.",
+  "intensidad_angulo": {
+    "SLIGHT": 0.5,
+    "STEEP": 1.5
+  },
+  "_intensidad_angulo": "angle_intensity del DSL escala la elevación configurada (aviso: el SB no trae grados).",
+  "lente_por_clase_mm": {
+    "ULTRAWIDE": 14,
+    "WIDEANGLE": 24,
+    "NORMAL": 50,
+    "PORTRAITLENS": 85,
+    "TELEPHOTO": 135
+  },
+  "_lente_por_clase_mm": "Clases ópticas de formato completo (36 mm). Solo si el SB da la clase sin /LENS:mm.",
+  "aire_por_nivel": {
+    "TIGHT": 0.02,
+    "NORMAL": 0.06,
+    "LOOSE": 0.12
+  },
+  "x_por_tercio": {
+    "L": 0.3333,
+    "R": 0.6667,
+    "C": 0.5
+  },
+  "orientacion_dsl_deg": {
+    "FRONTAL": 0,
+    "THREEQUARTER": 40,
+    "PROFILE": 90,
+    "REAR": 180
+  },
+  "rig_suavidad": {
+    "STATIC": 0.0,
+    "TRIPOD": 0.0,
+    "SLIDER": 0.35,
+    "STEADICAM": 0.6,
+    "GIMBAL": 0.6,
+    "HANDHELD": 0.35,
+    "SHOULDER": 0.35,
+    "_defecto": 0.35
+  },
+  "rig_sacudida": {
+    "HANDHELD": {
+      "SUBTLE": 0.5,
+      "STRONG": 1.5,
+      "_sin": 1.0
+    },
+    "SHOULDER": {
+      "_sin": 0.7
+    }
+  },
+  "_rig": "Suavidad y sacudida del rig (r2: S.smooth, S.shake). Valores de estilo, no medidas.",
+  "foco": {
+    "fstop_shallow": 1.8
+  },
+  "inclinacion_tolerancia_deg": 15,
+  "roll_tolerancia_deg": 2,
+  "transiciones": {
+    "CORTE": "corte",
+    "CORTE_SECO": "corte",
+    "MATCH_CUT": "corte",
+    "J_CUT": "corte_audio",
+    "L_CUT": "corte_audio",
+    "ENCADENADO": "fundido_cruzado",
+    "FUNDIDO_NEGRO": "fundido_negro",
+    "FUNDIDO_BLANCO": "fundido_blanco",
+    "BARRIDO": "barrido",
+    "FIN_ESCENA": "fin"
+  },
+  "transicion_s": 0.5,
+  "_transicion_s": "Duración de fundidos/encadenados en el montaje: el SB no la trae; es configuración (se avisa en cada toma)."
+}
