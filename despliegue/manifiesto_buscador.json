@@ -1,0 +1,50 @@
+{
+  "esquema": "parche_buscador_posicion/1",
+  "sobre": "avance11 runtime_1145 ya con el parche de 13. No es la rama completa.",
+  "de_los_13_cambia_otra_vez": [
+    "motor/camara_v2_blender.py"
+  ],
+  "no_estan_en_los_13": [
+    "motor/rig_camara_coords.py",
+    "motor/buscador_posicion_camara.py",
+    "motor/sonda_inspeccion_camara.py",
+    "pruebas/test_buscador_posicion_camara.py"
+  ],
+  "fisica_preservada": {
+    "ruta": "motor/fisica_final.py",
+    "sha256": "3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2"
+  },
+  "nucleo_reutilizable": "Este parche no toca motor/heredado, motor/compatibilidad_artefacto.py, motor/malla_cabeza.py ni motor/nucleo_bueno_cpu.py. El recibo compatibilidad_nucleo.json del núcleo de 1320 cuadros sigue válido si el legacy no cambió.",
+  "archivos": [
+    {
+      "ruta": "motor/camara_v2_blender.py",
+      "antes": "4d660b6ae21a2890b850c6806986c845f1122827bb8e709d78717f4e20ebaa27",
+      "despues": "bebdca8347f2b64255d2e808f7d9ef7b8ebc4ae356e4663dbfb1a8171d6948fd",
+      "bytes": 62764
+    },
+    {
+      "ruta": "motor/rig_camara_coords.py",
+      "antes": "c1da28a5deee2eb7b623dd81c3b79d76e26a77286825c548a7ddfab6540b42ac",
+      "despues": "42830a372a291be17a28b9f41aa8d3ac19b6bd058542888c0019dfb5e5e8fba1",
+      "bytes": 6842
+    },
+    {
+      "ruta": "motor/buscador_posicion_camara.py",
+      "antes": null,
+      "despues": "cec7cbe39e441a18791ffddf2957ec8ad63378b148a2aec4f0212aadb99c8e7e",
+      "bytes": 23203
+    },
+    {
+      "ruta": "motor/sonda_inspeccion_camara.py",
+      "antes": null,
+      "despues": "e8018eaf0d50757e093088e1abe9a0f54a95f36bce1476dd5474f162a6725e1e",
+      "bytes": 6344
+    },
+    {
+      "ruta": "pruebas/test_buscador_posicion_camara.py",
+      "antes": null,
+      "despues": "be6bc5b832a40a2aa906abf4268e4864999b9744ad0391427d3bc969720b6740",
+      "bytes": 8620
+    }
+  ]
+}

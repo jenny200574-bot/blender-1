@@ -116,7 +116,14 @@ class Tests(unittest.TestCase):
         self.assertFalse((motor / 'pruebas' / 'test_cargar_modulo_motor.py').exists())
         self.assertFalse((motor / 'motor' / 'compatibilidad_artefacto.py').exists())
         self.assertEqual(sha(motor / 'motor' / 'fisica_final.py'), FISICA)
-        self.assertEqual(inst.main(['--destino', str(motor), '--origen', str(ROOT / 'motor'), '--manifiesto', str(ROOT / 'despliegue' / 'manifiesto_13.json')]), 0)
+        paquete13 = self.tmp / 'paquete13'
+        manifiesto = json.loads((ROOT / 'despliegue' / 'manifiesto_13.json').read_text(encoding='utf-8'))
+        for item in manifiesto['archivos']:
+            blob = subprocess.check_output(['git', 'show', '99a3acc9cd8f9841608184eb26a56d9ce807f811:motor/' + item['ruta']])
+            path = paquete13 / item['ruta']
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(blob)
+        self.assertEqual(inst.main(['--destino', str(motor), '--origen', str(paquete13), '--manifiesto', str(ROOT / 'despliegue' / 'manifiesto_13.json')]), 0)
         # Segunda pasada: no pisa lo ya copiado y el origen sigue igual.
         marca = sha(self.origen / 'motor' / 'fisica_final.py')
         self.assertEqual(st.main(['--origen-motor', str(self.origen), '--destino', str(otro), '--entrada-oro', str(ORO), '--entrada-escena', str(escena / 'entrada_escena.json'), '--referencia-oro', str(ROOT / 'motor' / 'config' / 'politica_ejecucion.json'), '--copiar']), 0)
