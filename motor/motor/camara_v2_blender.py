@@ -18,6 +18,7 @@ import rig_camara_coords as RIG
 from medir_objetivo_camara import puntos_de_objetivo, sensor_ancho_mm
 from curvas_accion import fijar_constante
 from eje_objetos import par_eje
+from malla_cabeza import region_desde_hueso
 OFF = lambda n: (AQUI / f'{n}.off').exists()
 a = sys.argv[sys.argv.index('--') + 1:]
 def _j(i, d=None):
@@ -42,7 +43,15 @@ if CAM is None or getattr(CAM, 'data', None) is None: raise ValueError('La escen
 SENSOR_W = sensor_ancho_mm((E or {}).get('camera')); CAM.data.sensor_width = SENSOR_W; CAM.data.sensor_fit = 'HORIZONTAL'
 TOMA_ACTUAL = None
 ACT = {o.name: o for o in bpy.data.objects if o.type == 'ARMATURE'}
-def mallas(root): return [x for x in [root] + list(root.children_recursive) if x.type == 'MESH' and not x.hide_render]
+def mallas(root):
+    if root is None: return []
+    candidatos = list(root.children_recursive)
+    ya = {x.name for x in candidatos}
+    for o in bpy.data.objects:
+        padre = getattr(o, 'parent', None)
+        if padre == root and o.name not in ya:
+            candidatos.append(o); ya.add(o.name)
+    return [x for x in candidatos if x.type == 'MESH' and not x.hide_render]
 ACT_MESH = {pid: mallas(o) for pid, o in ACT.items()}; ACT_SET = {m.name for ms in ACT_MESH.values() for m in ms}
 ENV = [o for o in sc.objects if o.type == 'MESH' and not o.hide_render and o.name not in ACT_SET]
 ADN_H = {x['id']: (x.get('spec') or {}).get('altura_m') for x in E.get('actors', [])}
@@ -112,7 +121,7 @@ def medir(pid, f, toma=None):
         CACHE[k] = {'tipo': 'objeto', 'zmin': lo.z, 'zmax': hi.z, 'H': hi.z - lo.z, 'centro': c, 'cabeza': None, 'frente': fv, 'frente_cara': fv,
                     'frente_metodo': 'objeto: hacia el centro de los personajes construidos', 'puntos': P, 'huesos': {}, 'id': pid}
         return CACHE[k]
-    ms = ACT_MESH[pid]; P = verts(ms, dg)
+    ms = mallas(A); P = verts(ms, dg)
     if not P: P = puntos_respaldo(A, dg, pid, toma)
     zmin = min(p.z for p in P); zmax = max(p.z for p in P)
     if not SW['manifiesto_espacial'] and isinstance(ADN_H.get(pid), (int, float)): zmax = zmin + ADN_H[pid]
@@ -132,6 +141,11 @@ def medir(pid, f, toma=None):
         d = mw.to_3x3() @ Vector((0, 1, 0)); d.z = 0; fv = d.normalized() if d.length > 1e-6 else None; metodo = 'eje +Y local del armature'
     # mirada/cara (r2 «Mirada»): eje del hueso cabeza más alineado con el frente del cuerpo, en este cuadro (sigue el giro de la cabeza)
     fc = fv; hc = next((n for n in R['cabeza'] if n in pb), None)
+    if cab is None and hc:
+        head = mw @ pb[hc].head; tail = mw @ pb[hc].tail
+        puro = region_desde_hueso((head.x, head.y, head.z), (tail.x, tail.y, tail.z))
+        if puro:
+            cab = {'centro': Vector(puro['centro']), 'alto': puro['alto'], 'top': puro['top'], 'puntos': [Vector(p) for p in puro['puntos']], 'puntos_cara': [Vector(p) for p in puro['puntos_cara']], 'origen': 'hueso'}
     if hc and fv is not None:
         M3 = (mw @ pb[hc].matrix).to_3x3(); ejes = [M3 @ Vector(x) for x in ((1,0,0),(-1,0,0),(0,0,1),(0,0,-1))]
         ejes = [Vector((e.x, e.y, 0)) for e in ejes]; ejes = [e.normalized() for e in ejes if e.length > 1e-6]

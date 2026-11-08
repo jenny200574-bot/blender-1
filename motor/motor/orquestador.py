@@ -228,6 +228,8 @@ def ejecutar(entrada,salida,prueba_cpu=False,blender=None,solo_validar=False):
         if solo_validar:return {'state':'VALIDACION_SIN_CONSTRUIR','blocking_errors':len(errors),'network_paid':False,'rendered':False}
         if not runtime:add('render/blender','runtime CPU','Falta ruta del Blender instalado')
         if errors:return {'state':'NO_CONSTRUIR_NI_RENDERIZAR','reason':'Compuerta previa bloqueada','backend':'constructor_final.py + fisica_final.py + núcleo bueno'}
+        from compatibilidad_artefacto import sellar_paquete
+        if pk.name=='paquete_normalizado':sellar_paquete(ROOT, pk)
         # El núcleo histórico se ejecuta como biblioteca de construcción interna, no como otro producto.
         core=None
         if any(e.get('legacy') for e in d['entities'] if e['type']=='CHARACTER'):
@@ -270,4 +272,7 @@ def ejecutar(entrada,salida,prueba_cpu=False,blender=None,solo_validar=False):
     result={'validation_only':solo_validar,'estado':'BLOQUEADO' if errors else ('VALIDADO' if solo_validar else 'COMPLETO'),'version':'20261107-dev6-cpu','validation_scope':'FIXTURE_SINTETICO' if d.get('fixture_only') else 'ESCENA_REAL','production_approved':False,'fecha_bogota':datetime.now().astimezone().isoformat(),'errores':errors,'grupo_A':[e for e in errors if e['grupo']=='A'],'grupo_B':[e for e in errors if e['grupo']=='B'],'avisos':d.get('warnings',[]),'etapas':stages,'coverage':{'expected_frames':cuadro(dur,fps) if valid_clock else None,'requested_shots':len((d.get('camera') or {}).get('shots',[])),'requested_entities':len(d.get('requirements',{}).get('entity_ids',[])),'package_entities':len(d.get('entities',[])),'frames_built':cuadro(dur,fps) if worker_ok else 0,'shots_approved':len(d['camera']['shots']) if worker_ok else 0,'entities_built':len(d['entities']) if worker_ok else 0,'actions_preserved':len(d.get('actions',[])),'segments_preserved':len(d.get('segments',[]))},'execution_policy':{'mode':'CPU','external_spend_usd':0,'gpu_enabled':False,'total_cap_usd':leer(ROOT/'config/politica_ejecucion.json')['presupuesto_total_usd'],'per_call_cap_usd':None},'gasto_usd':0,'master':artifacts.get('master'),'dialogue':artifacts.get('dialogue'),'required_finish':['rostros_finales','ropa_final'],'voice_lipsync':'FUERA_DEL_MOTOR: Omni posterior según t295','servidor_213':'SIN_COTEJAR / sin despliegue nuevo'}
     from causas import consolidar
     result['consolidacion']=consolidar(errors);guardar(out/'causas_consolidadas.json',result['consolidacion'])
+    if not errors and pk.name=='paquete_normalizado':
+        from compatibilidad_artefacto import sellar_paquete
+        sellar_paquete(ROOT, pk)
     guardar(out/'resultado.json',result);return result

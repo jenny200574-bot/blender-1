@@ -325,3 +325,5 @@ for ob in BASE:ob.hide_viewport=False;ob.hide_render=False
 guardar(OUT/'trazas.json',TRK)
 guardar(OUT/'nucleo_resultado.json',{'estado':'SOLO_BACKEND_FISICO','produccion_aprobada':False,'fps':FPS,'frames':N,'source_provisional':DATA['provisional'],'final_camera':False,'final_appearance':False})
 sc.frame_set(1);bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'escena.blend'));print('NUCLEO_FISICO_TERMINADO',str(OUT/'escena.blend'),flush=True)
+from cargar_modulo_motor import cargar as cargar_modulo_motor
+cargar_modulo_motor('compatibilidad_artefacto').sellar_nucleo(Path(__file__).resolve().parents[1], OUT/'escena.blend', PK/'entrada.json')

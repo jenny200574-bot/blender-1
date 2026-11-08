@@ -25,6 +25,34 @@ def error_hueso_cabeza(entity_id, bind_role, bone_name, bones):
 def partes_cabeza(parts):
     return [p for p in parts or [] if isinstance(p, dict) and (p.get('bind_role') == 'head' or p.get('role') in ('head', 'face'))]
 
+def region_desde_hueso(cabeza, cola):
+    """Región medida de un hueso ya existente. None si falta un extremo o el largo es cero."""
+    puntos = []
+    for punto in (cabeza, cola):
+        if isinstance(punto, bool) or not isinstance(punto, (list, tuple)) or len(punto) != 3:
+            return None
+        if any(isinstance(x, bool) or not isinstance(x, (int, float)) for x in punto):
+            return None
+        if any(x != x or x in (float('inf'), float('-inf')) for x in punto):
+            return None
+        puntos.append((float(punto[0]), float(punto[1]), float(punto[2])))
+    a, b = puntos
+    dx, dy, dz = b[0] - a[0], b[1] - a[1], b[2] - a[2]
+    largo = (dx * dx + dy * dy + dz * dz) ** 0.5
+    if largo <= 0:
+        return None
+    centro = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (a[2] + b[2]) / 2)
+    alto = abs(b[2] - a[2]) or largo
+    return {
+        'centro': centro,
+        'alto': alto,
+        'top': max(a[2], b[2]),
+        'puntos': [a, b, centro],
+        'puntos_cara': [a, b, centro],
+        'origen': 'hueso',
+    }
+
+
 def validar_cabeza(entity):
     """Bloquea si la cabeza compilada no tiene malla con vértices, o el rig trae huesos y ninguno es la cabeza."""
     ident = entity.get('id', '?')

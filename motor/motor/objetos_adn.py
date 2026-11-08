@@ -3,8 +3,41 @@ import copy
 from seguridad import leer,ruta,error,numero,sha
 from buscador_formas import buscar
 
+def _registrar_ejes(d, root, props, errors):
+ from compatibilidad_artefacto import ESQUEMA
+ from eje_objetos import enlazar
+ aliases = {}
+ cam = d.get('camera') or {}
+ refs = cam.get('resolver_inputs') or {}
+ sb_path = refs.get('sb_scene')
+ if sb_path:
+  asset = next((a for a in d.get('assets', []) if a.get('path') == sb_path), None)
+  try:
+   p = ruta(root, sb_path)
+   if not asset or not p.is_file() or sha(p) != asset.get('sha256'):
+    raise ValueError('hash')
+   sb = leer(p)
+  except (ValueError, OSError, KeyError, TypeError):
+   errors.append(error('camera/sb_scene', 'SB + constructor', 'El storyboard del eje no es legible o no coincide con su hash; no se inventa el objeto del eje', 'EJE_SIN_OBJETO'))
+  else:
+   personajes = [e['id'] for e in d.get('entities', []) if e.get('type') == 'CHARACTER']
+   aliases, eje_err = enlazar(sb.get('vinetas') or [], [x['id'] for x in props], personajes)
+   errors += eje_err
+   by_id = {x['id']: x for x in props}
+   for eje, prop_id in aliases.items():
+    prop = by_id.get(prop_id)
+    if prop is None:
+     continue
+    prop.setdefault('axis_ids', [])
+    if eje not in prop['axis_ids']:
+     prop['axis_ids'].append(eje)
+ d['_eje_objetos'] = {'esquema': ESQUEMA, 'ejes': sorted(aliases)}
+
 def compilar(d,root,catalog,policy,runtime=None):
- if 'props' in d and not any(p.get('dna_ref') for p in d['props']):return {'state':'EXPLICIT','count':len(d['props'])},[]
+ if 'props' in d and not any(p.get('dna_ref') for p in d['props']):
+  errors=[]
+  _registrar_ejes(d, root, d['props'], errors)
+  return {'state':'EXPLICIT','count':len(d['props'])},errors
  refs=[p['id'] for p in d.get('props',[]) if p.get('dna_ref')] if 'props' in d else d.get('requirements',{}).get('object_refs',[]);path=d.get('adn_entities_source','adn_entidades.json');asset=next((a for a in d.get('assets',[]) if a['path']==path),None);records=leer(ruta(root,path)) if asset and ruta(root,path).is_file() and sha(ruta(root,path))==asset['sha256'] else {'records':[]};props=copy.deepcopy([p for p in d.get('props',[]) if not p.get('dna_ref')]);errors=[];receipts=[]
  for ident in refs:
   found=[r for r in records.get('records',[]) if r.get('type')=='OBJECT' and (r.get('id')==ident or ident in r.get('exact_aliases',[]))]
@@ -34,23 +67,5 @@ def compilar(d,root,catalog,policy,runtime=None):
    parts=[dict(id=ident+'.formula',shape='STAR_FORMULA',formula=recipe['formula'],dimensions_m=dims,position_m=[0,0,0],rotation_deg=[0,0,0],ancla_z=geometry['ancla_z'],material=material,materials_catalog=geometry['materials_catalog'],source=rec.get('source'))]
   props.append({'id':placement.get('scene_object_id',ident),'position_m':placement['position_m'],'rotation_deg':rotation,'geometry':parts,'points':copy.deepcopy(geometry.get('points',[])),'hinges':copy.deepcopy(geometry.get('hinges',[])),'source':rec.get('source'),'shape_provenance':result['provenance']})
  d['props']=props
- from eje_objetos import enlazar
- cam=d.get('camera') or {};refs=cam.get('resolver_inputs') or {};sb_path=refs.get('sb_scene')
- if sb_path:
-  asset=next((a for a in d.get('assets',[]) if a.get('path')==sb_path),None)
-  try:
-   p=ruta(root,sb_path)
-   if not asset or not p.is_file() or sha(p)!=asset.get('sha256'):raise ValueError('hash')
-   sb=leer(p)
-  except (ValueError,OSError,KeyError,TypeError):
-   errors.append(error('camera/sb_scene','SB + constructor','El storyboard del eje no es legible o no coincide con su hash; no se inventa el objeto del eje','EJE_SIN_OBJETO'))
-  else:
-   personajes=[e['id'] for e in d.get('entities',[]) if e.get('type')=='CHARACTER']
-   aliases,eje_err=enlazar(sb.get('vinetas') or [],[x['id'] for x in props],personajes);errors+=eje_err
-   by_id={x['id']:x for x in props}
-   for eje,prop_id in aliases.items():
-    prop=by_id.get(prop_id)
-    if prop is None:continue
-    prop.setdefault('axis_ids',[])
-    if eje not in prop['axis_ids']:prop['axis_ids'].append(eje)
+ _registrar_ejes(d, root, props, errors)
  d['_props_bridge']={'state':'WAITING_DATA' if errors else 'READY','objects':receipts};return d['_props_bridge'],errors

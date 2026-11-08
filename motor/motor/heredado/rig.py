@@ -50,8 +50,8 @@ def crear(pid, p, colores, col=None):
         if g == "cabeza":
             bpy.ops.mesh.primitive_uv_sphere_add(radius=1, segments=24, ring_count=12); o = bpy.context.object; o.scale = (r * 0.95, r * 1.05, L * 0.55)
             bpy.ops.object.transform_apply(scale=True)
-            from malla_cabeza import desplazar_cabeza
-            for v, co in zip(o.data.vertices, desplazar_cabeza([tuple(v.co) for v in o.data.vertices], L)): v.co = co
+            from cargar_modulo_motor import cargar as cargar_modulo_motor
+            for v, co in zip(o.data.vertices, cargar_modulo_motor('malla_cabeza').desplazar_cabeza([tuple(v.co) for v in o.data.vertices], L)): v.co = co
             off = Vector((0, L * 0.48, 0))
         elif g == "pie":
             bpy.ops.mesh.primitive_cube_add(size=1); o = bpy.context.object; o.scale = (r * 2.2, L * 1.05, r * 1.6); bpy.ops.object.transform_apply(scale=True); off = Vector((0, L * 0.45, 0))
