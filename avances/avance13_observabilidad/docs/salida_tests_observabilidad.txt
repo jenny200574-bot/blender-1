@@ -1,0 +1,23 @@
+test_00_original_bit_identico_y_no_en_motor (__main__.Tests.test_00_original_bit_identico_y_no_en_motor) ... ok
+test_01_hijo_exito_estado_terminal_y_logs (__main__.Tests.test_01_hijo_exito_estado_terminal_y_logs) ... ok
+test_02_error_stderr_traceback_conservado (__main__.Tests.test_02_error_stderr_traceback_conservado) ... ok
+test_03_salida_no_cero (__main__.Tests.test_03_salida_no_cero) ... ok
+test_04_senal_sigterm (__main__.Tests.test_04_senal_sigterm) ... ok
+test_05_hijo_silencioso (__main__.Tests.test_05_hijo_silencioso) ... ok
+test_06_boot_distinto_sin_false_positive_vivo (__main__.Tests.test_06_boot_distinto_sin_false_positive_vivo) ... ok
+test_07_mismo_boot_pid_vivo_no_interrumpe (__main__.Tests.test_07_mismo_boot_pid_vivo_no_interrumpe) ... ok
+test_08_mismo_boot_pid_muerto_sin_atribuir_reboot (__main__.Tests.test_08_mismo_boot_pid_muerto_sin_atribuir_reboot) ... ok
+test_09_preserva_evidencia_historica_y_terminal (__main__.Tests.test_09_preserva_evidencia_historica_y_terminal) ... ok
+test_10_no_exito_falso_si_registro_falla (__main__.Tests.test_10_no_exito_falso_si_registro_falla) ... ok
+test_11_off_no_anota_boot_ni_stamp_y_bloquea_recuperacion (__main__.Tests.test_11_off_no_anota_boot_ni_stamp_y_bloquea_recuperacion) ... ok
+test_12_script_completo_simulacion_sin_blender (__main__.Tests.test_12_script_completo_simulacion_sin_blender) ... ok
+test_13_no_autorelanzar_y_guarda_fisica (__main__.Tests.test_13_no_autorelanzar_y_guarda_fisica) ... ok
+test_14_aplicar_falla_cambio_ajeno_y_respaldos (__main__.Tests.test_14_aplicar_falla_cambio_ajeno_y_respaldos) ... ok
+test_15_recuperar_por_cli_no_relanza (__main__.Tests.test_15_recuperar_por_cli_no_relanza) ... ok
+test_16_contratos_seguridad_sin_rutas_vps_en_prueba (__main__.Tests.test_16_contratos_seguridad_sin_rutas_vps_en_prueba) ... ok
+test_17_corridas_concurrentes_no_pisan_estado (__main__.Tests.test_17_corridas_concurrentes_no_pisan_estado) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.510s
+
+OK

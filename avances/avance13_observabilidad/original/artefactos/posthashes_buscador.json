@@ -1,0 +1,14 @@
+[
+  {
+    "ruta": "motor/camara_v2_blender.py",
+    "sha256": "a3962fd2ba540cf5e3521ee346de5a6055ac6ed5812ef4b78d9e2091929fd320"
+  },
+  {
+    "ruta": "motor/sonda_inspeccion_camara.py",
+    "sha256": "c5a1054effb4b4f25de562493fb6c0dfc4b6f853920cafe59de71d5ce9398bfd"
+  },
+  {
+    "ruta": "pruebas/test_camara_validar_no_pisa_muestreador.py",
+    "sha256": "de6991e4509b47473057ad79773660d5e9a165d43f1e6d14643e184c7d6550c9"
+  }
+]

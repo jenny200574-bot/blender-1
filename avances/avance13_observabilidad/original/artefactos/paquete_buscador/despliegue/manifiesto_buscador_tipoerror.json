@@ -1,0 +1,30 @@
+{
+  "esquema": "parche_buscador_posicion/1",
+  "sobre": "avance12_20261108_buscador ya con 1611c56. No es la rama completa.",
+  "corrige": "TypeError list is not callable en validar: el bucle pisaba la función muestras.",
+  "fisica_preservada": {
+    "ruta": "motor/fisica_final.py",
+    "sha256": "3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2"
+  },
+  "nucleo_reutilizable": "No toca heredado, compatibilidad_artefacto.py, malla_cabeza.py ni nucleo_bueno_cpu.py.",
+  "archivos": [
+    {
+      "ruta": "motor/camara_v2_blender.py",
+      "antes": "bebdca8347f2b64255d2e808f7d9ef7b8ebc4ae356e4663dbfb1a8171d6948fd",
+      "despues": "a3962fd2ba540cf5e3521ee346de5a6055ac6ed5812ef4b78d9e2091929fd320",
+      "bytes": 62778
+    },
+    {
+      "ruta": "motor/sonda_inspeccion_camara.py",
+      "antes": "e8018eaf0d50757e093088e1abe9a0f54a95f36bce1476dd5474f162a6725e1e",
+      "despues": "c5a1054effb4b4f25de562493fb6c0dfc4b6f853920cafe59de71d5ce9398bfd",
+      "bytes": 7906
+    },
+    {
+      "ruta": "pruebas/test_camara_validar_no_pisa_muestreador.py",
+      "antes": null,
+      "despues": "de6991e4509b47473057ad79773660d5e9a165d43f1e6d14643e184c7d6550c9",
+      "bytes": 2607
+    }
+  ]
+}
