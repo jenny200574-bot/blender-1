@@ -20,9 +20,10 @@
 - TypeError histórico del buscador, cámara, OOM, timeout, oro 23/23, n8n.
 
 ## Uso (Ricardo / VPS; este agente no despliega)
-1. Verificar hash del original instalado = `12918740…`.
+Ver `docs/PROTOCOLO_APLICADOR.md`. El aplicador usa temporal+`os.replace` y falla ante hash ajeno; no hay otros deploys en esa ventana.
+1. `--solo-verificar` (hash original `129187406f4381fb7740e561e7835336211590e5aaf5ef2b92b1559ea5e87c85`).
 2. `python3 paquete_operativo/aplicar_observabilidad.py --destino …/supervisor_oro_constructor.py` (deja `.off`).
-3. Quitar `.off` sólo tras prueba simulada.
-4. Recuperar estado huérfano: `MYIA_SUPERVISOR_SOLO_RECUPERAR=1` (no relanza).
+3. **No** quitar `.off` ni invocar el `main` de producción como prueba: `.off` apaga observabilidad, **no** la construcción.
+4. Recuperar huérfano: `MYIA_SUPERVISOR_SOLO_RECUPERAR=1` (no relanza).
 
 Motor UNIVERSAL: el parche no añade términos de canal.

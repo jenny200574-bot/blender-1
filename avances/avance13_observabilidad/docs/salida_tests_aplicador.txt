@@ -1,0 +1,16 @@
+test_00_supervisor_no_alterado (__main__.Tests.test_00_supervisor_no_alterado) ... ok
+test_01_aplica_atomico_idempotente_permisos_off (__main__.Tests.test_01_aplica_atomico_idempotente_permisos_off) ... ok
+test_02_hash_ajeno_no_forzar (__main__.Tests.test_02_hash_ajeno_no_forzar) ... ok
+test_03_symlink_rechazado (__main__.Tests.test_03_symlink_rechazado) ... ok
+test_04_cambio_ajeno_tras_respaldo_no_pisa (__main__.Tests.test_04_cambio_ajeno_tras_respaldo_no_pisa) ... ok
+test_05_rename_falla_original_intacto (__main__.Tests.test_05_rename_falla_original_intacto) ... ok
+test_06_write_falla_original_intacto (__main__.Tests.test_06_write_falla_original_intacto) ... ok
+test_07_cambio_antes_replace_no_fuerza (__main__.Tests.test_07_cambio_antes_replace_no_fuerza) ... ok
+test_08_concurrencia_cooperativa (__main__.Tests.test_08_concurrencia_cooperativa) ... ok
+test_09_revertir_desde_respaldo (__main__.Tests.test_09_revertir_desde_respaldo) ... ok
+test_10_cli_no_invoca_main_supervisor (__main__.Tests.test_10_cli_no_invoca_main_supervisor) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.227s
+
+OK
