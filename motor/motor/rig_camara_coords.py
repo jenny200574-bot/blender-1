@@ -58,7 +58,11 @@ def trayectoria(tramos, fps, objetivo, limites, suavidad=0.35, sacudir=0.0, t_ba
             u = cur(0.0 if f1 == f0 else (f - f0) / (f1 - f0)); g = {x: _lerp(a[x], b[x], u) for x in ('dist', 'altura', 'lente', 'roll', 'yaw', 'pitch', 'lateral')}
             g['az'] = a['az'] + _wrap(b['az'] - a['az']) * u if abs(b['az'] - a['az']) <= math.pi else _lerp(a['az'], b['az'], u)   # órbitas > 180° se recorren enteras
             mz = Vector((0, 0, 0)); g['mira'] = a.get('mira', mz).lerp(b.get('mira', mz), u)   # reencuadre del punto mirado (zoom/dolly)
-            modo = tr['modo']; obj = objetivo(f) if modo == 'seguir' else ancla0
+            modo = tr['modo']
+            az_fn = tr.get('az_fn')
+            if modo == 'seguir' and callable(az_fn):
+                g['az'] = float(az_fn(f))   # TRACK: el acimut pedido se mide contra el frente de este cuadro, no se congela
+            obj = objetivo(f) if modo == 'seguir' else ancla0
             centro = obj + (g['mira'] if modo == 'seguir' else a.get('mira', mz))   # la cámara orbita el punto mirado; en fijo/paneo no se mueve por el reencuadre
             base = centro + Vector((math.cos(g['az']) * g['dist'], math.sin(g['az']) * g['dist'], g['altura']))
             if modo in ('fijo', 'paneo') and tr.get('pos_fija') is not None: base = tr['pos_fija'].copy()

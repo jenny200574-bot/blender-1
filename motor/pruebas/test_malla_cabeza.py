@@ -2,7 +2,7 @@ import copy, json, sys, unittest
 from pathlib import Path
 R = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(R / 'motor'))
-from malla_cabeza import desplazar_cabeza, error_hueso_cabeza, error_malla_vacia, validar_cabeza
+from malla_cabeza import desplazar_cabeza, error_hueso_cabeza, error_malla_vacia, region_desde_hueso, validar_cabeza, clasificar_medida_cabeza, estado_visual, marcar_malla_cabeza_visible
 from traductor_adn import compilar
 
 ESC = Path(__file__).resolve().parents[2] / 'escenas' / 'guardianes_esc1_candidata'
@@ -38,6 +38,35 @@ class Tests(unittest.TestCase):
             caras = [p for p in ent['appearance']['geometry']['parts'] if p.get('bind_role') == 'head' and p.get('role') == 'face']
             self.assertTrue(caras)
             self.assertGreater(len(caras[0]['vertices_m']), 0)
+
+    def test_region_de_hueso_no_inventa_largo(self):
+        region = region_desde_hueso((0, 0, 1), (0, 0, 1.4))
+        self.assertEqual(region['origen'], 'hueso')
+        self.assertEqual(region['centro'], (0, 0, 1.2))
+        self.assertAlmostEqual(region['alto'], 0.4)
+        self.assertIsNone(region_desde_hueso((0, 0, 1), (0, 0, 1)))
+        self.assertIsNone(region_desde_hueso(None, (0, 0, 1)))
+        self.assertIsNone(region_desde_hueso((0, 0, float('nan')), (0, 0, 1)))
+
+    def test_respaldo_de_hueso_no_aprueba_la_malla_ausente(self):
+        region = region_desde_hueso((0, 0, 1), (0, 0.2, 1.3))
+        clase = clasificar_medida_cabeza(region)
+        self.assertEqual(clase['medicion'], 'respaldo_hueso')
+        self.assertFalse(clase['malla_visible'])
+        self.assertFalse(clase['valida_visual'])
+        self.assertFalse(clase['production_approved'])
+        self.assertIn('no visible', clase['mensaje'])
+        self.assertEqual(estado_visual('pasa', clase), 'bloqueada')
+        ausente = clasificar_medida_cabeza(None)
+        self.assertEqual(ausente['medicion'], 'ausente')
+        self.assertFalse(ausente['production_approved'])
+        self.assertEqual(estado_visual('pasa', ausente), 'bloqueada')
+        visible = clasificar_medida_cabeza(marcar_malla_cabeza_visible({'centro': (0, 0, 1)}))
+        self.assertEqual(visible['medicion'], 'malla_visible')
+        self.assertTrue(visible['valida_visual'])
+        self.assertFalse(visible['production_approved'])
+        self.assertEqual(estado_visual('pasa', visible), 'pasa')
+        self.assertEqual(estado_visual('bloqueada', visible), 'bloqueada')
 
     def test_cabeza_vacia_bloquea_sin_inventar(self):
         ent = {'id': 'ch-valentina-a9be', 'type': 'CHARACTER', 'appearance': {'geometry': {'parts': [{'id': 'ch-valentina-a9be.base.face', 'shape': 'MESH', 'role': 'face', 'bind_role': 'head', 'vertices_m': [], 'faces': []}]}, 'rig': {'bones': []}}}

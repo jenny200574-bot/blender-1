@@ -18,7 +18,11 @@ def etapa(n,data):receipts[str(n)]=data;guardar(out/'etapas_worker.json',receipt
 try:
     import apariencia_3d
     from recetas_proveedor import contexto as contexto_recetas
+    from compatibilidad_artefacto import exigir_paquete, exigir_nucleo, ReusoIncompatible
     apariencia_3d.RECIPE_RUNTIME=contexto_recetas(ROOT,d,pk)
+    motivos=exigir_paquete(ROOT, pk)
+    if len(args)>2:motivos+=exigir_nucleo(ROOT, Path(args[2]), d.get('legacy'))
+    if motivos:raise ReusoIncompatible(motivos)
     if len(args)>2:
         bpy.ops.wm.open_mainfile(filepath=args[2]);sc=bpy.context.scene
     elif d['environment']['mode']=='blend':

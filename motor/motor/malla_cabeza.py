@@ -25,6 +25,80 @@ def error_hueso_cabeza(entity_id, bind_role, bone_name, bones):
 def partes_cabeza(parts):
     return [p for p in parts or [] if isinstance(p, dict) and (p.get('bind_role') == 'head' or p.get('role') in ('head', 'face'))]
 
+def region_desde_hueso(cabeza, cola):
+    """Región medida de un hueso ya existente. None si falta un extremo o el largo es cero."""
+    puntos = []
+    for punto in (cabeza, cola):
+        if isinstance(punto, bool) or not isinstance(punto, (list, tuple)) or len(punto) != 3:
+            return None
+        if any(isinstance(x, bool) or not isinstance(x, (int, float)) for x in punto):
+            return None
+        if any(x != x or x in (float('inf'), float('-inf')) for x in punto):
+            return None
+        puntos.append((float(punto[0]), float(punto[1]), float(punto[2])))
+    a, b = puntos
+    dx, dy, dz = b[0] - a[0], b[1] - a[1], b[2] - a[2]
+    largo = (dx * dx + dy * dy + dz * dz) ** 0.5
+    if largo <= 0:
+        return None
+    centro = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (a[2] + b[2]) / 2)
+    alto = abs(b[2] - a[2]) or largo
+    return {
+        'centro': centro,
+        'alto': alto,
+        'top': max(a[2], b[2]),
+        'puntos': [a, b, centro],
+        'puntos_cara': [a, b, centro],
+        'origen': 'hueso',
+        'malla_visible': False,
+        'valida_visual': False,
+        'production_approved': False,
+    }
+
+
+def marcar_malla_cabeza_visible(cab):
+    """La malla medida sigue sin ser una aprobación de producción."""
+    cab['origen'] = 'malla'
+    cab['malla_visible'] = True
+    cab['valida_visual'] = True
+    cab['production_approved'] = False
+    return cab
+
+
+def clasificar_medida_cabeza(cabeza):
+    """Separa el respaldo del hueso de una malla visible. No aprueba producción."""
+    if not isinstance(cabeza, dict):
+        return {
+            'medicion': 'ausente',
+            'malla_visible': False,
+            'valida_visual': False,
+            'production_approved': False,
+            'mensaje': 'rig sin hueso/malla de cabeza',
+        }
+    if cabeza.get('origen') == 'hueso' or cabeza.get('malla_visible') is False:
+        return {
+            'medicion': 'respaldo_hueso',
+            'malla_visible': False,
+            'valida_visual': False,
+            'production_approved': False,
+            'mensaje': 'malla de cabeza no visible; la medida es solo el hueso existente y no aprueba la apariencia',
+        }
+    return {
+        'medicion': 'malla_visible',
+        'malla_visible': True,
+        'valida_visual': True,
+        'production_approved': False,
+        'mensaje': None,
+    }
+
+
+def estado_visual(estado, clasificacion):
+    """Una medida de respaldo no deja la toma como visualmente válida."""
+    if isinstance(clasificacion, dict) and not clasificacion.get('valida_visual', True):
+        return 'bloqueada'
+    return estado
+
+
 def validar_cabeza(entity):
     """Bloquea si la cabeza compilada no tiene malla con vértices, o el rig trae huesos y ninguno es la cabeza."""
     ident = entity.get('id', '?')

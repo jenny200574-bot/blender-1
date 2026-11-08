@@ -1,0 +1,31 @@
+{
+  "esquema": "parche_buscador_posicion/1",
+  "sobre": "avance13 ya con 3d1653a. No mata el proceso en curso. No es la rama completa.",
+  "corrige": "El buscador evaluaba cada cuadro de cada candidato reconstruyendo el BVH del escenario. Ahora recorre todos los candidatos de un cuadro antes del siguiente. No cambia listas, tolerancias, sensor ni órdenes.",
+  "fisica_preservada": {
+    "ruta": "motor/fisica_final.py",
+    "sha256": "3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2"
+  },
+  "nucleo_reutilizable": "No toca heredado, compatibilidad_artefacto.py, malla_cabeza.py ni nucleo_bueno_cpu.py.",
+  "proceso_en_curso": "No aplica a los PID 19474 ni 19177. Hace falta otra salida, no este proceso.",
+  "archivos": [
+    {
+      "ruta": "motor/buscador_posicion_camara.py",
+      "antes": "cec7cbe39e441a18791ffddf2957ec8ad63378b148a2aec4f0212aadb99c8e7e",
+      "despues": "f44d30d8c97c855b737c7e37cfaebdd8ea104bb651945435785e5187214be716",
+      "bytes": 24545
+    },
+    {
+      "ruta": "motor/camara_v2_blender.py",
+      "antes": "a3962fd2ba540cf5e3521ee346de5a6055ac6ed5812ef4b78d9e2091929fd320",
+      "despues": "27e72545a026d189e1b3ce850766daf3a342a486d3a396e6f2249f872c87abef",
+      "bytes": 62941
+    },
+    {
+      "ruta": "pruebas/test_buscador_posicion_camara.py",
+      "antes": "9b33eca0c0103eb1f027093fb8d5ad1d6ff3b9a1a1bdf4e4677b6e6ad22bfef6",
+      "despues": "b10fb3ea940d3bb8230abfdaf6fa69065ad3c6859bce70d1e236516239ca85cb",
+      "bytes": 9621
+    }
+  ]
+}
