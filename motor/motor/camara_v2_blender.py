@@ -15,6 +15,7 @@ from mathutils.bvhtree import BVHTree
 from bpy_extras.object_utils import world_to_camera_view as w2c
 AQUI = Path(__file__).resolve().parent; sys.path.insert(0, str(AQUI))
 import rig_camara_coords as RIG
+from medir_objetivo_camara import puntos_de_objetivo, sensor_ancho_mm
 OFF = lambda n: (AQUI / f'{n}.off').exists()
 a = sys.argv[sys.argv.index('--') + 1:]
 def _j(i, d=None):
@@ -34,7 +35,10 @@ def fr(t): return 1 + cuadro(t, FPS)
 def fr_fin(t): return cuadro(t, FPS)
 r3 = lambda v: [round(float(x), 4) for x in v]
 # La entrada única conserva sus luces; este resolutor no modifica visibilidad del set.
-CAM = sc.camera; SENSOR_W = float(CAM.data.sensor_width); CAM.data.sensor_fit = 'HORIZONTAL'
+CAM = sc.camera
+if CAM is None or getattr(CAM, 'data', None) is None: raise ValueError('La escena no tiene cámara; no se inventa sensor ni posición')
+SENSOR_W = sensor_ancho_mm((E or {}).get('camera')); CAM.data.sensor_width = SENSOR_W; CAM.data.sensor_fit = 'HORIZONTAL'
+TOMA_ACTUAL = None
 ACT = {o.name: o for o in bpy.data.objects if o.type == 'ARMATURE'}
 def mallas(root): return [x for x in [root] + list(root.children_recursive) if x.type == 'MESH' and not x.hide_render]
 ACT_MESH = {pid: mallas(o) for pid, o in ACT.items()}; ACT_SET = {m.name for ms in ACT_MESH.values() for m in ms}
@@ -56,6 +60,20 @@ def verts(objs, dg):
     for o in objs:
         e = o.evaluated_get(dg); m = e.to_mesh(); mw = o.matrix_world; out += [mw @ v.co for v in m.vertices]; e.to_mesh_clear()
     return out
+def verts_eval(o, dg):
+    try: e = o.evaluated_get(dg)
+    except (AttributeError, RuntimeError): return []
+    if getattr(e, 'type', None) != 'MESH': return []
+    m = e.to_mesh()
+    try: return [e.matrix_world @ v.co for v in m.vertices]
+    finally: e.to_mesh_clear()
+def puntos_respaldo(obj, dg, nombre, toma):
+    """Sin vértices visibles: hijos con malla evaluada (depsgraph) o bounding box del mundo."""
+    propios = verts_eval(obj, dg) if getattr(obj, 'type', None) == 'MESH' else []
+    hijos = [pts for ch in getattr(obj, 'children_recursive', []) if getattr(ch, 'type', None) == 'MESH' for pts in [verts_eval(ch, dg)] if pts]
+    try: caja = [obj.matrix_world @ Vector(c) for c in obj.bound_box]
+    except (TypeError, AttributeError, ValueError): caja = []
+    return [Vector(p) for p in puntos_de_objetivo(nombre, toma or TOMA_ACTUAL, propios, hijos, caja)]
 def dentro_de_malla(bv, p):
     if bv is None: return None
     n = 0
@@ -74,16 +92,17 @@ def env_bvh(f, excl=frozenset()):
 def mallas_de(i):
     o = bpy.data.objects.get(i) if i and i not in ACT else None
     return frozenset(m.name for m in mallas(o)) if o else frozenset()
-def medir(pid, f):
+def medir(pid, f, toma=None):
     k = (pid, f)
     if k in CACHE: return CACHE[k]
     if pid is None: return None
+    toma = toma or TOMA_ACTUAL
     sc.frame_set(f); dg = bpy.context.evaluated_depsgraph_get(); A = ACT.get(pid); R = CFG['roles_hueso']
     if A is None:
         o = bpy.data.objects.get(pid)
         if o is None: CACHE[k] = None; return None
         P = verts(mallas(o), dg)
-        if not P: CACHE[k] = None; return None
+        if not P: P = puntos_respaldo(o, dg, pid, toma)
         lo = Vector([min(p[i] for p in P) for i in range(3)]); hi = Vector([max(p[i] for p in P) for i in range(3)]); c = (lo + hi) / 2
         acts = [x.matrix_world.translation for x in ACT.values()]; fv = None
         if acts:
@@ -91,11 +110,16 @@ def medir(pid, f):
         CACHE[k] = {'tipo': 'objeto', 'zmin': lo.z, 'zmax': hi.z, 'H': hi.z - lo.z, 'centro': c, 'cabeza': None, 'frente': fv, 'frente_cara': fv,
                     'frente_metodo': 'objeto: hacia el centro de los personajes construidos', 'puntos': P, 'huesos': {}, 'id': pid}
         return CACHE[k]
-    ms = ACT_MESH[pid]; P = verts(ms, dg); zmin = min(p.z for p in P); zmax = max(p.z for p in P)
+    ms = ACT_MESH[pid]; P = verts(ms, dg)
+    if not P: P = puntos_respaldo(A, dg, pid, toma)
+    zmin = min(p.z for p in P); zmax = max(p.z for p in P)
     if not SW['manifiesto_espacial'] and isinstance(ADN_H.get(pid), (int, float)): zmax = zmin + ADN_H[pid]
     cab_m = [m for m in ms if (m.parent_type == 'BONE' and m.parent_bone in R['cabeza']) or m.get('semantic_role') in {'head','face'}]; cab = None
     if cab_m:
-        HP = verts(cab_m, dg); lo = Vector([min(p[i] for p in HP) for i in range(3)]); hi = Vector([max(p[i] for p in HP) for i in range(3)])
+        HP = verts(cab_m, dg)
+        if not HP: cab_m = []
+    if cab_m:
+        lo = Vector([min(p[i] for p in HP) for i in range(3)]); hi = Vector([max(p[i] for p in HP) for i in range(3)])
         cc = (lo + hi) / 2; cab = {'centro': cc, 'alto': hi.z - lo.z, 'top': hi.z, 'puntos': HP, 'puntos_cara': [p for p in HP if abs(p.z - cc.z) <= (hi.z - lo.z) / 4] or HP}
     pb = A.pose.bones; mw = A.matrix_world; fv = None; metodo = None
     pies = [n for n in R['pies'] if n in pb]
@@ -120,11 +144,11 @@ def medir(pid, f):
     CACHE[k] = {'tipo': 'personaje', 'zmin': zmin, 'zmax': zmax, 'H': zmax - zmin, 'centro': Vector((pel.x, pel.y, (zmin + zmax) / 2)), 'cabeza': cab,
                 'frente': fv, 'frente_cara': fc, 'frente_metodo': metodo, 'puntos': P, 'huesos': hz, 'id': pid}
     return CACHE[k]
-def grupo(ids, f, principal):
-    ms = [m for m in (medir(i, f) for i in ids) if m]
-    if len(ms) <= 1: return medir(principal, f)
+def grupo(ids, f, principal, toma=None):
+    ms = [m for m in (medir(i, f, toma) for i in ids) if m]
+    if len(ms) <= 1: return medir(principal, f, toma)
     P = [p for m in ms for p in m['puntos']]; heads = [p for m in ms if m['cabeza'] for p in m['cabeza']['puntos']]
-    mp = medir(principal, f) or ms[0]
+    mp = medir(principal, f, toma) or ms[0]
     cab = {'centro': sum([m['cabeza']['centro'] for m in ms if m['cabeza']], Vector()) / max(1, sum(1 for m in ms if m['cabeza'])), 'alto': max(m['cabeza']['alto'] for m in ms if m['cabeza']),
            'top': max(m['cabeza']['top'] for m in ms if m['cabeza']), 'puntos': heads, 'puntos_cara': [p for m in ms if m['cabeza'] for p in m['cabeza']['puntos_cara']]} if heads else None
     return {'tipo': 'grupo', 'zmin': min(m['zmin'] for m in ms), 'zmax': max(m['zmax'] for m in ms), 'H': max(m['H'] for m in ms),
@@ -372,7 +396,7 @@ def params(em, ancla):
     return {'az': math.atan2(d.y, d.x), 'dist': dh.length, 'altura': d.z, 'lente': em['lens'], 'roll': 0.0, 'yaw': 0.0, 'pitch': 0.0, 'lateral': 0.0, 'off': em['look'] - ancla}
 def construir(v, S, cand, tid, est_mov):
     t0, t1 = map(float, v['t_abs']); f0, f1 = fr(t0), fr_fin(t1); tgt = S['insert'] or v.get('objetivo')
-    medf = (lambda f: grupo(S['sujetos'], f, tgt)) if len(S['sujetos']) > 1 else (lambda f: medir(tgt, f))
+    medf = (lambda f: grupo(S['sujetos'], f, tgt, tid)) if len(S['sujetos']) > 1 else (lambda f: medir(tgt, f, tid))
     m0 = medf(f0)
     if m0 is None: return None, f'objetivo {tgt} no construido', None
     ancla = lambda f: (lambda m: (m['cabeza']['centro'] if m and m['cabeza'] else (m['centro'] if m else None)))(medf(f))
@@ -498,7 +522,7 @@ SBV = {v['id']: v for v in (SBE or {}).get('vinetas', [])}; ELEV_TAB = ELEV
 SHOTS_E = {s.get('vineta'): s for s in (E.get('camera') or {}).get('shots', [])}
 tomas = []; trays = []; ref_eje = {}
 for n, v in enumerate(sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0])), 1):
-    tid = f'toma{n:02d}'; t0, t1 = map(float, v['t_abs']); f0, f1 = fr(t0), fr_fin(t1); vin = SBV.get(v['vineta']) or {}; cm = CMDS.get(v['vineta']) or {}
+    tid = f'toma{n:02d}'; TOMA_ACTUAL = tid; t0, t1 = map(float, v['t_abs']); f0, f1 = fr(t0), fr_fin(t1); vin = SBV.get(v['vineta']) or {}; cm = CMDS.get(v['vineta']) or {}
     S = leer_toma(v, vin, cm, tid); tgt = S['insert'] or v.get('objetivo')
     T = {'toma': n, 'id': f'e{SBC.get("escena", "")}_t{n:02d}', 'vineta': v['vineta'], 't0': t0, 't1': t1, 'frame_ini': f0, 'frame_fin': f1, 'objetivo': tgt,
          'tipo': S['plano0'], 'estado': None, 'motivos': [], 'notas': [], 'comandos': S['estado_cmd']}
@@ -509,7 +533,7 @@ for n, v in enumerate(sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
                                       'fundido_cruzado': 'AVISO: encadenado va en la unión final; la unión de tomas todavía no lo aplica (sale corte)', 'fundido_negro': 'AVISO: fundido a negro va en la unión final; todavía no se aplica (sale corte)',
                                       'fundido_blanco': 'AVISO: fundido a blanco va en la unión final; todavía no se aplica (sale corte)', 'barrido': 'AVISO: barrido va en la unión final; todavía no se aplica (sale corte)'}.get(modo_tr, 'transición sin traducción')})
     if modo_tr in ('fundido_cruzado', 'fundido_negro', 'fundido_blanco', 'barrido'): AVISOS.append(f'{tid}: transición {tr} pendiente en la unión final (sale corte)')
-    m0 = (medir(tgt, f0) if tgt else None)
+    m0 = (medir(tgt, f0, tid) if tgt else None)
     if m0 is None:
         T['estado'] = 'bloqueada'; T['motivos'] = [f'objetivo {tgt} no construido en la escena']; F(f'camera/{v["vineta"]}/objetivo', 'ADN/objetos (4b/4c/SELLO OBJ) + motor', 'construir el objetivo', f'{tgt} no existe en el .blend', tid)
         tomas.append(T); trays.append(None); continue
@@ -517,7 +541,7 @@ for n, v in enumerate(sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
         T['manifiesto'] = {str(f): {'altura_m': round(x['H'], 4), 'zmin': round(x['zmin'], 4), 'cabeza': ({'centro': r3(x['cabeza']['centro']), 'alto_m': round(x['cabeza']['alto'], 4)} if x['cabeza'] else None),
                                     'frente': r3(x['frente']) if x['frente'] is not None else None, 'frente_cara': r3(x['frente_cara']) if x.get('frente_cara') is not None else None,
                                     'frente_metodo': x.get('frente_metodo'), 'huesos_z': {k: round(z, 4) for k, z in (x.get('huesos') or {}).items() if z is not None}}
-                           for f in (f0, (f0 + f1) // 2, f1) for x in [medir(tgt, f)] if x}
+                           for f in (f0, (f0 + f1) // 2, f1) for x in [medir(tgt, f, tid)] if x}
         if m0['tipo'] == 'personaje':
             if m0['cabeza'] is None: F(f'actors/{tgt}/rig/cabeza', 'motor (rig) / ADN', 'mapear rol cabeza en el rig', 'rig sin hueso/malla de cabeza', tid)
             h = ADN_H.get(tgt)
@@ -539,7 +563,7 @@ for n, v in enumerate(sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
         tray = []
         for f in range(f0, f1 + 1):
             sc.frame_set(f); mw = CAM.matrix_world; tray.append({'f': f, 'loc': mw.translation.copy(), 'quat': mw.to_quaternion(), 'lente': CAM.data.lens, 'roll': 0, 'mira': None})
-        spec['medir'] = lambda f, tgt=tgt: medir(tgt, f); spec['eje'] = (par[0], par[1], ref_eje.get(par)) if par and par[0] != 'ambiguo' and ref_eje.get(par) is not None else None
+        spec['medir'] = lambda f, tgt=tgt, tid=tid: medir(tgt, f, tid); spec['eje'] = (par[0], par[1], ref_eje.get(par)) if par and par[0] != 'ambiguo' and ref_eje.get(par) is not None else None
         mal = validar(tray, spec, f0, f1) if SW['validacion_camara'] else []
         T['camara'] = 'existente (resolver_camara.off)'; T['estado'] = 'pasa' if not mal else 'bloqueada'; T['motivos'] = sorted({x[1] for x in mal}); T['muestras_malas'] = mal[:8]
         if par and par[0] != 'ambiguo' and ref_eje.get(par) is None and tray: ref_eje[par] = eje_s(S | {'_eje': par}, f0, tray[0]['loc'])
@@ -617,7 +641,7 @@ if SW['resolver_camara']:
 # verificación cruzada con la cámara REAL (world_to_camera_view, mismo método que blender_camaras.py del 05)
 for T in tomas:
     if T['estado'] is None or not T.get('objetivo'): continue
-    f = (T['frame_ini'] + T['frame_fin']) // 2; m = medir(T['objetivo'], f)
+    f = (T['frame_ini'] + T['frame_fin']) // 2; m = medir(T['objetivo'], f, T['toma'] if isinstance(T.get('toma'), str) else f"toma{T['toma']:02d}")
     if m: sc.frame_set(f); T['verif_blender_mitad'] = {'frame': f, 'uv': r3(w2c(sc, CAM, (m['cabeza']['centro'] if m['cabeza'] else m['centro'])))}
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT / 'escena.blend'), copy=True)
 res = {'version': CFG['version'], 'contrato': 'camara_v2', 'interruptores': SW, 'fps': FPS, 'resolucion': [sc.render.resolution_x, sc.render.resolution_y], 'sensor_ancho_mm': SENSOR_W,
