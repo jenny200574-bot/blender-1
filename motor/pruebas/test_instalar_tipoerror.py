@@ -12,8 +12,9 @@ sys.path.insert(0, str(ROOT / 'despliegue'))
 import instalar_parche_buscador as inst
 
 MANIFIESTO = ROOT / 'despliegue' / 'manifiesto_buscador_tipoerror.json'
-ORIGEN = ROOT / 'motor'
 PIN = '1611c56cdb20bb09e5a05f30216905ecebda4c7c'
+# El paquete tipoerror es el de 3d1653a (lo instalado en avance13); el árbol de trabajo ya trae el parche siguiente.
+PAQUETE = '3d1653a'
 FISICA_SHA = inst.FISICA_SHA
 
 
@@ -27,6 +28,12 @@ class Tests(unittest.TestCase):
         self.dest = self.tmp / 'MOTOR_BVH08_CANDIDATO'
         self.dest.mkdir()
         self.data = json.loads(MANIFIESTO.read_text(encoding='utf-8'))
+        global ORIGEN
+        ORIGEN = self.tmp / 'origen'
+        for item in self.data['archivos']:
+            blob = subprocess.check_output(['git', 'show', PAQUETE + ':motor/' + item['ruta']])
+            (ORIGEN / item['ruta']).parent.mkdir(parents=True, exist_ok=True)
+            (ORIGEN / item['ruta']).write_bytes(blob)
         fisica = subprocess.check_output(['git', 'show', '4a8165fc90bd0ab893a4a473a808a29aead3c481:motor_candidato_bvh08/motor/fisica_final.py'])
         self.assertEqual(hashlib.sha256(fisica).hexdigest(), FISICA_SHA)
         out = self.dest / 'motor' / 'fisica_final.py'
