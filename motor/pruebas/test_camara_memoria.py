@@ -34,7 +34,7 @@ class Tests(unittest.TestCase):
 
     def test_purgar_caches_bvh_libera_entradas_sin_mutar_wrapper(self):
         est = _BV('est')
-        estatico = [est, frozenset()]
+        estatico = [est, 10, frozenset()]
         entorno = {1: est, 2: _BV('dyn')}
         otros = {3: _BV('oth')}
         purgar_caches_bvh(entorno, otros, estatico)
@@ -44,7 +44,7 @@ class Tests(unittest.TestCase):
 
     def test_eviccion_no_rompe_bvh_estatico_compartido(self):
         """Reproduce R7: ENVC guarda el mismo _BV que _BVH_ESCENA_EST; evictar una clave no debe borrar .t."""
-        estatico = [_BV('compartido'), frozenset()]
+        estatico = [_BV('compartido'), 1, frozenset()]
         est = estatico[0]
         entorno = {'f10': est, 'f20': est, 'f30': _BV('otro')}
         self.assertTrue(es_bvh_compartido_estatico(est, estatico))
@@ -57,7 +57,7 @@ class Tests(unittest.TestCase):
         estatico[0].ray_cast(1, 1, 1)
 
     def test_doce_tomas_sin_mutar_bvh_entre_tomas(self):
-        estatico = [None, None]
+        estatico = [None, None, None]
         for n in range(12):
             est = _BV(f'est{n}')
             estatico[0] = est

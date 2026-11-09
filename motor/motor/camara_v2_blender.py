@@ -93,7 +93,7 @@ def _refrescar_escena_en_cuadro(frame):
     ENV_ESTATICO = [o for o in ENV if not CAM_MEM.objeto_animado(o)]
     ENV_DINAMICO = [o for o in ENV if CAM_MEM.objeto_animado(o)]
 _refrescar_escena_en_cuadro(1)
-_BVH_ESCENA_EST = [None, None]  # [tree, frozenset(excl) en el que se construyó]
+_BVH_ESCENA_EST = [None, None, None]  # [_BV, cuadro, frozenset(excl)]
 _MAX_PUNTOS_CACHE = int(CFG.get('puntos_region', 48)) * 12
 ADN_H = {x['id']: (x.get('spec') or {}).get('altura_m') for x in E.get('actors', [])}
 class _BV:
@@ -174,17 +174,18 @@ def _llave_entorno(f, excl):
 def _env_objs(excl):
     excl = excl or frozenset()
     return [o for o in ENV if o.name not in excl]
-def _bvh_escena_estatica(excl, dg):
+def _bvh_escena_estatica(f, excl, dg):
     global _BVH_ESCENA_EST
     excl = excl or frozenset()
     if not ENV_ESTATICO or any(o.name in excl for o in ENV_ESTATICO): return None
-    if _BVH_ESCENA_EST[0] is not None and _BVH_ESCENA_EST[1] == excl:
+    if _BVH_ESCENA_EST[0] is not None and _BVH_ESCENA_EST[1] == f and _BVH_ESCENA_EST[2] == excl:
         return _BVH_ESCENA_EST[0]
     estaticos = [o for o in ENV_ESTATICO if o.name not in excl]
     if not estaticos: return None
-    _BVH_ESCENA_EST[0] = bvh(estaticos, dg); _BVH_ESCENA_EST[1] = excl
+    _BVH_ESCENA_EST[0] = bvh(estaticos, dg); _BVH_ESCENA_EST[1] = f; _BVH_ESCENA_EST[2] = excl
     return _BVH_ESCENA_EST[0]
 def env_bvh(f, excl=frozenset()):
+    _refrescar_escena_en_cuadro(f)
     k = _llave_entorno(f, excl) if LOTES else (f, frozenset(excl))
     if k not in ENVC:
         while len(ENVC) > 4:
@@ -192,7 +193,7 @@ def env_bvh(f, excl=frozenset()):
         sc.frame_set(f); dg = bpy.context.evaluated_depsgraph_get()
         din = [o for o in ENV_DINAMICO if o.name not in (excl or frozenset())]
         if not din:
-            est = _bvh_escena_estatica(excl, dg)
+            est = _bvh_escena_estatica(f, excl, dg)
             if est is not None:
                 ENVC[k] = est
             else:

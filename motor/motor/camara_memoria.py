@@ -65,9 +65,12 @@ def evictar_entrada_bvh(caja, clave, estatico_slot=None):
 def purgar_caches_bvh(entorno, otros, estatico=None):
     (entorno or {}).clear()
     (otros or {}).clear()
-    if estatico is not None and len(estatico) >= 2:
+    if estatico is not None and len(estatico) >= 1:
         estatico[0] = None
-        estatico[1] = None
+        if len(estatico) > 1:
+            estatico[1] = None
+        if len(estatico) > 2:
+            estatico[2] = None
 
 
 def ciclo_purga_post_toma(bpy, entorno, otros, estatico=None):
