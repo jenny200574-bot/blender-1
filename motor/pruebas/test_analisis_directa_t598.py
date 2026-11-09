@@ -39,7 +39,7 @@ def test_tapadores_escenario_regex():
     ]
     t = tapadores_escenario_desde_malos(malos, act_ids=('ch-pintor-bce0',))
     assert 'muro_frente_2' in t
-    assert 'obj-cama.cabecero' not in t  # props de historia: no despeje automático
+    assert 'obj-cama.cabecero' in t  # R14: nombre citado en malos (despeje vía rayos + filtro sujeto)
     cats = clasificar_motivos_directa(malos)
     assert cats['encuadre'] == 1
     assert cats['holgura_escenario'] >= 1

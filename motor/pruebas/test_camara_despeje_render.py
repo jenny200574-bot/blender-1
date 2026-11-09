@@ -1,4 +1,4 @@
-"""Despeje R12: visible_camera, prohibidos, fcurve stub."""
+"""Despeje R12–R14: visible_camera, sujetos protegidos, fcurve stub."""
 import json
 import sys
 import unittest
@@ -10,12 +10,10 @@ sys.path.insert(0, str(R / 'motor'))
 from camara_despeje_render import (
     aplicar_visible_camera_toma,
     comprobar_fcurve_despeje,
-    filtrar_objetos_despeje,
-    objeto_permitido_despeje,
+    filtrar_objetos_ocultar,
     revisar_despeje_etapa13,
     valor_visible_camera_en_cuadro,
 )
-from camara_directa_exp import tapadores_escenario_desde_malos
 
 
 class _KP:
@@ -73,19 +71,17 @@ class _Bpy:
 
 
 class Tests(unittest.TestCase):
-    def test_prohibe_personaje_y_prop(self):
-        self.assertFalse(objeto_permitido_despeje('ch-eco-eff3'))
-        self.assertFalse(objeto_permitido_despeje('obj-cama.cabecero'))
-        self.assertTrue(objeto_permitido_despeje('muro_frente_2'))
-
-    def test_filtrar_rechaza_prop(self):
-        with self.assertRaises(ValueError):
-            filtrar_objetos_despeje(['muro_fondo_1', 'obj-cama.estructura'])
-
-    def test_tapadores_no_obj_cama(self):
-        malos = [(10, 'cámara pegada a geometría del escenario (obj-cama.cabecero)', 0)]
-        t = tapadores_escenario_desde_malos(malos, act_ids=('ch-x',))
-        self.assertNotIn('obj-cama.cabecero', t)
+    def test_filtrar_permite_obj_y_muro_rechaza_sujeto(self):
+        S = {'sujetos': ['ch-pintor']}
+        ok, no = filtrar_objetos_ocultar(
+            ['muro_frente_2', 'obj-cama.estructura', 'ch-pintor.cuerpo'],
+            S,
+            'ch-pintor',
+            ('ch-pintor', 'ch-eco'),
+        )
+        self.assertIn('muro_frente_2', ok)
+        self.assertIn('obj-cama.estructura', ok)
+        self.assertIn('ch-pintor.cuerpo', no)
 
     def test_aplicar_inserta_keyframes_rango(self):
         ob = _Ob('muro_frente_2')
@@ -127,6 +123,21 @@ class Tests(unittest.TestCase):
         }]
         err = revisar_despeje_etapa13(None, tomas)
         self.assertTrue(any(e['type'] == 'DESPEJE_FALSO_PASE' for e in err))
+
+    def test_despeje_sujeto_en_reporte(self):
+        tomas = [{
+            'vineta': 'v9',
+            'frame_ini': 100,
+            'frame_fin': 200,
+            'experimental_directa': {
+                'reparacion_toma': {
+                    'ocultados': ['ch-pintor.cuerpo'],
+                    'sujetos_protegidos': ['ch-pintor'],
+                },
+            },
+        }]
+        err = revisar_despeje_etapa13(None, tomas, act_ids=('ch-pintor', 'ch-eco'))
+        self.assertTrue(any(e['type'] == 'DESPEJE_SUJETO' for e in err))
 
 
 if __name__ == '__main__':

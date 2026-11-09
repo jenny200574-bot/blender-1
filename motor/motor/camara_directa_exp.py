@@ -1,45 +1,10 @@
 """Helpers del modo directa SB (sin bpy): diagnóstico y opciones experimentales."""
-import re
-
-# Solo geometría de escenario (no props de historia tipo obj-* ni personajes).
-_PREFIJOS_DESPEJE = ('muro_', 'amb-esc-', 'pared_', 'techo_', 'suelo_', 'cortina_', 'ventana_')
-
-
-def es_geometria_escenario_auto(nombre):
-    if not nombre:
-        return False
-    low = nombre.lower()
-    return any(low.startswith(p) for p in _PREFIJOS_DESPEJE) or low.startswith('muro') or 'cortinas' in low
-
-
-def es_entidad_historia(nombre, act_ids, act_mesh_names):
-    if not nombre:
-        return False
-    act_ids = act_ids or ()
-    if nombre in act_ids or nombre in (act_mesh_names or ()):
-        return True
-    return any(nombre == pid or nombre.startswith(pid + '.') or nombre.startswith(pid + '_') for pid in act_ids)
+from camara_oclusion_sb import nombres_obstaculo_en_malos
 
 
 def tapadores_escenario_desde_malos(malos, act_ids=(), act_mesh_names=()):
-    out = set()
-    for row in malos or []:
-        msg = row[1] if len(row) > 1 else ''
-        if 'otro personaje' in msg:
-            continue
-        for m in re.finditer(r'\(([^)]+)\)', msg):
-            nombre = m.group(1).strip()
-            if nombre.startswith('escenario:'):
-                nombre = nombre.split('escenario:', 1)[1].strip()
-            low = nombre.lower()
-            if low.startswith('obj-') or low.startswith('ch-'):
-                continue
-            if nombre and not es_entidad_historia(nombre, act_ids, act_mesh_names) and es_geometria_escenario_auto(nombre):
-                if any(x in msg for x in ('escenario', 'pegada', 'dentro de geometría')):
-                    out.add(nombre)
-                elif 'tapado' in msg and msg.startswith('cámara'):
-                    out.add(nombre)
-    return frozenset(out)
+    """Compat: nombres citados en malos (la reparación R14 usa además rayos BVH)."""
+    return frozenset(nombres_obstaculo_en_malos(malos).keys())
 
 
 def clasificar_motivos_directa(malos):
@@ -64,31 +29,35 @@ def clasificar_motivos_directa(malos):
 
 
 def opcion_ricardo(clasificacion, motivos):
-    """Pared invisible (BVH validación) u holgura de acercamiento; sin recalcular plan SB."""
+    """Reparación motor R14: visible_camera, retroceso, espejo eje 180°."""
     ops = []
-    if clasificacion.get('holgura_escenario'):
-        ops.append({'accion': 'visible_camera_por_toma', 'detalle': 'visible_camera=False en rango de toma (CONSTANT); hide_render intacto; sombras/indirectos conservados.', 'interruptor': 'camara_escenario_despeje_por_toma.off'})
-    if clasificacion.get('holgura_escenario') and any('dentro de geometría' in (m or '') or 'pegada' in (m or '') for m in (motivos or [])):
-        ops.append({'accion': 'retroceso_holgura', 'detalle': 'Alejar cámara a lo largo del eje sin cambiar encuadre SB.', 'interruptor': 'camara_retroceso_holgura_directa.off'})
-    if clasificacion.get('encuadre') or clasificacion.get('eje_180') or clasificacion.get('inclinacion_roll'):
-        ops.append({'accion': 'conflicto_storyboard', 'detalle': 'No arreglable sin cambiar viñeta, pose o plano.'})
+    if clasificacion.get('holgura_escenario') or clasificacion.get('oclusion_escenario'):
+        ops.append({'accion': 'visible_camera_por_toma', 'detalle': 'visible_camera=False en rango de toma (CONSTANT); obstáculos entre cámara y sujeto SB.', 'interruptor': 'camara_escenario_despeje_por_toma.off'})
+    if clasificacion.get('holgura_escenario') or clasificacion.get('encuadre'):
+        ops.append({'accion': 'retroceso_holgura', 'detalle': 'Alejar cámara a lo largo del eje sin recalcular trayectoria SB.', 'interruptor': 'camara_retroceso_holgura_directa.off'})
+    if clasificacion.get('eje_180'):
+        ops.append({'accion': 'espejo_eje_180', 'detalle': 'Reflejar posición de cámara al lado correcto del eje (salvo CROSSAXIS en SB).'})
+    if clasificacion.get('inclinacion_roll'):
+        ops.append({'accion': 'conflicto_storyboard', 'detalle': 'Inclinación/roll fuera de tolerancia: revisar SB o pose.'})
     return ops
 
 
 def informe_conflicto_toma(vineta, S, motivos, clasificacion, vin=None):
-    """Qué pide el SB, qué viola la revisión; sin ocultar props ni cambiar plan."""
+    """Qué pide el SB, qué viola la revisión tras intento de reparación R14."""
     vin = vin or {}
     segs = vin.get('segmentos') or []
     mov = [{k: s.get(k) for k in ('movimiento', 'args')} for s in segs[:6]]
     ops = []
-    if clasificacion.get('eje_180') or clasificacion.get('inclinacion_roll'):
-        ops.append('Conflicto geométrico con eje/inclinación pedidos: decidir en SB o habilitar reparación (quitar camara_busqueda_reparacion.off).')
-    if any('tapado' in m and 'obj-' in m for m in (motivos or [])):
-        ops.append('Oclusión de prop de historia (obj-*): no se oculta automáticamente; mover prop, encuadre o aceptar bloqueo.')
+    if clasificacion.get('eje_180'):
+        ops.append('Eje 180°: el motor puede espejar la cámara si no hay CROSSAXIS en el SB.')
+    if clasificacion.get('oclusion_escenario') or any('tapado' in (m or '') for m in (motivos or [])):
+        ops.append('Oclusión: visible_camera por rayos sujeto-cámara (props, paredes o no-sujetos); sujetos SB protegidos.')
     if clasificacion.get('encuadre'):
-        ops.append('Encuadre: verificar medición con malla de cabeza visible (no cápsula legacy); pose directa sin factor distancia.')
+        ops.append('Encuadre: retroceso acotado + oclusión; medir con malla de cabeza visible.')
+    if clasificacion.get('inclinacion_roll'):
+        ops.append('Inclinación/roll: sin reparación automática; revisar SB.')
     if not ops:
-        ops.append('Revisión bloqueada: exportar muestras_malas y decidir sin relajar tolerancias.')
+        ops.append('Revisión bloqueada: ver reparacion_toma en experimental_directa y muestras_malas.')
     clases = []
     if clasificacion.get('holgura_escenario'):
         clases.append('arreglable_motor')
@@ -113,10 +82,10 @@ def informe_conflicto_toma(vineta, S, motivos, clasificacion, vin=None):
         'motivos_revision': list(motivos or []),
         'clasificacion': clasificacion,
         'opciones_sin_cambiar_storyboard': ops,
-        'props_historia': 'No se ocultan obj-* (p. ej. obj-cama.*).',
+        'props_historia': 'obj-* y ch-* no sujeto pueden ocultarse con visible_camera si tapan al sujeto SB (R14).',
         'clase_conflicto': clases,
         'opciones_ricardo': opcion_ricardo(clasificacion, motivos),
-        'nota_ricardo': 'No recalcular plan SB; pared invisible (BVH) o acercamiento solo para esa cámara si clase incluye arreglable_motor.',
+        'nota_ricardo': 'R14: reparación automática (visible_camera, retroceso, eje 180°) sin recalcular plan SB.',
     }
 
 

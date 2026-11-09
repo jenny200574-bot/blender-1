@@ -47,6 +47,7 @@ INCLUIR = [
     ('motor/pruebas/test_continuidad_tomas.py', 'motor/pruebas/test_continuidad_tomas.py'),
     ('motor/pruebas/test_superficie_caminable.py', 'motor/pruebas/test_superficie_caminable.py'),
     ('motor/pruebas/test_camara_despeje_render.py', 'motor/pruebas/test_camara_despeje_render.py'),
+    ('motor/pruebas/test_camara_oclusion_sb.py', 'motor/pruebas/test_camara_oclusion_sb.py'),
     ('motor/paquetes/guardianes_t316/entrada_escena.json', 'motor/paquetes/guardianes_t316/entrada_escena.json'),
     ('motor/pruebas/blender_camara', 'motor/pruebas/blender_camara'),
     ('motor/CONTRATO_ENTRADA.schema.json', 'motor/CONTRATO_ENTRADA.schema.json'),
@@ -55,6 +56,7 @@ INCLUIR = [
     ('motor/motor_unico.py', 'motor/motor_unico.py'),
     ('motor/motor_unico.off', 'motor/motor_unico.off'),
     ('despliegue/README_AVANCE14_DESPLIEGUE.md', 'README_DESPLIEGUE.md'),
+    ('despliegue/INFORME_R14.md', 'INFORME_R14.md'),
     ('despliegue/INSTALAR_AISLADO_AVANCE14.sh', 'INSTALAR_AISLADO.sh'),
     ('despliegue/COMANDOS_AVANCE14.env.example', 'COMANDOS.env.example'),
 ]

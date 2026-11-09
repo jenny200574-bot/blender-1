@@ -20,8 +20,12 @@ from curvas_accion import fijar_constante
 from eje_objetos import par_eje
 from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual, malla_es_cabeza
 import buscador_posicion_camara as BUS
-from camara_directa_exp import tapadores_escenario_desde_malos, clasificar_motivos_directa, retroceder_tray_holgura, informe_conflicto_toma
-from camara_despeje_render import FUENTES_VISIBLE_CAMERA, aplicar_visible_camera_toma, filtrar_objetos_despeje
+from camara_directa_exp import clasificar_motivos_directa, retroceder_tray_holgura, informe_conflicto_toma
+from camara_despeje_render import FUENTES_VISIBLE_CAMERA, aplicar_visible_camera_toma, filtrar_objetos_ocultar
+from camara_oclusion_sb import (
+    contar_bloqueadores_rayos, cuadros_reparacion, elegir_a_ocultar, espejar_tray_camara_eje,
+    fusionar_conteos_bloqueo, motivos_reparables, nombres_obstaculo_en_malos, sujetos_protegidos,
+)
 import hashlib
 from array import array
 from progreso_camara import Progreso
@@ -391,43 +395,111 @@ def limites(f, ancla, H, excl=frozenset()):
 def cuadros_muestra(f0, f1):
     return list(range(f0, f1 + 1))
 
-def _tras_validacion_directa(tray, spec, f0, f1, libres_e, libres_i, mal):
-    """Opciones experimentales tras el primer validar en modo directa SB (sin buscador)."""
+def _purga_bvh_camara():
+    global FIRMAS, LLAVES, ENVC, _HUELLA_ENV, _BVH_ESCENA_EST
+    FIRMAS.clear(); LLAVES.clear(); ENVC.clear(); _HUELLA_ENV[0] = None
+    _BVH_ESCENA_EST[0], _BVH_ESCENA_EST[1], _BVH_ESCENA_EST[2] = None, None, None
+    OTROS.clear()
+
+
+def _puntos_validacion_rayos(m, spec, f):
+    rg = region(m, spec['plano_de'](f))
+    pts = m['puntos']
+    if rg and not rg['cuerpo_entero'] and m.get('cabeza'):
+        pts = m['cabeza']['puntos_cara']
+    elif rg:
+        pts = [p for p in pts if rg['bot'] - 1e-3 <= p.z <= rg['top'] + 1e-3] or pts
+    return pts[::max(1, len(pts) // CFG['puntos_region'])]
+
+
+def _bloqueadores_rayos_directa(tray, spec, mal, f0, f1, S, objetivo):
+    act_ids = tuple(ACT.keys())
+    frames = cuadros_reparacion(mal, f0, f1)
+    P = {x['f']: x for x in tray}
+    total = dict(nombres_obstaculo_en_malos(mal))
+    excl_env = spec.get('excluir_env') or frozenset()
+    medf = spec['medir']
+    for f in frames:
+        x = P.get(f)
+        if x is None:
+            continue
+        m = medf(f)
+        if m is None:
+            continue
+        pts = _puntos_validacion_rayos(m, spec, f)
+        env = env_bvh(f, excl_env)
+        oth = otros_bvh(f, spec['excluir_oclusion'])
+        c = contar_bloqueadores_rayos(x['loc'], pts, env, oth)
+        total = fusionar_conteos_bloqueo(total, c)
+    prot = sujetos_protegidos(S or {}, objetivo, act_ids)
+    return elegir_a_ocultar(total, prot, act_ids)
+
+
+def _tras_validacion_directa(tray, spec, f0, f1, libres_e, libres_i, mal, S=None, objetivo=None, cruce_permitido=False):
+    """Reparación R14 tras validar en directa SB: eje 180°, retroceso, visible_camera por rayos."""
     meta = {}
-    if mal and SW.get('despeje_escenario'):
-        excl = tapadores_escenario_desde_malos(mal, tuple(ACT.keys()), tuple(ACT_SET))
-        if excl:
-            try:
-                permitidos = filtrar_objetos_despeje(excl, tuple(ACT.keys()), tuple(ACT_SET))
-            except ValueError as exc:
-                meta['despeje_escenario'] = {'error': str(exc), 'objetos_rechazados': sorted(excl)}
-                permitidos = []
-            if permitidos:
-                aplicar_visible_camera_toma(bpy, permitidos, f0, f1, TOMA_ACTUAL)
-                global FIRMAS, LLAVES, ENVC, _HUELLA_ENV, _BVH_ESCENA_EST
-                FIRMAS.clear(); LLAVES.clear(); ENVC.clear(); _HUELLA_ENV[0] = None
-                _BVH_ESCENA_EST[0], _BVH_ESCENA_EST[1], _BVH_ESCENA_EST[2] = None, None, None
-                spec = dict(spec, excluir_env=frozenset())
-                mal2 = validar(tray, spec, f0, f1, libres_e, libres_i)
-                meta['despeje_escenario'] = {
-                    'propiedad': 'visible_camera',
-                    'objetos': sorted(permitidos),
-                    'frame_ini': int(f0),
-                    'frame_fin': int(f1),
-                    'fuentes': list(FUENTES_VISIBLE_CAMERA),
-                    'nota': 'Validación y render usan visible_camera en la escena; sin hide_render.',
-                }
-                mal = mal2
-    if mal and SW.get('retroceso_holgura_directa'):
-        motivos = {x[1] for x in mal}
-        if motivos and all(any(k in m for k in ('pegada', 'dentro de geometría del escenario')) for m in motivos):
-            for frac in (0.08, 0.15, 0.22):
-                tray2 = retroceder_tray_holgura(tray, frac)
-                mal2 = validar(tray2, spec, f0, f1, libres_e, libres_i)
-                if not mal2:
-                    meta['retroceso_holgura'] = {'fraccion_distancia': frac, 'nota': 'Alejamiento a lo largo del eje cámara→mira; encuadre SB no recalculado.'}
-                    return tray2, mal2, meta
-            meta['retroceso_holgura'] = {'fraccion_distancia': None, 'nota': 'No bastó retroceso acotado sin romper otras restricciones.'}
+    rep = {'pasos': [], 'ocultados': [], 'movimientos': [], 'sujetos_protegidos': sorted(sujetos_protegidos(S or {}, objetivo, tuple(ACT.keys())))}
+    hay_eje, hay_holg, hay_tap, hay_enc = motivos_reparables(mal)
+
+    if mal and not cruce_permitido and hay_eje and spec.get('eje'):
+        A, B, _lado = spec['eje']
+        pa = medir(A, f0); pb = medir(B, f0)
+        if pa and pb:
+            tray2 = espejar_tray_camara_eje(tray, pa['centro'], pb['centro'])
+            mal2 = validar(tray2, spec, f0, f1, libres_e, libres_i)
+            if len(mal2) <= len(mal):
+                rep['movimientos'].append({'accion': 'espejo_eje_180', 'motivo': 'reubicar cámara al lado correcto del eje', 'frame_ref': int(f0)})
+                tray, mal = tray2, mal2
+
+    if mal and SW.get('retroceso_holgura_directa') and (hay_holg or hay_enc):
+        for frac in (0.05, 0.08, 0.12, 0.18, 0.22):
+            tray2 = retroceder_tray_holgura(tray, frac)
+            mal2 = validar(tray2, spec, f0, f1, libres_e, libres_i)
+            if not mal2 or len(mal2) < len(mal):
+                rep['movimientos'].append({'accion': 'retroceso_holgura', 'fraccion_distancia': frac, 'motivo': 'holgura escenario u encuadre (cabeza/pies)'})
+                meta['retroceso_holgura'] = {'fraccion_distancia': frac, 'nota': 'Alejamiento cámara→mira; plano SB sin recálculo de trayectoria.'}
+                tray, mal = tray2, mal2
+                if not mal:
+                    break
+        hay_eje, hay_holg, hay_tap, hay_enc = motivos_reparables(mal)
+
+    ocultados_global = []
+    if mal and SW.get('despeje_escenario') and (hay_tap or hay_holg or hay_enc):
+        for _paso in range(3):
+            if not mal:
+                break
+            candidatos = _bloqueadores_rayos_directa(tray, spec, mal, f0, f1, S, objetivo)
+            if not candidatos:
+                break
+            permitidos, rechazados = filtrar_objetos_ocultar(candidatos, S or {}, objetivo, tuple(ACT.keys()))
+            if rechazados:
+                rep['pasos'].append({'accion': 'visible_camera_omitido', 'rechazados_sujeto': sorted(rechazados)})
+            if not permitidos:
+                break
+            motivo = 'rayos sujeto-cámara (BVH); solo obstáculos entre cámara y sujeto SB'
+            aplicar_visible_camera_toma(bpy, permitidos, f0, f1, TOMA_ACTUAL, motivo=motivo)
+            ocultados_global = sorted(set(ocultados_global) | set(permitidos))
+            _purga_bvh_camara()
+            mal2 = validar(tray, spec, f0, f1, libres_e, libres_i)
+            rep['pasos'].append({'accion': 'visible_camera', 'objetos': sorted(permitidos), 'motivo': motivo})
+            mal = mal2
+            if not mal:
+                break
+
+    if ocultados_global or rep['movimientos'] or rep['pasos']:
+        rep['ocultados'] = ocultados_global
+        rep.update({
+            'propiedad': 'visible_camera',
+            'frame_ini': int(f0),
+            'frame_fin': int(f1),
+            'fuentes': list(FUENTES_VISIBLE_CAMERA),
+            'nota': 'R14: ocultación por toma solo para esta cámara; hide_render intacto.',
+            'objetos': ocultados_global,
+        })
+        meta['reparacion_toma'] = rep
+        if ocultados_global:
+            meta['despeje_escenario'] = {k: rep[k] for k in ('propiedad', 'objetos', 'frame_ini', 'frame_fin', 'fuentes', 'nota', 'sujetos_protegidos') if k in rep or k == 'objetos'}
+            meta['despeje_escenario']['objetos'] = ocultados_global
     return tray, mal, meta
 
 
@@ -900,7 +972,7 @@ for n, v in enumerate(VINETAS, 1):
                 mal = validar(tray, spec, f0, f1, ex['libres_e'], ex['libres_i']) if SW['validacion_camara'] else []
                 exp_meta = {}
                 if mal and SW['validacion_camara']:
-                    tray, mal, exp_meta = _tras_validacion_directa(tray, spec, f0, f1, ex['libres_e'], ex['libres_i'], mal)
+                    tray, mal, exp_meta = _tras_validacion_directa(tray, spec, f0, f1, ex['libres_e'], ex['libres_i'], mal, S=S, objetivo=tgt, cruce_permitido=S.get('cruce_permitido'))
                 diags = spec.get('_diag_encuadre') or []
                 if diags:
                     exp_meta['diagnostico_encuadre'] = diags[:12]
@@ -914,10 +986,11 @@ for n, v in enumerate(VINETAS, 1):
                     exp_meta['conflicto_sb_probable'] = bool(cm.get('eje_180') or cm.get('inclinacion_roll'))
                 if exp_meta:
                     T['experimental_directa'] = exp_meta
-                    if exp_meta.get('despeje_escenario') and exp_meta['despeje_escenario'].get('objetos'):
+                    rep_t = (exp_meta.get('reparacion_toma') or {})
+                    if rep_t.get('ocultados') or exp_meta.get('despeje_escenario', {}).get('objetos'):
                         T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['despeje_visible_camera']
-                    if exp_meta.get('retroceso_holgura', {}).get('fraccion_distancia'):
-                        T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['retroceso_holgura']
+                    if rep_t.get('movimientos') or exp_meta.get('retroceso_holgura', {}).get('fraccion_distancia'):
+                        T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['reparacion_trayectoria']
                 intentos.append({'az_extra': daz, 'fd': fd, 'fallos': len(mal), 'motivos': sorted({x[1] for x in mal}), 'muestras_malas': mal[:6]})
                 if not mal: elegido = (tray, daz, fd, em_, ex, lado)
             T['busqueda_matematica'] = {**BUS.resumen(BUS.sin_modelo('directa_sb sin buscador')), **_bm_directa(evaluaciones_validacion=len(intentos), candidatos_construidos=1)}
