@@ -257,6 +257,14 @@ def fallos_muestra(daz, factor, muestra, ped, lado_visto):
     return set(mal), lado_visto
 
 
+def _sumar(tot, mal):
+    for k in mal:
+        if k in tot:
+            tot[k] += 1
+        elif k == 'pedido':
+            tot['encuadre'] += 1
+
+
 def fallos_de(daz, factor, ped):
     tot = {k: 0 for k in RESTRICCIONES}
     lado = ped.get('lado')
@@ -265,12 +273,31 @@ def fallos_de(daz, factor, ped):
         if ped.get('lado') is None:
             # el lado de este candidato queda fijado por su primer cuadro, como el resolutor actual
             pass
-        for k in mal:
-            if k in tot:
-                tot[k] += 1
-            elif k == 'pedido':
-                tot['encuadre'] += 1
+        _sumar(tot, mal)
     return tot
+
+
+def evaluar_por_cuadro(pares, ped, aviso=None):
+    """fallos_de de cada par, con los cuadros por fuera y los candidatos por dentro.
+
+    Da lo mismo que fallos_de(daz, factor, ped) para cada par: el lado del eje sigue
+    el orden de los cuadros de cada candidato. Así el obstáculo de un cuadro (BVH del
+    escenario) se usa para todos los candidatos antes de pasar al cuadro siguiente.
+    Devuelve {(daz, factor): fallos} con las claves tal como llegaron, sin redondear.
+    """
+    filas = {}
+    for daz, factor in pares:
+        clave = (daz, factor)
+        if clave not in filas:
+            filas[clave] = [{k: 0 for k in RESTRICCIONES}, ped.get('lado')]
+    muestras = ped['muestras']
+    for i, muestra in enumerate(muestras):
+        if callable(aviso):
+            aviso(i, len(muestras), len(filas))
+        for (daz, factor), fila in filas.items():
+            mal, fila[1] = fallos_muestra(daz, factor, muestra, ped, fila[1])
+            _sumar(fila[0], mal)
+    return {clave: fila[0] for clave, fila in filas.items()}
 
 
 def _lista(valores):
@@ -309,11 +336,15 @@ def _pasa(fallos):
     return sum(fallos.values()) == 0
 
 
-def _refinar(daz, a, b, pasa_a, ped):
+PASOS_REFINAR = 8
+
+
+def _refinar(daz, a, b, pasa_a, ped, evaluar=None):
+    evaluar = evaluar or (lambda d, f: fallos_de(d, f, ped))
     hallados = []
-    for _ in range(8):
+    for _ in range(PASOS_REFINAR):
         medio = (a + b) / 2
-        ok = _pasa(fallos_de(daz, medio, ped))
+        ok = _pasa(evaluar(daz, medio))
         if ok:
             hallados.append(medio)
         if ok == pasa_a:
@@ -506,20 +537,77 @@ def buscar(pedido):
     examinados = []
     vistos = set()
     buenos = []
+    por_cuadro = bool(pedido.get('por_cuadro'))
+    memo = {}
+    cuenta = {'lotes': 0, 'pares_en_lote': 0, 'fuera_de_lote': 0}
+
+    def en_rango(daz, factor):
+        return min(az_lista) - 1e-6 <= daz <= max(az_lista) + 1e-6 and flo - 1e-6 <= factor <= fhi + 1e-6
+
+    def lote(pares, fase):
+        faltan = list(dict.fromkeys(p for p in pares if p not in memo))
+        if not faltan:
+            return
+        aviso = pedido.get('aviso')
+        avisar = (lambda i, n, c: aviso(fase, i, n, c)) if callable(aviso) else None
+        memo.update(evaluar_por_cuadro(faltan, pedido, avisar))
+        cuenta['lotes'] += 1
+        cuenta['pares_en_lote'] += len(faltan)
+
+    def evaluar(daz, factor):
+        if not por_cuadro:
+            return fallos_de(daz, factor, pedido)
+        clave = (daz, factor)
+        if clave not in memo:
+            cuenta['fuera_de_lote'] += 1
+            memo[clave] = fallos_de(daz, factor, pedido)
+        return memo[clave]
 
     def anotar(daz, factor):
         clave = _clave(daz, factor)
-        if clave in vistos or not (min(az_lista) - 1e-6 <= daz <= max(az_lista) + 1e-6 and flo - 1e-6 <= factor <= fhi + 1e-6):
+        if clave in vistos or not en_rango(daz, factor):
             return None
         vistos.add(clave)
-        fallos = fallos_de(daz, factor, pedido)
+        fallos = evaluar(daz, factor)
         fila = {'daz': clave[0], 'factor': clave[1], 'fallos': fallos}
         examinados.append(fila)
         if _pasa(fallos):
             buenos.append(fila)
         return fila
 
+    def precargar_rejilla_y_refinado():
+        """Llena memo por lotes con los mismos pares, en el mismo orden lógico, que pedirá el recorrido de abajo."""
+        lote(discretos + [(daz, f) for daz in azimuts for f in factores], 'rejilla')
+        sim = set(vistos)
+
+        def entra(daz, factor):
+            clave = _clave(daz, factor)
+            if clave in sim or not en_rango(daz, factor):
+                return False
+            sim.add(clave)
+            return True
+
+        for daz, factor in discretos:
+            entra(daz, factor)
+        tramos = []
+        for daz in azimuts:
+            filas_az = sorted(((_clave(daz, f)[1], memo[(daz, f)]) for f in factores if entra(daz, f)), key=lambda x: x[0])
+            for i in range(len(filas_az) - 1):
+                pa, pb = _pasa(filas_az[i][1]), _pasa(filas_az[i + 1][1])
+                if pa != pb:
+                    tramos.append([daz, filas_az[i][0], filas_az[i + 1][0], pa])
+        for _ in range(PASOS_REFINAR):
+            pares = [(t[0], (t[1] + t[2]) / 2) for t in tramos]
+            lote(pares, 'refinar')
+            for t, par in zip(tramos, pares):
+                if _pasa(memo[par]) == t[3]:
+                    t[1] = par[1]
+                else:
+                    t[2] = par[1]
+
     discretos = [(a, f) for a in az_lista for f in fac_lista]
+    if por_cuadro:
+        lote([(0.0, 1.0)], 'directo')
     pedido_directo = anotar(0.0, 1.0)
     if pedido_directo is not None and _pasa(pedido_directo['fallos']):
         propuestas = [_candidato(0.0, 1.0)]
@@ -538,6 +626,8 @@ def buscar(pedido):
             'propuestas': propuestas,
             'production_approved': False,
         }
+    if por_cuadro:
+        precargar_rejilla_y_refinado()
     for daz, factor in discretos:
         anotar(daz, factor)
     rejilla_ok = any(_pasa(item['fallos']) for item in examinados)
@@ -552,7 +642,7 @@ def buscar(pedido):
             a, b = muestras_f[i], muestras_f[i + 1]
             if _pasa(a['fallos']) == _pasa(b['fallos']):
                 continue
-            for medio in _refinar(daz, a['factor'], b['factor'], _pasa(a['fallos']), pedido):
+            for medio in _refinar(daz, a['factor'], b['factor'], _pasa(a['fallos']), pedido, evaluar):
                 anotar(daz, medio)
     filas, incompatibles, mejor = _resumen_restricciones(examinados)
     buenos.sort(key=lambda item: (abs(item['daz']), abs(item['factor'] - 1.0), abs(item['daz']) + abs(item['factor'] - 1.0)))
@@ -588,7 +678,7 @@ def buscar(pedido):
         meter(mejor['daz'], mejor['factor'])
     for daz, factor in discretos:
         meter(daz, factor)
-    return {
+    out = {
         'modelo_completo': True,
         'resuelto_geometrico': elegido is not None,
         'rejilla_discreta_resuelve': rejilla_ok,
@@ -600,6 +690,9 @@ def buscar(pedido):
         'propuestas': propuestas,
         'production_approved': False,
     }
+    if por_cuadro:
+        out['por_cuadro'] = dict(cuenta)
+    return out
 
 
 def resumen(informe):
