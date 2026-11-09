@@ -25,6 +25,9 @@ blender -b --factory-startup -t 2 -P probar_directa_vs_busqueda.py -- \
 
 Salida: `comparativa.json` (tiempos, `frame_set`, BVH, `busqueda_matematica` por toma). **No** equivale a escena real avance13.
 
-## VPS
+## VPS — paquete listo (sin clonar repo)
 
-No desplegar sin plan Ricardo; rama `cursor/camara-directa-sb-exp-43f7`, PR aparte del parche etapa 11.
+- Empaquetado: `despliegue/empaquetar_avance14_directa_sb.py` → `avance14_camara_directa_sb_exp_<git>.tar.gz` + manifiesto SHA-256.
+- Instrucciones operador: `despliegue/README_AVANCE14_DESPLIEGUE.md` (incluido en el tarball como `README_DESPLIEGUE.md`).
+- Directorio aislado sugerido: `/opt/myia-motor-v9-experimental-avance14`.
+- **PR #7** = **PR #6** (`97a7a89`) + commit `4f439fc`. No tocar instalación original.
