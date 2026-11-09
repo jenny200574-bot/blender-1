@@ -118,6 +118,22 @@ Script: `motor/pruebas/blender_camara/probar_directa_vs_busqueda.py`
 - Copia **con** `.off` (como este paquete) → corrida directa SB.
 - Salida: `comparativa.json`.
 
+## Opciones experimentales (t598, copia VPS)
+
+Tras prueba nocturna (8/12 bloqueadas): ver `despliegue/ANALISIS_PRUEBA_NOCTURNA_T598.md`.
+
+Activar copiando en `motor/motor/`:
+
+- `camara_escenario_despeje_por_toma.off` ← desde `.off.example` (solo excluye muros/cortinas del BVH de validación, no `obj-*`).
+- `camara_retroceso_holgura_directa.off` ← retroceso acotado si solo falla holgura escenario.
+
+Sonda cabeza en blend construido:
+
+```bash
+"$B" -b SAL/escena.blend -P "$M/motor/sonda_inspeccion_camara.py" -- \
+  --actor ch-pintor-bce0 --frames 433,468 --salida /tmp/sonda.json --config "$M/motor/camara_v2_config.json"
+```
+
 ## Limitaciones
 
 - Pruebas del agente cloud **no** ejecutan escena real avance13.

@@ -8,7 +8,7 @@
     sujeto en cuadro (pies o cabeza según plano), nada tapa (BVH ray_cast), sin inclinación/roll indebidos, lado del eje 180°.
     Reparación acotada (acimut/distancia) o toma BLOQUEADA con motivo. Ningún comando queda en silencio: cada uno tiene estado.
 Interruptores .off junto a este archivo: manifiesto_espacial, resolver_camara, validacion_camara. Universal: sin canal/escena/personaje."""
-import bpy, sys, json, math, os
+import bpy, sys, json, math, os, re
 from pathlib import Path
 from mathutils import Vector, Matrix, Quaternion
 from mathutils.bvhtree import BVHTree
@@ -18,8 +18,9 @@ import rig_camara_coords as RIG
 from medir_objetivo_camara import puntos_de_objetivo, sensor_ancho_mm
 from curvas_accion import fijar_constante
 from eje_objetos import par_eje
-from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual
+from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual, malla_es_cabeza
 import buscador_posicion_camara as BUS
+from camara_directa_exp import tapadores_escenario_desde_malos, clasificar_motivos_directa, retroceder_tray_holgura
 import hashlib
 from array import array
 from progreso_camara import Progreso
@@ -35,6 +36,8 @@ SW = {'manifiesto_espacial': not OFF('manifiesto_espacial'), 'resolver_camara': 
 LOTES = not OFF('camara_lotes_por_cuadro'); SW['lotes_por_cuadro'] = LOTES
 # Con camara_busqueda_reparacion.off: solo la pose inicial del SB (0°, factor 1); no rejilla ni bisección. La revisión no se salta.
 DIRECTO = OFF('camara_busqueda_reparacion'); SW['busqueda_reparacion'] = not DIRECTO; SW['directa_sb'] = DIRECTO
+DESPEJE_ESC = OFF('camara_escenario_despeje_por_toma'); SW['despeje_escenario'] = DESPEJE_ESC
+RETROCESO = OFF('camara_retroceso_holgura_directa'); SW['retroceso_holgura_directa'] = RETROCESO and DIRECTO
 PROG = Progreso.desde_entorno(OUT); PROG.marcar(forzar=True, fase='inicio', lotes_por_cuadro=LOTES, directa_sb=DIRECTO)
 sc = bpy.context.scene; FPS = sc.render.fps / sc.render.fps_base
 RX, RY = sc.render.resolution_x * sc.render.pixel_aspect_x, sc.render.resolution_y * sc.render.pixel_aspect_y; ASP = RX / RY
@@ -153,7 +156,7 @@ def medir(pid, f, toma=None):
     if not P: P = puntos_respaldo(A, dg, pid, toma)
     zmin = min(p.z for p in P); zmax = max(p.z for p in P)
     if not SW['manifiesto_espacial'] and isinstance(ADN_H.get(pid), (int, float)): zmax = zmin + ADN_H[pid]
-    cab_m = [m for m in ms if (m.parent_type == 'BONE' and m.parent_bone in R['cabeza']) or m.get('semantic_role') in {'head','face'}]; cab = None
+    cab_m = [m for m in ms if malla_es_cabeza(m, R['cabeza'])]; cab = None
     if cab_m:
         HP = verts(cab_m, dg)
         if not HP: cab_m = []
@@ -270,6 +273,32 @@ def limites(f, ancla, H, excl=frozenset()):
 def cuadros_muestra(f0, f1):
     return list(range(f0, f1 + 1))
 
+def _tras_validacion_directa(tray, spec, f0, f1, libres_e, libres_i, mal):
+    """Opciones experimentales tras el primer validar en modo directa SB (sin buscador)."""
+    meta = {}
+    if mal and SW.get('despeje_escenario'):
+        excl = tapadores_escenario_desde_malos(mal, tuple(ACT.keys()), tuple(ACT_SET))
+        if excl:
+            spec = dict(spec, excluir_env=excl)
+            mal2 = validar(tray, spec, f0, f1, libres_e, libres_i)
+            meta['despeje_escenario'] = {'objetos_excluidos_bvh': sorted(excl), 'nota': 'Solo exclusión en BVH de validación; personajes y hide_render globales no cambian.'}
+            if len(mal2) < len(mal):
+                mal = mal2
+            else:
+                mal = mal2
+    if mal and SW.get('retroceso_holgura_directa'):
+        motivos = {x[1] for x in mal}
+        if motivos and all(any(k in m for k in ('pegada', 'dentro de geometría del escenario')) for m in motivos):
+            for frac in (0.08, 0.15, 0.22):
+                tray2 = retroceder_tray_holgura(tray, frac)
+                mal2 = validar(tray2, spec, f0, f1, libres_e, libres_i)
+                if not mal2:
+                    meta['retroceso_holgura'] = {'fraccion_distancia': frac, 'nota': 'Alejamiento a lo largo del eje cámara→mira; encuadre SB no recalculado.'}
+                    return tray2, mal2, meta
+            meta['retroceso_holgura'] = {'fraccion_distancia': None, 'nota': 'No bastó retroceso acotado sin romper otras restricciones.'}
+    return tray, mal, meta
+
+
 OTROS = {}
 def otros_bvh(f, excluir):
     k = (f, tuple(sorted(excluir)))
@@ -300,7 +329,10 @@ def validar_lote(items, f0, f1, tid):
 def _validar_cuadro(x, spec, f, libres_encuadre, libres_inclin, malos):
     loc = x['loc']; R = x['quat'].to_matrix(); lens = x['lente']; m = spec['medir'](f)
     if m is None: malos.append((f, 'objetivo ausente en este cuadro', 0)); return
-    env = env_bvh(f); env_oc = env_bvh(f, spec.get('excluir_env', frozenset())); oth = otros_bvh(f, spec['excluir_oclusion'])
+    excl_env = spec.get('excluir_env') or frozenset()
+    env = env_bvh(f, excl_env) if (SW.get('despeje_escenario') and excl_env) else env_bvh(f)
+    env_oc = env_bvh(f, excl_env) if excl_env else env
+    oth = otros_bvh(f, spec['excluir_oclusion'])
     D = (m['centro'] - loc).length
     hol = min(CFG['holgura_max_m'], CFG['holgura_frac_distancia'] * D, CFG['holgura_frac_altura'] * m['H'])
     if env:
@@ -317,7 +349,11 @@ def _validar_cuadro(x, spec, f, libres_encuadre, libres_inclin, malos):
         pr = [proyectar(p, loc, R, lens) for p in pts]; fr_in = sum(1 for q in pr if q and 0 <= q[0] <= 1 and 0 <= q[1] <= 1) / max(1, len(pr))
         req = CFG['region_en_cuadro_min']
         if rg and not rg['cuerpo_entero'] and m['cabeza'] and rg['Hf'] < m['cabeza']['alto'] / 2: req *= rg['Hf'] / (m['cabeza']['alto'] / 2)
-        if fr_in < req: malos.append((f, 'sujeto fuera de cuadro (' + ('cabeza' if rg and not rg['cuerpo_entero'] else 'pies/cabeza') + ')', round(fr_in, 2)))
+        if fr_in < req:
+            origen = (m.get('cabeza') or {}).get('origen') if m.get('cabeza') else None
+            vvis = (m.get('cabeza') or {}).get('valida_visual', m.get('cabeza') and m['cabeza'].get('malla_visible'))
+            malos.append((f, 'sujeto fuera de cuadro (' + ('cabeza' if rg and not rg['cuerpo_entero'] else 'pies/cabeza') + ')', round(fr_in, 2)))
+            spec.setdefault('_diag_encuadre', []).append({'frame': f, 'fraccion_en_cuadro': round(fr_in, 3), 'minimo': req, 'origen_cabeza': origen, 'cabeza_valida_visual': vvis, 'plano': spec.get('plano_de')(f) if spec.get('plano_de') else None})
         tap = {}
         for p in pts:
             for bv, et in ((env_oc, 'escenario'), (oth, 'otro personaje')):
@@ -716,6 +752,17 @@ for n, v in enumerate(VINETAS, 1):
                 if par and par[0] != 'ambiguo' and lado is None and not S['cruce_permitido']: lado = eje_s(S, f0, tray[0]['loc'])
                 spec['eje'] = (par[0], par[1], lado) if (par and par[0] != 'ambiguo' and not S['cruce_permitido']) else None
                 mal = validar(tray, spec, f0, f1, ex['libres_e'], ex['libres_i']) if SW['validacion_camara'] else []
+                exp_meta = {}
+                if mal and SW['validacion_camara']:
+                    tray, mal, exp_meta = _tras_validacion_directa(tray, spec, f0, f1, ex['libres_e'], ex['libres_i'], mal)
+                if spec.get('_diag_encuadre'):
+                    exp_meta['diagnostico_encuadre'] = spec['_diag_encuadre'][:12]
+                if mal:
+                    exp_meta['clasificacion_motivos'] = clasificar_motivos_directa(mal)
+                    cm = exp_meta['clasificacion_motivos']
+                    exp_meta['conflicto_sb_probable'] = bool(cm.get('eje_180') or cm.get('inclinacion_roll'))
+                if exp_meta:
+                    T['experimental_directa'] = exp_meta
                 intentos.append({'az_extra': daz, 'fd': fd, 'fallos': len(mal), 'motivos': sorted({x[1] for x in mal}), 'muestras_malas': mal[:6]})
                 if not mal: elegido = (tray, daz, fd, em_, ex, lado)
             T['busqueda_matematica'] = {**BUS.resumen(BUS.sin_modelo('directa_sb sin buscador')), **_bm_directa(evaluaciones_validacion=len(intentos), candidatos_construidos=1)}
