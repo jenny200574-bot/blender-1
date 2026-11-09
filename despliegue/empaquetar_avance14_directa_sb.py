@@ -34,6 +34,8 @@ INCLUIR = [
     ('motor/bibliotecas', 'motor/bibliotecas'),
     ('motor/paquetes/fixture_4g_v5', 'motor/paquetes/fixture_4g_v5'),
     ('motor/pruebas/test_camara_directa_sb.py', 'motor/pruebas/test_camara_directa_sb.py'),
+    ('motor/pruebas/test_analisis_directa_t598.py', 'motor/pruebas/test_analisis_directa_t598.py'),
+    ('motor/pruebas/test_cabeza_visible_legacy.py', 'motor/pruebas/test_cabeza_visible_legacy.py'),
     ('motor/pruebas/blender_camara', 'motor/pruebas/blender_camara'),
     ('motor/CONTRATO_ENTRADA.schema.json', 'motor/CONTRATO_ENTRADA.schema.json'),
     ('motor/CONTRATO_TIEMPOS_DIALOGO.schema.json', 'motor/CONTRATO_TIEMPOS_DIALOGO.schema.json'),

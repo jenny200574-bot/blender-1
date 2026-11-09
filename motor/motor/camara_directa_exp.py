@@ -60,6 +60,35 @@ def clasificar_motivos_directa(malos):
     return cats
 
 
+def informe_conflicto_toma(vineta, S, motivos, clasificacion, vin=None):
+    """Qué pide el SB, qué viola la revisión; sin ocultar props ni cambiar plan."""
+    vin = vin or {}
+    segs = vin.get('segmentos') or []
+    mov = [{k: s.get(k) for k in ('movimiento', 'args')} for s in segs[:6]]
+    ops = []
+    if clasificacion.get('eje_180') or clasificacion.get('inclinacion_roll'):
+        ops.append('Conflicto geométrico con eje/inclinación pedidos: decidir en SB o habilitar reparación (quitar camara_busqueda_reparacion.off).')
+    if any('tapado' in m and 'obj-' in m for m in (motivos or [])):
+        ops.append('Oclusión de prop de historia (obj-*): no se oculta automáticamente; mover prop, encuadre o aceptar bloqueo.')
+    if clasificacion.get('encuadre'):
+        ops.append('Encuadre: verificar medición con malla de cabeza visible (no cápsula legacy); pose directa sin factor distancia.')
+    if not ops:
+        ops.append('Revisión bloqueada: exportar muestras_malas y decidir sin relajar tolerancias.')
+    return {
+        'vineta': vineta,
+        'plano_inicial': S.get('plano0'),
+        'elevacion_pedida_deg': S.get('elev'),
+        'orientacion_sb_deg': S.get('orient'),
+        'roll_pedido_deg': S.get('roll_deg'),
+        'lente_mm': S.get('lens'),
+        'movimientos_sb': mov,
+        'motivos_revision': list(motivos or []),
+        'clasificacion': clasificacion,
+        'opciones_sin_cambiar_storyboard': ops,
+        'props_historia': 'No se ocultan obj-* (p. ej. obj-cama.*).',
+    }
+
+
 def retroceder_tray_holgura(tray, frac):
     if not frac or frac <= 0:
         return tray

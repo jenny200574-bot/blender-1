@@ -20,7 +20,7 @@ from curvas_accion import fijar_constante
 from eje_objetos import par_eje
 from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual, malla_es_cabeza
 import buscador_posicion_camara as BUS
-from camara_directa_exp import tapadores_escenario_desde_malos, clasificar_motivos_directa, retroceder_tray_holgura
+from camara_directa_exp import tapadores_escenario_desde_malos, clasificar_motivos_directa, retroceder_tray_holgura, informe_conflicto_toma
 import hashlib
 from array import array
 from progreso_camara import Progreso
@@ -55,6 +55,14 @@ if CAM is None or getattr(CAM, 'data', None) is None: raise ValueError('La escen
 SENSOR_W = sensor_ancho_mm((E or {}).get('camera')); CAM.data.sensor_width = SENSOR_W; CAM.data.sensor_fit = 'HORIZONTAL'
 TOMA_ACTUAL = None
 ACT = {o.name: o for o in bpy.data.objects if o.type == 'ARMATURE'}
+for _ent in (E or {}).get('entities', []) or []:
+    if _ent.get('type') != 'CHARACTER':
+        continue
+    _aid = _ent.get('id')
+    if _aid not in ACT:
+        continue
+    from cabeza_visible_constructor import publicar_mallas_cabeza_adn
+    publicar_mallas_cabeza_adn(_ent, ACT[_aid], (CFG.get('roles_hueso') or {}).get('cabeza') or ['cabeza'])
 def mallas(root):
     if root is None: return []
     candidatos = list(root.children_recursive)
@@ -853,6 +861,10 @@ for n, v in enumerate(VINETAS, 1):
         T['foco'] = S['foco']
     T['notas'] = [f"{c['comando']}: {c['detalle']}" for c in T['comandos'] if c.get('detalle')]
     T['sin_silencio'] = all(c['estado'] in ('ejecutado', 'falta_dato', 'no_programado', 'montaje', 'solo_revision', 'aviso') for c in T['comandos'])
+    if T.get('estado') != 'pasa' or (T.get('experimental_directa') or {}).get('conflicto_sb_probable'):
+        cm = (T.get('experimental_directa') or {}).get('clasificacion_motivos') or clasificar_motivos_directa([(0, m, 0) for m in (T.get('motivos') or [])])
+        if T.get('motivos') or any(cm.values()):
+            T['informe_conflicto'] = informe_conflicto_toma(tid, S, T.get('motivos') or [], cm, SBV.get(v['vineta']))
     tomas.append(T); trays.append((tray, S) if tray else None)
 # ---------------- hornear la trayectoria en el .blend (lo que se graba) ----------------
 PROG.marcar(forzar=True, fase='hornear', tomas=len(tomas))

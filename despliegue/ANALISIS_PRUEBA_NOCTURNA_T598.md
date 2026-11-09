@@ -6,6 +6,12 @@
 - **Resultado:** pasan 1,2,3,10; bloqueadas 4–9,11,12.
 - **Aborto constructor:** `FaltaDatos` por `faltantes` — `ch-pintor-bce0` cabeza solo hueso (`valida_visual: false`). El `escena.blend` sí se guardó.
 
+## R2 — causa cabeza pintor (demostrada)
+
+- **Etapa 5/8** (`constructor_final.py`): con `legacy`, **todas** las mallas hijas del rig quedan `hide_render=True` + `motor_preserve_hidden` (cápsulas `{id}_malla_*` del rig del núcleo).
+- Las piezas **ADN** se construyen después y deben quedar visibles; si los eventos de escena las vuelven a ocultar, **etapa 11** vuelve a publicar (`cabeza_visible_constructor` + inicio `camara_v2_blender`).
+- **13 mallas “cabeza”:** mezcla cápsula legacy + piezas ADN (`face`, ojos, etc.); solo las ADN canónicas deben medirse.
+
 ## Causas por motivo (demostrables)
 
 | Motivo | Causa probable | Tipo |

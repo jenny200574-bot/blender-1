@@ -75,9 +75,13 @@ try:
         if 'placement' in e:rig.location=e['placement']['position_m'];rig.rotation_euler=[math.radians(x) for x in e['placement']['rotation_deg']]
         if e.get('legacy'):
             for child in rig.children_recursive:
-                if child.type=='MESH':child.hide_render=True;child['motor_preserve_hidden']=True # cápsulas conservadas para auditoría, no acabado final.
+                if child.type=='MESH':child.hide_render=True;child['motor_preserve_hidden']=True # etapa 5/8: cápsulas del rig legacy; las cabezas ADN se publican después con cabeza_visible_constructor.
         from apariencia_base_cpu import ligar
         for part in e['appearance']['geometry']['parts']:construir_parte(ligar(part,rig,e),rig,objects)
+        from cabeza_visible_constructor import publicar_mallas_cabeza_adn
+        bones = (e.get('rig') or {}).get('bones') or []
+        roles_cab = list({b['id'] for b in bones if isinstance(b, dict) and b.get('role') == 'head'} | {'cabeza'})
+        publicar_mallas_cabeza_adn(e, rig, roles_cab)
         for id,obj in registrar_puntos(rig,e.get('points',[]),objects).items():objects[e['id']+'.'+id]=obj
         from perfiles_catalogo import aplicar_puntos
         aplicar_puntos(e,rig,objects)
