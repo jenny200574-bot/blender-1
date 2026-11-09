@@ -158,7 +158,9 @@ try:
         cons.append(contact)
     etapa(10,{'retarget':rt,'contacts':cons,'legacy_solver_preserved':bool(d.get('legacy'))})
     inicio(12)
-    # Validar el grafo completo antes de mutar nada. Entorno antes de luces.
+    # Recompilar presencia desde 01 en cada corrida: evita eventos hide_render obsoletos (p. ej. onset en t[1]).
+    from narrativa_estructurada import compilar_presencia
+    compilar_presencia(d)
     generated_events=[event for ob in objects.values() if not ob.get('motor_preserve_hidden') and ob.get('motor_events') for event in json.loads(ob['motor_events'])]
     all_events=d['environment']['events']+d.get('fx_events',[])+d['lighting']['events']+generated_events;conflicts=eventos.validar_eventos(all_events,dur)
     if conflicts:raise ValueError(str(conflicts))

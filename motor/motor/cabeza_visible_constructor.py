@@ -1,4 +1,8 @@
-"""Publicación de mallas de cabeza del ADN (no cápsulas legacy ocultas por constructor etapa 5/8)."""
+"""Publicación de mallas de cabeza del ADN (no cápsulas legacy ocultas por constructor etapa 5/8).
+
+Red de seguridad post-etapa 12: quitar fcurves hide_* solo en cabezas canónicas si eventos.aplicar
+dejó animación contradictoria. No sustituye narrativa_estructurada/eventos.aplicar (timing en t[0]).
+"""
 
 DATAPATHS_VISIBILIDAD = ('hide_render', 'hide_viewport')
 
