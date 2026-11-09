@@ -6,6 +6,17 @@
 - **Resultado:** pasan 1,2,3,10; bloqueadas 4–9,11,12.
 - **Aborto constructor:** `FaltaDatos` por `faltantes` — `ch-pintor-bce0` cabeza solo hueso (`valida_visual: false`). El `escena.blend` sí se guardó.
 
+## R3 — fcurves hide_render (demostrada)
+
+- **Etapa 12** `eventos.aplicar`: keyframes `hide_render` por cuadro (narrativa/entorno, a veces `recursive` en jerarquía del personaje).
+- **Publicar** pone la propiedad en false, pero `frame_set` de toma05 **reevalúa** fcurve → malla oculta → hueso.
+- **Corrección R3:** `quitar_fcurves_visibilidad_objeto` en cabezas canónicas ADN (solo etapa 11, una vez por pieza); `mallas()` usa `visible_get()` tras `frame_set`.
+
+## Tiempo etapa 11 (~190 → ~259 s)
+
+- Publicación duplicada etapa 5+11 eliminada (solo inicio etapa 11, con flag `motor_visibilidad_cabeza_fija`).
+- Resto: más tomas diagnosticadas / misma escena; comparar tras R3.
+
 ## R2 — causa cabeza pintor (demostrada)
 
 - **Etapa 5/8** (`constructor_final.py`): con `legacy`, **todas** las mallas hijas del rig quedan `hide_render=True` + `motor_preserve_hidden` (cápsulas `{id}_malla_*` del rig del núcleo).

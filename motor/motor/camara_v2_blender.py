@@ -71,7 +71,12 @@ def mallas(root):
         padre = getattr(o, 'parent', None)
         if padre == root and o.name not in ya:
             candidatos.append(o); ya.add(o.name)
-    return [x for x in candidatos if x.type == 'MESH' and not x.hide_render]
+    def _visible_render(o):
+        try:
+            return bool(o.visible_get())
+        except (AttributeError, RuntimeError):
+            return not o.hide_render
+    return [x for x in candidatos if x.type == 'MESH' and _visible_render(x)]
 ACT_MESH = {pid: mallas(o) for pid, o in ACT.items()}; ACT_SET = {m.name for ms in ACT_MESH.values() for m in ms}
 ENV = [o for o in sc.objects if o.type == 'MESH' and not o.hide_render and o.name not in ACT_SET]
 ADN_H = {x['id']: (x.get('spec') or {}).get('altura_m') for x in E.get('actors', [])}
@@ -861,10 +866,15 @@ for n, v in enumerate(VINETAS, 1):
         T['foco'] = S['foco']
     T['notas'] = [f"{c['comando']}: {c['detalle']}" for c in T['comandos'] if c.get('detalle')]
     T['sin_silencio'] = all(c['estado'] in ('ejecutado', 'falta_dato', 'no_programado', 'montaje', 'solo_revision', 'aviso') for c in T['comandos'])
-    if T.get('estado') != 'pasa' or (T.get('experimental_directa') or {}).get('conflicto_sb_probable'):
+    cabeza_invalida = isinstance(T.get('cabeza_medida'), dict) and not T.get('cabeza_medida', {}).get('valida_visual', True)
+    if T.get('estado') != 'pasa' or (T.get('experimental_directa') or {}).get('conflicto_sb_probable') or cabeza_invalida:
         cm = (T.get('experimental_directa') or {}).get('clasificacion_motivos') or clasificar_motivos_directa([(0, m, 0) for m in (T.get('motivos') or [])])
-        if T.get('motivos') or any(cm.values()):
-            T['informe_conflicto'] = informe_conflicto_toma(tid, S, T.get('motivos') or [], cm, SBV.get(v['vineta']))
+        motivos_inf = list(T.get('motivos') or [])
+        if cabeza_invalida and T.get('cabeza_medida', {}).get('mensaje'):
+            motivos_inf.append(T['cabeza_medida']['mensaje'])
+        faltas_toma = [x['mensaje'] for x in FALT if x.get('toma') == tid]
+        motivos_inf.extend(f for f in faltas_toma if f not in motivos_inf)
+        T['informe_conflicto'] = informe_conflicto_toma(tid, S, motivos_inf, cm, SBV.get(v['vineta']))
     tomas.append(T); trays.append((tray, S) if tray else None)
 # ---------------- hornear la trayectoria en el .blend (lo que se graba) ----------------
 PROG.marcar(forzar=True, fase='hornear', tomas=len(tomas))
