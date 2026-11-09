@@ -16,7 +16,13 @@ ENV_LIMITE = 'MOTOR_CAMARA_LIMITE_S'
 ENV_CANCELAR = 'MOTOR_CANCELAR_ARCHIVO'
 
 
-class CamaraInterrumpida(RuntimeError):
+class Interrupcion(BaseException):
+    """Corte pedido desde fuera (tope o cancelación). No hereda de Exception para que
+    ningún `except Exception` del motor lo convierta en un fallo de candidato y siga."""
+    codigo = 'INTERRUMPIDO'
+
+
+class CamaraInterrumpida(Interrupcion):
     def __init__(self, codigo, detalle):
         self.codigo = codigo
         self.detalle = detalle
