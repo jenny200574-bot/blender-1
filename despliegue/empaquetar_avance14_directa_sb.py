@@ -46,6 +46,7 @@ INCLUIR = [
     ('motor/pruebas/test_progreso_fisica.py', 'motor/pruebas/test_progreso_fisica.py'),
     ('motor/pruebas/test_continuidad_tomas.py', 'motor/pruebas/test_continuidad_tomas.py'),
     ('motor/pruebas/test_superficie_caminable.py', 'motor/pruebas/test_superficie_caminable.py'),
+    ('motor/pruebas/test_camara_despeje_render.py', 'motor/pruebas/test_camara_despeje_render.py'),
     ('motor/paquetes/guardianes_t316/entrada_escena.json', 'motor/paquetes/guardianes_t316/entrada_escena.json'),
     ('motor/pruebas/blender_camara', 'motor/pruebas/blender_camara'),
     ('motor/CONTRATO_ENTRADA.schema.json', 'motor/CONTRATO_ENTRADA.schema.json'),

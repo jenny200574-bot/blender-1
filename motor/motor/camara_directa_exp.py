@@ -31,6 +31,9 @@ def tapadores_escenario_desde_malos(malos, act_ids=(), act_mesh_names=()):
             nombre = m.group(1).strip()
             if nombre.startswith('escenario:'):
                 nombre = nombre.split('escenario:', 1)[1].strip()
+            low = nombre.lower()
+            if low.startswith('obj-') or low.startswith('ch-'):
+                continue
             if nombre and not es_entidad_historia(nombre, act_ids, act_mesh_names) and es_geometria_escenario_auto(nombre):
                 if any(x in msg for x in ('escenario', 'pegada', 'dentro de geometría')):
                     out.add(nombre)
@@ -64,7 +67,7 @@ def opcion_ricardo(clasificacion, motivos):
     """Pared invisible (BVH validación) u holgura de acercamiento; sin recalcular plan SB."""
     ops = []
     if clasificacion.get('holgura_escenario'):
-        ops.append({'accion': 'excluir_bvh_escenario', 'detalle': 'Despeje por toma: geometría escenario omitida solo en validación (sombras/reflejos en render intactos).', 'interruptor': 'camara_escenario_despeje_por_toma.off'})
+        ops.append({'accion': 'visible_camera_por_toma', 'detalle': 'visible_camera=False en rango de toma (CONSTANT); hide_render intacto; sombras/indirectos conservados.', 'interruptor': 'camara_escenario_despeje_por_toma.off'})
     if clasificacion.get('holgura_escenario') and any('dentro de geometría' in (m or '') or 'pegada' in (m or '') for m in (motivos or [])):
         ops.append({'accion': 'retroceso_holgura', 'detalle': 'Alejar cámara a lo largo del eje sin cambiar encuadre SB.', 'interruptor': 'camara_retroceso_holgura_directa.off'})
     if clasificacion.get('encuadre') or clasificacion.get('eje_180') or clasificacion.get('inclinacion_roll'):

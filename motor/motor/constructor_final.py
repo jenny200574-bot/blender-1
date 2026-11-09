@@ -191,7 +191,16 @@ try:
     inicio(13)
     # 13: medir de verdad todos los cuadros. Perfiles/tolerancias los da el paquete.
     state_review=eventos.verificar_estados(sc,d['environment'].get('expected_states',[]),fps);errors+=state_review['errors']
-    cr=camera_review_4g if camera_review_4g is not None else camara_final.revisar(sc,d['camera']['shots'],cams,fps,objects);errors+=cr['errors'];trace=[];prev={};length0={id:{b.name:b.length for b in r.data.bones} for id,r in rigs.items()};rules=d['rules'];max_len=0;max_contact=0;max_velocity=0;max_accel=0
+    cr=camera_review_4g if camera_review_4g is not None else camara_final.revisar(sc,d['camera']['shots'],cams,fps,objects);errors+=cr['errors']
+    if camera_review_4g and cr.get('full_command_report'):
+        from camara_despeje_render import revisar_despeje_etapa13
+        cam_json = Path(cr['full_command_report'])
+        if not cam_json.is_absolute():
+            cam_json = out / cam_json
+        if cam_json.is_file():
+            report_cam = leer(cam_json)
+            errors += revisar_despeje_etapa13(bpy, report_cam.get('tomas', []))
+    trace=[];prev={};length0={id:{b.name:b.length for b in r.data.bones} for id,r in rigs.items()};rules=d['rules'];max_len=0;max_contact=0;max_velocity=0;max_accel=0
     for f in range(1,n+1):
         sc.frame_set(f);bpy.context.view_layer.update();dg=bpy.context.evaluated_depsgraph_get();row={'frame':f,'entities':{}}
         for id,rig in rigs.items():

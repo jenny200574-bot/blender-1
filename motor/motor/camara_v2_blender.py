@@ -21,6 +21,7 @@ from eje_objetos import par_eje
 from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual, malla_es_cabeza
 import buscador_posicion_camara as BUS
 from camara_directa_exp import tapadores_escenario_desde_malos, clasificar_motivos_directa, retroceder_tray_holgura, informe_conflicto_toma
+from camara_despeje_render import FUENTES_VISIBLE_CAMERA, aplicar_visible_camera_toma, filtrar_objetos_despeje
 import hashlib
 from array import array
 from progreso_camara import Progreso
@@ -102,6 +103,8 @@ def _huella_visibilidad_escena(frame):
         if o.type != 'MESH': continue
         vis = not o.hide_render
         try: vis = vis and bool(o.visible_get())
+        except (AttributeError, RuntimeError): pass
+        try: vis = vis and bool(getattr(o, 'visible_camera', True))
         except (AttributeError, RuntimeError): pass
         tr = tuple(round(float(x), 3) for x in o.matrix_world.translation)
         h.update(o.name.encode('utf-8')); h.update(b'\x01' if vis else b'\x00'); h.update(repr(tr).encode('utf-8'))
@@ -185,16 +188,28 @@ def _llave_entorno(f, excl):
             if o.name not in excl: h.update(o.name.encode('utf-8') + b'\0'); h.update(FIRMAS[f][o.name])
         LLAVES[k] = h.digest()
     return LLAVES[k]
-def _env_objs(excl):
+def _env_objs(excl, dg=None):
     excl = excl or frozenset()
-    return [o for o in ENV if o.name not in excl]
+    salida = []
+    for o in ENV:
+        if o.name in excl:
+            continue
+        if dg is not None:
+            try:
+                ev = o.evaluated_get(dg)
+                if not bool(getattr(ev, 'visible_camera', True)):
+                    continue
+            except (AttributeError, RuntimeError):
+                pass
+        salida.append(o)
+    return salida
 def _bvh_escena_estatica(f, excl, dg):
     global _BVH_ESCENA_EST
     excl = excl or frozenset()
     if not ENV_ESTATICO or any(o.name in excl for o in ENV_ESTATICO): return None
     if _BVH_ESCENA_EST[0] is not None and _BVH_ESCENA_EST[1] == f and _BVH_ESCENA_EST[2] == excl:
         return _BVH_ESCENA_EST[0]
-    estaticos = [o for o in ENV_ESTATICO if o.name not in excl]
+    estaticos = [o for o in _env_objs(excl, dg) if o in ENV_ESTATICO]
     if not estaticos: return None
     _BVH_ESCENA_EST[0] = bvh(estaticos, dg); _BVH_ESCENA_EST[1] = f; _BVH_ESCENA_EST[2] = excl
     return _BVH_ESCENA_EST[0]
@@ -210,15 +225,15 @@ def env_bvh(f, excl=frozenset()):
         while len(ENVC) > 4:
             _k = next(iter(ENVC)); CAM_MEM.evictar_entrada_bvh(ENVC, _k, _BVH_ESCENA_EST)
         sc.frame_set(f); dg = bpy.context.evaluated_depsgraph_get()
-        din = [o for o in ENV_DINAMICO if o.name not in (excl or frozenset())]
-        if not din:
+        dyn = [o for o in _env_objs(excl, dg) if o in ENV_DINAMICO]
+        if not dyn:
             est = _bvh_escena_estatica(f, excl, dg)
             if est is not None:
                 ENVC[k] = est
             else:
-                ENVC[k] = bvh(_env_objs(excl), dg)
+                ENVC[k] = bvh(_env_objs(excl, dg), dg)
         else:
-            ENVC[k] = bvh(_env_objs(excl), dg)
+            ENVC[k] = bvh(_env_objs(excl, dg), dg)
     return ENVC[k]
 def mallas_de(i):
     o = bpy.data.objects.get(i) if i and i not in ACT else None
@@ -382,12 +397,26 @@ def _tras_validacion_directa(tray, spec, f0, f1, libres_e, libres_i, mal):
     if mal and SW.get('despeje_escenario'):
         excl = tapadores_escenario_desde_malos(mal, tuple(ACT.keys()), tuple(ACT_SET))
         if excl:
-            spec = dict(spec, excluir_env=excl)
-            mal2 = validar(tray, spec, f0, f1, libres_e, libres_i)
-            meta['despeje_escenario'] = {'objetos_excluidos_bvh': sorted(excl), 'nota': 'Solo exclusión en BVH de validación; personajes y hide_render globales no cambian.'}
-            if len(mal2) < len(mal):
-                mal = mal2
-            else:
+            try:
+                permitidos = filtrar_objetos_despeje(excl, tuple(ACT.keys()), tuple(ACT_SET))
+            except ValueError as exc:
+                meta['despeje_escenario'] = {'error': str(exc), 'objetos_rechazados': sorted(excl)}
+                permitidos = []
+            if permitidos:
+                aplicar_visible_camera_toma(bpy, permitidos, f0, f1, TOMA_ACTUAL)
+                global FIRMAS, LLAVES, ENVC, _HUELLA_ENV, _BVH_ESCENA_EST
+                FIRMAS.clear(); LLAVES.clear(); ENVC.clear(); _HUELLA_ENV[0] = None
+                _BVH_ESCENA_EST[0], _BVH_ESCENA_EST[1], _BVH_ESCENA_EST[2] = None, None, None
+                spec = dict(spec, excluir_env=frozenset())
+                mal2 = validar(tray, spec, f0, f1, libres_e, libres_i)
+                meta['despeje_escenario'] = {
+                    'propiedad': 'visible_camera',
+                    'objetos': sorted(permitidos),
+                    'frame_ini': int(f0),
+                    'frame_fin': int(f1),
+                    'fuentes': list(FUENTES_VISIBLE_CAMERA),
+                    'nota': 'Validación y render usan visible_camera en la escena; sin hide_render.',
+                }
                 mal = mal2
     if mal and SW.get('retroceso_holgura_directa'):
         motivos = {x[1] for x in mal}
@@ -439,8 +468,8 @@ def _validar_cuadro(x, spec, f, libres_encuadre, libres_inclin, malos):
     loc = x['loc']; R = x['quat'].to_matrix(); lens = x['lente']; m = spec['medir'](f)
     if m is None: malos.append((f, 'objetivo ausente en este cuadro', 0)); return
     excl_env = spec.get('excluir_env') or frozenset()
-    env = env_bvh(f, excl_env) if (SW.get('despeje_escenario') and excl_env) else env_bvh(f)
-    env_oc = env_bvh(f, excl_env) if excl_env else env
+    env = env_bvh(f, excl_env)
+    env_oc = env_bvh(f, excl_env)
     oth = otros_bvh(f, spec['excluir_oclusion'])
     D = (m['centro'] - loc).length
     hol = min(CFG['holgura_max_m'], CFG['holgura_frac_distancia'] * D, CFG['holgura_frac_altura'] * m['H'])
@@ -885,8 +914,8 @@ for n, v in enumerate(VINETAS, 1):
                     exp_meta['conflicto_sb_probable'] = bool(cm.get('eje_180') or cm.get('inclinacion_roll'))
                 if exp_meta:
                     T['experimental_directa'] = exp_meta
-                    if exp_meta.get('despeje_escenario'):
-                        T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['despeje_bvh_escenario']
+                    if exp_meta.get('despeje_escenario') and exp_meta['despeje_escenario'].get('objetos'):
+                        T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['despeje_visible_camera']
                     if exp_meta.get('retroceso_holgura', {}).get('fraccion_distancia'):
                         T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['retroceso_holgura']
                 intentos.append({'az_extra': daz, 'fd': fd, 'fallos': len(mal), 'motivos': sorted({x[1] for x in mal}), 'muestras_malas': mal[:6]})

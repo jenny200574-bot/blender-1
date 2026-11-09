@@ -50,7 +50,7 @@ def test_opcion_ricardo_holgura():
 
     ops = opcion_ricardo({'holgura_escenario': 1}, ['cámara pegada a geometría del escenario (muro_frente_2)'])
     acciones = {o['accion'] for o in ops}
-    assert 'excluir_bvh_escenario' in acciones
+    assert 'visible_camera_por_toma' in acciones
     assert 'retroceso_holgura' in acciones
 
 
