@@ -6,7 +6,14 @@ from pathlib import Path
 
 R = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(R / 'motor'))
-from fisica_final import clasificar_collider, extents_vertices, punto_dentro_collider, ray_parity_interiores
+from fisica_final import (
+    clasificar_collider,
+    cuadros_muestra_penetracion,
+    extents_vertices,
+    punto_dentro_collider,
+    ray_parity_interiores,
+    _muestra_vertices,
+)
 
 
 class _Vec:
@@ -89,6 +96,13 @@ class Tests(unittest.TestCase):
     def test_punto_dentro_respeta_metodo(self):
         meta = {'metodo': 'distancia_overlap'}
         self.assertFalse(punto_dentro_collider(_TreeCaja(), _Vec(0.5, 0.5, 0.5), meta))
+
+    def test_muestreo_cuadros_y_vertices(self):
+        c200 = cuadros_muestra_penetracion(200, max_muestras=48)
+        self.assertLessEqual(len(c200), 50)
+        self.assertEqual(c200[-1], 200)
+        vs = list(range(500))
+        self.assertLessEqual(len(_muestra_vertices(vs)), 32)
 
 
 if __name__ == '__main__':

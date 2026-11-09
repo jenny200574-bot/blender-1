@@ -94,6 +94,20 @@ def _refrescar_escena_en_cuadro(frame):
     ENV_DINAMICO = [o for o in ENV if CAM_MEM.objeto_animado(o)]
 _refrescar_escena_en_cuadro(1)
 _BVH_ESCENA_EST = [None, None, None]  # [_BV, cuadro, frozenset(excl)]
+_HUELLA_ENV = [None]
+def _huella_visibilidad_escena(frame):
+    sc.frame_set(frame); bpy.context.view_layer.update()
+    h = hashlib.blake2b(digest_size=16)
+    for o in sorted(sc.objects, key=lambda x: x.name):
+        if o.type != 'MESH': continue
+        vis = not o.hide_render
+        try: vis = vis and bool(o.visible_get())
+        except (AttributeError, RuntimeError): pass
+        tr = tuple(round(float(x), 3) for x in o.matrix_world.translation)
+        h.update(o.name.encode('utf-8')); h.update(b'\x01' if vis else b'\x00'); h.update(repr(tr).encode('utf-8'))
+    for pid in sorted(ACT.keys()):
+        ro = ACT[pid]; h.update(pid.encode('utf-8')); h.update(repr(tuple(round(float(x), 3) for x in ro.matrix_world.translation)).encode('utf-8'))
+    return h.digest()
 _MAX_PUNTOS_CACHE = int(CFG.get('puntos_region', 48)) * 12
 ADN_H = {x['id']: (x.get('spec') or {}).get('altura_m') for x in E.get('actors', [])}
 class _BV:
@@ -185,7 +199,12 @@ def _bvh_escena_estatica(f, excl, dg):
     _BVH_ESCENA_EST[0] = bvh(estaticos, dg); _BVH_ESCENA_EST[1] = f; _BVH_ESCENA_EST[2] = excl
     return _BVH_ESCENA_EST[0]
 def env_bvh(f, excl=frozenset()):
-    _refrescar_escena_en_cuadro(f)
+    global _HUELLA_ENV
+    huella = _huella_visibilidad_escena(f)
+    if _HUELLA_ENV[0] != huella:
+        _refrescar_escena_en_cuadro(f)
+        FIRMAS.clear(); LLAVES.clear()
+        _HUELLA_ENV[0] = huella
     k = _llave_entorno(f, excl) if LOTES else (f, frozenset(excl))
     if k not in ENVC:
         while len(ENVC) > 4:
@@ -431,8 +450,10 @@ def _validar_cuadro(x, spec, f, libres_encuadre, libres_inclin, malos):
         if fr_in < req:
             origen = (m.get('cabeza') or {}).get('origen') if m.get('cabeza') else None
             vvis = (m.get('cabeza') or {}).get('valida_visual', m.get('cabeza') and m['cabeza'].get('malla_visible'))
+            region = 'cabeza_cara' if (rg and not rg['cuerpo_entero'] and m['cabeza']) else 'cuerpo'
+            fuera = [q for q in pr if not (q and 0 <= q[0] <= 1 and 0 <= q[1] <= 1)]
             malos.append((f, 'sujeto fuera de cuadro (' + ('cabeza' if rg and not rg['cuerpo_entero'] else 'pies/cabeza') + ')', round(fr_in, 2)))
-            spec.setdefault('_diag_encuadre', []).append({'frame': f, 'fraccion_en_cuadro': round(fr_in, 3), 'minimo': req, 'origen_cabeza': origen, 'cabeza_valida_visual': vvis, 'plano': spec.get('plano_de')(f) if spec.get('plano_de') else None})
+            spec.setdefault('_diag_encuadre', []).append({'frame': f, 'fraccion_en_cuadro': round(fr_in, 3), 'minimo': req, 'origen_cabeza': origen, 'cabeza_valida_visual': vvis, 'plano': spec.get('plano_de')(f) if spec.get('plano_de') else None, 'region_revision': region, 'puntos_muestra': len(pr), 'puntos_en_cuadro': len(pr) - len(fuera), 'muestra_ndc_fuera': [[round(q[0], 3), round(q[1], 3)] for q in fuera[:8]]})
         tap = {}
         for p in pts:
             for bv, et in ((env_oc, 'escenario'), (oth, 'otro personaje')):
@@ -837,6 +858,10 @@ for n, v in enumerate(VINETAS, 1):
                     tray, mal, exp_meta = _tras_validacion_directa(tray, spec, f0, f1, ex['libres_e'], ex['libres_i'], mal)
                 if spec.get('_diag_encuadre'):
                     exp_meta['diagnostico_encuadre'] = spec['_diag_encuadre'][:12]
+                    peor = min(spec['_diag_encuadre'], key=lambda x: x['fraccion_en_cuadro'])
+                    T['encuadre_peor'] = peor
+                    T['encuadre_nota'] = ('Medición en malla evaluada (%s): %.0f%% en cuadro vs mínimo %.0f%% (pose directa SB).'
+                                         % (peor.get('region_revision', '?'), 100 * peor['fraccion_en_cuadro'], 100 * peor['minimo']))
                 if mal:
                     exp_meta['clasificacion_motivos'] = clasificar_motivos_directa(mal)
                     cm = exp_meta['clasificacion_motivos']

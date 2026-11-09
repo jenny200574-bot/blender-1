@@ -93,13 +93,36 @@ def clasificar_collider(nombre, verts, tree, face_count=None):
   return {**base, 'motivo': f'{nombre}: {motivo or "malla no apta para prueba de interior cerrado"}'}
 
 
-def punto_dentro_collider(tree, p, meta):
+def punto_dentro_collider(tree, p, meta, max_rebotes=256):
   if meta.get('metodo') != 'interior_cerrado':
     return False
-  viable, dentro, _ = ray_parity_interiores(tree, p)
+  viable, dentro, _ = ray_parity_interiores(tree, p, max_rebotes=max_rebotes)
   if viable:
     return bool(dentro)
   return interior_multiray(tree, p)
+
+
+def cuadros_muestra_penetracion(n, max_muestras=48):
+  """Cuadros donde se revisan colliders (COM y contactos siguen en todos los cuadros)."""
+  if n <= max_muestras:
+    return list(range(1, n + 1))
+  paso = max(1, (n + max_muestras - 1) // max_muestras)
+  xs = list(range(1, n + 1, paso))
+  if xs[-1] != n:
+    xs.append(n)
+  return xs
+
+
+def _muestra_vertices(vs, nmax=32):
+  if not vs or len(vs) <= nmax:
+    return vs or []
+  paso = max(1, len(vs) // nmax)
+  return vs[::paso][:nmax]
+
+
+def _firma_collider_mundo(obj):
+  t = obj.matrix_world.translation
+  return (round(float(t.x), 5), round(float(t.y), 5), round(float(t.z), 5))
 
 def aabb_separados(a,b):
     return any(max(v[j] for v in a)<min(v[j] for v in b) or max(v[j] for v in b)<min(v[j] for v in a) for j in range(3))
@@ -129,14 +152,48 @@ def outside_distance(point,polygon):
         d=min(d,math.dist(point,(a[0]+u*dx,a[1]+u*dy)))
     return 0 if inside and len(h)>2 else d
 
-def revisar(scene,d,rigs,objects):
+def revisar(scene,d,rigs,objects,salida=None):
     from seguridad import exigir
     exigir("revisor")
     import bpy
+    import os
     from mathutils import Vector
     from mathutils.bvhtree import BVHTree
     from seguridad import cuadro
+    try:
+        from camara_memoria import objeto_animado
+    except ImportError:
+        objeto_animado = lambda _o: False
+    try:
+        from progreso_fisica import Progreso
+        prog = Progreso(salida) if salida is not None else None
+    except ImportError:
+        prog = None
     fps=d['clock']['fps'];n=cuadro(d['clock']['duration_s'],fps);errors=[];mesh_review=[];revisados_malla=set();prev={};prev_contact={};max_out=0;max_com_accel=0;max_slip=0;max_ang=0;max_pen=0;rules=d['rules'];centres=[];naturalness={e['id']:[] for e in d['entities'] if e['type']=='CHARACTER'};last_root_z={}
+    names=list(rules.get('colliders') or [])
+    try:
+        max_pen_f = int(os.environ.get('MOTOR_FISICA_MAX_CUADROS_PEN', '48'))
+    except ValueError:
+        max_pen_f = 48
+    cuadros_pen=set(cuadros_muestra_penetracion(n, max_muestras=max(8, max_pen_f)))
+    collider_estatico={nm: not objeto_animado(objects[nm]) for nm in names if nm in objects}
+    cache_collider={}
+    allow={frozenset(x) for x in rules['allowed_collision_pairs']};touch={frozenset(x) for x in rules.get('contact_pairs',[])}
+    pares=[(a,b) for i,a in enumerate(names) for b in names[i+1:] if frozenset((a,b)) not in allow]
+    if prog: prog.marcar(forzar=True, fase='inicio', cuadros_totales=n, cuadros_penetracion=len(cuadros_pen), colliders=len(names), pares=len(pares))
+    def _collider(nm, f, dg):
+        obj=objects[nm].evaluated_get(dg);clave=(nm, f) if collider_estatico.get(nm) is False else (nm, _firma_collider_mundo(obj))
+        if clave in cache_collider: return cache_collider[clave]
+        mesh=obj.to_mesh()
+        try:
+            vs=[obj.matrix_world@v.co for v in mesh.vertices];fs=[list(p.vertices) for p in mesh.polygons];nf=len(mesh.polygons)
+        finally: obj.to_mesh_clear()
+        tree=BVHTree.FromPolygons(vs, fs) if fs else None
+        meta=clasificar_collider(nm, vs, tree, nf) if tree else {'object': nm, 'metodo': 'distancia_overlap', 'motivo': f'{nm}: sin geometría de polígonos'}
+        if nm not in revisados_malla and meta['metodo']!='interior_cerrado':
+            revisados_malla.add(nm);mesh_review.append(meta)
+        cache_collider[clave]=(tree, vs, meta)
+        return cache_collider[clave]
     for f in range(1,n+1):
         scene.frame_set(f);bpy.context.view_layer.update();dg=bpy.context.evaluated_depsgraph_get();row={'frame':f,'com':{}}
         for e in d['entities']:
@@ -188,33 +245,38 @@ def revisar(scene,d,rigs,objects):
                     if slip>rules['slip_max_m_per_frame']:errors.append({'type':'RESBALE','frame':f,'contact':i,'value_m':slip})
                 prev_contact[i]=rel.copy()
             else:prev_contact.pop(i,None)
-        # Todos los colliders suministrados son tratados por pares; los permitidos son explícitos.
-        names=rules['colliders'];trees={};verts={};meta_coll={};caras={}
-        for name in names:
-            obj=objects[name].evaluated_get(dg);mesh=obj.to_mesh();vs=[obj.matrix_world@v.co for v in mesh.vertices];fs=[list(p.vertices) for p in mesh.polygons];caras[name]=len(mesh.polygons);trees[name]=BVHTree.FromPolygons(vs,fs);verts[name]=vs;obj.to_mesh_clear()
-            meta=clasificar_collider(name,vs,trees[name],caras[name]);meta_coll[name]=meta
-            if name not in revisados_malla and meta['metodo']!='interior_cerrado':
-                revisados_malla.add(name);mesh_review.append(meta)
-        allow={frozenset(x) for x in rules['allowed_collision_pairs']};touch={frozenset(x) for x in rules.get('contact_pairs',[])}
-        for i,a in enumerate(names):
-            for b in names[i+1:]:
-                if frozenset((a,b)) in allow:continue
-                # Un rayo de un punto exterior no puede convertir AABB disjuntos en penetración.
-                if aabb_separados(verts[a],verts[b]):continue
-                overlapping=trees[a].overlap(trees[b]);depth=0
-                for source,target in ((a,b),(b,a)):
-                    mt=meta_coll[target]
-                    for v in verts[source]:
-                        nearest=trees[target].find_nearest(v)
-                        if nearest[0] is None or nearest[3]<=rules['penetration_tolerance_m']:continue
-                        if punto_dentro_collider(trees[target],v,mt):
-                            depth=max(depth,nearest[3])
-                        elif mt['metodo']=='distancia_overlap' and overlapping:
-                            depth=max(depth,nearest[3])
-                max_pen=max(max_pen,depth)
-                if depth>rules['penetration_tolerance_m'] or overlapping and rules['reject_surface_intersections'] and frozenset((a,b)) not in touch:errors.append({'type':'PENETRACION','frame':f,'objects':[a,b],'depth_m':depth,'intersections':len(overlapping)})
+        if f in cuadros_pen and names:
+            if prog: prog.marcar(fase='penetracion', cuadro=f, rss_mb=None)
+            trees={};verts={};meta_coll={}
+            for name in names:
+                ta, va, ma=_collider(name, f, dg);trees[name]=ta;verts[name]=va;meta_coll[name]=ma
+            tol=rules['penetration_tolerance_m']
+            for pi, (a, b) in enumerate(pares):
+                if prog and pi % 4 == 0: prog.marcar(fase='penetracion_par', cuadro=f, par='%s/%s' % (a, b), par_i=pi, pares=len(pares))
+                va, vb=verts.get(a) or [], verts.get(b) or []
+                if aabb_separados(va, vb): continue
+                ta, tb=trees.get(a), trees.get(b)
+                if ta is None or tb is None: continue
+                overlapping=ta.overlap(tb);depth=0.0
+                for source, target in ((a, b), (b, a)):
+                    vs=_muestra_vertices(verts.get(source)); tree_t=trees.get(target); mt=meta_coll.get(target)
+                    if tree_t is None or not vs: continue
+                    for v in vs:
+                        nearest=tree_t.find_nearest(v)
+                        if nearest[0] is None or nearest[3] <= tol: continue
+                        if mt.get('metodo') == 'interior_cerrado':
+                            if punto_dentro_collider(tree_t, v, mt):
+                                depth=max(depth, nearest[3])
+                        elif overlapping:
+                            depth=max(depth, nearest[3])
+                        if depth > tol * 8: break
+                max_pen=max(max_pen, depth)
+                if depth>tol or overlapping and rules['reject_surface_intersections'] and frozenset((a,b)) not in touch:
+                    errors.append({'type':'PENETRACION','frame':f,'objects':[a,b],'depth_m':depth,'intersections':len(overlapping)})
         centres.append(row)
     if rules.get('locked_naturalness'):
         from reglas_binding import revisar_limites
         errors+=revisar_limites(naturalness,rules['locked_naturalness'])
-    return {'locked_naturalness_trace':naturalness,'frames':n,'max_outside_support_m':max_out,'max_com_accel_m_s2':max_com_accel,'max_relative_slip_m_frame':max_slip,'max_joint_speed_deg_s':max_ang,'max_penetration_m':max_pen,'mesh_review':mesh_review,'all_passed':not errors,'errors':errors,'com_trace':centres}
+    out={'locked_naturalness_trace':naturalness,'frames':n,'max_outside_support_m':max_out,'max_com_accel_m_s2':max_com_accel,'max_relative_slip_m_frame':max_slip,'max_joint_speed_deg_s':max_ang,'max_penetration_m':max_pen,'mesh_review':mesh_review,'cuadros_penetracion':sorted(cuadros_pen),'all_passed':not errors,'errors':errors,'com_trace':centres}
+    if prog: prog.cerrar('TERMINADO', errores=len(errors), max_penetracion_m=max_pen)
+    return out

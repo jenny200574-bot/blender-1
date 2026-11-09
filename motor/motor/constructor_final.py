@@ -211,7 +211,7 @@ try:
                 if err>c['tolerance_m']:errors.append({'type':'CONTACTO','frame':f,'entity':c['entity'],'error_m':err})
         trace.append(row)
     import fisica_final
-    physical=fisica_final.revisar(sc,d,rigs,objects);errors+=physical['errors']
+    physical=fisica_final.revisar(sc,d,rigs,objects,salida=out);errors+=physical['errors']
     report={'frames':n,'entities':list(rigs),'camera':cr,'environment_states':state_review,'physics':physical,'max_bone_length_error_m':max_len,'max_contact_error_m':max_contact,'root_speed_max_m_s':max_velocity,'root_accel_max_m_s2':max_accel,'errors':errors,'all_passed':not errors};guardar(out/'revision_final.json',report);guardar(out/'trazas_finales.json',trace);etapa(13,report)
     if errors:raise ValueError('La compuerta física/cámara rechazó la escena; no se genera video')
     from catalogos_crecimiento import registrar as registrar_movimiento
