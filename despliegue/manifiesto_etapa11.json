@@ -1,0 +1,124 @@
+{
+  "esquema": "parche_etapa11/1",
+  "sobre": "avance13/14 con buscador cec7cbe3 y cámara a3962fd2 (3d1653a). No toca test_buscador_posicion_camara.py instalado.",
+  "fisica_preservada": {
+    "ruta": "motor/fisica_final.py",
+    "sha256": "3423c9a777eb0157d49eb90869f39227fb7cf834322e2705a605a37a66d418d2"
+  },
+  "protegidos": [
+    "motor/heredado/",
+    "motor/compatibilidad_artefacto.py",
+    "motor/malla_cabeza.py",
+    "motor/nucleo_bueno_cpu.py",
+    "motor/apariencia_base_cpu.py",
+    "motor/eje_objetos.py",
+    "motor/objetos_adn.py",
+    "motor/superficies_adn.py",
+    "motor/traductor_adn.py",
+    "motor/fisica_final.py"
+  ],
+  "archivos": [
+    {
+      "ruta": "motor/camara_v2_blender.py",
+      "antes": "a3962fd2ba540cf5e3521ee346de5a6055ac6ed5812ef4b78d9e2091929fd320",
+      "despues": "9f9cee8f506e234b5ab5df68023a79645594dc4105d70316979e193525c8f7c1",
+      "bytes": 68577
+    },
+    {
+      "ruta": "motor/buscador_posicion_camara.py",
+      "antes": "cec7cbe39e441a18791ffddf2957ec8ad63378b148a2aec4f0212aadb99c8e7e",
+      "despues": "0d356498c870e687e99e29d4142e9d0ba6ca35fb23f9c13ba874fd2df7c36548",
+      "bytes": 26726
+    },
+    {
+      "ruta": "motor/constructor_final.py",
+      "antes": "8eca43c3e4d375e96b7d9082842475df65d341968c0d9f655bdd20e906f54ef2",
+      "despues": "5da67d06a6b134a0b28ab4b0eec59749b70a7c3035c3c03004a583a11e0447aa",
+      "bytes": 19926
+    },
+    {
+      "ruta": "motor/progreso_camara.py",
+      "antes": null,
+      "despues": "b53da3a46e299146f5b94169ffd9e56c6ecd1ad2e9e205bad39842f63274260c",
+      "bytes": 4699
+    },
+    {
+      "ruta": "motor/camara_lotes_por_cuadro.off",
+      "antes": null,
+      "despues": "7f0d4334aa8e614d62f96167add4f5a5fd7b4bc0abbe4a125ef0aee9ff75b58d",
+      "bytes": 288
+    },
+    {
+      "ruta": "motor/preflight_constructor.py",
+      "antes": null,
+      "despues": "82ffc970ba125f9dd96ba3dbcbc70a71ee2bcb4b1fcf2b541ae5d874c6444826",
+      "bytes": 21276
+    },
+    {
+      "ruta": "motor/preflight_blend.py",
+      "antes": null,
+      "despues": "e6223d274750e3c5cc60d712a5acbe40788bd028d750a698ab5dd6d71b6ea480",
+      "bytes": 7758
+    },
+    {
+      "ruta": "motor/validar_salida_constructor.py",
+      "antes": null,
+      "despues": "623df4bd6aa72999d7203c359a25e767158af0d399919b44aa60c495f69c59f9",
+      "bytes": 4421
+    },
+    {
+      "ruta": "pruebas/test_buscador_por_cuadro.py",
+      "antes": null,
+      "despues": "d7fe488b0ee013e05c07f996a63668e4acd3c1ba2e9578efc0ac3d3406a8643a",
+      "bytes": 5813
+    },
+    {
+      "ruta": "pruebas/test_preflight_constructor.py",
+      "antes": null,
+      "despues": "2a0df9fab1eea77feee2f9b5857604b6baac2250a59d421e789b16169f084eed",
+      "bytes": 7219
+    },
+    {
+      "ruta": "pruebas/test_progreso_y_salida_constructor.py",
+      "antes": null,
+      "despues": "1c32fb7b7e1366a563df0d6009a2e87ae92ea33cb08b8bb6eaba9d8d272a5289",
+      "bytes": 5020
+    },
+    {
+      "ruta": "pruebas/blender_camara/escena_sintetica.py",
+      "antes": null,
+      "despues": "48cc7534f0154d32088dfa62930208859a4d1374436f8e1f9ddd8a08ad0fbf55",
+      "bytes": 7353
+    },
+    {
+      "ruta": "pruebas/blender_camara/correr_etapa11_sintetica.py",
+      "antes": null,
+      "despues": "964e00a87adab5776636e1d25986e6db50761dc72c4ee49b1e3d00ae24cbe5d9",
+      "bytes": 4614
+    },
+    {
+      "ruta": "pruebas/blender_camara/medir.py",
+      "antes": null,
+      "despues": "39e6ea2a0bd58e381e785fcb4393444d3986350b9d4bc78c9c5a81671a3f23f0",
+      "bytes": 2625
+    },
+    {
+      "ruta": "pruebas/blender_camara/comparar_salidas.py",
+      "antes": null,
+      "despues": "12108d6abf10ee77b0f7505dcd546aa1347ffa08fbbbeb68a35a9cc6a5f3b957",
+      "bytes": 1851
+    },
+    {
+      "ruta": "pruebas/blender_camara/probar_preflight_blend.py",
+      "antes": null,
+      "despues": "ec7f9897b4b34aed8ef592868d83e5b1ebf6167d902c3f6c8ec0f2ff98afd18f",
+      "bytes": 2946
+    },
+    {
+      "ruta": "pruebas/blender_camara/probar_constructor_sintetico.py",
+      "antes": null,
+      "despues": "44c614ae4ea397a9c663ed5a2aa24b00426e8edfe9a240eb3831d114e1b33da4",
+      "bytes": 5709
+    }
+  ]
+}

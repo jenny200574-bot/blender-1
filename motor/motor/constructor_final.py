@@ -1,8 +1,9 @@
 """Worker del mismo contrato, CPU; construcción, contactos, cámara, revisión y render.
 No redes, pagos ni GPU. Se lanza sólo después de la compuerta de datos.
 """
-import sys,json,math,subprocess
+import sys,json,math,subprocess,os,signal,time,traceback
 from pathlib import Path
+sys.stdout.reconfigure(line_buffering=True);sys.stderr.reconfigure(line_buffering=True) # Blender ignora PYTHONUNBUFFERED: sin esto un SIGKILL deja el log en 0 bytes.
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'motor'))
 from seguridad import *
 import bpy
@@ -14,7 +15,17 @@ from movimientos import seleccionar
 from retarget import transferir
 from montaje_cpu import planificar
 args=sys.argv[sys.argv.index('--')+1:];pk=Path(args[0]);out=Path(args[1]);d=leer(pk/'entrada_escena.json');fps=d['clock']['fps'];dur=d['clock']['duration_s'];n=cuadro(dur,fps);sc=bpy.context.scene;objects={};rigs={};receipts={};errors=[]
-def etapa(n,data):receipts[str(n)]=data;guardar(out/'etapas_worker.json',receipts)
+from progreso_camara import Interrupcion
+class Interrumpido(Interrupcion):
+    codigo='CANCELADO'
+def _senal(num,_frame):raise Interrumpido('señal '+signal.Signals(num).name+' durante la etapa '+str(EN_CURSO.get('etapa')))
+for _s in (signal.SIGTERM,signal.SIGINT):signal.signal(_s,_senal)
+EN_CURSO={'etapa':None,'pid':os.getpid(),'inicio_unix':time.time()}
+def _progreso(**k):
+    EN_CURSO.update(k,actualizado_unix=time.time());out.mkdir(parents=True,exist_ok=True);parcial=out/'progreso_worker.json.parcial'
+    parcial.write_text(json.dumps(EN_CURSO,ensure_ascii=False,default=str),encoding='utf-8');os.replace(parcial,out/'progreso_worker.json')
+def inicio(n):_progreso(etapa=str(n),estado='EN_CURSO',etapa_desde_unix=time.time());print('ETAPA_INICIO '+str(n),flush=True)
+def etapa(n,data):receipts[str(n)]=data;guardar(out/'etapas_worker.json',receipts);_progreso(ultima_terminada=str(n),estado='ENTRE_ETAPAS');print('ETAPA_FIN '+str(n),flush=True)
 try:
     import apariencia_3d
     from recetas_proveedor import contexto as contexto_recetas
@@ -31,6 +42,7 @@ try:
         # Preservar objetos de inicio ocultos, nunca guardarlos como una escena fuente.
         for ob in sc.objects:ob.hide_render=True;ob.hide_viewport=True
     sc.render.fps=fps;sc.frame_start=1;sc.frame_end=n
+    inicio(6)
     # 6: MISMO escenario base, sin sustituirlo por un fondo ni apagar luces fuente.
     if d['environment']['mode']=='blend' and len(args)>2:
         # El núcleo importa objetos; recuperar el World exacto de la misma fuente.
@@ -51,6 +63,7 @@ try:
     detalle_recibo=detallar_entorno(d['environment'].get('catalog_jobs',[]),objects)
     guardar(out/'detalle_entorno.json',detalle_recibo)
     etapa(6,{'objects':len(sc.objects),'preserves_source_lights':True})
+    inicio('5/8')
     # 8/5: conservar el solver bueno de humanos; otro backend por anatomía, NO por canal.
     for e in d['entities']:
         if e['type']!='CHARACTER':continue
@@ -69,6 +82,7 @@ try:
         from perfiles_catalogo import aplicar_puntos
         aplicar_puntos(e,rig,objects)
     etapa(5,{'entities_with_dna_geometry':len(rigs),'part_count':sum(len(e.get('appearance',{}).get('geometry',{}).get('parts',[])) for e in d['entities'])});etapa(8,{'rigs':{k:len(v.pose.bones) for k,v in rigs.items()}})
+    inicio(7)
     # 7: objetos existentes enlazados; bisagras locales y puntos sobre mallas reales.
     for p in d.get('props',[]):
         from objetos_finales import obtener_raiz
@@ -92,8 +106,9 @@ try:
             for f in range(n+1):
                 angle=h['min_deg']+(h['max_deg']-h['min_deg'])*eventos.valor(controls,f/fps);pivot.rotation_axis_angle=(math.radians(angle),*axis);pivot.keyframe_insert('rotation_axis_angle',frame=f+1)
     from anatomia_perfiles import aplicar_anclas
-    etapa('anclas',aplicar_anclas(d['entities'],rigs,objects))
+    inicio('anclas');etapa('anclas',aplicar_anclas(d['entities'],rigs,objects))
     etapa(7,{'props':len(d.get('props',[])),'named_points':sum(len(e.get('points',[])) for e in d['entities'])+sum(len(p.get('points',[])) for p in d.get('props',[]))})
+    inicio(9)
     # 9: escalera semántica, sin candidatos incompatibles ni selección por nombre de persona.
     selections=[]
     for req in d['motion'].get('requests',[]):
@@ -130,6 +145,7 @@ try:
                 bone.rotation_euler=[math.radians(x) for x in eventos.valor(t['keys'],f/fps)];bone.keyframe_insert('rotation_euler',frame=f+1)
         selections.append({'request':req,'candidate':c['id'],'log':log})
     etapa(9,selections)
+    inicio(10)
     # 10: BVH ya pulido en el box, importación y retarget por mapa explícito; luego IK.
     rt=[]
     for job in d['motion'].get('retarget_jobs',[]):
@@ -141,6 +157,7 @@ try:
         for f in range(n):con.influence=1 if contact['t0']<=f/fps<contact['t1'] else 0;con.keyframe_insert('influence',frame=f+1)
         cons.append(contact)
     etapa(10,{'retarget':rt,'contacts':cons,'legacy_solver_preserved':bool(d.get('legacy'))})
+    inicio(12)
     # Validar el grafo completo antes de mutar nada. Entorno antes de luces.
     generated_events=[event for ob in objects.values() if not ob.get('motor_preserve_hidden') and ob.get('motor_events') for event in json.loads(ob['motor_events'])]
     all_events=d['environment']['events']+d.get('fx_events',[])+d['lighting']['events']+generated_events;conflicts=eventos.validar_eventos(all_events,dur)
@@ -159,12 +176,14 @@ try:
     if 'look' in d['lighting']:sc.view_settings.look=d['lighting']['look']
     applied+=eventos.aplicar(sc,after,fps,dur)
     etapa(12,{'events':applied,'global_frames':n,'single_writer_graph':True,'environment_events_before_lights':True,'environment_tracks_before':len(before),'light_global_tracks_after':len(after)})
+    inicio(11)
     # 11: trayectorias geométricas completas y controlador 4g, sin cámara técnica sustitutiva.
     if d['camera'].get('resolver')=='SB_4G':
         from puente_sb4g import construir as construir_4g
         cams,camera_review_4g=construir_4g(sc,d,pk,out,objects)
     else:cams=camara_final.construir(sc,d['camera']['shots'],fps,objects);camera_review_4g=None
     etapa(11,{'cameras':list(cams),'frames':n})
+    inicio(13)
     # 13: medir de verdad todos los cuadros. Perfiles/tolerancias los da el paquete.
     state_review=eventos.verificar_estados(sc,d['environment'].get('expected_states',[]),fps);errors+=state_review['errors']
     cr=camera_review_4g if camera_review_4g is not None else camara_final.revisar(sc,d['camera']['shots'],cams,fps,objects);errors+=cr['errors'];trace=[];prev={};length0={id:{b.name:b.length for b in r.data.bones} for id,r in rigs.items()};rules=d['rules'];max_len=0;max_contact=0;max_velocity=0;max_accel=0
@@ -207,8 +226,12 @@ try:
         bpy.ops.export_anim.bvh(filepath=str(export),frame_start=1,frame_end=n,root_transform_only=False)
         catalog_receipts.append(registrar_movimiento(library,export,origin=selected['provider'],source={'provider_ref':selected.get('source'),'scene_validation':'fixture' if d.get('fixture_only') else 'real','BVH':'exportado de rig revisado'},skeleton=ent.get('rig') or {'bones':[b.name for b in rig.data.bones]},profile=ent['physics'],metrics={'all_passed':True,'errors':[],'max_bone_length_error_m':max_len,'max_contact_error_m':max_contact,'physics':physical},request=req,prompt=selected.get('prompt') or req.get('action'),tracks=selected.get('tracks')))
     guardar(out/'catalogo_registro.json',catalog_receipts)
+    inicio(14)
     sc.frame_set(1);sc.camera=cams[d['camera']['shots'][0]['id']];bpy.ops.file.pack_all();blend=out/'escena.blend'
     if blend.exists():archivar(blend)
-    bpy.ops.wm.save_as_mainfile(filepath=str(blend));guardar(out/'worker_resultado.json',{'estado':'CONSTRUIDO_REVISADO','frames':n,'rigs':len(rigs),'blend_sha256':sha(blend)})
-except Exception as exc:
-    guardar(out/'worker_resultado.json',{'estado':'BLOQUEADO','codigo':'CONSTRUCTOR_O_REVISION','mensaje':str(exc),'errores':errors,'faltantes_datos':getattr(exc,'faltantes',[])});raise
+    parcial=out/'escena_parcial_guardando.blend' # un corte a mitad de escritura no deja un escena.blend truncado
+    bpy.ops.wm.save_as_mainfile(filepath=str(parcial));os.replace(parcial,blend);_progreso(estado='TERMINADO',ultima_terminada='14')
+    guardar(out/'worker_resultado.json',{'estado':'CONSTRUIDO_REVISADO','frames':n,'rigs':len(rigs),'blend_sha256':sha(blend),'blend_bytes':blend.stat().st_size})
+except (Exception,Interrupcion) as exc:
+    guardar(out/'worker_resultado.json',{'estado':'BLOQUEADO','codigo':getattr(exc,'codigo','CONSTRUCTOR_O_REVISION'),'etapa_en_curso':EN_CURSO.get('etapa'),'mensaje':str(exc),'tipo':type(exc).__name__,'traceback':traceback.format_exc(),'errores':errors,'faltantes_datos':getattr(exc,'faltantes',[])})
+    _progreso(estado='BLOQUEADO');raise

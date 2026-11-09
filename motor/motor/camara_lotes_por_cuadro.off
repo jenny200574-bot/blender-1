@@ -1,0 +1,2 @@
+Apaga la cámara por lotes por cuadro (caché de escenario por firma, buscador y validación con el cuadro por fuera).
+Con este archivo presente camara_v2_blender.py recorre como antes, candidato por candidato. Quitarlo solo después de la prueba sintética y de comparar camara_v2.json.
