@@ -182,13 +182,13 @@ def _bvh_escena_estatica(excl, dg):
         return _BVH_ESCENA_EST[0]
     estaticos = [o for o in ENV_ESTATICO if o.name not in excl]
     if not estaticos: return None
-    CAM_MEM.descartar_bvh(_BVH_ESCENA_EST[0]); _BVH_ESCENA_EST[0] = bvh(estaticos, dg); _BVH_ESCENA_EST[1] = excl
+    _BVH_ESCENA_EST[0] = bvh(estaticos, dg); _BVH_ESCENA_EST[1] = excl
     return _BVH_ESCENA_EST[0]
 def env_bvh(f, excl=frozenset()):
     k = _llave_entorno(f, excl) if LOTES else (f, frozenset(excl))
     if k not in ENVC:
         while len(ENVC) > 4:
-            _k = next(iter(ENVC)); CAM_MEM.descartar_bvh(ENVC.pop(_k))
+            _k = next(iter(ENVC)); CAM_MEM.evictar_entrada_bvh(ENVC, _k, _BVH_ESCENA_EST)
         sc.frame_set(f); dg = bpy.context.evaluated_depsgraph_get()
         din = [o for o in ENV_DINAMICO if o.name not in (excl or frozenset())]
         if not din:
@@ -381,7 +381,7 @@ def otros_bvh(f, excluir):
     k = (f, tuple(sorted(excluir)))
     if k not in OTROS:
         while len(OTROS) > 4:
-            _k = next(iter(OTROS)); CAM_MEM.descartar_bvh(OTROS.pop(_k))
+            _k = next(iter(OTROS)); CAM_MEM.evictar_entrada_bvh(OTROS, _k)
         sc.frame_set(f); OTROS[k] = bvh([m for pid, ms in ACT_MESH.items() if pid not in excluir for m in ms], bpy.context.evaluated_depsgraph_get())
     return OTROS[k]
 def validar(tray, spec, f0, f1, libres_encuadre=(), libres_inclin=()):

@@ -42,23 +42,30 @@ def diagnostico_meshes(bpy):
     }
 
 
-def descartar_bvh(bv):
-    if bv is None:
-        return
-    try:
-        del bv.t
-    except Exception:
-        pass
+def es_bvh_compartido_estatico(bv, estatico_slot):
+    """True si bv es el mismo wrapper que el BVH estático de escenario (no invalidar al evictar ENVC)."""
+    return (
+        bv is not None
+        and estatico_slot is not None
+        and len(estatico_slot) >= 1
+        and bv is estatico_slot[0]
+    )
+
+
+def descartar_bvh(bv, estatico_slot=None):
+    """Obsoleto a propósito: no mutar _BV in-place (del .t rompe referencias compartidas en ENVC)."""
+    return
+
+
+def evictar_entrada_bvh(caja, clave, estatico_slot=None):
+    """Quita una entrada de caché sin tocar el wrapper si es el BVH estático compartido."""
+    return caja.pop(clave, None)
 
 
 def purgar_caches_bvh(entorno, otros, estatico=None):
-    for bv in list((entorno or {}).values()) + list((otros or {}).values()):
-        descartar_bvh(bv)
     (entorno or {}).clear()
     (otros or {}).clear()
     if estatico is not None and len(estatico) >= 2:
-        bvh, _llave = estatico[0], estatico[1]
-        descartar_bvh(bvh)
         estatico[0] = None
         estatico[1] = None
 
