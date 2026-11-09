@@ -450,10 +450,10 @@ def _validar_cuadro(x, spec, f, libres_encuadre, libres_inclin, malos):
         if fr_in < req:
             origen = (m.get('cabeza') or {}).get('origen') if m.get('cabeza') else None
             vvis = (m.get('cabeza') or {}).get('valida_visual', m.get('cabeza') and m['cabeza'].get('malla_visible'))
-            region = 'cabeza_cara' if (rg and not rg['cuerpo_entero'] and m['cabeza']) else 'cuerpo'
+            region_revision = 'cabeza_cara' if (rg and not rg['cuerpo_entero'] and m['cabeza']) else 'cuerpo'
             fuera = [q for q in pr if not (q and 0 <= q[0] <= 1 and 0 <= q[1] <= 1)]
             malos.append((f, 'sujeto fuera de cuadro (' + ('cabeza' if rg and not rg['cuerpo_entero'] else 'pies/cabeza') + ')', round(fr_in, 2)))
-            spec.setdefault('_diag_encuadre', []).append({'frame': f, 'fraccion_en_cuadro': round(fr_in, 3), 'minimo': req, 'origen_cabeza': origen, 'cabeza_valida_visual': vvis, 'plano': spec.get('plano_de')(f) if spec.get('plano_de') else None, 'region_revision': region, 'puntos_muestra': len(pr), 'puntos_en_cuadro': len(pr) - len(fuera), 'muestra_ndc_fuera': [[round(q[0], 3), round(q[1], 3)] for q in fuera[:8]]})
+            spec.setdefault('_diag_encuadre', []).append({'frame': f, 'fraccion_en_cuadro': round(fr_in, 3), 'minimo': req, 'origen_cabeza': origen, 'cabeza_valida_visual': vvis, 'plano': spec.get('plano_de')(f) if spec.get('plano_de') else None, 'region_revision': region_revision, 'puntos_muestra': len(pr), 'puntos_en_cuadro': len(pr) - len(fuera), 'muestra_ndc_fuera': [[round(q[0], 3), round(q[1], 3)] for q in fuera[:8]]})
         tap = {}
         for p in pts:
             for bv, et in ((env_oc, 'escenario'), (oth, 'otro personaje')):
