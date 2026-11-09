@@ -299,6 +299,17 @@ def proyectar(p, loc, R, lens):
     c = R.transposed() @ (p - loc)
     if c.z >= -1e-6: return None
     k = lens / SENSOR_W; return (0.5 + k * c.x / -c.z, 0.5 + k * ASP * c.y / -c.z, -c.z)
+def _proyectado_en_cuadro(q):
+    """Un punto con proyección None (detrás de la cámara) no está en cuadro."""
+    return q is not None and 0 <= q[0] <= 1 and 0 <= q[1] <= 1
+def _muestra_ndc_fuera(pr, limite=8):
+    """Solo diagnóstico; no afecta la compuerta. None → 'detras_camara'."""
+    muestra = []
+    for q in pr:
+        if _proyectado_en_cuadro(q): continue
+        if len(muestra) >= limite: break
+        muestra.append('detras_camara' if q is None else [round(float(q[0]), 3), round(float(q[1]), 3)])
+    return muestra
 def sensor_h(): return SENSOR_W / ASP
 def region(m, plano):
     frac = TABLA.get(plano)
@@ -444,16 +455,21 @@ def _validar_cuadro(x, spec, f, libres_encuadre, libres_inclin, malos):
             pts = m['cabeza']['puntos_cara']
         elif rg: pts = [p for p in pts if rg['bot'] - 1e-3 <= p.z <= rg['top'] + 1e-3] or pts   # 05: pies y cabeza en planos abiertos
         pts = pts[::max(1, len(pts) // CFG['puntos_region'])]
-        pr = [proyectar(p, loc, R, lens) for p in pts]; fr_in = sum(1 for q in pr if q and 0 <= q[0] <= 1 and 0 <= q[1] <= 1) / max(1, len(pr))
+        pr = [proyectar(p, loc, R, lens) for p in pts]
+        npr = max(1, len(pr))
+        fr_in = sum(1 for q in pr if _proyectado_en_cuadro(q)) / npr
         req = CFG['region_en_cuadro_min']
-        if rg and not rg['cuerpo_entero'] and m['cabeza'] and rg['Hf'] < m['cabeza']['alto'] / 2: req *= rg['Hf'] / (m['cabeza']['alto'] / 2)
+        if rg and not rg['cuerpo_entero'] and m['cabeza'] and rg['Hf'] < m['cabeza']['alto'] / 2:
+            denom = m['cabeza']['alto'] / 2
+            if denom > 1e-9: req *= rg['Hf'] / denom
         if fr_in < req:
             origen = (m.get('cabeza') or {}).get('origen') if m.get('cabeza') else None
             vvis = (m.get('cabeza') or {}).get('valida_visual', m.get('cabeza') and m['cabeza'].get('malla_visible'))
             region_revision = 'cabeza_cara' if (rg and not rg['cuerpo_entero'] and m['cabeza']) else 'cuerpo'
-            fuera = [q for q in pr if not (q and 0 <= q[0] <= 1 and 0 <= q[1] <= 1)]
+            en_c = sum(1 for q in pr if _proyectado_en_cuadro(q))
+            detras = sum(1 for q in pr if q is None)
             malos.append((f, 'sujeto fuera de cuadro (' + ('cabeza' if rg and not rg['cuerpo_entero'] else 'pies/cabeza') + ')', round(fr_in, 2)))
-            spec.setdefault('_diag_encuadre', []).append({'frame': f, 'fraccion_en_cuadro': round(fr_in, 3), 'minimo': req, 'origen_cabeza': origen, 'cabeza_valida_visual': vvis, 'plano': spec.get('plano_de')(f) if spec.get('plano_de') else None, 'region_revision': region_revision, 'puntos_muestra': len(pr), 'puntos_en_cuadro': len(pr) - len(fuera), 'muestra_ndc_fuera': [[round(q[0], 3), round(q[1], 3)] for q in fuera[:8]]})
+            spec.setdefault('_diag_encuadre', []).append({'frame': f, 'fraccion_en_cuadro': round(fr_in, 3), 'minimo': req, 'origen_cabeza': origen, 'cabeza_valida_visual': vvis, 'plano': spec.get('plano_de')(f) if spec.get('plano_de') else None, 'region_revision': region_revision, 'puntos_muestra': len(pr), 'puntos_en_cuadro': en_c, 'puntos_detras_camara': detras, 'muestra_ndc_fuera': _muestra_ndc_fuera(pr)})
         tap = {}
         for p in pts:
             for bv, et in ((env_oc, 'escenario'), (oth, 'otro personaje')):
@@ -856,12 +872,13 @@ for n, v in enumerate(VINETAS, 1):
                 exp_meta = {}
                 if mal and SW['validacion_camara']:
                     tray, mal, exp_meta = _tras_validacion_directa(tray, spec, f0, f1, ex['libres_e'], ex['libres_i'], mal)
-                if spec.get('_diag_encuadre'):
-                    exp_meta['diagnostico_encuadre'] = spec['_diag_encuadre'][:12]
-                    peor = min(spec['_diag_encuadre'], key=lambda x: x['fraccion_en_cuadro'])
+                diags = spec.get('_diag_encuadre') or []
+                if diags:
+                    exp_meta['diagnostico_encuadre'] = diags[:12]
+                    peor = min(diags, key=lambda x: float(x.get('fraccion_en_cuadro', 0)))
                     T['encuadre_peor'] = peor
                     T['encuadre_nota'] = ('Medición en malla evaluada (%s): %.0f%% en cuadro vs mínimo %.0f%% (pose directa SB).'
-                                         % (peor.get('region_revision', '?'), 100 * peor['fraccion_en_cuadro'], 100 * peor['minimo']))
+                                         % (peor.get('region_revision', '?'), 100 * float(peor.get('fraccion_en_cuadro', 0)), 100 * float(peor.get('minimo', 0))))
                 if mal:
                     exp_meta['clasificacion_motivos'] = clasificar_motivos_directa(mal)
                     cm = exp_meta['clasificacion_motivos']

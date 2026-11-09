@@ -44,8 +44,17 @@ class _M:
 
 
 class Tests(unittest.TestCase):
+    def test_muestra_ndc_fuera_con_detras_camara(self):
+        g = _compilar({'_proyectado_en_cuadro', '_muestra_ndc_fuera'})
+        pr = [None, (0.5, 0.5, 1), None, (2.0, 0.5, 1)]
+        self.assertFalse(g['_proyectado_en_cuadro'](None))
+        self.assertTrue(g['_proyectado_en_cuadro']((0.5, 0.5, 1)))
+        muestra = g['_muestra_ndc_fuera'](pr)
+        self.assertIn('detras_camara', muestra)
+        self.assertNotIn(None, muestra)
+
     def test_encuadre_cabeza_llama_region_sin_unbound(self):
-        g = _compilar({'region', '_validar_cuadro'})
+        g = _compilar({'region', '_validar_cuadro', '_proyectado_en_cuadro', '_muestra_ndc_fuera'})
         llamadas = []
 
         def region(m, plano):
@@ -95,6 +104,39 @@ class Tests(unittest.TestCase):
         self.assertTrue(any('fuera de cuadro' in m[1] for m in malos))
         diag = spec.get('_diag_encuadre') or []
         self.assertEqual(diag[0].get('region_revision'), 'cabeza_cara')
+
+    def test_proyectar_none_no_aborta_diagnostico(self):
+        g = _compilar({'region', '_validar_cuadro', '_proyectado_en_cuadro', '_muestra_ndc_fuera'})
+        g.update(
+            region=lambda m, p: {'cuerpo_entero': False, 'Hf': 0.2, 'bot': 0.0, 'top': 0.5},
+            env_bvh=lambda *a, **k: None,
+            otros_bvh=lambda *a, **k: None,
+            dentro_de_malla=lambda *a, **k: None,
+            proyectar=lambda p, *a: None,
+            CFG={'puntos_region': 8, 'region_en_cuadro_min': 0.5, 'visibilidad_min': 0.0,
+                 'holgura_max_m': 0.15, 'holgura_frac_distancia': 0.1, 'holgura_frac_altura': 0.25,
+                 'max_angulo_cara_deg': 90, 'inclinacion_tolerancia_deg': 15, 'roll_tolerancia_deg': 15},
+            SW={'despeje_escenario': False},
+            RIG=type('R', (), {'mirada_relativa': staticmethod(lambda *a: (0.0, 0.0))})(),
+            Vector=_V,
+            medir=lambda *a, **k: None,
+        )
+        spec = {
+            'medir': lambda f: {'puntos': [_V()], 'cabeza': {'puntos_cara': [_V(), _V(1, 0, 1)], 'alto': 0.2, 'centro': _V()},
+                               'H': 1.0, 'tipo': 'personaje', 'centro': _V()},
+            'plano_de': lambda f: 'CU', 'revisar_encuadre': True, 'excluir_oclusion': set(), 'roll_pedido_deg': 0,
+        }
+        malos = []
+        x = {'loc': _V(0, -2, 1), 'quat': type('Q', (), {'to_matrix': lambda self: _M()})(), 'lente': 35.0}
+        g['_validar_cuadro'](x, spec, 5, [], [], malos)
+        diag = spec['_diag_encuadre'][0]
+        self.assertEqual(diag['fraccion_en_cuadro'], 0.0)
+        self.assertGreaterEqual(diag.get('puntos_detras_camara', 0), 1)
+        self.assertIn('detras_camara', diag['muestra_ndc_fuera'])
+
+    def test_lista_proyeccion_vacia_no_aborta(self):
+        g = _compilar({'_muestra_ndc_fuera', '_validar_cuadro', '_proyectado_en_cuadro', 'region'})
+        self.assertEqual(g['_muestra_ndc_fuera']([]), [])
 
     def test_no_asigna_nombre_region_en_validar_cuadro(self):
         arbol = ast.parse(CAMARA.read_text(encoding='utf-8'))
