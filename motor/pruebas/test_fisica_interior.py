@@ -7,6 +7,7 @@ from pathlib import Path
 R = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(R / 'motor'))
 from fisica_final import (
+    _adjacencia_maxima,
     clasificar_collider,
     cuadros_muestra_penetracion,
     extents_vertices,
@@ -70,6 +71,19 @@ class _TreeInfinito:
         return (p, None, None, 0.0)
 
 
+class _TreeEstancado:
+    """Mismo punto de impacto en cada ray_cast (bug clásico sin epsilon)."""
+
+    def __init__(self):
+        self._hit = _Vec(0.2, 0.2, 0.2)
+
+    def ray_cast(self, origin, direction, dist=1000):
+        return (self._hit.copy(), direction, None, 0.001)
+
+    def find_nearest(self, p):
+        return (p, None, None, 0.0)
+
+
 class Tests(unittest.TestCase):
     def test_lamina_no_usa_interior_cerrado(self):
         verts = [_Vec(0, 0, 0), _Vec(1, 0, 0), _Vec(0, 1, 0), _Vec(0.5, 0.5, 0.001)]
@@ -84,6 +98,27 @@ class Tests(unittest.TestCase):
         viable, _, motivo = ray_parity_interiores(_TreeInfinito(), p, max_rebotes=50)
         self.assertFalse(viable)
         self.assertIn('50', motivo)
+
+    def test_ray_parity_cubo_cerrado_salida_exterior(self):
+        p = _Vec(0.1, 0.5, 0.5)
+        viable, par, motivo = ray_parity_interiores(_TreeCaja(), p, max_rebotes=32)
+        self.assertTrue(viable)
+        self.assertIsNone(motivo)
+        self.assertIn(par, (False, True))
+
+    def test_ray_parity_detecta_impacto_estancado(self):
+        p = _Vec(0.1, 0.2, 0.2)
+        viable, _, motivo = ray_parity_interiores(_TreeEstancado(), p, max_rebotes=10000)
+        self.assertFalse(viable)
+        self.assertIn('estancado', motivo)
+
+    def test_adjacencia_no_cuenta_metros_en_lamina_lamina(self):
+        tol = 0.01
+        adj = _adjacencia_maxima({'penetration_tolerance_m': tol}, tol)
+        self.assertLessEqual(adj, 0.2)
+        self.assertGreater(adj, tol)
+        # 5 m de nearest en dos láminas en contacto de diseño excede adj → no es penetración (lógica revisar).
+        self.assertGreater(5.24, adj)
 
     def test_solido_cerrado_clasifica_y_mide(self):
         verts = [_Vec(x, y, z) for x in (0, 1) for y in (0, 1) for z in (0, 1)]

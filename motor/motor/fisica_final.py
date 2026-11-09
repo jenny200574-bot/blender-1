@@ -46,12 +46,20 @@ def ray_parity_interiores(tree, p, max_rebotes=10000):
   ray = _ray_unit()
   origin = p.copy() if hasattr(p, 'copy') else p
   count = 0
+  prev = None
   for _ in range(max_rebotes):
     hit = tree.ray_cast(origin, ray)
     if hit[0] is None:
       return True, bool(count % 2), None
+    hp = hit[0]
+    if prev is not None:
+      dpx, dpy, dpz = _coord(hp)
+      qx, qy, qz = _coord(prev)
+      if (dpx - qx) ** 2 + (dpy - qy) ** 2 + (dpz - qz) ** 2 < 1e-18:
+        return False, None, 'rayo estancado en el mismo impacto (malla abierta, lámina o autointersección)'
+    prev = hp
     count += 1
-    origin = _shift(hit[0], ray, 1e-7)
+    origin = _shift(hp, ray, 1e-4)
   return False, None, f'más de {max_rebotes} impactos en un rayo (malla abierta, lámina o autointersección)'
 
 
@@ -118,6 +126,21 @@ def _muestra_vertices(vs, nmax=32):
     return vs or []
   paso = max(1, len(vs) // nmax)
   return vs[::paso][:nmax]
+
+
+def _algun_solido_cerrado(ma, mb):
+  return ma.get('metodo') == 'interior_cerrado' or mb.get('metodo') == 'interior_cerrado'
+
+
+def _adjacencia_maxima(rules, tol):
+  """Distancia máxima para contar contacto entre láminas (no distancia a través del set)."""
+  extra = rules.get('penetration_adjacency_max_m')
+  if extra is not None:
+    try:
+      return max(float(tol), float(extra))
+    except (TypeError, ValueError):
+      pass
+  return max(float(tol), 0.15)
 
 
 def _firma_collider_mundo(obj):
@@ -250,29 +273,33 @@ def revisar(scene,d,rigs,objects,salida=None):
             trees={};verts={};meta_coll={}
             for name in names:
                 ta, va, ma=_collider(name, f, dg);trees[name]=ta;verts[name]=va;meta_coll[name]=ma
-            tol=rules['penetration_tolerance_m']
+            tol=rules['penetration_tolerance_m']; adj=_adjacencia_maxima(rules, tol)
             for pi, (a, b) in enumerate(pares):
                 if prog and pi % 4 == 0: prog.marcar(fase='penetracion_par', cuadro=f, par='%s/%s' % (a, b), par_i=pi, pares=len(pares))
                 va, vb=verts.get(a) or [], verts.get(b) or []
                 if aabb_separados(va, vb): continue
                 ta, tb=trees.get(a), trees.get(b)
                 if ta is None or tb is None: continue
-                overlapping=ta.overlap(tb);depth=0.0
+                overlapping=ta.overlap(tb);depth=0.0;ma, mb=meta_coll[a], meta_coll[b]
                 for source, target in ((a, b), (b, a)):
                     vs=_muestra_vertices(verts.get(source)); tree_t=trees.get(target); mt=meta_coll.get(target)
                     if tree_t is None or not vs: continue
                     for v in vs:
                         nearest=tree_t.find_nearest(v)
                         if nearest[0] is None or nearest[3] <= tol: continue
+                        ndist=float(nearest[3])
                         if mt.get('metodo') == 'interior_cerrado':
                             if punto_dentro_collider(tree_t, v, mt):
-                                depth=max(depth, nearest[3])
-                        elif overlapping:
-                            depth=max(depth, nearest[3])
+                                depth=max(depth, ndist)
+                        elif overlapping and ndist <= adj:
+                            depth=max(depth, ndist)
                         if depth > tol * 8: break
                 max_pen=max(max_pen, depth)
-                if depth>tol or overlapping and rules['reject_surface_intersections'] and frozenset((a,b)) not in touch:
+                par=frozenset((a,b))
+                if depth>tol:
                     errors.append({'type':'PENETRACION','frame':f,'objects':[a,b],'depth_m':depth,'intersections':len(overlapping)})
+                elif overlapping and rules.get('reject_surface_intersections') and par not in touch and _algun_solido_cerrado(ma, mb):
+                    errors.append({'type':'PENETRACION','frame':f,'objects':[a,b],'depth_m':depth,'intersections':len(overlapping),'modo':'interseccion_superficie'})
         centres.append(row)
     if rules.get('locked_naturalness'):
         from reglas_binding import revisar_limites

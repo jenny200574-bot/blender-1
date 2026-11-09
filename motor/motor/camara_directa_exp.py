@@ -74,6 +74,19 @@ def informe_conflicto_toma(vineta, S, motivos, clasificacion, vin=None):
         ops.append('Encuadre: verificar medición con malla de cabeza visible (no cápsula legacy); pose directa sin factor distancia.')
     if not ops:
         ops.append('Revisión bloqueada: exportar muestras_malas y decidir sin relajar tolerancias.')
+    clases = []
+    if clasificacion.get('holgura_escenario'):
+        clases.append('arreglable_motor')
+    if clasificacion.get('oclusion_escenario'):
+        clases.append('arreglable_motor' if any('escenario' in (m or '') for m in (motivos or [])) else 'escena_o_layout')
+    if clasificacion.get('encuadre'):
+        clases.append('conflicto_storyboard')
+    if clasificacion.get('eje_180') or clasificacion.get('inclinacion_roll'):
+        clases.append('conflicto_storyboard')
+    if clasificacion.get('cara_espalda'):
+        clases.append('conflicto_storyboard')
+    if not clases:
+        clases.append('revisar_manual')
     return {
         'vineta': vineta,
         'plano_inicial': S.get('plano0'),
@@ -86,6 +99,8 @@ def informe_conflicto_toma(vineta, S, motivos, clasificacion, vin=None):
         'clasificacion': clasificacion,
         'opciones_sin_cambiar_storyboard': ops,
         'props_historia': 'No se ocultan obj-* (p. ej. obj-cama.*).',
+        'clase_conflicto': clases,
+        'nota_ricardo': 'No recalcular plan SB; pared invisible o acercamiento solo para esa cámara si clase incluye arreglable_motor.',
     }
 
 
