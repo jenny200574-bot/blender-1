@@ -33,7 +33,9 @@ CMDS = _j(6, {}) or {}; ELEV = _j(7, {}) or {}; TP05 = _j(8, {}) or {}
 SW = {'manifiesto_espacial': not OFF('manifiesto_espacial'), 'resolver_camara': not OFF('resolver_camara'), 'validacion_camara': not OFF('validacion_camara')}
 # Mismas comprobaciones y mismo resultado; cambia el orden (cuadro por fuera) y el BVH del escenario se reutiliza por firma exacta.
 LOTES = not OFF('camara_lotes_por_cuadro'); SW['lotes_por_cuadro'] = LOTES
-PROG = Progreso.desde_entorno(OUT); PROG.marcar(forzar=True, fase='inicio', lotes_por_cuadro=LOTES)
+# Con camara_busqueda_reparacion.off: solo la pose inicial del SB (0°, factor 1); no rejilla ni bisección. La revisión no se salta.
+DIRECTO = OFF('camara_busqueda_reparacion'); SW['busqueda_reparacion'] = not DIRECTO; SW['directa_sb'] = DIRECTO
+PROG = Progreso.desde_entorno(OUT); PROG.marcar(forzar=True, fase='inicio', lotes_por_cuadro=LOTES, directa_sb=DIRECTO)
 sc = bpy.context.scene; FPS = sc.render.fps / sc.render.fps_base
 RX, RY = sc.render.resolution_x * sc.render.pixel_aspect_x, sc.render.resolution_y * sc.render.pixel_aspect_y; ASP = RX / RY
 TABLA = AJ['encuadre_fraccion_altura_visible']; UP = Vector((0, 0, 1)); FALT = []; AVISOS = []
@@ -694,12 +696,29 @@ for n, v in enumerate(VINETAS, 1):
         T['camara'] = 'existente (resolver_camara.off)'; T['estado'] = estado_visual('pasa' if not mal else 'bloqueada', T.get('cabeza_medida')); T['motivos'] = sorted({x[1] for x in mal}); T['muestras_malas'] = mal[:8]
         if par and par[0] != 'ambiguo' and ref_eje.get(par) is None and tray: ref_eje[par] = eje_s(S | {'_eje': par}, f0, tray[0]['loc'])
         tomas.append(T); trays.append(None); continue
-    intentos = []; elegido = None; medf = (lambda f: grupo(S['sujetos'], f, tgt, tid)) if len(S['sujetos']) > 1 else (lambda f: medir(tgt, f, tid))
+    intentos = []; elegido = None; tray = None; em_ = []; rama_directa_sb = False
+    medf = (lambda f: grupo(S['sujetos'], f, tgt, tid)) if len(S['sujetos']) > 1 else (lambda f: medir(tgt, f, tid))
+    _bm_directa = lambda **k: {'modo': 'directa_sb', 'busqueda_omitida': True, 'candidato': {'az_extra_deg': 0.0, 'factor_distancia': 1.0}, 'examinados': 0, 'resuelto_geometrico': False, 'production_approved': False, 'motivo': 'Pose inicial del storyboard (acimut 0°, factor 1); sin rejilla ni reparaciones alternativas.', **k}
     if S.get('pov') or S.get('ots') or not S.get('lens'):
         informe = BUS.sin_modelo('POV, OTS o toma sin lente: la posición no sale del cono de elevación')
     else:
         medidas = muestras_busqueda(v, S, f0, f1, medf, plano_de)
         if not medidas: informe = BUS.sin_modelo('El objetivo no está medido en el primer cuadro')
+        elif DIRECTO:
+            rama_directa_sb = True
+            informe = None
+            daz, fd = 0.0, 1.0
+            PROG.marcar(toma=tid, fase='validacion', intento=0, candidatos_max=1)
+            em_ = []; tray, err, ex = construir(v, S, (daz, fd), tid, em_)
+            if err: intentos.append({'az_extra': daz, 'fd': fd, 'error': err})
+            else:
+                spec['medir'] = ex['medf']; lado = S['_lado_eje']
+                if par and par[0] != 'ambiguo' and lado is None and not S['cruce_permitido']: lado = eje_s(S, f0, tray[0]['loc'])
+                spec['eje'] = (par[0], par[1], lado) if (par and par[0] != 'ambiguo' and not S['cruce_permitido']) else None
+                mal = validar(tray, spec, f0, f1, ex['libres_e'], ex['libres_i']) if SW['validacion_camara'] else []
+                intentos.append({'az_extra': daz, 'fd': fd, 'fallos': len(mal), 'motivos': sorted({x[1] for x in mal}), 'muestras_malas': mal[:6]})
+                if not mal: elegido = (tray, daz, fd, em_, ex, lado)
+            T['busqueda_matematica'] = {**BUS.resumen(BUS.sin_modelo('directa_sb sin buscador')), **_bm_directa(evaluaciones_validacion=len(intentos), candidatos_construidos=1)}
         else:
             informe = BUS.buscar({'sensor_mm': SENSOR_W, 'lens_mm': float(S['lens']), 'aspecto': ASP, 'elev_deg': float(S['elev']), 'orient_deg': float(S['orient'] or 0),
                                   'aire': float(S['aire']), 'xlado': float(S['xlado']), 'region_min': CFG['region_en_cuadro_min'], 'max_cara_deg': CFG['max_angulo_cara_deg'],
@@ -707,9 +726,16 @@ for n, v in enumerate(VINETAS, 1):
                                   'holgura_frac_distancia': CFG['holgura_frac_distancia'], 'holgura_frac_altura': CFG['holgura_frac_altura'], 'lado': None if S['cruce_permitido'] else S.get('_lado_eje'),
                                   'cara_exigida': spec['cara'], 'azimuts_deg': CFG['busqueda_acimut_deg'], 'factores': CFG['busqueda_factor_distancia'], 'muestras': medidas,
                                   'por_cuadro': LOTES, 'aviso': (lambda fase, i, total, cand, tid=tid: PROG.marcar(toma=tid, fase='buscador_' + fase, cuadro=i, cuadros=total, candidatos=cand))})
-    T['busqueda_matematica'] = BUS.resumen(informe)
-    propuestas = list(informe.get('propuestas') or [])
-    if not propuestas: propuestas = [{'az_extra_deg': a, 'factor_distancia': fd} for a in CFG['busqueda_acimut_deg'] for fd in CFG['busqueda_factor_distancia']]
+    if not rama_directa_sb:
+        if DIRECTO and informe is not None:
+            T['busqueda_matematica'] = {**BUS.resumen(informe), **_bm_directa()}
+        else:
+            T['busqueda_matematica'] = BUS.resumen(informe)
+        propuestas = list((informe or {}).get('propuestas') or [])
+        if not propuestas and not DIRECTO:
+            propuestas = [{'az_extra_deg': a, 'factor_distancia': fd} for a in CFG['busqueda_acimut_deg'] for fd in CFG['busqueda_factor_distancia']]
+    else:
+        propuestas = []
     vistos = set(); orden = []
     for cand in propuestas:
         clave = (round(float(cand['az_extra_deg']), 4), round(float(cand['factor_distancia']), 4))
@@ -761,9 +787,15 @@ for n, v in enumerate(VINETAS, 1):
         tray, daz, fd, em_, ex, lado = elegido; T['estado'] = estado_visual('pasa', T.get('cabeza_medida')); T['reparacion'] = None if (daz == 0 and fd == 1.0) else {'acimut_extra_deg': daz, 'factor_distancia': fd, 'intentos': len(intentos)}
         if par and par[0] != 'ambiguo' and ref_eje.get(par) is None and lado is not None: ref_eje[par] = lado
     else:
-        val = [i for i in intentos if 'fallos' in i]; mejor = min(val, key=lambda i: i['fallos']) if val else None
-        em_ = []; tray, err, ex = construir(v, S, ((mejor or {}).get('az_extra', 0), (mejor or {}).get('fd', 1.0)), tid, em_)
-        T['estado'] = 'bloqueada'; T['motivos'] = mejor['motivos'] if mejor else [i.get('error') for i in intentos][:3]; T['mejor_intento'] = mejor; T['intentos'] = len(intentos)
+        if DIRECTO:
+            val = [i for i in intentos if 'fallos' in i]
+            if val: fallo = val[0]; T['estado'] = 'bloqueada'; T['motivos'] = fallo['motivos']; T['muestras_malas'] = fallo.get('muestras_malas'); T['intentos'] = len(intentos)
+            else: T['estado'] = 'bloqueada'; T['motivos'] = [i.get('error') for i in intentos if i.get('error')][:3] or ([informe['motivo']] if isinstance(informe, dict) and informe.get('motivo') else ['sin_candidato_sb']); T['intentos'] = len(intentos)
+            T['mejor_intento'] = None
+        else:
+            val = [i for i in intentos if 'fallos' in i]; mejor = min(val, key=lambda i: i['fallos']) if val else None
+            em_ = []; tray, err, ex = construir(v, S, ((mejor or {}).get('az_extra', 0), (mejor or {}).get('fd', 1.0)), tid, em_)
+            T['estado'] = 'bloqueada'; T['motivos'] = mejor['motivos'] if mejor else [i.get('error') for i in intentos][:3]; T['mejor_intento'] = mejor; T['intentos'] = len(intentos)
     T['comandos'] += em_
     if tray:
         k0 = tray[0]; T['camara'] = {'loc': r3(k0['loc']), 'mira': r3(k0['mira']), 'lente': round(k0['lente'], 2), 'sensor_ancho_mm': SENSOR_W, 'sensor_fit': 'HORIZONTAL',

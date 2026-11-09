@@ -1,0 +1,4 @@
+# Con este archivo presente, la etapa 11 NO recorre la rejilla ni la bisección del buscador:
+# solo la primera pose pedida por el storyboard (acimut extra 0°, factor distancia 1.0).
+# La validación cuadro a cuadro (encuadre, holgura, oclusión, eje, cara…) sigue igual; si falla, la toma queda bloqueada.
+# Copia experimental: dejar este .off; instalación por defecto: quitarlo para conservar búsqueda/reparación.

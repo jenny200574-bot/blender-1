@@ -101,10 +101,14 @@ finally:
     js = audit / 'camara_v2.json'
     if js.is_file():
         r = json.loads(js.read_text(encoding='utf-8'))
-        rep = {'resumen': r.get('resumen'), 'tomas': [{'toma': t['toma'], 'estado': t['estado'], 'motivos': t.get('motivos'),
-                                                        'busqueda': (t.get('busqueda_matematica') or {}).get('examinados'),
-                                                        'resuelto': (t.get('busqueda_matematica') or {}).get('resuelto_geometrico'),
-                                                        'reparacion': t.get('reparacion'), 'intentos': t.get('intentos'),
-                                                        'camara': t.get('camara'), 'recorrido': t.get('recorrido')} for t in r['tomas']]}
+        rep = {'resumen': r.get('resumen'), 'interruptores': r.get('interruptores'),
+               'tomas': [{'toma': t['toma'], 'estado': t['estado'], 'motivos': t.get('motivos'),
+                          'busqueda_modo': (t.get('busqueda_matematica') or {}).get('modo'),
+                          'busqueda_omitida': (t.get('busqueda_matematica') or {}).get('busqueda_omitida'),
+                          'busqueda': (t.get('busqueda_matematica') or {}).get('examinados'),
+                          'resuelto': (t.get('busqueda_matematica') or {}).get('resuelto_geometrico'),
+                          'reparacion': t.get('reparacion'), 'intentos': t.get('intentos'),
+                          'muestras_malas': (t.get('muestras_malas') or [])[:4],
+                          'camara': t.get('camara'), 'recorrido': t.get('recorrido')} for t in r['tomas']]}
     _volcar('medidas.json', {'estado': estado, 'cuadros': N, 'tomas': TOMAS, 'caras_entorno': caras_entorno,
                              'blender': bpy.app.version_string, 'entorno_animado': ANIMADO, 'cortes': CORTES, 'motor': str(MOTOR), 'reporte': rep})
