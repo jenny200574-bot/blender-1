@@ -25,6 +25,26 @@ def error_hueso_cabeza(entity_id, bind_role, bone_name, bones):
 def partes_cabeza(parts):
     return [p for p in parts or [] if isinstance(p, dict) and (p.get('bind_role') == 'head' or p.get('role') in ('head', 'face'))]
 
+
+def malla_es_cabeza(mesh_obj, roles_cabeza):
+    """Criterio compartido con sonda_inspeccion_camara y camara_v2_blender.medir."""
+    if mesh_obj is None:
+        return False
+    roles = set(roles_cabeza or ())
+    if isinstance(mesh_obj, dict):
+        parent_ok = mesh_obj.get('parent_type') == 'BONE' and mesh_obj.get('parent_bone') in roles
+        for key in ('semantic_role', 'role', 'bind_role'):
+            if mesh_obj.get(key) in ('head', 'face'):
+                return True
+        return parent_ok
+    parent_ok = getattr(mesh_obj, 'parent_type', None) == 'BONE' and (getattr(mesh_obj, 'parent_bone', None) in roles)
+    getter = getattr(mesh_obj, 'get', None)
+    for attr in ('semantic_role', 'role', 'bind_role'):
+        val = getter(attr) if getter else getattr(mesh_obj, attr, None)
+        if val in ('head', 'face'):
+            return True
+    return parent_ok
+
 def region_desde_hueso(cabeza, cola):
     """Región medida de un hueso ya existente. None si falta un extremo o el largo es cero."""
     puntos = []

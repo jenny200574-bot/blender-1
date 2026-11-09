@@ -75,7 +75,7 @@ try:
         if 'placement' in e:rig.location=e['placement']['position_m'];rig.rotation_euler=[math.radians(x) for x in e['placement']['rotation_deg']]
         if e.get('legacy'):
             for child in rig.children_recursive:
-                if child.type=='MESH':child.hide_render=True;child['motor_preserve_hidden']=True # cápsulas conservadas para auditoría, no acabado final.
+                if child.type=='MESH':child.hide_render=True;child['motor_preserve_hidden']=True # etapa 5/8: cápsulas del rig legacy; las cabezas ADN se publican después con cabeza_visible_constructor.
         from apariencia_base_cpu import ligar
         for part in e['appearance']['geometry']['parts']:construir_parte(ligar(part,rig,e),rig,objects)
         for id,obj in registrar_puntos(rig,e.get('points',[]),objects).items():objects[e['id']+'.'+id]=obj
@@ -158,7 +158,9 @@ try:
         cons.append(contact)
     etapa(10,{'retarget':rt,'contacts':cons,'legacy_solver_preserved':bool(d.get('legacy'))})
     inicio(12)
-    # Validar el grafo completo antes de mutar nada. Entorno antes de luces.
+    # Recompilar presencia desde 01 en cada corrida: evita eventos hide_render obsoletos (p. ej. onset en t[1]).
+    from narrativa_estructurada import compilar_presencia
+    compilar_presencia(d)
     generated_events=[event for ob in objects.values() if not ob.get('motor_preserve_hidden') and ob.get('motor_events') for event in json.loads(ob['motor_events'])]
     all_events=d['environment']['events']+d.get('fx_events',[])+d['lighting']['events']+generated_events;conflicts=eventos.validar_eventos(all_events,dur)
     if conflicts:raise ValueError(str(conflicts))
@@ -176,6 +178,9 @@ try:
     if 'look' in d['lighting']:sc.view_settings.look=d['lighting']['look']
     applied+=eventos.aplicar(sc,after,fps,dur)
     etapa(12,{'events':applied,'global_frames':n,'single_writer_graph':True,'environment_events_before_lights':True,'environment_tracks_before':len(before),'light_global_tracks_after':len(after)})
+    auditoria_post12 = out / 'auditoria_post_etapa12.blend'
+    bpy.ops.wm.save_as_mainfile(filepath=str(auditoria_post12))
+    guardar(out / 'auditoria_post_etapa12.json', {'blend': str(auditoria_post12), 'nota': 'Estado tras eventos etapa 12; permite sonda si etapa 11 falla.'})
     inicio(11)
     # 11: trayectorias geométricas completas y controlador 4g, sin cámara técnica sustitutiva.
     if d['camera'].get('resolver')=='SB_4G':
@@ -186,7 +191,16 @@ try:
     inicio(13)
     # 13: medir de verdad todos los cuadros. Perfiles/tolerancias los da el paquete.
     state_review=eventos.verificar_estados(sc,d['environment'].get('expected_states',[]),fps);errors+=state_review['errors']
-    cr=camera_review_4g if camera_review_4g is not None else camara_final.revisar(sc,d['camera']['shots'],cams,fps,objects);errors+=cr['errors'];trace=[];prev={};length0={id:{b.name:b.length for b in r.data.bones} for id,r in rigs.items()};rules=d['rules'];max_len=0;max_contact=0;max_velocity=0;max_accel=0
+    cr=camera_review_4g if camera_review_4g is not None else camara_final.revisar(sc,d['camera']['shots'],cams,fps,objects);errors+=cr['errors']
+    if camera_review_4g and cr.get('full_command_report'):
+        from camara_despeje_render import revisar_despeje_etapa13
+        cam_json = Path(cr['full_command_report'])
+        if not cam_json.is_absolute():
+            cam_json = out / cam_json
+        if cam_json.is_file():
+            report_cam = leer(cam_json)
+            errors += revisar_despeje_etapa13(bpy, report_cam.get('tomas', []))
+    trace=[];prev={};length0={id:{b.name:b.length for b in r.data.bones} for id,r in rigs.items()};rules=d['rules'];max_len=0;max_contact=0;max_velocity=0;max_accel=0
     for f in range(1,n+1):
         sc.frame_set(f);bpy.context.view_layer.update();dg=bpy.context.evaluated_depsgraph_get();row={'frame':f,'entities':{}}
         for id,rig in rigs.items():
@@ -206,7 +220,7 @@ try:
                 if err>c['tolerance_m']:errors.append({'type':'CONTACTO','frame':f,'entity':c['entity'],'error_m':err})
         trace.append(row)
     import fisica_final
-    physical=fisica_final.revisar(sc,d,rigs,objects);errors+=physical['errors']
+    physical=fisica_final.revisar(sc,d,rigs,objects,salida=out);errors+=physical['errors']
     report={'frames':n,'entities':list(rigs),'camera':cr,'environment_states':state_review,'physics':physical,'max_bone_length_error_m':max_len,'max_contact_error_m':max_contact,'root_speed_max_m_s':max_velocity,'root_accel_max_m_s2':max_accel,'errors':errors,'all_passed':not errors};guardar(out/'revision_final.json',report);guardar(out/'trazas_finales.json',trace);etapa(13,report)
     if errors:raise ValueError('La compuerta física/cámara rechazó la escena; no se genera video')
     from catalogos_crecimiento import registrar as registrar_movimiento

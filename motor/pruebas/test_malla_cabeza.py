@@ -5,8 +5,17 @@ sys.path.insert(0, str(R / 'motor'))
 from malla_cabeza import desplazar_cabeza, error_hueso_cabeza, error_malla_vacia, region_desde_hueso, validar_cabeza, clasificar_medida_cabeza, estado_visual, marcar_malla_cabeza_visible
 from traductor_adn import compilar
 
-ESC = Path(__file__).resolve().parents[2] / 'escenas' / 'guardianes_esc1_candidata'
 IDS = ['ch-pintor-bce0', 'ch-spark-468e', 'ch-valentina-a9be', 'ch-eco-eff3']
+
+def _entrada_guardianes():
+    candidatos = (
+        R / 'paquetes/guardianes_t316/entrada_escena.json',
+        Path(__file__).resolve().parents[2] / 'escenas' / 'guardianes_esc1_candidata' / 'entrada_escena.json',
+    )
+    for p in candidatos:
+        if p.is_file():
+            return p
+    return None
 
 class Tests(unittest.TestCase):
     def test_malla_vacia_no_se_construye(self):
@@ -28,7 +37,10 @@ class Tests(unittest.TestCase):
             desplazar_cabeza([(0, 0, 0)], None)
 
     def test_cuatro_humanoides_salen_con_malla_de_cabeza(self):
-        d = json.loads((ESC / 'entrada_escena.json').read_text())
+        esc = _entrada_guardianes()
+        if esc is None:
+            self.skipTest('Requiere motor/paquetes/guardianes_t316/entrada_escena.json (incluido en tar avance14)')
+        d = json.loads(esc.read_text())
         d['entities'] = [e for e in d['entities'] if e['id'] in IDS]
         recibos, errores = compilar(d, True)
         self.assertEqual(errores, [])

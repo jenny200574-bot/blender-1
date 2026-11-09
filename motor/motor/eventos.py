@@ -22,6 +22,17 @@ def validar_eventos(events,duration):
   tracks[key]=e
  return E
 
+def tiempo_desde_cuadro(frame,fps):
+ """Segundos del reloj global para un cuadro Blender 1..N (alineado a camera/fr y fr_fin)."""
+ return (frame-1)/fps
+
+def cuadro_desde_tiempo(t,fps):
+ """Cuadro Blender (1-based) del borde temporal cuantizado."""
+ return 1+cuadro(t,fps)
+
+def hide_render_en_cuadro(keys,frame,fps):
+ return valor(keys,tiempo_desde_cuadro(frame,fps))
+
 def valor(keys,t):
  if t<=keys[0]['t']:return keys[0]['value']
  for a,b in zip(keys,keys[1:]):
@@ -76,11 +87,12 @@ def aplicar(scene,events,fps,duration):
    target=nodes[0].inputs[MATERIALES[attr]];keypath='default_value'
   elif obj is not None:target=obj.data if attr in ['energy','color'] and obj.type=='LIGHT' else obj;keypath=attr
   if not hasattr(target,keypath):raise ValueError('Propiedad incompatible: '+attr)
+  ultimo=cuadro(duration,fps)
   for k in e['keys']:
-   setattr(target,keypath,k['value']);target.keyframe_insert(keypath,frame=1+cuadro(k['t'],fps))
-  # Horneado por cuadro con nuestro reloj y curva: no defaults Bezier ni reinicio por toma.
-  for f in range(cuadro(duration,fps)):
-   setattr(target,keypath,valor(e['keys'],f/fps));target.keyframe_insert(keypath,frame=f+1)
+   setattr(target,keypath,k['value']);target.keyframe_insert(keypath,frame=cuadro_desde_tiempo(k['t'],fps))
+  # Horneado por cuadro con reloj 1..ultimo; mismo mapeo que fr(t)=1+cuadro(t) en cámara SB.
+  for frame in range(1,ultimo+1):
+   setattr(target,keypath,valor(e['keys'],tiempo_desde_cuadro(frame,fps)));target.keyframe_insert(keypath,frame=frame)
   receipts.append({'object':e['object'],'property':attr,'frames':cuadro(duration,fps),'source':e['source']})
  return receipts
 

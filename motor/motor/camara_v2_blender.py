@@ -8,7 +8,7 @@
     sujeto en cuadro (pies o cabeza según plano), nada tapa (BVH ray_cast), sin inclinación/roll indebidos, lado del eje 180°.
     Reparación acotada (acimut/distancia) o toma BLOQUEADA con motivo. Ningún comando queda en silencio: cada uno tiene estado.
 Interruptores .off junto a este archivo: manifiesto_espacial, resolver_camara, validacion_camara. Universal: sin canal/escena/personaje."""
-import bpy, sys, json, math, os
+import bpy, sys, json, math, os, re
 from pathlib import Path
 from mathutils import Vector, Matrix, Quaternion
 from mathutils.bvhtree import BVHTree
@@ -18,11 +18,24 @@ import rig_camara_coords as RIG
 from medir_objetivo_camara import puntos_de_objetivo, sensor_ancho_mm
 from curvas_accion import fijar_constante
 from eje_objetos import par_eje
-from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual
+from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual, malla_es_cabeza
 import buscador_posicion_camara as BUS
+from camara_directa_exp import clasificar_motivos_directa, retroceder_tray_holgura, informe_conflicto_toma
+from camara_despeje_render import FUENTES_VISIBLE_CAMERA, aplicar_visible_camera_toma, filtrar_objetos_ocultar
+from camara_oclusion_sb import (
+    contar_bloqueadores_rayos, cuadros_reparacion, elegir_a_ocultar, espejar_tray_camara_eje,
+    fusionar_conteos_bloqueo, motivos_reparables, nombres_obstaculo_en_malos, sujetos_protegidos,
+)
 import hashlib
 from array import array
 from progreso_camara import Progreso
+import camara_memoria as CAM_MEM
+def _rss_mb():
+    return CAM_MEM.rss_mb()
+def _purga_mallas():
+    return CAM_MEM.purga_mallas_huérfanas(bpy)
+def _diag_mem():
+    d = CAM_MEM.diagnostico_meshes(bpy); d['purga_meshes'] = _purga_mallas(); return d
 OFF = lambda n: (AQUI / f'{n}.off').exists()
 a = sys.argv[sys.argv.index('--') + 1:]
 def _j(i, d=None):
@@ -33,7 +46,11 @@ CMDS = _j(6, {}) or {}; ELEV = _j(7, {}) or {}; TP05 = _j(8, {}) or {}
 SW = {'manifiesto_espacial': not OFF('manifiesto_espacial'), 'resolver_camara': not OFF('resolver_camara'), 'validacion_camara': not OFF('validacion_camara')}
 # Mismas comprobaciones y mismo resultado; cambia el orden (cuadro por fuera) y el BVH del escenario se reutiliza por firma exacta.
 LOTES = not OFF('camara_lotes_por_cuadro'); SW['lotes_por_cuadro'] = LOTES
-PROG = Progreso.desde_entorno(OUT); PROG.marcar(forzar=True, fase='inicio', lotes_por_cuadro=LOTES)
+# Con camara_busqueda_reparacion.off: solo la pose inicial del SB (0°, factor 1); no rejilla ni bisección. La revisión no se salta.
+DIRECTO = OFF('camara_busqueda_reparacion'); SW['busqueda_reparacion'] = not DIRECTO; SW['directa_sb'] = DIRECTO
+DESPEJE_ESC = OFF('camara_escenario_despeje_por_toma'); SW['despeje_escenario'] = DESPEJE_ESC
+RETROCESO = OFF('camara_retroceso_holgura_directa'); SW['retroceso_holgura_directa'] = RETROCESO and DIRECTO
+PROG = Progreso.desde_entorno(OUT); PROG.marcar(forzar=True, fase='inicio', lotes_por_cuadro=LOTES, directa_sb=DIRECTO)
 sc = bpy.context.scene; FPS = sc.render.fps / sc.render.fps_base
 RX, RY = sc.render.resolution_x * sc.render.pixel_aspect_x, sc.render.resolution_y * sc.render.pixel_aspect_y; ASP = RX / RY
 TABLA = AJ['encuadre_fraccion_altura_visible']; UP = Vector((0, 0, 1)); FALT = []; AVISOS = []
@@ -50,6 +67,14 @@ if CAM is None or getattr(CAM, 'data', None) is None: raise ValueError('La escen
 SENSOR_W = sensor_ancho_mm((E or {}).get('camera')); CAM.data.sensor_width = SENSOR_W; CAM.data.sensor_fit = 'HORIZONTAL'
 TOMA_ACTUAL = None
 ACT = {o.name: o for o in bpy.data.objects if o.type == 'ARMATURE'}
+for _ent in (E or {}).get('entities', []) or []:
+    if _ent.get('type') != 'CHARACTER':
+        continue
+    _aid = _ent.get('id')
+    if _aid not in ACT:
+        continue
+    from cabeza_visible_constructor import publicar_mallas_cabeza_adn
+    publicar_mallas_cabeza_adn(_ent, ACT[_aid], (CFG.get('roles_hueso') or {}).get('cabeza') or ['cabeza'])
 def mallas(root):
     if root is None: return []
     candidatos = list(root.children_recursive)
@@ -58,9 +83,39 @@ def mallas(root):
         padre = getattr(o, 'parent', None)
         if padre == root and o.name not in ya:
             candidatos.append(o); ya.add(o.name)
-    return [x for x in candidatos if x.type == 'MESH' and not x.hide_render]
-ACT_MESH = {pid: mallas(o) for pid, o in ACT.items()}; ACT_SET = {m.name for ms in ACT_MESH.values() for m in ms}
-ENV = [o for o in sc.objects if o.type == 'MESH' and not o.hide_render and o.name not in ACT_SET]
+    def _visible_render(o):
+        try:
+            return bool(o.visible_get())
+        except (AttributeError, RuntimeError):
+            return not o.hide_render
+    return [x for x in candidatos if x.type == 'MESH' and _visible_render(x)]
+def _refrescar_escena_en_cuadro(frame):
+    global ACT_MESH, ACT_SET, ENV, ENV_ESTATICO, ENV_DINAMICO
+    sc.frame_set(frame); bpy.context.view_layer.update()
+    ACT_MESH = {pid: mallas(o) for pid, o in ACT.items()}
+    ACT_SET = {m.name for ms in ACT_MESH.values() for m in ms}
+    ENV = [o for o in sc.objects if o.type == 'MESH' and not o.hide_render and o.name not in ACT_SET]
+    ENV_ESTATICO = [o for o in ENV if not CAM_MEM.objeto_animado(o)]
+    ENV_DINAMICO = [o for o in ENV if CAM_MEM.objeto_animado(o)]
+_refrescar_escena_en_cuadro(1)
+_BVH_ESCENA_EST = [None, None, None]  # [_BV, cuadro, frozenset(excl)]
+_HUELLA_ENV = [None]
+def _huella_visibilidad_escena(frame):
+    sc.frame_set(frame); bpy.context.view_layer.update()
+    h = hashlib.blake2b(digest_size=16)
+    for o in sorted(sc.objects, key=lambda x: x.name):
+        if o.type != 'MESH': continue
+        vis = not o.hide_render
+        try: vis = vis and bool(o.visible_get())
+        except (AttributeError, RuntimeError): pass
+        try: vis = vis and bool(getattr(o, 'visible_camera', True))
+        except (AttributeError, RuntimeError): pass
+        tr = tuple(round(float(x), 3) for x in o.matrix_world.translation)
+        h.update(o.name.encode('utf-8')); h.update(b'\x01' if vis else b'\x00'); h.update(repr(tr).encode('utf-8'))
+    for pid in sorted(ACT.keys()):
+        ro = ACT[pid]; h.update(pid.encode('utf-8')); h.update(repr(tuple(round(float(x), 3) for x in ro.matrix_world.translation)).encode('utf-8'))
+    return h.digest()
+_MAX_PUNTOS_CACHE = int(CFG.get('puntos_region', 48)) * 12
 ADN_H = {x['id']: (x.get('spec') or {}).get('altura_m') for x in E.get('actors', [])}
 class _BV:
     def __init__(s, t, own): s.t = t; s.own = own
@@ -70,21 +125,35 @@ class _BV:
 def bvh(objs, dg):
     V, P, own = [], [], []
     for o in objs:
-        e = o.evaluated_get(dg); m = e.to_mesh(); n = len(V); mw = o.matrix_world
-        V += [mw @ v.co for v in m.vertices]; P += [tuple(i + n for i in p.vertices) for p in m.polygons]; own += [o.name] * len(m.polygons); e.to_mesh_clear()
+        e = o.evaluated_get(dg)
+        m = None
+        try:
+            m = e.to_mesh(); n = len(V); mw = o.matrix_world
+            V += [mw @ v.co for v in m.vertices]; P += [tuple(i + n for i in p.vertices) for p in m.polygons]; own += [o.name] * len(m.polygons)
+        finally:
+            if m is not None: e.to_mesh_clear()
+    _purga_mallas()
     return _BV(BVHTree.FromPolygons(V, P), own) if P else None
 def verts(objs, dg):
     out = []
     for o in objs:
-        e = o.evaluated_get(dg); m = e.to_mesh(); mw = o.matrix_world; out += [mw @ v.co for v in m.vertices]; e.to_mesh_clear()
+        e = o.evaluated_get(dg); m = None
+        try:
+            m = e.to_mesh(); mw = o.matrix_world; out += [mw @ v.co for v in m.vertices]
+        finally:
+            if m is not None: e.to_mesh_clear()
+    _purga_mallas()
     return out
 def verts_eval(o, dg):
     try: e = o.evaluated_get(dg)
     except (AttributeError, RuntimeError): return []
     if getattr(e, 'type', None) != 'MESH': return []
-    m = e.to_mesh()
-    try: return [e.matrix_world @ v.co for v in m.vertices]
-    finally: e.to_mesh_clear()
+    m = None
+    try:
+        m = e.to_mesh(); return [e.matrix_world @ v.co for v in m.vertices]
+    finally:
+        if m is not None: e.to_mesh_clear()
+        _purga_mallas()
 def puntos_respaldo(obj, dg, nombre, toma):
     """Sin vértices visibles: hijos con malla evaluada (depsgraph) o bounding box del mundo."""
     propios = verts_eval(obj, dg) if getattr(obj, 'type', None) == 'MESH' else []
@@ -103,11 +172,14 @@ def dentro_de_malla(bv, p):
 CACHE = {}; ENVC = {}; FIRMAS = {}; LLAVES = {}
 def _firma_malla(o, dg):
     """Huella de lo que bvh() lee de un objeto: matrix_world, vértices evaluados y polígonos."""
-    e = o.evaluated_get(dg); m = e.to_mesh(); h = hashlib.blake2b(digest_size=20)
+    e = o.evaluated_get(dg); m = None; h = hashlib.blake2b(digest_size=20)
     try:
+        m = e.to_mesh()
         for col, attr, tipo, ancho in ((m.vertices, 'co', 'f', 3), (m.loops, 'vertex_index', 'i', 1), (m.polygons, 'loop_start', 'i', 1), (m.polygons, 'loop_total', 'i', 1)):
             buf = array(tipo, bytes(4 * ancho * len(col))); col.foreach_get(attr, buf); h.update(len(buf).to_bytes(8, 'little')); h.update(buf.tobytes())
-    finally: e.to_mesh_clear()
+    finally:
+        if m is not None: e.to_mesh_clear()
+        _purga_mallas()
     h.update(array('f', [x for fila in o.matrix_world for x in fila]).tobytes())
     return h.digest()
 def _llave_entorno(f, excl):
@@ -120,11 +192,52 @@ def _llave_entorno(f, excl):
             if o.name not in excl: h.update(o.name.encode('utf-8') + b'\0'); h.update(FIRMAS[f][o.name])
         LLAVES[k] = h.digest()
     return LLAVES[k]
+def _env_objs(excl, dg=None):
+    excl = excl or frozenset()
+    salida = []
+    for o in ENV:
+        if o.name in excl:
+            continue
+        if dg is not None:
+            try:
+                ev = o.evaluated_get(dg)
+                if not bool(getattr(ev, 'visible_camera', True)):
+                    continue
+            except (AttributeError, RuntimeError):
+                pass
+        salida.append(o)
+    return salida
+def _bvh_escena_estatica(f, excl, dg):
+    global _BVH_ESCENA_EST
+    excl = excl or frozenset()
+    if not ENV_ESTATICO or any(o.name in excl for o in ENV_ESTATICO): return None
+    if _BVH_ESCENA_EST[0] is not None and _BVH_ESCENA_EST[1] == f and _BVH_ESCENA_EST[2] == excl:
+        return _BVH_ESCENA_EST[0]
+    estaticos = [o for o in _env_objs(excl, dg) if o in ENV_ESTATICO]
+    if not estaticos: return None
+    _BVH_ESCENA_EST[0] = bvh(estaticos, dg); _BVH_ESCENA_EST[1] = f; _BVH_ESCENA_EST[2] = excl
+    return _BVH_ESCENA_EST[0]
 def env_bvh(f, excl=frozenset()):
+    global _HUELLA_ENV
+    huella = _huella_visibilidad_escena(f)
+    if _HUELLA_ENV[0] != huella:
+        _refrescar_escena_en_cuadro(f)
+        FIRMAS.clear(); LLAVES.clear()
+        _HUELLA_ENV[0] = huella
     k = _llave_entorno(f, excl) if LOTES else (f, frozenset(excl))
     if k not in ENVC:
-        if len(ENVC) > 6: ENVC.clear()
-        sc.frame_set(f); ENVC[k] = bvh([o for o in ENV if o.name not in excl], bpy.context.evaluated_depsgraph_get())
+        while len(ENVC) > 4:
+            _k = next(iter(ENVC)); CAM_MEM.evictar_entrada_bvh(ENVC, _k, _BVH_ESCENA_EST)
+        sc.frame_set(f); dg = bpy.context.evaluated_depsgraph_get()
+        dyn = [o for o in _env_objs(excl, dg) if o in ENV_DINAMICO]
+        if not dyn:
+            est = _bvh_escena_estatica(f, excl, dg)
+            if est is not None:
+                ENVC[k] = est
+            else:
+                ENVC[k] = bvh(_env_objs(excl, dg), dg)
+        else:
+            ENVC[k] = bvh(_env_objs(excl, dg), dg)
     return ENVC[k]
 def mallas_de(i):
     o = bpy.data.objects.get(i) if i and i not in ACT else None
@@ -144,6 +257,7 @@ def medir(pid, f, toma=None):
         acts = [x.matrix_world.translation for x in ACT.values()]; fv = None
         if acts:
             d = sum(acts, Vector()) / len(acts) - c; d.z = 0; fv = d.normalized() if d.length > 1e-6 else None
+        P = CAM_MEM.compactar_puntos(P, _MAX_PUNTOS_CACHE)
         CACHE[k] = {'tipo': 'objeto', 'zmin': lo.z, 'zmax': hi.z, 'H': hi.z - lo.z, 'centro': c, 'cabeza': None, 'frente': fv, 'frente_cara': fv,
                     'frente_metodo': 'objeto: hacia el centro de los personajes construidos', 'puntos': P, 'huesos': {}, 'id': pid}
         return CACHE[k]
@@ -151,13 +265,14 @@ def medir(pid, f, toma=None):
     if not P: P = puntos_respaldo(A, dg, pid, toma)
     zmin = min(p.z for p in P); zmax = max(p.z for p in P)
     if not SW['manifiesto_espacial'] and isinstance(ADN_H.get(pid), (int, float)): zmax = zmin + ADN_H[pid]
-    cab_m = [m for m in ms if (m.parent_type == 'BONE' and m.parent_bone in R['cabeza']) or m.get('semantic_role') in {'head','face'}]; cab = None
+    cab_m = [m for m in ms if malla_es_cabeza(m, R['cabeza'])]; cab = None
     if cab_m:
         HP = verts(cab_m, dg)
         if not HP: cab_m = []
     if cab_m:
         lo = Vector([min(p[i] for p in HP) for i in range(3)]); hi = Vector([max(p[i] for p in HP) for i in range(3)])
-        cc = (lo + hi) / 2; cab = marcar_malla_cabeza_visible({'centro': cc, 'alto': hi.z - lo.z, 'top': hi.z, 'puntos': HP, 'puntos_cara': [p for p in HP if abs(p.z - cc.z) <= (hi.z - lo.z) / 4] or HP})
+        cc = (lo + hi) / 2; HPc = CAM_MEM.compactar_puntos(HP, _MAX_PUNTOS_CACHE // 2)
+        cab = marcar_malla_cabeza_visible({'centro': cc, 'alto': hi.z - lo.z, 'top': hi.z, 'puntos': HPc, 'puntos_cara': [p for p in HPc if abs(p.z - cc.z) <= (hi.z - lo.z) / 4] or HPc})
     pb = A.pose.bones; mw = A.matrix_world; fv = None; metodo = None
     pies = [n for n in R['pies'] if n in pb]
     if pies:
@@ -183,6 +298,7 @@ def medir(pid, f, toma=None):
         if spec['punto'] == 'centro_malla': hz[nm] = cab['centro'].z if cab else None
         else: hz[nm] = sum((mw @ pb[b].head).z for b in bs) / len(bs)
     pel = mw.translation
+    P = CAM_MEM.compactar_puntos(P, _MAX_PUNTOS_CACHE)
     CACHE[k] = {'tipo': 'personaje', 'zmin': zmin, 'zmax': zmax, 'H': zmax - zmin, 'centro': Vector((pel.x, pel.y, (zmin + zmax) / 2)), 'cabeza': cab,
                 'frente': fv, 'frente_cara': fc, 'frente_metodo': metodo, 'puntos': P, 'huesos': hz, 'id': pid}
     return CACHE[k]
@@ -202,6 +318,17 @@ def proyectar(p, loc, R, lens):
     c = R.transposed() @ (p - loc)
     if c.z >= -1e-6: return None
     k = lens / SENSOR_W; return (0.5 + k * c.x / -c.z, 0.5 + k * ASP * c.y / -c.z, -c.z)
+def _proyectado_en_cuadro(q):
+    """Un punto con proyección None (detrás de la cámara) no está en cuadro."""
+    return q is not None and 0 <= q[0] <= 1 and 0 <= q[1] <= 1
+def _muestra_ndc_fuera(pr, limite=8):
+    """Solo diagnóstico; no afecta la compuerta. None → 'detras_camara'."""
+    muestra = []
+    for q in pr:
+        if _proyectado_en_cuadro(q): continue
+        if len(muestra) >= limite: break
+        muestra.append('detras_camara' if q is None else [round(float(q[0]), 3), round(float(q[1]), 3)])
+    return muestra
 def sensor_h(): return SENSOR_W / ASP
 def region(m, plano):
     frac = TABLA.get(plano)
@@ -268,11 +395,125 @@ def limites(f, ancla, H, excl=frozenset()):
 def cuadros_muestra(f0, f1):
     return list(range(f0, f1 + 1))
 
+def _purga_bvh_camara():
+    global FIRMAS, LLAVES, ENVC, _HUELLA_ENV, _BVH_ESCENA_EST
+    FIRMAS.clear(); LLAVES.clear(); ENVC.clear(); _HUELLA_ENV[0] = None
+    _BVH_ESCENA_EST[0], _BVH_ESCENA_EST[1], _BVH_ESCENA_EST[2] = None, None, None
+    OTROS.clear()
+
+
+def _puntos_validacion_rayos(m, spec, f):
+    rg = region(m, spec['plano_de'](f))
+    pts = m['puntos']
+    if rg and not rg['cuerpo_entero'] and m.get('cabeza'):
+        pts = m['cabeza']['puntos_cara']
+    elif rg:
+        pts = [p for p in pts if rg['bot'] - 1e-3 <= p.z <= rg['top'] + 1e-3] or pts
+    return pts[::max(1, len(pts) // CFG['puntos_region'])]
+
+
+def _bloqueadores_rayos_directa(tray, spec, mal, f0, f1, S, objetivo):
+    act_ids = tuple(ACT.keys())
+    frames = cuadros_reparacion(mal, f0, f1)
+    P = {x['f']: x for x in tray}
+    total = dict(nombres_obstaculo_en_malos(mal))
+    excl_env = spec.get('excluir_env') or frozenset()
+    medf = spec['medir']
+    for f in frames:
+        x = P.get(f)
+        if x is None:
+            continue
+        m = medf(f)
+        if m is None:
+            continue
+        pts = _puntos_validacion_rayos(m, spec, f)
+        env = env_bvh(f, excl_env)
+        oth = otros_bvh(f, spec['excluir_oclusion'])
+        c = contar_bloqueadores_rayos(x['loc'], pts, env, oth)
+        total = fusionar_conteos_bloqueo(total, c)
+    prot = sujetos_protegidos(S or {}, objetivo, act_ids)
+    return elegir_a_ocultar(total, prot, act_ids)
+
+
+def _tras_validacion_directa(tray, spec, f0, f1, libres_e, libres_i, mal, S=None, objetivo=None, cruce_permitido=False):
+    """Reparación R14 tras validar en directa SB: eje 180°, retroceso, visible_camera por rayos."""
+    meta = {}
+    rep = {'pasos': [], 'ocultados': [], 'movimientos': [], 'sujetos_protegidos': sorted(sujetos_protegidos(S or {}, objetivo, tuple(ACT.keys())))}
+    hay_eje, hay_holg, hay_tap, hay_enc = motivos_reparables(mal)
+
+    if mal and not cruce_permitido and hay_eje and spec.get('eje'):
+        A, B, _lado = spec['eje']
+        pa = medir(A, f0); pb = medir(B, f0)
+        if pa and pb:
+            tray2 = espejar_tray_camara_eje(tray, pa['centro'], pb['centro'])
+            mal2 = validar(tray2, spec, f0, f1, libres_e, libres_i)
+            if len(mal2) <= len(mal):
+                rep['movimientos'].append({'accion': 'espejo_eje_180', 'motivo': 'reubicar cámara al lado correcto del eje', 'frame_ref': int(f0)})
+                tray, mal = tray2, mal2
+
+    if mal and SW.get('retroceso_holgura_directa') and (hay_holg or hay_enc):
+        for frac in (0.05, 0.08, 0.12, 0.18, 0.22):
+            tray2 = retroceder_tray_holgura(tray, frac)
+            mal2 = validar(tray2, spec, f0, f1, libres_e, libres_i)
+            if not mal2 or len(mal2) < len(mal):
+                rep['movimientos'].append({'accion': 'retroceso_holgura', 'fraccion_distancia': frac, 'motivo': 'holgura escenario u encuadre (cabeza/pies)'})
+                meta['retroceso_holgura'] = {'fraccion_distancia': frac, 'nota': 'Alejamiento cámara→mira; plano SB sin recálculo de trayectoria.'}
+                tray, mal = tray2, mal2
+                if not mal:
+                    break
+        hay_eje, hay_holg, hay_tap, hay_enc = motivos_reparables(mal)
+
+    ocultados_global = []
+    if mal and SW.get('despeje_escenario') and (hay_tap or hay_holg or hay_enc):
+        for _paso in range(3):
+            if not mal:
+                break
+            candidatos = _bloqueadores_rayos_directa(tray, spec, mal, f0, f1, S, objetivo)
+            if not candidatos:
+                break
+            permitidos, rechazados = filtrar_objetos_ocultar(candidatos, S or {}, objetivo, tuple(ACT.keys()))
+            if rechazados:
+                rep['pasos'].append({'accion': 'visible_camera_omitido', 'rechazados_sujeto': sorted(rechazados)})
+            if not permitidos:
+                break
+            motivo = 'rayos sujeto-cámara (BVH); solo obstáculos entre cámara y sujeto SB'
+            aplicar_visible_camera_toma(bpy, permitidos, f0, f1, TOMA_ACTUAL, motivo=motivo)
+            ocultados_global = sorted(set(ocultados_global) | set(permitidos))
+            _purga_bvh_camara()
+            mal2 = validar(tray, spec, f0, f1, libres_e, libres_i)
+            rep['pasos'].append({'accion': 'visible_camera', 'objetos': sorted(permitidos), 'motivo': motivo})
+            mal = mal2
+            if not mal:
+                break
+
+    if ocultados_global or rep['movimientos'] or rep['pasos']:
+        rep['ocultados'] = ocultados_global
+        rep.update({
+            'propiedad': 'visible_camera',
+            'frame_ini': int(f0),
+            'frame_fin': int(f1),
+            'fuentes': list(FUENTES_VISIBLE_CAMERA),
+            'nota': 'R14: ocultación por toma solo para esta cámara; hide_render intacto.',
+            'objetos': ocultados_global,
+        })
+        meta['reparacion_toma'] = rep
+        if ocultados_global:
+            meta['despeje_escenario'] = {k: rep[k] for k in ('propiedad', 'objetos', 'frame_ini', 'frame_fin', 'fuentes', 'nota', 'sujetos_protegidos') if k in rep or k == 'objetos'}
+            meta['despeje_escenario']['objetos'] = ocultados_global
+    return tray, mal, meta
+
+
 OTROS = {}
+def _vaciar_caches_toma():
+    global _BVH_ESCENA_EST
+    CACHE.clear(); FIRMAS.clear(); LLAVES.clear()
+    diag = CAM_MEM.ciclo_purga_post_toma(bpy, ENVC, OTROS, _BVH_ESCENA_EST)
+    return diag
 def otros_bvh(f, excluir):
     k = (f, tuple(sorted(excluir)))
     if k not in OTROS:
-        if LOTES and len(OTROS) > 6: OTROS.clear()
+        while len(OTROS) > 4:
+            _k = next(iter(OTROS)); CAM_MEM.evictar_entrada_bvh(OTROS, _k)
         sc.frame_set(f); OTROS[k] = bvh([m for pid, ms in ACT_MESH.items() if pid not in excluir for m in ms], bpy.context.evaluated_depsgraph_get())
     return OTROS[k]
 def validar(tray, spec, f0, f1, libres_encuadre=(), libres_inclin=()):
@@ -298,7 +539,10 @@ def validar_lote(items, f0, f1, tid):
 def _validar_cuadro(x, spec, f, libres_encuadre, libres_inclin, malos):
     loc = x['loc']; R = x['quat'].to_matrix(); lens = x['lente']; m = spec['medir'](f)
     if m is None: malos.append((f, 'objetivo ausente en este cuadro', 0)); return
-    env = env_bvh(f); env_oc = env_bvh(f, spec.get('excluir_env', frozenset())); oth = otros_bvh(f, spec['excluir_oclusion'])
+    excl_env = spec.get('excluir_env') or frozenset()
+    env = env_bvh(f, excl_env)
+    env_oc = env_bvh(f, excl_env)
+    oth = otros_bvh(f, spec['excluir_oclusion'])
     D = (m['centro'] - loc).length
     hol = min(CFG['holgura_max_m'], CFG['holgura_frac_distancia'] * D, CFG['holgura_frac_altura'] * m['H'])
     if env:
@@ -312,10 +556,21 @@ def _validar_cuadro(x, spec, f, libres_encuadre, libres_inclin, malos):
             pts = m['cabeza']['puntos_cara']
         elif rg: pts = [p for p in pts if rg['bot'] - 1e-3 <= p.z <= rg['top'] + 1e-3] or pts   # 05: pies y cabeza en planos abiertos
         pts = pts[::max(1, len(pts) // CFG['puntos_region'])]
-        pr = [proyectar(p, loc, R, lens) for p in pts]; fr_in = sum(1 for q in pr if q and 0 <= q[0] <= 1 and 0 <= q[1] <= 1) / max(1, len(pr))
+        pr = [proyectar(p, loc, R, lens) for p in pts]
+        npr = max(1, len(pr))
+        fr_in = sum(1 for q in pr if _proyectado_en_cuadro(q)) / npr
         req = CFG['region_en_cuadro_min']
-        if rg and not rg['cuerpo_entero'] and m['cabeza'] and rg['Hf'] < m['cabeza']['alto'] / 2: req *= rg['Hf'] / (m['cabeza']['alto'] / 2)
-        if fr_in < req: malos.append((f, 'sujeto fuera de cuadro (' + ('cabeza' if rg and not rg['cuerpo_entero'] else 'pies/cabeza') + ')', round(fr_in, 2)))
+        if rg and not rg['cuerpo_entero'] and m['cabeza'] and rg['Hf'] < m['cabeza']['alto'] / 2:
+            denom = m['cabeza']['alto'] / 2
+            if denom > 1e-9: req *= rg['Hf'] / denom
+        if fr_in < req:
+            origen = (m.get('cabeza') or {}).get('origen') if m.get('cabeza') else None
+            vvis = (m.get('cabeza') or {}).get('valida_visual', m.get('cabeza') and m['cabeza'].get('malla_visible'))
+            region_revision = 'cabeza_cara' if (rg and not rg['cuerpo_entero'] and m['cabeza']) else 'cuerpo'
+            en_c = sum(1 for q in pr if _proyectado_en_cuadro(q))
+            detras = sum(1 for q in pr if q is None)
+            malos.append((f, 'sujeto fuera de cuadro (' + ('cabeza' if rg and not rg['cuerpo_entero'] else 'pies/cabeza') + ')', round(fr_in, 2)))
+            spec.setdefault('_diag_encuadre', []).append({'frame': f, 'fraccion_en_cuadro': round(fr_in, 3), 'minimo': req, 'origen_cabeza': origen, 'cabeza_valida_visual': vvis, 'plano': spec.get('plano_de')(f) if spec.get('plano_de') else None, 'region_revision': region_revision, 'puntos_muestra': len(pr), 'puntos_en_cuadro': en_c, 'puntos_detras_camara': detras, 'muestra_ndc_fuera': _muestra_ndc_fuera(pr)})
         tap = {}
         for p in pts:
             for bv, et in ((env_oc, 'escenario'), (oth, 'otro personaje')):
@@ -645,8 +900,9 @@ _sonda_si_pidieron()
 VINETAS = sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
 for n, v in enumerate(VINETAS, 1):
     tid = f'toma{n:02d}'; TOMA_ACTUAL = tid; t0, t1 = map(float, v['t_abs']); f0, f1 = fr(t0), fr_fin(t1); vin = SBV.get(v['vineta']) or {}; cm = CMDS.get(v['vineta']) or {}
-    if LOTES: CACHE.clear(); OTROS.clear()   # medidas y BVH de actores solo de esta toma: la memoria no crece con la escena
-    PROG.marcar(forzar=True, toma=tid, toma_n=n, tomas=len(VINETAS), fase='toma', frame_ini=f0, frame_fin=f1)
+    _refrescar_escena_en_cuadro(f0)
+    mem_ini = _vaciar_caches_toma() if LOTES else _diag_mem()
+    PROG.marcar(forzar=True, toma=tid, toma_n=n, tomas=len(VINETAS), fase='toma', frame_ini=f0, frame_fin=f1, **mem_ini)
     S = leer_toma(v, vin, cm, tid); tgt = S['insert'] or v.get('objetivo')
     T = {'toma': n, 'id': f'e{SBC.get("escena", "")}_t{n:02d}', 'vineta': v['vineta'], 't0': t0, 't1': t1, 'frame_ini': f0, 'frame_fin': f1, 'objetivo': tgt,
          'tipo': S['plano0'], 'estado': None, 'motivos': [], 'notas': [], 'comandos': S['estado_cmd']}
@@ -694,12 +950,50 @@ for n, v in enumerate(VINETAS, 1):
         T['camara'] = 'existente (resolver_camara.off)'; T['estado'] = estado_visual('pasa' if not mal else 'bloqueada', T.get('cabeza_medida')); T['motivos'] = sorted({x[1] for x in mal}); T['muestras_malas'] = mal[:8]
         if par and par[0] != 'ambiguo' and ref_eje.get(par) is None and tray: ref_eje[par] = eje_s(S | {'_eje': par}, f0, tray[0]['loc'])
         tomas.append(T); trays.append(None); continue
-    intentos = []; elegido = None; medf = (lambda f: grupo(S['sujetos'], f, tgt, tid)) if len(S['sujetos']) > 1 else (lambda f: medir(tgt, f, tid))
+    intentos = []; elegido = None; tray = None; em_ = []; rama_directa_sb = False
+    medf = (lambda f: grupo(S['sujetos'], f, tgt, tid)) if len(S['sujetos']) > 1 else (lambda f: medir(tgt, f, tid))
+    _bm_directa = lambda **k: {'modo': 'directa_sb', 'busqueda_omitida': True, 'candidato': {'az_extra_deg': 0.0, 'factor_distancia': 1.0}, 'examinados': 0, 'resuelto_geometrico': False, 'production_approved': False, 'motivo': 'Pose inicial del storyboard (acimut 0°, factor 1); sin rejilla ni reparaciones alternativas.', **k}
     if S.get('pov') or S.get('ots') or not S.get('lens'):
         informe = BUS.sin_modelo('POV, OTS o toma sin lente: la posición no sale del cono de elevación')
     else:
         medidas = muestras_busqueda(v, S, f0, f1, medf, plano_de)
         if not medidas: informe = BUS.sin_modelo('El objetivo no está medido en el primer cuadro')
+        elif DIRECTO:
+            rama_directa_sb = True
+            informe = None
+            daz, fd = 0.0, 1.0
+            PROG.marcar(toma=tid, fase='validacion', intento=0, candidatos_max=1)
+            em_ = []; tray, err, ex = construir(v, S, (daz, fd), tid, em_)
+            if err: intentos.append({'az_extra': daz, 'fd': fd, 'error': err})
+            else:
+                spec['medir'] = ex['medf']; lado = S['_lado_eje']
+                if par and par[0] != 'ambiguo' and lado is None and not S['cruce_permitido']: lado = eje_s(S, f0, tray[0]['loc'])
+                spec['eje'] = (par[0], par[1], lado) if (par and par[0] != 'ambiguo' and not S['cruce_permitido']) else None
+                mal = validar(tray, spec, f0, f1, ex['libres_e'], ex['libres_i']) if SW['validacion_camara'] else []
+                exp_meta = {}
+                if mal and SW['validacion_camara']:
+                    tray, mal, exp_meta = _tras_validacion_directa(tray, spec, f0, f1, ex['libres_e'], ex['libres_i'], mal, S=S, objetivo=tgt, cruce_permitido=S.get('cruce_permitido'))
+                diags = spec.get('_diag_encuadre') or []
+                if diags:
+                    exp_meta['diagnostico_encuadre'] = diags[:12]
+                    peor = min(diags, key=lambda x: float(x.get('fraccion_en_cuadro', 0)))
+                    T['encuadre_peor'] = peor
+                    T['encuadre_nota'] = ('Medición en malla evaluada (%s): %.0f%% en cuadro vs mínimo %.0f%% (pose directa SB).'
+                                         % (peor.get('region_revision', '?'), 100 * float(peor.get('fraccion_en_cuadro', 0)), 100 * float(peor.get('minimo', 0))))
+                if mal:
+                    exp_meta['clasificacion_motivos'] = clasificar_motivos_directa(mal)
+                    cm = exp_meta['clasificacion_motivos']
+                    exp_meta['conflicto_sb_probable'] = bool(cm.get('eje_180') or cm.get('inclinacion_roll'))
+                if exp_meta:
+                    T['experimental_directa'] = exp_meta
+                    rep_t = (exp_meta.get('reparacion_toma') or {})
+                    if rep_t.get('ocultados') or exp_meta.get('despeje_escenario', {}).get('objetos'):
+                        T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['despeje_visible_camera']
+                    if rep_t.get('movimientos') or exp_meta.get('retroceso_holgura', {}).get('fraccion_distancia'):
+                        T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['reparacion_trayectoria']
+                intentos.append({'az_extra': daz, 'fd': fd, 'fallos': len(mal), 'motivos': sorted({x[1] for x in mal}), 'muestras_malas': mal[:6]})
+                if not mal: elegido = (tray, daz, fd, em_, ex, lado)
+            T['busqueda_matematica'] = {**BUS.resumen(BUS.sin_modelo('directa_sb sin buscador')), **_bm_directa(evaluaciones_validacion=len(intentos), candidatos_construidos=1)}
         else:
             informe = BUS.buscar({'sensor_mm': SENSOR_W, 'lens_mm': float(S['lens']), 'aspecto': ASP, 'elev_deg': float(S['elev']), 'orient_deg': float(S['orient'] or 0),
                                   'aire': float(S['aire']), 'xlado': float(S['xlado']), 'region_min': CFG['region_en_cuadro_min'], 'max_cara_deg': CFG['max_angulo_cara_deg'],
@@ -707,9 +1001,16 @@ for n, v in enumerate(VINETAS, 1):
                                   'holgura_frac_distancia': CFG['holgura_frac_distancia'], 'holgura_frac_altura': CFG['holgura_frac_altura'], 'lado': None if S['cruce_permitido'] else S.get('_lado_eje'),
                                   'cara_exigida': spec['cara'], 'azimuts_deg': CFG['busqueda_acimut_deg'], 'factores': CFG['busqueda_factor_distancia'], 'muestras': medidas,
                                   'por_cuadro': LOTES, 'aviso': (lambda fase, i, total, cand, tid=tid: PROG.marcar(toma=tid, fase='buscador_' + fase, cuadro=i, cuadros=total, candidatos=cand))})
-    T['busqueda_matematica'] = BUS.resumen(informe)
-    propuestas = list(informe.get('propuestas') or [])
-    if not propuestas: propuestas = [{'az_extra_deg': a, 'factor_distancia': fd} for a in CFG['busqueda_acimut_deg'] for fd in CFG['busqueda_factor_distancia']]
+    if not rama_directa_sb:
+        if DIRECTO and informe is not None:
+            T['busqueda_matematica'] = {**BUS.resumen(informe), **_bm_directa()}
+        else:
+            T['busqueda_matematica'] = BUS.resumen(informe)
+        propuestas = list((informe or {}).get('propuestas') or [])
+        if not propuestas and not DIRECTO:
+            propuestas = [{'az_extra_deg': a, 'factor_distancia': fd} for a in CFG['busqueda_acimut_deg'] for fd in CFG['busqueda_factor_distancia']]
+    else:
+        propuestas = []
     vistos = set(); orden = []
     for cand in propuestas:
         clave = (round(float(cand['az_extra_deg']), 4), round(float(cand['factor_distancia']), 4))
@@ -761,9 +1062,15 @@ for n, v in enumerate(VINETAS, 1):
         tray, daz, fd, em_, ex, lado = elegido; T['estado'] = estado_visual('pasa', T.get('cabeza_medida')); T['reparacion'] = None if (daz == 0 and fd == 1.0) else {'acimut_extra_deg': daz, 'factor_distancia': fd, 'intentos': len(intentos)}
         if par and par[0] != 'ambiguo' and ref_eje.get(par) is None and lado is not None: ref_eje[par] = lado
     else:
-        val = [i for i in intentos if 'fallos' in i]; mejor = min(val, key=lambda i: i['fallos']) if val else None
-        em_ = []; tray, err, ex = construir(v, S, ((mejor or {}).get('az_extra', 0), (mejor or {}).get('fd', 1.0)), tid, em_)
-        T['estado'] = 'bloqueada'; T['motivos'] = mejor['motivos'] if mejor else [i.get('error') for i in intentos][:3]; T['mejor_intento'] = mejor; T['intentos'] = len(intentos)
+        if DIRECTO:
+            val = [i for i in intentos if 'fallos' in i]
+            if val: fallo = val[0]; T['estado'] = 'bloqueada'; T['motivos'] = fallo['motivos']; T['muestras_malas'] = fallo.get('muestras_malas'); T['intentos'] = len(intentos)
+            else: T['estado'] = 'bloqueada'; T['motivos'] = [i.get('error') for i in intentos if i.get('error')][:3] or ([informe['motivo']] if isinstance(informe, dict) and informe.get('motivo') else ['sin_candidato_sb']); T['intentos'] = len(intentos)
+            T['mejor_intento'] = None
+        else:
+            val = [i for i in intentos if 'fallos' in i]; mejor = min(val, key=lambda i: i['fallos']) if val else None
+            em_ = []; tray, err, ex = construir(v, S, ((mejor or {}).get('az_extra', 0), (mejor or {}).get('fd', 1.0)), tid, em_)
+            T['estado'] = 'bloqueada'; T['motivos'] = mejor['motivos'] if mejor else [i.get('error') for i in intentos][:3]; T['mejor_intento'] = mejor; T['intentos'] = len(intentos)
     T['comandos'] += em_
     if tray:
         k0 = tray[0]; T['camara'] = {'loc': r3(k0['loc']), 'mira': r3(k0['mira']), 'lente': round(k0['lente'], 2), 'sensor_ancho_mm': SENSOR_W, 'sensor_fit': 'HORIZONTAL',
@@ -774,7 +1081,18 @@ for n, v in enumerate(VINETAS, 1):
         T['foco'] = S['foco']
     T['notas'] = [f"{c['comando']}: {c['detalle']}" for c in T['comandos'] if c.get('detalle')]
     T['sin_silencio'] = all(c['estado'] in ('ejecutado', 'falta_dato', 'no_programado', 'montaje', 'solo_revision', 'aviso') for c in T['comandos'])
+    cabeza_invalida = isinstance(T.get('cabeza_medida'), dict) and not T.get('cabeza_medida', {}).get('valida_visual', True)
+    if T.get('estado') != 'pasa' or (T.get('experimental_directa') or {}).get('conflicto_sb_probable') or cabeza_invalida:
+        cm = (T.get('experimental_directa') or {}).get('clasificacion_motivos') or clasificar_motivos_directa([(0, m, 0) for m in (T.get('motivos') or [])])
+        motivos_inf = list(T.get('motivos') or [])
+        if cabeza_invalida and T.get('cabeza_medida', {}).get('mensaje'):
+            motivos_inf.append(T['cabeza_medida']['mensaje'])
+        faltas_toma = [x['mensaje'] for x in FALT if x.get('toma') == tid]
+        motivos_inf.extend(f for f in faltas_toma if f not in motivos_inf)
+        T['informe_conflicto'] = informe_conflicto_toma(tid, S, motivos_inf, cm, SBV.get(v['vineta']))
     tomas.append(T); trays.append((tray, S) if tray else None)
+    mem_fin = _vaciar_caches_toma() if LOTES else _diag_mem()
+    PROG.marcar(toma=tid, fase='toma_fin', **mem_fin)
 # ---------------- hornear la trayectoria en el .blend (lo que se graba) ----------------
 PROG.marcar(forzar=True, fase='hornear', tomas=len(tomas))
 if SW['resolver_camara']:

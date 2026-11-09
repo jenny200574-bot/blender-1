@@ -82,7 +82,8 @@ class Progreso:
         os.replace(parcial, destino)
 
     FIJOS = frozenset(('estado', 'pid', 'inicio_unix', 'limite_s', 'lotes_por_cuadro', 'toma', 'toma_n', 'tomas',
-                       'frame_ini', 'frame_fin', 'fase', 'segundos', 'actualizado_unix'))
+                       'frame_ini', 'frame_fin', 'fase', 'segundos', 'actualizado_unix', 'rss_mb',
+                       'meshes_total', 'meshes_sin_usuarios', 'purga_meshes'))
 
     def marcar(self, forzar=False, **datos):
         """Actualiza el estado. Escribe si forzar o si pasaron cada_s desde la última escritura.

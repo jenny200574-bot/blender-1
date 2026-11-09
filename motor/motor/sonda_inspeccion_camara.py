@@ -17,6 +17,8 @@ from pathlib import Path
 import bpy
 from mathutils import Vector
 
+from malla_cabeza import malla_es_cabeza
+
 
 def _roles(config):
     if not config or not Path(config).is_file():
@@ -102,7 +104,7 @@ def inspeccionar(ctx, actor, frames, config=None):
         dg = ctx.evaluated_depsgraph_get()
         hijos = [x for x in obj.children_recursive if x.type == 'MESH']
         mallas = [_malla(x, dg) for x in hijos]
-        de_cabeza = [x for x in mallas if (x['parent_bone'] in cabeza) or x['semantic_role'] in {'head', 'face'} or x['role'] in {'head', 'face'} or x['bind_role'] in {'head', 'face'}]
+        de_cabeza = [x for x in mallas if malla_es_cabeza(x, cabeza)]
         huesos = {}
         if obj.type == 'ARMATURE':
             mw = obj.matrix_world

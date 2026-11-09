@@ -105,7 +105,12 @@ def construir_parte(spec,root,objects):
     if obj.name in objects:raise ValueError('ID 3D repetido '+obj.name)
     if spec.get('hidden_under_garment'):obj.hide_render=True;obj['motor_preserve_hidden']=True
     if spec.get('library_dimensions'):obj['library_dimensions']=__import__('json').dumps(spec['library_dimensions'],ensure_ascii=False)
-    obj['dna_source']=spec['source'];obj['semantic_role']=spec.get('role','geometry');objects[obj.name]=obj;return obj
+    obj['dna_source']=spec['source']
+    if spec.get('bind_role'):
+        obj['bind_role']=spec['bind_role']
+    rol=spec.get('role') or spec.get('bind_role') or 'geometry'
+    obj['semantic_role']=rol if rol in ('head','face') else spec.get('role','geometry')
+    objects[obj.name]=obj;return obj
 
 def validar_adn(adn):
     """Exportador de ADN acepta sólo despiece reproducible y trazable, nunca prosa como malla."""
