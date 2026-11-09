@@ -7,14 +7,29 @@ import importlib.util
 from pathlib import Path
 
 
+def _rutas_modulo(nombre):
+    here = Path(__file__).resolve().parent
+    vistos = set()
+    for base in (here.parent, here.parent / 'motor', here.parents[1], here.parents[1] / 'motor'):
+        base = base.resolve()
+        if base in vistos:
+            continue
+        vistos.add(base)
+        p = base / (nombre + '.py')
+        if p.is_file():
+            yield p
+
 def cargar(nombre):
     if not isinstance(nombre, str) or not nombre.isidentifier() or nombre.startswith('_'):
         raise ValueError('Nombre de módulo no permitido')
-    ruta = Path(__file__).resolve().parents[1] / (nombre + '.py')
-    if not ruta.is_file():
+    candidatas = list(_rutas_modulo(nombre))
+    if not candidatas:
+        here = Path(__file__).resolve().parent
+        esperado = (here.parent / (nombre + '.py')).resolve()
         raise ModuleNotFoundError(
-            'Falta el módulo único ' + str(ruta) + '. No se usa una copia bajo heredado/.'
+            'Falta el módulo único ' + str(esperado) + '. No se usa una copia bajo heredado/.'
         )
+    ruta = candidatas[0]
     spec = importlib.util.spec_from_file_location('motor_unico_' + nombre, ruta)
     if spec is None or spec.loader is None:
         raise ModuleNotFoundError(str(ruta))

@@ -21,9 +21,12 @@ from eje_objetos import par_eje
 from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual, malla_es_cabeza
 import buscador_posicion_camara as BUS
 from camara_directa_exp import tapadores_escenario_desde_malos, clasificar_motivos_directa, retroceder_tray_holgura, informe_conflicto_toma
-import hashlib
+import hashlib, resource
 from array import array
 from progreso_camara import Progreso
+def _rss_mb():
+    try: return round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0, 1)
+    except Exception: return None
 OFF = lambda n: (AQUI / f'{n}.off').exists()
 a = sys.argv[sys.argv.index('--') + 1:]
 def _j(i, d=None):
@@ -313,6 +316,8 @@ def _tras_validacion_directa(tray, spec, f0, f1, libres_e, libres_i, mal):
 
 
 OTROS = {}
+def _vaciar_caches_toma():
+    CACHE.clear(); ENVC.clear(); FIRMAS.clear(); LLAVES.clear(); OTROS.clear()
 def otros_bvh(f, excluir):
     k = (f, tuple(sorted(excluir)))
     if k not in OTROS:
@@ -696,8 +701,8 @@ _sonda_si_pidieron()
 VINETAS = sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
 for n, v in enumerate(VINETAS, 1):
     tid = f'toma{n:02d}'; TOMA_ACTUAL = tid; t0, t1 = map(float, v['t_abs']); f0, f1 = fr(t0), fr_fin(t1); vin = SBV.get(v['vineta']) or {}; cm = CMDS.get(v['vineta']) or {}
-    if LOTES: CACHE.clear(); OTROS.clear()   # medidas y BVH de actores solo de esta toma: la memoria no crece con la escena
-    PROG.marcar(forzar=True, toma=tid, toma_n=n, tomas=len(VINETAS), fase='toma', frame_ini=f0, frame_fin=f1)
+    if LOTES: _vaciar_caches_toma()   # medidas y BVH por toma; FIRMAS/LLAVES/ENVC no deben acumularse entre tomas
+    PROG.marcar(forzar=True, toma=tid, toma_n=n, tomas=len(VINETAS), fase='toma', frame_ini=f0, frame_fin=f1, rss_mb=_rss_mb())
     S = leer_toma(v, vin, cm, tid); tgt = S['insert'] or v.get('objetivo')
     T = {'toma': n, 'id': f'e{SBC.get("escena", "")}_t{n:02d}', 'vineta': v['vineta'], 't0': t0, 't1': t1, 'frame_ini': f0, 'frame_fin': f1, 'objetivo': tgt,
          'tipo': S['plano0'], 'estado': None, 'motivos': [], 'notas': [], 'comandos': S['estado_cmd']}
@@ -876,6 +881,8 @@ for n, v in enumerate(VINETAS, 1):
         motivos_inf.extend(f for f in faltas_toma if f not in motivos_inf)
         T['informe_conflicto'] = informe_conflicto_toma(tid, S, motivos_inf, cm, SBV.get(v['vineta']))
     tomas.append(T); trays.append((tray, S) if tray else None)
+    if LOTES: _vaciar_caches_toma()
+    PROG.marcar(toma=tid, fase='toma_fin', rss_mb=_rss_mb())
 # ---------------- hornear la trayectoria en el .blend (lo que se graba) ----------------
 PROG.marcar(forzar=True, fase='hornear', tomas=len(tomas))
 if SW['resolver_camara']:

@@ -1,6 +1,8 @@
 """Programa 01 estructurado→eventos de presencia. No inventa vuelos ni FX.
-La aparición fija hide_render en t[0] del guion (no en t[1]); el intervalo t[1]
-acota la acción narrativa pero no retrasa la visibilidad de aparecer.
+Fuente de verdad: acciones 01 (aparecer/desaparecer) con onset en t[0].
+Pistas hide_render previas (p. ej. plantillas Argon/live en environment.events)
+se sustituyen si cubren el mismo objeto o action_id; el guard CONFLICTO sigue activo
+si quedan dos escritores distintos.
 """
 def _inicio_accion(action):
     t=action.get('t')
@@ -15,9 +17,36 @@ def _claves_presencia(accion, inicio_s):
     keys.append({'t':inicio_s,'value':not aparecer,'curve':'CONSTANT'})
     return keys
 
+def _mapa_presencia_01(d):
+    by_action={};by_object={}
+    for action in d.get('actions',[]) or []:
+        if action.get('accion') not in ['aparecer','desaparecer']:continue
+        target=action.get('objeto') or action.get('actor')
+        if not target:continue
+        binding=d.get('bindings',{}).get(target,{})
+        target=binding.get('scene_object_id',target)
+        by_action[action['id']]=(target,action)
+        by_object.setdefault(target,[]).append(action['id'])
+    return by_action,by_object
+
+def _presencia_sustituye_pista(event,by_action,by_object):
+    """True si la pista legacy hide_render la reemplaza 01 para el mismo actor/objeto."""
+    if event.get('property')!='hide_render':return False
+    aids=set(event.get('action_ids') or [])
+    if event.get('action_id'):aids.add(event['action_id'])
+    if aids&by_action.keys():return True
+    obj=event.get('object')
+    if obj not in by_object:return False
+    if aids and not (aids&set(by_object[obj])):return False
+  # mismo objeto con aparecer/desaparecer en 01: plantilla Argon/vivo (t[1]) es obsoleta
+    return True
+
 def compilar_presencia(d):
     environment=d['environment'];events=environment.setdefault('events',[]) if d.get('actions') is not None else environment.get('events',[])
-    events[:]=[e for e in events if not e.get('compiled_presence')]
+    by_action,by_object=_mapa_presencia_01(d)
+    sustituidos=[e for e in events if _presencia_sustituye_pista(e,by_action,by_object)]
+    events[:]=[e for e in events if e not in sustituidos and not e.get('compiled_presence')]
+    if sustituidos:environment['presence_superseded']=[{'object':e.get('object'),'property':e.get('property'),'action_id':e.get('action_id'),'action_ids':e.get('action_ids'),'source':e.get('source')} for e in sustituidos]
     receipts=[]
     for action in d.get('actions',[]):
         if action.get('accion') not in ['aparecer','desaparecer']:continue

@@ -38,6 +38,7 @@ INCLUIR = [
     ('motor/pruebas/test_cabeza_visible_legacy.py', 'motor/pruebas/test_cabeza_visible_legacy.py'),
     ('motor/pruebas/test_visibilidad_cabeza_fcurves.py', 'motor/pruebas/test_visibilidad_cabeza_fcurves.py'),
     ('motor/pruebas/test_presencia_aparicion_toma.py', 'motor/pruebas/test_presencia_aparicion_toma.py'),
+    ('motor/pruebas/test_cargar_modulo_motor.py', 'motor/pruebas/test_cargar_modulo_motor.py'),
     ('motor/pruebas/blender_camara', 'motor/pruebas/blender_camara'),
     ('motor/CONTRATO_ENTRADA.schema.json', 'motor/CONTRATO_ENTRADA.schema.json'),
     ('motor/CONTRATO_TIEMPOS_DIALOGO.schema.json', 'motor/CONTRATO_TIEMPOS_DIALOGO.schema.json'),

@@ -51,6 +51,83 @@ class Tests(unittest.TestCase):
         self.assertIs(hide_render_en_cuadro(ev['keys'], f_ini - 1, FPS), True)
         self.assertIs(hide_render_en_cuadro(ev['keys'], f_fin + 1, FPS), False)
 
+    def test_argon_t21_y_action_a9_un_solo_escritor(self):
+        d = {
+            'environment': {
+                'events': [
+                    {
+                        'object': 'ch-pintor-bce0',
+                        'property': 'hide_render',
+                        'recursive': True,
+                        'action_id': 'a9',
+                        'keys': [
+                            {'t': 0, 'value': True, 'curve': 'CONSTANT'},
+                            {'t': 21.0, 'value': False, 'curve': 'CONSTANT'},
+                        ],
+                        'source': {'module': 'argon', 'plantilla': 'hero_visibility'},
+                    }
+                ]
+            },
+            'actions': [
+                {
+                    'id': 'a9',
+                    'actor': 'ch-pintor-bce0',
+                    'accion': 'aparecer',
+                    't': [T0, T1],
+                }
+            ],
+            'clock': {'duration_s': 120, 'fps': FPS},
+        }
+        compilar_presencia(d)
+        hrs = [
+            e
+            for e in d['environment']['events']
+            if e.get('object') == 'ch-pintor-bce0' and e.get('property') == 'hide_render'
+        ]
+        self.assertEqual(len(hrs), 1)
+        self.assertEqual(validar_eventos(hrs, d['clock']['duration_s']), [])
+        for frame in range(433, 505):
+            self.assertIs(hide_render_en_cuadro(hrs[0]['keys'], frame, FPS), False)
+        self.assertIn('presence_superseded', d['environment'])
+
+    def test_cofre_argon_t33_sustituido_por_aparecer_t30(self):
+        d = {
+            'environment': {
+                'events': [
+                    {
+                        'object': 'obj-cofre-dorado',
+                        'property': 'hide_render',
+                        'recursive': True,
+                        'action_id': 'a13',
+                        'keys': [
+                            {'t': 0, 'value': True, 'curve': 'CONSTANT'},
+                            {'t': 33.0, 'value': False, 'curve': 'CONSTANT'},
+                        ],
+                        'source': {'module': 'argon', 'plantilla': 'cofre_visibility'},
+                    }
+                ]
+            },
+            'actions': [
+                {
+                    'id': 'a13',
+                    'objeto': 'obj-cofre-dorado',
+                    'accion': 'aparecer',
+                    't': [30.0, 33.0],
+                }
+            ],
+            'clock': {'duration_s': 120, 'fps': FPS},
+        }
+        compilar_presencia(d)
+        ev = d['environment']['events'][0]
+        self.assertEqual(ev['action_ids'], ['a13'])
+        onset = next(k for k in ev['keys'] if k['value'] is False)
+        self.assertEqual(onset['t'], 30.0)
+        f_ini = 1 + cuadro(30.0, FPS)
+        f_fin = cuadro(33.0, FPS)
+        self.assertIs(hide_render_en_cuadro(ev['keys'], f_ini, FPS), False)
+        self.assertIs(hide_render_en_cuadro(ev['keys'], f_fin, FPS), False)
+        self.assertEqual(validar_eventos([ev], d['clock']['duration_s']), [])
+
     def test_recompilar_borra_presencia_obsoleta_con_onset_fin(self):
         d = {
             'environment': {

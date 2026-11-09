@@ -15,6 +15,19 @@ class Tests(unittest.TestCase):
         self.assertEqual(Path(modulo.__file__).resolve(), (ROOT / 'motor' / 'malla_cabeza.py').resolve())
         self.assertEqual(modulo.desplazar_cabeza([(0, 0, 0)], 2), [(0, 1.0, 0)])
 
+    def test_encuentra_modulo_cuando_heredado_y_modulos_comparten_padre(self):
+        import tempfile, shutil, importlib.util
+        base = Path(tempfile.mkdtemp(prefix='cargar_layout_', dir=ROOT / 'evidencia'))
+        pkg = base / 'motor'
+        (pkg / 'heredado').mkdir(parents=True)
+        shutil.copy2(ROOT / 'motor' / 'malla_cabeza.py', pkg / 'malla_cabeza.py')
+        shutil.copy2(HEREDADO / 'cargar_modulo_motor.py', pkg / 'heredado' / 'cargar_modulo_motor.py')
+        spec = importlib.util.spec_from_file_location('cargar_modulo_aislado', pkg / 'heredado' / 'cargar_modulo_motor.py')
+        cm = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cm)
+        modulo = cm.cargar('malla_cabeza')
+        self.assertEqual(Path(modulo.__file__).resolve(), (pkg / 'malla_cabeza.py').resolve())
+
     def test_no_acepta_una_copia_bajo_heredado(self):
         copia = HEREDADO / 'malla_cabeza.py'
         self.assertFalse(copia.exists())
