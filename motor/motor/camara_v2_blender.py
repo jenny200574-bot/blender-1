@@ -885,6 +885,10 @@ for n, v in enumerate(VINETAS, 1):
                     exp_meta['conflicto_sb_probable'] = bool(cm.get('eje_180') or cm.get('inclinacion_roll'))
                 if exp_meta:
                     T['experimental_directa'] = exp_meta
+                    if exp_meta.get('despeje_escenario'):
+                        T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['despeje_bvh_escenario']
+                    if exp_meta.get('retroceso_holgura', {}).get('fraccion_distancia'):
+                        T['motor_aplicado'] = (T.get('motor_aplicado') or []) + ['retroceso_holgura']
                 intentos.append({'az_extra': daz, 'fd': fd, 'fallos': len(mal), 'motivos': sorted({x[1] for x in mal}), 'muestras_malas': mal[:6]})
                 if not mal: elegido = (tray, daz, fd, em_, ex, lado)
             T['busqueda_matematica'] = {**BUS.resumen(BUS.sin_modelo('directa_sb sin buscador')), **_bm_directa(evaluaciones_validacion=len(intentos), candidatos_construidos=1)}

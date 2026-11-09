@@ -60,6 +60,18 @@ def clasificar_motivos_directa(malos):
     return cats
 
 
+def opcion_ricardo(clasificacion, motivos):
+    """Pared invisible (BVH validación) u holgura de acercamiento; sin recalcular plan SB."""
+    ops = []
+    if clasificacion.get('holgura_escenario'):
+        ops.append({'accion': 'excluir_bvh_escenario', 'detalle': 'Despeje por toma: geometría escenario omitida solo en validación (sombras/reflejos en render intactos).', 'interruptor': 'camara_escenario_despeje_por_toma.off'})
+    if clasificacion.get('holgura_escenario') and any('dentro de geometría' in (m or '') or 'pegada' in (m or '') for m in (motivos or [])):
+        ops.append({'accion': 'retroceso_holgura', 'detalle': 'Alejar cámara a lo largo del eje sin cambiar encuadre SB.', 'interruptor': 'camara_retroceso_holgura_directa.off'})
+    if clasificacion.get('encuadre') or clasificacion.get('eje_180') or clasificacion.get('inclinacion_roll'):
+        ops.append({'accion': 'conflicto_storyboard', 'detalle': 'No arreglable sin cambiar viñeta, pose o plano.'})
+    return ops
+
+
 def informe_conflicto_toma(vineta, S, motivos, clasificacion, vin=None):
     """Qué pide el SB, qué viola la revisión; sin ocultar props ni cambiar plan."""
     vin = vin or {}
@@ -100,7 +112,8 @@ def informe_conflicto_toma(vineta, S, motivos, clasificacion, vin=None):
         'opciones_sin_cambiar_storyboard': ops,
         'props_historia': 'No se ocultan obj-* (p. ej. obj-cama.*).',
         'clase_conflicto': clases,
-        'nota_ricardo': 'No recalcular plan SB; pared invisible o acercamiento solo para esa cámara si clase incluye arreglable_motor.',
+        'opciones_ricardo': opcion_ricardo(clasificacion, motivos),
+        'nota_ricardo': 'No recalcular plan SB; pared invisible (BVH) o acercamiento solo para esa cámara si clase incluye arreglable_motor.',
     }
 
 

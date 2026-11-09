@@ -1,5 +1,7 @@
 """COM ponderado, apoyos, penetración y límites: usa geometría evaluada y perfiles declarados."""
 import math
+from continuidad_tomas import anotar_error_toma, cuadros_inicio_toma, exclusion_cinematica_contrato
+from superficie_caminable import es_superficie_caminable, z_superior_estimada
 
 # Criterio de penetración (etapa 13):
 # - interior_cerrado: sólidos donde la parity por rayos es resoluble (un rayo + respaldo 6 ejes).
@@ -199,6 +201,7 @@ def revisar(scene,d,rigs,objects,salida=None):
     except ValueError:
         max_pen_f = 48
     cuadros_pen=set(cuadros_muestra_penetracion(n, max_muestras=max(8, max_pen_f)))
+    inicios_toma=cuadros_inicio_toma(d); skip_cine, _src_cine=exclusion_cinematica_contrato(rules)
     collider_estatico={nm: not objeto_animado(objects[nm]) for nm in names if nm in objects}
     cache_collider={}
     allow={frozenset(x) for x in rules['allowed_collision_pairs']};touch={frozenset(x) for x in rules.get('contact_pairs',[])}
@@ -213,6 +216,11 @@ def revisar(scene,d,rigs,objects,salida=None):
         finally: obj.to_mesh_clear()
         tree=BVHTree.FromPolygons(vs, fs) if fs else None
         meta=clasificar_collider(nm, vs, tree, nf) if tree else {'object': nm, 'metodo': 'distancia_overlap', 'motivo': f'{nm}: sin geometría de polígonos'}
+        if es_superficie_caminable(nm):
+            zt=z_superior_estimada(vs)
+            meta['superficie_caminable']=True
+            if zt is not None:
+                meta['z_top_m']=zt
         if nm not in revisados_malla and meta['metodo']!='interior_cerrado':
             revisados_malla.add(nm);mesh_review.append(meta)
         cache_collider[clave]=(tree, vs, meta)
@@ -253,10 +261,16 @@ def revisar(scene,d,rigs,objects,salida=None):
                 old_com,old_vel,old_q=prev[e['id']];vel=(com-old_com)*fps
                 if old_vel is not None:
                     acc=(vel-old_vel).length*fps;max_com_accel=max(max_com_accel,acc)
-                    if acc>rules['com_accel_max_m_s2']:errors.append({'type':'ACELERACION_COM','frame':f,'entity':e['id'],'value':acc})
+                    if acc>rules['com_accel_max_m_s2']:
+                        if not (skip_cine and f in inicios_toma):
+                            err={'type':'ACELERACION_COM','frame':f,'entity':e['id'],'value':acc}
+                            errors.append(anotar_error_toma(err, d, f, fps, rules))
                 for name,q in quats.items():
                     angle=old_q[name].rotation_difference(q).angle;v=math.degrees(min(angle,2*math.pi-angle))*fps;max_ang=max(max_ang,v)
-                    if v>rules['joint_speed_max_deg_s']:errors.append({'type':'VELOCIDAD_ANGULAR','frame':f,'entity':e['id'],'bone':name,'value':v})
+                    if v>rules['joint_speed_max_deg_s']:
+                        if not (skip_cine and f in inicios_toma):
+                            err={'type':'VELOCIDAD_ANGULAR','frame':f,'entity':e['id'],'bone':name,'value':v}
+                            errors.append(anotar_error_toma(err, d, f, fps, rules))
             else:vel=None
             prev[e['id']]=(com.copy(),vel,quats)
         # Resbale relativo al punto objetivo, incluso cuando éste se mueve con otro actor.
@@ -297,9 +311,13 @@ def revisar(scene,d,rigs,objects,salida=None):
                 max_pen=max(max_pen, depth)
                 par=frozenset((a,b))
                 if depth>tol:
-                    errors.append({'type':'PENETRACION','frame':f,'objects':[a,b],'depth_m':depth,'intersections':len(overlapping)})
+                    err={'type':'PENETRACION','frame':f,'objects':[a,b],'depth_m':depth,'intersections':len(overlapping)}
+                    if es_superficie_caminable(b) or es_superficie_caminable(a):
+                        err['nota_apoyo']='Revisar apoyos IK/legacy y contact_pairs diseño (etapa 9-10); alfombra no sustituye piso en datos.'
+                    errors.append(anotar_error_toma(err, d, f, fps, rules))
                 elif overlapping and rules.get('reject_surface_intersections') and par not in touch and _algun_solido_cerrado(ma, mb):
-                    errors.append({'type':'PENETRACION','frame':f,'objects':[a,b],'depth_m':depth,'intersections':len(overlapping),'modo':'interseccion_superficie'})
+                    err={'type':'PENETRACION','frame':f,'objects':[a,b],'depth_m':depth,'intersections':len(overlapping),'modo':'interseccion_superficie'}
+                    errors.append(anotar_error_toma(err, d, f, fps, rules))
         centres.append(row)
     if rules.get('locked_naturalness'):
         from reglas_binding import revisar_limites

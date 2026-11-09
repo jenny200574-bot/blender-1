@@ -45,8 +45,18 @@ def test_tapadores_escenario_regex():
     assert cats['holgura_escenario'] >= 1
 
 
+def test_opcion_ricardo_holgura():
+    from camara_directa_exp import opcion_ricardo
+
+    ops = opcion_ricardo({'holgura_escenario': 1}, ['cámara pegada a geometría del escenario (muro_frente_2)'])
+    acciones = {o['accion'] for o in ops}
+    assert 'excluir_bvh_escenario' in acciones
+    assert 'retroceso_holgura' in acciones
+
+
 if __name__ == '__main__':
     test_malla_es_cabeza_bind_role_en_objeto()
     test_hueso_vs_malla_encuadre_diagnostico()
     test_tapadores_escenario_regex()
+    test_opcion_ricardo_holgura()
     print('OK test_analisis_directa_t598')
