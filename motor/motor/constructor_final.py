@@ -178,6 +178,9 @@ try:
     if 'look' in d['lighting']:sc.view_settings.look=d['lighting']['look']
     applied+=eventos.aplicar(sc,after,fps,dur)
     etapa(12,{'events':applied,'global_frames':n,'single_writer_graph':True,'environment_events_before_lights':True,'environment_tracks_before':len(before),'light_global_tracks_after':len(after)})
+    auditoria_post12 = out / 'auditoria_post_etapa12.blend'
+    bpy.ops.wm.save_as_mainfile(filepath=str(auditoria_post12))
+    guardar(out / 'auditoria_post_etapa12.json', {'blend': str(auditoria_post12), 'nota': 'Estado tras eventos etapa 12; permite sonda si etapa 11 falla.'})
     inicio(11)
     # 11: trayectorias geométricas completas y controlador 4g, sin cámara técnica sustitutiva.
     if d['camera'].get('resolver')=='SB_4G':

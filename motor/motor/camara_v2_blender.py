@@ -21,12 +21,16 @@ from eje_objetos import par_eje
 from malla_cabeza import region_desde_hueso, marcar_malla_cabeza_visible, clasificar_medida_cabeza, estado_visual, malla_es_cabeza
 import buscador_posicion_camara as BUS
 from camara_directa_exp import tapadores_escenario_desde_malos, clasificar_motivos_directa, retroceder_tray_holgura, informe_conflicto_toma
-import hashlib, resource
+import hashlib
 from array import array
 from progreso_camara import Progreso
+import camara_memoria as CAM_MEM
 def _rss_mb():
-    try: return round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0, 1)
-    except Exception: return None
+    return CAM_MEM.rss_mb()
+def _purga_mallas():
+    return CAM_MEM.purga_mallas_huérfanas(bpy)
+def _diag_mem():
+    d = CAM_MEM.diagnostico_meshes(bpy); d['purga_meshes'] = _purga_mallas(); return d
 OFF = lambda n: (AQUI / f'{n}.off').exists()
 a = sys.argv[sys.argv.index('--') + 1:]
 def _j(i, d=None):
@@ -80,8 +84,17 @@ def mallas(root):
         except (AttributeError, RuntimeError):
             return not o.hide_render
     return [x for x in candidatos if x.type == 'MESH' and _visible_render(x)]
-ACT_MESH = {pid: mallas(o) for pid, o in ACT.items()}; ACT_SET = {m.name for ms in ACT_MESH.values() for m in ms}
-ENV = [o for o in sc.objects if o.type == 'MESH' and not o.hide_render and o.name not in ACT_SET]
+def _refrescar_escena_en_cuadro(frame):
+    global ACT_MESH, ACT_SET, ENV, ENV_ESTATICO, ENV_DINAMICO
+    sc.frame_set(frame); bpy.context.view_layer.update()
+    ACT_MESH = {pid: mallas(o) for pid, o in ACT.items()}
+    ACT_SET = {m.name for ms in ACT_MESH.values() for m in ms}
+    ENV = [o for o in sc.objects if o.type == 'MESH' and not o.hide_render and o.name not in ACT_SET]
+    ENV_ESTATICO = [o for o in ENV if not CAM_MEM.objeto_animado(o)]
+    ENV_DINAMICO = [o for o in ENV if CAM_MEM.objeto_animado(o)]
+_refrescar_escena_en_cuadro(1)
+_BVH_ESCENA_EST = [None, None]  # [tree, frozenset(excl) en el que se construyó]
+_MAX_PUNTOS_CACHE = int(CFG.get('puntos_region', 48)) * 12
 ADN_H = {x['id']: (x.get('spec') or {}).get('altura_m') for x in E.get('actors', [])}
 class _BV:
     def __init__(s, t, own): s.t = t; s.own = own
@@ -91,21 +104,35 @@ class _BV:
 def bvh(objs, dg):
     V, P, own = [], [], []
     for o in objs:
-        e = o.evaluated_get(dg); m = e.to_mesh(); n = len(V); mw = o.matrix_world
-        V += [mw @ v.co for v in m.vertices]; P += [tuple(i + n for i in p.vertices) for p in m.polygons]; own += [o.name] * len(m.polygons); e.to_mesh_clear()
+        e = o.evaluated_get(dg)
+        m = None
+        try:
+            m = e.to_mesh(); n = len(V); mw = o.matrix_world
+            V += [mw @ v.co for v in m.vertices]; P += [tuple(i + n for i in p.vertices) for p in m.polygons]; own += [o.name] * len(m.polygons)
+        finally:
+            if m is not None: e.to_mesh_clear()
+    _purga_mallas()
     return _BV(BVHTree.FromPolygons(V, P), own) if P else None
 def verts(objs, dg):
     out = []
     for o in objs:
-        e = o.evaluated_get(dg); m = e.to_mesh(); mw = o.matrix_world; out += [mw @ v.co for v in m.vertices]; e.to_mesh_clear()
+        e = o.evaluated_get(dg); m = None
+        try:
+            m = e.to_mesh(); mw = o.matrix_world; out += [mw @ v.co for v in m.vertices]
+        finally:
+            if m is not None: e.to_mesh_clear()
+    _purga_mallas()
     return out
 def verts_eval(o, dg):
     try: e = o.evaluated_get(dg)
     except (AttributeError, RuntimeError): return []
     if getattr(e, 'type', None) != 'MESH': return []
-    m = e.to_mesh()
-    try: return [e.matrix_world @ v.co for v in m.vertices]
-    finally: e.to_mesh_clear()
+    m = None
+    try:
+        m = e.to_mesh(); return [e.matrix_world @ v.co for v in m.vertices]
+    finally:
+        if m is not None: e.to_mesh_clear()
+        _purga_mallas()
 def puntos_respaldo(obj, dg, nombre, toma):
     """Sin vértices visibles: hijos con malla evaluada (depsgraph) o bounding box del mundo."""
     propios = verts_eval(obj, dg) if getattr(obj, 'type', None) == 'MESH' else []
@@ -124,11 +151,14 @@ def dentro_de_malla(bv, p):
 CACHE = {}; ENVC = {}; FIRMAS = {}; LLAVES = {}
 def _firma_malla(o, dg):
     """Huella de lo que bvh() lee de un objeto: matrix_world, vértices evaluados y polígonos."""
-    e = o.evaluated_get(dg); m = e.to_mesh(); h = hashlib.blake2b(digest_size=20)
+    e = o.evaluated_get(dg); m = None; h = hashlib.blake2b(digest_size=20)
     try:
+        m = e.to_mesh()
         for col, attr, tipo, ancho in ((m.vertices, 'co', 'f', 3), (m.loops, 'vertex_index', 'i', 1), (m.polygons, 'loop_start', 'i', 1), (m.polygons, 'loop_total', 'i', 1)):
             buf = array(tipo, bytes(4 * ancho * len(col))); col.foreach_get(attr, buf); h.update(len(buf).to_bytes(8, 'little')); h.update(buf.tobytes())
-    finally: e.to_mesh_clear()
+    finally:
+        if m is not None: e.to_mesh_clear()
+        _purga_mallas()
     h.update(array('f', [x for fila in o.matrix_world for x in fila]).tobytes())
     return h.digest()
 def _llave_entorno(f, excl):
@@ -141,11 +171,34 @@ def _llave_entorno(f, excl):
             if o.name not in excl: h.update(o.name.encode('utf-8') + b'\0'); h.update(FIRMAS[f][o.name])
         LLAVES[k] = h.digest()
     return LLAVES[k]
+def _env_objs(excl):
+    excl = excl or frozenset()
+    return [o for o in ENV if o.name not in excl]
+def _bvh_escena_estatica(excl, dg):
+    global _BVH_ESCENA_EST
+    excl = excl or frozenset()
+    if not ENV_ESTATICO or any(o.name in excl for o in ENV_ESTATICO): return None
+    if _BVH_ESCENA_EST[0] is not None and _BVH_ESCENA_EST[1] == excl:
+        return _BVH_ESCENA_EST[0]
+    estaticos = [o for o in ENV_ESTATICO if o.name not in excl]
+    if not estaticos: return None
+    CAM_MEM.descartar_bvh(_BVH_ESCENA_EST[0]); _BVH_ESCENA_EST[0] = bvh(estaticos, dg); _BVH_ESCENA_EST[1] = excl
+    return _BVH_ESCENA_EST[0]
 def env_bvh(f, excl=frozenset()):
     k = _llave_entorno(f, excl) if LOTES else (f, frozenset(excl))
     if k not in ENVC:
-        if len(ENVC) > 6: ENVC.clear()
-        sc.frame_set(f); ENVC[k] = bvh([o for o in ENV if o.name not in excl], bpy.context.evaluated_depsgraph_get())
+        while len(ENVC) > 4:
+            _k = next(iter(ENVC)); CAM_MEM.descartar_bvh(ENVC.pop(_k))
+        sc.frame_set(f); dg = bpy.context.evaluated_depsgraph_get()
+        din = [o for o in ENV_DINAMICO if o.name not in (excl or frozenset())]
+        if not din:
+            est = _bvh_escena_estatica(excl, dg)
+            if est is not None:
+                ENVC[k] = est
+            else:
+                ENVC[k] = bvh(_env_objs(excl), dg)
+        else:
+            ENVC[k] = bvh(_env_objs(excl), dg)
     return ENVC[k]
 def mallas_de(i):
     o = bpy.data.objects.get(i) if i and i not in ACT else None
@@ -165,6 +218,7 @@ def medir(pid, f, toma=None):
         acts = [x.matrix_world.translation for x in ACT.values()]; fv = None
         if acts:
             d = sum(acts, Vector()) / len(acts) - c; d.z = 0; fv = d.normalized() if d.length > 1e-6 else None
+        P = CAM_MEM.compactar_puntos(P, _MAX_PUNTOS_CACHE)
         CACHE[k] = {'tipo': 'objeto', 'zmin': lo.z, 'zmax': hi.z, 'H': hi.z - lo.z, 'centro': c, 'cabeza': None, 'frente': fv, 'frente_cara': fv,
                     'frente_metodo': 'objeto: hacia el centro de los personajes construidos', 'puntos': P, 'huesos': {}, 'id': pid}
         return CACHE[k]
@@ -178,7 +232,8 @@ def medir(pid, f, toma=None):
         if not HP: cab_m = []
     if cab_m:
         lo = Vector([min(p[i] for p in HP) for i in range(3)]); hi = Vector([max(p[i] for p in HP) for i in range(3)])
-        cc = (lo + hi) / 2; cab = marcar_malla_cabeza_visible({'centro': cc, 'alto': hi.z - lo.z, 'top': hi.z, 'puntos': HP, 'puntos_cara': [p for p in HP if abs(p.z - cc.z) <= (hi.z - lo.z) / 4] or HP})
+        cc = (lo + hi) / 2; HPc = CAM_MEM.compactar_puntos(HP, _MAX_PUNTOS_CACHE // 2)
+        cab = marcar_malla_cabeza_visible({'centro': cc, 'alto': hi.z - lo.z, 'top': hi.z, 'puntos': HPc, 'puntos_cara': [p for p in HPc if abs(p.z - cc.z) <= (hi.z - lo.z) / 4] or HPc})
     pb = A.pose.bones; mw = A.matrix_world; fv = None; metodo = None
     pies = [n for n in R['pies'] if n in pb]
     if pies:
@@ -204,6 +259,7 @@ def medir(pid, f, toma=None):
         if spec['punto'] == 'centro_malla': hz[nm] = cab['centro'].z if cab else None
         else: hz[nm] = sum((mw @ pb[b].head).z for b in bs) / len(bs)
     pel = mw.translation
+    P = CAM_MEM.compactar_puntos(P, _MAX_PUNTOS_CACHE)
     CACHE[k] = {'tipo': 'personaje', 'zmin': zmin, 'zmax': zmax, 'H': zmax - zmin, 'centro': Vector((pel.x, pel.y, (zmin + zmax) / 2)), 'cabeza': cab,
                 'frente': fv, 'frente_cara': fc, 'frente_metodo': metodo, 'puntos': P, 'huesos': hz, 'id': pid}
     return CACHE[k]
@@ -317,11 +373,15 @@ def _tras_validacion_directa(tray, spec, f0, f1, libres_e, libres_i, mal):
 
 OTROS = {}
 def _vaciar_caches_toma():
-    CACHE.clear(); ENVC.clear(); FIRMAS.clear(); LLAVES.clear(); OTROS.clear()
+    global _BVH_ESCENA_EST
+    CACHE.clear(); FIRMAS.clear(); LLAVES.clear()
+    diag = CAM_MEM.ciclo_purga_post_toma(bpy, ENVC, OTROS, _BVH_ESCENA_EST)
+    return diag
 def otros_bvh(f, excluir):
     k = (f, tuple(sorted(excluir)))
     if k not in OTROS:
-        if LOTES and len(OTROS) > 6: OTROS.clear()
+        while len(OTROS) > 4:
+            _k = next(iter(OTROS)); CAM_MEM.descartar_bvh(OTROS.pop(_k))
         sc.frame_set(f); OTROS[k] = bvh([m for pid, ms in ACT_MESH.items() if pid not in excluir for m in ms], bpy.context.evaluated_depsgraph_get())
     return OTROS[k]
 def validar(tray, spec, f0, f1, libres_encuadre=(), libres_inclin=()):
@@ -701,8 +761,9 @@ _sonda_si_pidieron()
 VINETAS = sorted(SBC['vinetas'], key=lambda v: float(v['t_abs'][0]))
 for n, v in enumerate(VINETAS, 1):
     tid = f'toma{n:02d}'; TOMA_ACTUAL = tid; t0, t1 = map(float, v['t_abs']); f0, f1 = fr(t0), fr_fin(t1); vin = SBV.get(v['vineta']) or {}; cm = CMDS.get(v['vineta']) or {}
-    if LOTES: _vaciar_caches_toma()   # medidas y BVH por toma; FIRMAS/LLAVES/ENVC no deben acumularse entre tomas
-    PROG.marcar(forzar=True, toma=tid, toma_n=n, tomas=len(VINETAS), fase='toma', frame_ini=f0, frame_fin=f1, rss_mb=_rss_mb())
+    _refrescar_escena_en_cuadro(f0)
+    mem_ini = _vaciar_caches_toma() if LOTES else _diag_mem()
+    PROG.marcar(forzar=True, toma=tid, toma_n=n, tomas=len(VINETAS), fase='toma', frame_ini=f0, frame_fin=f1, **mem_ini)
     S = leer_toma(v, vin, cm, tid); tgt = S['insert'] or v.get('objetivo')
     T = {'toma': n, 'id': f'e{SBC.get("escena", "")}_t{n:02d}', 'vineta': v['vineta'], 't0': t0, 't1': t1, 'frame_ini': f0, 'frame_fin': f1, 'objetivo': tgt,
          'tipo': S['plano0'], 'estado': None, 'motivos': [], 'notas': [], 'comandos': S['estado_cmd']}
@@ -881,8 +942,8 @@ for n, v in enumerate(VINETAS, 1):
         motivos_inf.extend(f for f in faltas_toma if f not in motivos_inf)
         T['informe_conflicto'] = informe_conflicto_toma(tid, S, motivos_inf, cm, SBV.get(v['vineta']))
     tomas.append(T); trays.append((tray, S) if tray else None)
-    if LOTES: _vaciar_caches_toma()
-    PROG.marcar(toma=tid, fase='toma_fin', rss_mb=_rss_mb())
+    mem_fin = _vaciar_caches_toma() if LOTES else _diag_mem()
+    PROG.marcar(toma=tid, fase='toma_fin', **mem_fin)
 # ---------------- hornear la trayectoria en el .blend (lo que se graba) ----------------
 PROG.marcar(forzar=True, fase='hornear', tomas=len(tomas))
 if SW['resolver_camara']:

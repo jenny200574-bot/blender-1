@@ -3,7 +3,14 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-HEREDADO = ROOT / 'motor' / 'heredado'
+
+def _heredado_dir():
+    for p in (ROOT / 'motor' / 'motor' / 'heredado', ROOT / 'motor' / 'heredado'):
+        if (p / 'cargar_modulo_motor.py').is_file():
+            return p
+    raise FileNotFoundError('No está cargar_modulo_motor.py en motor/motor/heredado ni motor/heredado')
+
+HEREDADO = _heredado_dir()
 sys.path.insert(0, str(HEREDADO))
 from cargar_modulo_motor import cargar
 
@@ -12,7 +19,9 @@ class Tests(unittest.TestCase):
     def test_carga_el_modulo_unico_aunque_sys_path_sea_solo_heredado(self):
         self.assertEqual(Path(sys.path[0]).resolve(), HEREDADO.resolve())
         modulo = cargar('malla_cabeza')
-        self.assertEqual(Path(modulo.__file__).resolve(), (ROOT / 'motor' / 'malla_cabeza.py').resolve())
+        cargado = Path(modulo.__file__).resolve()
+        esperados = {(ROOT / 'motor' / 'malla_cabeza.py').resolve(), (ROOT / 'motor' / 'motor' / 'malla_cabeza.py').resolve()}
+        self.assertIn(cargado, esperados)
         self.assertEqual(modulo.desplazar_cabeza([(0, 0, 0)], 2), [(0, 1.0, 0)])
 
     def test_encuentra_modulo_cuando_heredado_y_modulos_comparten_padre(self):
