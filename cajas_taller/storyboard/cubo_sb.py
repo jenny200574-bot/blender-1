@@ -463,8 +463,32 @@ def dirigir_escena(K, D, a, cd, e, P, prompt, texto_fijo, esq, llamar, carpeta, 
     except Exception:
         alt = lambda pid: (None, None)
     out['blender'] = S.guardar(carpeta / 'blender' / f'esc_{n}_camara.json', TR.traducir(sb, alt))
+    try:
+        out['blender_v2'] = guardar_v2_altura(carpeta, n, a.canal, sb)
+    except Exception as ex:
+        out.setdefault('avisos', []).append(f'V2_ALTURA_NO_GENERADA: {type(ex).__name__}: {ex}')
     out.update({'ok': True, 'vinetas': len(C['vinetas'])}); return out
 
+
+
+def guardar_v2_altura(carpeta, n, canal, sb):
+    """Tras el SB: regenera la cámara v2 (alturas del ADN) desde el SB vigente.
+    CPU, US$0, sin red, sin Blender. Si ya hay un v2, se MUEVE a un nombre fechado (no se borra)."""
+    import traductor_dsl_blender_v2_altura_20261109 as TR2
+    from datetime import datetime, timezone, timedelta
+    out = Path(carpeta) / "blender" / f"esc_{n}_camara_v2_altura.json"
+    moved = None
+    if out.is_file():
+        stamp = datetime.now(timezone(timedelta(hours=-5))).strftime("%Y%m%d_%H%M%S")
+        dest = out.with_name(out.name + f".antes_{stamp}")
+        out.rename(dest)
+        moved = str(dest)
+    T = TR2.traducir_v2(sb, canal)
+    path = S.guardar(out, T)
+    return {"archivo": path, "estado": T.get("estado"), "vinetas": len(T.get("vinetas") or []),
+            "con_altura": sum(1 for v in (T.get("vinetas") or []) if v.get("altura_m") is not None),
+            "alturas_por_medir": T.get("alturas_por_medir"),
+            "v2_anterior_movido": moved, "llamadas_pagas": 0, "usd_gastado": 0}
 
 # ---------------- comandos ----------------
 def preparar(a):
@@ -661,8 +685,14 @@ def n8n(argv):
         return {'ok': r.get('ok'), 'caja': 'SB', 'accion': 'validar', 'archivo': str(f), 'errores': (r.get('errores') or [])[:20], 'n_errores': len(r.get('errores') or []),
                 'avisos': (r.get('avisos') or [])[:20], 'llamadas_pagas': 0, 'usd_gastado': 0, 'error': r.get('por_que') or (None if r.get('ok') else 'el storyboard guardado no pasa el validador')}
     T = cmd_traducir(a); out = SB / 'blender' / f'esc_{a.escena}_camara.json'; S.guardar(out, T)
+    try:
+        import sb_comun as _S2
+        sb = _S2.leer(f)
+        v2 = guardar_v2_altura(SB, a.escena, a.canal, sb) if sb else None
+    except Exception as ex:
+        v2 = {'error': f'{type(ex).__name__}: {ex}'}
     return {'ok': True, 'caja': 'SB', 'accion': 'traducir', 'archivo': str(out), 'vinetas': len(T.get('vinetas') or []), 'alturas_por_medir': T.get('alturas_por_medir'),
-            'pista': T.get('pista'), 'llamadas_pagas': 0, 'usd_gastado': 0}
+            'pista': T.get('pista'), 'blender_v2': v2, 'llamadas_pagas': 0, 'usd_gastado': 0}
 
 
 def main(argv=None):

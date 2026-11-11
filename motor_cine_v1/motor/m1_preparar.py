@@ -6,10 +6,15 @@ Junta TODO lo que el motor necesita para una escena, sin crear nada:
     (ramas/moldes/<id>/molde.blend) SOLO si --permitir_escenario_taller, y se marca en el reporte.
   - programa 2B de Argon si existe (cubos/2B/esc_N.json) — opcional.
 Si falta un molde de personaje: STOP «MOLDE_FALTANTE» (o, con --permitir_faltantes, se reporta y ese personaje no sale).
-Nunca modifica moldes: los copia (sha256 verificado) a la carpeta de la corrida."""
+Nunca modifica moldes: los copia (sha256 verificado) a la carpeta de la corrida.
+Aplica el historial de la historia al CARGAR (variante aprobada, ocultar parte, material).
+Si la variante aún no tiene approval_ref: aviso tipado VARIANTE_NO_APROBADA y fallback declarado
+(placeholder = se copia el molde base, nunca en silencio; o block si --exigir_variante_aprobada).
+El molde base en la biblioteca no se edita ni se borra."""
 import json, argparse, shutil, hashlib, sys, re
 from pathlib import Path
 from datetime import datetime
+import historial_historia as HH
 
 ESTADOS_OK = ('aprobado', 'publicado', 'hoja_lista', 'listo')        # hoja_lista = pendiente aprobación de Ricardo (modo prueba)
 
@@ -62,17 +67,28 @@ def sujeto_kimodo(adn, plantilla=None):
 def base_obj(x):
     return re.sub(r'(__.*|#\d+)$', '', str(x or '')).strip()
 
-def objetos_pedidos(D, sb, pjs):
+def _id_de_biblioteca(b, idx=None):
+    """Id de objeto de la escena: prefijo obj- (contrato actual) o una pieza que ya existe en la biblioteca del canal."""
+    if not b:
+        return ''
+    if re.match(r'^obj-[a-z0-9-]+$', b):
+        return b
+    if idx and any(b == c or b == x['dir'].name for x in idx for c in (x.get('claves') or set()) | {x['dir'].name}):
+        return b
+    return ''
+
+
+def objetos_pedidos(D, sb, pjs, idx=None):
     """objetos que pide la escena: 01 (acciones[].objeto) + storyboard (director_imagen.objetos) + props portados de los personajes."""
     ped = {}
     for a in D.get('acciones', []):
-        b = base_obj(a.get('objeto')); b = b if re.match(r'^obj-[a-z0-9-]+$', b) else ''
+        b = _id_de_biblioteca(base_obj(a.get('objeto')), idx)
         if b: ped.setdefault(b, {"fuentes": set(), "actores": []})["fuentes"].add('01')
         if b and a.get('actor') and a['actor'] not in ped[b]['actores']: ped[b]['actores'].append(a['actor'])
     for v in (sb or {}).get('vinetas', []):
         for o in ((v.get('director_imagen') or {}).get('objetos') or []):
-            b = base_obj(o.get('nombre') if isinstance(o, dict) else o)
-            if b and re.match(r'^obj-[a-z0-9-]+$', b):   # solo ids; los nombres libres del SB los resuelve el escenario
+            b = _id_de_biblioteca(base_obj(o.get('nombre') if isinstance(o, dict) else o), idx)
+            if b:   # ids de biblioteca; los nombres libres del SB los resuelve el escenario
                 ped.setdefault(b, {"fuentes": set(), "actores": []})["fuentes"].add('SB')
     for pid, bibname in pjs.items():          # props portados (sello del objeto: dueno = personaje)
         for sp in sorted((CUBO / 'objetos_pj').glob('*.json')):
@@ -97,7 +113,7 @@ def indice_objetos(bib):
             if (CUBO / 'objetos_pj' / f'{d.name}.json').is_file():
                 try: s_ = json.load(open(CUBO / 'objetos_pj' / f'{d.name}.json'))
                 except Exception: s_ = {}
-            claves =[REDACTED]
+            claves = {base_obj(((m.get('v2_3d') or {}).get('origen') or {}).get('instancia'))} | set(s_.get('ids_canal') or []) | {d.name}
             idx.append({"dir": d, "tipo": t, "meta": m, "blend": bl, "sello": s_, "claves": {c for c in claves if c}})
     return idx
 
@@ -122,6 +138,67 @@ def buscar_molde(bib, pid):
         if pid in ids or d.name == prefijo_bib(bib) + stem01(pid) or d.name == stem01(pid): return d, m
     return None, None
 
+def _linea_de(D):
+    bc = D.get('bloqueo_corte') or {}
+    blob = json.dumps(bc, ensure_ascii=False).lower()
+    if bc.get('linea_temporal') == 'flashback' or bc.get('tipo') == 'flashback' or 'flashback' in blob:
+        return 'flashback', bc.get('escena_flashback') or bc.get('escena_destino')
+    return bc.get('linea_temporal') or 'presente', bc.get('escena_flashback')
+
+
+def aplicar_copia(bib, tipo, pid, escena, src_base, dst, E, *, exigir=False, linea='presente', flash=None):
+    """Copia a la corrida el molde que corresponde al estado de ESTA escena. Nunca escribe en el molde base."""
+    rec = {'id': pid, 'tipo': tipo, 'aplicar': 'base', 'en_base': True, 'cambio': None,
+           'variante_ref': None, 'variante_aprobada': False, 'fallback': None, 'aviso': None,
+           'codigo': None, 'faltante_variante': False, 'ocultar': [], 'material': None,
+           'bloqueo': False, 'gap': False, 'molde_base': str(src_base), 'origen_usado': str(src_base)}
+    hist_dir = HH.pieza_dir(bib, tipo, pid) / 'historial_historia'
+    if not hist_dir.exists() and not (HH.pieza_dir(bib, tipo, pid) / 'variantes_historia').exists():
+        shutil.copy2(src_base, dst)
+        rec['sha256'] = sha(dst)
+        return rec
+    est = HH.resolver(bib, tipo, pid, escena=escena, linea_temporal=linea, escena_flashback=flash, gap_hereda=True)
+    app = HH.aplicar_en_preparar(est, exigir_aprobada=exigir)
+    rec.update(aplicar=app['aplicar'], en_base=est.get('en_base'), cambio=est.get('cambio'),
+               variante_ref=est.get('variante_ref'), variante_aprobada=est.get('variante_aprobada'),
+               fallback=app.get('fallback'), aviso=app.get('aviso'), codigo=app.get('codigo'),
+               faltante_variante=bool(app.get('faltante_variante')), ocultar=app.get('ocultar') or [],
+               material=app.get('material'), bloqueo=bool(app.get('bloqueo')), gap=bool(est.get('gap')),
+               evento_id=est.get('evento_id'), approval_ref=est.get('approval_ref'))
+    if app.get('aviso'):
+        E.setdefault('avisos', []).append(app['aviso'])
+    if app.get('faltante_variante') or app.get('bloqueo'):
+        HH.log_decision_fallback(bib, rec, escena=escena)
+        E.setdefault('decisiones_historial', []).append({
+            'pieza_id': pid, 'escena': escena, 'codigo': rec.get('codigo'),
+            'fallback': rec.get('fallback') or ('block' if rec['bloqueo'] else None),
+            'para_ricardo': '¿El fallback por variante no aprobada debe ser placeholder (default) o block (STOP)?',
+        })
+    if app.get('bloqueo'):
+        rec['sha256'] = None
+        return rec
+    src = Path(src_base)
+    if app['aplicar'] == 'variante' and (app.get('swap_blend') or est.get('variante_path')):
+        cand = None
+        if app.get('swap_blend') and est.get('variante_path'):
+            cand = Path(est['variante_path']) / app['swap_blend']
+        if cand is not None and cand.is_file():
+            src = cand
+        else:
+            rec['codigo'] = rec['codigo'] or 'VARIANTE_SIN_ARCHIVO'
+            rec['aviso'] = (rec.get('aviso') or '') + f'; VARIANTE_SIN_ARCHIVO ({cand}); fallback={HH.FALLBACK_VARIANTE}'
+            rec['faltante_variante'] = True
+            rec['fallback'] = HH.FALLBACK_VARIANTE
+            rec['aplicar'] = 'placeholder_base'
+            E.setdefault('avisos', []).append(rec['aviso'])
+            HH.log_decision_fallback(bib, rec, escena=escena)
+    shutil.copy2(src, dst)
+    rec['origen_usado'] = str(src)
+    rec['sha256'] = sha(dst)
+    rec['base_intacto'] = Path(src_base).is_file()
+    return rec
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--cadena', required=True, help='carpeta del capítulo en paso00_cadena')
@@ -129,6 +206,8 @@ def main():
     ap.add_argument('--corrida', required=True); ap.add_argument('--fps', type=int, default=24)
     ap.add_argument('--permitir_faltantes', action='store_true'); ap.add_argument('--permitir_escenario_taller', action='store_true')
     ap.add_argument('--solo_estado_aprobado', action='store_true')
+    ap.add_argument('--exigir_variante_aprobada', action='store_true',
+                    help='STOP si un cambio de historia necesita una variante aún no aprobada (default: aviso tipado + placeholder, molde base)')
     a = ap.parse_args()
     cad = Path(a.cadena); bib = Path(a.biblioteca); out = Path(a.corrida); (out / 'moldes').mkdir(parents=True, exist_ok=True)
     f01 = cad / 'cubos/01' / f'esc_{a.escena}.json'
@@ -146,7 +225,12 @@ def main():
          "cadena": str(cad), "escena": str(a.escena), "fps": fps, "fps_01": D.get('fps'), "duracion_s": D['duracion_s'], "N": N,
          "aspecto": D.get('aspecto', [1920, 1080]), "puntos": {k: v[:2] for k, v in D['puntos'].items()},
          "personajes": [], "segmentos_01": {}, "acciones_01": D.get('acciones', []), "hechos": D.get('hechos', []),
-         "faltantes": [], "avisos": [], "escenario": None}
+         "bloqueo_01": D.get('bloqueo'), "bloqueo_corte": D.get('bloqueo_corte'),
+         "faltantes": [], "avisos": [], "escenario": None, "historial": [], "decisiones_historial": []}
+    linea, flash = _linea_de(D)
+    E['linea_temporal'] = linea
+    E['escena_flashback'] = flash
+    exigir = bool(a.exigir_variante_aprobada)
     for p in D['personajes']:
         pid = p['id']; E['segmentos_01'][pid] = p.get('segmentos', [])
         d, m = buscar_molde(bib, pid)
@@ -154,7 +238,12 @@ def main():
         if not d or not blend or not (d / blend['path']).exists() or m.get('estado') not in ok_est:
             E['faltantes'].append({"id": pid, "motivo": "MOLDE_FALTANTE" if not blend else f"estado {m.get('estado')}",
                                    "biblioteca": str(d) if d else None, "quien_arregla": "fábrica de personajes"}); continue
-        src = d / blend['path']; dst = out / 'moldes' / f"{d.name}.blend"; shutil.copy2(src, dst)
+        src = d / blend['path']; dst = out / 'moldes' / f"{d.name}.blend"
+        hrec = aplicar_copia(bib, 'personajes', d.name, a.escena, src, dst, E, exigir=exigir, linea=linea, flash=flash)
+        if hrec.get('bloqueo'):
+            E['faltantes'].append({"id": pid, "motivo": "VARIANTE_NO_APROBADA", "variante_ref": hrec.get('variante_ref'),
+                                   "quien_arregla": "Ricardo (aprobar variante de historia o confirmar fallback placeholder)"}); continue
+        E['historial'].append(hrec)
         ficha = ultima(m, 'ficha_esqueleto'); fj = json.load(open(d / ficha['path'])) if ficha else {}
         v23 = m.get('v2_3d') or {}
         alt = (m.get('altura_v2') or {}).get('altura_adn_m') or v23.get('altura_m_adn') or alturas.get(pid) or fj.get('altura_m')
@@ -163,8 +252,12 @@ def main():
                                 "pendiente_aprobacion": m.get('estado') not in ('aprobado', 'publicado'),
                                 "altura_m": alt, "plantilla": v23.get('plantilla') or fj.get('plantilla'),
                                 "armature": fj.get('armature') or f"ESQ_{d.name}", "huesos": fj.get('huesos_nombres') or list((fj.get('huesos') or {}).keys()) if isinstance(fj.get('huesos'), dict) else fj.get('huesos_nombres', []),
-                                "ficha": str(d / ficha['path']) if ficha else None})
+                                "ficha": str(d / ficha['path']) if ficha else None,
+                                "historial": {k: hrec.get(k) for k in ('aplicar', 'cambio', 'en_base', 'variante_ref', 'variante_aprobada', 'faltante_variante', 'fallback', 'ocultar', 'material', 'gap', 'codigo')}})
         sj, sjf = sujeto_kimodo(leer_adn(d, d.name), v23.get('plantilla') or fj.get('plantilla')); E['personajes'][-1].update(sujeto_kimodo=sj, sujeto_fuente=sjf)
+    if any(x.get('motivo') == 'VARIANTE_NO_APROBADA' for x in E['faltantes']) and exigir and not a.permitir_faltantes:
+        json.dump(E, open(out / 'entrada_motor.json', 'w'), indent=1, ensure_ascii=False)
+        print('RESULT_PREPARAR', json.dumps({"estado": "STOP", "motivo": "VARIANTE_NO_APROBADA", "faltantes": E['faltantes']}, ensure_ascii=False)); sys.exit(5)
     if E['faltantes'] and not a.permitir_faltantes:
         json.dump(E, open(out / 'entrada_motor.json', 'w'), indent=1, ensure_ascii=False)
         print('RESULT_PREPARAR', json.dumps({"estado": "STOP", "motivo": "MOLDE_FALTANTE", "faltantes": E['faltantes']}, ensure_ascii=False)); sys.exit(3)
@@ -172,8 +265,17 @@ def main():
     eid = D.get('escenario_id'); de = bib / 'escenarios' / str(eid); me = json.load(open(de / 'meta.json')) if (de / 'meta.json').exists() else {}
     be = ultima(me, 'blend')
     if be and (de / be['path']).exists():
-        dst = out / 'moldes' / f"escenario_{eid}.blend"; shutil.copy2(de / be['path'], dst)
-        E['escenario'] = {"id": eid, "blend": f"moldes/escenario_{eid}.blend", "origen": str(de / be['path']), "fuente": "biblioteca (fábrica)", "estado": me.get('estado'), "sha256": sha(dst)}
+        dst = out / 'moldes' / f"escenario_{eid}.blend"
+        hrec = aplicar_copia(bib, 'escenarios', str(eid), a.escena, de / be['path'], dst, E, exigir=exigir, linea=linea, flash=flash)
+        if hrec.get('bloqueo'):
+            E['faltantes'].append({"id": eid, "motivo": "VARIANTE_NO_APROBADA", "variante_ref": hrec.get('variante_ref'),
+                                   "quien_arregla": "Ricardo (aprobar variante de historia o confirmar fallback placeholder)"})
+            json.dump(E, open(out / 'entrada_motor.json', 'w'), indent=1, ensure_ascii=False)
+            print('RESULT_PREPARAR', json.dumps({"estado": "STOP", "motivo": "VARIANTE_NO_APROBADA", "id": eid}, ensure_ascii=False)); sys.exit(5)
+        E['historial'].append(hrec)
+        E['escenario'] = {"id": eid, "blend": f"moldes/escenario_{eid}.blend", "origen": hrec.get('origen_usado') or str(de / be['path']),
+                          "fuente": "biblioteca (fábrica)", "estado": me.get('estado'), "sha256": hrec.get('sha256') or sha(dst),
+                          "historial": {k: hrec.get(k) for k in ('aplicar', 'cambio', 'en_base', 'variante_ref', 'variante_aprobada', 'faltante_variante', 'fallback', 'ocultar', 'material', 'gap', 'codigo')}}
     else:
         taller = cad / 'ramas/moldes' / str(eid) / 'molde.blend'
         if a.permitir_escenario_taller and taller.exists():
@@ -191,12 +293,28 @@ def main():
         f = cad / rel
         if f.exists(): shutil.copy2(f, out / Path(rel).name.replace(f'esc_{a.escena}', k)); E[k] = Path(rel).name.replace(f'esc_{a.escena}', k)
         else: E[k] = None
-    if not E['camara_v2']: E['avisos'].append('SIN_CAMARA_V2_ALTURA: se usa la v1 del SB')
+    import camara_vigente as CVIG
+    if E.get('camara_v2'):
+        ok_v2, motivo_v2 = CVIG.v2_es_vigente(
+            out / E['camara_v2'],
+            path_v1=(out / E['camara_v1']) if E.get('camara_v1') else None,
+            path_sb=(out / E['storyboard']) if E.get('storyboard') else None,
+        )
+        if not ok_v2:
+            E['avisos'].append(
+                f"CAMARA_V2_NO_VIGENTE ({motivo_v2}): se usa la v1 del SB; el archivo v2 no se borra"
+            )
+            E['camara_v2_omitida'] = E['camara_v2']
+            E['camara_v2_omitida_motivo'] = motivo_v2
+            E['camara_v2'] = None
+    if not E['camara_v2']:
+        if not any(str(a).startswith('CAMARA_V2_NO_VIGENTE') for a in (E.get('avisos') or [])):
+            E['avisos'].append('SIN_CAMARA_V2_ALTURA: se usa la v1 del SB')
     # objetos y props (Ricardo t1027u): lo que pide la escena, copiado de la biblioteca (nunca se modifica)
     sb = json.load(open(out / E['storyboard'])) if E.get('storyboard') else {}
     pjs = {p['id']: p['bib'] for p in E['personajes']}; bib2pid = {v: k for k, v in pjs.items()}
     idx = indice_objetos(bib); E['objetos'] = []
-    for b, info in sorted(objetos_pedidos(D, sb, pjs).items()):
+    for b, info in sorted(objetos_pedidos(D, sb, pjs, idx).items()):
         cand = [x for x in idx if any(b == c or b.startswith(c + '-') or c.startswith(b + '-') for c in x['claves'])]
         cand.sort(key=lambda x: (b not in x['claves'], x['tipo'] != 'objetos_usuario'))
         if not cand:
@@ -204,18 +322,64 @@ def main():
         x = cand[0]; d = x['dir']; m = x['meta']
         if m.get('estado') not in ok_est + ('falta_receta',):
             E['avisos'].append(f"OBJETO_ESTADO: {b} -> {d.name} estado {m.get('estado')} (no se usa)"); continue
-        dst = out / 'moldes' / f"objeto_{d.name}.blend"; shutil.copy2(d / x['blend']['path'], dst)
+        dst = out / 'moldes' / f"objeto_{d.name}.blend"
+        hrec = aplicar_copia(bib, x['tipo'], d.name, a.escena, d / x['blend']['path'], dst, E, exigir=exigir, linea=linea, flash=flash)
+        if hrec.get('bloqueo'):
+            E['faltantes'].append({"id": d.name, "motivo": "VARIANTE_NO_APROBADA", "variante_ref": hrec.get('variante_ref'),
+                                   "quien_arregla": "Ricardo (aprobar variante de historia o confirmar fallback placeholder)"})
+            if exigir and not a.permitir_faltantes:
+                json.dump(E, open(out / 'entrada_motor.json', 'w'), indent=1, ensure_ascii=False)
+                print('RESULT_PREPARAR', json.dumps({"estado": "STOP", "motivo": "VARIANTE_NO_APROBADA", "id": d.name}, ensure_ascii=False)); sys.exit(5)
+            continue
+        E['historial'].append(hrec)
         if m.get('estado') == 'falta_receta': E['avisos'].append(f"OBJETO_PROVISIONAL: {b} -> {d.name} es una caja provisional (falta_receta en la fábrica); se usa igual para que el prop exista")
         alto = (m.get('v2_3d') or {}).get('alto_m_medido')
-        port = bib2pid.get(x['sello'].get('dueno')) or (next((a for a in info['actores'] if a in pjs), None) if (alto is not None and float(alto) <= 0.3) else None)   # sin dueño: solo lo pequeño de mano/cara lo lleva quien actúa con él
+        port = bib2pid.get(x['sello'].get('dueno')) or (next((ac for ac in info['actores'] if ac in pjs), None) if (alto is not None and float(alto) <= 0.3) else None)   # sin dueño: solo lo pequeño de mano/cara lo lleva quien actúa con él
         adn = leer_adn(None, d.name); hu, hm = hueso_de(x['sello'], adn)
-        E['objetos'].append({"pedido": b, "id": d.name, "tipo": x['tipo'], "blend": f"moldes/{dst.name}", "origen": str(d / x['blend']['path']),
-                             "sha256": sha(dst), "estado": m.get('estado'), "fuentes": sorted(info['fuentes']), "portador": port,
+        E['objetos'].append({"pedido": b, "id": d.name, "tipo": x['tipo'], "blend": f"moldes/{dst.name}", "origen": hrec.get('origen_usado') or str(d / x['blend']['path']),
+                             "sha256": hrec.get('sha256') or sha(dst), "estado": m.get('estado'), "fuentes": sorted(info['fuentes']), "portador": port,
                              "hueso": hu if port else None, "hueso_fuente": hm if port else None,
-                             "subclase": x['sello'].get('subclase'), "alto_m": ((m.get('v2_3d') or {}).get('alto_m_medido'))})
+                             "subclase": x['sello'].get('subclase'), "alto_m": ((m.get('v2_3d') or {}).get('alto_m_medido')),
+                             "historial": {k: hrec.get(k) for k in ('aplicar', 'cambio', 'en_base', 'variante_ref', 'variante_aprobada', 'faltante_variante', 'fallback', 'ocultar', 'material', 'gap', 'codigo')}})
+    # activos con historial vigente que la escena no pidió explícitamente (p. ej. un muro ya dañado del escenario)
+    ya = {o['id'] for o in E['objetos']} | {p['bib'] for p in E['personajes']} | {((E.get('escenario') or {}).get('id'))}
+    for pieza in HH.piezas_con_historial(bib):
+        if pieza['id'] in ya:
+            continue
+        est = HH.resolver(bib, pieza['tipo'], pieza['id'], escena=a.escena, linea_temporal=linea, escena_flashback=flash, gap_hereda=True)
+        if est.get('en_base') and not est.get('gap') and est.get('cambio') in (None, 'reparar'):
+            continue
+        # cargar el molde (base o variante) para que el daño persista
+        idxp = [x for x in idx if x['dir'].name == pieza['id'] and x['tipo'] == pieza['tipo']]
+        d = bib / pieza['tipo'] / pieza['id']
+        mp = d / 'meta.json'
+        if not mp.is_file():
+            continue
+        m = json.load(open(mp)); bl = ultima(m, 'blend')
+        if not bl or not (d / bl['path']).is_file():
+            E['avisos'].append(f"HISTORIAL_SIN_MOLDE: {pieza['id']} tiene estado {est.get('cambio')} pero no hay blend")
+            continue
+        dst = out / 'moldes' / f"{'escenario' if pieza['tipo']=='escenarios' else 'objeto'}_{d.name}.blend"
+        if dst.exists():
+            continue
+        hrec = aplicar_copia(bib, pieza['tipo'], d.name, a.escena, d / bl['path'], dst, E, exigir=exigir, linea=linea, flash=flash)
+        if hrec.get('bloqueo') and exigir and not a.permitir_faltantes:
+            E['faltantes'].append({"id": d.name, "motivo": "VARIANTE_NO_APROBADA", "variante_ref": hrec.get('variante_ref')})
+            json.dump(E, open(out / 'entrada_motor.json', 'w'), indent=1, ensure_ascii=False)
+            print('RESULT_PREPARAR', json.dumps({"estado": "STOP", "motivo": "VARIANTE_NO_APROBADA", "id": d.name}, ensure_ascii=False)); sys.exit(5)
+        E['historial'].append(hrec)
+        if pieza['tipo'] in ('objetos', 'objetos_usuario'):
+            E['objetos'].append({"pedido": d.name, "id": d.name, "tipo": pieza['tipo'], "blend": f"moldes/{dst.name}",
+                                 "origen": hrec.get('origen_usado') or str(d / bl['path']), "sha256": hrec.get('sha256'),
+                                 "estado": m.get('estado'), "fuentes": ["historial"], "portador": None, "hueso": None,
+                                 "historial": {k: hrec.get(k) for k in ('aplicar', 'cambio', 'en_base', 'variante_ref', 'variante_aprobada', 'faltante_variante', 'fallback', 'ocultar', 'material', 'gap', 'codigo')}})
     json.dump(E, open(out / 'entrada_motor.json', 'w'), indent=1, ensure_ascii=False)
     print('RESULT_PREPARAR', json.dumps({"estado": "OK", "personajes": [p['id'] for p in E['personajes']], "faltantes": E['faltantes'],
                                          "escenario": E['escenario']['fuente'], "N": N,
-                                         "objetos": [o['id'] + ('->' + o['portador'] + ':' + o['hueso'] if o['portador'] else '') for o in E.get('objetos', [])]}, ensure_ascii=False))
+                                         "objetos": [o['id'] + ('->' + o['portador'] + ':' + o['hueso'] if o['portador'] else '') for o in E.get('objetos', [])],
+                                         "historial": [{"id": h.get('id'), "aplicar": h.get('aplicar'), "cambio": h.get('cambio'),
+                                                        "variante_ref": h.get('variante_ref'), "faltante": h.get('faltante_variante'),
+                                                        "fallback": h.get('fallback'), "gap": h.get('gap')} for h in E.get('historial', []) if not h.get('en_base') or h.get('cambio') or h.get('gap')]},
+                                       ensure_ascii=False))
 
 if __name__ == '__main__': main()

@@ -14,6 +14,7 @@ Uso: blender -b COR/escena_motor.blend -P sb3d.py -- --corrida COR --modo paquet
 import bpy, sys, os, json, math, time, argparse, re, shutil, traceback, atexit
 from mathutils import Vector, Matrix
 AQUI = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, AQUI)
+sys.path.insert(0, os.path.dirname(AQUI))
 import sb3d_niveles as NV
 import camara_calculada as CC
 import camara_sin_paredes as CSP
@@ -54,7 +55,17 @@ UMB = {"vis_min": float(CFG.get('vis_protagonista_min', 0.90)), "vis_frame_min":
 
 E = json.load(open(f'{COR}/entrada_motor.json')); FPS = E['fps']; N = E['N']
 SB = json.load(open(f"{COR}/{E['storyboard']}")) if E.get('storyboard') else {"vinetas": []}
-CV = json.load(open(f"{COR}/{E.get('camara_v2') or E.get('camara_v1')}"))
+import camara_vigente as CVIG
+_cam_v2, _cam_v1 = E.get('camara_v2'), E.get('camara_v1')
+_cam_uso = _cam_v2 or _cam_v1
+if _cam_v2 and _cam_v1:
+    _ok_v2, _mot_v2 = CVIG.v2_es_vigente(os.path.join(COR, _cam_v2),
+                                         path_v1=os.path.join(COR, _cam_v1),
+                                         path_sb=os.path.join(COR, E['storyboard']) if E.get('storyboard') else None)
+    if not _ok_v2:
+        log('aviso CAMARA_V2_NO_VIGENTE', _mot_v2, 'se usa v1; el archivo v2 no se borra')
+        _cam_uso = _cam_v1
+CV = json.load(open(f"{COR}/{_cam_uso}"))
 try: CV, _ = NJ.normalizar_camara(CV)
 except Exception as ex: log('aviso normalizar_camara', ex)
 SBV = {v.get('id'): v for v in SB.get('vinetas', [])}
@@ -126,6 +137,24 @@ for v in CV.get('vinetas', []):
     if obj not in enc: enc = [obj] + enc
     VIN.append({"id": v['vineta'], "t": [t0, t1], "f0": f0, "f1": f1, "obj": obj, "en_cuadro": enc, "cv": v, "sb": s})
 log('viñetas', len(VIN), 'personajes', len(PJ))
+# red de seguridad genérica: si el objetivo no se puede medir (oculto / aún no aparece),
+# se cae al hablante o a alguien visible de en_cuadro. Nunca se filma sin sujeto.
+for V in VIN:
+    fm = (V['f0'] + V['f1']) // 2
+    if med(V['obj'], fm):
+        continue
+    hablan = [a.get('quien') for a in (V['sb'].get('audio') or [])
+              if isinstance(a, dict) and a.get('quien') in ARM and med(a.get('quien'), fm)]
+    visibles = [p for p in V['en_cuadro'] if p != V['obj'] and p in ARM and med(p, fm)]
+    nuevo = (hablan[0] if hablan else (visibles[0] if visibles else None))
+    if nuevo:
+        V['obj_omitido_oculto'] = V['obj']
+        V['obj'] = nuevo
+        if nuevo not in V['en_cuadro']:
+            V['en_cuadro'] = [nuevo] + V['en_cuadro']
+        log('aviso OBJETIVO_OCULTO', V['id'], V['obj_omitido_oculto'], '->', nuevo)
+    else:
+        log('aviso OBJETIVO_OCULTO_SIN_VISIBLE', V['id'], V['obj'], 'queda STOP si no hay candidata')
 FR_MUESTRA = sorted({x for v in VIN for x in (v['f0'], (v['f0'] + v['f1']) // 2, v['f1'])})
 NIV, INT, GRAFO = NV.clasificar(E, SB, FR_MUESTRA, sc, med, ENTS)
 N0 = {e for e, d in NIV.items() if d['nivel'] == 'N0'}; N2 = {e for e, d in NIV.items() if d['nivel'] == 'N2'}; N3 = {e for e, d in NIV.items() if d['nivel'] == 'N3'}

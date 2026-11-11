@@ -18,6 +18,8 @@ from mathutils import Vector, Matrix, Quaternion, Euler
 from mathutils.bvhtree import BVHTree
 
 AQUI = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, AQUI)
+sys.path.insert(0, os.path.dirname(AQUI))
+import locomocion as LOCO
 import escala_adn as ESC
 import pies_bloqueo as PIES
 import camara_calculada as CC
@@ -371,6 +373,35 @@ def clip_desde_reposo(arm, cuadros=None):
     info = {"fuente": "reposo_del_molde", "cuadros": cuadros, "periodo_cuadros": cuadros, "zancada_ciclo_m": 0.0}
     return {"poses": poses, "P": cuadros, "D": 0.0}, info
 
+
+def aplicar_vuelo_en_molde(arm, receta, con_alas=True):
+    """Aplica vuelo_alas.animate_from_receta al molde REAL (no cambia la forma; solo anima)."""
+    import vuelo_alas as VA
+    return VA.animate_from_receta(arm, receta, con_alas=con_alas)
+
+
+def decidir_clip_y_vuelo(pid, P, plan, N, info, R):
+    """CPU-testable hook usado también desde animar_personaje: clip por tipo del plan y STOP tipado de vuelo."""
+    modos = [plan[f - 1][4] for f in range(1, N + 1)] if plan else []
+    hay_trote = any(m in ('trotar', 'correr') for m in modos)
+    hay_vuelo = any(m in ('volar', 'vuelo_alas', 'vuelo_sin_alas', 'stop_vuelo') for m in modos)
+    segs = P.get('segmentos') or []
+    receta = next((sg.get('receta') for sg in segs if sg.get('receta')), None)
+    stops = []
+    if hay_vuelo:
+        if any(sg.get('stop') or (sg.get('tipo') == 'volar' and not sg.get('receta')) for sg in segs) and not receta:
+            faltan = []
+            for sg in segs:
+                if sg.get('stop') or sg.get('codigo'):
+                    stops.append({"codigo": sg.get('codigo') or 'STOP_VUELO', "personaje": pid, "faltan": []})
+            if not stops:
+                stops.append({"codigo": "STOP_FALTA_RECETA_VUELO", "personaje": pid, "faltan": ["receta de vuelo aprobada"]})
+            info['stop_vuelo'] = stops
+            aviso = f"{pid}: {stops[0]['codigo']}: no se anima el vuelo como caminar"
+            if aviso not in R['avisos']:
+                R['avisos'].append(aviso)
+    return {"hay_trote": hay_trote, "hay_vuelo": hay_vuelo, "receta": receta, "stops": stops}
+
 def animar_personaje(pid, D):
     arm = D['arm']; P = M['personajes'][pid]; plan = PL['personajes'].get(pid); info = D['info']
     if plan is None: info['movimiento'] = 'sin plan'; return
@@ -386,19 +417,27 @@ def animar_personaje(pid, D):
             C, ci = preparar_clip(arm, S, tipo, fr)
             info.setdefault('clips', {})[nombre] = dict(inf, **ci); log('clip', pid, nombre, json.dumps(info['clips'][nombre], default=str)[:300])
             if C: clips[nombre] = C
-    # trote: si el 01 pide más de 1.6x la velocidad de la caminata del molde en un tramo, ese tramo usa el clip de trote
+    # trote: el TIPO del plan manda (trotar/correr). El umbral 1.6x de la caminata del molde queda como respaldo
+    # si un tramo llegó etiquetado «caminar» pero es demasiado rápido.
     trote = [False] * (N + 2)
-    if 'caminar' in clips and not acoplado:
-        vc = clips['caminar']['D'] / clips['caminar']['P'] * FPS if clips['caminar']['P'] else 0
+    if not acoplado:
+        vc = 0
+        if 'caminar' in clips and clips['caminar']['P']:
+            vc = clips['caminar']['D'] / clips['caminar']['P'] * FPS
         f = 1; tramos = []
         while f <= N:
-            if plan[f - 1][4] == 'caminar':
+            modo_f = plan[f - 1][4]
+            if modo_f in ('trotar', 'correr', 'caminar'):
                 g = f
-                while g < N and plan[g][4] == 'caminar': g += 1
+                while g < N and plan[g][4] == modo_f: g += 1
                 v = (plan[g - 1][3] - plan[f - 1][3]) / max(1, g - f) * FPS
-                if vc > 1e-4 and v > 1.6 * vc: tramos.append((f, g, round(v, 3), round(v / vc, 2)))
+                por_tipo = modo_f in ('trotar', 'correr')
+                por_umbral = (modo_f == 'caminar' and vc > 1e-4 and v > LOCO.UMBRAL_TROTAR_VS_CAMINATA * vc)
+                if por_tipo or por_umbral:
+                    tramos.append((f, g, round(v, 3), round(v / vc, 2) if vc else None, 'tipo' if por_tipo else 'umbral'))
                 f = g + 1
-            else: f += 1
+            else:
+                f += 1
         if tramos:
             S, inf = retarget(arm, 'trotar', D['alt'])
             Ct, ci = preparar_clip(arm, S, 'trotar', info['frente_rest_deg']) if S is not None else (None, {"error": inf})
@@ -406,8 +445,14 @@ def animar_personaje(pid, D):
             log('clip', pid, 'trotar', json.dumps(info['clips']['trotar'], default=str)[:300])
             if Ct:
                 clips['trotar'] = Ct
-                for f0, g0, _, _ in tramos:
+                for f0, g0, *_ in tramos:
                     for k in range(f0, g0 + 1): trote[k] = True
+            else:
+                # hay tramos de trote pero no hay clip: no se sustituye en silencio por caminar
+                aviso = f"{pid}: STOP_FALTA_CLIP_TROTAR: el plan pide trotar/correr y no se pudo preparar el clip trotar"
+                if aviso not in R['avisos']:
+                    R['avisos'].append(aviso)
+                info['stop_trotar'] = {"codigo": "STOP_FALTA_CLIP_TROTAR", "tramos": tramos}
     if acoplado:
         info['movimiento'] = 'acoplado (reposo del molde, hijo del hueso del portador)'; return
     if 'quieto' not in clips or 'caminar' not in clips:
@@ -421,6 +466,21 @@ def animar_personaje(pid, D):
         if aviso not in R['avisos']:
             R['avisos'].append(aviso)
         info['movimiento'] = 'reposo_del_molde+plan'
+    vuelo_dec = decidir_clip_y_vuelo(pid, P, plan, N, info, R)
+    if vuelo_dec.get('receta') and not acoplado:
+        rec = vuelo_dec['receta']
+        try:
+            receta = rec if isinstance(rec, dict) else json.load(open(rec))
+            huesos = [b.name for b in arm.pose.bones]
+            con_alas = any('ala' in n.lower() or 'wing' in n.lower() for n in huesos)
+            aplicar_vuelo_en_molde(arm, receta, con_alas=con_alas)
+            info['vuelo'] = {"metodo": "vuelo_alas.animate_from_receta", "receta": rec if isinstance(rec, str) else rec.get('id'), "con_alas": con_alas}
+            info['movimiento'] = 'receta_vuelo_alas'
+            log('vuelo', pid, info['vuelo'])
+        except Exception as ex:
+            aviso = f"{pid}: STOP_VUELO_APLICAR: no se pudo aplicar la receta de vuelo ({type(ex).__name__}: {ex}); no se sustituye por caminar"
+            R['avisos'].append(aviso)
+            info['stop_vuelo'] = [{"codigo": "STOP_VUELO_APLICAR", "personaje": pid, "detalle": str(ex)}]
     # ---- Kimodo: cada tramo de movimiento (caminar/girar/correr) viene de Kimodo GPU; Mwni lo pasa al molde
     import numpy as np
     kimf = {}; kborde = {}; kim_contact = {'pie_L': [False] * N, 'pie_R': [False] * N}; kinfo = []
@@ -504,11 +564,12 @@ def animar_personaje(pid, D):
             while yaw - prev_r > math.pi: yaw -= 2 * math.pi
             while yaw - prev_r < -math.pi: yaw += 2 * math.pi
         dd = dist - prev_d; dr = abs(yaw - prev_r) if prev_r is not None else 0.0; prev_d = dist; prev_r = yaw
-        tgt = 1.0 if modo in ('caminar', 'girar') else 0.0
+        tgt = 1.0 if modo in ('caminar', 'girar', 'trotar', 'correr') else 0.0
         w_walk += max(-1 / RAMPA, min(1 / RAMPA, tgt - w_walk))   # rampa quieto<->caminar (cuadros)
         if clips:
-            Cw = clips['trotar'] if (trote[f] and 'trotar' in clips) else clips['caminar']; Cq = clips['quieto']
-            if modo == 'caminar': fase += dd / Cw['D'] * Cw['P'] if Cw['D'] > 1e-4 else 0
+            usar_trote = LOCO.clip_para_modo(modo, trote_por_umbral=bool(trote[f])) == 'trotar' and 'trotar' in clips
+            Cw = clips['trotar'] if usar_trote else clips['caminar']; Cq = clips['quieto']
+            if modo in ('caminar', 'trotar', 'correr'): fase += dd / Cw['D'] * Cw['P'] if Cw['D'] > 1e-4 else 0
             elif modo == 'girar': fase += (dr * 0.10) / Cw['D'] * Cw['P'] if Cw['D'] > 1e-4 else 0
             pose = slerp_pose(quieto_en(Cq, f), muestra(Cw, fase), w_walk * w_walk * (3 - 2 * w_walk))
             if f in kimf or f in kborde:
@@ -782,6 +843,9 @@ _cache = {}
 def _eval(pid, f):
     k = (pid, f)
     if k not in _cache:
+        if not isinstance(pid, str) or not pid:
+            _cache[k] = None
+            return _cache[k]
         a = PJ[pid]['arm'] if pid in PJ else bpy.data.objects.get(pid)
         if a is None: _cache[k] = None
         else:
@@ -884,7 +948,10 @@ def calc_vineta(v, kf, gf=None):
     f0 = int(round(t0 * FPS)) + 1; f1 = min(N, int(round(t1 * FPS)))
     obj = v['objetivo']
     h_raw = NJ.a_numero(v.get('altura_m'), 'altura_m')
-    h = float(h_raw if h_raw not in (None, 0) else PJ.get(obj, {}).get('alt', 1.0))
+    h_fb = PJ.get(obj, {}).get('alt') if obj in PJ else None
+    if h_fb in (None, 0) and obj and obj not in PJ:
+        h_fb = _altura_de_objeto(obj)
+    h = float(h_raw if h_raw not in (None, 0) else (h_fb or 1.0))
     el = math.radians(ELEV.get(v.get('angulo'), 0.0)); sx = LADO.get(v.get('lado_objetivo'), 0.0)
     fijo = {}
     for f in range(f0, f1 + 1):
@@ -928,7 +995,7 @@ def calc_vineta(v, kf, gf=None):
         if mov == 'STATIC' and seg['t_abs'][0] in fijo: C = fijo[seg['t_abs'][0]]
         elif mov == 'STATIC': fijo[seg['t_abs'][0]] = C.copy()
         if mov == 'PAN':
-            key =[REDACTED]
+            key = ('pan', seg['t_abs'][0])
             if key not in fijo: fijo[key] = C.copy()
             C = fijo[key]
         Pv = (base if mov in ('TRACK', 'PAN') else pos_sujeto(obj, f)[0]) + Vector((0, 0, h_real * apunte))
@@ -952,10 +1019,67 @@ def suavizar_k(kn, fr, movs, segs):
             if movs[j] in ('STATIC', 'PAN') and segs[j] != segs[i]:
                 w = 1 - abs(i - j) / 13.0; ks[i] = max(ks[i], ks[j] * w + ks[i] * (1 - w))
     return ks
+def _objeto_en_escena(nom):
+    """Nombre del SB (p. ej. obj-libro-cuentos__e1-8) -> objeto real en la escena, o None."""
+    if not isinstance(nom, str) or not nom:
+        return None
+    base = re.sub(r'__.*$', '', nom)
+    for cand in (nom, base, f'PROP_{base}', f'PROP_{nom}'):
+        if bpy.data.objects.get(cand) is not None:
+            return cand
+    hits = [o.name for o in bpy.data.objects
+            if o.name.startswith(base + '#') or o.name.startswith(base + '_') or o.name.startswith(base + '.')]
+    return hits[0] if hits else None
+
+def _altura_de_objeto(nombre):
+    o = bpy.data.objects.get(nombre) if isinstance(nombre, str) and nombre else None
+    if o is None:
+        return None
+    mallas = ([o] if o.type == 'MESH' else []) + [c for c in o.children_recursive if c.type == 'MESH']
+    if not mallas:
+        return None
+    pts = [m.matrix_world @ Vector(c) for m in mallas for c in m.bound_box]
+    return max(0.01, max(p.z for p in pts) - min(p.z for p in pts))
+
+def resolver_objetivo_camara(v, sb):
+    """Usa el objetivo del plan si existe; si falta, un objeto del SB presente en escena;
+    si no, un personaje en_cuadro o el hablante. Nunca inventa un sujeto.
+    Devuelve (id|None, aviso|None). Genérico, cualquier canal."""
+    obj = v.get('objetivo')
+    if isinstance(obj, str) and obj.strip():
+        return obj, None
+    vsb = next((x for x in (sb or {}).get('vinetas', []) if x.get('id') == v.get('vineta')), {}) or {}
+    di = vsb.get('director_imagen') or {}
+    for item in di.get('objetos') or []:
+        nom = item.get('nombre') if isinstance(item, dict) else item
+        hallado = _objeto_en_escena(nom)
+        if hallado:
+            return hallado, f"cámara {v.get('vineta')}: sin objetivo de personaje; se apunta al objeto del SB {hallado}"
+    for item in di.get('en_cuadro') or []:
+        pid = item.get('id') if isinstance(item, dict) else item
+        if isinstance(pid, str) and pid in PJ:
+            return pid, f"cámara {v.get('vineta')}: sin objetivo; se usa personaje en_cuadro {pid}"
+    for a in vsb.get('audio') or []:
+        quien = a.get('quien')
+        if isinstance(quien, str) and quien in PJ:
+            return quien, f"cámara {v.get('vineta')}: sin objetivo; se usa hablante {quien}"
+    return None, f"cámara {v.get('vineta')}: sin objetivo y sin objeto/personaje visible en el SB; se omite la viñeta (no se filma sin sujeto)"
+
 cam_ajuste = {}
 for v in CV['vinetas']:
     f0 = int(round(v['t_abs'][0] * FPS)) + 1
     if f0 > N: continue
+    obj_r, av_r = resolver_objetivo_camara(v, SB)
+    if av_r and av_r not in avisos_sb:
+        avisos_sb.append(av_r)
+    if obj_r and obj_r != v.get('objetivo'):
+        v = dict(v, objetivo=obj_r)
+        if v.get('altura_m') in (None, 0) and obj_r not in PJ:
+            ha = _altura_de_objeto(obj_r)
+            if ha:
+                v['altura_m'] = ha
+    if not obj_r:
+        continue
     f0, f1, obj, o1 = calc_vineta(v, {})
     if not o1: continue
     fr = sorted(o1); kr = [k_necesario(o1[f][0], o1[f][1], o1[f][3], o1[f][2], obj, f) for f in fr]; kn = [x[0] for x in kr]; ocl = sum(1 for x in kr if x[1])
@@ -979,6 +1103,8 @@ for v in CV['vinetas']:
     tomas.append({"vineta": v['vineta'], "frame_ini": f0, "frame_fin": f1, "objetivo": obj, "angulo": v.get('angulo'), "lado": v.get('lado_objetivo'),
                   "movimientos": [s.get('movimiento') for s in v['segmentos']], "altura_m": v.get('altura_m'), "alejamiento": cam_ajuste[v['vineta']]})
 fr_cam = sorted(locs)
+if not fr_cam:
+    raise RuntimeError("FALLO_CAMARA_SIN_SUJETO: ninguna viñeta tiene un objetivo medible en escena; no se filma sin sujeto")
 datos = {('location', i): [locs.get(f, locs[fr_cam[0]])[i] for f in range(1, N + 1)] for i in range(3)}
 eul = []; prev = None
 for f in range(1, N + 1):
