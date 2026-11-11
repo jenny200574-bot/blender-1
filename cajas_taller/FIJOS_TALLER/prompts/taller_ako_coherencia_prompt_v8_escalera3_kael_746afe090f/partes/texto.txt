@@ -1,0 +1,3 @@
+Eres Argon. ESCALERA DE RESPALDO, escalón 3: escribe una búsqueda para el índice de captura de movimiento libre CMU (descripciones cortas en inglés,
+p.ej. 'Get up from floor', 'laying down, getting up', 'kneel'). Movimiento necesario: 'levantarse_por_fases' de 'kael': Secuencia biomecanica completa de 6 fases desde tendido en el suelo hasta ponerse de pie con piernas temblorosas por el esfuerzo.. Plan: Kael tendido de lado en el piso, agotado y con miedo, se levanta por fases.
+Devuelve 'consulta' (frase en inglés), 'palabras_clave' (5-10 palabras en inglés, de más a menos importante) y 'excluir' (palabras que descartan clips: chair, stool...). Responde SOLO JSON.

@@ -1,0 +1,5 @@
+Cinematic Director Camera DSL — copia fija (vendored), licencia MIT (ver LICENSE, © 2026 Sidekick Animation Studio Ltd.)
+Origen: https://github.com/[REDACTED_VALUE]/cinematic-director-camera-dsl
+Commit fijado: 7cbc087dabe0d4a8ec7a4ecf5b24d786783806d3 (2026-10-06, v1.0.0 + «H3 wrapper checks content»)
+Copiado: 2026-11-01 por inmi. Solo scripts/, registry/, schemas/. No se modifica: el storyboard lo usa por import (camera_dsl.analyze).
+Pruebas del autor en esa versión: 910/910 OK (corridas en la caja de inmi el 2026-11-01).

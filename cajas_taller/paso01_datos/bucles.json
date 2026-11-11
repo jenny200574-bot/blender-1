@@ -1,0 +1,5 @@
+{
+ "PISTA": "PISTA INMI (2026-10-29): orden 74 — salidas REALES de los bucles 03↔04 y 08↔09. Tras max_vueltas sin aprobar, el flujo sale a «pasar al usuario» (04a / 09a). Genérico: sirve para cualquier canal; cambiar aquí, no en el código.",
+ "03_04": {"revisa": "03", "corrige": "04", "max_vueltas": 2, "salida_usuario": "04a", "sigue_si_aprueba": "05"},
+ "08_09": {"revisa": "09", "corrige": "08", "max_vueltas": 2, "salida_usuario": "09a", "sigue_si_aprueba": "10"}
+}

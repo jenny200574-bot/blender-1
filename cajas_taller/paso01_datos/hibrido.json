@@ -1,0 +1,128 @@
+{
+ "PISTA": "PISTA INMI (2026-10-29): orden 87 — ajustes del método híbrido: moldes de toma (cubo 02) y pedido «híbrido tira» (cubo 11). US$0 hasta que se habilite el pago.",
+ "moldes": {
+  "activo": true,
+  "cuadros_por_toma_si_el_plan_no_dice": 4,
+  "tomas_por_hoja": 2,
+  "columnas_hoja": 2,
+  "tomas_max_por_corrida": 8,
+  "segundos_max_blender_por_escena": 1500,
+  "panel_lado_largo_px": 1280,
+  "render_lado_largo_px": 960,
+  "cuadricula_m": 1.0,
+  "colores_molde": {
+   "piel": "#ECB892",
+   "nuca": "#0C0C0C",
+   "cielo": null
+  },
+  "grosor_si_falta": 1.0,
+  "pose_si_falta": "de_pie",
+  "marcadores_auto": [
+   {
+    "hex": "#1FB5A8",
+    "nombre": "TEAL"
+   },
+   {
+    "hex": "#FF8A00",
+    "nombre": "ORANGE"
+   },
+   {
+    "hex": "#6BE01A",
+    "nombre": "LIME GREEN"
+   },
+   {
+    "hex": "#E020C8",
+    "nombre": "MAGENTA"
+   },
+   {
+    "hex": "#FFE100",
+    "nombre": "YELLOW"
+   },
+   {
+    "hex": "#2E4BFF",
+    "nombre": "BLUE"
+   },
+   {
+    "hex": "#E8262B",
+    "nombre": "RED"
+   },
+   {
+    "hex": "#9B1FFF",
+    "nombre": "PURPLE"
+   },
+   {
+    "hex": "#00C8FF",
+    "nombre": "CYAN"
+   },
+   {
+    "hex": "#FF5FA0",
+    "nombre": "PINK"
+   }
+  ],
+  "nota_marcadores": "Si personajes.json no trae molde.color_molde, el 02 usa el siguiente color de esta lista SOLO como marca en el molde (no es un dato del personaje) y lo avisa.",
+  "claves_texto_toma": [
+   "accion",
+   "descripcion",
+   "que_pasa",
+   "action"
+  ],
+  "claves_texto_cuadro": [
+   "accion",
+   "descripcion",
+   "action"
+  ]
+ },
+ "personaje_molde": {
+  "que_es": "Campos GENÉRICOS que el método híbrido lee de <biblioteca>/<canal>/personajes/personajes.json, en cada personaje (y, si cambia por versión, en la versión) bajo la clave «molde». Vacío = no se sabe: el 02 avisa y NO inventa.",
+  "campos": {
+   "color_molde": "color #RRGGBB de su maniquí (solo marca de posición); vacío → color automático de marcadores_auto, con aviso",
+   "color_nombre": "nombre del color en inglés para la leyenda del pedido (TEAL, ORANGE…); vacío → el del marcador más parecido",
+   "grosor": "complexión (1.0 normal, 0.9 delgado, 1.6 muy grueso); vacío → 1.0 con aviso",
+   "accesorios": "lista de piezas del maniquí: {nombre, nombre_prompt, color, color_nombre, forma esfera|cilindro|caja, en|desde/hasta (articulación pel, pec, cab, mi, md, …), offset, radio, largo, escala, dim}; vacío → sin accesorios",
+   "obligatorias": "frases en inglés que el pintor debe respetar (p. ej. «red cap»); vacío → nada",
+   "prohibidas": "frases en inglés «no …» que van a EXCLUDE; vacío → nada",
+   "identidad_en": "descripción en inglés para el pedido; vacío → la descripción de la versión aprobada"
+  },
+  "altura": "la altura NO va aquí: sale del 01 (altura), de la forma del canal (altura_m) o de personajes.json (altura_m del personaje o de la versión). Sin altura → esa escena NO saca moldes (se para y se dice)."
+ },
+ "pintura": {
+  "guarda": "HABILITAR_PAGO_11",
+  "tope_por_llamada_usd": 0.75,
+  "max_refs": 14,
+  "max_imagenes_por_personaje": 2,
+  "estilo_muestra_obligatoria": false,
+  "estilo_muestra_desc": "Approved style sample of this channel: copy its painting technique, line, light and palette only (not its content or layout).",
+  "claves_momento": [
+   "momento_del_dia",
+   "hora",
+   "momento",
+   "clima"
+  ],
+  "momento_si_falta": "same time of day and weather as the previous panel",
+  "claves_set_corto": [
+   "nombre_corto",
+   "nombre",
+   "id"
+  ],
+  "claves_descripcion_set": [
+   "descripcion_en",
+   "descripcion_prompt",
+   "descripcion"
+  ],
+  "accion_si_falta": "the scene continues exactly as the mold shows",
+  "claves_texto_03": [
+   "vinetas",
+   "textos_vineta"
+  ],
+  "ref_personaje_desc": "{nombre} – {version}, {vista} view: the approved reference for identity (face, body, outfit, accessories).",
+  "estilo_en_vineta_max": 200,
+  "_estilo_en_vineta_max": "PISTA INMI (2026-10-29): orden 87 — el estilo del canal se repite en cada viñeta solo si tiene ≤ estas letras; si no, va una vez en STYLE"
+ },
+ "revision": {
+  "blanco_min": 235,
+  "margen_min_px": 12,
+  "fraccion_blanca_calle": 0.97,
+  "espejo_peor_por": 0.08,
+  "nota": "Revisión GRATIS de la tira pintada: rejilla (2 columnas × N filas con calles blancas), margen blanco y lado de pantalla (cada panel se compara con su molde y con su molde espejado: si el espejado se parece claramente más, el panel salió volteado)."
+ }
+}

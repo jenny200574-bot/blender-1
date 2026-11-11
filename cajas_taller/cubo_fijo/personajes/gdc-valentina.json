@@ -1,0 +1,54 @@
+{
+  "id": "gdc-valentina",
+  "nombre": "Valentina",
+  "ids_canal": [
+    "ch-valentina-a9be",
+    "valentina"
+  ],
+  "tipo": "persona",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/valentina/referencia-cliente/refs/85876d21180a93bf.jpg",
+  "nunca_cambia": "Casco morado, traje magenta/morado con líneas brillantes, botas magenta. Niña de 6 años. Siempre con su escudo morado con corazón rojo.",
+  "voz_adn": {
+    "schema": "voz_adn/v1_universal",
+    "motor": null,
+    "fuente": "Biblia GDC_00_1 + guion T01E01 del cliente (acotaciones de tono); escrito una vez por el ingeniero el 2-nov-2026; sin IA, US$0",
+    "rasgos": {
+      "timbre": "cálido, redondo, de niña",
+      "tono": "medio-grave para su edad, tranquilo",
+      "ritmo": "pausado, con silencios dramáticos",
+      "acento": "español latinoamericano neutro (Colombia suave), sin regionalismos fuertes",
+      "idioma": "español",
+      "edad_aparente": "niña de 6 años",
+      "energia": "media-baja, serena",
+      "textura": "suave y aterciopelada",
+      "diccion": "clara y cuidadosa; es la voz de las llamadas a la acción"
+    },
+    "descriptor_universal_en": "Warm, rounded 6-year-old girl voice, calm lower pitch for her age, slow deliberate rhythm with dramatic pauses, soft velvety texture, careful clear diction, neutral Latin American Spanish.",
+    "notas": "valiente y cariñosa; habla suave mirando a cámara",
+    "regla": "perfil universal (no atado a Veo ni a ningún motor); el motor de voz se elige después"
+  },
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "personaje",
+  "sellado": true,
+  "version": 4,
+  "altura_fuente_nota": "alturas en la biblioteca personajes.json (altura_m, inventadas por orden de Ricardo 2-nov-2026, no medidas en Blender)",
+  "adn_estado": "ADN Ako sellado (Fase 1 hoja + Fase 2 ADN, sello_pago 2-nov-2026)",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; cambia solo con versión nueva (versiones/) y sello por cubo_fijo sellar",
+  "frase_sello": "1. Ficha Antropométrica:\nEdad visual de 12 a 14 años, estatura aparente media-baja y complexión delgada estilizada, 1.12 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida). Proporción de 4.5 cabezas de altura. Acabado en estilo 3D CGI estilizado sin líneas de contorno 2D, utilizando sombreado suave con renderizado físico (PBR): piel con dispersión subsuperficial cálida, plásticos satinados en armadura, tela mate y circuitos con luminiscencia propia (emisivos).\n\n2. Fisonomía Facial y Cabello:\nRostro ovalado de mejillas suaves y piel morena cálida. Ojos grandes almendrados de iris marrón oscuro, nariz pequeña respingada y labios definidos color rosa terroso. Cejas castaño oscuro de grosor medio y arco definido. Cabello castaño muy oscuro, voluminoso y con ondas marcadas, que nace bajo el casco y llega hasta media espalda. Accesorio fijo: casco sci-fi púrpura de cara abierta (sin visor), con sujeción de mentón, orejeras circulares y líneas de circuito en rosa neón.\n\n3. Paleta de Expresiones:\n- Normal: Cejas relajadas en arco suave, ojos bien abiertos mirando al frente y sonrisa ligera con labios cerrados.\n- Feliz: Cejas elevadas, ojos brillantes ligeramente entrecerrados por los pómulos y sonrisa amplia abierta mostrando dientes superiores.\n- Nervioso: Cejas inclinadas mostrando preocupación, ojos muy abiertos mirando hacia su derecha, boca pequeña entreabierta y dos gotas de sudor celestes en el lado izquierdo del rostro.\n- Enojado: Ceño fruncido en ángulo agudo hacia el centro, apertura ocular máxima con mirada fija y boca abierta en forma trapezoidal (grito).\n- Triste: Extremos internos de las cejas elevados, párpados superiores ligeramente caídos y boca cerrada con comisuras hacia abajo en gesto de puchero.\n\n4. Vestuario por Capas:\n- Prenda única (Bodysuit): Traje enterizo futurista completamente ceñido, sin holgura, pliegues ni bolsillos. Combina paneles en magenta metálico (torso frontal y guantes integrados hasta medio antebrazo) con secciones en púrpura oscuro mate (brazos superiores, costados y piernas).\n- Estampados y detalles: Emblema de corazón rojo volumétrico con borde lila incrustado en el pecho. Trazos geométricos emisivos en rosa neón (estilo circuito impreso con pequeños nodos circulares) distribuidos simétricamente por torso, brazos y piernas.\n- Calzado: Botas rígidas a media pantorrilla en color magenta, de corte recto, suela baja color púrpura y circuitos iluminados en rosa neón en la caña y el empeine.\n\n5. Reglas de Giro:\n- Frente: Visibilidad exclusiva del corazón rojo en el pecho, la abertura en \"V\" del cuello del traje y dos mechones de cabello reposando sobre los hombros.\n- Perfil: Protagonismo del disco circular en el lateral del casco, volumen del cabello proyectado hacia atrás despejando el cuello y línea luminosa continua a lo largo del brazo y pierna exterior.\n- Espalda: El volumen del cabello ondulado cubre por completo la zona dorsal alta. El casco presenta tres líneas verticales de neón en la nuca; la zona lumbar, glúteos y piernas muestran continuidad simétrica de los circuitos brillantes. Silueta limpia, libre de capas o mochilas.",
+  "actualizado": "2026-11-06T03:34:21+01:00",
+  "origen": "sellar",
+  "hoja_aprobada": {
+    "ruta": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-valentina_e3d8db772c0db601.png",
+    "aprobado_por": "Ricardo",
+    "cuando": "2026-11-02T17:32:00-05:00",
+    "origen": "chat Ricardo «si apruebo» (pt510u)",
+    "sha256": "e3d8db772c0db60186e3851742e2eb895b56776190ed00b2337db75a2912ba4c",
+    "origen_ruta": "/opt/myia-taller-n8n/trabajo/sello_pago/cn-los-guardianes-de-la-9fb323be/gdc-valentina/hoja_fase1_20261102-232006_i1.png"
+  },
+  "hoja_ref": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-valentina_e3d8db772c0db601.png",
+  "altura_m": 1.12,
+  "altura_fuente": "biblioteca del canal (personajes.json); Blender la reemplaza al medir",
+  "altura_regla": "t467u Ricardo: biblioteca gana hasta medición Blender"
+}

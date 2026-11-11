@@ -1,0 +1,19 @@
+Eres ARGON C, investigador técnico. Necesito INGENIERÍA INVERSA de cómo leen las referencias los modelos de imagen Nano Banana Pro (gemini-3-pro-image) y Gemini image en general, y los de video (Veo 3.x), para un pipeline que calca un molde 3D de Blender a hojas de storyboard 2x4 (8 viñetas 16:9, aspecto 4:5, 4K).
+
+DATOS DE NUESTRAS PRUEBAS (misma hoja L13+L14: Kael boca abajo que luego se levanta, azotea de noche, pulsera cian en muñeca IZQUIERDA):
+- Intento 1: prompt estructura T06 con coordenadas x=%/y=% y alto %, molde en posición Image 4 de 5 (después de hojas de personaje), con tira de estilo aprobada como Image 5. Resultado: bonito pero cambió la forma del ventilador/AC, una pose distinta, Kael agrandado, giró a 3/4 hacia cámara, pulsera en la derecha.
+- Intento 2: molde como Image 1, SIN coordenadas, la leyenda de colores del molde nombrada en cada viñeta ("green arm", "blue arm"), con tira de estilo. Resultado: Ricardo dice que siguió el molde PERFECTO; pero pintó manos verdes y azules.
+- Intento 3: igual a 2 pero Argon volvió a meter 24 coordenadas x/y. Resultado: un panel en blanco, agrandó y giró.
+- Intento 4: molde Image 1, sin coordenadas, colores solo en la leyenda, sin tira de estilo. Resultado: respetó el ventilador y la perspectiva de posición, pero un panel cambió la dirección del personaje y en la mayoría cambió la mano de la pulsera. Perdió el estilo neón.
+- Otras hojas: con molde gris AO (sin colores) el pintor acertó la vista de espalda pero agrandó a Kael y cambió la mano de la pulsera; en vistas de espalda la pulsera sale en la mano de la derecha de pantalla (derecha anatómica). Una hoja salió con rótulos "L02_1" escritos. La referencia de Kael de espalda tiene mochila y no tiene pulsera.
+
+PREGUNTAS (responde con lo que se sabe públicamente + tu razonamiento; separa "documentado" de "hipótesis"):
+1. ¿Cómo ponderan estos modelos varias imágenes de referencia? ¿Importa el orden? ¿La primera domina la composición? ¿Cuántas refs antes de diluir?
+2. ¿Necesitan etiquetas explícitas de cada imagen y de partes del set ("this is the right wall of the terrace")? ¿Cómo conviene etiquetar?
+3. ¿Cómo interpretan un molde con colores por parte del cuerpo vs. gris con oclusión ambiental vs. mapa de profundidad vs. líneas? ¿Por qué copian el color a la piel? ¿Qué codificación es más robusta para pose, orientación y lado izquierdo/derecho?
+4. Izquierda/derecha: ¿por qué intercambian la mano del accesorio, sobre todo de espaldas? ¿Funciona mejor "screen-left" que "his left"? ¿Ayuda un marcador visual único en el molde o en la ref de personaje?
+5. Hojas de varias viñetas: ¿por qué aparecen paneles en blanco, rótulos de texto, o un panel que gira al personaje? ¿Límite práctico de viñetas por hoja? ¿Es mejor pedir viñetas sueltas o pares?
+6. Coordenadas numéricas en el texto: ¿por qué empeoran?
+7. Veo: ¿cómo usa imágenes de referencia/primer cuadro y texto? ¿Qué de lo anterior aplica a video?
+8. Recomendaciones concretas y una lista priorizada de 5 experimentos pequeños (qué cambia, qué medir, costo aproximado) para fijar pose, escala, orientación y mano de la pulsera.
+RESPONDE SOLO JSON: {"respuestas":[{"n":1,"documentado":"","hipotesis":"","implicacion_para_nosotros":""}],"recomendaciones":[""],"experimentos":[{"id":"E1","cambio":"","mide":"","costo_usd":0}],"fuentes":[""]}

@@ -1,0 +1,44 @@
+Eres ARGON C, revisor de calidad (cubo 12). Adjunto 1 = hoja de moldes Blender 2x4 (VERDAD de layout). Adjunto 2 = hoja pintada por Nano Banana Pro con el prompt de abajo. Compara viñeta por viñeta (8 viñetas, filas 1-2 lámina L18, filas 3-4 lámina L19).
+Para cada viñeta evalúa: orientación del cuerpo (espalda/frente/3-4/perfil/boca abajo/boca arriba) igual al molde; dirección de cabeza y mirada (¿mira a cámara cuando no debe?); escala y posición relativas al set; número de personas y de manos, brazos sueltos; pulsera (exactamente una, muñeca IZQUIERDA, derecha desnuda); identidad (Kael gordito, pelo corto negro, gafas; alien pelo plateado); colores de molde copiados.
+Luego investiga POR QUÉ se desvía (frases del prompt, ambigüedad del molde, orden de imágenes, aspecto) y propone cambios concretos al pedido/prompt/molde/orden de imágenes para el siguiente intento.
+PROMPT USADO:
+<<<
+Lock exact position, silhouette scale and limb angles to Image 1; DO NOT center characters on the edges; DO NOT turn a character to face the camera if the mold has its back turned; distant figures stay tiny and distant exactly where they stand.
+
+STYLE: Anime Key Visual de Alta Gama estilo Light Novel / Gacha — soft cel-shading with gradients, fine lineart, cinematic lighting with bloom and particles. Midnight-blue night sky with stars, cyan neon city glow; violet only for alien gravity rings. Dry concrete floor with grid lines, no rain, no puddles.
+
+STORYBOARD SHEET: ONE SCENE (skyscraper rooftop at night), TAKES L18_1, L18_2, L18_3, L18_4, L19_1, L19_2, L19_3, L19_4.
+
+1. PAGE LAYOUT
+One image holding 8 panels in 4 rows of 2 columns, same grid as Image 1. Every panel is 16:9 widescreen with thin pure-white gutters and outer margin. Borderless panels, reading left to right, top to bottom. No text, captions, balloons or numbers.
+
+2. CONSISTENCY
+Identical look across all 8 panels: same rooftop, night lighting, palette and outfits. Natural skin hands and grey hoodie sleeves in all panels; no disembodied or extra arms or hands.
+
+3. REFERENCE IMAGES
+Image 1: layout mold sheet from Blender (2 columns x 4 rows, same grid as the page) — PRIMARY structural reference; legend: grey = the set; magenta = Kael torso, orange = his legs, green = his LEFT arm, blue = his RIGHT arm, skin-coloured patch = where his FACE points, black = BACK of his head/hair, cyan ring = the bracelet on his LEFT wrist; small plain YELLOW figure = the alien. These colors are coding only: paint natural human skin, grey hoodie sleeves and real clothing. Image 2: Kael approved BACK view (wide back, round hips, dark sneakers, no backpack). Image 3: Kael approved FRONT sheet (chubby 98 kg build, round face, short messy black hair, rectangular glasses, grey zip hoodie over dark navy t-shirt, dark cargo pants, sneakers, no backpack). Image 4: alien approved front sheet (tall slender humanoid, long silver-white hair, pointed ears, black armor with glowing blue lines). Image 5: approved strip T06 of this scene: painting style and character look ONLY, never copy its layout or poses.
+
+4. CHARACTERS
+Kael Cross = Images 2-3: chubby 98 kg build, short messy black hair, rectangular glasses, grey zip hoodie, dark navy t-shirt, dark cargo pants, dark sneakers, never barefoot, no backpack. Exactly ONE glowing cyan bracelet on his LEFT wrist only; his right wrist is always bare.
+The Alien = Image 4: tall, long silver-white hair, black armor with blue lines; shoots a vertical violet gravity ring in Panels 1-4 and is off-screen in Panels 5-8.
+
+5. SET AND STORY STATE
+Rooftop at night: dry grey tiled concrete floor, parapet wall, orange metal frame with boxy orange AC units on the left, red antenna masts and round dish on the back-left, two cylindrical water tanks and dark walls on the back-right. Never mirror or flip any panel.
+
+6. STORY OF THE SCENE (context only)
+L18: Kael defies the alien, who fires a violet shockwave ring across the rooftop. L19: Kael drops to his knees clutching his left wrist as the bracelet light fades.
+
+7. PANELS
+Panel 1 (row 1 left): Wide high-angle view of the rooftop floor, orange AC frame on the far left, red antennas and dish at back-left, cylindrical water tanks and walls at back-right, no sky visible. Two characters: tiny on the far-left near the AC frame, Kael (smaller than the water tanks, chubby back, dark sneakers) stands in back-three-quarter view facing RIGHT toward the alien; his face is never visible; he never turns his head toward the camera; his bare right arm hangs on the camera side and his left wrist is hidden by his torso. Distant at back-right in front of the water tanks, the small alien stands facing left raising his right arm.
+Panel 2 (row 1 right): Same wide high-angle rooftop view. Tiny on the far-left, Kael stands in back-three-quarter view facing RIGHT with his back to the camera and bare right arm on the left. Distant at back-right, the small alien points his right arm left, launching a vertical glowing violet gravity ring in front of him.
+Panel 3 (row 2 left): Same wide high-angle rooftop view. Tiny on the far-left, Kael remains in back-three-quarter view facing RIGHT, braced as the vertical violet gravity ring flies halfway across the concrete floor from right to left.
+Panel 4 (row 2 right): Same wide high-angle rooftop view. Tiny on the far-left, Kael stands in back-three-quarter view facing RIGHT as the vertical violet ring reaches right in front of his torso about to strike.
+Panel 5 (row 3 left): Medium close-up facing the orange AC frame and boxy units on the left and grey concrete floor on the right; alien and background tanks off-screen. One character: Kael fills the lower-left and center frame from waist up, leaning forward in front-three-quarter view with his head tilted down looking at his left wrist at bottom-right (never looking at the camera); his bare right arm hangs on the screen-left side and his left arm extends down on the screen-right with the single glowing cyan bracelet at the bottom-right edge.
+Panel 6 (row 3 right): Same medium close-up in front of the AC unit. Kael hunches lower in pain looking down at his left wrist at bottom-right; his bare right arm on screen-left bends inward while the glowing cyan bracelet remains on his left wrist at bottom-right.
+Panel 7 (row 4 left): Same medium close-up with Kael's head slightly cropped by the top edge, looking down at his wrist in pain; both arms are attached to his shoulders, with his bare right forearm crossing from screen-left to clutch his left wrist at bottom-right where the single cyan bracelet flickers dimly.
+Panel 8 (row 4 right): Same medium close-up with Kael's head partially cropped at the top edge, hunched on his knees clutching his left wrist at bottom-right with his bare right hand from screen-left as the single cyan bracelet nearly fades out.
+
+8. EXCLUDE (word list)
+Avoid: blocky 3D dummy shapes, magenta, yellow, green or blue skin/clothes, disembodied foreground arm, second bracelet, bracelet on right wrist, Kael looking at camera, backpack, barefoot, rain, wet floor, puddles, text, captions, speech bubbles, panel borders, mirrored panels.
+>>>
+RESPONDE SOLO JSON: {"vinetas":[{"n":1,"orientacion_ok":true,"mirada_ok":true,"escala_ok":true,"manos_ok":true,"pulsera_ok":true,"identidad_ok":true,"nota":""}],"pasa_hoja":false,"causas":[""],"cambios_propuestos":{"prompt":[""],"molde":[""],"orden_imagenes":[""],"otros":[""]}}

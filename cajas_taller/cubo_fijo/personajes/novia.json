@@ -1,0 +1,13 @@
+{
+  "id": "novia",
+  "adn_id": "novia",
+  "voz_ref": "banco_voz/voz_novia.json",
+  "vistas": [
+    "frente",
+    "3_4"
+  ],
+  "sellado": false,
+  "version": 1,
+  "origen": "semilla_ako_cubo_cargar_js",
+  "canal": "genesis"
+}

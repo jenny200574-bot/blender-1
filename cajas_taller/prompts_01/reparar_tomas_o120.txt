@@ -1,0 +1,25 @@
+PARTIAL REPAIR OF A SCENE DIRECTION (repair attempt {INTENTO}). Answer with JSON only, following the schema at the end.
+
+WHAT HAPPENED
+You already directed this scene. The program checked your plan against the real 3D set and its real cameras. Most of it
+PASSED and is kept as it is (ACCEPTED_PLAN). Some parts FAILED (FAILED_PARTS). EXACT_ERRORS_FROM_THE_PROGRAM lists, for each
+failed part, the exact reason. Fix ONLY those parts. Do not send anything that is not in FAILED_PARTS.
+
+RULES
+- ACCEPTED_PLAN is fixed: do not change its points, its character segments or its accepted shots. Your fix must stay
+  continuous with it (same positions at the shot boundaries, same side of the screen unless the script crosses the line).
+- For every failed shot return the WHOLE shot again in "tomas" with the SAME "id" and the same time range "t" (you may split
+  one failed shot into two with new ids only if the time range stays covered).
+- Cameras: use ONLY a name from THE_SET.cameras (these are the only cameras valid for THIS scene; each one says which floor
+  area it sees in "sees_floor_xy" = [x_min, x_max, y_min, y_max]). A character listed in "en_cuadro" must stand inside the
+  area the chosen camera sees at the middle of the shot. If no camera can see a character at that moment, do NOT list that
+  character in "en_cuadro" (and fix "personas", "manos_visibles" and "por_personaje" to match) or, if the script needs them
+  visible, choose another valid camera.
+  Prefer cameras with "own_scene": true; one with "own_scene": false is another angle of the same set, valid only when the
+  characters stand inside its "sees_floor_xy".
+- "palabras" must match the chosen camera: "cuerpo" frente/espalda and "lado_pantalla" are checked with the real camera.
+- Only if an error is about a character's movement (segmentos) or a point, return that character in "personajes" with its
+  FULL corrected "segmentos" list, and any new or corrected point in "puntos" ({nombre, pos:[x,y,z]} inside the set).
+- "revision": list each check you made for the repaired parts (chequeo, resultado ok | corregido, detalle).
+- "avisos": anything the director should know (for example: no valid camera shows a character in that moment).
+- Same words rules as before: plain Spanish words in "palabras", no numbers, no camera names, no mold colours; Latin alphabet only.

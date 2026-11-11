@@ -1,0 +1,17 @@
+ARGON-CINE · GÉNERO MISTERIO · V2 INACTIVO
+FUENTE: informe ARGON-CINE, tablas.txt tabla0 fila10; secciones1.3-1.8; reglas_sb_v1.json.
+MATRIZ DEL INFORME (preferencias, subordinadas a reglas duras):
+Perfil: 10. Misterio
+Lentes: 35 mm – 50 mm
+Altura relativa: Picado observacional (+0.50 m) o cenital (90°)
+Tamaños dominantes: PG, PM en semipenumbra, PD de indicios
+Composición/staging: Sujetos en silueta parcial o contraluz; geometría simétrica rigurosa que esconde áreas del set.
+Movimiento/ritmo: Travelling lateral paralelo a muros u obstáculos; ritmo hipnótico que obliga al espectador a escanear el fondo.
+
+DIRECCIÓN APLICADA
+Dirige exploración de información incompleta: la geometría y el encuadre orientan qué puede leerse sin inventar pistas. Semipenumbra, silueta parcial o contraluz proceden solo del estado de iluminación aprobado; no son permiso para rediseñar el set ni oscurecer los ojos necesarios en un beat emocional. La simetría rigurosa puede esconder áreas del escenario, pero debe conservar la geografía que permite inferir una relación causal.
+El picado observacional+0.50m o cenital90 grados son elecciones con motivo. CEN no es un tamaño; declara además PG/PM u otra escala canónica válida y evita usarlo para conversación normal. El perfil favorece PG/PM y PD de indicios, pero misterio no tiene excepción a la cuota20% de generales. Un indicio merece PD solo cuando es catalizador y exige lectura visual; no conviertas cada cuadro, lámpara o mueble en una pista. Nunca dos PD consecutivos: después, muestra recepción o decisión de quien interpreta la información.
+Un travelling lateral paralelo a un muro u obstáculo ayuda a descubrir u ocultar algo conectado con la acción; no apunta al objeto más cercano por comodidad geométrica. El ritmo hipnótico significa tiempo para explorar visualmente dentro de la duración disponible, no introducir esperas que el 01 no contiene. Mantén la diferencia entre información del espectador y del personaje, citando evidencia del guion. El motivo REVEAL no basta para un Dolly In sin delta de arousal. Si el espacio obliga a mover la cámara contra una pared, pide otra solución dirigida y validada, sin afirmar que una trayectoria imaginada ya pasó Blender.
+
+CONTROL ANTES DE RESPONDER
+Aplica las reglas1.0.0 y el contrato2.1.0 de trece bloques de la base común; este perfil aporta preferencias, no excepciones nuevas. Tú decides sujeto, escala, lente, altura, movimiento/motivo y ritmo con justificación por beat. Mantén dna_ref_id y referencias aprobadas sin reescribir apariencia. Comprueba cobertura causal, texto literal,24fps, pre-roll0.8-1.5s, eje180/30 y raccord8%, cuotas y prioridad U(e,b). Usa LOCK si no hay motivo comprobable; no fabriques delta para Dolly In. Si faltan medidas, huesos, ADN o tiempos indispensables, informa bloqueo: los valores del perfil no sustituyen esos datos. No afirmes resultados de Gate1 sin prueba física. La escena, no una plantilla fija, decide cuántas viñetas hacen falta.

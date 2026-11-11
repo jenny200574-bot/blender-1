@@ -1,0 +1,34 @@
+{
+  "id": "gdc-mesa-jardin",
+  "nombre": "mesa jardin",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "escenario",
+  "sellado": true,
+  "version": 2,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-mesa-jardin.png",
+  "imagen_sha256": "ddd947c57dbe83bcd9a53d04d444d0c462e63bf2d383559071b22fa1c78bb149",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 120,
+    "fondo_cm": 75,
+    "alto_cm": 75
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-flores__c28cd6.json",
+  "ids_capitulo": [
+    "obj-mesa-jardin"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-mesa-jardin"
+  ],
+  "frase_sello": "Mesa baja o banco de madera estilizado en 3D con estética cartoon, proporciones robustas, bordes muy redondeados y acabado mate totalmente liso sin vetas. Cuenta con un tablero superior rectangular de color crema claro dividido longitudinalmente por dos ranuras en tres tablones gruesos paralelos. La estructura inferior es de color madera miel cálida, compuesta por dos listones de soporte bajo la mesa y cuatro patas cilíndricas ligeramente inclinadas hacia afuera, reforzadas a media altura por travesaños cilíndricos en forma de H, sin tornillos ni herrajes visibles.",
+  "actualizado": "2026-11-06T04:03:15+01:00",
+  "origen": "sellar"
+}

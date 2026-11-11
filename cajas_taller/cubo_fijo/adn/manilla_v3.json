@@ -1,0 +1,46 @@
+{
+  "id": "manilla",
+  "clase": "objeto",
+  "schema": "myia.adn.v3",
+  "programa": "PROGRAMA_OFICIAL_EXTRACCION_ADN.md",
+  "altura_cm": null,
+  "altura_fuente": null,
+  "vistas": {
+    "frente": {
+      "A": {
+        "kind": "json",
+        "data": {
+          "adn": "```json\n{\n  \"subclase\": \"accesorio\",\n  \"morfologia\": \"Anillo de banda ancha y robusta, con una superficie exterior ligeramente facetada y adornada con patrones luminosos de color cian que simulan circuitos electrónicos o líneas de energía. La parte interior es lisa y curva.\",\n  \"silueta\": \"Torus\",\n  \"conteo\": 1,\n  \"proporciones\": {\n    \"largo_sobre_ancho\": null,\n    \"grosor_rel\": null\n  },\n  \"simetria\": \"rotacional\"\n}\n```",
+          "instruccion": "Eres un perito forense de identidad visual. Describes SOLO lo que es INVARIANTE del sujeto: lo que seguiría igual si cambiara la pose, la emoción, la cámara, la luz o el fondo.\nPROHIBIDO incluir en el sello: pose, gesto, emoción o expresión de esta foto, ángulo o encuadre de cámara, fondo, iluminación de la toma, acción, efectos de otra escena, porcentaje del cuadro, edad o años.\nSi no puedes verlo con certeza, escribe null. No inventes medidas en cm ni kg.\nLos lados (IZQ/DER) son SIEMPRE del sujeto, no de quien mira. Si dudas, escribe \"lado_incierto\".\nColores en HEX #RRGGBB muestreados de la zona iluminada media, no de los brillos ni de las sombras.\nResponde SOLO JSON válido con las claves pedidas.\nCLASE = objeto. Los poderes, energías, campos de fuerza y armas de energía son OBJETOS con forma fija. Describe el objeto aislado: ignora al portador, la mano, el personaje y el fondo. Si la imagen es un recorte diminuto, borroso o con trazos sueltos, responde {\"gap\": \"evidencia_insuficiente\"}.\n\n{subclase (solido|accesorio|poder_energia|campo_fuerza|arma), morfologia, silueta (palabras geométricas: cilindro, T invertida, enrejado N×M barras…), conteo (cuántas barras, puntas, anillos), proporciones:{largo_sobre_ancho, grosor_rel}, simetria}"
+        }
+      },
+      "B": {
+        "kind": "json",
+        "data": {
+          "adn": "```json\n{\n  \"hex\": {\n    \"nucleo\": \"#49545D\",\n    \"borde\": \"#6A7E89\",\n    \"glow\": \"#00F4FF\",\n    \"halo\": \"#97F7FF\"\n  },\n  \"materiales\": \"metálico\",\n  \"emisivo\": true,\n  \"opacidad\": 1,\n  \"textura\": \"circuito\"\n}\n```",
+          "instruccion": "Eres un perito forense de identidad visual. Describes SOLO lo que es INVARIANTE del sujeto: lo que seguiría igual si cambiara la pose, la emoción, la cámara, la luz o el fondo.\nPROHIBIDO incluir en el sello: pose, gesto, emoción o expresión de esta foto, ángulo o encuadre de cámara, fondo, iluminación de la toma, acción, efectos de otra escena, porcentaje del cuadro, edad o años.\nSi no puedes verlo con certeza, escribe null. No inventes medidas en cm ni kg.\nLos lados (IZQ/DER) son SIEMPRE del sujeto, no de quien mira. Si dudas, escribe \"lado_incierto\".\nColores en HEX #RRGGBB muestreados de la zona iluminada media, no de los brillos ni de las sombras.\nResponde SOLO JSON válido con las claves pedidas.\nCLASE = objeto. Los poderes, energías, campos de fuerza y armas de energía son OBJETOS con forma fija. Describe el objeto aislado: ignora al portador, la mano, el personaje y el fondo. Si la imagen es un recorte diminuto, borroso o con trazos sueltos, responde {\"gap\": \"evidencia_insuficiente\"}.\n\n{hex:{nucleo, borde, glow, halo}, materiales, emisivo (sí/no), opacidad (0–1), textura (circuito, grieta, partículas)}"
+        }
+      },
+      "C": {
+        "kind": "json",
+        "data": {
+          "adn": "```json\n{\n  \"color_predominante\": \"#5F6B73\",\n  \"colores_secundarios\": [\n    \"#50ECF0\"\n  ],\n  \"material\": \"Aleación metálica\",\n  \"forma\": \"Anillo de banda ancha con superficie exterior facetada y un patrón de circuito incrustado.\",\n  \"dimension_relativa\": \"Pequeño\",\n  \"detalles\": \"El anillo presenta patrones de circuitos luminosos de color cian-azul incrustados en su superficie exterior. Estos patrones consisten en líneas interconectadas, puntos, formas cuadradas y símbolos abstractos. El cuerpo del anillo es de un metal oscuro con un diseño robusto y futurista, con bordes ligeramente biselados.\",\n  \"ubicacion_partes\": [\n    \"El objeto es un anillo, diseñado para ser llevado en un dedo.\",\n    \"El glow está en líneas grabadas en la superficie exterior del anillo, formando un patrón de circuito.\",\n    \"Las aristas exteriores del anillo tienen un diseño biselado y angular.\"\n  ],\n  \"CLASE\": \"objeto\"\n}\n```",
+          "instruccion": "Eres un perito forense de identidad visual. Describes SOLO lo que es INVARIANTE del sujeto: lo que seguiría igual si cambiara la pose, la emoción, la cámara, la luz o el fondo.\nPROHIBIDO incluir en el sello: pose, gesto, emoción o expresión de esta foto, ángulo o encuadre de cámara, fondo, iluminación de la toma, acción, efectos de otra escena, porcentaje del cuadro, edad o años.\nSi no puedes verlo con certeza, escribe null. No inventes medidas en cm ni kg.\nLos lados (IZQ/DER) son SIEMPRE del sujeto, no de quien mira. Si dudas, escribe \"lado_incierto\".\nColores en HEX #RRGGBB muestreados de la zona iluminada media, no de los brillos ni de las sombras.\nResponde SOLO JSON válido con las claves pedidas.\nCLASE = objeto. Los poderes, energías, campos de fuerza y armas de energía son OBJETOS con forma fija. Describe el objeto aislado: ignora al portador, la mano, el personaje y el fondo. Si la imagen es un recorte diminuto, borroso o con trazos sueltos, responde {\"gap\": \"evidencia_insuficiente\"}.\n\nubicacion_partes[]: \"el glow está en <aristas exteriores/núcleo/líneas grabadas>, se extiende <N× grosor>\"; \"las aristas están en…\"; \"el punto de anclaje es <mango/muñeca/suelo>\"; \"la punta está en el extremo <superior>\". Para un accesorio que se lleva puesto: en qué parte del cuerpo va y en qué lado."
+        }
+      },
+      "D": {
+        "kind": "json",
+        "data": {
+          "adn": "```json\n{\n  \"no_es\": [\n    \"una pulsera\",\n    \"un collar\",\n    \"un pendiente\",\n    \"un broche\",\n    \"un reloj\",\n    \"un objeto de madera\",\n    \"un objeto de tela\",\n    \"una joya tradicional\",\n    \"un arma de fuego\",\n    \"un líquido\",\n    \"un gas\",\n    \"una forma orgánica\"\n  ],\n  \"prohibidos\": []\n}\n```",
+          "instruccion": "Eres un perito forense de identidad visual. Describes SOLO lo que es INVARIANTE del sujeto: lo que seguiría igual si cambiara la pose, la emoción, la cámara, la luz o el fondo.\nPROHIBIDO incluir en el sello: pose, gesto, emoción o expresión de esta foto, ángulo o encuadre de cámara, fondo, iluminación de la toma, acción, efectos de otra escena, porcentaje del cuadro, edad o años.\nSi no puedes verlo con certeza, escribe null. No inventes medidas en cm ni kg.\nLos lados (IZQ/DER) son SIEMPRE del sujeto, no de quien mira. Si dudas, escribe \"lado_incierto\".\nColores en HEX #RRGGBB muestreados de la zona iluminada media, no de los brillos ni de las sombras.\nResponde SOLO JSON válido con las claves pedidas.\nCLASE = objeto. Los poderes, energías, campos de fuerza y armas de energía son OBJETOS con forma fija. Describe el objeto aislado: ignora al portador, la mano, el personaje y el fondo. Si la imagen es un recorte diminuto, borroso o con trazos sueltos, responde {\"gap\": \"evidencia_insuficiente\"}.\n\n{no_es[] (ej. \"no es un anillo\", \"no es una cadena\", \"no es humo\"), prohibidos[]}"
+        }
+      }
+    }
+  },
+  "gaps": [],
+  "ver_fails": [
+    "ubicaciones_bajas"
+  ],
+  "sellado": false,
+  "status": "FAIL"
+}

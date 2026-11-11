@@ -1,0 +1,17 @@
+Eres asesor técnico de un programa (Blender 4.2, sin GPU, Python bpy) que convierte el plan de dirección de una escena (segundo a segundo) en un video gris 3D. Debe ser UNIVERSAL: cualquier historia, canal y personaje (humanos VRM, cuadrúpedos, aves, peces, arañas, serpientes, criaturas raras).
+
+LO QUE YA EXISTE (probado):
+- Clasificador universal: lee el esqueleto por geometría y jerarquía (nunca por nombres de huesos). Da tipo de cuerpo (bipedo, cuadrupedo, sin_patas, con_aletas, muchas_patas, alado) y roles: 'columna' (lista de huesos desde cadera a cuello), 'cabeza', 'cola' (lista de cadenas), y cadenas por extremidad: 'brazo_izq/der', 'pierna_izq/der', 'pata_delantera_izq', 'pata_trasera_der', 'pata_N_izq', 'ala_izq', 'aleta_izq'. Marco del cuerpo: F adelante, L izquierda, U arriba. Centro del cuerpo.
+- Hoy las poses son una LISTA FIJA de 7 (de_pie, caminando, sentado, de_rodillas, acostado boca arriba/abajo, señalando) escritas como direcciones por rol. Cualquier otra -> FALTA.
+- Guardia del cuerpo por cuadro: largo de cada hueso = reposo ±10%, nadie crece sobre su altura de pie, contacto según pose, cabeza sobre cadera salvo acostado, ningún hueso bajo el piso. Problema abierto: la serpiente "acostado boca arriba" queda 0.10 m sobre el piso (se apoya por el punto más bajo de la malla, pero tras girar 180° el cuerpo queda arqueado).
+- Arreglo de escala: cada hueso conserva su escala propia tras cada giro (cuerpos con gordura no uniforme).
+
+OBJETIVO 1: eliminar la lista fija. El director (tú, en otra llamada) describirá CUALQUIER pose como metas simples por rol, y el programa la arma con IK/constraints/límites de Blender, igual para cualquier cuerpo, y la guardia la valida.
+
+PIDO:
+1) Un formato JSON mínimo y universal de "pose por metas" (ej.: {"base":"de_pie|acostado|...","metas":[{"rol":"mano_der","a":"piso|adelante|arriba|objeto:X|punto:[x,y,z]","distancia":...}],"doblar":{"rodillas":0..1},"mirada":"adelante"}), que funcione aunque el cuerpo no tenga ese rol (qué hacer: mapear rol genérico como 'extremo_superior_der' o devolver FALTA).
+2) Los pasos exactos del programa en bpy: cómo crear IK (chain_count, pole target derivado de la geometría del reposo para que la rodilla no se doble al revés), cómo hornear el resultado a la pose (visual transform) y quitar las constraints, límites de rotación, apoyo en el piso por contacto, sin romper la escala propia.
+3) La causa probable y arreglo genérico del 0.10 m de la serpiente boca arriba.
+4) Riesgos.
+5) Pruebas GRATIS en Blender con criterios numéricos (pocas, concretas) en 9 cuerpos con poses NUEVAS (agacharse a recoger algo, brazos arriba, mano al piso, mirar a un lado, cuadrúpedo sentado, ave con alas abiertas).
+Responde en español, conciso, solo el JSON del esquema.

@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-frutero",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Cuenco rústico de una sola pieza con silueta semiesférica ancha, paredes gruesas, borde superior redondeado con un ligero reborde exterior y base anular plana. Presenta variantes con manzanas esféricas en su interior y una versión con una fractura cóncava en el borde frontal.\n- Modo de sujeción: Apoyo estático sobre superficies planas (mesas, estantes, suelo) o sujeción manual por los laterales."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Chasis de cerámica esmaltada color crema cálido (beige claro), con acabado satinado y sutilmente irregular en el exterior, e interior liso muy brillante. El filo del borde superior está pintado en verde azulado (turquesa suave).\n- Materiales secundarios: Arcilla porosa mate color arena en la zona fracturada. Manzanas de acabado orgánico brillante en rojo carmesí con diminutas motas amarillas y tallos cortos en marrón madera mate.\n- Sin emisión lumínica."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Superficie limpia sin grabados ni símbolos. El detalle principal es la banda continua verde azulada pintada exactamente sobre la cresta del borde circular.\n- La cara exterior tiene ligeras ondulaciones de modelado artesanal. En la versión dañada, el borde frontal izquierdo tiene una rotura limpia con tres pequeñas migas de cerámica reposando sobre la muesca."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado variable según narrativa: vacío, lleno (5 manzanas apiladas) o consumido/dañado (3 manzanas y borde roto). Refleja suavemente la luz ambiental debido a su esmalte.\n- Regla de distancia (Plano general): Se simplifica a una forma semiesférica beige con un aro superior turquesa y bloques circulares rojos básicos en el interior, eliminando las ondulaciones de la cerámica, los tallos y las migas de la rotura."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Cuenco de cerámica artesanal estilizado en 3D, de silueta semiesférica ancha con base anular y borde grueso redondeado. Cuerpo esmaltado en color crema cálido con textura exterior suavemente irregular, interior muy brillante y una franja pintada en verde azulado recorriendo el labio superior. Puede presentarse vacío, lleno de manzanas rojas carmesí brillantes con tallos marrones, o parcialmente lleno con una muesca rota en el borde frontal que expone la arcilla mate interna con pequeñas migas."
+    }
+  ],
+  "inyeccion": "Cuenco de cerámica artesanal estilizado en 3D, de silueta semiesférica ancha con base anular y borde grueso redondeado. Cuerpo esmaltado en color crema cálido con textura exterior suavemente irregular, interior muy brillante y una franja pintada en verde azulado recorriendo el labio superior. Puede presentarse vacío, lleno de manzanas rojas carmesí brillantes con tallos marrones, o parcialmente lleno con una muesca rota en el borde frontal que expone la arcilla mate interna con pequeñas migas.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Cuenco rústico de una sola pieza con silueta semiesférica ancha, paredes gruesas, borde superior redondeado con un ligero reborde exterior y base anular plana. Presenta variantes con manzanas esféricas en su interior y una versión con una fractura cóncava en el borde frontal.\n- Modo de sujeción: Apoyo estático sobre superficies planas (mesas, estantes, suelo) o sujeción manual por los laterales.\n\n2. Materiales y Paleta de Color:\n\n- Chasis de cerámica esmaltada color crema cálido (beige claro), con acabado satinado y sutilmente irregular en el exterior, e interior liso muy brillante. El filo del borde superior está pintado en verde azulado (turquesa suave).\n- Materiales secundarios: Arcilla porosa mate color arena en la zona fracturada. Manzanas de acabado orgánico brillante en rojo carmesí con diminutas motas amarillas y tallos cortos en marrón madera mate.\n- Sin emisión lumínica.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Superficie limpia sin grabados ni símbolos. El detalle principal es la banda continua verde azulada pintada exactamente sobre la cresta del borde circular.\n- La cara exterior tiene ligeras ondulaciones de modelado artesanal. En la versión dañada, el borde frontal izquierdo tiene una rotura limpia con tres pequeñas migas de cerámica reposando sobre la muesca.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado variable según narrativa: vacío, lleno (5 manzanas apiladas) o consumido/dañado (3 manzanas y borde roto). Refleja suavemente la luz ambiental debido a su esmalte.\n- Regla de distancia (Plano general): Se simplifica a una forma semiesférica beige con un aro superior turquesa y bloques circulares rojos básicos en el interior, eliminando las ondulaciones de la cerámica, los tallos y las migas de la rotura.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nCuenco de cerámica artesanal estilizado en 3D, de silueta semiesférica ancha con base anular y borde grueso redondeado. Cuerpo esmaltado en color crema cálido con textura exterior suavemente irregular, interior muy brillante y una franja pintada en verde azulado recorriendo el labio superior. Puede presentarse vacío, lleno de manzanas rojas carmesí brillantes con tallos marrones, o parcialmente lleno con una muesca rota en el borde frontal que expone la arcilla mate interna con pequeñas migas.",
+  "creado": "2026-11-06T04:03:14+01:00"
+}

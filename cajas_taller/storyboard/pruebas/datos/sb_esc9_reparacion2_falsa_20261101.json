@@ -1,0 +1,111 @@
+{
+ "_nota": "FALSO — reparación 2 de PRUEBA: agrega el «Sí.» de Imi en v16. US$0.",
+ "respuesta": {
+  "vinetas": [
+   {
+    "id": "v16",
+    "orden": 16,
+    "t": [
+     80,
+     84
+    ],
+    "beats_01": [
+     "a28",
+     "a29"
+    ],
+    "beat_narrativo": "n8",
+    "segmento_genero": 3,
+    "intencion_narrativa": "Sí",
+    "beats_visuales": [
+     "la luz de la pulsera baja"
+    ],
+    "secuencia": "inserto",
+    "director_imagen": {
+     "plano": "ECU",
+     "angulo": "EYELEVEL",
+     "lente_mm": 100,
+     "perspectiva": "muy cerca",
+     "dsl_encuadre": "/ECU /EYELEVEL /LENS100 /INSERT",
+     "en_cuadro": [
+      {
+       "id": "ch-imi-69f6",
+       "lado": "C",
+       "profundidad": "frente",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "pulsera IMI",
+       "lado": "L",
+       "profundidad": "frente",
+       "estado": "escudo al 17%"
+      }
+     ],
+     "composicion": "núcleo azul en el centro, todo lo demás oscuro",
+     "continuidad_con_anterior": "misma pulsera, mismo lado"
+    },
+    "actuacion": [
+     {
+      "id": "ch-imi-69f6",
+      "expresion": "luz tenue",
+      "gestos": "pulso lento",
+      "postura": "en la muñeca",
+      "movimiento": "quieta",
+      "intensidad": 2
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "ECU",
+     "encuadre_fin": "ECU",
+     "velocidad": "STEADY",
+     "motivacion": "silencio"
+    },
+    "ritmo": {
+     "duracion_s": 4,
+     "pausas": [
+      {
+       "t": [
+        81.5,
+        84.0
+       ],
+       "motivo": "Silencio (guion)"
+      }
+     ]
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "última frase"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       80.2,
+       80.8
+      ],
+      "texto": "Sí."
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "vacío",
+     "por_que": "suspenso: el silencio después del sí"
+    }
+   }
+  ]
+ }
+}

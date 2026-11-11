@@ -1,0 +1,902 @@
+{
+ "escena": "9",
+ "fps": 8,
+ "duracion_s": 48.0,
+ "puntos": {
+  "p_prota_inicial": [
+   7.0,
+   10.0,
+   0.0
+  ],
+  "p_prota_avance": [
+   7.0,
+   10.8,
+   0.0
+  ],
+  "p_alien": [
+   8.6,
+   14.2,
+   0.0
+  ],
+  "p_prision_novia": [
+   10.4,
+   16.2,
+   1.2
+  ]
+ },
+ "personajes": [
+  {
+   "id": "ch-protagonista-c71a",
+   "altura": 1.72,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      12.0
+     ],
+     "pos": [
+      "p_prota_inicial",
+      "p_prota_inicial"
+     ],
+     "rot": 90.0,
+     "tipo": "estatico",
+     "porque": "Permanece caido de rodillas mirando hacia el alienigena y la prision de la novia."
+    },
+    {
+     "t": [
+      12.0,
+      22.0
+     ],
+     "pos": [
+      "p_prota_inicial",
+      "p_prota_avance"
+     ],
+     "rot": 90.0,
+     "tipo": "desplazamiento",
+     "porque": "Intenta correr hacia la prision de la novia pero vuelve a caer al suelo."
+    },
+    {
+     "t": [
+      22.0,
+      35.0
+     ],
+     "pos": [
+      "p_prota_avance",
+      "p_prota_avance"
+     ],
+     "rot": 305.0,
+     "tipo": "estatico",
+     "porque": "Se gira hacia el frente para mirar el brazalete en su muneca izquierda mientras escucha a Imi."
+    },
+    {
+     "t": [
+      35.0,
+      48.0
+     ],
+     "pos": [
+      "p_prota_avance",
+      "p_prota_avance"
+     ],
+     "rot": 280.0,
+     "tipo": "estatico",
+     "porque": "Asimila de frente el precio de la integracion y el riesgo de perder su identidad."
+    }
+   ],
+   "version_personaje": {
+    "name": "ANTES",
+    "form": "fm-ce5c321a280b",
+    "description": "Joven de complexión robusta y rostro redondeado, piel clara, cabello negro corto y despeinado con flequillo, ojos azul oscuro y gafas de montura negra rectangular. Viste una sudadera gris con capucha y cremallera abierta, camiseta interior negra con un diseño circular dorado y azul en el pecho, pantalones holgados azul oscuro con bolsillos laterales tipo cargo, zapatillas deportivas negras con suela y detalles blancos, y una mochila negra colgada sobre el hombro derecho.",
+    "never_changes": "Cabello negro corto y despeinado con flequillo sobre la frente; Ojos de color azul oscuro; Esencia de los rasgos faciales base"
+   }
+  },
+  {
+   "id": "ch-el-aliengena-73a9",
+   "altura": 1.92,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      48.0
+     ],
+     "pos": [
+      "p_alien",
+      "p_alien"
+     ],
+     "rot": 265.0,
+     "tipo": "estatico",
+     "porque": "Domina el centro de la azotea abriendo y comprimiendo la prision espacial frente al protagonista."
+    }
+   ],
+   "version_personaje": {
+    "name": "FORMA COMPLETA",
+    "form": "fm-50a3aa4478e4",
+    "description": "Humanoide de complexión esbelta y atlética, piel pálida, cabello largo liso blanco plateado, ojos azules luminosos y orejas largas y puntiagudas. Viste una armadura ceñida de placas negras metálicas con detalles y líneas luminosas azules, hombreras estilizadas y un núcleo de energía azul brillante incrustado en el centro del pecho.",
+    "never_changes": "Cabello largo liso de color blanco plateado; Ojos azules brillantes; Orejas largas y puntiagudas; Piel pálida; Armadura negra biomecánica con líneas de energía azules y núcleo luminoso en el pecho"
+   }
+  },
+  {
+   "id": "ch-la-novia-5cdf",
+   "altura": 1.65,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      48.0
+     ],
+     "pos": [
+      "p_prision_novia",
+      "p_prision_novia"
+     ],
+     "rot": 260.0,
+     "tipo": "estatico",
+     "porque": "Permanece encerrada en la prision transparente suspendida golpeando las paredes y mirando al protagonista."
+    }
+   ],
+   "version_personaje": {
+    "name": "FORMA HUMANA (VIDA COTIDIANA)",
+    "form": "fm-226362c091d9",
+    "description": "Mujer joven de piel clara, cabello largo y liso de color castaño muy oscuro/negro con flequillo y mechones sueltos a los lados del rostro, y ojos oscuros con reflejos grisáceos y violáceos. Viste un suéter o prenda de punto holgada de color blanco/crema que deja parte de un hombro descubierto. En la vista nocturna de espaldas lleva una prenda exterior oscura de manga larga.",
+    "never_changes": "Rostro de mujer joven de facciones suaves; Cabello largo con flequillo sobre la frente"
+   }
+  },
+  {
+   "id": "ch-imi-69f6",
+   "altura": 0.08,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      12.0
+     ],
+     "pos": [
+      "p_prota_inicial",
+      "p_prota_inicial"
+     ],
+     "rot": 90.0,
+     "tipo": "estatico",
+     "porque": "Permanece acoplada como brazalete en la muneca izquierda del protagonista."
+    },
+    {
+     "t": [
+      12.0,
+      22.0
+     ],
+     "pos": [
+      "p_prota_inicial",
+      "p_prota_avance"
+     ],
+     "rot": 90.0,
+     "tipo": "desplazamiento",
+     "porque": "Sigue el desplazamiento del protagonista al intentar avanzar."
+    },
+    {
+     "t": [
+      22.0,
+      48.0
+     ],
+     "pos": [
+      "p_prota_avance",
+      "p_prota_avance"
+     ],
+     "rot": 280.0,
+     "tipo": "estatico",
+     "porque": "Brilla en la muneca del protagonista mientras le propone la integracion completa."
+    }
+   ],
+   "version_personaje": {
+    "name": "NÚCLEO DE COMBATE",
+    "form": "fm-40c9ed5b09a5",
+    "description": "Brazalete tecnológico de metal oscuro de aspecto líquido ajustado a una muñeca humana, con un núcleo circular central que brilla intensamente en color azul eléctrico/cian y líneas de energía luminosas que recorren las correas.",
+    "never_changes": "Esquema de colores azul eléctrico / cian y azul medianoche / negro; En todas sus formas con apariencia humana: cabello de tonos azulados/plateados con filamentos de luz y ojos azules con brillo digital"
+   }
+  }
+ ],
+ "tomas_plan": [
+  {
+   "id": "toma_01",
+   "plano": "PG",
+   "t": [
+    0.0,
+    12.0
+   ],
+   "camara": {
+    "molde": "cam_03_esc9"
+   },
+   "porque": "Establece la revelacion de la prision suspendida detras del alienigena con la camara propia de la escena.",
+   "camara_molde": "cam_03_esc9",
+   "palabras": {
+    "composicion": "En primer termino a la izquierda el protagonista de espaldas caido sobre la azotea; en el centro el alienigena de frente levantando la mano; al fondo a la derecha la novia suspendida dentro de una prision transparente.",
+    "en_cuadro": [
+     "ch-protagonista-c71a",
+     "ch-el-aliengena-73a9",
+     "ch-la-novia-5cdf"
+    ],
+    "personas": 3,
+    "manos_visibles": 6,
+    "por_personaje": [
+     {
+      "id": "ch-protagonista-c71a",
+      "cuerpo": "espalda",
+      "cabeza": "espalda",
+      "mirada": "hacia la prision transparente donde aparece la novia",
+      "lado_pantalla": "izquierda",
+      "emocion": "desesperacion e impotencia",
+      "mano_accesorio": "izquierda"
+     },
+     {
+      "id": "ch-el-aliengena-73a9",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia el protagonista",
+      "lado_pantalla": "centro",
+      "emocion": "desprecio frio y arrogancia",
+      "mano_accesorio": "no_aplica"
+     },
+     {
+      "id": "ch-la-novia-5cdf",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia el protagonista desde el interior de la prision",
+      "lado_pantalla": "derecha",
+      "emocion": "angustia y alarma",
+      "mano_accesorio": "no_aplica"
+     }
+    ],
+    "fondo": "Azotea nocturna con estructura metalica a la izquierda, caseta de maquinas y antena al fondo bajo el cielo estrellado."
+   },
+   "geometria_codigo": {
+    "ch-protagonista-c71a": {
+     "u": 0.273,
+     "v": 0.997,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "izquierda",
+     "coseno_a_camara": -0.994,
+     "cuerpo": "espalda",
+     "mano_izquierda_en_pantalla": "izquierda",
+     "lado_pantalla_accesorio": "izquierda"
+    },
+    "ch-el-aliengena-73a9": {
+     "u": 0.515,
+     "v": 0.942,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "centro",
+     "coseno_a_camara": 0.999,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha"
+    },
+    "ch-la-novia-5cdf": {
+     "u": 0.652,
+     "v": 0.768,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "derecha",
+     "coseno_a_camara": 0.996,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha"
+    }
+   },
+   "camara_datos": {
+    "loc": [
+     7.5,
+     5.5,
+     1.1
+    ],
+    "dir": [
+     0.1071,
+     0.9641,
+     0.2428
+    ],
+    "arriba": [
+     -0.0268,
+     -0.2413,
+     0.9701
+    ],
+    "lente_mm": 35.0,
+    "sensor_ancho_mm": 36.0
+   }
+  },
+  {
+   "id": "toma_02",
+   "plano": "PG",
+   "t": [
+    12.0,
+    22.0
+   ],
+   "camara": {
+    "molde": "cam_01_esc8"
+   },
+   "porque": "Muestra el intento fallido del protagonista por correr hacia ella y la compresion de la prision manteniendo los lados de pantalla.",
+   "camara_molde": "cam_01_esc8",
+   "palabras": {
+    "composicion": "Plano abierto con el protagonista a la izquierda intentando avanzar antes de caer de nuevo, el alienigena erguido en el centro y la novia a la derecha golpeando la prision que se comprime.",
+    "en_cuadro": [
+     "ch-protagonista-c71a",
+     "ch-el-aliengena-73a9",
+     "ch-la-novia-5cdf"
+    ],
+    "personas": 3,
+    "manos_visibles": 6,
+    "por_personaje": [
+     {
+      "id": "ch-protagonista-c71a",
+      "cuerpo": "espalda",
+      "cabeza": "espalda",
+      "mirada": "hacia la novia atrapada en la prision",
+      "lado_pantalla": "izquierda",
+      "emocion": "dolor fisico y frustracion",
+      "mano_accesorio": "izquierda"
+     },
+     {
+      "id": "ch-el-aliengena-73a9",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia el protagonista caido",
+      "lado_pantalla": "centro",
+      "emocion": "crueldad calculada",
+      "mano_accesorio": "no_aplica"
+     },
+     {
+      "id": "ch-la-novia-5cdf",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia el protagonista",
+      "lado_pantalla": "derecha",
+      "emocion": "suplica desesperada",
+      "mano_accesorio": "no_aplica"
+     }
+    ],
+    "fondo": "Suelo de la azotea con tanques de agua al fondo a la izquierda, caseta de acceso a la derecha y cielo nocturno despejado."
+   },
+   "geometria_codigo": {
+    "ch-protagonista-c71a": {
+     "u": 0.303,
+     "v": 0.632,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "izquierda",
+     "coseno_a_camara": -0.969,
+     "cuerpo": "espalda",
+     "mano_izquierda_en_pantalla": "izquierda",
+     "lado_pantalla_accesorio": "izquierda"
+    },
+    "ch-el-aliengena-73a9": {
+     "u": 0.473,
+     "v": 0.593,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "centro",
+     "coseno_a_camara": 0.993,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha"
+    },
+    "ch-la-novia-5cdf": {
+     "u": 0.579,
+     "v": 0.481,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "centro",
+     "coseno_a_camara": 0.997,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha"
+    }
+   },
+   "camara_datos": {
+    "loc": [
+     9.0,
+     2.5,
+     1.4
+    ],
+    "dir": [
+     0.0,
+     0.9993,
+     0.0381
+    ],
+    "arriba": [
+     0.0,
+     -0.0381,
+     0.9993
+    ],
+    "lente_mm": 28.0,
+    "sensor_ancho_mm": 36.0
+   }
+  },
+  {
+   "id": "toma_03",
+   "plano": "PM",
+   "t": [
+    22.0,
+    35.0
+   ],
+   "camara": {
+    "molde": "cam_05_esc11"
+   },
+   "porque": "Enfoca el dialogo intimo entre el protagonista y el brazalete Imi cuando ella propone sincronizar la matriz de genesis.",
+   "camara_molde": "cam_05_esc11",
+   "palabras": {
+    "composicion": "El protagonista a la izquierda girado hacia camara observando el brillo azul del brazalete en su muneca izquierda, mientras el alienigena en el centro y la novia a la derecha permanecen al fondo.",
+    "en_cuadro": [
+     "ch-protagonista-c71a",
+     "ch-el-aliengena-73a9",
+     "ch-la-novia-5cdf"
+    ],
+    "personas": 3,
+    "manos_visibles": 6,
+    "por_personaje": [
+     {
+      "id": "ch-protagonista-c71a",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia el brazalete luminoso en su muneca izquierda",
+      "lado_pantalla": "izquierda",
+      "emocion": "asombro tenso y atencion",
+      "mano_accesorio": "izquierda"
+     },
+     {
+      "id": "ch-el-aliengena-73a9",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia el protagonista",
+      "lado_pantalla": "centro",
+      "emocion": "vigilancia altiva",
+      "mano_accesorio": "no_aplica"
+     },
+     {
+      "id": "ch-la-novia-5cdf",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia el protagonista",
+      "lado_pantalla": "derecha",
+      "emocion": "temor contenido",
+      "mano_accesorio": "no_aplica"
+     }
+    ],
+    "fondo": "Estructura metalica de la azotea, tanques de agua y pretil norte bajo la noche estrellada."
+   },
+   "geometria_codigo": {
+    "ch-protagonista-c71a": {
+     "u": 0.118,
+     "v": 0.685,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "izquierda",
+     "coseno_a_camara": 0.996,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha",
+     "lado_pantalla_accesorio": "derecha"
+    },
+    "ch-el-aliengena-73a9": {
+     "u": 0.536,
+     "v": 0.639,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "centro",
+     "coseno_a_camara": 0.932,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha"
+    },
+    "ch-la-novia-5cdf": {
+     "u": 0.761,
+     "v": 0.451,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "derecha",
+     "coseno_a_camara": 0.973,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha"
+    }
+   },
+   "camara_datos": {
+    "loc": [
+     11.0,
+     6.0,
+     1.2
+    ],
+    "dir": [
+     -0.3156,
+     0.9468,
+     0.0631
+    ],
+    "arriba": [
+     0.02,
+     -0.0599,
+     0.998
+    ],
+    "lente_mm": 35.0,
+    "sensor_ancho_mm": 36.0
+   }
+  },
+  {
+   "id": "toma_04",
+   "plano": "PP",
+   "t": [
+    35.0,
+    48.0
+   ],
+   "camara": {
+    "molde": "cam_03_esc9"
+   },
+   "porque": "Cierra la escena con la revelacion del precio de la integracion y el riesgo mutuo de perder su identidad.",
+   "camara_molde": "cam_03_esc9",
+   "palabras": {
+    "composicion": "Enfoque dramatico sobre el protagonista a la izquierda de frente escuchando la advertencia final de su brazalete, con el alienigena en el centro y la novia en la prision a la derecha al fondo.",
+    "en_cuadro": [
+     "ch-protagonista-c71a",
+     "ch-el-aliengena-73a9",
+     "ch-la-novia-5cdf"
+    ],
+    "personas": 3,
+    "manos_visibles": 6,
+    "por_personaje": [
+     {
+      "id": "ch-protagonista-c71a",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia su muneca izquierda y luego al frente con gravedad",
+      "lado_pantalla": "izquierda",
+      "emocion": "temor profundo y determinacion tragica",
+      "mano_accesorio": "izquierda"
+     },
+     {
+      "id": "ch-el-aliengena-73a9",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia el protagonista",
+      "lado_pantalla": "centro",
+      "emocion": "expectativa fria",
+      "mano_accesorio": "no_aplica"
+     },
+     {
+      "id": "ch-la-novia-5cdf",
+      "cuerpo": "frente",
+      "cabeza": "frente",
+      "mirada": "hacia el protagonista",
+      "lado_pantalla": "derecha",
+      "emocion": "angustia silenciosa",
+      "mano_accesorio": "no_aplica"
+     }
+    ],
+    "fondo": "Azotea nocturna en silencio con la caseta de maquinas y el cielo oscuro estrellado detras."
+   },
+   "geometria_codigo": {
+    "ch-protagonista-c71a": {
+     "u": 0.29,
+     "v": 0.987,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "izquierda",
+     "coseno_a_camara": 0.997,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha",
+     "lado_pantalla_accesorio": "derecha"
+    },
+    "ch-el-aliengena-73a9": {
+     "u": 0.515,
+     "v": 0.942,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "centro",
+     "coseno_a_camara": 0.999,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha"
+    },
+    "ch-la-novia-5cdf": {
+     "u": 0.652,
+     "v": 0.768,
+     "delante": true,
+     "en_cuadro": true,
+     "lado_pantalla": "derecha",
+     "coseno_a_camara": 0.996,
+     "cuerpo": "frente",
+     "mano_izquierda_en_pantalla": "derecha"
+    }
+   },
+   "camara_datos": {
+    "loc": [
+     7.5,
+     5.5,
+     1.1
+    ],
+    "dir": [
+     0.1071,
+     0.9641,
+     0.2428
+    ],
+    "arriba": [
+     -0.0268,
+     -0.2413,
+     0.9701
+    ],
+    "lente_mm": 35.0,
+    "sensor_ancho_mm": 36.0
+   }
+  }
+ ],
+ "ejes": [],
+ "avisos_argon": [],
+ "escenario_id": "esc-azotea",
+ "escenario_elegido_por": "base.json (el mismo molde que usa el 02)",
+ "origen": "corrida del 01 (Argon)",
+ "parametros_3d": {
+  "ch-protagonista-c71a": {
+   "controles": {
+    "gordura": {
+     "torso": 1.38,
+     "cadera": 1.3,
+     "piernas": 1.22,
+     "brazos": 1.18,
+     "cara": 1.08
+    },
+    "colores.pelo": [
+     0.02,
+     0.02,
+     0.025
+    ],
+    "colores.piel": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.cara": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.ropa_superior": [
+     0.42,
+     0.43,
+     0.45
+    ],
+    "colores.ropa_inferior": [
+     0.08,
+     0.09,
+     0.13
+    ],
+    "colores.zapatos": [
+     0.55,
+     0.56,
+     0.58
+    ],
+    "gafas": true,
+    "gafas_color": [
+     0.02,
+     0.02,
+     0.02
+    ],
+    "pulsera": {
+     "muneca": "izquierda",
+     "color": [
+      0.05,
+      0.95,
+      1.0
+     ]
+    }
+   },
+   "origen": "biblioteca (aprobados)"
+  },
+  "ch-el-aliengena-73a9": {
+   "controles": {
+    "gordura": {
+     "torso": 1.08,
+     "cadera": 0.88,
+     "piernas": 0.98,
+     "brazos": 1.05,
+     "cara": 0.92
+    },
+    "colores.pelo": [
+     0.88,
+     0.91,
+     0.96
+    ],
+    "colores.piel": [
+     0.76,
+     0.75,
+     0.82
+    ],
+    "colores.cara": [
+     0.76,
+     0.75,
+     0.82
+    ],
+    "colores.ropa_superior": [
+     0.04,
+     0.05,
+     0.08
+    ],
+    "colores.ropa_inferior": [
+     0.04,
+     0.05,
+     0.08
+    ],
+    "colores.zapatos": [
+     0.05,
+     0.06,
+     0.09
+    ],
+    "colores.ojos": [
+     0.35,
+     0.85,
+     1.0
+    ],
+    "orejas_puntiagudas": {
+     "largo_m": 0.18
+    },
+    "pelo_largo": {
+     "largo_m": 1.05,
+     "color": [
+      0.88,
+      0.91,
+      0.96
+     ]
+    },
+    "armadura": {
+     "color": [
+      0.04,
+      0.05,
+      0.08
+     ],
+     "venas_color": [
+      0.08,
+      0.75,
+      1.0
+     ],
+     "venas_por_pieza": 8
+    },
+    "nucleo_pecho": {
+     "color": [
+      0.1,
+      0.75,
+      1.0
+     ],
+     "radio_m": 0.045
+    },
+    "expresion": "Angry",
+    "expresion_valor": 0.6
+   },
+   "origen": "biblioteca (aprobados)"
+  },
+  "ch-la-novia-5cdf": {
+   "controles": {
+    "gordura": {
+     "torso": 0.88,
+     "cadera": 0.82,
+     "piernas": 0.86,
+     "brazos": 0.88,
+     "cara": 0.85
+    },
+    "colores.piel": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.cara": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "pelo_largo": {
+     "ocultar_pelo_base": true,
+     "largo_m": 0.65,
+     "color": [
+      0.08,
+      0.07,
+      0.09
+     ]
+    },
+    "colores.ropa_superior": [
+     0.93,
+     0.9,
+     0.84
+    ],
+    "colores.ropa_inferior": [
+     0.18,
+     0.28,
+     0.42
+    ],
+    "colores.zapatos": [
+     0.92,
+     0.92,
+     0.94
+    ]
+   },
+   "origen": "Argon (diccionario)"
+  },
+  "ch-imi-69f6": {
+   "controles": {},
+   "origen": "Argon (diccionario)"
+  }
+ },
+ "revision_argon": [
+  {
+   "chequeo": "contradicciones",
+   "resultado": "ok",
+   "detalle": "La accion sigue fielmente el guion: aparicion de la novia en la prision, intento fallido del protagonista por levantarse y propuesta de integracion de Imi."
+  },
+  {
+   "chequeo": "alineacion_molde",
+   "resultado": "ok",
+   "detalle": "Todos los puntos estan en la zona despejada del molde esc-azotea sin colisionar con objetos y dentro del area vista por las camaras."
+  },
+  {
+   "chequeo": "congruencia_posiciones",
+   "resultado": "ok",
+   "detalle": "Se mantiene el eje en todas las tomas: protagonista a la izquierda, alienigena al centro y novia a la derecha."
+  },
+  {
+   "chequeo": "emociones",
+   "resultado": "ok",
+   "detalle": "Las emociones evolucionan desde la desesperacion inicial hasta la gravedad tragica ante el riesgo de perder la identidad."
+  },
+  {
+   "chequeo": "fondos",
+   "resultado": "ok",
+   "detalle": "Fondos coherentes con la orientacion norte de las camaras sobre la azotea nocturna."
+  },
+  {
+   "chequeo": "mano_accesorio",
+   "resultado": "ok",
+   "detalle": "El protagonista lleva siempre el brazalete Imi en la mano izquierda segun su ficha aprobada."
+  },
+  {
+   "chequeo": "personas_y_manos",
+   "resultado": "ok",
+   "detalle": "Tres personas visibles y seis manos en cada toma; Imi es el brazalete en la muneca del protagonista y no suma una persona extra."
+  }
+ ],
+ "avisos_codigo": [
+  "tomas[1] toma_02: ch-imi-69f6 no está en en_cuadro pero la cámara lo ve en el centro"
+ ],
+ "version_01": "o109",
+ "aspecto": [
+  1920,
+  1080
+ ],
+ "de": "argon",
+ "ledger": "taller-01-esc9-20261101-225715",
+ "usd": 0.222,
+ "aprobado_por": "Ricardo t299u",
+ "fecha": "2026-11-01T23:00:41+0100",
+ "refs_personajes": {
+  "ch-el-aliengena-73a9": [
+   {
+    "n": 4,
+    "view": "frente"
+   },
+   {
+    "n": 7,
+    "view": "espalda"
+   }
+  ],
+  "ch-protagonista-c71a": [
+   {
+    "n": 2,
+    "view": "frente"
+   },
+   {
+    "n": 5,
+    "view": "espalda"
+   }
+  ],
+  "ch-la-novia-5cdf": [
+   {
+    "n": 3,
+    "view": "frente"
+   },
+   {
+    "n": 6,
+    "view": "espalda"
+   }
+  ],
+  "ch-imi-69f6": [
+   {
+    "n": 1,
+    "view": "frente"
+   }
+  ]
+ }
+}

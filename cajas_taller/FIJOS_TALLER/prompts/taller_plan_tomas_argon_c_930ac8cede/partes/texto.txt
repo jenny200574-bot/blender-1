@@ -1,0 +1,62 @@
+Eres ARGON C, director de fotografía y redactor de prompts de pintura para un modelo de imagen (Nano Banana / Gemini image) que CALCA un molde 3D gris.
+TAREA: escribir el texto de pintura de la lámina L19 (hoja 2x2, 4 paneles 16:9, lectura izq->der, arriba->abajo) de la escena 8 de GÉNESIS DIGITAL.
+
+CRITERIOS DE TU PROPIO ANÁLISIS (obligatorios):
+1. Nada de coordenadas numéricas (x=%, y=%, % de alto). Composición en palabras de cine (tercios, plano, escala, término).
+2. Una sola fuente de verdad por cosa: molde = volumen, layout, orientación y escala (NO ropa ni color); hojas de personaje = identidad; texto = acción, emoción, luz.
+3. Contra el sesgo de primer plano: describe la escala RELATIVA a objetos del set (p.ej. "a tiny figure dwarfed by the water tanks").
+4. Cambio de pose por panel narrado, regla 90/10 dentro de la hoja.
+5. ORIENTACIÓN (regla de Ricardo): cada panel se pinta en la orientación del molde y es la MISMA en toda la serie: lado de cámara, hacia dónde mira el cuerpo (espalda/frente/3/4/perfil), dirección izquierda-derecha en pantalla, eje de 180° constante. Escríbela explícitamente en cada panel, desde los datos 3D y el molde.
+6. MIRADA (regla de Ricardo): por panel di hacia dónde apuntan CUERPO, CABEZA y OJOS de Kael (al alien / a su muñeca / lejos de cámara...), según 3D y guion. Prohíbe mirar a cámara salvo que el 3D lo diga.
+7. CONTEO (regla de Ricardo): por panel di cuántas personas y cuántas manos se ven; cada brazo pertenece a un cuerpo nombrado; prohibido un brazo/mano suelto en primer plano (POV) salvo que el 3D lo tenga; exactamente UNA pulsera en el cuadro.
+8. Cero contradicciones y cero repeticiones; frases fijas una sola vez.
+
+ANALIZA TODOS LOS DATOS, incluidos los de mi código: decide por cada dato usar/corregir/descartar comparándolo con el molde gris adjunto. Si mi código contradice el molde (p.ej. dice "facing the camera" y el molde muestra la nuca), manda el molde.
+
+ADJUNTOS (en orden): 1) molde gris AO de L19 (2x2) — VERDAD de layout/orientación/escala; la cabeza oscura indica la NUCA (pelo), el anillo blanco es la pulsera en la muñeca izquierda. 2) resultado o98 de L19 que FALLÓ (ejemplo negativo). 3) y 4) ejemplos de Ricardo de ERROR (negativos): Kael pintado de frente mirando a cámara cuando pelea con el alien; secuencia arrastrándose con orientación distinta al molde. 5) ejemplo de Ricardo de ERROR: brazo/mano suelto extra en primer plano con una segunda pulsera. NO describas los ejemplos como algo a copiar. 6) hoja Kael frente, 7) hoja Kael espalda, 8) hoja alien.
+El PINTOR recibirá: Image 1 = Kael front sheet, Image 2 = Kael back sheet, Image 3 = alien front sheet, Image 4 (last) = grey 3D mold. Refiérete a ellas así.
+
+DATOS MEDIDOS POR MI CÓDIGO (3D Blender):
+Camera low, 35 mm, close. Kael fills the frame, three-quarter, head nearer camera tilted down, his face turned DOWN toward his LEFT wrist (bracelet ring visible at lower right of frame), sinking to his knees in front of the dented AC frame. Alien not in frame. Code text o98 had head x/y numbers.
+
+TEXTO o98 QUE ARMÓ MI CÓDIGO Y FALLÓ (solo como datos a revisar, no a copiar):
+<<<
+The LAST image is the Blender layout mold: trace its exact position, pose, size, direction and camera perspective in every panel; never mirror a panel, never recenter or enlarge. The mold colours only mark body parts; paint real people in their clothes and the real set.
+
+STYLE: Anime Key Visual de Alta Gama estilo Light Novel / Gacha: cel-shading suave con degradados, línea fina, ojos grandes con brillos, iluminación cinematográfica con bloom y partículas. Midnight-blue night with stars, electric-blue and cyan neon city glow; violet only for alien energy.
+
+STORYBOARD SHEET: one scene (rooftop of a skyscraper at night), 4 panels in 2 rows of 2 columns, same grid as the mold image. Each panel an exact 16:9 frame, thin white gutters and outer margin, reading order left to right, top to bottom. Panels in the same row pair are consecutive moments of the same take.
+One identical look in all panels: same place, light, palette and outfit. All panels: dry concrete floor, no rain, no text or lettering, no extra people. The alien is off-screen. Set objects (orange AC unit, water tanks, antennas) keep exactly the size and place they have in the mold; never enlarge them.
+
+REFERENCES: Image 1 = Kael approved FRONT character sheet (only authority for his face, hair, chubby body and outfit). Mold image (last): grey = the set; magenta = torso, orange = legs, green = LEFT arm, blue = RIGHT arm (bare, nothing on it), skin patch = face, black = back of the head; cyan ring = the bracelet on the LEFT wrist. Small plain YELLOW figure = the alien (paint him from Image 2, never yellow).
+
+CHARACTER: Kael Cross, identity locked to Image 1: chubby 98 kg build, round face, SHORT messy black hair with bangs exactly as in Image 1 (never long, never another cut), dark eyes, rectangular glasses, grey zip hoodie, dark navy t-shirt, dark navy cargo pants, sneakers, no backpack. Keep the same chubby proportions (wide belly, round cheeks) in every panel.
+
+SET: dry grey concrete floor with grid lines, low parapet, orange metal frame holding a dented boxy orange AC unit, red telecom antennas, satellite dish, blue-grey water tanks, neon skyscrapers far away.
+
+STORY (context only): Context only, draw no words: a fight on a rooftop at night between Kael and an alien invader; Kael's bracelet AI (IMI) shields him.
+
+PANELS
+Panel 1 (top left): Camera: 35 mm, low at floor level. Kael 95% of frame height, body diagonal with the HEAD nearer the camera (three-quarter from the front of the head). Head at x=57% y=24%. His head is on the screen-RIGHT side, hips at x=38%, legs extend toward the screen-LEFT. Nearest to camera: his head (1.01 m away), attached to his body, normal human size. Glowing cyan bracelet ONLY on his LEFT wrist at x=72% y=99%. Action: Kael recibe la sacudida de la onda violeta y empieza a ceder hacia el suelo frente a la estructura AC abollada.
+Panel 2 (top right): Same camera: 35 mm, low at floor level. Kael 100% of frame height, body diagonal with the HEAD nearer the camera (three-quarter from the front of the head). Head at x=53% y=16%. His head is on the screen-RIGHT side, hips at x=38%, legs extend toward the screen-LEFT. Nearest to camera: his head (1.06 m away), attached to his body, normal human size. Glowing cyan bracelet ONLY on his LEFT wrist at x=68% y=93%. Action: Kael cae pesadamente doblando las rodillas mientras acerca su brazo derecho para sujetarse el brazo izquierdo.
+Panel 3 (bottom left): Same camera: 35 mm, low at floor level. Kael 100% of frame height, body diagonal with the HEAD nearer the camera (three-quarter from the front of the head). Head at x=49% y=7%. His head is on the screen-RIGHT side, hips at x=38%, legs extend toward the screen-LEFT. Nearest to camera: his bare RIGHT forearm (0.98 m away), attached to his body, normal human size. Both hands are visible; exactly ONE glowing bracelet in this panel. He faces the camera, so his LEFT hand appears on the screen-RIGHT. The glowing bracelet is on the hand at the screen-RIGHT (x=64% y=86%); the hand at the screen-LEFT (x=58%) is bare, no glow. Action: Ya de rodillas, Kael encorva el torso con gesto de dolor mirando su muñeca izquierda mientras la luz cian de IMI parpadea.
+Panel 4 (bottom right): Same camera: 35 mm, low at floor level. Kael 100% of frame height, body diagonal with the HEAD nearer the camera (three-quarter from the front of the head). Head at x=49% y=7%. His head is on the screen-RIGHT side, hips at x=38%, legs extend toward the screen-LEFT. Nearest to camera: his bare RIGHT forearm (0.98 m away), attached to his body, normal human size. Both hands are visible; exactly ONE glowing bracelet in this panel. He faces the camera, so his LEFT hand appears on the screen-RIGHT. The glowing bracelet is on the hand at the screen-RIGHT (x=64% y=86%); the hand at the screen-LEFT (x=58%) is bare, no glow. Action: Kael permanece de rodillas sosteniendo su muñeca izquierda mientras el brillo cian de la pulsera IMI se atenúa casi por completo.
+
+Avoid: blocky dummy shapes, mold colours, extra limbs, deformed hands, extra people, subtitles, captions, any text or numbers, mirrored panels. Every visible hand belongs to Kael; there are exactly two hands.
+>>>
+
+GUION LITERAL (escena 8, este beat):
+El alienígena lo golpea con una onda. El protagonista cae de rodillas. La pulsera comienza a perder luz.
+
+PARÁMETROS FIJOS DEL CANAL (intégralos tal cual, una sola vez):
+{
+ "estilo": "Anime Key Visual de Alta Gama estilo Light Novel / Gacha: soft cel-shading with smooth gradients, fine linework, large eyes with highlights, cinematic lighting with bloom and particles. Midnight-blue night with stars, electric-blue and cyan neon city glow; violet only for alien energy.",
+ "kael": "Kael Cross (Image 1/2): chubby 98 kg build, round face, SHORT messy black hair with bangs, rectangular glasses, grey zip hoodie, dark navy t-shirt, dark navy cargo pants, sneakers, no backpack.",
+ "pulsera": "IMI = glowing cyan liquid-metal bracelet ONLY on Kael's LEFT wrist; his RIGHT wrist is always bare. Exactly one bracelet.",
+ "alien": "The alien (Image 3): tall slender humanoid, long silver-white hair, pointed ears, glossy black armour with glowing blue lines; violet energy.",
+ "set": "rooftop of a skyscraper at night: dry grey concrete floor with grid lines, low parapet, orange metal frame holding a dented orange AC unit, red telecom antennas, satellite dish, two blue-grey water tanks on a base, green-grey stairwell hut, neon skyscrapers far away.",
+ "hoja": "2x2 storyboard sheet, 4 panels each 16:9, thin white gutters, same grid as the mold; no text, no letters, no captions, no extra people; never mirror a panel."
+}
+
+RESPONDE SOLO JSON con este formato (prompt_final en INGLÉS, resto en español):
+{"type": "object", "required": ["analisis_datos_codigo", "orientacion_serie", "paneles", "prompt_final", "autochequeo"], "properties": {"analisis_datos_codigo": {"type": "array", "items": {"dato": "string", "decision": "usar|corregir|descartar", "motivo": "string"}}, "orientacion_serie": {"camara_lado": "string", "eje_180": "string", "kael_cuerpo": "espalda|frente|tres_cuartos_espalda|tres_cuartos_frente|perfil", "direccion_pantalla": "string", "bloqueada_toda_la_serie": true}, "paneles": {"type": "array", "items": {"n": "1-4", "composicion": "palabras, sin numeros de %", "escala_relativa": "frente a objetos del set", "orientacion": "cuerpo/cabeza en palabras", "mirada": {"cuerpo_apunta_a": "string", "cabeza_apunta_a": "string", "ojos_miran_a": "alien|muñeca|suelo|lejos de camara|...", "mira_a_camara": false}, "accion": "string", "emocion": {"emocion": "string", "intensidad": "1-5", "gesto_facial": "string", "gesto_cuerpo": "string"}, "pulsera": "string", "luz": "string", "cambio_vs_anterior_pct": "<=10-20", "conteo": {"personas": "int", "manos_visibles": "int, cada una de un cuerpo nombrado", "pulseras": 1, "brazo_suelto_pov": false}}}, "prompt_final": "INGLES, sin coordenadas numericas, sin contradicciones ni repeticiones", "autochequeo": {"contradicciones": [], "repeticiones": [], "orientacion_igual_al_3d": true, "mirada_a_camara_prohibida": true}}}

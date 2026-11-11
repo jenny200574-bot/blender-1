@@ -1,0 +1,297 @@
+{
+ "id": "pincel_magico",
+ "nombre_generico": "Pincel Mágico",
+ "nombre_en": "paintbrush",
+ "categoria": "utiles",
+ "medidas_tipicas": {
+  "ancho_m": 0.025,
+  "fondo_m": 0.025,
+  "alto_m": 0.18
+ },
+ "medidas_fuente": "receta Argon vía B G3_utiles_dibujo (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.025,
+  0.025,
+  0.18
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": null,
+ "apoyo": "en_mano",
+ "conjunto": false,
+ "piezas": 10,
+ "tipos_de_pieza": [
+  "cilindro",
+  "cono",
+  "esfera",
+  "toro"
+ ],
+ "partes": [
+  {
+   "tipo": "esfera",
+   "nombre": "base_semiesferica_azul",
+   "color_guia_rgb": [
+    0.12,
+    0.25,
+    0.65
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.01
+   ],
+   "radio_m": 0.01
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "tapon_azul_cilindro",
+   "color_guia_rgb": [
+    0.12,
+    0.25,
+    0.65
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.0175
+   ],
+   "radio_m": 0.01,
+   "alto_m": 0.015
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "ranura_union",
+   "color_guia_rgb": [
+    0.12,
+    0.25,
+    0.65
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.026
+   ],
+   "radio_m": 0.0092,
+   "alto_m": 0.002
+  },
+  {
+   "tipo": "cono",
+   "nombre": "mango_conico",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "a_m": [
+    0.0,
+    0.0,
+    0.027
+   ],
+   "b_m": [
+    0.0,
+    0.0,
+    0.115
+   ],
+   "radio_a_m": 0.01,
+   "radio_b_m": 0.0115
+  },
+  {
+   "tipo": "toro",
+   "nombre": "anillo_virola_inferior",
+   "color_guia_rgb": [
+    0.85,
+    0.68,
+    0.22
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.1165
+   ],
+   "radio_mayor_m": 0.011,
+   "radio_menor_m": 0.0015
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "virola_dorada",
+   "color_guia_rgb": [
+    0.85,
+    0.68,
+    0.22
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.125
+   ],
+   "radio_m": 0.0115,
+   "alto_m": 0.02
+  },
+  {
+   "tipo": "toro",
+   "nombre": "anillo_virola_superior",
+   "color_guia_rgb": [
+    0.85,
+    0.68,
+    0.22
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.1335
+   ],
+   "radio_mayor_m": 0.011,
+   "radio_menor_m": 0.0015
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "punta_bulbo_base",
+   "color_guia_rgb": [
+    0.96,
+    0.93,
+    0.84
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.145
+   ],
+   "radio_m": 0.0125
+  },
+  {
+   "tipo": "cono",
+   "nombre": "punta_gota_cono",
+   "color_guia_rgb": [
+    0.96,
+    0.93,
+    0.84
+   ],
+   "a_m": [
+    0.0,
+    0.0,
+    0.148
+   ],
+   "b_m": [
+    0.0,
+    0.0,
+    0.177
+   ],
+   "radio_a_m": 0.0118,
+   "radio_b_m": 0.003
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "punta_gota_remate",
+   "color_guia_rgb": [
+    0.96,
+    0.93,
+    0.84
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.177
+   ],
+   "radio_m": 0.003
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.025,
+  "fondo": 0.025,
+  "alto": 0.18
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.18
+  ],
+  "frente": [
+   0.0,
+   -0.0125,
+   0.09
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G3_utiles_dibujo",
+  "objeto_id_origen": "obj-pincel-magico",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "b9f6c66b911e58656e00b37eeff7d12a3b4d5bc1c7512a43a0c0a1e446a9a47d",
+  "costo_usd_grupo": 0.1985,
+  "costo_usd_repartido": 0.049625,
+  "citas": [
+   {
+    "fuente_id": "F03",
+    "clave": "anatomia.tres_partes",
+    "cita": "A paintbrush consists of three main components: the bristles, the ferrule, and the handle."
+   },
+   {
+    "fuente_id": "F03",
+    "clave": "anatomia.virola_metalica",
+    "cita": "The ferrule is the metal band that holds the bristles in place and secures them to the handle."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [
+   "A_COLOR obj-pincel-magico.base_semiesferica_azul: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.tapon_azul_cilindro: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.ranura_union: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.anillo_virola_inferior: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.virola_dorada: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.anillo_virola_superior: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.punta_bulbo_base: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.punta_gota_cono: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.punta_gota_remate: color fuera de la paleta de la ficha"
+  ],
+  "vacios": [],
+  "info": {
+   "partes": 10,
+   "piezas": 10,
+   "bbox_m": [
+    0.025,
+    0.025,
+    0.18
+   ],
+   "grupos": 1,
+   "datos": 9,
+   "con_fuente": 2
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "obj-pincel-magico"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

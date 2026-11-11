@@ -1,0 +1,445 @@
+{
+ "id": "vocales",
+ "nombre_generico": "Vocales (A",
+ "nombre_en": "vowel blocks",
+ "categoria": "objetos_magicos",
+ "medidas_tipicas": {
+  "ancho_m": 0.16,
+  "fondo_m": 0.06,
+  "alto_m": 0.22
+ },
+ "medidas_fuente": "receta Argon vía B G4_objetos_magicos (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.16,
+  0.06,
+  0.22
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": 0.0,
+ "apoyo": "piso",
+ "conjunto": true,
+ "piezas": 17,
+ "tipos_de_pieza": [
+  "caja",
+  "cilindro"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "letra_a_pilar_izq",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.075,
+    0.0,
+    0.11
+   ],
+   "tam_m": [
+    0.01,
+    0.06,
+    0.22
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_a_pilar_der",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.055,
+    0.0,
+    0.11
+   ],
+   "tam_m": [
+    0.01,
+    0.06,
+    0.22
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_a_cumbre",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.065,
+    0.0,
+    0.205
+   ],
+   "tam_m": [
+    0.03,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_a_travesano",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.065,
+    0.0,
+    0.1
+   ],
+   "tam_m": [
+    0.03,
+    0.06,
+    0.024
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_e_poste",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.041,
+    0.0,
+    0.11
+   ],
+   "tam_m": [
+    0.01,
+    0.06,
+    0.22
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_e_barra_inf",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.031,
+    0.0,
+    0.015
+   ],
+   "tam_m": [
+    0.03,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_e_barra_med",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.033,
+    0.0,
+    0.11
+   ],
+   "tam_m": [
+    0.026,
+    0.06,
+    0.026
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_e_barra_sup",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.031,
+    0.0,
+    0.205
+   ],
+   "tam_m": [
+    0.03,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_i_tallo",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.002,
+    0.0,
+    0.085
+   ],
+   "tam_m": [
+    0.016,
+    0.06,
+    0.17
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "letra_i_punto",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    -0.002,
+    0.0,
+    0.195
+   ],
+   "radio_m": 0.008,
+   "alto_m": 0.05
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_o_base",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    0.028,
+    0.0,
+    0.015
+   ],
+   "tam_m": [
+    0.032,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_o_tope",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    0.028,
+    0.0,
+    0.125
+   ],
+   "tam_m": [
+    0.032,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_o_lado_izq",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    0.017,
+    0.0,
+    0.07
+   ],
+   "tam_m": [
+    0.01,
+    0.06,
+    0.14
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_o_lado_der",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    0.039,
+    0.0,
+    0.07
+   ],
+   "tam_m": [
+    0.01,
+    0.06,
+    0.14
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_u_base",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    0.064,
+    0.0,
+    0.015
+   ],
+   "tam_m": [
+    0.032,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_u_brazo_izq",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    0.053,
+    0.0,
+    0.07
+   ],
+   "tam_m": [
+    0.01,
+    0.06,
+    0.14
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "letra_u_brazo_der",
+   "color_guia_rgb": [
+    0.604,
+    0.604,
+    0.604
+   ],
+   "centro_m": [
+    0.075,
+    0.0,
+    0.07
+   ],
+   "tam_m": [
+    0.01,
+    0.06,
+    0.14
+   ]
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.16,
+  "fondo": 0.06,
+  "alto": 0.22
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.22
+  ],
+  "frente": [
+   0.0,
+   -0.03,
+   0.11
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G4_objetos_magicos",
+  "objeto_id_origen": "obj-vocales",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "1ecee35a671618c7e5760031927df07cb8f1c35a38ee40b4a62afc2f16c7313e",
+  "costo_usd_grupo": 0.3077,
+  "costo_usd_repartido": 0.076925,
+  "citas": [
+   {
+    "fuente_id": "F03",
+    "clave": "tipografia.mayusculas_minusculas",
+    "cita": "Some writing systems have two major types of allographs for each letter: an uppercase form (also called capital or majuscule) and a lowercase form (also called minuscule)."
+   },
+   {
+    "fuente_id": "F03",
+    "clave": "tipografia.bloques_letras",
+    "cita": "Individual letter blocks were kept in specific compartments of drawers in a type case."
+   },
+   {
+    "fuente_id": "F05",
+    "clave": "tipografia.trazos",
+    "cita": "A stroke is a line or curve that is part of an LGC letter"
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "Grosor exacto de trazo de cada vocal no especificado en el corpus; deducido en 0.010-0.030 m para encajar las 5 letras en 0.16 m de ancho."
+  ],
+  "info": {
+   "partes": 17,
+   "piezas": 17,
+   "bbox_m": [
+    0.16,
+    0.06,
+    0.22
+   ],
+   "grupos": 5,
+   "datos": 11,
+   "con_fuente": 3
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "obj-vocales"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

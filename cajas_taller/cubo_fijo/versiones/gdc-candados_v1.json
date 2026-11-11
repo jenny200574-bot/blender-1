@@ -1,0 +1,31 @@
+{
+  "id": "gdc-candados",
+  "nombre": "candados",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "escenario",
+  "sellado": false,
+  "version": 1,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-candados.png",
+  "imagen_sha256": "48c82bcf40839a9404ce829706833c43b7c7e06ecc7ab90f85000e4262d9b266",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 12,
+    "fondo_cm": 5,
+    "alto_cm": 16
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-cofre-dorado__7faaf4.json",
+  "ids_capitulo": [
+    "obj-candados"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-candados"
+  ]
+}

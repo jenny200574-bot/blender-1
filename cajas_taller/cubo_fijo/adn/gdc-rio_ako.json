@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-rio",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Tipo de objeto: Prop ambiental modular de tramo de río o arroyo estilizado (estilo cartoon/low-poly suavizado).\n- Geometría: Silueta en curva \"S\" suave, perfil bajo, grosor constante y bordes exteriores biselados y redondeados. Proporción alargada (aprox. 3:1 largo respecto al ancho). Pieza única sólida, rígida y sin articulaciones.\n- Punto de anclaje: Apoyo directo sobre el suelo mediante una base inferior completamente plana."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Material principal (Base/Orillas): Arcilla o tierra compactada con acabado mate sedoso en color beige arena cálido.\n- Material central (Agua): Superficie sólida de aspecto líquido, acabado muy brillante (glossy) con alta reflexión especular, en tonos azul cian vibrante, azul celeste y vetas de espuma en azul hielo claro.\n- Materiales secundarios (Piedras): Guijarros de roca pulida con acabado mate suave, alternando una paleta de tonos crema, marrón claro, ocre suave y gris topo. Sin emisión lumínica propia."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Bordes laterales: Dos hileras continuas de guijarros ovalados y aplanados, colocados en fila única sobre los márgenes izquierdo y derecho siguiendo la curvatura del cauce.\n- Zona central: El lecho de agua presenta relieves longitudinales ondulados esculpidos que simulan el flujo y la corriente de forma estilizada.\n- Extremos: Cortes transversales limpios y rectos al inicio y final del canal para permitir el ensamblaje modular continuo."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado en escena: Prop estático pasivo; interactúa con el entorno únicamente a través de los reflejos especulares blancos sobre las crestas esculpidas del agua.\n- Regla de distancia (Plano general): A larga distancia, las piedras individuales se simplifican en un cordón continuo texturizado de color beige, y las ondas del agua se reducen a una franja azul cian con una única línea blanca central de brillo."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Prop ambiental 3D estilizado de un tramo de río modular con silueta en curva S, perfil bajo y base plana para suelo. Chasis de orillas en arcilla mate color beige arena, flanqueado en ambos bordes laterales por una fila continua de guijarros ovalados suaves en tonos crema, ocre y gris cálido. Canal central de agua con acabado brillante especular en colores azul cian y celeste, detallado con surcos ondulados longitudinales esculpidos que simulan la corriente en una sola pieza sólida."
+    }
+  ],
+  "inyeccion": "Prop ambiental 3D estilizado de un tramo de río modular con silueta en curva S, perfil bajo y base plana para suelo. Chasis de orillas en arcilla mate color beige arena, flanqueado en ambos bordes laterales por una fila continua de guijarros ovalados suaves en tonos crema, ocre y gris cálido. Canal central de agua con acabado brillante especular en colores azul cian y celeste, detallado con surcos ondulados longitudinales esculpidos que simulan la corriente en una sola pieza sólida.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Tipo de objeto: Prop ambiental modular de tramo de río o arroyo estilizado (estilo cartoon/low-poly suavizado).\n- Geometría: Silueta en curva \"S\" suave, perfil bajo, grosor constante y bordes exteriores biselados y redondeados. Proporción alargada (aprox. 3:1 largo respecto al ancho). Pieza única sólida, rígida y sin articulaciones.\n- Punto de anclaje: Apoyo directo sobre el suelo mediante una base inferior completamente plana.\n\n2. Materiales y Paleta de Color:\n\n- Material principal (Base/Orillas): Arcilla o tierra compactada con acabado mate sedoso en color beige arena cálido.\n- Material central (Agua): Superficie sólida de aspecto líquido, acabado muy brillante (glossy) con alta reflexión especular, en tonos azul cian vibrante, azul celeste y vetas de espuma en azul hielo claro.\n- Materiales secundarios (Piedras): Guijarros de roca pulida con acabado mate suave, alternando una paleta de tonos crema, marrón claro, ocre suave y gris topo. Sin emisión lumínica propia.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Bordes laterales: Dos hileras continuas de guijarros ovalados y aplanados, colocados en fila única sobre los márgenes izquierdo y derecho siguiendo la curvatura del cauce.\n- Zona central: El lecho de agua presenta relieves longitudinales ondulados esculpidos que simulan el flujo y la corriente de forma estilizada.\n- Extremos: Cortes transversales limpios y rectos al inicio y final del canal para permitir el ensamblaje modular continuo.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado en escena: Prop estático pasivo; interactúa con el entorno únicamente a través de los reflejos especulares blancos sobre las crestas esculpidas del agua.\n- Regla de distancia (Plano general): A larga distancia, las piedras individuales se simplifican en un cordón continuo texturizado de color beige, y las ondas del agua se reducen a una franja azul cian con una única línea blanca central de brillo.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nProp ambiental 3D estilizado de un tramo de río modular con silueta en curva S, perfil bajo y base plana para suelo. Chasis de orillas en arcilla mate color beige arena, flanqueado en ambos bordes laterales por una fila continua de guijarros ovalados suaves en tonos crema, ocre y gris cálido. Canal central de agua con acabado brillante especular en colores azul cian y celeste, detallado con surcos ondulados longitudinales esculpidos que simulan la corriente en una sola pieza sólida.",
+  "creado": "2026-11-06T04:03:15+01:00"
+}

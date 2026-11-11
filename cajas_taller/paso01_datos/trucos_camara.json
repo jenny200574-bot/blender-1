@@ -1,0 +1,21 @@
+{
+ "PISTA": "PISTA INMI (2026-10-29): orden 74 — trucos de cámara T1–T12 de Star, RESUMIDOS del catálogo (texto exacto en /workspace/tmp/prompts_plan_tomas/probados/06_trucos_camara_star_T1_T12.txt, fuente trucos_video_star.md sha256 61564036…, 15-oct-2026). estado = lo que dice el catálogo; no se inventa nada. Las plantillas de prompt NO van aquí (se leen del catálogo cuando haga falta).",
+ "fuente": "06_trucos_camara_star_T1_T12.txt (Star, 15-oct-2026)",
+ "trucos": [
+  {"id": "T1", "nombre": "Zoom primer cuadro → recorte", "plano": "push-in recto hacia un detalle", "usar": "entrar en un detalle, cierre, transformación con primer y último cuadro del MISMO encuadre", "no_usar": "cuando el último cuadro tiene un ángulo distinto (Veo hace un fundido)", "estado": "aprobado", "cita": "Video 05: \"perfecto, aprobado\""},
+  {"id": "T2", "nombre": "Arc 30° + nuca en el negativo", "plano": "órbita alrededor del personaje", "usar": "diálogos con giro, presentar personaje", "no_usar": "si hace falta un ángulo final exacto", "estado": "parcial", "cita": "Video 06: \"la cámara sí gira … pero termina de frente\""},
+  {"id": "T2b", "nombre": "Arc con dirección en pantalla", "plano": "órbita izq./der.", "usar": "forzar una órbita real", "no_usar": "grados ≥30 sin vigilar el final", "estado": "pendiente_dictamen", "cita": "Pendiente dictamen de Ricardo"},
+  {"id": "T3", "nombre": "Crane + tilt down", "plano": "subir y bajar la mirada a un detalle", "usar": "pasar de la escena a las manos o a un objeto", "no_usar": "para revelar el entorno (usar T4)", "estado": "funciona_caro", "cita": "Video 07: \"Las dos funcionan bien…\" (solo en estándar)"},
+  {"id": "T4", "nombre": "Crane fix", "plano": "subida vertical que termina en picado", "usar": "cierres, escala, transiciones de lugar, revelar el lugar sin personajes en el borde", "no_usar": "si molesta ver el techo; saca a los personajes del cuadro", "estado": "funciona", "cita": "Video 07"},
+  {"id": "T5", "nombre": "I2V desde cuadro a escala", "plano": "fijar la escala entre personajes", "usar": "todas las tomas con dos o más personajes: el clip parte de un cuadro aprobado", "no_usar": "si el cuadro tiene la escala mal", "estado": "aprobado", "cita": "Video 11: \"Solo c funciona porque parte de un cuadro aprobado\""},
+  {"id": "T6", "nombre": "Audio descrito aparte", "plano": "controlar el audio", "usar": "toda toma con audio", "no_usar": "extensiones", "estado": "aprobado", "cita": "Videos 12/13: \"Sí, perfecto\""},
+  {"id": "T7", "nombre": "Dos planos en un clip (hard cut)", "plano": "plano + inserto con corte limpio", "usar": "general + detalle, montajes", "no_usar": "contraplanos con caras (sin probar)", "estado": "funciona", "cita": "Video 16: \"El resto está bien\""},
+  {"id": "T8a", "nombre": "Prosa (dramático)", "plano": "dolly rápido", "usar": "tensión, revelación", "no_usar": "si el encuadre es crítico", "estado": "riesgo", "cita": "Video 18: cortó la cabeza"},
+  {"id": "T8b", "nombre": "JSON (controlado)", "plano": "dolly lento y estable", "usar": "diálogos, calma", "no_usar": "si se busca impacto", "estado": "funciona", "cita": "Video 18: mantuvo a [personaje] en cuadro"},
+  {"id": "T9", "nombre": "Diálogo con lip-sync", "plano": "plano estático de diálogo, un personaje", "usar": "una frase por clip", "no_usar": "varias frases; voces sin plan", "estado": "aprobado", "cita": "Video 19: \"Perfecto, más que aprobado\""},
+  {"id": "T10", "nombre": "Vertical 9:16 con 3 refs", "plano": "personaje solo en vertical", "usar": "redes, teasers", "no_usar": "dos o más personajes", "estado": "funciona", "cita": "Video 20: \"Se mantiene perfecto\""},
+  {"id": "T11", "nombre": "Ingredientes a video", "plano": "un personaje en un set aprobado", "usar": "escenas de un solo personaje", "no_usar": "más de 1 personaje + set", "estado": "funciona", "cita": "Video 23: \"sale solo [personaje] y el acercamiento está muy bien\""},
+  {"id": "T12", "nombre": "Cadena limpia (fix de saturación)", "plano": "continuar el mismo plano más de 8 s", "usar": "toda cadena o extensión >8 s (continuación del mismo plano)", "no_usar": "", "estado": "aprobado", "cita": "\"T12 Cadena limpia (fix de saturación) — APROBADO 13:35\""}
+ ],
+ "prohibido": [{"que": "primer y último cuadro con ángulos distintos", "por_que": "Veo hace un fundido", "cita": "T1 · Cuándo NO usar"}]
+}

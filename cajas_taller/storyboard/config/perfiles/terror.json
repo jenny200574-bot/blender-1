@@ -1,0 +1,59 @@
+{
+ "id": "terror",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Terror",
+ "tonos": [
+  "miedo",
+  "inquietud",
+  "pavor"
+ ],
+ "reglas": {
+  "intencion": "miedo y anticipación; el público teme lo que no ve",
+  "beats": "mostrar la reacción antes que la amenaza; ocultar la amenaza el mayor tiempo posible",
+  "secuencia": "revelación lenta y progresiva; el detalle llega tarde",
+  "direccion": "planos cerrados, movimientos lentos (acercamiento casi imperceptible), lentes largos para aislar o angulares para deformar",
+  "actuacion": "contención, respiración, miradas fuera de cuadro",
+  "composicion": "espacio negativo, sombras, marcos dentro del marco, algo en el fondo desenfocado",
+  "ritmo": "lento con silencios largos; un golpe repentino solo como clímax",
+  "transiciones": "cortes retenidos, fundidos a negro; corte seco solo para el susto",
+  "continuidad": "la posición de la amenaza nunca salta; las sombras y luces se mantienen",
+  "justificacion": "cada elección retrasa la información para crear tensión"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   2.5,
+   12.0
+  ],
+  "lente_mm": [
+   14,
+   100
+  ],
+  "planos_preferidos": [
+   "CU",
+   "ECU",
+   "MCU",
+   "WS"
+  ],
+  "angulos_preferidos": [
+   "HIGHANGLE",
+   "DUTCH",
+   "EYELEVEL"
+  ],
+  "movimientos_preferidos": [
+   "DOLLYIN",
+   "STATIC",
+   "PAN"
+  ],
+  "movimientos_evitar": [
+   "WHIPPAN",
+   "CRASHZOOM"
+  ],
+  "transiciones_preferidas": [
+   "CORTE",
+   "FUNDIDO_NEGRO",
+   "CORTE_SECO"
+  ],
+  "pausas": "muchas"
+ },
+ "ejemplo_puerta": "Plano cerrado de la mano en el picaporte, la puerta se abre despacio, contraplano del rostro en sombra, la revelación llega a medias."
+}

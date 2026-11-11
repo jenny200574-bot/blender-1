@@ -1,0 +1,9 @@
+
+## 2-nov-2026 ~16:55 Bogotá · ingeniero MYIA (orden Ricardo, sellos por canal) · respaldo: /opt/myia-taller-n8n/respaldos/sellos_20261102_1645/
+- paso01_cubos.py 9f7d65ea56bc5344f95098db1cda412e755d281757fc7528f73909b1ab3d8966 (antes 6a14853d… en disco / 18e96727… en SHA256SUMS): cubo10 v2 entrega casting por toma (personajes, objetos, escenario, fondo/molde/estilo_ref) + toma/tomas_casting/canal. Aprobado inmi.
+- estilo_oficial.py 261f3f760604bb234b89d7cb1180ca753d5f928aaa2f6f14a47ba737b5f9ad91 (antes 37824e71…): v2 sello de estilo POR CANAL (FIJOS_TALLER/estilo/<canal>/sello.json); ya no copia la imagen global a otros canales.
+
+## 2-nov-2026 ~19:08 Bogotá · inmi (entrega t530u/t532u) · respaldo: /opt/myia-taller-n8n/respaldos/cajas_20261102_190535_bogota_t531/SHA256SUMS
+- Actualizados SOLO los que usa el flujo y se cambiaron/verificaron hoy: paso00_cadena.py (sumar_fijos_del_canal, ver objetos, canal_id, --repetir), sello_pago.py y cubo_fijo/cubo_fijo.py (nuevos en la lista), paso00_ramas.py, ver_prepago/ver_prepago.py, cubo_fijo_canal_id.py (nuevo), paso00_objetos_faltantes.py (nuevo, lo llama «paso00_cadena ver objetos»); estilo_oficial.py y paso01_cubos.py ya coincidían.
+- Diferencias que NO son de esta tanda y se dejaron como estaban (sin actualizar): paso01_pago.py, paso01_datos/argon_pago.json (1-nov 20:22), paso01_revision.py (1-nov 17:43), paso01_dirigir.py (1-nov 19:02), cubo11_tira.py y cubo11_tira_pedido.py (31-oct 18:46), fondo_cubemap/cubemap.py y cubemap_blender.py (2-nov 12:23, fondo cubemap).
+- entrada_ssh.sh (2-nov 17:36, se le agregó «sello_pago» hoy) tampoco se actualizó porque no estaba en la lista pedida: revisar y actualizar con orden.

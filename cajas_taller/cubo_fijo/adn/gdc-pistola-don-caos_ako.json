@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-pistola-don-caos",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Pistola espacial caricaturesca de proporciones rechonchas y silueta bulbosa completamente redondeada, sin aristas. Cuerpo principal casi esférico que se estrecha hacia el cañón, fusionado en una sola pieza continua con una empuñadura inferior corta, gruesa e inclinada. Solo el gatillo es una pieza articulada independiente.\n- Modo de sujeción: Manual (una sola mano), mediante agarre en la empuñadura cilíndrica inferior."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Chasis principal y empuñadura: Plástico rígido de acabado satinado con reflejos suaves, en color morado intenso.\n- Materiales secundarios: Dos anillos del cañón en metal dorado satinado; gatillo de plástico liso color naranja; cúpula frontal de acrílico o cristal esmerilado translúcido en color lila claro.\n- Color de emisión lumínica: Resplandor de energía color magenta y violeta neón con un núcleo central blanco incandescente."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Superficie minimalista totalmente lisa, carente de grabados, paneles, tornillos o líneas de costura.\n- Componentes clave: Dos anillos toroidales dorados y gruesos ubicados de forma paralela en el extremo frontal (separados por una sección corta del chasis morado), una gran semiesfera translúcida que sobresale como boca del cañón, y un botón de gatillo pequeño y ovalado bajo el cuerpo principal."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado activo/inactivo: En reposo, la cúpula frontal es lila translúcido y opaco. Al disparar, la cúpula se ilumina desde el interior con luz blanca y magenta, proyectando un halo violeta difuso que baña el anillo dorado frontal más cercano.\n- Regla de distancia (Plano general): A lo lejos se simplifica como una silueta morada redondeada con dos franjas verticales doradas y una punta clara (o brillante si está activa), omitiendo el gatillo naranja y los reflejos de luz sobre el plástico."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Pistola láser estilo cartoon 3D de proporciones rechonchas y geometría muy redondeada. Chasis principal bulboso y empuñadura corta de plástico satinado color morado intenso, con un pequeño gatillo naranja redondeado. El cañón frontal presenta dos anillos gruesos de metal dorado mate que enmarcan una gran punta semiesférica de cristal lila translúcido, la cual brilla con luz neón magenta y núcleo blanco al activarse. Superficie minimalista completamente lisa, estética de juguete sin costuras ni grabados."
+    }
+  ],
+  "inyeccion": "Pistola láser estilo cartoon 3D de proporciones rechonchas y geometría muy redondeada. Chasis principal bulboso y empuñadura corta de plástico satinado color morado intenso, con un pequeño gatillo naranja redondeado. El cañón frontal presenta dos anillos gruesos de metal dorado mate que enmarcan una gran punta semiesférica de cristal lila translúcido, la cual brilla con luz neón magenta y núcleo blanco al activarse. Superficie minimalista completamente lisa, estética de juguete sin costuras ni grabados.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Pistola espacial caricaturesca de proporciones rechonchas y silueta bulbosa completamente redondeada, sin aristas. Cuerpo principal casi esférico que se estrecha hacia el cañón, fusionado en una sola pieza continua con una empuñadura inferior corta, gruesa e inclinada. Solo el gatillo es una pieza articulada independiente.\n- Modo de sujeción: Manual (una sola mano), mediante agarre en la empuñadura cilíndrica inferior.\n\n2. Materiales y Paleta de Color:\n\n- Chasis principal y empuñadura: Plástico rígido de acabado satinado con reflejos suaves, en color morado intenso.\n- Materiales secundarios: Dos anillos del cañón en metal dorado satinado; gatillo de plástico liso color naranja; cúpula frontal de acrílico o cristal esmerilado translúcido en color lila claro.\n- Color de emisión lumínica: Resplandor de energía color magenta y violeta neón con un núcleo central blanco incandescente.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Superficie minimalista totalmente lisa, carente de grabados, paneles, tornillos o líneas de costura.\n- Componentes clave: Dos anillos toroidales dorados y gruesos ubicados de forma paralela en el extremo frontal (separados por una sección corta del chasis morado), una gran semiesfera translúcida que sobresale como boca del cañón, y un botón de gatillo pequeño y ovalado bajo el cuerpo principal.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado activo/inactivo: En reposo, la cúpula frontal es lila translúcido y opaco. Al disparar, la cúpula se ilumina desde el interior con luz blanca y magenta, proyectando un halo violeta difuso que baña el anillo dorado frontal más cercano.\n- Regla de distancia (Plano general): A lo lejos se simplifica como una silueta morada redondeada con dos franjas verticales doradas y una punta clara (o brillante si está activa), omitiendo el gatillo naranja y los reflejos de luz sobre el plástico.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nPistola láser estilo cartoon 3D de proporciones rechonchas y geometría muy redondeada. Chasis principal bulboso y empuñadura corta de plástico satinado color morado intenso, con un pequeño gatillo naranja redondeado. El cañón frontal presenta dos anillos gruesos de metal dorado mate que enmarcan una gran punta semiesférica de cristal lila translúcido, la cual brilla con luz neón magenta y núcleo blanco al activarse. Superficie minimalista completamente lisa, estética de juguete sin costuras ni grabados.",
+  "creado": "2026-11-06T04:03:13+01:00"
+}

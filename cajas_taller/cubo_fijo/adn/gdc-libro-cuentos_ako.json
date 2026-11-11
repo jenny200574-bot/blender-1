@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-libro-cuentos",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Libro de tapa dura estilizado en 3D, de silueta rectangular vertical, considerable grosor y bordes suavemente redondeados. Es un objeto articulado mediante el lomo que se abre en dos mitades simétricas, mostrando bloques gruesos de páginas escalonadas.\n- Modo de sujeción: Prop de mano (a una o dos manos) o de apoyo directo sobre superficies planas."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Chasis principal: Tapas con textura de tela fina o cuero mate dividida en tres bloques de color: azul medio (franja vertical del lomo), azul marino oscuro (bloque superior) y azul cian brillante (bloque inferior).\n- Materiales secundarios: Cantoneras metálicas en dorado satinado; hojas interiores de papel grueso color crema mate; cinta marcapáginas de tela lisa color naranja.\n- Emisión lumínica: En estado activo, la superficie de las páginas emite un resplandor cálido dorado con manchas pictóricas multicolores (magenta, amarillo, turquesa, violeta) y partículas de luz flotantes."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Tapas lisas sin símbolos centrales, definidas únicamente por la división geométrica de los bloques de color y una hendidura vertical que marca la bisagra del lomo.\n- Cuatro protectores metálicos dorados (cantoneras) con forma en \"L\" redondeada, acoplados en las esquinas exteriores de la portada y contraportada.\n- Cinta marcapáginas naranja anclada al interior del lomo que sobresale por el borde inferior, terminada en dos puntas (corte en \"V\" invertida).\n- Hojas interiores modeladas en bloques gruesos con surcos profundos visibles en los cantos."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado activo/inactivo: Permanece inactivo cerrado o abierto con páginas crema en blanco. Al activarse (abierto), las ilustraciones cobran vida emitiendo luz dorada y chispas mágicas que iluminan directamente las manos y el rostro del portador.\n- Regla de distancia: En plano general se simplifica a un rectángulo bicolor (azul oscuro/claro) con cuatro puntos dorados en las esquinas y un apéndice naranja inferior, eliminando la textura textil y las líneas divisorias de las páginas."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Libro estilizado 3D de tapa dura y lomo grueso, con cubiertas de textura textil mate divididas en bloques geométricos de color azul marino oscuro (arriba), azul cian brillante (abajo) y azul medio (lomo). Incorpora cuatro cantoneras metálicas doradas redondeadas en las esquinas exteriores, gruesas páginas color crema y una cinta marcapáginas naranja con corte en V que sobresale por el borde inferior. Al abrirse en su estado mágico activo, las páginas en blanco se iluminan con formas abstractas multicolores, emitiendo un brillo cálido y partículas doradas flotantes."
+    }
+  ],
+  "inyeccion": "Libro estilizado 3D de tapa dura y lomo grueso, con cubiertas de textura textil mate divididas en bloques geométricos de color azul marino oscuro (arriba), azul cian brillante (abajo) y azul medio (lomo). Incorpora cuatro cantoneras metálicas doradas redondeadas en las esquinas exteriores, gruesas páginas color crema y una cinta marcapáginas naranja con corte en V que sobresale por el borde inferior. Al abrirse en su estado mágico activo, las páginas en blanco se iluminan con formas abstractas multicolores, emitiendo un brillo cálido y partículas doradas flotantes.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Libro de tapa dura estilizado en 3D, de silueta rectangular vertical, considerable grosor y bordes suavemente redondeados. Es un objeto articulado mediante el lomo que se abre en dos mitades simétricas, mostrando bloques gruesos de páginas escalonadas.\n- Modo de sujeción: Prop de mano (a una o dos manos) o de apoyo directo sobre superficies planas.\n\n2. Materiales y Paleta de Color:\n\n- Chasis principal: Tapas con textura de tela fina o cuero mate dividida en tres bloques de color: azul medio (franja vertical del lomo), azul marino oscuro (bloque superior) y azul cian brillante (bloque inferior).\n- Materiales secundarios: Cantoneras metálicas en dorado satinado; hojas interiores de papel grueso color crema mate; cinta marcapáginas de tela lisa color naranja.\n- Emisión lumínica: En estado activo, la superficie de las páginas emite un resplandor cálido dorado con manchas pictóricas multicolores (magenta, amarillo, turquesa, violeta) y partículas de luz flotantes.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Tapas lisas sin símbolos centrales, definidas únicamente por la división geométrica de los bloques de color y una hendidura vertical que marca la bisagra del lomo.\n- Cuatro protectores metálicos dorados (cantoneras) con forma en \"L\" redondeada, acoplados en las esquinas exteriores de la portada y contraportada.\n- Cinta marcapáginas naranja anclada al interior del lomo que sobresale por el borde inferior, terminada en dos puntas (corte en \"V\" invertida).\n- Hojas interiores modeladas en bloques gruesos con surcos profundos visibles en los cantos.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado activo/inactivo: Permanece inactivo cerrado o abierto con páginas crema en blanco. Al activarse (abierto), las ilustraciones cobran vida emitiendo luz dorada y chispas mágicas que iluminan directamente las manos y el rostro del portador.\n- Regla de distancia: En plano general se simplifica a un rectángulo bicolor (azul oscuro/claro) con cuatro puntos dorados en las esquinas y un apéndice naranja inferior, eliminando la textura textil y las líneas divisorias de las páginas.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nLibro estilizado 3D de tapa dura y lomo grueso, con cubiertas de textura textil mate divididas en bloques geométricos de color azul marino oscuro (arriba), azul cian brillante (abajo) y azul medio (lomo). Incorpora cuatro cantoneras metálicas doradas redondeadas en las esquinas exteriores, gruesas páginas color crema y una cinta marcapáginas naranja con corte en V que sobresale por el borde inferior. Al abrirse en su estado mágico activo, las páginas en blanco se iluminan con formas abstractas multicolores, emitiendo un brillo cálido y partículas doradas flotantes.",
+  "creado": "2026-11-06T04:03:13+01:00"
+}

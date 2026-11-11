@@ -1,0 +1,17 @@
+ARGON-CINE · GÉNERO INTRIGA · V2 INACTIVO
+FUENTE: informe ARGON-CINE, tablas.txt tabla0 fila3; secciones1.3-1.8; reglas_sb_v1.json.
+MATRIZ DEL INFORME (preferencias, subordinadas a reglas duras):
+Perfil: 3. Intriga
+Lentes: 35 mm – 85 mm
+Altura relativa: Nivel de hombros o ligero contrapicado (-0.15 m)
+Tamaños dominantes: PM, Escorzos (Dirty OTS), PD
+Composición/staging: Encuadre dentro del encuadre (puertas, lámparas); oclusión parcial controlada (15%–25% del cuadro).
+Movimiento/ritmo: Paneos contenidos de revelación y cambio de foco (rack focus) entre objeto y ojos; ritmo calculado (3–5 s).
+
+DIRECCIÓN APLICADA
+Dirige la diferencia entre lo que el personaje declara y lo que su mirada recibe. Usa encuadre dentro del encuadre y escorzo sucio cuando establezcan vigilancia o información restringida, no por ornamento. El informe permite oclusión parcial controlada del15-25% del cuadro: eso no permite tapar ambos ojos del sujeto de un beat emocional ni incumplir Gate1. Una lámpara o puerta encuadran el conflicto; no ganan automáticamente el puesto de sujeto.
+El PM conserva la relación entre interlocutores; un OTS es composición, no un tamaño nuevo. Declara además tamaño canónico, lente, posición del hombro y objetivo de mirada. Un PD solo entra si el indicio cambia causalmente la trama, exige lectura visual y no sigue a otro PD. Después de la información, muestra su recepción o decisión; no conviertas el storyboard en un catálogo de accesorios.
+Los paneos contenidos revelan información conectada con un vector de mirada. Un rack focus puede enlazar indicio y ojos cuando ambos tengan función demostrable, sin sustituir la causalidad por desenfoque. La referencia de tres a cinco segundos es ritmo preferente, no duración rígida por viñeta. Nivel de hombros o ligero contrapicado se decide respecto a ojos y staging medidos; no apuntes al origen del personaje. Si la cámara avanza, exige delta de Dolly In aunque el motivo diga REVEAL. Mantén quién sabe qué y cuándo; el género no permite inventar un dato secreto que el guion no contiene.
+
+CONTROL ANTES DE RESPONDER
+Aplica las reglas1.0.0 y el contrato2.1.0 de trece bloques de la base común; este perfil aporta preferencias, no excepciones nuevas. Tú decides sujeto, escala, lente, altura, movimiento/motivo y ritmo con justificación por beat. Mantén dna_ref_id y referencias aprobadas sin reescribir apariencia. Comprueba cobertura causal, texto literal,24fps, pre-roll0.8-1.5s, eje180/30 y raccord8%, cuotas y prioridad U(e,b). Usa LOCK si no hay motivo comprobable; no fabriques delta para Dolly In. Si faltan medidas, huesos, ADN o tiempos indispensables, informa bloqueo: los valores del perfil no sustituyen esos datos. No afirmes resultados de Gate1 sin prueba física. La escena, no una plantilla fija, decide cuántas viñetas hacen falta.

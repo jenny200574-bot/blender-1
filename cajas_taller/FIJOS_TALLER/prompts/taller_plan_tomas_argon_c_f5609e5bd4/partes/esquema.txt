@@ -1,0 +1,142 @@
+{
+ "version": "o100-v4",
+ "descripcion": "Formato fijo (orden 100, HIBRIDO) del pedido a Argon C y de su respuesta para escribir el texto de pintura de UNA lamina 2x2. El codigo mide el 3D y arma la ENTRADA; Argon analiza TODO (incluidos los datos del codigo) y escribe; el codigo valida antes de pagar.",
+ "entrada": {
+  "referencias_imagen_para_argon": [
+   "molde gris AO de la lamina (volumen y layout, NO ropa)",
+   "resultado o98 fallido (ejemplo negativo)",
+   "ejemplos_ricardo_1/2 (ejemplos negativos de orientacion y mirada)",
+   "ejemplo_ricardo_3 (brazo suelto con segunda pulsera, negativo)",
+   "hoja Kael frente",
+   "hoja Kael espalda",
+   "hoja alien frente"
+  ],
+  "referencias_imagen_para_pintor": [
+   "Image 1 = Kael frente",
+   "Image 2 = Kael espalda",
+   "Image 3 = alien frente",
+   "Image 4 (ultima) = molde gris AO"
+  ],
+  "datos_codigo": {
+   "por_panel": [
+    "orientacion_cuerpo (espalda|frente|3/4|perfil) medida",
+    "lado de pantalla",
+    "escala relativa a objetos del set",
+    "mano visible con pulsera",
+    "lente y altura de camara"
+   ],
+   "texto_o98": "prompt anterior, solo como datos medidos a revisar"
+  },
+  "fijos_canal": [
+   "estilo",
+   "ficha Kael",
+   "ficha alien",
+   "set",
+   "pulsera solo muñeca IZQUIERDA, derecha desnuda",
+   "sin texto"
+  ],
+  "guion": "cita literal de la escena 8 para el beat",
+  "emocion_por_panel": "derivada del guion"
+ },
+ "salida_argon": {
+  "type": "object",
+  "required": [
+   "analisis_datos_codigo",
+   "orientacion_serie",
+   "paneles",
+   "prompt_final",
+   "autochequeo"
+  ],
+  "properties": {
+   "analisis_datos_codigo": {
+    "type": "array",
+    "items": {
+     "dato": "string",
+     "decision": "usar|corregir|descartar",
+     "motivo": "string"
+    }
+   },
+   "orientacion_serie": {
+    "camara_lado": "string",
+    "eje_180": "string",
+    "kael_cuerpo": "espalda|frente|tres_cuartos_espalda|tres_cuartos_frente|perfil",
+    "direccion_pantalla": "string",
+    "bloqueada_toda_la_serie": true
+   },
+   "paneles": {
+    "type": "array",
+    "items": {
+     "n": "1-4",
+     "composicion": "palabras, sin numeros de %",
+     "escala_relativa": "frente a objetos del set",
+     "orientacion": "cuerpo/cabeza en palabras",
+     "mirada": {
+      "cuerpo_apunta_a": "string",
+      "cabeza_apunta_a": "string",
+      "ojos_miran_a": "alien|muñeca|suelo|lejos de camara|...",
+      "mira_a_camara": false
+     },
+     "accion": "string",
+     "emocion": {
+      "emocion": "string",
+      "intensidad": "1-5",
+      "gesto_facial": "string",
+      "gesto_cuerpo": "string"
+     },
+     "pulsera": "string",
+     "luz": "string",
+     "cambio_vs_anterior_pct": "<=10-20",
+     "conteo": {
+      "personas": "int",
+      "manos_visibles": "int, cada una de un cuerpo nombrado",
+      "pulseras": 1,
+      "brazo_suelto_pov": false
+     }
+    }
+   },
+   "prompt_final": "INGLES, sin coordenadas numericas, sin contradicciones ni repeticiones",
+   "autochequeo": {
+    "contradicciones": [],
+    "repeticiones": [],
+    "orientacion_igual_al_3d": true,
+    "mirada_a_camara_prohibida": true
+   }
+  }
+ },
+ "validacion_codigo_antes_de_pagar": [
+  "sin numeros tipo x=..%, y=..%, ..% of frame",
+  "pulsera: 'LEFT wrist' presente y 'right' desnuda",
+  "orientacion del 3D presente en cada panel (back/from behind si el 3D dice espalda)",
+  "prohibido mirar a camara salvo que el 3D lo diga: 'never looks at the camera'",
+  "pequeño/lejos si el 3D lo mide",
+  "sin palabras de colores del molde (magenta/green/blue/yellow)",
+  "frase de conteo: exactly one bracelet / no disembodied or extra arm",
+  "mirada: cabeza/ojos hacia alien o muñeca segun panel"
+ ],
+ "chequeo_despues_de_pintar": [
+  "orientacion pintada == molde por panel",
+  "mirada/cabeza hacia donde dice el panel, nunca a camara",
+  "escala relativa",
+  "pulsera solo izquierda",
+  "identidad",
+  "contar manos y pulseras; marcar brazos sueltos"
+ ],
+ "pintor": {
+  "modelo": "gemini-3-pro-image",
+  "talla": "4K",
+  "aspecto": "4:5",
+  "hoja": "2x4"
+ },
+ "orden_imagenes_pintor": [
+  "molde 2x4 semantico",
+  "Kael espalda",
+  "Kael frente",
+  "alien si aparece"
+ ],
+ "lecciones": [
+  "sin coordenadas numericas",
+  "colores del molde solo en la leyenda",
+  "escala anclada a objetos del set",
+  "molde como Image 1"
+ ]
+}

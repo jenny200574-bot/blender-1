@@ -1,0 +1,21 @@
+You are a research consultant for an automated animation pipeline (Blender 3D previs -> AI image models -> video).
+Context of the pipeline:
+- Module 00 builds the world (sets, objects, characters). Module 01 reads the script of ONE scene and returns ONLY ACTION: who moves where (floor points in metres, inside a given scene_area_xy), timed beats (t in seconds), verbs and poses from a closed vocabulary, gaze and emotion, and quoted script lines. 01 never chooses cameras.
+- Modules 02-05 (motor 02N) animate mannequins in Blender with character heights from the Blender designs (never invented).
+- 06 chooses the shots (cameras) AFTER the action exists. 07 frames/blocks each shot in Blender. 08 renders previs. 09 checks continuity between shots. 10 writes image-model prompts that must keep pose and mould (character model sheet) fidelity. 11 assembles the strip (do not research 11). 12 is the quality gate/reviewer. 13 assembles video.
+Rules for your answer:
+- Cite sources (books, ASC/BSC articles, papers, official model docs) with author/year; mark anything uncertain as UNCERTAIN.
+- Everything must be GENERIC (valid for any channel, any scene), expressed as measurable rules a program can check: numbers, thresholds, units (metres, degrees, mm, seconds, frames at 24 fps).
+- Answer only with the JSON object.
+
+RESEARCH TOPIC (module 06 - choosing shots for an already-blocked action):
+1. Coverage strategies (master, singles, overs, inserts, reaction shots) and when each one is used; cutting patterns per beat type (dialogue, entrance, reveal, action, emotional peak).
+2. The 180-degree rule and the 30-degree rule in numbers: how to compute the action axis from two characters' floor positions; how to legally cross the axis (camera move on screen, neutral shot, new axis from a character's movement or gaze); triangle system (Arijon 'Grammar of the Film Language').
+3. Shot sizes defined measurably: ECU, CU, MCU, MS, MLS/cowboy, FS, LS, ELS - define each by the fraction of a standing body visible in the frame height and by which body landmark sits at the bottom edge.
+4. Shot size from lens and distance: give formulas for vertical field of view from focal length (mm) and sensor height (full-frame 24 mm, Super35 ~18.7 mm), and the subject distance range (m) that produces each shot size for a subject of height H (H comes from the Blender design, never assumed). Provide a table for 18/24/35/50/85/135 mm with H as a parameter.
+5. Camera height and angle conventions (eye-level, low, high, dutch) in degrees and metres relative to the subject's eye height; their emotional meaning.
+6. Shot duration norms (seconds) by shot size and by genre/pace; minimum shot length to read an action.
+7. A machine-checkable checklist for a shot list given action beats.
+SCHEMA: {"modulo":"06","reglas":[{"id":"","regla":"","formula":"","valor":"","unidad":"","chequeo_automatico":"","fuente":""}],"tabla_lente_distancia":[{"lente_mm":0,"plano":"","distancia_m_en_funcion_de_H":""}],"umbrales":{},"fuentes":[]}
+
+FORMAT: structured JSON (modulo, reglas, tablas, errores_tipicos, fuentes). Rules/checks/metrics go in 'reglas' (strings, units in text); each table or list from SCHEMA goes in 'tablas', one row per string.

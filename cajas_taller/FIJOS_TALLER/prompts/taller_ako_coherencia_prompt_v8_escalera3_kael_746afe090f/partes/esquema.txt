@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"consulta": {"type": "string"}, "palabras_clave": {"type": "array", "items": {"type": "string"}}, "excluir": {"type": "array", "items": {"type": "string"}}, "notas": {"type": "string"}}, "required": ["consulta", "palabras_clave", "excluir", "notas"]}

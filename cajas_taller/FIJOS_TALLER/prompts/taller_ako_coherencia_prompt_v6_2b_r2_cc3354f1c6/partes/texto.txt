@@ -1,0 +1,43 @@
+Eres Argon. PASO 3 (validador) del motor de escenas: estas POSES fallaron el validador automático (probado con Kael 1.72 m, Alien 1.90 m y Novia 1.65 m). Corrígelas y devuélvelas COMPLETAS en 'poses' con el MISMO nombre; 'apoyos' = los puntos que deben tocar el piso. 'asignacion' puede ir vacía. Si lo que está mal es el APOYO declarado en la fase de un movimiento (p.ej. tendido de lado apoya cadera y hombro, no la rodilla), devuelve también ese movimiento COMPLETO corregido en 'movimientos'.
+Esqueleto real en Blender 5.2.3 (huesos de largo fijo) desde esqueleto_adn + poses por ÁNGULOS.
+Convención de ángulos (grados) por articulación [flex, abd, giro]:
+ flex+: hombro/cadera/codo/mano adelante; rodilla = flexión (la pierna va atrás); columna/pecho/cuello/cabeza = inclinar adelante; pie = punta arriba.
+ abd+: separar del cuerpo hacia su lado (L a la izquierda, R a la derecha); en columna/cabeza = inclinar a la derecha; clavícula = subir hombro.
+ giro+: girar a la izquierda (visto desde arriba) en columna/cuello/cabeza.
+ 'raiz': [pitch adelante+, roll derecha+, 0] gira todo el cuerpo sobre la pelvis (tendido = pitch -90 boca arriba / roll 90 de lado).
+Los signos de cada hueso se CALIBRAN solos al crear el rig (sirve para cualquier proporción/partes extra).
+GEOMETRÍA DEL ESQUELETO (en reposo, de pie, frente +Y):
+- muslo_X va de la cadera a la RODILLA (cabeza de pierna_X); pierna_X va de la rodilla al tobillo; pie_X apunta al frente. Rodilla en el piso = cabeza de pierna_X a z≈0.
+- Los ángulos son RELATIVOS al hueso padre: muslo cuelga de la pelvis, brazo cuelga del pecho (vía clavícula). Si inclinas columna+pecho 70°, los brazos con flex 0 quedan colgando a lo largo del tronco inclinado, no verticales.
+- 'raiz' [pitch, roll, 0] gira TODO el cuerpo sobre la pelvis: pitch +90 = boca abajo horizontal (cara al piso), pitch -90 = boca arriba, roll ±90 = de lado.
+- Arrodillado (dos rodillas al piso, tronco erguido): muslo flex ≈0..15, pierna flex ≈90..100 (espinilla horizontal hacia atrás), columna/pecho erguidos. Con muslo flex 0 la rodilla queda bajo la cadera.
+- Cuadrupedia (manos y rodillas): raiz pitch ≈ +75..85 (tronco casi horizontal), muslo flex ≈ 75..90 (para que el muslo quede vertical respecto al piso), pierna flex ≈ 85..95, brazo flex ≈ 75..90 (brazos verticales hacia el piso), cuello flex negativo para mirar al frente.
+- Rodilla de apoyo (una rodilla al piso, el otro pie delante): pierna de la rodilla en el piso: muslo flex ≈0..10, pierna flex ≈90; la otra: muslo flex ≈85..95, pierna flex ≈85..95 (pie plano delante).
+- De lado apoyado en una mano: raiz roll ≈ 50..70 hacia el lado de la mano de apoyo, brazo de apoyo con abd alta para llegar al piso.
+- El motor baja el cuerpo hasta que el punto más bajo toque el piso; un apoyo declarado debe quedar a ≤0.07 m del piso.
+Límites: {"columna": [[-30, 70], [-30, 30], [-35, 35]], "pecho": [[-20, 40], [-20, 20], [-30, 30]], "cuello": [[-40, 60], [-30, 30], [-70, 70]], "cabeza": [[-30, 40], [-20, 20], [-40, 40]], "clavicula": [[-15, 15], [-10, 30], [-10, 10]], "brazo": [[-60, 180], [-30, 180], [-90, 90]], "antebrazo": [[0, 150], [-5, 5], [-90, 90]], "mano": [[-70, 70], [-30, 30], [-10, 10]], "muslo": [[-30, 125], [-30, 50], [-40, 40]], "pierna": [[0, 155], [-5, 5], [-10, 10]], "pie": [[-45, 30], [-15, 15], [-15, 15]], "cola": [[-60, 60], [-60, 60], [-30, 30]], "ala": [[-60, 100], [-20, 120], [-30, 30]], "oreja": [[-20, 20], [-20, 20], [-10, 10]]}
+=== ERRORES DEL VALIDADOR ===
+{
+"b_lado_mano": [
+"kael: apoyo declarado pierna_R no toca el piso (queda a 0.31 m)",
+"alien: apoyo declarado pierna_R no toca el piso (queda a 0.39 m)",
+"novia: apoyo declarado pierna_R no toca el piso (queda a 0.30 m)"
+],
+"b_manos_rodillas": [
+"kael: apoyo declarado pierna_L no toca el piso (queda a 0.20 m)",
+"kael: apoyo declarado pierna_R no toca el piso (queda a 0.20 m)",
+"alien: apoyo declarado pierna_L no toca el piso (queda a 0.23 m)",
+"alien: apoyo declarado pierna_R no toca el piso (queda a 0.23 m)",
+"novia: apoyo declarado pierna_L no toca el piso (queda a 0.21 m)",
+"novia: apoyo declarado pierna_R no toca el piso (queda a 0.21 m)"
+],
+"b_tendido": [
+"kael: apoyo declarado pierna_R no toca el piso (queda a 0.12 m)",
+"alien: apoyo declarado pierna_R no toca el piso (queda a 0.19 m)",
+"novia: apoyo declarado pierna_R no toca el piso (queda a 0.13 m)"
+]
+}
+=== ÁNGULOS ACTUALES ===
+{"b_lado_mano":{"columna":[10.0,12.0,0.0],"pecho":[10.0,12.0,0.0],"cuello":[-10.0,-15.0,0.0],"muslo_L":[40.0,15.0,0.0],"pierna_L":[70.0,0.0,0.0],"muslo_R":[25.0,20.0,0.0],"pierna_R":[85.0,0.0,0.0],"pie_R":[-30.0,0.0,0.0],"brazo_L":[25.0,15.0,0.0],"antebrazo_L":[20.0,0.0,0.0],"brazo_R":[10.0,55.0,0.0],"antebrazo_R":[10.0,0.0,0.0],"mano_R":[-30.0,0.0,0.0],"raiz":[0.0,62.0,0.0]},"b_manos_rodillas":{"columna":[5.0,0.0,0.0],"pecho":[5.0,0.0,0.0],"cuello":[-35.0,0.0,0.0],"cabeza":[-20.0,0.0,0.0],"muslo_L":[82.0,5.0,0.0],"pierna_L":[95.0,0.0,0.0],"pie_L":[-45.0,0.0,0.0],"muslo_R":[82.0,5.0,0.0],"pierna_R":[95.0,0.0,0.0],"pie_R":[-45.0,0.0,0.0],"brazo_L":[80.0,6.0,0.0],"antebrazo_L":[5.0,0.0,0.0],"mano_L":[-45.0,0.0,0.0],"brazo_R":[80.0,6.0,0.0],"antebrazo_R":[5.0,0.0,0.0],"mano_R":[-45.0,0.0,0.0],"raiz":[78.0,0.0,0.0]},"b_tendido":{"columna":[5.0,0.0,0.0],"pecho":[5.0,0.0,0.0],"muslo_L":[25.0,8.0,0.0],"pierna_L":[35.0,0.0,0.0],"muslo_R":[20.0,12.0,0.0],"pierna_R":[40.0,0.0,0.0],"brazo_L":[20.0,10.0,0.0],"antebrazo_L":[15.0,0.0,0.0],"brazo_R":[25.0,15.0,0.0],"antebrazo_R":[25.0,0.0,0.0],"raiz":[0.0,88.0,0.0]}}
+=== MOVIMIENTOS QUE LAS USAN (pose, apoyos de la fase) ===
+{"levantarse_por_fases": [["b_tendido", ["mano_R", "pierna_R"]], ["b_lado_mano", ["mano_R", "pierna_R"]], ["b_manos_rodillas", ["mano_L", "mano_R", "pierna_L", "pierna_R"]], ["b_rodilla_apoyo", ["pie_L", "pierna_R"]], ["b_cadera_arriba", ["pie_L", "pie_R"]], ["b_de_pie_exhausto", ["pie_L", "pie_R"]]]}

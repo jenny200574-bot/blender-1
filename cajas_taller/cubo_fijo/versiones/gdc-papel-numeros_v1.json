@@ -1,0 +1,31 @@
+{
+  "id": "gdc-papel-numeros",
+  "nombre": "papel numeros",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "historia",
+  "sellado": false,
+  "version": 1,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-papel-numeros.png",
+  "imagen_sha256": "17b245e57ed4a3637190547ab90a7f6cac177bd57944b8106c290e9b3cd96245",
+  "imagen_origen": "paso 00 4b2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 4.5,
+    "fondo_cm": 0.2,
+    "alto_cm": 6.0
+  },
+  "medidas_fuente": "4b1 inv_obj_historia__obj-manzanas__9287ca.json",
+  "ids_capitulo": [
+    "obj-papel-numeros"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-papel-numeros"
+  ]
+}

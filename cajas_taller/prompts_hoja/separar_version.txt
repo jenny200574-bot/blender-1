@@ -1,0 +1,10 @@
+Reference image 1 is a crop of a character reference sheet showing ONE version of a character: «{PERSONAJE}» — version «{VERSION}».
+Reference image 2 is the whole sheet, for context only (colors, other angles of this same version).{OTRA_VISTA}
+Task: redraw ONLY this character in this version, alone, as one clean reference image for later shots.
+Copy exactly what the references show: face, hair, eyes, body proportions, clothing, armor, colors, materials, marks, accessories and the drawing style. Do not redesign, improve, add or remove anything.
+Framing: {ENCUADRE}
+Parts the sheet never shows ({FALTA_VER}) must stay out of the frame: do not invent them.
+Pose: neutral, facing the viewer, as close as possible to the pose in reference image 1.
+Background: plain neutral light gray. No text, no labels, no logos, no panel borders, no other characters, no background effects.
+What the sheet says about this version (only to check, never to add new things): {DESCRIPCION}
+Never changes across versions: {NUNCA_CAMBIA}

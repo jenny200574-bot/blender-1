@@ -1,0 +1,23 @@
+{
+  "id": "gdc-habitacion-nino",
+  "nombre": "Habitación del niño",
+  "clase": "escenario",
+  "subclase": "lugar",
+  "dueno": null,
+  "imagen_ref": null,
+  "objetos_lugar": [
+    "gdc-cama-nino",
+    "ventana con arcoíris",
+    "almohada",
+    "lámpara",
+    "armario"
+  ],
+  "nunca_cambia": "Habitación infantil: cama con almohada, ventana con arcoíris, lámpara, armario (guion T01E01, bloques 1-3).",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "sellado": false,
+  "version": 1,
+  "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO; falta imagen de referencia (no hay en material del cliente)",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar"
+}

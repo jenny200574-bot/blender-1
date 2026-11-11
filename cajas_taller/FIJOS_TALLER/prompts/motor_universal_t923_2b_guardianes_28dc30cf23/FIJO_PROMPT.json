@@ -1,0 +1,16 @@
+{
+ "paso": "motor_universal_t923_2b_guardianes_28dc30cf23",
+ "sha256": "28dc30cf2353fdd835b0831d4a7330289d7ced5f59e158f1d8cb529525f2b6e6",
+ "partes": {
+  "esquema": "f90bc349ce0e8acefe86cb01d4a5292d74c089ce09816d725cdf8551045110f6",
+  "json_out": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+  "max_out": "2570901c76653e578fecf066b5fc3fa1619f1a051e928e39797bab1b1342bf40",
+  "max_rondas": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+  "modelo": "fedcf0678c6ce4486fc33bd750a8ed628d0728711e97469ef5ff9b021a0c54aa",
+  "nivel": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+  "texto": "b3d96ae5ea04b908b494cd90173cb3c47e15b19a897ada4d80bb51ab4a804697"
+ },
+ "aprobado_por": "inmi (equipo técnico) — taller n8n",
+ "fecha": "2026-11-06T22:13:03",
+ "nota": "Taller n8n, cadena paso 00 v1 = prompts de la prueba del 28-oct (t372u), programados por orden de Ricardo t376u. Registro del taller, no el oficial."
+}

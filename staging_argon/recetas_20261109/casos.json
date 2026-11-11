@@ -1,0 +1,32 @@
+{
+ "G1_juguetes_textiles": {
+  "archivo": "PROMPT_RECETA_G1_juguetes_textiles.md",
+  "paso": "receta_objetos_faltantes_v1",
+  "fijo": "fijo_receta.json",
+  "cotizado": 0.6805
+ },
+ "G2_pared_ventana_luz": {
+  "archivo": "PROMPT_RECETA_G2_pared_ventana_luz.md",
+  "paso": "receta_objetos_faltantes_v1",
+  "fijo": "fijo_receta.json",
+  "cotizado": 0.6813
+ },
+ "G3_utiles_dibujo": {
+  "archivo": "PROMPT_RECETA_G3_utiles_dibujo.md",
+  "paso": "receta_objetos_faltantes_v1",
+  "fijo": "fijo_receta.json",
+  "cotizado": 0.6785
+ },
+ "G4_objetos_magicos": {
+  "archivo": "PROMPT_RECETA_G4_objetos_magicos.md",
+  "paso": "receta_objetos_faltantes_v1",
+  "fijo": "fijo_receta.json",
+  "cotizado": 0.6877
+ },
+ "piquito": {
+  "archivo": "PROMPT_INVESTIGACION_piquito_C_corpus_ADN_n8n.md",
+  "paso": "investigacion_personaje_v1_corpus",
+  "fijo": "fijo_piquito.json",
+  "cotizado": 0.7009
+ }
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-almohada",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "Cojín rectangular blando de una sola pieza con proporción aproximada 2:1. Silueta de esquinas redondeadas que sobresalen ligeramente y bordes largos con una sutil curvatura cóncava hacia el centro. Perfil lateral simétrico y biconvexo, con volumen central abombado que se estrecha en cuña hacia el borde exterior. Objeto de reposo libre diseñado para descansar sobre superficies planas (suelo, mobiliario) o sostenerse con las manos."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "Cuerpo principal de tejido textil liso con acabado totalmente mate y tacto suave (tipo algodón fino o microfibra), en color amarillo ocre pastel cálido. Material secundario: ribete perimetral del mismo acabado textil mate en color crema claro o blanco hueso. Carece de elementos metálicos o emisión lumínica."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "Borde exterior recorrido en su totalidad por un cordón o ribete cilíndrico grueso que marca la unión entre la cara frontal y trasera. Pliegues y arrugas de tensión cortos y suaves distribuidos a lo largo del perímetro, naciendo desde la costura hacia el centro, más marcados cerca de las cuatro esquinas. Superficies centrales (frontal y posterior) completamente limpias, sin botones, cremalleras ni patrones."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "Objeto estático e inactivo que mantiene su rigidez inflada al apoyarse sobre su borde inferior o sus caras anchas. En planos lejanos (LOD bajo), se eliminan las arrugas de tensión y el contraste del ribete crema, representándose como un bloque rectangular redondeado de color amarillo uniforme con sombreado volumétrico básico."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Cojín rectangular blando de proporción 2:1 y perfil lateral biconvexo abombado, confeccionado en tela lisa de acabado mate color amarillo pastel cálido. Cuenta con esquinas redondeadas, un ribete cilíndrico continuo de color crema claro en toda la costura del borde perimetral y sutiles arrugas de tensión junto a las uniones, manteniendo las caras centrales completamente lisas y limpias."
+    }
+  ],
+  "inyeccion": "Cojín rectangular blando de proporción 2:1 y perfil lateral biconvexo abombado, confeccionado en tela lisa de acabado mate color amarillo pastel cálido. Cuenta con esquinas redondeadas, un ribete cilíndrico continuo de color crema claro en toda la costura del borde perimetral y sutiles arrugas de tensión junto a las uniones, manteniendo las caras centrales completamente lisas y limpias.",
+  "texto": "1. Identificación y Geometría Base:\n\nCojín rectangular blando de una sola pieza con proporción aproximada 2:1. Silueta de esquinas redondeadas que sobresalen ligeramente y bordes largos con una sutil curvatura cóncava hacia el centro. Perfil lateral simétrico y biconvexo, con volumen central abombado que se estrecha en cuña hacia el borde exterior. Objeto de reposo libre diseñado para descansar sobre superficies planas (suelo, mobiliario) o sostenerse con las manos.\n\n2. Materiales y Paleta de Color:\n\nCuerpo principal de tejido textil liso con acabado totalmente mate y tacto suave (tipo algodón fino o microfibra), en color amarillo ocre pastel cálido. Material secundario: ribete perimetral del mismo acabado textil mate en color crema claro o blanco hueso. Carece de elementos metálicos o emisión lumínica.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\nBorde exterior recorrido en su totalidad por un cordón o ribete cilíndrico grueso que marca la unión entre la cara frontal y trasera. Pliegues y arrugas de tensión cortos y suaves distribuidos a lo largo del perímetro, naciendo desde la costura hacia el centro, más marcados cerca de las cuatro esquinas. Superficies centrales (frontal y posterior) completamente limpias, sin botones, cremalleras ni patrones.\n\n4. Comportamiento en Escena y Escala (LOD):\n\nObjeto estático e inactivo que mantiene su rigidez inflada al apoyarse sobre su borde inferior o sus caras anchas. En planos lejanos (LOD bajo), se eliminan las arrugas de tensión y el contraste del ribete crema, representándose como un bloque rectangular redondeado de color amarillo uniforme con sombreado volumétrico básico.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nCojín rectangular blando de proporción 2:1 y perfil lateral biconvexo abombado, confeccionado en tela lisa de acabado mate color amarillo pastel cálido. Cuenta con esquinas redondeadas, un ribete cilíndrico continuo de color crema claro en toda la costura del borde perimetral y sutiles arrugas de tensión junto a las uniones, manteniendo las caras centrales completamente lisas y limpias.",
+  "creado": "2026-11-06T04:03:13+01:00"
+}

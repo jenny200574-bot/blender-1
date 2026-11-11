@@ -1,0 +1,9 @@
+{
+ "PISTA": "2026-11-02 (Ricardo t306u/t308u): NO hay altura fija de los personajes: el tamaño lo define el DISEÑO de Blender de CADA escena (corrida del motor de Ako, 02N). Si una altura no está escrita, se mide en el diseño de ESA escena; si la escena no tiene diseño, se sigue sin altura (nota informativa, nunca error ni número inventado). Solo corridas REALES: las «-seco» usan un Argon falso con altura de relleno y NO son diseño.",
+ "ayudante_maniqui": "{raiz_ab}/programa/genesis_ayudante_v4.py",
+ "regex_altura_ref": "s\\s*=\\s*altura\\s*/\\s*([0-9]+(?:\\.[0-9]+)?)",
+ "propiedad_escala": "escala",
+ "cache": "medidas_disenos_blender.json",
+ "blender": ["{raiz_ab}/herramientas/blender-5.2.2-linux-x64/blender"],
+ "PISTA_blender": "Blender con el que se abren los diseños (el mismo del motor; uno más viejo puede no abrir un .blend nuevo). Si no está, se usa el Blender de las cajas."
+}

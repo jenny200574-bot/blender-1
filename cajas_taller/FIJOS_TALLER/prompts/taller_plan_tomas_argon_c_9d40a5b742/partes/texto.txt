@@ -1,0 +1,46 @@
+Eres ARGON C, revisor de calidad (cubo 12). Adjunto 1 = hoja de moldes Blender 2x4 (VERDAD de layout). Adjunto 2 = hoja pintada por Nano Banana Pro con el prompt de abajo. Compara viñeta por viñeta (8 viñetas, filas 1-2 lámina L13, filas 3-4 lámina L14).
+Para cada viñeta evalúa: orientación del cuerpo (espalda/frente/3-4/perfil/boca abajo/boca arriba) igual al molde; dirección de cabeza y mirada (¿mira a cámara cuando no debe?); escala y posición relativas al set; número de personas y de manos, brazos sueltos; pulsera (exactamente una, muñeca IZQUIERDA, derecha desnuda); identidad (Kael gordito, pelo corto negro, gafas; alien pelo plateado); colores de molde copiados.
+Luego investiga POR QUÉ se desvía (frases del prompt, ambigüedad del molde, orden de imágenes, aspecto) y propone cambios concretos al pedido/prompt/molde/orden de imágenes para el siguiente intento.
+PROMPT USADO:
+<<<
+Lock exact position, silhouette scale and limb angles to Image 1 (the layout mold) in every panel; DO NOT center or enlarge characters; DO NOT turn Kael to face the camera; ignore the mold colours and blocky shapes, they only mark body parts and position; distant figures stay small and distant exactly where they stand next to the set structures.
+
+STYLE: Anime Key Visual de Alta Gama estilo Light Novel / Gacha — soft cel-shading with gradients, fine lineart, cinematic lighting with bloom and particles. Midnight-blue night sky, cyan neon glow, bluish blacks. No rain, DRY concrete floor, no puddles.
+
+STORYBOARD SHEET: ONE SCENE (rooftop of a skyscraper at night), TAKES L13_1, L13_2, L13_3, L13_4, L14_1, L14_2, L14_3, L14_4.
+
+1. PAGE LAYOUT
+One image holding 8 separate 16:9 panels in 4 rows of 2 columns, same grid as Image 1. Thin uniform pure-white gutters and outer margin. Borderless panels. Reading order left to right, top to bottom. Pure artwork: no captions, balloons, numbers or text.
+
+2. CONSISTENCY: identical look in all 8 panels: same dry rooftop set, night lighting, palette and outfit; persistent damage on the AC unit.
+
+3. REFERENCE IMAGES
+Image 1: layout mold sheet from Blender (2 columns x 4 rows, same grid as the page) — PRIMARY structural reference; legend: grey = the set; magenta = Kael torso, orange = his legs, green = his LEFT arm, blue = his RIGHT arm, skin-coloured patch = where his FACE points, black = BACK of his head/hair, cyan ring = the bracelet on his LEFT wrist; small plain YELLOW figure = the alien. Never copy the blocky shapes or mold colours.
+Image 2: Kael approved BACK view: authority for his back, hoodie hood, short messy black hair from behind, wide chubby build, dark navy cargo pants and sneakers.
+Image 3: Kael approved FRONT sheet: authority for his round chubby face, short messy black hair with bangs, rectangular glasses, grey zip hoodie over dark navy t-shirt, dark cargo pants, and dark sneakers with white soles (ignore the backpack).
+Image 4: approved strip T06 of this scene: painting style and character look ONLY, never copy its layout or poses.
+
+4. CHARACTERS (identity locked to Images 2-3)
+Kael Cross: chubby 98 kg build (wide waist, round cheeks), short messy black hair, dark eyes, rectangular glasses, grey zip hoodie, dark navy t-shirt, dark cargo pants, dark sneakers with white soles (never barefoot, no backpack). Exactly ONE glowing cyan bracelet, always on his LEFT wrist (the GREEN arm in Image 1); his RIGHT arm (the BLUE arm in Image 1) is always bare.
+Only Kael appears in these 8 panels (the alien is off-screen to the right); exactly two hands per panel, both attached to Kael's arms, never a disembodied foreground arm.
+
+5. SET AND STORY STATE
+Dry grey concrete rooftop floor with grid lines, low parapet wall, orange metal frame holding a boxy orange AC unit with a red side panel, small round dish on the back wall. Camera, scale and screen direction come strictly from Image 1; NEVER mirror or flip any panel.
+
+6. STORY OF THE SCENE (context only)
+L13: IMI reports shield integrity at 17%. L14: Kael asks what good news would be; IMI answers 100%. Kael tries to laugh through the pain as he forces himself up on one knee looking right toward the advancing alien.
+
+7. PANELS
+Panel 1 (row 1 left): Low-angle floor-level medium view showing the dry concrete floor, the lower posts of the orange AC frame and red panel at upper-left, and the parapet behind. Kael lies prone face down horizontally across the middle ground just like Image 1, wearing dark sneakers on his feet at the left, torso in the center, and head on the right side facing right/down with his cheek on the floor looking toward his outstretched hand; his near right arm (blue in Image 1) is bent by his chest with a bare wrist, and his left arm (green in Image 1) extends to the right with the glowing cyan bracelet on his wrist.
+Panel 2 (row 1 right): Low-angle floor-level medium view as the camera arcs slightly right around the AC frame posts on the left. Kael lies prone in the exact horizontal pose of Image 1 with feet in sneakers on the left and head on the right facing right, clenching his teeth as the cyan bracelet on his extended left wrist (green arm in Image 1, on the right) flickers with weak sparks while his bent near right wrist (blue arm) is bare.
+Panel 3 (row 2 left): Low-angle floor-level medium view with the AC posts shifting slightly left in the background. Kael remains prone horizontally as in Image 1 with legs on the left and head on the right oriented right, parting his lips in pain to speak while looking at his outstretched left wrist (green arm on the right) with its glowing cyan bracelet; his near right hand by his ribs is bare.
+Panel 4 (row 2 right): Low-angle floor-level medium view with the AC posts on the left and parapet behind. Kael stays prone horizontally as in Image 1 with sneakers on the left and head on the right facing right, flexing his fingers on the concrete; the cyan bracelet glows on his extended left wrist on the right (green arm in Image 1) while his bent right wrist nearer the camera is bare.
+Panel 5 (row 3 left): Wider low-angle full shot showing the broad dry concrete floor in the foreground, the tall four-post orange AC structure on the left-center midground, and the parapet with round dish on the right. Kael is SMALL in the midground beside the bottom of the AC posts (matching the exact small scale of Image 1), lying prone with his legs in sneakers on the left, his bare right arm (blue in Image 1) on the near side, and his head and outstretched left arm (green in Image 1, with the cyan bracelet) pointing to the right, wincing as a laugh catches in his throat.
+Panel 6 (row 3 right): Same wide low-angle full shot with the large AC frame on the left-center. Remaining small in the midground next to the AC posts as in Image 1, Kael pushes against the floor to lift his chest in profile facing right (never facing the camera), gasping from rib pain; his near right arm (blue in Image 1) supports him on the left side with a bare wrist, and his left arm (green in Image 1) is planted to the right with the glowing cyan bracelet.
+Panel 7 (row 4 left): Same wide low-angle full shot dominated by the AC frame on the left-center. Keeping the small midground scale of Image 1 below the AC box, Kael pulls his legs in dark sneakers underneath him and raises his torso in three-quarter back/profile view facing right; the back of his black hair is on the left, his face points right, his bare right arm (blue in Image 1) hangs on the left side, and his left arm (green in Image 1) with the cyan bracelet is in front of him on the right.
+Panel 8 (row 4 right): Same wide low-angle full shot with the AC structure on the left-center and parapet on the right. Small in the midground beside the AC posts exactly as in Image 1, Kael kneels upright on his right knee in strict profile facing right, panting as he stares off-screen right; he wears dark sneakers, his bare right arm (blue in Image 1) hangs at his side on the left, and his left forearm (green in Image 1) rests across his raised left knee on the right showing the glowing cyan bracelet.
+
+8. EXCLUDE (word list)
+Avoid: blocky 3D dummy shapes, magenta torso, orange legs, green or blue skin, flat mannequin colours, barefoot, bare feet, backpack, thin Kael, Kael facing the camera in rows 3-4, giant foreground Kael in rows 3-4, disembodied foreground arm, two bracelets, bracelet on right wrist, extra limbs, extra people, alien visible in frame, rain, wet floor, puddles, violet sky, text, subtitles, speech bubbles, panel numbers, watermarks, mirrored panels.
+>>>
+RESPONDE SOLO JSON: {"vinetas":[{"n":1,"orientacion_ok":true,"mirada_ok":true,"escala_ok":true,"manos_ok":true,"pulsera_ok":true,"identidad_ok":true,"nota":""}],"pasa_hoja":false,"causas":[""],"cambios_propuestos":{"prompt":[""],"molde":[""],"orden_imagenes":[""],"otros":[""]}}

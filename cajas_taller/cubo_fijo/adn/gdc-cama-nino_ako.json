@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-cama-nino",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- **Objeto y silueta:** Cama individual estilizada tipo *cartoon* o juguete 3D. Silueta rectangular con cabecero alto arqueado y piecero bajo de arco suave.\n- **Proporciones y bordes:** Geometría robusta, gruesa (*chunky*) y redondeada con biseles amplios y suaves en todas las aristas. Pieza estática unificada (estructura, colchón y edredón integrados).\n- **Punto de anclaje:** Apoyo directo en el suelo mediante cuatro patas cortas y gruesas que son extensiones directas de los bordes del cabecero y piecero."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- **Chasis principal:** Acabado plástico mate o madera lacada lisa sin veta. Se presenta en dos variantes: marrón ocre cálido (versión color) o gris topo (versión neutra).\n- **Materiales secundarios:** Colchón blanco mate liso; panel interior del cabecero en color crema (o gris claro); edredón de aspecto textil acolchado mate en azul cielo con ribete crema (o gris medio con ribete gris claro).\n- **Emisión lumínica:** Ninguna."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- **Cabecero y piecero:** El cabecero tiene un panel frontal arqueado ligeramente hundido y la cara trasera completamente lisa. El piecero presenta un rebaje frontal similar.\n- **Ropa de cama:** El edredón cubre tres cuartas partes del colchón, dejando visible la zona de la almohada (sin almohada separada). Incluye un doblez grueso en el borde superior, un ribete perimetral continuo en relieve y un patrón de costuras hundidas formando una cuadrícula de acolchado regular."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- **Estado en escena:** Objeto fijo e inactivo; interactúa únicamente proyectando sombras suaves de oclusión ambiental sobre el suelo.\n- **Regla de distancia (Plano general):** A larga distancia, se eliminan las costuras de la cuadrícula del edredón y el ribete perimetral, simplificando el objeto a bloques de color planos (estructura arqueada, franja blanca superior y bloque azul/gris inferior)."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Cama individual 3D estilizada de proporciones gruesas y bordes muy redondeados, con cabecero alto arqueado, piecero bajo y cuatro patas cortas integradas. Acabado mate liso tipo arcilla o plástico suave, con estructura en marrón ocre cálido y panel frontal del cabecero en color crema. Incluye un colchón blanco simple cubierto en tres cuartas partes por un edredón acolchado azul cielo con patrón de cuadrícula hundida, un doblez superior grueso y ribete perimetral color crema."
+    }
+  ],
+  "inyeccion": "Cama individual 3D estilizada de proporciones gruesas y bordes muy redondeados, con cabecero alto arqueado, piecero bajo y cuatro patas cortas integradas. Acabado mate liso tipo arcilla o plástico suave, con estructura en marrón ocre cálido y panel frontal del cabecero en color crema. Incluye un colchón blanco simple cubierto en tres cuartas partes por un edredón acolchado azul cielo con patrón de cuadrícula hundida, un doblez superior grueso y ribete perimetral color crema.",
+  "texto": "1. Identificación y Geometría Base:\n\n- **Objeto y silueta:** Cama individual estilizada tipo *cartoon* o juguete 3D. Silueta rectangular con cabecero alto arqueado y piecero bajo de arco suave.\n- **Proporciones y bordes:** Geometría robusta, gruesa (*chunky*) y redondeada con biseles amplios y suaves en todas las aristas. Pieza estática unificada (estructura, colchón y edredón integrados).\n- **Punto de anclaje:** Apoyo directo en el suelo mediante cuatro patas cortas y gruesas que son extensiones directas de los bordes del cabecero y piecero.\n\n2. Materiales y Paleta de Color:\n\n- **Chasis principal:** Acabado plástico mate o madera lacada lisa sin veta. Se presenta en dos variantes: marrón ocre cálido (versión color) o gris topo (versión neutra).\n- **Materiales secundarios:** Colchón blanco mate liso; panel interior del cabecero en color crema (o gris claro); edredón de aspecto textil acolchado mate en azul cielo con ribete crema (o gris medio con ribete gris claro).\n- **Emisión lumínica:** Ninguna.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- **Cabecero y piecero:** El cabecero tiene un panel frontal arqueado ligeramente hundido y la cara trasera completamente lisa. El piecero presenta un rebaje frontal similar.\n- **Ropa de cama:** El edredón cubre tres cuartas partes del colchón, dejando visible la zona de la almohada (sin almohada separada). Incluye un doblez grueso en el borde superior, un ribete perimetral continuo en relieve y un patrón de costuras hundidas formando una cuadrícula de acolchado regular.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- **Estado en escena:** Objeto fijo e inactivo; interactúa únicamente proyectando sombras suaves de oclusión ambiental sobre el suelo.\n- **Regla de distancia (Plano general):** A larga distancia, se eliminan las costuras de la cuadrícula del edredón y el ribete perimetral, simplificando el objeto a bloques de color planos (estructura arqueada, franja blanca superior y bloque azul/gris inferior).\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nCama individual 3D estilizada de proporciones gruesas y bordes muy redondeados, con cabecero alto arqueado, piecero bajo y cuatro patas cortas integradas. Acabado mate liso tipo arcilla o plástico suave, con estructura en marrón ocre cálido y panel frontal del cabecero en color crema. Incluye un colchón blanco simple cubierto en tres cuartas partes por un edredón acolchado azul cielo con patrón de cuadrícula hundida, un doblez superior grueso y ribete perimetral color crema.",
+  "creado": "2026-11-06T04:05:10+01:00"
+}

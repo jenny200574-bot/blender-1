@@ -1,0 +1,216 @@
+{
+ "_nota": "FALSO — reparación 1 de PRUEBA: arregla v6 (eje) y v15 (30°), pero NO el «Sí.». US$0.",
+ "respuesta": {
+  "vinetas": [
+   {
+    "id": "v6",
+    "orden": 6,
+    "t": [
+     20,
+     24
+    ],
+    "beats_01": [
+     "a9",
+     "a10"
+    ],
+    "beat_narrativo": "n4",
+    "segmento_genero": 1,
+    "intencion_narrativa": "Corre hacia ella y cae",
+    "beats_visuales": [
+     "intento de correr",
+     "caída"
+    ],
+    "secuencia": "acción breve",
+    "director_imagen": {
+     "plano": "FS",
+     "angulo": "EYELEVEL",
+     "lente_mm": 28,
+     "perspectiva": "lateral",
+     "dsl_encuadre": "/FS /EYELEVEL /LENS28 /THREESHOT",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "medio",
+       "mira_a": "ch-la-novia-5cdf",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "lado": "R",
+       "profundidad": "medio",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-la-novia-5cdf",
+       "lado": "R",
+       "profundidad": "fondo",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "prisión transparente",
+       "lado": "R",
+       "profundidad": "fondo",
+       "estado": "comprimiéndose"
+      }
+     ],
+     "composicion": "tres capas de profundidad",
+     "continuidad_con_anterior": "él avanza hacia la derecha"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "desesperación",
+      "gestos": "brazos extendidos",
+      "postura": "corre y cae",
+      "movimiento": "cae de nuevo",
+      "intensidad": 5
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "0-4s: /HANDHELD /TRUCK:R:FAST",
+     "encuadre_inicio": "FS",
+     "encuadre_fin": "FS",
+     "velocidad": "FAST",
+     "motivacion": "acompaña la carrera"
+    },
+    "ritmo": {
+     "duracion_s": 4,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "la voz de ella"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-la-novia-5cdf",
+      "t": [
+       21.5,
+       23.5
+      ],
+      "texto": "¡No te acerques!"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "L2R",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "desesperación",
+     "por_que": "la carrera hacia la derecha mantiene la dirección de pantalla"
+    }
+   },
+   {
+    "id": "v15",
+    "orden": 15,
+    "t": [
+     70,
+     80
+    ],
+    "beats_01": [
+     "a26",
+     "a27"
+    ],
+    "beat_narrativo": "n8",
+    "segmento_genero": 3,
+    "intencion_narrativa": "Perderse a sí mismo",
+    "beats_visuales": [
+     "voz de Imi sobre su rostro"
+    ],
+    "secuencia": "primer plano sostenido",
+    "director_imagen": {
+     "plano": "CU",
+     "angulo": "HIGHANGLE",
+     "lente_mm": 85,
+     "perspectiva": "leve picado: lo aplasta la decisión",
+     "dsl_encuadre": "/CU /HIGHANGLE /LENS85 /SINGLE",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "C",
+       "profundidad": "frente",
+       "mira_a": "ch-imi-69f6",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [],
+     "composicion": "rostro centrado, ojos en el tercio superior",
+     "continuidad_con_anterior": "continúa el acercamiento"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "miedo a perderse",
+      "gestos": "ojos húmedos",
+      "postura": "de rodillas",
+      "movimiento": "quieto",
+      "intensidad": 4
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "CU",
+     "encuadre_fin": "CU",
+     "velocidad": "STEADY",
+     "motivacion": "quieto: el texto lo dice todo"
+    },
+    "ritmo": {
+     "duracion_s": 10,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "respuesta de Imi"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       70.3,
+       77.5
+      ],
+      "texto": "Tu cuerpo cambiará. Tu percepción cambiará. Nuestra conciencia estará conectada de una manera que todavía no comprendo."
+     },
+     {
+      "tipo": "dialogo",
+      "quien": "ch-protagonista-c71a",
+      "t": [
+       77.7,
+       79.8
+      ],
+      "texto": "¿Podría dejar de ser yo?"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "miedo íntimo",
+     "por_que": "drama: verdad en el rostro"
+    }
+   }
+  ]
+ }
+}

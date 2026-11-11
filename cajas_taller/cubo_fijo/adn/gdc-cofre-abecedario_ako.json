@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-cofre-abecedario",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Cofre del tesoro 3D estilizado de proporciones compactas, articulado en dos piezas: una base trapezoidal (más ancha arriba que abajo) y una tapa superior semicilíndrica abovedada. Presenta bordes gruesos y biseles sumamente redondeados de estética cartoon.\n- Diseñado para reposar fijo sobre el suelo mediante su base plana; incorpora dos asas laterales salientes para transporte manual a dos manos."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Chasis principal de metal dorado con acabado satinado suave. Combina paneles lisos en amarillo oro cálido con marcos estructurales en un tono oro viejo/bronce ligeramente más oscuro.\n- Cara interna revestida completamente con un forro textil acolchado en color azul marino profundo.\n- Emisión lumínica: Haz de luz mágica y partículas esféricas flotantes en color amarillo dorado brillante que emanan desde el interior."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Frente: Placa de cerradura rectangular central con perforación de llave clásica, flanqueada por dos pestillos verticales lisos que unen la tapa con la base.\n- Estructura general: Dos bandas verticales de refuerzo que recorren la tapa, el frente y la parte trasera, dividiendo el cuerpo en tres secciones.\n- Esquinas: Refuerzos angulares superpuestos en las esquinas inferiores y en las uniones de la tapa, decorados con pequeños remaches semiesféricos.\n- Laterales y trasera: Un asa tubular curva en forma de \"U\" centrada en cada cara lateral, y dos bisagras rectangulares traseras alineadas con las bandas verticales."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado inactivo/activo: Cerrado funciona como un contenedor opaco y sólido. Al abrirse (la tapa rota hacia atrás unos 60 grados), libera un resplandor dorado ascendente y chispas de luz que iluminan de forma cálida los bordes del propio cofre y al portador cercano.\n- Regla de distancia (Plano general): A lo lejos se suprimen los remaches, bisagras y el ojo de la cerradura; el objeto se simplifica a su silueta dorada abovedada con las dos franjas verticales marcadas y, si está abierto, el contraste del fondo azul oscuro emitiendo un destello amarillo."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Cofre del tesoro 3D estilizado de estética cartoon, compuesto por una base trapezoidal, tapa abovedada articulada y biseles gruesos redondeados. Fabricado íntegramente en metal dorado satinado a dos tonos, cuenta con dos bandas estructurales verticales, esquineras reforzadas con remaches circulares, asas laterales curvas en forma de U, cerradura central con ojo de llave flanqueada por dos pestillos frontales y dos bisagras traseras. El interior está forrado en tela acolchada color azul marino oscuro y, en estado abierto, libera desde adentro un resplandor mágico amarillo dorado cálido acompañado de partículas de luz flotantes."
+    }
+  ],
+  "inyeccion": "Cofre del tesoro 3D estilizado de estética cartoon, compuesto por una base trapezoidal, tapa abovedada articulada y biseles gruesos redondeados. Fabricado íntegramente en metal dorado satinado a dos tonos, cuenta con dos bandas estructurales verticales, esquineras reforzadas con remaches circulares, asas laterales curvas en forma de U, cerradura central con ojo de llave flanqueada por dos pestillos frontales y dos bisagras traseras. El interior está forrado en tela acolchada color azul marino oscuro y, en estado abierto, libera desde adentro un resplandor mágico amarillo dorado cálido acompañado de partículas de luz flotantes.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Cofre del tesoro 3D estilizado de proporciones compactas, articulado en dos piezas: una base trapezoidal (más ancha arriba que abajo) y una tapa superior semicilíndrica abovedada. Presenta bordes gruesos y biseles sumamente redondeados de estética cartoon.\n- Diseñado para reposar fijo sobre el suelo mediante su base plana; incorpora dos asas laterales salientes para transporte manual a dos manos.\n\n2. Materiales y Paleta de Color:\n\n- Chasis principal de metal dorado con acabado satinado suave. Combina paneles lisos en amarillo oro cálido con marcos estructurales en un tono oro viejo/bronce ligeramente más oscuro.\n- Cara interna revestida completamente con un forro textil acolchado en color azul marino profundo.\n- Emisión lumínica: Haz de luz mágica y partículas esféricas flotantes en color amarillo dorado brillante que emanan desde el interior.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Frente: Placa de cerradura rectangular central con perforación de llave clásica, flanqueada por dos pestillos verticales lisos que unen la tapa con la base.\n- Estructura general: Dos bandas verticales de refuerzo que recorren la tapa, el frente y la parte trasera, dividiendo el cuerpo en tres secciones.\n- Esquinas: Refuerzos angulares superpuestos en las esquinas inferiores y en las uniones de la tapa, decorados con pequeños remaches semiesféricos.\n- Laterales y trasera: Un asa tubular curva en forma de \"U\" centrada en cada cara lateral, y dos bisagras rectangulares traseras alineadas con las bandas verticales.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado inactivo/activo: Cerrado funciona como un contenedor opaco y sólido. Al abrirse (la tapa rota hacia atrás unos 60 grados), libera un resplandor dorado ascendente y chispas de luz que iluminan de forma cálida los bordes del propio cofre y al portador cercano.\n- Regla de distancia (Plano general): A lo lejos se suprimen los remaches, bisagras y el ojo de la cerradura; el objeto se simplifica a su silueta dorada abovedada con las dos franjas verticales marcadas y, si está abierto, el contraste del fondo azul oscuro emitiendo un destello amarillo.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nCofre del tesoro 3D estilizado de estética cartoon, compuesto por una base trapezoidal, tapa abovedada articulada y biseles gruesos redondeados. Fabricado íntegramente en metal dorado satinado a dos tonos, cuenta con dos bandas estructurales verticales, esquineras reforzadas con remaches circulares, asas laterales curvas en forma de U, cerradura central con ojo de llave flanqueada por dos pestillos frontales y dos bisagras traseras. El interior está forrado en tela acolchada color azul marino oscuro y, en estado abierto, libera desde adentro un resplandor mágico amarillo dorado cálido acompañado de partículas de luz flotantes.",
+  "creado": "2026-11-06T04:03:14+01:00"
+}

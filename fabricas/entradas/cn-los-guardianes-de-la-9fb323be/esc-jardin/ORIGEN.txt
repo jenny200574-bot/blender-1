@@ -1,0 +1,1 @@
+Copia (solo lectura de n8n) de /opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/respuestas/inv_escenarios__esc-jardin.json y ramas/4a2_entrada_blender.json, 10-nov-2026 lote Guardianes

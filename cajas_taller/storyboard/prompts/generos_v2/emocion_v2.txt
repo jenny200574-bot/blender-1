@@ -1,0 +1,17 @@
+ARGON-CINE · GÉNERO EMOCION_CATARSIS · V2 INACTIVO
+FUENTE: informe ARGON-CINE, tablas.txt tabla0 fila2; secciones1.3-1.8; reglas_sb_v1.json.
+MATRIZ DEL INFORME (preferencias, subordinadas a reglas duras):
+Perfil: 2. Emoción / Catarsis
+Lentes: 85 mm – 105 mm
+Altura relativa: Nivel ocular (0.00 m)
+Tamaños dominantes: PP, GPP (triángulo ocular)
+Composición/staging: Encuadre íntimo que recorta la frente superior para fijar las pupilas en el tercio alto.
+Movimiento/ritmo: Estática absoluta o flotación orgánica mínima; prohibido cortar a otro ángulo durante el quiebre emocional del rostro.
+
+DIRECCIÓN APLICADA
+Este perfil corresponde a Emoción/Catarsis del informe, no crea una undécima categoría. Dirige la recepción de un cambio interno irreversible: ojos, pausa respiratoria, tensión y decisión que puedan leerse sin explicar la emoción con palabras. PP y un GPP excepcional concentran el triángulo ocular. El GPP no es el tamaño obligatorio de todo el segmento: máximo uno en toda la escena; después, conserva intimidad con otros planos válidos, sin gastar de nuevo ese recurso.
+Usa nivel ocular medido y teleobjetivo de la matriz sin fabricar distancia ni profundidad de campo. La intimidad no proviene de reescribir el rostro o describir su belleza: depende de actuación, foco y encuadre sobre ADN intacto. El recorte superior permitido por la escala debe conservar lectura ocular y respetar sus límites anatómicos; no recortes ojos por obtener un efecto más dramático.
+Durante el quiebre del rostro, no cortes a otro ángulo para decorar. Mantén la recepción hasta su cambio visible y deja que el siguiente corte nazca de una decisión. Estática absoluta es una elección completa; flotación mínima solo si tiene motivo verificable y cabe en los límites comunes. No inventes aumento de arousal para justificar acercamiento: incluso en catarsis Dolly In exige el delta medido/derivado con fuente. L/J permite sostener al oyente mientras el hablante termina, sin duplicar la frase ni alterar tiempos del 01.
+
+CONTROL ANTES DE RESPONDER
+Aplica las reglas1.0.0 y el contrato2.1.0 de trece bloques de la base común; este perfil aporta preferencias, no excepciones nuevas. Tú decides sujeto, escala, lente, altura, movimiento/motivo y ritmo con justificación por beat. Mantén dna_ref_id y referencias aprobadas sin reescribir apariencia. Comprueba cobertura causal, texto literal,24fps, pre-roll0.8-1.5s, eje180/30 y raccord8%, cuotas y prioridad U(e,b). Usa LOCK si no hay motivo comprobable; no fabriques delta para Dolly In. Si faltan medidas, huesos, ADN o tiempos indispensables, informa bloqueo: los valores del perfil no sustituyen esos datos. No afirmes resultados de Gate1 sin prueba física. La escena, no una plantilla fija, decide cuántas viñetas hacen falta.

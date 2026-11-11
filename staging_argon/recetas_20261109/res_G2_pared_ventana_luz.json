@@ -1,0 +1,11 @@
+{
+  "caso": "G2_pared_ventana_luz",
+  "enviado": true,
+  "id": "receta-G2_pared_ventana_luz-20261109-191812",
+  "est": 0.6813,
+  "usd_real": 0.4131,
+  "fin": "FinishReason.STOP",
+  "tokens_entrada": "[REDACTED]",
+  "tokens_salida": "[REDACTED]",
+  "salida": "/opt/myia-staging-arreglos-20261026/recetas_20261109/respuestas/G2_pared_ventana_luz.json"
+}

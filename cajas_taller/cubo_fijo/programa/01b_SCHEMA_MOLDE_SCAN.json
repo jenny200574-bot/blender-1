@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "myia://molde_scan/v1",
+  "title": "molde_scan_v1 — única fuente de VARIABLE geométrica para T1",
+  "type": "object",
+  "required": ["toma_id","molde","fuente_precision","resolucion_px","entidades","relaciones","sha256_molde"],
+  "properties": {
+    "toma_id": {"type":"string"},
+    "molde": {"type":"object","properties":{"png":{"type":"string"},"id_mask":{"type":["string","null"],"description":"pase Object Index/Cryptomatte (preferido)"},"depth_exr":{"type":["string","null"]},"blend_json":{"type":["string","null"],"description":"export bbox/cámara vía script Blender o 02N"}}},
+    "sha256_molde": {"type":"string"},
+    "fuente_precision": {"enum":["blender_bbox_metros","id_mask_px","color_mask_px","manual_provisional"]},
+    "resolucion_px": {"type":"array","items":{"type":"integer"},"minItems":2,"maxItems":2},
+    "camara": {"type":"object","properties":{"focal_mm":{"type":["number","null"]},"altura_m":{"type":["number","null"]},"pitch_deg":{"type":["number","null"]},"horizonte_pct_y":{"type":["number","null"]}}},
+    "entidades": {"type":"array","items":{"type":"object","required":["adn_id","adn_version","bbox_pct","cx_pct","cy_pct","altura_cuadro_pct","lado_visible","area_visible_pct"],"properties":{
+      "adn_id":{"type":"string"},"adn_version":{"type":"string"},
+      "bbox_pct":{"type":"array","items":{"type":"number"},"description":"[x0,y0,x1,y1] en % del cuadro, origen arriba-izq"},
+      "cx_pct":{"type":"number"},"cy_pct":{"type":"number"},"altura_cuadro_pct":{"type":"number"},
+      "pies_y_pct":{"type":["number","null"]},
+      "distancia_cam_m":{"type":["number","null"]},
+      "yaw_deg":{"type":["number","null"],"description":"0=mira a cámara, 180=espalda, +90=mira a la derecha del cuadro"},
+      "pitch_deg":{"type":["number","null"]},
+      "lado_visible":{"enum":["frente","espalda","perfil_izq","perfil_der","tres_cuartos_izq","tres_cuartos_der"]},
+      "vista_hoja":{"type":"string","description":"qué hoja de variantes_vista mandar (derivada de yaw)"},
+      "area_visible_pct":{"type":"number","description":"% de su silueta no ocluida"},
+      "partes":{"type":"array","items":{"type":"object","properties":{"parte":{"type":"string"},"x_pct":{"type":"number"},"y_pct":{"type":"number"},"visible":{"type":"boolean"},"pose_rel":{"type":"string","description":"vocabulario cerrado: inclinado_adelante_Ndeg, brazo_apoyo, brazo_extendido, sentado, de_pie, rodilla_suelo..."}}}},
+      "confianza":{"type":"number"}}}},
+    "relaciones": {"type":"array","items":{"type":"object","required":["a","rel","b"],"properties":{"a":{"type":"string"},"rel":{"enum":["delante_de","detras_de","dentro_de","sobre","tapa","sostiene","lleva_en","izq_de","der_de","mira_a"]},"b":{"type":"string"},"pct":{"type":["number","null"],"description":"p.ej. % de b tapado por a"}}}},
+    "gates": {"type":"object","additionalProperties":{"enum":["OK","FAIL","GAP"]}}
+  },
+  "examples": [{
+    "toma_id":"T1_esc11","molde":{"png":"molde_T1_esc11_con_personajes.png","id_mask":null,"depth_exr":null,"blend_json":null},
+    "sha256_molde":"<calcular>","fuente_precision":"manual_provisional","resolucion_px":[960,540],
+    "camara":{"focal_mm":null,"altura_m":null,"pitch_deg":null,"horizonte_pct_y":null},
+    "entidades":[
+      {"adn_id":"pj_kael","adn_version":"v3","bbox_pct":[0,0,0,0],"cx_pct":0,"cy_pct":0,"altura_cuadro_pct":0,"pies_y_pct":null,"distancia_cam_m":null,"yaw_deg":null,"pitch_deg":null,"lado_visible":"tres_cuartos_izq","vista_hoja":"hojas_multivista_20261102/kael_perfil_3_4.png","area_visible_pct":0,
+       "partes":[{"parte":"torso","x_pct":0,"y_pct":0,"visible":true,"pose_rel":"inclinado_adelante_20deg"},{"parte":"muñeca_IZQ","x_pct":0,"y_pct":0,"visible":true,"pose_rel":"brazo_apoyo"}],"confianza":0},
+      {"adn_id":"obj_manilla","adn_version":"v3","bbox_pct":[0,0,0,0],"cx_pct":0,"cy_pct":0,"altura_cuadro_pct":0,"lado_visible":"frente","area_visible_pct":0,"confianza":0},
+      {"adn_id":"obj_campo_fuerza","adn_version":"v3","bbox_pct":[0,0,0,0],"cx_pct":0,"cy_pct":0,"altura_cuadro_pct":0,"lado_visible":"frente","area_visible_pct":0,"confianza":0}],
+    "relaciones":[{"a":"obj_manilla","rel":"lleva_en","b":"pj_kael.muñeca_IZQ","pct":null},{"a":"pj_novia","rel":"dentro_de","b":"obj_campo_fuerza","pct":null},{"a":"pj_alien","rel":"tapa","b":"obj_campo_fuerza","pct":null}],
+    "gates":{"G-SUMA":"GAP","G-ADN-SELLADO":"GAP","G-LADO-HOJA":"GAP"},
+    "_nota":"Valores en 0 = por medir. El png actual del molde (960×540) es oscuro con entorno incluido: por color no se separa bien. Pedir a Blender el pase Object Index o Cryptomatte."
+  }]
+}

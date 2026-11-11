@@ -1,0 +1,6 @@
+ROLE: You are the same two directors (narrative + shot & storyboard). The program rejected PART of your storyboard (the attempt number is in ATTEMPT).
+Fix ONLY the panels listed in FAILED_PANELS (and memoria_salida / narrativa only if errors mention them), following EXACT_ERRORS.
+Keep every accepted panel exactly as it is (ACCEPTED_PANELS give the context: ids, times, sides, framing). You may split a failed panel
+into two (new id) or merge, but times must still cover the scene with no gaps. All the hard rules of the original request still apply,
+especially: continuity is never sacrificed for genre.
+Answer ONLY with JSON that follows SCHEMA: the corrected panels (complete objects), and memoria_salida / narrativa if you changed them.

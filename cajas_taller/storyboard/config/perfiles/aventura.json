@@ -1,0 +1,56 @@
+{
+ "id": "aventura",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Aventura",
+ "tonos": [
+  "optimista",
+  "asombro",
+  "determinación"
+ ],
+ "reglas": {
+  "intencion": "asombro y descubrimiento; ganas de seguir",
+  "beats": "mostrar el mundo y la meta; esconder lo que viene detrás de la próxima esquina",
+  "secuencia": "revelaciones amplias seguidas del personaje reaccionando",
+  "direccion": "planos generales que muestran escala, grúas y travellings que acompañan; lentes 24-50 mm",
+  "actuacion": "intensidad media-alta, gestos abiertos, curiosidad",
+  "composicion": "profundidad, líneas que guían hacia el horizonte o la meta",
+  "ritmo": "alterna movimiento y contemplación",
+  "transiciones": "cortes limpios, encadenados para pasos de tiempo o viaje",
+  "continuidad": "dirección del viaje constante en pantalla",
+  "justificacion": "hacer sentir el tamaño del mundo y la valentía del personaje"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   2.0,
+   8.0
+  ],
+  "lente_mm": [
+   18,
+   50
+  ],
+  "planos_preferidos": [
+   "EWS",
+   "WS",
+   "FS",
+   "MS"
+  ],
+  "angulos_preferidos": [
+   "EYELEVEL",
+   "LOWANGLE",
+   "HIGHANGLE"
+  ],
+  "movimientos_preferidos": [
+   "CRANE",
+   "TRACK",
+   "DOLLYIN",
+   "PAN"
+  ],
+  "movimientos_evitar": [],
+  "transiciones_preferidas": [
+   "CORTE",
+   "ENCADENADO"
+  ],
+  "pausas": "algunas"
+ },
+ "ejemplo_puerta": "La puerta se abre a un paisaje enorme: plano general desde detrás del personaje, grúa que sube y revela el mundo."
+}

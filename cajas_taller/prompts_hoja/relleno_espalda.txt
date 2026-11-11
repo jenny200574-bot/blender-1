@@ -1,0 +1,7 @@
+Make ONE standard character reference image: the FULL-BODY BACK view of the same SECONDARY (filler) character.
+Character: «{PERSONAJE}». Reference image 1 is the clean FULL-BODY FRONT view of this same character: the character must match it exactly (same person, body, hair, clothes, colors, materials and drawing style). Complete the back consistently with the front: continue the same outfit around the body. Never add new items, logos, emblems, weapons or accessories.
+View: seen from directly behind, back to the viewer, standing upright in a neutral relaxed pose, arms slightly away from the body, both feet flat on the ground, the whole body visible.
+Framing (always the same as the front view): {ENCUADRE}.
+Background: {FONDO}. No text, no labels, no logos, no panel borders, no other characters, no effects.
+Fixed channel style (same as the front view). Style:
+{ESTILO}

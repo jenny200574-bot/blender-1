@@ -1,0 +1,16 @@
+{
+ "paso": "sello_adn_estilo_592bff7fbd",
+ "sha256": "592bff7fbdf582d64c6abffa359f60193c982ef9bda31b0448f0317356753b11",
+ "partes": {
+  "esquema": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "json_out": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+  "max_out": "864a936a35324151e1c79c44a2e903ff2497f52fa892282d340585f493c637f0",
+  "max_rondas": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+  "modelo": "fedcf0678c6ce4486fc33bd750a8ed628d0728711e97469ef5ff9b021a0c54aa",
+  "nivel": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+  "texto": "96cf95c39af1e97043596f992475c75cf35d324ec6a2a5c5500f020dd466b317"
+ },
+ "aprobado_por": "inmi (equipo técnico) — taller n8n",
+ "fecha": "2026-11-02T23:12:33",
+ "nota": "Taller n8n, cadena paso 00 v1 = prompts de la prueba del 28-oct (t372u), programados por orden de Ricardo t376u. Registro del taller, no el oficial."
+}

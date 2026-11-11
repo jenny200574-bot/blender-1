@@ -1,0 +1,348 @@
+{
+ "id": "cortinas_ventana",
+ "nombre_generico": "Par de cortinas de tela suave recogidas a los lados de la ventana",
+ "nombre_en": "curtains",
+ "categoria": "textiles",
+ "medidas_tipicas": {
+  "ancho_m": 1.9,
+  "fondo_m": 0.12,
+  "alto_m": 1.65
+ },
+ "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  1.9,
+  0.12,
+  1.65
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": "cuelga / pared",
+ "base_m": null,
+ "apoyo": "pared",
+ "conjunto": false,
+ "piezas": 13,
+ "tipos_de_pieza": [
+  "caja",
+  "cilindro",
+  "esfera"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "cenefa_superior",
+   "color_guia_rgb": [
+    1.0,
+    0.886,
+    0.541
+   ],
+   "centro_m": [
+    0.0,
+    0.01,
+    1.59
+   ],
+   "tam_m": [
+    1.9,
+    0.1,
+    0.12
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "cortina_izq_superior",
+   "color_guia_rgb": [
+    1.0,
+    0.886,
+    0.541
+   ],
+   "centro_m": [
+    -0.73,
+    0.01,
+    1.075
+   ],
+   "tam_m": [
+    0.44,
+    0.1,
+    0.95
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "cortina_izq_inferior",
+   "color_guia_rgb": [
+    1.0,
+    0.886,
+    0.541
+   ],
+   "centro_m": [
+    -0.76,
+    0.01,
+    0.31
+   ],
+   "tam_m": [
+    0.38,
+    0.1,
+    0.62
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "pliegue_izq_ext",
+   "color_guia_rgb": [
+    1.0,
+    0.886,
+    0.541
+   ],
+   "centro_m": [
+    -0.86,
+    0.0,
+    0.825
+   ],
+   "radio_m": 0.06,
+   "alto_m": 1.65
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "pliegue_izq_int",
+   "color_guia_rgb": [
+    1.0,
+    0.886,
+    0.541
+   ],
+   "centro_m": [
+    -0.68,
+    0.0,
+    0.825
+   ],
+   "radio_m": 0.055,
+   "alto_m": 1.65
+  },
+  {
+   "tipo": "caja",
+   "nombre": "lazo_izq",
+   "color_guia_rgb": [
+    0.961,
+    0.902,
+    0.827
+   ],
+   "centro_m": [
+    -0.75,
+    0.0,
+    0.61
+   ],
+   "tam_m": [
+    0.38,
+    0.12,
+    0.07
+   ]
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "nudo_lazo_izq",
+   "color_guia_rgb": [
+    0.961,
+    0.902,
+    0.827
+   ],
+   "centro_m": [
+    -0.56,
+    -0.02,
+    0.61
+   ],
+   "radio_m": 0.04
+  },
+  {
+   "tipo": "caja",
+   "nombre": "cortina_der_superior",
+   "color_guia_rgb": [
+    1.0,
+    0.886,
+    0.541
+   ],
+   "centro_m": [
+    0.73,
+    0.01,
+    1.075
+   ],
+   "tam_m": [
+    0.44,
+    0.1,
+    0.95
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "cortina_der_inferior",
+   "color_guia_rgb": [
+    1.0,
+    0.886,
+    0.541
+   ],
+   "centro_m": [
+    0.76,
+    0.01,
+    0.31
+   ],
+   "tam_m": [
+    0.38,
+    0.1,
+    0.62
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "pliegue_der_ext",
+   "color_guia_rgb": [
+    1.0,
+    0.886,
+    0.541
+   ],
+   "centro_m": [
+    0.86,
+    0.0,
+    0.825
+   ],
+   "radio_m": 0.06,
+   "alto_m": 1.65
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "pliegue_der_int",
+   "color_guia_rgb": [
+    1.0,
+    0.886,
+    0.541
+   ],
+   "centro_m": [
+    0.68,
+    0.0,
+    0.825
+   ],
+   "radio_m": 0.055,
+   "alto_m": 1.65
+  },
+  {
+   "tipo": "caja",
+   "nombre": "lazo_der",
+   "color_guia_rgb": [
+    0.961,
+    0.902,
+    0.827
+   ],
+   "centro_m": [
+    0.75,
+    0.0,
+    0.61
+   ],
+   "tam_m": [
+    0.38,
+    0.12,
+    0.07
+   ]
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "nudo_lazo_der",
+   "color_guia_rgb": [
+    0.961,
+    0.902,
+    0.827
+   ],
+   "centro_m": [
+    0.56,
+    -0.02,
+    0.61
+   ],
+   "radio_m": 0.04
+  }
+ ],
+ "caja_m": {
+  "ancho": 1.9,
+  "fondo": 0.12,
+  "alto": 1.65
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   1.65
+  ],
+  "frente": [
+   0.0,
+   -0.06,
+   0.825
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G2_pared_ventana_luz",
+  "objeto_id_origen": "amb-esc-habitacion-cortinas-ventana",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+  "costo_usd_grupo": 0.4131,
+  "costo_usd_repartido": 0.059014,
+  "citas": [
+   {
+    "fuente_id": "F01",
+    "clave": "tipologia.cortina_ventana",
+    "cita": "Curtains are often hung on the inside of a building's windows to block the passage of light."
+   },
+   {
+    "fuente_id": "F01",
+    "clave": "tipologia.lazos_recogidos",
+    "cita": "They are held out of the way of the window by means of curtain tie-backs."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "El corpus F01 no especifica proporciones numéricas de ancho de caída ni altura exacta del lazo sujetador; se deducen de caja_m."
+  ],
+  "info": {
+   "partes": 13,
+   "piezas": 13,
+   "bbox_m": [
+    1.9,
+    0.12,
+    1.65
+   ],
+   "grupos": 1,
+   "datos": 9,
+   "con_fuente": 2
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-cortinas-ventana"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

@@ -1,0 +1,153 @@
+{
+ "a_bolsa": {
+  "intentos": 50,
+  "reservas_ok": 10,
+  "max_comprometido": 1.0,
+  "tope": 1.0,
+  "PASA": true
+ },
+ "b_paralelo": {
+  "tareas": 9,
+  "seg_cada_una": 2,
+  "en_fila_s": 18,
+  "real_s": 6.0,
+  "pico_a_la_vez": 3,
+  "PASA": true
+ },
+ "c_ranura_entre_procesos": {
+  "tareas": 8,
+  "en_fila_s": 16,
+  "real_s": 6.1,
+  "pico_a_la_vez": 3,
+  "PASA": true
+ },
+ "d_ledger": {
+  "sin_candado": {
+   "llamadas": 24,
+   "filas_en_ledger": 0,
+   "filas_ok": 0,
+   "fila_no_escrita_antes": 5,
+   "errores": [
+    "KeyError: 'id'"
+   ]
+  },
+  "con_candado": {
+   "llamadas": 24,
+   "filas_en_ledger": 24,
+   "filas_ok": 24,
+   "fila_no_escrita_antes": 0,
+   "errores": []
+  },
+  "PASA": true
+ },
+ "e_timeout": {
+  "tope_s": 2,
+  "corto_a_los_s": 2.9,
+  "excepcion": "LlamadaVencida",
+  "es_timeout": true,
+  "fila_ledger": "error_posible_cobro",
+  "tope_config_texto_s": 360.0,
+  "tope_base_s": 600.0,
+  "tope_objetos_s": 720.0,
+  "tope_4b1_s": 360.0,
+  "PASA": true
+ },
+ "f_prechequeo": {
+  "esquemas_reales_revisados": 113,
+  "reales_bloqueados": [
+   [
+    "taller00_v1_4a1_o61",
+    [
+     "esquema con 208 propiedades > 205 (Vertex responde 400)"
+    ]
+   ],
+   [
+    "taller00_v1_4a1_o61c",
+    [
+     "esquema con 217 propiedades > 205 (Vertex responde 400)"
+    ]
+   ],
+   [
+    "taller00_v1_4a1_o72_m24",
+    [
+     "esquema con 217 propiedades > 205 (Vertex responde 400)"
+    ]
+   ]
+  ],
+  "sintetico_250_props": [
+   "esquema con 250 propiedades > 205 (Vertex responde 400)"
+  ],
+  "prompt_1M_chars": [
+   "prompt de 1000001 caracteres > 900000"
+  ],
+  "nota": "solo deben bloquearse los esquemas 4a1 COMPLETOS (o61/o72, 208-217 props) que Vertex rechazó con 400; hoy se mandan partidos A/B",
+  "PASA": true
+ },
+ "g_compuerta_entre_procesos": {
+  "resultados": [
+   null,
+   "tope total 1.0: gastado 0.0 + reservado por otras corridas en curso 0.6 + este 0.6 lo pasa. No se llamó a nada."
+  ],
+  "pasaron": 1,
+  "PASA": true
+ },
+ "h_par_inv": {
+  "pedidos": 5,
+  "en_fila_s": 10,
+  "real_s": 4.0,
+  "estados": [
+   "ok",
+   "ok",
+   "ok",
+   "ok",
+   "ok"
+  ],
+  "limite_por_pedido": [
+   0.19,
+   0.24,
+   0.266,
+   0.316
+  ],
+  "max_comprometido_usd": 1.0,
+  "ok_usd": 1.0,
+  "si_falla_uno_en_fila": [
+   "no_llamado",
+   "no_llamado",
+   "no_llamado",
+   "no_llamado",
+   "no_llamado"
+  ],
+  "si_pasa_lo_aprobado": [
+   "no_llamado",
+   "no_llamado",
+   "no_llamado",
+   "no_llamado"
+  ],
+  "PASA": true
+ },
+ "i_blender": {
+  "escenarios": 3,
+  "en_fila_s": 6,
+  "real_s": 4.2,
+  "a_la_vez": 2,
+  "hilos_por_blender": 2,
+  "ok": true,
+  "PASA": true
+ },
+ "j_juntos": {
+  "ok_cero": {
+   "ok": true,
+   "saltadas": [
+    "investigar_objetos_historia",
+    "investigar_objetos_lugar"
+   ],
+   "cajas": []
+  },
+  "no_permitida": "caja no permitida en juntos: base",
+  "PASA": true
+ },
+ "TODAS_PASAN": true,
+ "carpeta_prueba": "/tmp/t358_58daqng4",
+ "usd": 0,
+ "hora": "2026-11-03T17:28:41+0100"
+}

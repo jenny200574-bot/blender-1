@@ -1,0 +1,39 @@
+{
+ "_nota": "FALSO — memoria de ENTRADA de prueba (la escena 8 aún no tiene storyboard). Armada a mano desde los hechos del 00 de la escena 8 («escudo al 17%», «de rodillas») y las fichas. US$0.",
+ "memoria": {
+  "personajes": {
+   "ch-protagonista-c71a": {
+    "vestuario": [
+     "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra"
+    ],
+    "danos": [
+     "golpeado y sin fuerzas tras el ataque de la escena 8"
+    ],
+    "objetos": [
+     "pulsera IMI en la muñeca",
+     "escudo de la pulsera al 17%"
+    ],
+    "posicion": {
+     "lado": "L",
+     "zona": "centro de la azotea, de rodillas"
+    },
+    "arco_emocional": "derrotado"
+   },
+   "ch-el-aliengena-73a9": {
+    "vestuario": [
+     "armadura negra biomecánica con líneas azules"
+    ],
+    "danos": [],
+    "objetos": [],
+    "posicion": {
+     "lado": "R",
+     "zona": "borde de la azotea"
+    },
+    "arco_emocional": "dominante"
+   }
+  },
+  "direccion_pantalla": "L2R",
+  "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+  "objetos_escena": []
+ }
+}

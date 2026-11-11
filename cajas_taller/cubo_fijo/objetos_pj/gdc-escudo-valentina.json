@@ -1,0 +1,39 @@
+{
+  "id": "gdc-escudo-valentina",
+  "nombre": "Escudo de Valentina",
+  "clase": "objeto",
+  "subclase": "portado",
+  "dueno": "gdc-valentina",
+  "portador": "Valentina",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-escudo-de-valentina.png",
+  "nunca_cambia": "Escudo morado redondeado con un corazón rojo en el centro; Valentina lo lleva en el brazo.",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "sellado": true,
+  "version": 2,
+  "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+  "imagen_sha256": "1ae2a861723bae43c8afc025c5a8c21ed932684c7670a077af9b054db4e1c11a",
+  "imagen_origen": "paso 00 4b2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 26,
+    "fondo_cm": 6,
+    "alto_cm": 28
+  },
+  "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+  "ids_capitulo": [
+    "obj-escudo-de-valentina"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-escudo-de-valentina"
+  ],
+  "imagen_ref_anterior": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/valentina/referencia-cliente/refs/85876d21180a93bf.jpg",
+  "frase_sello": "Escudo pequeño portátil con silueta de corazón redondeado y perfil convexo, fabricado en material satinado color magenta y enmarcado por un grueso borde metálico dorado mate. En el centro frontal destaca una gema translúcida rosa abombada en forma de corazón con su propio bisel dorado, la cual puede permanecer apagada, brillar con luz azul cian intensa o emitir un resplandor rojo cálido con un halo concéntrico. El reverso es plano e incluye dos correas verticales de agarre color magenta fijadas con cuatro presillas rectangulares doradas.",
+  "actualizado": "2026-11-06T03:44:44+01:00",
+  "origen": "sellar"
+}

@@ -1,0 +1,70 @@
+DIR motor_cine_v1/tmp
+DIR motor_cine_v1/diagnosticos
+DIR motor_cine_v1/corridas
+FILE binary_left_out motor_cine_v1/py213/rvo2.cpython-312-x86_64-linux-gnu.so
+DIR motor_cine_v1/py213/pathfinding/core/__pycache__
+DIR motor_cine_v1/py213/pathfinding/finder/__pycache__
+DIR motor_cine_v1/py213/pathfinding/__pycache__
+DIR motor_cine_v1/respaldos
+DIR motor_cine_v1/secretos
+DIR motor_cine_v1/motor/sb3d/__pycache__
+DIR motor_cine_v1/motor/gpu/__pycache__
+DIR motor_cine_v1/motor/__pycache__
+FILE binary_left_out motor_cine_v1/motor/assets/python-pathfinding.tgz
+DIR motor_cine_v1/motor/assets/addons/animation_retargeting/__pycache__
+FILE binary_left_out motor_cine_v1/motor/assets/anyshot.tgz
+FILE binary_left_out motor_cine_v1/motor/assets/camera_shakify-0.4.0.zip
+FILE binary_or_media motor_cine_v1/motor/assets/mocap/cmu/02_01.bvh
+FILE binary_or_media motor_cine_v1/motor/assets/mocap/cmu/13_01.bvh
+FILE binary_or_media motor_cine_v1/motor/assets/mocap/cmu/16_17.bvh
+FILE binary_or_media motor_cine_v1/motor/assets/mocap/cmu/16_19.bvh
+FILE binary_or_media motor_cine_v1/motor/assets/mocap/cmu/07_01.bvh
+FILE binary_or_media motor_cine_v1/motor/assets/mocap/cmu/02_03.bvh
+FILE binary_or_media motor_cine_v1/motor/assets/mocap/100STYLE/Tiptoe/Tiptoe_FW.bvh
+FILE binary_or_media motor_cine_v1/motor/assets/mocap/100STYLE/Neutral/Neutral_FW.bvh
+FILE binary_left_out motor_cine_v1/motor/assets/add_camera_rigs-1.9.2.zip
+FILE binary_left_out motor_cine_v1/motor/assets/Python-RVO2_src.tgz
+DIR motor_cine_v1/motor/blender/__pycache__
+DIR fabricas/recibos_lotes
+FILE binary_left_out fabricas/espejo_box/fab3d_staging_box_20261110_0518_bogota.tgz
+FILE binary_left_out fabricas/espejo_box/fab3d_staging_box_20261110_2305_bogota.tgz
+DIR fabricas/tmp
+DIR fabricas/constructores_v1_20261109/prototipo_esqueletos/__pycache__
+DIR fabricas/constructores_v1_20261109/escenario/codigo/__pycache__
+DIR fabricas/constructores_v1_20261109/escenario/codigo/biblioteca_formas/__pycache__
+DIR fabricas/constructores_v1_20261109/escenario/via_b/__pycache__
+FILE binary_or_media fabricas/entradas/cn-los-guardianes-de-la-9fb323be/gdc-piquito/gdc-piquito.blend
+DIR fabricas/informes
+DIR fabricas/jobs
+DIR fabricas/app/__pycache__
+DIR fabricas/secretos
+DIR fabricas/vigilante/respaldos
+DIR fabricas/vigilante/__pycache__
+FILE binary_or_media cajas_taller/FIJOS_TALLER/estilo/cn-los-guardianes-de-la-9fb323be/ESTILO_CANAL_v2.png
+FILE binary_or_media cajas_taller/FIJOS_TALLER/estilo/cn-gnesis-digital-el-de-ed178619/ESTILO_CANAL_v1.png
+FILE binary_or_media cajas_taller/FIJOS_TALLER/estilo/ESTILO_OFICIAL_CANAL.png
+FILE too_large (18481892) cajas_taller/biblioteca_vrm/HairSample_Male.vrm
+DIR cajas_taller/fondo_cubemap/__pycache__
+FILE binary_or_media cajas_taller/cubo_fijo/hojas/gdc-eco_0597114f24f97a5d.png
+FILE binary_or_media cajas_taller/cubo_fijo/hojas/gdc-valentina_e3d8db772c0db601.png
+FILE binary_or_media cajas_taller/cubo_fijo/hojas/gdc-don-caos_18e192698074aea1.png
+FILE binary_or_media cajas_taller/cubo_fijo/hojas/gdc-pintor_fbdd0e2c29cf906f.png
+FILE binary_or_media cajas_taller/cubo_fijo/hojas/gdc-piquito_120f2b6366694721.png
+FILE binary_or_media cajas_taller/cubo_fijo/hojas/gdc-spark_53de336edfd14517.png
+DIR cajas_taller/poses_o114/__pycache__
+DIR cajas_taller/respaldos_pintar
+DIR cajas_taller/ver_prepago/__pycache__
+DIR cajas_taller/respaldos
+DIR cajas_taller/__pycache__
+DIR cajas_taller/poses_o110/__pycache__
+DIR cajas_taller/pruebas/__pycache__
+FILE private_key_detected cajas_taller/storyboard/vendor/camera_dsl/scripts/audit.py
+DIR cajas_taller/storyboard/vendor/camera_dsl/scripts/__pycache__
+DIR cajas_taller/storyboard/__pycache__
+DIR cajas_taller/storyboard/pruebas/__pycache__
+FILE log staging_argon/esqueletos_20261109/err_piquito.log
+FILE log staging_argon/esqueletos_20261109/err_perro.log
+FILE log staging_argon/poses_20261109/reenvio.log
+FILE log staging_argon/poses_20261109/envio.log
+FILE log staging_argon/recetas_20261109/envio.log
+FILE log staging_argon/recetas_20261109/envio_err.log

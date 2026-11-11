@@ -1,0 +1,54 @@
+{
+  "id": "gdc-spark",
+  "nombre": "Spark",
+  "ids_canal": [
+    "ch-spark-468e",
+    "spark"
+  ],
+  "tipo": "persona",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/spark/referencia-cliente/refs/76f2c9cad7c45e6a.jpg",
+  "nunca_cambia": "Casco azul con visor, traje azul con líneas naranjas y átomo en el pecho, cinturón y botas azules. Niño de 6 años, el más alto del equipo. Siempre con su tableta/visor que proyecta hologramas azules.",
+  "voz_adn": {
+    "schema": "voz_adn/v1_universal",
+    "motor": null,
+    "fuente": "Biblia GDC_00_1 + guion T01E01 del cliente (acotaciones de tono); escrito una vez por el ingeniero el 2-nov-2026; sin IA, US$0",
+    "rasgos": {
+      "timbre": "brillante, claro, de niño",
+      "tono": "medio-agudo, sube al emocionarse",
+      "ritmo": "rápido y entusiasta, frases cortas de presentador",
+      "acento": "español latinoamericano neutro (Colombia suave), sin regionalismos fuertes",
+      "idioma": "español",
+      "edad_aparente": "niño de 6 años",
+      "energia": "alta",
+      "textura": "limpia, un poco aireada",
+      "diccion": "clara, marca bien las sílabas; habla con las manos"
+    },
+    "descriptor_universal_en": "Bright, clear 6-year-old boy voice, mid-high pitch that rises with excitement, fast energetic presenter rhythm, clean slightly airy texture, crisp diction, neutral Latin American Spanish.",
+    "notas": "muletilla: «¡Esto es de verdad!»; con el visor suena más serio («Alerta. Nivel de letras: cero.»)",
+    "regla": "perfil universal (no atado a Veo ni a ningún motor); el motor de voz se elige después"
+  },
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "personaje",
+  "sellado": true,
+  "version": 4,
+  "altura_fuente_nota": "alturas en la biblioteca personajes.json (altura_m, inventadas por orden de Ricardo 2-nov-2026, no medidas en Blender)",
+  "adn_estado": "ADN Ako sellado (Fase 1 hoja + Fase 2 ADN, sello_pago 2-nov-2026)",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; cambia solo con versión nueva (versiones/) y sello por cubo_fijo sellar",
+  "frase_sello": "1. Ficha Antropométrica:\n* **Edad visual y estatura:** Niño de 10 a 12 años, estatura infantil media (1.16 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida)).\n* **Complexión y proporción:** Delgada y atlética; canon estilizado de 5 cabezas de altura.\n* **Estilo de línea y sombreado:** Renderizado 3D CGI estilizado sin líneas de contorno 2D. Sombreado tridimensional suave con *subsurface scattering* en la piel, acabados metálicos satinados en armadura, texturas mate en tela táctil y canales emisivos de luz neón.\n\n2. Fisonomía Facial y Cabello:\n* **Forma del rostro y piel:** Rostro ovalado de mandíbula suave y redondeada; piel tez cálida bronceada clara; nariz pequeña y respingada.\n* **Cabello:** Color castaño oscuro modelado en bloques suaves. Corto en los laterales y nuca, con un tupé voluminoso de puntas suaves peinado hacia arriba y hacia la derecha.\n* **Ojos y cejas:** Ojos grandes y redondeados con iris marrón cálido. Cejas gruesas, tupidas y bien definidas en color castaño oscuro.\n* **Accesorios faciales fijos:** Casco tecnológico azul cian metálico de cobertura craneal completa con abertura inferior (deja nariz, boca y mentón libres). Incluye gafas/visor traslúcido celeste integrado y líneas de circuito naranjas luminosas.\n\n3. Paleta de Expresiones:\n* **Normal:** Cejas relajadas en arco neutro, ojos bien abiertos y sonrisa serena con labios cerrados.\n* **Feliz:** Cejas elevadas en arco alto, ojos muy abiertos y brillantes, boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n* **Nervioso:** Cejas arqueadas con extremos internos elevados en gesto de preocupación, ojos muy abiertos, boca pequeña entreabierta en tensión y gotas de sudor en las sienes.\n* **Enojado:** Cejas fruncidas en ángulo \"V\" profundo sobre los párpados, mirada intensa y boca completamente abierta gritando, mostrando dientes superiores, inferiores y lengua.\n* **Triste:** Cejas inclinadas hacia arriba en su parte interna, párpados superiores ligeramente caídos y boca cerrada formando una curva pronunciada hacia abajo.\n\n4. Vestuario por Capas:\n* **Prenda exterior / única (Traje táctico):** Enterizo ajustado al cuerpo sin holguras ni pliegues. Base en azul profundo mate con peto, hombreras y rodilleras hexagonales en azul cian metálico. Cuello alto rígido con borde naranja. Estampado luminoso de circuitos en naranja y cian; emblema de átomo naranja brillante en el centro del pecho.\n* **Brazos y manos:** Brazaletes cian metálico en los antebrazos con bordes gruesos en naranja mate. Guantes ajustados azules con placas protectoras cian y ribetes naranjas en el dorso.\n* **Accesorios de cintura:** Cinturón táctico rígido en naranja mate, con hebilla central hexagonal (borde naranja, centro cian) y dos cartucheras rectangulares planas en los costados.\n* **Calzado:** Botas rígidas a media pantorrilla en azul cian metálico, con borde superior grueso, tiras verticales en la caña y suela plana corrida en color naranja mate.\n\n5. Reglas de Giro:\n* **Frente:** Visibilidad total del visor traslúcido, parte inferior del rostro, emblema del átomo en el pecho, hebilla hexagonal del cinturón y rodilleras cian.\n* **Perfil:** Silueta limpia sin capas ni mochilas. Destaca el volumen frontal del visor, módulos auriculares circulares con aros de luz naranja en el casco y un emblema de círculos concéntricos naranjas sobre el hombro.\n* **Espaldas:** El casco cubre el cráneo con líneas naranjas simétricas, dejando ver solo un corte limpio de cabello castaño en la nuca. Torso trasero sin emblema central, con tirantes estructurales naranjas y líneas de circuito naranjas/cian que bajan simétricamente por espalda, glúteos y piernas. Cinturón trasero continuo sin hebilla.",
+  "actualizado": "2026-11-06T03:34:21+01:00",
+  "origen": "sellar",
+  "hoja_aprobada": {
+    "ruta": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-spark_53de336edfd14517.png",
+    "aprobado_por": "Ricardo",
+    "cuando": "2026-11-02T17:32:00-05:00",
+    "origen": "chat Ricardo «si apruebo» (pt510u)",
+    "sha256": "53de336edfd14517435d99421077aa3a9f2baf3fd80d9b99719fdf0d7fcbc5a7",
+    "origen_ruta": "/opt/myia-taller-n8n/trabajo/sello_pago/cn-los-guardianes-de-la-9fb323be/gdc-spark/hoja_fase1_20261102-231615_i1.png"
+  },
+  "hoja_ref": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-spark_53de336edfd14517.png",
+  "altura_m": 1.16,
+  "altura_fuente": "biblioteca del canal (personajes.json); Blender la reemplaza al medir",
+  "altura_regla": "t467u Ricardo: biblioteca gana hasta medición Blender"
+}

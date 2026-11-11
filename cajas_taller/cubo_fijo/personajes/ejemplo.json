@@ -1,0 +1,13 @@
+{
+  "id": "ejemplo",
+  "clase": "personaje",
+  "origen_flujo": "crear_pj_voz",
+  "sello_hash_perfil": "1ee5f6a9",
+  "voz_motor": null,
+  "prompt_modulo_pj": "[Character: Ejemplo — young woman, dark wavy hair; height (medir en Blender); outfit white linen dress]\n[Voice: young adult female voice, warm soft timbre, medium-high pitch, gentle Colombian Spanish accent, calm unhurried pace, slight breathiness, clear diction, low-medium energy; language es-CO]\n[Action: walks to window]\n[Dialogue: \"Hola\"]",
+  "sellado": false,
+  "nota": "ADN real vía VAR·extraer (programa oficial); altura solo Blender",
+  "version": 1,
+  "actualizado": "2026-11-02T20:24:34+01:00",
+  "origen": "registrar_pj"
+}

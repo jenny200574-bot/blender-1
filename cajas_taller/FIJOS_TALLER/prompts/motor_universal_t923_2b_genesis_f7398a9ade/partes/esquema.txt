@@ -1,0 +1,291 @@
+{
+  "type": "object",
+  "properties": {
+    "poses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "angulos": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "hueso": {
+                  "type": "string"
+                },
+                "flex": {
+                  "type": "number"
+                },
+                "abd": {
+                  "type": "number"
+                },
+                "giro": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "hueso",
+                "flex",
+                "abd",
+                "giro"
+              ]
+            }
+          },
+          "raiz": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "apoyos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "nombre",
+          "descripcion",
+          "angulos",
+          "raiz",
+          "apoyos"
+        ]
+      }
+    },
+    "movimientos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "fases": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "pose": {
+                  "type": "string"
+                },
+                "t_fin_frac": {
+                  "type": "number"
+                },
+                "apoyos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "anclar_apoyo": {
+                  "type": "boolean"
+                },
+                "desplazamiento_m": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "pose",
+                "t_fin_frac",
+                "apoyos",
+                "anclar_apoyo",
+                "desplazamiento_m"
+              ]
+            }
+          },
+          "objetivos": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tipo": {
+                  "type": "string"
+                },
+                "desde": {
+                  "type": "string"
+                },
+                "hacia": {
+                  "type": "string"
+                },
+                "t_ini_frac": {
+                  "type": "number"
+                },
+                "t_fin_frac": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "tipo",
+                "desde",
+                "hacia",
+                "t_ini_frac",
+                "t_fin_frac"
+              ]
+            }
+          },
+          "excepciones": {
+            "type": "object",
+            "properties": {
+              "vuela": {
+                "type": "boolean"
+              },
+              "rapido": {
+                "type": "boolean"
+              },
+              "golpe": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "vuela",
+              "rapido",
+              "golpe"
+            ]
+          },
+          "temblor_deg": {
+            "type": "number"
+          },
+          "ciclo_s": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "nombre",
+          "descripcion",
+          "fases",
+          "objetivos",
+          "excepciones",
+          "temblor_deg",
+          "ciclo_s"
+        ]
+      }
+    },
+    "asignacion": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "personaje": {
+            "type": "string"
+          },
+          "accion_plan": {
+            "type": "string"
+          },
+          "movimiento": {
+            "type": "string"
+          },
+          "t0": {
+            "type": "number"
+          },
+          "t1": {
+            "type": "number"
+          },
+          "objetivo_punto": {
+            "type": "string"
+          },
+          "capa": {
+            "type": "string",
+            "enum": [
+              "base",
+              "gesto",
+              "locomocion"
+            ]
+          },
+          "huesos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "personaje",
+          "accion_plan",
+          "movimiento",
+          "t0",
+          "t1",
+          "objetivo_punto",
+          "capa",
+          "huesos"
+        ]
+      }
+    },
+    "iniciales": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "personaje": {
+            "type": "string"
+          },
+          "pose": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "personaje",
+          "pose"
+        ]
+      }
+    },
+    "anclas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "prop_id": {
+            "type": "string"
+          },
+          "host_id": {
+            "type": "string"
+          },
+          "hueso": {
+            "type": "string"
+          },
+          "formula": {
+            "type": "string"
+          },
+          "cita_fuente": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "prop_id",
+          "host_id",
+          "hueso",
+          "formula",
+          "cita_fuente"
+        ]
+      }
+    },
+    "faltantes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notas": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "poses",
+    "movimientos",
+    "asignacion",
+    "iniciales",
+    "anclas",
+    "faltantes",
+    "notas"
+  ]
+}

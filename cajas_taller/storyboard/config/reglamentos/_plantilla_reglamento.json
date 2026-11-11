@@ -1,0 +1,17 @@
+{
+ "PISTA": "Nivel 3 (dirección artística y cinematográfica): reglamento con NOMBRE (p. ej. GD-CINEMATIC-ANIME-V1, nombre de ejemplo de Ricardo). Plantilla vacía: copiar como reglamentos/<NOMBRE>.json y llenar. Lo que quede null NO se exige. Lo que se llene, el validador lo exige (error), sea cual sea el género.",
+ "nombre": null,
+ "estado": "plantilla",
+ "paleta": null,
+ "iluminacion": null,
+ "diseno_personajes": null,
+ "nivel_detalle": null,
+ "lenguaje_camara": {
+  "lente_mm_min": null,
+  "lente_mm_max": null,
+  "movimientos_prohibidos": [],
+  "angulos_prohibidos": [],
+  "planos_prohibidos": [],
+  "notas": null
+ }
+}

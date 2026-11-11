@@ -1,0 +1,7 @@
+{
+ "_nota": "Arreglos de continuidad 1, 2 y 4 (Ricardo, 3-nov-2026). Palabra de estado para cada «cambio» del 01 (eventos_o112.CAMBIOS), en español (para Ricardo y el 05) y en inglés (para los pedidos del 03 y del 11). Datos, no código: si falta una palabra se usa la del cambio tal cual (aviso).",
+ "inicial": "como al inicio",
+ "inicial_en": "as at the start",
+ "estados": {"aparecer": "presente", "desaparecer": "ausente", "romper": "roto", "mover": "movido", "escalar": "cambiado de tamaño", "comprimir": "comprimido"},
+ "estados_en": {"aparecer": "present", "desaparecer": "gone", "romper": "broken", "mover": "moved", "escalar": "resized", "comprimir": "compressed"}
+}

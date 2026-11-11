@@ -1,0 +1,38 @@
+{
+ "excluir_patrones": [
+  "Prision*",
+  "*_Prision*",
+  "Campo*",
+  "*Poder*",
+  "*Energia*",
+  "*Energy*",
+  "*Power*",
+  "*Rayo*",
+  "*Escudo*",
+  "*Portal*",
+  "*Aura*",
+  "*Hechizo*",
+  "*Explosion*",
+  "*Particula*",
+  "*FX*",
+  "VFX*",
+  "Prop_Escena*",
+  "PropEscena*",
+  "Escena_Prop*",
+  "Personaje*",
+  "Character*"
+ ],
+ "colecciones_set": [
+  "Escenario*",
+  "Set_*",
+  "Set",
+  "Entorno*",
+  "Fondo*",
+  "Decorado*"
+ ],
+ "conservar_tipos_siempre": [
+  "CAMERA"
+ ],
+ "conservar": [],
+ "_doc": "FC entorno fijo (Ricardo t456u 2-nov-2026). Ver COMUN_PRUEBAS/inmi/FC_LISTA_ENTORNO_FIJO_20261102.md"
+}

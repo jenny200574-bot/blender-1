@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-manzanas",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Manzanas estilizadas 3D en dos estados: enteras (esféricas, rechonchas y ligeramente achatadas) y corazones mordidos (silueta de reloj de arena con bordes ondulados y biseles suaves). Son piezas sólidas, rígidas y no articuladas.\n- Modo de sujeción manual (agarre a una mano) o reposo directo sobre superficies planas/suelo mediante su base redondeada."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Piel exterior con acabado plástico o cerámico brillante (glossy) en color rojo carmesí vibrante.\n- Pulpa interna expuesta con acabado mate sedoso en tono amarillo crema cálido. Tallos y semillas en marrón tierra mate; hojas en verde lima satinado.\n- Sin emisión lumínica; dependen de la reflexión especular del entorno."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Hendidura superior central que aloja un tallo cilíndrico grueso y ligeramente curvo, acompañado en las piezas enteras por una única hoja ovalada sin nervaduras marcadas.\n- En el centro de los corazones se incrustan dos semillas pequeñas con forma de gota, alineadas horizontalmente. Los bordes entre la piel roja y la pulpa presentan un patrón festoneado que simula marcas de mordida limpias."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Objeto estático con transición de estado (íntegro a consumido), generando sombras de contacto suaves en el suelo y reflejos blancos definidos en su superficie roja.\n- Regla de distancia: En planos generales, las manzanas enteras se simplifican a esferas rojas lisas con un toque verde superior, y los corazones a formas cóncavas bicolores (crema y rojo), eliminando las semillas y el volumen del tallo."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Props 3D estilizados de manzanas enteras y corazones mordidos con estética cartoon pulida. Las piezas enteras son esféricas en rojo carmesí muy brillante con tallo marrón cilíndrico y una hoja ovalada verde lima; los corazones tienen silueta de reloj de arena con pulpa amarillo crema mate, extremos de piel roja con bordes ondulados y dos semillas marrones centrales. Geometría de volúmenes suaves, sin texturas rugosas, con reflejos especulares limpios y oclusión ambiental suave."
+    }
+  ],
+  "inyeccion": "Props 3D estilizados de manzanas enteras y corazones mordidos con estética cartoon pulida. Las piezas enteras son esféricas en rojo carmesí muy brillante con tallo marrón cilíndrico y una hoja ovalada verde lima; los corazones tienen silueta de reloj de arena con pulpa amarillo crema mate, extremos de piel roja con bordes ondulados y dos semillas marrones centrales. Geometría de volúmenes suaves, sin texturas rugosas, con reflejos especulares limpios y oclusión ambiental suave.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Manzanas estilizadas 3D en dos estados: enteras (esféricas, rechonchas y ligeramente achatadas) y corazones mordidos (silueta de reloj de arena con bordes ondulados y biseles suaves). Son piezas sólidas, rígidas y no articuladas.\n- Modo de sujeción manual (agarre a una mano) o reposo directo sobre superficies planas/suelo mediante su base redondeada.\n\n2. Materiales y Paleta de Color:\n\n- Piel exterior con acabado plástico o cerámico brillante (glossy) en color rojo carmesí vibrante.\n- Pulpa interna expuesta con acabado mate sedoso en tono amarillo crema cálido. Tallos y semillas en marrón tierra mate; hojas en verde lima satinado.\n- Sin emisión lumínica; dependen de la reflexión especular del entorno.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Hendidura superior central que aloja un tallo cilíndrico grueso y ligeramente curvo, acompañado en las piezas enteras por una única hoja ovalada sin nervaduras marcadas.\n- En el centro de los corazones se incrustan dos semillas pequeñas con forma de gota, alineadas horizontalmente. Los bordes entre la piel roja y la pulpa presentan un patrón festoneado que simula marcas de mordida limpias.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Objeto estático con transición de estado (íntegro a consumido), generando sombras de contacto suaves en el suelo y reflejos blancos definidos en su superficie roja.\n- Regla de distancia: En planos generales, las manzanas enteras se simplifican a esferas rojas lisas con un toque verde superior, y los corazones a formas cóncavas bicolores (crema y rojo), eliminando las semillas y el volumen del tallo.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nProps 3D estilizados de manzanas enteras y corazones mordidos con estética cartoon pulida. Las piezas enteras son esféricas en rojo carmesí muy brillante con tallo marrón cilíndrico y una hoja ovalada verde lima; los corazones tienen silueta de reloj de arena con pulpa amarillo crema mate, extremos de piel roja con bordes ondulados y dos semillas marrones centrales. Geometría de volúmenes suaves, sin texturas rugosas, con reflejos especulares limpios y oclusión ambiental suave.",
+  "creado": "2026-11-06T04:03:13+01:00"
+}

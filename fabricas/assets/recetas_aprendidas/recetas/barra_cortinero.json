@@ -1,0 +1,290 @@
+{
+ "id": "barra_cortinero",
+ "nombre_generico": "Barra de cortinero de madera con remates esféricos",
+ "nombre_en": "curtain rod",
+ "categoria": "fijaciones",
+ "medidas_tipicas": {
+  "ancho_m": 2.0,
+  "fondo_m": 0.08,
+  "alto_m": 0.08
+ },
+ "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  2.0,
+  0.08,
+  0.08
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": "cuelga / pared",
+ "base_m": null,
+ "apoyo": "pared",
+ "conjunto": false,
+ "piezas": 9,
+ "tipos_de_pieza": [
+  "caja",
+  "cilindro",
+  "esfera"
+ ],
+ "partes": [
+  {
+   "tipo": "cilindro",
+   "nombre": "barra_central",
+   "color_guia_rgb": [
+    0.784,
+    0.541,
+    0.333
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.04
+   ],
+   "radio_m": 0.016,
+   "alto_m": 1.88,
+   "rot_grados": [
+    0.0,
+    90.0,
+    0.0
+   ]
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "remate_esferico_izq",
+   "color_guia_rgb": [
+    0.784,
+    0.541,
+    0.333
+   ],
+   "centro_m": [
+    -0.96,
+    0.0,
+    0.04
+   ],
+   "radio_m": 0.04
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "remate_esferico_der",
+   "color_guia_rgb": [
+    0.784,
+    0.541,
+    0.333
+   ],
+   "centro_m": [
+    0.96,
+    0.0,
+    0.04
+   ],
+   "radio_m": 0.04
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "collarin_izq",
+   "color_guia_rgb": [
+    0.784,
+    0.541,
+    0.333
+   ],
+   "centro_m": [
+    -0.915,
+    0.0,
+    0.04
+   ],
+   "radio_m": 0.024,
+   "alto_m": 0.02,
+   "rot_grados": [
+    0.0,
+    90.0,
+    0.0
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "collarin_der",
+   "color_guia_rgb": [
+    0.784,
+    0.541,
+    0.333
+   ],
+   "centro_m": [
+    0.915,
+    0.0,
+    0.04
+   ],
+   "radio_m": 0.024,
+   "alto_m": 0.02,
+   "rot_grados": [
+    0.0,
+    90.0,
+    0.0
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "soporte_pared_izq",
+   "color_guia_rgb": [
+    0.784,
+    0.541,
+    0.333
+   ],
+   "centro_m": [
+    -0.75,
+    0.015,
+    0.04
+   ],
+   "tam_m": [
+    0.03,
+    0.05,
+    0.04
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "placa_pared_izq",
+   "color_guia_rgb": [
+    0.784,
+    0.541,
+    0.333
+   ],
+   "centro_m": [
+    -0.75,
+    0.035,
+    0.04
+   ],
+   "tam_m": [
+    0.05,
+    0.01,
+    0.07
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "soporte_pared_der",
+   "color_guia_rgb": [
+    0.784,
+    0.541,
+    0.333
+   ],
+   "centro_m": [
+    0.75,
+    0.015,
+    0.04
+   ],
+   "tam_m": [
+    0.03,
+    0.05,
+    0.04
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "placa_pared_der",
+   "color_guia_rgb": [
+    0.784,
+    0.541,
+    0.333
+   ],
+   "centro_m": [
+    0.75,
+    0.035,
+    0.04
+   ],
+   "tam_m": [
+    0.05,
+    0.01,
+    0.07
+   ]
+  }
+ ],
+ "caja_m": {
+  "ancho": 2.0,
+  "fondo": 0.08,
+  "alto": 0.08
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.08
+  ],
+  "frente": [
+   0.0,
+   -0.04,
+   0.04
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G2_pared_ventana_luz",
+  "objeto_id_origen": "amb-esc-habitacion-barra-cortinero",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+  "costo_usd_grupo": 0.4131,
+  "costo_usd_repartido": 0.059014,
+  "citas": [
+   {
+    "fuente_id": "F02",
+    "clave": "tipologia.barra_cortinero",
+    "cita": "while curtain rods in other areas of the home are often affixed with decorative brackets or finial."
+   },
+   {
+    "fuente_id": "F02",
+    "clave": "tipologia.material_madera",
+    "cita": "Curtain rods can be made of many materials including wood, metal and plastic."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "El corpus F02 no especifica diámetros numéricos de barra ni de remates esféricos; se deducen de las dimensiones de caja_m."
+  ],
+  "info": {
+   "partes": 9,
+   "piezas": 9,
+   "bbox_m": [
+    2.0,
+    0.08,
+    0.08
+   ],
+   "grupos": 1,
+   "datos": 9,
+   "con_fuente": 2
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-barra-cortinero"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

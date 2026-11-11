@@ -1,0 +1,36 @@
+{
+  "id": "gdc-pincel-pintor",
+  "nombre": "Pincel Mágico de Pintor",
+  "clase": "objeto",
+  "subclase": "portado",
+  "dueno": "gdc-pintor",
+  "portador": "Pintor",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-pincel-magico.png",
+  "nunca_cambia": "Pincel con cerdas iridiscentes de colores; lo que dibuja en el aire cobra vida.",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "sellado": false,
+  "version": 1,
+  "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+  "imagen_sha256": "e199fa472bbae596cb6b8fea9e256565da36032204b964bdcfe649e321ee4c6f",
+  "imagen_origen": "paso 00 4b2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 2.5,
+    "fondo_cm": 2.5,
+    "alto_cm": 18
+  },
+  "medidas_fuente": "4b1 inv_obj_historia__obj-pincel-magico__f40e27.json",
+  "ids_capitulo": [
+    "obj-pincel-magico"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-pincel-magico"
+  ],
+  "imagen_ref_anterior": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/pintor/referencia-cliente/refs/93763250e250ad55.jpg"
+}

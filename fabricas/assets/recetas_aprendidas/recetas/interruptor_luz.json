@@ -1,0 +1,214 @@
+{
+ "id": "interruptor_luz",
+ "nombre_generico": "Interruptor de luz de placa redondeada",
+ "nombre_en": "light switch",
+ "categoria": "instalaciones",
+ "medidas_tipicas": {
+  "ancho_m": 0.08,
+  "fondo_m": 0.03,
+  "alto_m": 0.12
+ },
+ "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.08,
+  0.03,
+  0.12
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": "cuelga / pared",
+ "base_m": null,
+ "apoyo": "pared",
+ "conjunto": false,
+ "piezas": 5,
+ "tipos_de_pieza": [
+  "caja",
+  "cilindro"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "placa_pared_central",
+   "color_guia_rgb": [
+    1.0,
+    0.973,
+    0.933
+   ],
+   "centro_m": [
+    0.0,
+    0.007,
+    0.06
+   ],
+   "tam_m": [
+    0.08,
+    0.016,
+    0.08
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "arco_placa_superior",
+   "color_guia_rgb": [
+    1.0,
+    0.973,
+    0.933
+   ],
+   "centro_m": [
+    0.0,
+    0.007,
+    0.08
+   ],
+   "radio_m": 0.04,
+   "alto_m": 0.016,
+   "rot_grados": [
+    90.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "arco_placa_inferior",
+   "color_guia_rgb": [
+    1.0,
+    0.973,
+    0.933
+   ],
+   "centro_m": [
+    0.0,
+    0.007,
+    0.04
+   ],
+   "radio_m": 0.04,
+   "alto_m": 0.016,
+   "rot_grados": [
+    90.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "marco_interior",
+   "color_guia_rgb": [
+    1.0,
+    0.973,
+    0.933
+   ],
+   "centro_m": [
+    0.0,
+    -0.003,
+    0.06
+   ],
+   "tam_m": [
+    0.044,
+    0.01,
+    0.064
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "tecla_basculante",
+   "color_guia_rgb": [
+    1.0,
+    0.973,
+    0.933
+   ],
+   "centro_m": [
+    0.0,
+    -0.011,
+    0.06
+   ],
+   "tam_m": [
+    0.032,
+    0.008,
+    0.048
+   ]
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.08,
+  "fondo": 0.03,
+  "alto": 0.12
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.12
+  ],
+  "frente": [
+   0.0,
+   -0.015,
+   0.06
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G2_pared_ventana_luz",
+  "objeto_id_origen": "amb-esc-habitacion-interruptor-luz",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+  "costo_usd_grupo": 0.4131,
+  "costo_usd_repartido": 0.059014,
+  "citas": [
+   {
+    "fuente_id": "F06",
+    "clave": "tipologia.interruptor_pared",
+    "cita": "even the newest construction the familiar toggle and rocker switch formats predominate."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "El corpus F06 indica que las dimensiones de las placas varían según el país sin dar medidas en metros; se deducen de caja_m."
+  ],
+  "info": {
+   "partes": 5,
+   "piezas": 5,
+   "bbox_m": [
+    0.08,
+    0.03,
+    0.12
+   ],
+   "grupos": 1,
+   "datos": 7,
+   "con_fuente": 1
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-interruptor-luz"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

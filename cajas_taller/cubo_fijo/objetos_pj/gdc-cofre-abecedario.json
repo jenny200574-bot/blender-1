@@ -1,0 +1,38 @@
+{
+  "id": "gdc-cofre-abecedario",
+  "nombre": "Cofre del Abecedario",
+  "clase": "objeto",
+  "subclase": "historia",
+  "dueno": null,
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-cofre-dorado.png",
+  "nunca_cambia": "Cofre dorado con tres candados brillantes: uno con un color, uno con un número y uno con una letra (guion T01E01). Lo abre la palabra mágica.",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "sellado": true,
+  "version": 2,
+  "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO; falta imagen de referencia (no hay en material del cliente)",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+  "imagen_sha256": "79e9b2dc80de9d06788a5850e462d2e34dacea886596ad6124bec1a3df9468e8",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 65,
+    "fondo_cm": 42,
+    "alto_cm": 48
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-cofre-dorado__7faaf4.json",
+  "ids_capitulo": [
+    "obj-cofre-dorado"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-cofre-dorado"
+  ],
+  "imagen_ref_anterior": null,
+  "frase_sello": "Cofre del tesoro 3D estilizado de estética cartoon, compuesto por una base trapezoidal, tapa abovedada articulada y biseles gruesos redondeados. Fabricado íntegramente en metal dorado satinado a dos tonos, cuenta con dos bandas estructurales verticales, esquineras reforzadas con remaches circulares, asas laterales curvas en forma de U, cerradura central con ojo de llave flanqueada por dos pestillos frontales y dos bisagras traseras. El interior está forrado en tela acolchada color azul marino oscuro y, en estado abierto, libera desde adentro un resplandor mágico amarillo dorado cálido acompañado de partículas de luz flotantes.",
+  "actualizado": "2026-11-06T04:03:14+01:00",
+  "origen": "sellar"
+}

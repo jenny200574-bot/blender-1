@@ -1,0 +1,74 @@
+{"ts": "2026-11-02T15:49:29+01:00", "op": "extraer", "id": "kael_antes", "fuente": "disco", "usd": 0}
+{"ts": "2026-11-02T15:51:21+01:00", "op": "extraer", "id": "estilo_genesis", "fuente": "disco", "usd": 0}
+{"ts": "2026-11-02T20:24:34+01:00", "op": "registrar_pj", "id": "ejemplo", "k": "personajes", "version": 1}
+{"ts": "2026-11-02T23:15:41+01:00", "op": "sellar", "id": "estilo_los_guardianes_de_la", "k": "estilo", "version": 2}
+{"ts": "2026-11-02T23:18:23+01:00", "op": "sellar", "id": "gdc-spark", "k": "personajes", "version": 2}
+{"ts": "2026-11-02T23:21:26+01:00", "op": "sellar", "id": "gdc-valentina", "k": "personajes", "version": 2}
+{"ts": "2026-11-02T23:23:06+01:00", "op": "sellar", "id": "gdc-eco", "k": "personajes", "version": 2}
+{"ts": "2026-11-02T23:24:49+01:00", "op": "sellar", "id": "gdc-piquito", "k": "personajes", "version": 2}
+{"ts": "2026-11-02T23:26:11+01:00", "op": "sellar", "id": "gdc-pintor", "k": "personajes", "version": 2}
+{"ts": "2026-11-02T23:28:17+01:00", "op": "sellar", "id": "gdc-don-caos", "k": "personajes", "version": 2}
+{"ts": "2026-11-02T23:34:47+01:00", "op": "sellar", "id": "gdc-spark", "k": "personajes", "version": 3}
+{"ts": "2026-11-02T23:34:49+01:00", "op": "sellar", "id": "gdc-valentina", "k": "personajes", "version": 3}
+{"ts": "2026-11-02T23:34:50+01:00", "op": "sellar", "id": "gdc-eco", "k": "personajes", "version": 3}
+{"ts": "2026-11-02T23:34:52+01:00", "op": "sellar", "id": "gdc-piquito", "k": "personajes", "version": 3}
+{"ts": "2026-11-02T23:34:55+01:00", "op": "sellar", "id": "gdc-pintor", "k": "personajes", "version": 3}
+{"ts": "2026-11-02T23:34:56+01:00", "op": "sellar", "id": "gdc-don-caos", "k": "personajes", "version": 3}
+{"ts": "2026-11-02T23:35:32+01:00", "op": "sellar", "id": "gdc-don-caos", "k": "personajes", "version": 4}
+{"ts": "2026-11-02T23:45:05+01:00", "op": "extraer", "id": "gdc-don-caos", "fuente": "disco", "usd": 0}
+{"ts": "2026-11-03T01:03:08+0100", "op": "canal_id", "ficha": "objetos_pj/armadura_evolucion.json", "cambios": ["canal_id=cn-gnesis-digital-el-de-ed178619", "nombre=Armadura evolucion"], "por": "t528u (Ricardo): fichas viejas con apodo de canal", "respaldo": "/opt/myia-taller-n8n/respaldos/cajas_20261102_190249_bogota_t528b/fichas/objetos_pj/armadura_evolucion.json"}
+{"ts": "2026-11-03T01:03:08+0100", "op": "canal_id", "ficha": "objetos_pj/brazalete_multifuncion.json", "cambios": ["canal_id=cn-gnesis-digital-el-de-ed178619", "nombre=Brazalete multifuncion"], "por": "t528u (Ricardo): fichas viejas con apodo de canal", "respaldo": "/opt/myia-taller-n8n/respaldos/cajas_20261102_190249_bogota_t528b/fichas/objetos_pj/brazalete_multifuncion.json"}
+{"ts": "2026-11-03T01:03:08+0100", "op": "canal_id", "ficha": "objetos_pj/espada_luz.json", "cambios": ["canal_id=cn-gnesis-digital-el-de-ed178619", "nombre=Espada luz"], "por": "t528u (Ricardo): fichas viejas con apodo de canal", "respaldo": "/opt/myia-taller-n8n/respaldos/cajas_20261102_190249_bogota_t528b/fichas/objetos_pj/espada_luz.json"}
+{"ts": "2026-11-03T01:03:08+0100", "op": "canal_id", "ficha": "objetos_pj/lanza_energia.json", "cambios": ["canal_id=cn-gnesis-digital-el-de-ed178619", "nombre=Lanza energia"], "por": "t528u (Ricardo): fichas viejas con apodo de canal", "respaldo": "/opt/myia-taller-n8n/respaldos/cajas_20261102_190249_bogota_t528b/fichas/objetos_pj/lanza_energia.json"}
+{"ts": "2026-11-03T01:03:08+0100", "op": "canal_id", "ficha": "objetos_pj/manilla_imi.json", "cambios": ["canal_id=cn-gnesis-digital-el-de-ed178619", "nombre=Manilla imi"], "por": "t528u (Ricardo): fichas viejas con apodo de canal", "respaldo": "/opt/myia-taller-n8n/respaldos/cajas_20261102_190249_bogota_t528b/fichas/objetos_pj/manilla_imi.json"}
+{"ts": "2026-11-03T01:03:08+0100", "op": "canal_id", "ficha": "objetos_pj/nucleo_imi.json", "cambios": ["canal_id=cn-gnesis-digital-el-de-ed178619", "nombre=Nucleo imi"], "por": "t528u (Ricardo): fichas viejas con apodo de canal", "respaldo": "/opt/myia-taller-n8n/respaldos/cajas_20261102_190249_bogota_t528b/fichas/objetos_pj/nucleo_imi.json"}
+{"ts": "2026-11-06T03:34:21+01:00", "op": "sellar", "id": "gdc-eco", "k": "personajes", "version": 4}
+{"ts": "2026-11-06T03:34:21+01:00", "op": "sellar", "id": "gdc-valentina", "k": "personajes", "version": 4}
+{"ts": "2026-11-06T03:34:21+01:00", "op": "sellar", "id": "gdc-spark", "k": "personajes", "version": 4}
+{"ts": "2026-11-06T03:34:21+01:00", "op": "sellar", "id": "gdc-pintor", "k": "personajes", "version": 4}
+{"ts": "2026-11-06T03:34:21+01:00", "op": "sellar", "id": "gdc-don-caos", "k": "personajes", "version": 5}
+{"ts": "2026-11-06T03:34:22+01:00", "op": "sellar", "id": "gdc-piquito", "k": "personajes", "version": 4}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-escudo-valentina", "id_capitulo": "obj-escudo-de-valentina", "modo": "enlazado", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-libro-cuentos", "id_capitulo": "obj-libro-de-cuentos", "modo": "enlazado", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-manzanas", "id_capitulo": "obj-manzanas", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-papel-dulce", "id_capitulo": "obj-papel-dulce", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-papel-numeros", "id_capitulo": "obj-papel-numeros", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-pijama-pintor", "id_capitulo": "obj-pijama-pintor", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-pincel-pintor", "id_capitulo": "obj-pincel-magico", "modo": "enlazado", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-pistola-don-caos", "id_capitulo": "obj-rayo-confundidor", "modo": "enlazado", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-visor", "id_capitulo": "obj-visor", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-almohada", "id_capitulo": "obj-almohada", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-armario", "id_capitulo": "obj-armario", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-cama-nino", "id_capitulo": "obj-cama", "modo": "enlazado", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-candados", "id_capitulo": "obj-candados", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-caneca-reciclaje", "id_capitulo": "obj-caneca-reciclaje", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-cofre-abecedario", "id_capitulo": "obj-cofre-dorado", "modo": "enlazado", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-flores-jardin", "id_capitulo": "obj-flores-jardin", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-frutero", "id_capitulo": "obj-frutero", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-mantel", "id_capitulo": "obj-mantel", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-mesa-cocina", "id_capitulo": "obj-mesa-cocina", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-mesa-jardin", "id_capitulo": "obj-mesa-jardin", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-rio", "id_capitulo": "obj-rio", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:35:43+01:00", "op": "conectar_00_sello_obj", "id": "gdc-vocales", "id_capitulo": "obj-vocales", "modo": "nuevo", "por": "t467u"}
+{"ts": "2026-11-06T03:44:44+01:00", "op": "sellar", "id": "gdc-escudo-valentina", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:13+01:00", "op": "sellar", "id": "gdc-libro-cuentos", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:13+01:00", "op": "sellar", "id": "gdc-manzanas", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:13+01:00", "op": "sellar", "id": "gdc-papel-dulce", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:13+01:00", "op": "sellar", "id": "gdc-papel-numeros", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:13+01:00", "op": "sellar", "id": "gdc-pincel-pintor", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:13+01:00", "op": "sellar", "id": "gdc-pistola-don-caos", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:13+01:00", "op": "sellar", "id": "gdc-visor", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:13+01:00", "op": "sellar", "id": "gdc-almohada", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:14+01:00", "op": "sellar", "id": "gdc-armario", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:14+01:00", "op": "sellar", "id": "gdc-candados", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:14+01:00", "op": "sellar", "id": "gdc-caneca-reciclaje", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:14+01:00", "op": "sellar", "id": "gdc-cofre-abecedario", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:14+01:00", "op": "sellar", "id": "gdc-flores-jardin", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:14+01:00", "op": "sellar", "id": "gdc-frutero", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:14+01:00", "op": "sellar", "id": "gdc-mantel", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:14+01:00", "op": "sellar", "id": "gdc-mesa-cocina", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:15+01:00", "op": "sellar", "id": "gdc-mesa-jardin", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:15+01:00", "op": "sellar", "id": "gdc-rio", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:03:15+01:00", "op": "sellar", "id": "gdc-vocales", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:04:42+01:00", "op": "sellar", "id": "gdc-pijama-pintor", "k": "objetos_pj", "version": 2}
+{"ts": "2026-11-06T04:05:10+01:00", "op": "sellar", "id": "gdc-cama-nino", "k": "objetos_pj", "version": 2}

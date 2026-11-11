@@ -1,0 +1,58 @@
+{
+ "polluelo_chibi_mascota_L01_de_08": {
+  "archivo": "PROMPT_POSES_polluelo_chibi_mascota_L01_de_08.md",
+  "paso": "poses_clave_movimientos_v1",
+  "fijo": "fijo_poses.json",
+  "cotizado": 0.7418,
+  "sha256_texto": "4baabd1ec2209c9af4d90d891f803832a1a207c066b4a4b371b071470210e27c"
+ },
+ "polluelo_chibi_mascota_L02_de_08": {
+  "archivo": "PROMPT_POSES_polluelo_chibi_mascota_L02_de_08.md",
+  "paso": "poses_clave_movimientos_v1",
+  "fijo": "fijo_poses.json",
+  "cotizado": 0.7419,
+  "sha256_texto": "ddc74112240098e6bbfad4bad9ea14880acf120b590c5651f95f630e4986cd34"
+ },
+ "polluelo_chibi_mascota_L03_de_08": {
+  "archivo": "PROMPT_POSES_polluelo_chibi_mascota_L03_de_08.md",
+  "paso": "poses_clave_movimientos_v1",
+  "fijo": "fijo_poses.json",
+  "cotizado": 0.7417,
+  "sha256_texto": "13882e11f1930b412c4020532bf72f475345e253402c31d75d6d57d385954489"
+ },
+ "polluelo_chibi_mascota_L04_de_08": {
+  "archivo": "PROMPT_POSES_polluelo_chibi_mascota_L04_de_08.md",
+  "paso": "poses_clave_movimientos_v1",
+  "fijo": "fijo_poses.json",
+  "cotizado": 0.7417,
+  "sha256_texto": "83ee60306addda0540c2b531e70966a49c625c763de8f641fc01c28791975880"
+ },
+ "polluelo_chibi_mascota_L05_de_08": {
+  "archivo": "PROMPT_POSES_polluelo_chibi_mascota_L05_de_08.md",
+  "paso": "poses_clave_movimientos_v1",
+  "fijo": "fijo_poses.json",
+  "cotizado": 0.7416,
+  "sha256_texto": "4f4859857a4508b4a49e87faddf684a2a751af09dd5c1f6da1494469882758ea"
+ },
+ "polluelo_chibi_mascota_L06_de_08": {
+  "archivo": "PROMPT_POSES_polluelo_chibi_mascota_L06_de_08.md",
+  "paso": "poses_clave_movimientos_v1",
+  "fijo": "fijo_poses.json",
+  "cotizado": 0.7416,
+  "sha256_texto": "90005cd1a3780335ebdf7cfdbb836f4f4fd0caca63d65c79db4a050629f9d6eb"
+ },
+ "polluelo_chibi_mascota_L07_de_08": {
+  "archivo": "PROMPT_POSES_polluelo_chibi_mascota_L07_de_08.md",
+  "paso": "poses_clave_movimientos_v1",
+  "fijo": "fijo_poses.json",
+  "cotizado": 0.7415,
+  "sha256_texto": "33ffbd7a8c75bb069266b8467f029e4e90b864c12922d78825325aa36debc790"
+ },
+ "polluelo_chibi_mascota_L08_de_08": {
+  "archivo": "PROMPT_POSES_polluelo_chibi_mascota_L08_de_08.md",
+  "paso": "poses_clave_movimientos_v1",
+  "fijo": "fijo_poses.json",
+  "cotizado": 0.7416,
+  "sha256_texto": "10299719f07126fd369024622d3af2e853dc4e3800c80111a78184fad90c5bc8"
+ }
+}

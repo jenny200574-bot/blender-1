@@ -1,0 +1,356 @@
+{
+ "contrato": "familias_camara_v1",
+ "fuente": "Reglas de cámara de Ricardo (t552u, 10-nov-2026). Todo se mide en la escena 3D; nada de canal, escenario ni personaje.",
+ "distancia": {
+  "acercamiento_max_m": 0.5,
+  "regla": "d_min = max(minimo_absoluto_m, 0,50 m × altura_sujeto / 1,70 m) (tabla_decision_camara.constantes_distancia manda si existe). Si el plano pide acercarse más que d_min, la cámara se queda en d_min y se ALARGA la lente (lente × d_plano_pedido⁻¹ × d_min). Si algo tapa la cara: arco alrededor del personaje y, solo entonces, acercarse hasta d_min con lente más angular para conservar el encuadre.",
+  "minimo_absoluto_m": 0.06,
+  "pasos_acercar": [
+   1.0,
+   0.8,
+   0.65,
+   0.5,
+   0.35,
+   0.25
+  ],
+  "lente_min_mm": 14,
+  "altura_referencia_m": 1.7,
+  "lente_max_mm": 135
+ },
+ "planos": {
+  "GPG": {
+   "alturas": 4.5,
+   "lente": 18
+  },
+  "PG": {
+   "alturas": 2.2,
+   "lente": 24
+  },
+  "PE": {
+   "alturas": 1.2,
+   "lente": 28
+  },
+  "PA": {
+   "alturas": 0.95,
+   "lente": 35
+  },
+  "PM": {
+   "alturas": 0.7,
+   "lente": 35
+  },
+  "PMC": {
+   "alturas": 0.55,
+   "lente": 50
+  },
+  "PP": {
+   "alturas": 0.4,
+   "lente": 50
+  },
+  "PPP": {
+   "alturas": 0.28,
+   "lente": 85
+  }
+ },
+ "angulos_deg": {
+  "NORM": 0,
+  "PIC": 30,
+  "CPIC": -14,
+  "DUTCH": 0
+ },
+ "arco_busqueda_deg": [
+  0,
+  15,
+  -15,
+  30,
+  -30,
+  45,
+  -45,
+  60,
+  -60,
+  75,
+  -75,
+  90,
+  -90,
+  110,
+  -110,
+  135,
+  -135
+ ],
+ "margen_pared_m": 0.08,
+ "familias": {
+  "PRINCIPAL": {
+   "cuando": [
+    "siempre"
+   ],
+   "descripcion": "frente al personaje, a la altura de sus ojos; distancia por plano (mínimo d_min); si algo tapa la cara: arco alrededor o más cerca",
+   "planos_vecinos": [
+    1,
+    -1
+   ],
+   "secundario_si": [
+    "dos_o_mas"
+   ],
+   "plano_base": "PM"
+  },
+  "GENERAL": {
+   "cuando": [
+    "inicio_escena",
+    "cambio_beat",
+    "cambio_segmento",
+    "desplazamiento",
+    "plano_sb_abierto",
+    "muchos_cercanos_seguidos"
+   ],
+   "descripcion": "plano lejano estratégico: dónde está cada uno y qué hace",
+   "altura_x_ojos_mas_alto": [
+    1.0,
+    1.35
+   ],
+   "elev_max_deg": 32,
+   "lente_rango_mm": [
+    14,
+    35
+   ],
+   "max_candidatas": 2
+  },
+  "PAISAJE": {
+   "cuando": [
+    "sb_pide_establecimiento",
+    "inicio_escena"
+   ],
+   "descripcion": "establecimiento del set completo",
+   "altura_x_ojos_mas_alto": 1.5,
+   "lente_mm": 16,
+   "elev_max_deg": 30,
+   "max_candidatas": 1
+  },
+  "POV": {
+   "cuando": [
+    "dos_o_mas"
+   ],
+   "descripcion": "cámara en los ojos de otro personaje mirando a los objetivos",
+   "adelante_x_altura": 0.1,
+   "lente_mm": 24,
+   "max_candidatas": 2
+  },
+  "OTS": {
+   "cuando": [
+    "dos_o_mas"
+   ],
+   "descripcion": "sobre el hombro (hueso) de otro personaje mirando la cara del objetivo",
+   "atras_x_altura": 0.22,
+   "afuera_x_altura": 0.14,
+   "arriba_x_altura": 0.06,
+   "lente_mm": 40,
+   "max_candidatas": 1
+  },
+  "RETIRADA": {
+   "cuando": [
+    "contraste_tamano",
+    "sb_pide_tamano",
+    "beat:pullback_reveal_size",
+    "beat:show_scale_small",
+    "beat:show_scale_large"
+   ],
+   "descripcion": "empieza cerca del personaje (el más chico del cuadro si hay contraste de tamaño) y se aleja subiendo hasta el techo o una pared: revela el tamaño",
+   "elev_fin_deg": [
+    35,
+    50,
+    65,
+    15
+   ],
+   "lente_fin_mm": 24,
+   "max_candidatas": 1,
+   "dist_fin_x_inicio": 2.5,
+   "arco_deg": [
+    0,
+    30,
+    -30,
+    60,
+    -60,
+    90,
+    -90
+   ]
+  },
+  "PASE_CARAS": {
+   "cuando": [
+    "dos_o_mas"
+   ],
+   "descripcion": "travelling lateral pasando frente a las caras para mostrar las emociones",
+   "plano": "PMC",
+   "lente_mm": 50,
+   "max_candidatas": 1
+  }
+ },
+ "disparadores": {
+  "contraste_tamano_min": 2.0,
+  "desplazamiento_x_altura": 0.8,
+  "palabras_establecimiento": [
+   "establec",
+   "paisaje",
+   "panorám",
+   "vista general",
+   "llegada",
+   "aterriz",
+   "habitación entera",
+   "establishing"
+  ],
+  "palabras_tamano": [
+   "tamaño",
+   "pequeñ",
+   "diminut",
+   "enorme",
+   "gigante",
+   "escala",
+   "minúscul"
+  ],
+  "palabras_pov": [
+   "punto de vista",
+   "pov",
+   "subjetiv",
+   "por encima del hombro",
+   "ots"
+  ]
+ },
+ "patron": {
+  "max_general_por_escena": "max(2, n_vinetas // 4)",
+  "max_especial_por_familia": 2,
+  "especiales": [
+   "POV",
+   "OTS",
+   "RETIRADA",
+   "PASE_CARAS",
+   "PAISAJE"
+  ],
+  "no_repetir_familia_y_plano_seguidas": 2
+ },
+ "validacion": {
+  "cara_libre_frac_cuadros_min": 0.85,
+  "cara_libre_muestras_min": 0.34,
+  "cara_en_cuadro_frac_min": 0.95,
+  "grupo_cabezas_en_cuadro_min": 0.5,
+  "permitir_fuera_del_cuarto": false,
+  "ocultar_objetos": "solo si la decisión lo pide con motivo (lista 'ocultar'); por defecto no se oculta nada",
+  "d_min_tolerancia": 0.9,
+  "eje_frac_max": 0.5
+ },
+ "max_candidatas_por_vineta": 8,
+ "tabla_decision": "tabla_decision_camara.json (opcional, en esta carpeta): reglas {si:{disparadores, plano_sb, angulo_sb, texto_regex}, entonces:{familias, plano, distancia_alturas, lente, movimiento}}",
+ "tabla": {
+  "archivo": "tabla_decision_camara.json",
+  "min_len_verbo": 3,
+  "max_beats_por_vineta": 2,
+  "campos_texto_sb": [
+   "beats_visuales",
+   "intencion_narrativa",
+   "secuencia",
+   "actuacion",
+   "justificacion.emocion_buscada"
+  ],
+  "alias_plano": {
+   "ECU": "PPP",
+   "CU": "PP",
+   "MCU": "PMC",
+   "MS": "PM",
+   "MLS": "PA",
+   "FS": "PE",
+   "WS": "PG",
+   "EWS": "GPG",
+   "PD": "PP"
+  },
+  "colocacion_az_deg": {
+   "frente": [
+    0
+   ],
+   "tres_cuartos": [
+    45,
+    -45
+   ],
+   "lado": [
+    90,
+    -90
+   ],
+   "perfil": [
+    90,
+    -90
+   ],
+   "detras": [
+    180
+   ],
+   "delante": [
+    0
+   ],
+   "abajo": [
+    0
+   ],
+   "arriba": [
+    0
+   ]
+  },
+  "altura_dz_x_altura": {
+   "ojos": 0.0,
+   "pecho": -0.22,
+   "manos": -0.35,
+   "bajo": -0.45,
+   "bajo_leve": -0.2,
+   "alto": 0.5,
+   "alto_leve": 0.25,
+   "piso": "piso",
+   "superficie": "piso",
+   "a_su_altura": 0.0
+  },
+  "angulo_alias": {
+   "PIC_LEVE": "PIC",
+   "CPIC_LEVE": "CPIC"
+  },
+  "movimiento_dsl": {
+   "PULL_OUT_A_CRANE": "RETIRADA",
+   "PULL_OUT": "DOLLYOUT",
+   "PUSH": "DOLLYIN",
+   "DOLLY_IN": "DOLLYIN",
+   "TRACK": "TRACK",
+   "FOLLOW": "STEADICAM",
+   "LEADING": "STEADICAM",
+   "PAN": "PAN",
+   "TILT": "TILT",
+   "CRANE": "CRANE",
+   "BOOM": "PEDESTAL",
+   "PEDESTAL": "PEDESTAL",
+   "ORBIT": "ORBIT",
+   "HANDHELD": "HANDHELD",
+   "SHAKE": "HANDHELD",
+   "WHIP": "WHIPPAN",
+   "LATIGAZO": "WHIPPAN",
+   "DOLLY": "DOLLYIN",
+   "STATIC": "STATIC"
+  },
+  "a_familia": {
+   "beat": {
+    "pullback_reveal_size": "RETIRADA",
+    "show_scale_small": "RETIRADA",
+    "face_pass": "PASE_CARAS",
+    "establish_place": "PAISAJE",
+    "landscape": "PAISAJE",
+    "location_change": "GENERAL",
+    "group_shot": "GENERAL",
+    "dialogue_group": "GENERAL",
+    "crowd": "GENERAL",
+    "look_at": "POV",
+    "discovery": "POV"
+   },
+   "colocacion_contiene": {
+    "OTS": "OTS",
+    "POV": "POV",
+    "subjetivo": "POV",
+    "a_lo_largo_de_la_fila": "PASE_CARAS",
+    "fuera_o_desde_pared": "GENERAL"
+   },
+   "movimiento_contiene": {
+    "PULL_OUT_A_CRANE": "RETIRADA",
+    "EYELINE_POV": "POV"
+   }
+  }
+ },
+ "prompt_max_caracteres": 16000,
+ "cuadros_busqueda": 0
+}

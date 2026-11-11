@@ -1,0 +1,12 @@
+{
+ "tipo": "argon_texto",
+ "caja": "investigar_objetos_historia",
+ "paso": "4b1",
+ "canal": "cn-los-guardianes-de-la-9fb323be",
+ "capitulo": 1,
+ "episodio": "ep-89b93118ad",
+ "cotizacion": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/resultados/cotizacion_investigar_objetos_historia.json",
+ "guarda": "/opt/myia-taller-n8n/cajas/HABILITAR_PAGO_00",
+ "ledger": "/opt/myia-staging-arreglos-20261026/ledger/ledger_argon.csv",
+ "creado": "2026-11-05T16:07:38+0100"
+}

@@ -1,0 +1,2 @@
+Copia (solo lectura de n8n) de /opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/respuestas/inv_escenarios__esc-habitacion.json y ramas/4a2_entrada_blender.json, 10-nov-2026 lote Guardianes
+recetas_validas.json: copia de /workspace/TRASPASO_20261109/restaurado/fabricas/escenario/datos/ (box) = 20 recetas Argon vía B aprobadas por revisor_recetas (9-nov)

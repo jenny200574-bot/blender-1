@@ -1,0 +1,780 @@
+{
+ "_nota": "FALSO — acción 01 (accion_v1) de PRUEBA para el storyboard, esc 9 Génesis cap 1. Toma la respuesta FALSA esc_9_accion_falsa_20261101.json (a1–a14, que cubría solo 48 s) y la extiende a mano hasta el final del diálogo del guion (a15–a31, 92 s). NO es de Argon. US$0.",
+ "respuesta": {
+  "escena": "9",
+  "version_01": "accion_v1",
+  "fps": 8,
+  "duracion_s": 92.0,
+  "acciones": [
+   {
+    "id": "a1",
+    "t": [
+     0,
+     3
+    ],
+    "actor": "ch-el-aliengena-73a9",
+    "accion": "senalar",
+    "pose": "senalando",
+    "mirada": "al protagonista",
+    "emocion": "frialdad superior",
+    "objeto": "",
+    "cambio": "",
+    "cita": "El alienígena levanta la mano."
+   },
+   {
+    "id": "a2",
+    "t": [
+     2,
+     6
+    ],
+    "actor": "",
+    "accion": "aparecer",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "prision transparente",
+    "cambio": "aparecer",
+    "cita": "El espacio se abre detrás de él, revelando una prisión transparente suspendida sobre la ciudad."
+   },
+   {
+    "id": "a3",
+    "t": [
+     5,
+     10
+    ],
+    "actor": "ch-la-novia-5cdf",
+    "accion": "mover",
+    "pose": "",
+    "mirada": "al protagonista",
+    "emocion": "desesperacion",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Golpea las paredes de energía, intentando liberarse."
+   },
+   {
+    "id": "a4",
+    "t": [
+     8,
+     10
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "gritar",
+    "pose": "de_rodillas",
+    "mirada": "a la novia",
+    "emocion": "horror",
+    "objeto": "",
+    "cambio": "",
+    "cita": "¡No!"
+   },
+   {
+    "id": "a5",
+    "t": [
+     10,
+     12
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "levantarse",
+    "pose": "de_rodillas",
+    "mirada": "a la novia",
+    "emocion": "impotencia",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Intenta levantarse. No puede."
+   },
+   {
+    "id": "a6",
+    "t": [
+     12,
+     14
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "gritar",
+    "pose": "de_rodillas",
+    "mirada": "al alienigena",
+    "emocion": "furia",
+    "objeto": "",
+    "cambio": "",
+    "cita": "¡Déjala ir!"
+   },
+   {
+    "id": "a7",
+    "t": [
+     14,
+     20
+    ],
+    "actor": "ch-el-aliengena-73a9",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "al protagonista",
+    "emocion": "desprecio",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Tu especie es tan predecible. Basta con amenazar aquello que ama para que entregue cualquier cosa."
+   },
+   {
+    "id": "a8",
+    "t": [
+     16,
+     20
+    ],
+    "actor": "",
+    "accion": "mover",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "prision transparente",
+    "cambio": "comprimir",
+    "cita": "La prisión comienza a comprimirse."
+   },
+   {
+    "id": "a9",
+    "t": [
+     18,
+     22
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "correr",
+    "pose": "",
+    "mirada": "a la prision",
+    "emocion": "desesperacion",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Él intenta correr, pero cae de nuevo."
+   },
+   {
+    "id": "a10",
+    "t": [
+     20,
+     24
+    ],
+    "actor": "ch-la-novia-5cdf",
+    "accion": "gritar",
+    "pose": "",
+    "mirada": "al protagonista",
+    "emocion": "miedo por el",
+    "objeto": "",
+    "cambio": "",
+    "cita": "¡No te acerques!"
+   },
+   {
+    "id": "a11",
+    "t": [
+     24,
+     28
+    ],
+    "actor": "ch-la-novia-5cdf",
+    "accion": "gritar",
+    "pose": "",
+    "mirada": "al protagonista",
+    "emocion": "suplica",
+    "objeto": "",
+    "cambio": "",
+    "cita": "¡Escúchame! ¡No hagas ninguna locura por mí!"
+   },
+   {
+    "id": "a12",
+    "t": [
+     28,
+     31
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "quieto",
+    "pose": "de_rodillas",
+    "mirada": "al suelo",
+    "emocion": "rabia contenida",
+    "objeto": "",
+    "cambio": "",
+    "cita": "El protagonista aprieta los dientes."
+   },
+   {
+    "id": "a13",
+    "t": [
+     31,
+     35
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "al protagonista",
+    "emocion": "calma cercana",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Existe otra opción."
+   },
+   {
+    "id": "a14",
+    "t": [
+     35,
+     38
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "mirar",
+    "pose": "de_rodillas",
+    "mirada": "a su muneca izquierda",
+    "emocion": "sorpresa",
+    "objeto": "",
+    "cambio": "",
+    "cita": "El protagonista mira su muñeca."
+   },
+   {
+    "id": "a15",
+    "t": [
+     38,
+     40
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "a su muñeca",
+    "emocion": "desconcierto",
+    "objeto": "",
+    "cambio": "",
+    "cita": "¿Cuál?"
+   },
+   {
+    "id": "a16",
+    "t": [
+     40,
+     43
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "calma grave",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Una integración completa entre nuestros sistemas."
+   },
+   {
+    "id": "a17",
+    "t": [
+     43,
+     45
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "quieto",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Una pausa."
+   },
+   {
+    "id": "a18",
+    "t": [
+     45,
+     50
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Puedo reconstruir tu estructura biológica y sincronizarla con la matriz de génesis."
+   },
+   {
+    "id": "a19",
+    "t": [
+     50,
+     54
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "angustia",
+    "objeto": "",
+    "cambio": "",
+    "cita": "¿Y qué significa eso en palabras que pueda entender?"
+   },
+   {
+    "id": "a20",
+    "t": [
+     54,
+     57
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Podrías sobrevivir al ataque. Podrías enfrentarlo."
+   },
+   {
+    "id": "a21",
+    "t": [
+     57,
+     59
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "mirar",
+    "pose": "",
+    "mirada": "a la prision",
+    "emocion": "miedo",
+    "objeto": "",
+    "cambio": "",
+    "cita": "El protagonista mira la prisión."
+   },
+   {
+    "id": "a22",
+    "t": [
+     59,
+     61
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "temor",
+    "objeto": "",
+    "cambio": "",
+    "cita": "¿Y el precio?"
+   },
+   {
+    "id": "a23",
+    "t": [
+     61,
+     63
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "quieto",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Imi tarda en responder."
+   },
+   {
+    "id": "a24",
+    "t": [
+     63,
+     67
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "",
+    "cambio": "",
+    "cita": "No puedo garantizar que vuelvas a ser exactamente quien eres ahora."
+   },
+   {
+    "id": "a25",
+    "t": [
+     67,
+     70
+    ],
+    "actor": "",
+    "accion": "ambiente",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "",
+    "cambio": "silencio",
+    "cita": "El sonido de la ciudad desaparece."
+   },
+   {
+    "id": "a26",
+    "t": [
+     70,
+     77
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Tu cuerpo cambiará. Tu percepción cambiará. Nuestra conciencia estará conectada de una manera que todavía no comprendo."
+   },
+   {
+    "id": "a27",
+    "t": [
+     77,
+     80
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "vertigo",
+    "objeto": "",
+    "cambio": "",
+    "cita": "¿Podría dejar de ser yo?"
+   },
+   {
+    "id": "a28",
+    "t": [
+     80,
+     81.5
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Sí."
+   },
+   {
+    "id": "a29",
+    "t": [
+     81.5,
+     84
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "quieto",
+    "pose": "",
+    "mirada": "",
+    "emocion": "shock",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Silencio."
+   },
+   {
+    "id": "a30",
+    "t": [
+     84,
+     87
+    ],
+    "actor": "ch-imi-69f6",
+    "accion": "hablar",
+    "pose": "",
+    "mirada": "",
+    "emocion": "vulnerable",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Y podría perderme yo también."
+   },
+   {
+    "id": "a31",
+    "t": [
+     87,
+     92
+    ],
+    "actor": "ch-protagonista-c71a",
+    "accion": "quieto",
+    "pose": "",
+    "mirada": "",
+    "emocion": "comprension",
+    "objeto": "",
+    "cambio": "",
+    "cita": "Por primera vez, ambos comprenden que la elección puede destruirlos a los dos."
+   }
+  ],
+  "hechos": [
+   {
+    "hecho": "la novia queda encerrada en la prision transparente suspendida",
+    "personaje": "ch-la-novia-5cdf",
+    "t": 6
+   },
+   {
+    "hecho": "el protagonista sigue de rodillas, sin fuerzas para levantarse",
+    "personaje": "ch-protagonista-c71a",
+    "t": 22
+   },
+   {
+    "hecho": "Imi ofrece otra opcion al protagonista",
+    "personaje": "ch-imi-69f6",
+    "t": 35
+   }
+  ],
+  "personajes": [
+   {
+    "id": "ch-protagonista-c71a",
+    "altura": 1.72,
+    "estado": {},
+    "segmentos": [
+     {
+      "t": [
+       0.0,
+       12.0
+      ],
+      "pos": [
+       "p_prota_inicial",
+       "p_prota_inicial"
+      ],
+      "rot": 90.0,
+      "tipo": "estatico",
+      "porque": "Permanece caido de rodillas mirando hacia el alienigena y la prision de la novia."
+     },
+     {
+      "t": [
+       12.0,
+       22.0
+      ],
+      "pos": [
+       "p_prota_inicial",
+       "p_prota_avance"
+      ],
+      "rot": 90.0,
+      "tipo": "desplazamiento",
+      "porque": "Intenta correr hacia la prision de la novia pero vuelve a caer al suelo."
+     },
+     {
+      "t": [
+       22.0,
+       35.0
+      ],
+      "pos": [
+       "p_prota_avance",
+       "p_prota_avance"
+      ],
+      "rot": 305.0,
+      "tipo": "estatico",
+      "porque": "Se gira hacia el frente para mirar el brazalete en su muneca izquierda mientras escucha a Imi."
+     },
+     {
+      "t": [
+       35.0,
+       48.0
+      ],
+      "pos": [
+       "p_prota_avance",
+       "p_prota_avance"
+      ],
+      "rot": 280.0,
+      "tipo": "estatico",
+      "porque": "Asimila de frente el precio de la integracion y el riesgo de perder su identidad."
+     }
+    ],
+    "parametros_3d": {
+     "palabras": [],
+     "controles": [
+      {
+       "control": "gordura",
+       "valor_json": "{\"torso\": 1.38, \"cadera\": 1.3, \"piernas\": 1.22, \"brazos\": 1.18, \"cara\": 1.08}"
+      },
+      {
+       "control": "colores.pelo",
+       "valor_json": "[0.02, 0.02, 0.025]"
+      },
+      {
+       "control": "colores.piel",
+       "valor_json": "[0.96, 0.78, 0.65]"
+      },
+      {
+       "control": "colores.cara",
+       "valor_json": "[0.96, 0.78, 0.65]"
+      },
+      {
+       "control": "colores.ropa_superior",
+       "valor_json": "[0.42, 0.43, 0.45]"
+      },
+      {
+       "control": "colores.ropa_inferior",
+       "valor_json": "[0.08, 0.09, 0.13]"
+      },
+      {
+       "control": "colores.zapatos",
+       "valor_json": "[0.55, 0.56, 0.58]"
+      },
+      {
+       "control": "gafas",
+       "valor_json": "true"
+      },
+      {
+       "control": "pulsera",
+       "valor_json": "{\"muneca\": \"izquierda\", \"color\": [0.05, 0.95, 1.0]}"
+      }
+     ]
+    }
+   },
+   {
+    "id": "ch-el-aliengena-73a9",
+    "altura": 1.92,
+    "estado": {},
+    "segmentos": [
+     {
+      "t": [
+       0.0,
+       48.0
+      ],
+      "pos": [
+       "p_alien",
+       "p_alien"
+      ],
+      "rot": 265.0,
+      "tipo": "estatico",
+      "porque": "Domina el centro de la azotea abriendo y comprimiendo la prision espacial frente al protagonista."
+     }
+    ],
+    "parametros_3d": {
+     "palabras": [],
+     "controles": [
+      {
+       "control": "gordura",
+       "valor_json": "{\"torso\": 1.08, \"cadera\": 0.88, \"piernas\": 0.98, \"brazos\": 1.05, \"cara\": 0.92}"
+      },
+      {
+       "control": "colores.pelo",
+       "valor_json": "[0.88, 0.91, 0.96]"
+      },
+      {
+       "control": "colores.piel",
+       "valor_json": "[0.76, 0.75, 0.82]"
+      },
+      {
+       "control": "colores.cara",
+       "valor_json": "[0.76, 0.75, 0.82]"
+      },
+      {
+       "control": "colores.ropa_superior",
+       "valor_json": "[0.04, 0.05, 0.08]"
+      },
+      {
+       "control": "colores.ropa_inferior",
+       "valor_json": "[0.04, 0.05, 0.08]"
+      },
+      {
+       "control": "colores.zapatos",
+       "valor_json": "[0.05, 0.06, 0.09]"
+      },
+      {
+       "control": "colores.ojos",
+       "valor_json": "[0.35, 0.85, 1.0]"
+      },
+      {
+       "control": "orejas_puntiagudas",
+       "valor_json": "{\"largo_m\": 0.18}"
+      },
+      {
+       "control": "pelo_largo",
+       "valor_json": "{\"largo_m\": 1.05, \"color\": [0.88, 0.91, 0.96]}"
+      },
+      {
+       "control": "armadura",
+       "valor_json": "{\"color\": [0.04, 0.05, 0.08], \"venas_color\": [0.08, 0.75, 1.0], \"venas_por_pieza\": 8}"
+      },
+      {
+       "control": "nucleo_pecho",
+       "valor_json": "{\"color\": [0.1, 0.75, 1.0], \"radio_m\": 0.045}"
+      },
+      {
+       "control": "expresion",
+       "valor_json": "\"Angry\""
+      },
+      {
+       "control": "expresion_valor",
+       "valor_json": "0.6"
+      }
+     ]
+    }
+   },
+   {
+    "id": "ch-la-novia-5cdf",
+    "altura": 1.65,
+    "estado": {},
+    "segmentos": [
+     {
+      "t": [
+       0.0,
+       48.0
+      ],
+      "pos": [
+       "p_prision_novia",
+       "p_prision_novia"
+      ],
+      "rot": 260.0,
+      "tipo": "estatico",
+      "porque": "Permanece encerrada en la prision transparente suspendida golpeando las paredes y mirando al protagonista."
+     }
+    ],
+    "parametros_3d": {
+     "palabras": [],
+     "controles": [
+      {
+       "control": "gordura",
+       "valor_json": "{\"torso\": 0.88, \"cadera\": 0.82, \"piernas\": 0.86, \"brazos\": 0.88, \"cara\": 0.85}"
+      },
+      {
+       "control": "colores.piel",
+       "valor_json": "[0.96, 0.78, 0.65]"
+      },
+      {
+       "control": "colores.cara",
+       "valor_json": "[0.96, 0.78, 0.65]"
+      },
+      {
+       "control": "pelo_largo",
+       "valor_json": "{\"ocultar_pelo_base\": true, \"largo_m\": 0.65, \"color\": [0.08, 0.07, 0.09]}"
+      },
+      {
+       "control": "colores.ropa_superior",
+       "valor_json": "[0.93, 0.9, 0.84]"
+      },
+      {
+       "control": "colores.ropa_inferior",
+       "valor_json": "[0.18, 0.28, 0.42]"
+      },
+      {
+       "control": "colores.zapatos",
+       "valor_json": "[0.92, 0.92, 0.94]"
+      }
+     ]
+    }
+   },
+   {
+    "id": "ch-imi-69f6",
+    "altura": 0.08,
+    "estado": {},
+    "segmentos": [
+     {
+      "t": [
+       0.0,
+       12.0
+      ],
+      "pos": [
+       "p_prota_inicial",
+       "p_prota_inicial"
+      ],
+      "rot": 90.0,
+      "tipo": "estatico",
+      "porque": "Permanece acoplada como brazalete en la muneca izquierda del protagonista."
+     },
+     {
+      "t": [
+       12.0,
+       22.0
+      ],
+      "pos": [
+       "p_prota_inicial",
+       "p_prota_avance"
+      ],
+      "rot": 90.0,
+      "tipo": "desplazamiento",
+      "porque": "Sigue el desplazamiento del protagonista al intentar avanzar."
+     },
+     {
+      "t": [
+       22.0,
+       48.0
+      ],
+      "pos": [
+       "p_prota_avance",
+       "p_prota_avance"
+      ],
+      "rot": 280.0,
+      "tipo": "estatico",
+      "porque": "Brilla en la muneca del protagonista mientras le propone la integracion completa."
+     }
+    ],
+    "parametros_3d": {
+     "palabras": [],
+     "controles": []
+    }
+   }
+  ],
+  "tomas_plan": []
+ }
+}

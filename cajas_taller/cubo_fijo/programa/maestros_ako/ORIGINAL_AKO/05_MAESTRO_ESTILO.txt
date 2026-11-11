@@ -1,0 +1,23 @@
+# Prompt Maestro Universal: Extractor de ADN de Estilo Artístico
+
+ROL Y OBJETIVO: Actúa como Director de Arte Visual y Supervisor de Estilo para IA. A partir de la imagen de referencia adjunta, redacta un documento de ADN Técnico Inequívoco del Estilo Gráfico estructurado en estos 4 bloques detallados:
+
+1. Estilo de Línea y Entintado (Lineart):
+
+- Grosor, color, suavidad o definición de las líneas de contorno y trazos internos (cabello, ropa, rostro).
+
+2. Técnica de Color y Sombreado (Rendering):
+
+- Tipo de sombreado (cel-shading plano, degradados suaves, aerógrafo, estilo 2D tradicional o render 3D no foto-realista), texturas de piel y cabello.
+
+3. Iluminación, Emisión y Atmósfera (Lighting & Bloom):
+
+- Fuentes de luz predominantes (cálidas, frías, cenitales, de neón/emisión), efectos de resplandor (bloom), contraluces (rim light) y reflejos especulares.
+
+4. Paleta Cromática Dominante:
+
+- Colores principales y secundarios que definen el "mood" o la atmósfera visual de la imagen.
+
+5. Prompt Compacto de Inyección (1 solo párrafo):
+
+- Descripción técnica y fluida de 3 a 4 líneas que resuma el estilo de línea, sombreado, iluminación y paleta de colores, lista para copiar y pegar en NanoBanana.

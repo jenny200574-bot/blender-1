@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-flores-jardin",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Tipo de objeto: Prop decorativo de entorno (macizo de 5 flores estilizadas estilo cartoon).\n- Geometría: Silueta en abanico asimétrico, volúmenes rechonchos e inflados, bordes completamente redondeados sin aristas vivas. Pieza estática unificada, con tallos tubulares, hojas en forma de gota gruesa y flores de 8 pétalos redondeados.\n- Punto de anclaje: Suelo (mediante una base ovalada de tierra con fondo plano)."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Material principal: Polímero plástico suave o arcilla digital (estilo *clay render*) con acabado satinado mate y superficies totalmente lisas.\n- Paleta de colores: Pétalos en rosa magenta, naranja vibrante y amarillo brillante; botones centrales en amarillo dorado.\n- Materiales secundarios: Tallos, hojas, cálices traseros y césped en verde medio saturado; base de tierra en marrón cálido.\n- Emisión lumínica: Resplandor suave en amarillo cálido emanando de los centros florales (visible en la variante inferior derecha)."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Distribución: Cinco flores en total (una magenta grande central, una magenta mediana a la izquierda, una amarilla a la derecha y dos naranjas pequeñas en el plano frontal/intermedio).\n- Componentes: Centros florales semiesféricos; pares de hojas gruesas opuestas a mitad de los tallos; cáliz circular verde en el reverso de cada flor conectando con el tallo; múltiples briznas de césped cortas y curvas distribuidas en la base sobre la tierra. Sin grabados, costuras ni texturas de desgaste."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado activo/inactivo: Prop estático de suelo. En estado inactivo mantiene sombreado mate uniforme; en estado activo, los núcleos amarillos brillan iluminando sutilmente los pétalos adyacentes.\n- Regla de distancia (Plano general): Se omiten las briznas de césped individuales y los cálices traseros, simplificando el objeto a cinco manchas de color (magenta, naranja, amarillo) sobre tallos verdes simples."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Prop 3D estilizado de un macizo de cinco flores cartoon sobre una base ovalada de tierra marrón con brotes de césped, con geometría rechoncha, bordes redondeados y acabado plástico satinado mate completamente liso. Compuesto por flores de ocho pétalos gruesos en colores rosa magenta, naranja y amarillo, con centros semiesféricos amarillos que emiten un suave brillo cálido, sostenidas por tallos cilíndricos con hojas ovaladas y cálices traseros en color verde vibrante, diseñado como activo decorativo estático de suelo."
+    }
+  ],
+  "inyeccion": "Prop 3D estilizado de un macizo de cinco flores cartoon sobre una base ovalada de tierra marrón con brotes de césped, con geometría rechoncha, bordes redondeados y acabado plástico satinado mate completamente liso. Compuesto por flores de ocho pétalos gruesos en colores rosa magenta, naranja y amarillo, con centros semiesféricos amarillos que emiten un suave brillo cálido, sostenidas por tallos cilíndricos con hojas ovaladas y cálices traseros en color verde vibrante, diseñado como activo decorativo estático de suelo.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Tipo de objeto: Prop decorativo de entorno (macizo de 5 flores estilizadas estilo cartoon).\n- Geometría: Silueta en abanico asimétrico, volúmenes rechonchos e inflados, bordes completamente redondeados sin aristas vivas. Pieza estática unificada, con tallos tubulares, hojas en forma de gota gruesa y flores de 8 pétalos redondeados.\n- Punto de anclaje: Suelo (mediante una base ovalada de tierra con fondo plano).\n\n2. Materiales y Paleta de Color:\n\n- Material principal: Polímero plástico suave o arcilla digital (estilo *clay render*) con acabado satinado mate y superficies totalmente lisas.\n- Paleta de colores: Pétalos en rosa magenta, naranja vibrante y amarillo brillante; botones centrales en amarillo dorado.\n- Materiales secundarios: Tallos, hojas, cálices traseros y césped en verde medio saturado; base de tierra en marrón cálido.\n- Emisión lumínica: Resplandor suave en amarillo cálido emanando de los centros florales (visible en la variante inferior derecha).\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Distribución: Cinco flores en total (una magenta grande central, una magenta mediana a la izquierda, una amarilla a la derecha y dos naranjas pequeñas en el plano frontal/intermedio).\n- Componentes: Centros florales semiesféricos; pares de hojas gruesas opuestas a mitad de los tallos; cáliz circular verde en el reverso de cada flor conectando con el tallo; múltiples briznas de césped cortas y curvas distribuidas en la base sobre la tierra. Sin grabados, costuras ni texturas de desgaste.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado activo/inactivo: Prop estático de suelo. En estado inactivo mantiene sombreado mate uniforme; en estado activo, los núcleos amarillos brillan iluminando sutilmente los pétalos adyacentes.\n- Regla de distancia (Plano general): Se omiten las briznas de césped individuales y los cálices traseros, simplificando el objeto a cinco manchas de color (magenta, naranja, amarillo) sobre tallos verdes simples.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nProp 3D estilizado de un macizo de cinco flores cartoon sobre una base ovalada de tierra marrón con brotes de césped, con geometría rechoncha, bordes redondeados y acabado plástico satinado mate completamente liso. Compuesto por flores de ocho pétalos gruesos en colores rosa magenta, naranja y amarillo, con centros semiesféricos amarillos que emiten un suave brillo cálido, sostenidas por tallos cilíndricos con hojas ovaladas y cálices traseros en color verde vibrante, diseñado como activo decorativo estático de suelo.",
+  "creado": "2026-11-06T04:03:14+01:00"
+}

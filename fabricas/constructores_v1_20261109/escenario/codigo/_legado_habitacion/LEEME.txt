@@ -1,0 +1,2 @@
+Copias SIN generalizar del prototipo 9-nov (solo sirven para comparar la habitación con su molde n8n y con las recetas G1–G4).
+La fábrica conectada NO las usa. La hoja genérica es ../hoja_escenario.py.

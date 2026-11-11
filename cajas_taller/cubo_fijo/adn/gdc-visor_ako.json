@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-visor",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Gafas tecnológicas tipo visor envolvente de estilo estilizado. Silueta aerodinámica y curva con lente continua de una sola pieza y montura de grosor medio con biseles suaves y redondeados. Estructura articulada compuesta por el chasis frontal y dos patillas laterales abatibles.\n- Anclaje facial estándar mediante apoyo en el puente nasal integrado en el chasis y sujeción craneal con patillas curvadas tras las orejas."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Chasis principal de polímero sintético rígido con acabado mate-satinado en color azul cobalto medio.\n- Materiales secundarios en plástico mate color blanco hueso/gris claro, ubicados en paneles superiores, bloques de las bisagras y el borde inferior interno de las patillas.\n- Lente de policarbonato translúcido autoiluminado. Emisión lumínica estándar en azul cian brillante con luces laterales en naranja ámbar; en estado de \"Alarma\", toda la emisión lumínica (lente, nodo central y laterales) cambia a rojo neón intenso."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Nodo circular central (sensor o lente) incrustado en el puente superior, enmarcado por la montura azul y flanqueado simétricamente por dos placas blancas angulares en el arco superciliar.\n- En ambos laterales exteriores, justo antes de la bisagra, incorpora una luz LED en forma de píldora horizontal.\n- Uniones de las patillas reforzadas con apliques envolventes en blanco hueso que se extienden como una franja continua por la base inferior de cada patilla hasta la punta."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado activo/inactivo: La lente mantiene una semitransparencia constante que deja entrever el interior, emitiendo un halo de luz (cian por defecto, rojo en alerta) que baña sutilmente el rostro del portador desde el borde biselado interno.\n- Regla de distancia (Plano general): En planos lejanos se simplifica como una máscara compacta azul con el visor sólido brillante (cian o rojo) y el punto luminoso central, omitiendo las líneas de ensamblaje y los LEDs laterales."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Gafas visor sci-fi envolventes de diseño estilizado 3D, montura gruesa de bordes redondeados en plástico mate azul cobalto con paneles de acento en blanco hueso en las cejas, bisagras y borde inferior de las patillas. Lente continua semitransparente de una pieza y nodo circular central superior con emisión luminosa en azul cian brillante (o rojo neón en modo alarma), complementado con un indicador LED horizontal color naranja ámbar incrustado en cada sien."
+    }
+  ],
+  "inyeccion": "Gafas visor sci-fi envolventes de diseño estilizado 3D, montura gruesa de bordes redondeados en plástico mate azul cobalto con paneles de acento en blanco hueso en las cejas, bisagras y borde inferior de las patillas. Lente continua semitransparente de una pieza y nodo circular central superior con emisión luminosa en azul cian brillante (o rojo neón en modo alarma), complementado con un indicador LED horizontal color naranja ámbar incrustado en cada sien.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Gafas tecnológicas tipo visor envolvente de estilo estilizado. Silueta aerodinámica y curva con lente continua de una sola pieza y montura de grosor medio con biseles suaves y redondeados. Estructura articulada compuesta por el chasis frontal y dos patillas laterales abatibles.\n- Anclaje facial estándar mediante apoyo en el puente nasal integrado en el chasis y sujeción craneal con patillas curvadas tras las orejas.\n\n2. Materiales y Paleta de Color:\n\n- Chasis principal de polímero sintético rígido con acabado mate-satinado en color azul cobalto medio.\n- Materiales secundarios en plástico mate color blanco hueso/gris claro, ubicados en paneles superiores, bloques de las bisagras y el borde inferior interno de las patillas.\n- Lente de policarbonato translúcido autoiluminado. Emisión lumínica estándar en azul cian brillante con luces laterales en naranja ámbar; en estado de \"Alarma\", toda la emisión lumínica (lente, nodo central y laterales) cambia a rojo neón intenso.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Nodo circular central (sensor o lente) incrustado en el puente superior, enmarcado por la montura azul y flanqueado simétricamente por dos placas blancas angulares en el arco superciliar.\n- En ambos laterales exteriores, justo antes de la bisagra, incorpora una luz LED en forma de píldora horizontal.\n- Uniones de las patillas reforzadas con apliques envolventes en blanco hueso que se extienden como una franja continua por la base inferior de cada patilla hasta la punta.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado activo/inactivo: La lente mantiene una semitransparencia constante que deja entrever el interior, emitiendo un halo de luz (cian por defecto, rojo en alerta) que baña sutilmente el rostro del portador desde el borde biselado interno.\n- Regla de distancia (Plano general): En planos lejanos se simplifica como una máscara compacta azul con el visor sólido brillante (cian o rojo) y el punto luminoso central, omitiendo las líneas de ensamblaje y los LEDs laterales.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nGafas visor sci-fi envolventes de diseño estilizado 3D, montura gruesa de bordes redondeados en plástico mate azul cobalto con paneles de acento en blanco hueso en las cejas, bisagras y borde inferior de las patillas. Lente continua semitransparente de una pieza y nodo circular central superior con emisión luminosa en azul cian brillante (o rojo neón en modo alarma), complementado con un indicador LED horizontal color naranja ámbar incrustado en cada sien.",
+  "creado": "2026-11-06T04:03:13+01:00"
+}

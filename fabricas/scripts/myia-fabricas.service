@@ -1,0 +1,14 @@
+[Unit]
+Description=MYIA Fabricas async service (taller 213, not production)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/myia-fabricas/app
+ExecStart=/usr/bin/python3 /opt/myia-fabricas/app/server.py
+Restart=on-failure
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

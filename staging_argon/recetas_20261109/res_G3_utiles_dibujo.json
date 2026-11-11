@@ -1,0 +1,11 @@
+{
+  "caso": "G3_utiles_dibujo",
+  "enviado": true,
+  "id": "receta-G3_utiles_dibujo-20261109-192600",
+  "est": 0.6785,
+  "usd_real": 0.1985,
+  "fin": "FinishReason.STOP",
+  "tokens_entrada": "[REDACTED]",
+  "tokens_salida": "[REDACTED]",
+  "salida": "/opt/myia-staging-arreglos-20261026/recetas_20261109/respuestas/G3_utiles_dibujo.json"
+}

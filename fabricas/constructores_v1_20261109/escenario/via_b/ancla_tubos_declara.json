@@ -1,0 +1,7 @@
+{
+ "nota": "objeto_id -> clave del dato de la receta que declara la altura del borde superior del tubo (datos revisados; antes estaban en ancla_tubos.py). Valor lista -> primer número.",
+ "declara": {
+  "amb-esc-habitacion-cesta-tela": "receta.altura_cuerpo_y_asas_m",
+  "amb-esc-habitacion-bote-crayones": "receta.cubilete.alto_m"
+ }
+}

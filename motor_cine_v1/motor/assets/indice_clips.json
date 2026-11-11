@@ -1,0 +1,132 @@
+{
+ "contrato": "indice_clips_v1",
+ "nota": "Clips de mocap con licencia comercial OK. CMU: gratis (no revender dataset). 100STYLE: CC BY 4.0 (citar).",
+ "clips": {
+  "caminar": {
+   "fuente": "CMU",
+   "archivo": "mocap/cmu/02_01.bvh",
+   "perfil": "CMU",
+   "licencia": "CMU libre"
+  },
+  "caminar_neutral": {
+   "fuente": "100STYLE",
+   "archivo": "mocap/100STYLE/Neutral/Neutral_FW.bvh",
+   "perfil": "100STYLE",
+   "licencia": "CC BY 4.0"
+  },
+  "caminar_puntillas": {
+   "fuente": "100STYLE",
+   "archivo": "mocap/100STYLE/Tiptoe/Tiptoe_FW.bvh",
+   "perfil": "100STYLE",
+   "licencia": "CC BY 4.0"
+  },
+  "caminar_alt": {
+   "fuente": "CMU",
+   "archivo": "mocap/cmu/07_01.bvh",
+   "perfil": "CMU",
+   "licencia": "CMU libre"
+  },
+  "girar": {
+   "fuente": "CMU",
+   "archivo": "mocap/cmu/16_17.bvh",
+   "perfil": "CMU",
+   "licencia": "CMU libre"
+  },
+  "girar_alt": {
+   "fuente": "CMU",
+   "archivo": "mocap/cmu/16_19.bvh",
+   "perfil": "CMU",
+   "licencia": "CMU libre"
+  },
+  "sentarse": {
+   "fuente": "CMU",
+   "archivo": "mocap/cmu/13_01.bvh",
+   "perfil": "CMU",
+   "licencia": "CMU libre"
+  },
+  "quieto": {
+   "fuente": "CMU",
+   "archivo": "mocap/cmu/13_01.bvh",
+   "perfil": "CMU",
+   "rango_s": [
+    0.0,
+    1.0
+   ],
+   "licencia": "CMU libre",
+   "nota": "de pie antes de sentarse: pose de reposo real"
+  },
+  "trotar": {
+   "fuente": "CMU",
+   "archivo": "mocap/cmu/02_03.bvh",
+   "perfil": "CMU",
+   "licencia": "CMU libre",
+   "nota": "run/jog; se usa cuando el 01 pide más velocidad que 1.6x la caminata del molde (personajes pequeños)",
+   "url": "https://github.com/una-dinosauria/cmu-mocap (conversión B. Hahne)"
+  }
+ },
+ "perfiles_huesos": {
+  "CMU": {
+   "Hips": "cadera",
+   "Spine": "columna",
+   "Spine1": "pecho",
+   "Neck": "cuello",
+   "Head": "cabeza",
+   "LeftShoulder": "hombro_L",
+   "LeftArm": "brazo_L",
+   "LeftForeArm": "antebrazo_L",
+   "LeftHand": "mano_L",
+   "RightShoulder": "hombro_R",
+   "RightArm": "brazo_R",
+   "RightForeArm": "antebrazo_R",
+   "RightHand": "mano_R",
+   "LeftUpLeg": "femur_L",
+   "LeftLeg": "tibia_L",
+   "LeftFoot": "pie_L",
+   "RightUpLeg": "femur_R",
+   "RightLeg": "tibia_R",
+   "RightFoot": "pie_R"
+  },
+  "100STYLE": {
+   "Hips": "cadera",
+   "Chest": "columna",
+   "Chest3": "pecho",
+   "Neck": "cuello",
+   "Head": "cabeza",
+   "LeftCollar": "hombro_L",
+   "LeftShoulder": "brazo_L",
+   "LeftElbow": "antebrazo_L",
+   "LeftWrist": "mano_L",
+   "RightCollar": "hombro_R",
+   "RightShoulder": "brazo_R",
+   "RightElbow": "antebrazo_R",
+   "RightWrist": "mano_R",
+   "LeftHip": "femur_L",
+   "LeftKnee": "tibia_L",
+   "LeftAnkle": "pie_L",
+   "RightHip": "femur_R",
+   "RightKnee": "tibia_R",
+   "RightAnkle": "pie_R"
+  },
+  "KIMODO_SOMA": {
+   "Hips": "cadera",
+   "Spine1": "columna",
+   "Chest": "pecho",
+   "Neck1": "cuello",
+   "Head": "cabeza",
+   "LeftShoulder": "hombro_L",
+   "LeftArm": "brazo_L",
+   "LeftForeArm": "antebrazo_L",
+   "LeftHand": "mano_L",
+   "RightShoulder": "hombro_R",
+   "RightArm": "brazo_R",
+   "RightForeArm": "antebrazo_R",
+   "RightHand": "mano_R",
+   "LeftLeg": "femur_L",
+   "LeftShin": "tibia_L",
+   "LeftFoot": "pie_L",
+   "RightLeg": "femur_R",
+   "RightShin": "tibia_R",
+   "RightFoot": "pie_R"
+  }
+ }
+}

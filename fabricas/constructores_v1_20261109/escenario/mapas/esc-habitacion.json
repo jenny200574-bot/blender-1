@@ -1,0 +1,245 @@
+{
+ "escenario": "esc-habitacion",
+ "nota": "Decisiones por objeto del prototipo 9-nov (antes fijas en plan_escenario.py:24-64). Datos, no código.",
+ "MAPA": {
+  "Ventana con vista al arcoíris": {
+   "fid": "ventana"
+  },
+  "Puerta de entrada de la habitación": {
+   "fid": "puerta"
+  },
+  "Mesa de noche junto a la cama": {
+   "fid": "mesa_noche"
+  },
+  "obj-cama": {
+   "fid": "cama",
+   "quitar_piezas": [
+    "almohada"
+   ]
+  },
+  "obj-almohada": {
+   "fid": "cojin",
+   "aprox": true
+  },
+  "obj-lampara": {
+   "fid": "lampara_colgante"
+  },
+  "obj-armario": {
+   "fid": "armario"
+  },
+  "obj-libro-cuentos": {
+   "fid": "libro"
+  },
+  "obj-cofre-dorado": {
+   "fid": "baul",
+   "aprox": true
+  },
+  "obj-lapiz": {
+   "fid": null
+  },
+  "obj-visor-spark": {
+   "fid": null
+  },
+  "obj-candados-cofre": {
+   "fid": null
+  },
+  "obj-pincel-magico": {
+   "fid": null
+  },
+  "obj-vocales": {
+   "fid": null
+  },
+  "obj-rayo-confundidor": {
+   "fid": null,
+   "efecto": true
+  },
+  "obj-numeros-1-al-5": {
+   "fid": null
+  },
+  "obj-papel-numeros": {
+   "fid": null
+  },
+  "amb-esc-habitacion-cortinas-ventana": {
+   "fid": null
+  },
+  "amb-esc-habitacion-barra-cortinero": {
+   "fid": null
+  },
+  "amb-esc-habitacion-edredon-acolchado": {
+   "fid": "cojin",
+   "aprox": true
+  },
+  "amb-esc-habitacion-cojin-estrella": {
+   "fid": "cojin",
+   "aprox": true
+  },
+  "amb-esc-habitacion-porta-lapices": {
+   "fid": "vaso",
+   "aprox": true
+  },
+  "amb-esc-habitacion-lamparita-noche": {
+   "fid": null
+  },
+  "amb-esc-habitacion-estanteria-baja": {
+   "fid": "estanteria"
+  },
+  "amb-esc-habitacion-libros-apilados": {
+   "fid": "libro",
+   "pila": 3
+  },
+  "amb-esc-habitacion-bloques-geometricos": {
+   "fid": null
+  },
+  "amb-esc-habitacion-maceta-suculenta": {
+   "fid": "maceta_planta"
+  },
+  "amb-esc-habitacion-baul-juguetes": {
+   "fid": "baul"
+  },
+  "amb-esc-habitacion-peluche-oso": {
+   "fid": null
+  },
+  "amb-esc-habitacion-pelota-colores": {
+   "fid": null
+  },
+  "amb-esc-habitacion-cesta-tela": {
+   "fid": null
+  },
+  "amb-esc-habitacion-mesa-dibujo": {
+   "fid": "mesa_redonda"
+  },
+  "amb-esc-habitacion-banquito-madera": {
+   "fid": "taburete"
+  },
+  "amb-esc-habitacion-bote-crayones": {
+   "fid": null
+  },
+  "amb-esc-habitacion-repisa-pared-izquierda": {
+   "fid": null
+  },
+  "amb-esc-habitacion-avion-madera": {
+   "fid": null,
+   "nota": "avioneta de Star no escala a 22 cm (error de ajuste 1,1 m): falta"
+  },
+  "amb-esc-habitacion-cuadros-infantiles": {
+   "fid": "cuadro",
+   "par": true
+  },
+  "amb-esc-habitacion-perchero-pared": {
+   "fid": null
+  },
+  "amb-esc-habitacion-interruptor-luz": {
+   "fid": null
+  },
+  "amb-esc-habitacion-zocalo-perimetral": {
+   "estructura": true
+  },
+  "amb-esc-habitacion-guirnalda-banderines": {
+   "fid": null
+  }
+ },
+ "COLORES_ADN": {
+  "obj-cama": {
+   "colores": {
+    "*": "#C88A55",
+    "cabecero": "#F2E2CE",
+    "colchon": "#FFFFFF",
+    "cobija": "#5B9BD5"
+   },
+   "fuente": "rama_4c obj-cama prompt_imagen (#C88A55 madera, #F2E2CE panel, #5B9BD5 cubrecama) + ADN gdc-cama-nino (colchón blanco)"
+  },
+  "obj-almohada": {
+   "colores": {
+    "*": "#FFE28A"
+   },
+   "fuente": "rama_4c obj-almohada (#FFE28A mantequilla, ribete #F5E6D3)"
+  },
+  "obj-armario": {
+   "colores": {
+    "*": "#C88A55",
+    "puerta": "#F2E2CE",
+    "tirador": "#7EB6E6"
+   },
+   "fuente": "rama_4c obj-armario (#C88A55, puertas #F2E2CE, ribete azul cielo)"
+  },
+  "obj-libro-cuentos": {
+   "colores": {
+    "*": "#1F3A6B",
+    "hojas": "#F5E6D3"
+   },
+   "fuente": "ADN gdc-libro-cuentos (tapas azul marino/cian, páginas crema) — sin hex en ADN: azul marino aproximado"
+  },
+  "obj-cofre-dorado": {
+   "colores": {
+    "*": "#F5C542",
+    "cerradura": "#C9A227"
+   },
+   "fuente": "ADN gdc-cofre-abecedario «metal dorado» + luz_por_escena dorado #F5C54x — hex aproximado"
+  },
+  "obj-candados-cofre": {
+   "colores": {
+    "*": "#C9A227"
+   },
+   "fuente": "ADN gdc-candados «bloque cuadrado ocre» (sin hex: ocre aproximado)"
+  },
+  "obj-vocales": {
+   "colores": {
+    "*": "#9A9A9A"
+   },
+   "fuente": "ADN gdc-vocales «gris neutro medio» (sin hex: aproximado)"
+  },
+  "obj-papel-numeros": {
+   "colores": {
+    "*": "#F2E2CE"
+   },
+   "fuente": "ADN gdc-papel-numeros «crema / beige cálido» (sin hex: aproximado)"
+  },
+  "obj-pincel-magico": {
+   "colores": {
+    "*": "#FFC928"
+   },
+   "fuente": "ADN gdc-pincel-pintor «amarillo cálido» (sin hex: aproximado)"
+  },
+  "obj-visor-spark": {
+   "colores": {
+    "*": "#2F5FC4"
+   },
+   "fuente": "ADN gdc-visor «azul cobalto medio» (sin hex: aproximado)"
+  },
+  "obj-lapiz": {
+   "colores": {
+    "*": "#FFC928"
+   },
+   "fuente": "SIN ADN de objeto (no hay gdc-lapiz): amarillo genérico, VACÍO"
+  },
+  "obj-lampara": {
+   "colores": {
+    "*": "#FFC978",
+    "cable": "#FFF8EE",
+    "roseton": "#FAF3E8"
+   },
+   "fuente": "luz_por_escena: lámpara colgante ámbar #FFC978"
+  },
+  "Ventana con vista al arcoíris": {
+   "colores": {
+    "*": "#FFF8EE",
+    "vidrio": "#BFE6FF"
+   },
+   "fuente": "4a1 «Madera lacada blanco cálido y vidrio translúcido»; zócalo #FFF8EE"
+  },
+  "Puerta de entrada de la habitación": {
+   "colores": {
+    "*": "#E8D3B9",
+    "pomo": "#F5C542"
+   },
+   "fuente": "4a1 «beige cálido satinado con pomo dorado»"
+  },
+  "Mesa de noche junto a la cama": {
+   "colores": {
+    "*": "#C88A55",
+    "cajon": "#F2E2CE"
+   },
+   "fuente": "4a1 «Madera clara»; materiales_texturas muebles #C88A55 + crema"
+  }
+ }
+}

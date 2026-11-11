@@ -1,0 +1,34 @@
+{
+  "id": "gdc-rio",
+  "nombre": "rio",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "escenario",
+  "sellado": true,
+  "version": 2,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-rio.png",
+  "imagen_sha256": "3ad738b61ea7a92ad58bd9563a64d423aa2e0973134c9561d9a67579ccf3c749",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 300,
+    "fondo_cm": 90,
+    "alto_cm": 20
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-flores-jardin__aafda1.json",
+  "ids_capitulo": [
+    "obj-rio"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-rio"
+  ],
+  "frase_sello": "Prop ambiental 3D estilizado de un tramo de río modular con silueta en curva S, perfil bajo y base plana para suelo. Chasis de orillas en arcilla mate color beige arena, flanqueado en ambos bordes laterales por una fila continua de guijarros ovalados suaves en tonos crema, ocre y gris cálido. Canal central de agua con acabado brillante especular en colores azul cian y celeste, detallado con surcos ondulados longitudinales esculpidos que simulan la corriente en una sola pieza sólida.",
+  "actualizado": "2026-11-06T04:03:15+01:00",
+  "origen": "sellar"
+}

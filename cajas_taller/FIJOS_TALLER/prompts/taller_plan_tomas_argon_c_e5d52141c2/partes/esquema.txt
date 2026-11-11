@@ -1,0 +1,1 @@
+{"type":"object","required":["alineacion","razonamiento","prompt_A_L13","prompt_A_L14","prompt_B_L13","prompt_B_L14"]}

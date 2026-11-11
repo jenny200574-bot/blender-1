@@ -1,0 +1,144 @@
+You are a senior Blender rigging / animation-pipeline reviewer. Answer ONLY with JSON that matches the schema. Be concrete and short.
+
+CONTEXT: an automatic, generic pipeline turns a scene plan into a grey 3D video in Blender 4.2 (background). Characters: VRM humanoids whose body shape is set by per-bone POSE scale ("gordura", e.g. UpperLeg scale (1.22,1,1.22)), plus any other rig (animals, glTF Fox, code-built rigs) posed by a geometric classifier. Poses come from a small library (de_pie, caminando, sentado, de_rodillas, acostado_boca_arriba, acostado_boca_abajo, senalando) and are written per keyframe with pb.matrix = T(head) @ R @ T(-head) @ pb.matrix.
+
+BUG: in a real scene a kneeling character broke (foot bone 1.69 m, head 2.63 m, legs in a V).
+PROVEN ROOT CAUSE (measured in Blender): child bones inherit scale FULL from a non-uniformly scaled, rotated parent -> shear; writing pb.matrix decomposes that shear into the child's pb.scale; the old code never reset scale and never keyed it, so the error ACCUMULATED with each pose application. LowerLeg length ratio per step with gordura: 1.0, 0.82, 0.81, 0.66, 0.55 ... 0.30 after 11 steps (in the video it reached 0.015 m, scale (1.07,0.03,35.5)). Without gordura: zero drift (blending is not the cause). One application alone is fine.
+
+FIX (generic, any rig): on first use store each pose bone's own scale (the character's proportions); if any is non-uniform switch bones with inherit_scale FULL to ALIGNED (no shear); reset scale to that base with rotation each application and restore it after every pb.matrix write; key scale too. Result: 11-step chain LowerLeg ratio 1.000 every step.
+Code of the fix:
+def preparar(A):
+    """o114 (causa probada): la «gordura» escala huesos de forma NO uniforme; un hijo que hereda la escala completa (inherit_scale FULL)
+    sufre cizalla al girar y cada pose escrita por matriz le deja escala de más que se ACUMULA pose tras pose (pierna 1.0 -> 0.03).
+    Arreglo genérico: guardar UNA vez la escala propia de cada hueso (proporciones del personaje), heredar la escala ALINEADA (sin
+    cizalla) y volver a poner esa escala después de cada giro. Vale para cualquier esqueleto."""
+    if A.get('o114_escala_base') is None:
+        A['o114_escala_base'] = json.dumps({pb.name: list(pb.scale) for pb in A.pose.bones})
+        if any(max(pb.scale) - min(pb.scale) > 1e-4 for pb in A.pose.bones):
+            act = bpy.context.view_layer.objects.active; bpy.context.view_layer.objects.active = A
+            bpy.ops.object.mode_set(mode='EDIT')
+            for b in A.data.edit_bones:
+                if b.inherit_scale == 'FULL': b.inherit_scale = 'ALIGNED'
+            bpy.ops.object.mode_set(mode='OBJECT'); bpy.context.view_layer.objects.active = act
+    return json.loads(A['o114_escala_base'])
+def aplicar(A, LIB, nombre, espejo=False, pos=(0, 0, 0), rot_z=0.0):
+    pid = buscar(LIB, nombre); p, partes = resolver(LIB, pid)
+    if espejo: partes = espejar(partes)
+    BASE = preparar(A)
+    for pb in A.pose.bones: pb.rotation_mode = 'QUATERNION'; pb.rotation_quaternion = (1, 0, 0, 0); pb.location = (0, 0, 0); pb.scale = BASE[pb.name]
+    bpy.context.view_layer.update()
+    orden = ['torso', 'cuello', 'brazo_izq', 'antebrazo_izq', 'brazo_der', 'antebrazo_der', 'muslo_izq', 'pierna_izq', 'muslo_der', 'pierna_der', 'pie_izq', 'pie_der']
+    for parte in orden:
+        if parte not in partes: continue
+        pb = A.pose.bones[LIB['partes'][parte]]; bpy.context.view_layer.update()
+        cur = (A.pose.bones['J_Bip_C_Neck'].head - pb.head) if parte == 'torso' else (pb.tail - pb.head)
+        d = Vector(partes[parte]['dir']).normalized()
+        q = cur.normalized().rotation_difference(d) @ Quaternion(cur.normalized(), 0)
+        q = Quaternion(d, math.radians(partes[parte].get('giro', 0))) @ q
+        h = pb.head.copy(); pb.matrix = Matrix.Translation(h) @ q.to_matrix().to_4x4() @ Matrix.Translation(-h) @ pb.matrix
+        pb.scale = BASE[pb.name]   # o114: la escala del personaje no cambia al girar
+    A.rotation_mode = 'XYZ'; A.rotation_euler = (math.radians(p.get('cuerpo', 0)), 0, math.radians(rot_z)); A.location = Vector(pos)
+    bpy.context.view_layer.update(); return pid, p
+
+
+BODY GUARD (runs every frame for every armature; on failure the scene is REJECTED naming bone and frame). Reference = the built body standing (real proportions). Code:
+"""o114 (t312u/t313u) GUARDIA DEL CUERPO — cualquier esqueleto (humano VRM, animal, rig hecho en código). Se llama EN CADA CUADRO.
+Reglas (si una falla, la escena se RECHAZA nombrando hueso y cuadro):
+  1. largo de cada hueso = su largo de reposo (± TOL_LARGO) — un hueso estirado/aplastado = cuerpo roto;
+  2. altura sobre el piso <= altura de pie (× TOL_ALTO) — nadie crece;
+  3. contacto según la pose (solo cuadros con la pose QUIETA, no en transición): pies; rodillas al arrodillarse; torso acostado;
+  4. cabeza por encima de la cadera salvo poses acostadas;
+  5. ningún hueso por debajo del piso (± TOL_PISO).
+Roles (pie, rodilla, torso, cabeza, cadera) salen de la biblioteca humana (partes) o del clasificador universal (por geometría)."""
+from mathutils import Vector
+TOL_LARGO, TOL_ALTO, TOL_PISO = 0.10, 1.08, 0.05
+TOL_CONTACTO, TOL_TORSO = 0.10, 0.25   # fracción de la altura de pie del propio cuerpo (vale igual para un gato que para un gigante)
+CONTACTO = {'de_pie': 'pie', 'caminando': 'pie_uno', 'senalando': 'pie', 'sentado': 'pie', 'de_rodillas': 'rodilla',
+            'acostado_boca_arriba': 'torso', 'acostado_boca_abajo': 'torso'}
+ACOSTADO = ('acostado', 'boca_arriba', 'boca_abajo', 'enrollado')
+
+def roles(A, LIB=None, R=None):
+    """{'pie': [(hueso, 'tail'|'head')], 'rodilla': [...], 'torso': [...], 'cabeza': (h, extremo), 'cadera': (h, extremo)} o None."""
+    B = A.data.bones
+    if LIB and all(LIB['partes'].get(k) in B for k in ('pie_izq', 'pie_der', 'pierna_izq', 'pierna_der', 'torso')):
+        P = LIB['partes']; cab = 'J_Bip_C_Head' if 'J_Bip_C_Head' in B else P['cuello']
+        return {'pie': [(P['pie_izq'], 'head'), (P['pie_der'], 'head')], 'rodilla': [(P['pierna_izq'], 'head'), (P['pierna_der'], 'head')],
+                'torso': [(P['torso'], 'head'), (P['cuello'], 'head')], 'cabeza': (cab, 'head'), 'cadera': (P['torso'], 'head')}
+    if R:
+        patas = [R[k] for k in R if isinstance(R[k], list) and (k.startswith('pata_') or k.startswith('pierna_')) and R[k]]
+        col = R.get('columna') or []
+        return {'pie': [(hs[-1], 'punta') for hs in patas], 'rodilla': [(hs[len(hs) // 2], 'head') for hs in patas],
+                'torso': [(h, 'head') for h in col[:2]], 'cabeza': ((R.get('cabeza') or col)[-1], 'tail') if (R.get('cabeza') or col) else None,
+                'cadera': (col[0], 'head') if col else None}
+    return None
+
+class Guardia:
+    def __init__(self, A, actor, ROL, mallas=(), piso_z=0.0):
+        self.A, self.actor, self.ROL = A, actor, ROL
+        # solo huesos que mueven piel (los de control como 'Root' se quedan en el origen y no son cuerpo)
+        vg = set()
+        for m in mallas:
+            if getattr(m, 'type', '') != 'MESH' or not m.vertex_groups: continue
+            usados = {g.group for v in m.data.vertices for g in v.groups if g.weight > 0.01}
+            vg |= {m.vertex_groups[i].name for i in usados if i < len(m.vertex_groups)}
+        self.cuerpo = [pb for pb in A.pose.bones if pb.name in vg] or list(A.pose.bones)
+        # referencia = el cuerpo YA armado y DE PIE (con sus proporciones reales: gordura, altura, escala del rig)
+        self.largo = {pb.name: (pb.tail - pb.head).length for pb in self.cuerpo if (pb.tail - pb.head).length >= 0.02}
+        P = [A.matrix_world @ p for pb in self.cuerpo for p in (pb.head, pb.tail)]
+        self.alto_pie = max(p.z for p in P) - piso_z                     # altura de pie sobre el piso
+        self.tam = max(max(p[i] for p in P) - min(p[i] for p in P) for i in range(3))   # tamaño del cuerpo (alto o largo)
+        self.techo = max(self.alto_pie, self.tam)   # nada sube más que el propio cuerpo (gente: su altura; animal: su largo)
+        # ¿cuerpo erguido (humano) u horizontal (animal)? decide qué regla de "derecho" se usa
+        self.erguido = bool(ROL and ROL.get('cabeza') and ROL.get('cadera') and self._p(*ROL['cabeza']).z - self._p(*ROL['cadera']).z > 0.3 * self.alto_pie)
+        tz = min((self._p(*t).z - piso_z for t in (ROL or {}).get('torso') or []), default=self.alto_pie)
+        # acostado = torso cerca del piso: humano <= 25% de su altura; animal con patas: más bajo que de pie (75%); sin patas: su propio grosor
+        self.torso_max = TOL_TORSO * self.alto_pie if self.erguido else (0.75 * tz if (ROL or {}).get('pie') else 1.1 * tz + 0.02)
+        self.fallas = []
+    def _p(self, h, ext):
+        pb = self.A.pose.bones[h]; W = self.A.matrix_world
+        if ext == 'punta': return min(W @ pb.head, W @ pb.tail, key=lambda v: v.z)   # punta de la pata = su punto más bajo
+        return W @ (pb.tail if ext == 'tail' else pb.head)
+    def revisar(self, cuadro, pose, piso_z, quieta=True, elev=0.0):
+        A = self.A; f = []; base = piso_z + elev
+        for pb in self.cuerpo:
+            L0 = self.largo.get(pb.name)
+            if L0:
+                r = (pb.tail - pb.head).length / L0
+                if abs(r - 1) > TOL_LARGO: f.append(f'hueso {pb.name} con largo ×{r:.2f} (estirado/aplastado)')
+        zs = [(A.matrix_world @ p).z for pb in self.cuerpo for p in (pb.head, pb.tail)]
+        if max(zs) - base > self.techo * TOL_ALTO + 1e-3:
+            top = max(self.cuerpo, key=lambda pb: max((A.matrix_world @ pb.head).z, (A.matrix_world @ pb.tail).z)).name
+            f.append(f'altura {max(zs) - base:.2f} m > altura máxima del cuerpo {self.techo:.2f} m (hueso {top})')
+        bajo = min(self.cuerpo, key=lambda pb: min((A.matrix_world @ pb.head).z, (A.matrix_world @ pb.tail).z))
+        zb = min((A.matrix_world @ bajo.head).z, (A.matrix_world @ bajo.tail).z)
+        if zb < base - TOL_PISO: f.append(f'hueso {bajo.name} {base - zb:.2f} m bajo el piso')
+        R = self.ROL
+        if R:
+            acost = any(k in str(pose) for k in ACOSTADO)
+            if self.erguido and not acost:
+                hz, cz = self._p(*R['cabeza']).z, self._p(*R['cadera']).z
+                if hz <= cz: f.append(f'cabeza ({R["cabeza"][0]}) por debajo de la cadera ({R["cadera"][0]}) sin estar acostado')
+            elif not acost and R.get('pie') and R.get('torso'):   # animal: el lomo va por encima de las patas (si no, está patas arriba)
+                lomo = sum(self._p(*t).z for t in R['torso']) / len(R['torso']); pata = max(self._p(*t).z for t in R['pie'])
+                if lomo <= pata: f.append(f'lomo ({R["torso"][0][0]}) por debajo de las patas: cuerpo patas arriba sin estar acostado')
+            c = CONTACTO.get(pose, 'torso' if acost else None)
+            if quieta and c:
+                k = 'pie' if c == 'pie_uno' else c
+                if not R.get(k): c = k = 'torso'   # cuerpo sin patas (pez, serpiente): apoya el torso
+                pts = [(h, self._p(h, e).z - base) for h, e in R.get(k) or []]
+                if pts:
+                    if c == 'pie_uno': ok = min(d for _, d in pts) <= TOL_CONTACTO * self.alto_pie; malo = min(pts, key=lambda x: x[1])
+                    elif c == 'torso': ok = min(d for _, d in pts) <= self.torso_max; malo = min(pts, key=lambda x: x[1])
+                    else: ok = max(d for _, d in pts) <= TOL_CONTACTO * self.alto_pie; malo = max(pts, key=lambda x: x[1])
+                    if not ok: f.append(f'pose {pose}: {k} sin contacto con el piso (hueso {malo[0]} a {malo[1]:.2f} m)')
+        for x in f: self.fallas.append({'actor': self.actor, 'cuadro': cuadro, 'falla': x})
+        return f
+
+
+TESTS (each library pose applied 3 rounds in a chain, report = the 3rd, most worn round; plus deliberately broken cases: bone stretched x1.6, body floating 0.8 m, sunk 0.4 m, upside-down, says kneeling while standing):
+[{"cuerpo": "Fox.glb", "poses_ok": "1/3", "poses_falla": [["acostado_boca_abajo", "pose acostado_boca_abajo: torso sin contacto con el piso (hueso b_Spine01_02 a 0.24 m)"], ["acostado_boca_arriba", "pose acostado_boca_arriba: torso sin contacto con el piso (hueso b_Hip_01 a 0.29 m)"]], "rotos_atrapados": "4/4"}, {"cuerpo": "arana", "poses_ok": "3/3", "poses_falla": [], "rotos_atrapados": "4/4"}, {"cuerpo": "ave", "poses_ok": "4/4", "poses_falla": [], "rotos_atrapados": "4/4"}, {"cuerpo": "jirafa", "poses_ok": "3/3", "poses_falla": [], "rotos_atrapados": "4/4"}, {"cuerpo": "vrm:ch-protagonista:1.75 (código VIEJO)", "poses_ok": "0/7", "poses_falla": [["de_pie", "hueso J_Bip_L_LowerArm con largo ×0.75 (estirado/aplastado)"], ["caminando", "hueso J_Bip_L_LowerArm con largo ×0.76 (estirado/aplastado)"], ["sentado", "hueso J_Bip_L_LowerArm con largo ×0.76 (estirado/aplastado)"]], "rotos_atrapados": "0/0"}, {"cuerpo": "vrm:ch-protagonista:1.75", "poses_ok": "7/7", "poses_falla": [], "rotos_atrapados": "5/5"}, {"cuerpo": "pez", "poses_ok": "3/3", "poses_falla": [], "rotos_atrapados": "4/4"}, {"cuerpo": "serpiente", "poses_ok": "3/4", "poses_falla": [["acostado_boca_arriba", "pose acostado_boca_arriba: torso sin contacto con el piso (hueso h1 a 0.10 m)"]], "rotos_atrapados": "4/4"}, {"cuerpo": "vrm:ch-el-aliengena:1.88", "poses_ok": "7/7", "poses_falla": [], "rotos_atrapados": "5/5"}, {"cuerpo": "vrm:ch-la-novia:1.65", "poses_ok": "7/7", "poses_falla": [], "rotos_atrapados": "5/5"}, {"cuerpo": "vrm:ch-protagonista:1.75", "poses_ok": "7/7", "poses_falla": [], "rotos_atrapados": "5/5"}, {"cuerpo": "vrm:ch-protagonista:2.20", "poses_ok": "7/7", "poses_falla": [], "rotos_atrapados": "5/5"}]
+Notes: humans = 3 real characters (thick 1.75 m, thin 1.65 m, 1.88 m) and a 2.20 m variant; "codigo VIEJO" = old code, must fail. Fox lying poses keep hips 0.24-0.29 m up (body ~0.87 m tall); snake lying-on-back raises torso 0.10 m.
+
+VALIDATOR gaps closed (plan from the scene director): beat accion romper/mover with no objeto -> reject; aparecer/desaparecer with no objeto, effect or actor -> reject; a character attached to another (acoplado_actor) is auto-added to en_cuadro/personas/por_personaje of every shot where its carrier is.
+
+QUESTIONS: 1) gaps or wrong assumptions in the cause or fix (e.g. rigs that intentionally animate scale, stretch bones, IK, constraints, shape keys); 2) contradictions or false positives/negatives in the guard rules and thresholds; 3) concrete improvements that I can verify with free local Blender tests (say how to test); 4) are the Fox/snake lying failures a guard problem or a real pose-library problem?

@@ -1,0 +1,34 @@
+{
+  "id": "gdc-pijama-pintor",
+  "nombre": "pijama pintor",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "historia",
+  "sellado": true,
+  "version": 2,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-pijama-pintor.png",
+  "imagen_sha256": "3faf257654556e5f8f6e9a29cd83cd765ac1bb0c085cc4c921201f04644b5d7f",
+  "imagen_origen": "paso 00 4b2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 42,
+    "fondo_cm": 18,
+    "alto_cm": 75
+  },
+  "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+  "ids_capitulo": [
+    "obj-pijama-pintor"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-pijama-pintor"
+  ],
+  "frase_sello": "Mono enterizo acolchado estilo 3D cartoon de proporciones infantiles y silueta bulbosa, confeccionado en tela mate color amarillo mostaza cálido con una sutil costura vertical frontal y bordes elásticos acanalados en naranja tostado en cuello, muñecas y tobillos. Decorado asimétricamente por todo el cuerpo con manchas de pintura planas en azul cian, magenta, verde lima y naranja rojizo, presentando un volumen inflado, hueco y articulado sin cabeza, manos ni pies.",
+  "actualizado": "2026-11-06T04:04:42+01:00",
+  "origen": "sellar"
+}

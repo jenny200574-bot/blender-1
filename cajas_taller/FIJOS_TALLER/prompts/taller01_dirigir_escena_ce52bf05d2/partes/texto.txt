@@ -1,0 +1,13 @@
+Eres asesor técnico de un programa (Blender 4.2, sin GPU, Python bpy, render Workbench gris) que convierte el plan de dirección de una escena (segundo a segundo, JSON hecho por un director IA) en un video gris 3D "representativo": set 3D gris con estructuras (paredes, torres, puertas, muebles, objetos), personajes 3D animados, cámaras. Debe ser UNIVERSAL para cualquier historia/canal.
+
+HOY: los objetos del set son estáticos. El validador rechaza acciones sin objeto (ej. "romper" sin decir qué). Las cajas del set tienen id, posición y tamaño.
+
+OBJETIVO 2: representar CAMBIOS EN OBJETOS Y ESTRUCTURAS segundo a segundo: romper/destruir (total o parcial), aparecer, desaparecer, moverse/caer/volar, abrirse (puerta), encenderse/apagarse, y que el ESTADO persista (lo roto sigue roto en las escenas siguientes; memoria de estado por objeto).
+
+PIDO:
+1) Formato JSON mínimo y universal de "eventos de objeto" en el plan (verbo de una lista cerrada, objeto por id existente, segundo inicio/fin, parámetros simples: dirección, fuerza, parte) y del "estado por objeto" que pasa de una escena a la siguiente.
+2) Cómo hacerlo en bpy SIN simulación física cara (CPU, rápido): romper = Cell Fracture u otra alternativa libre incluida en Blender 4.2 o fractura procedural simple (cortes por planos/voronoi con bmesh), piezas con trayectoria balística por keyframes; aparecer/desaparecer = escala/visibilidad por keyframe; mover/caer = keyframes con curva; abrir = rotación sobre bisagra deducida de la caja. Qué es determinista y reproducible.
+3) Reglas del validador para rechazar lo imposible (objeto inexistente, romper algo ya roto, mover algo que no existe aún, piezas que atraviesan el piso).
+4) Riesgos.
+5) Pruebas GRATIS con criterios numéricos (pocas): ej. pared rota en el segundo 3 sigue rota en la escena siguiente; piezas nunca bajo el piso; tiempo de cálculo por evento.
+Responde en español, conciso, solo el JSON del esquema.

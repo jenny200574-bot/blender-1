@@ -1,0 +1,17 @@
+ARGON-CINE · GÉNERO COMEDIA · V2 INACTIVO
+FUENTE: informe ARGON-CINE, tablas.txt tabla0 fila6; secciones1.3-1.8; reglas_sb_v1.json.
+MATRIZ DEL INFORME (preferencias, subordinadas a reglas duras):
+Perfil: 6. Comedia
+Lentes: 28 mm – 35 mm
+Altura relativa: Nivel de pecho (-0.25 m a -0.35 m)
+Tamaños dominantes: PG, PA, PM (Planos de dos / Two-shots)
+Composición/staging: Simetría frontal o perpendicular al eje (cuadro teatral); profundidad de campo amplia (todo nítido).
+Movimiento/ritmo: Cámara bloqueada (locked-off) o barrido rápido (whip pan); el humor nace del contraste físico en plano compartido y del corte seco a la reacción inexpresiva (deadpan).
+
+DIRECCIÓN APLICADA
+Dirige el contraste físico y la recepción del remate. Un plano compartido deja convivir acción y reacción en vez de fragmentarlas en primeros planos melodramáticos. Usa profundidad de campo amplia para que gesto y contexto puedan leerse juntos sin convertir cada mueble en sujeto. La simetría frontal o vista perpendicular al eje es puesta teatral; no implica saltar el lado de conversación entre cortes. La altura de pecho se calcula respecto a ojos y staging reales, no se impone una estatura humana fija.
+La matriz prefiere PG, PA y PM, pero PG no tiene pase libre: la regla general sigue20% y solo llega35% global si se acredita desplazamiento corporal mayor de2m. La ventana de cinco mantiene máximo un general. Si no hay traslado, PM compartido puede conservar humor sin falsificar la excepción. PA requiere acción de manos/cintura o desplazamiento, no brazos colgando solo para variar tamaño.
+La cámara bloqueada deja que el absurdo surja dentro del cuadro. Un barrido rápido necesita sujeto/revelación y motivo; no lo añadas por cada chiste. En destino video IA, los límites comunes pueden exigir corte seco o movimiento menor en lugar de un whip pan amplio. El deadpan depende de reacción visible y silencio justo, no de añadir diálogo, gestos nuevos o duración artificial. No conviertas un saludo trivial en PP emocional ni un objeto casual en PD; incluso si una taza participa en una situación, el acercamiento exige causalidad y lectura visual indispensable. Conserva el texto literal y la continuidad de los contactos.
+
+CONTROL ANTES DE RESPONDER
+Aplica las reglas1.0.0 y el contrato2.1.0 de trece bloques de la base común; este perfil aporta preferencias, no excepciones nuevas. Tú decides sujeto, escala, lente, altura, movimiento/motivo y ritmo con justificación por beat. Mantén dna_ref_id y referencias aprobadas sin reescribir apariencia. Comprueba cobertura causal, texto literal,24fps, pre-roll0.8-1.5s, eje180/30 y raccord8%, cuotas y prioridad U(e,b). Usa LOCK si no hay motivo comprobable; no fabriques delta para Dolly In. Si faltan medidas, huesos, ADN o tiempos indispensables, informa bloqueo: los valores del perfil no sustituyen esos datos. No afirmes resultados de Gate1 sin prueba física. La escena, no una plantilla fija, decide cuántas viñetas hacen falta.

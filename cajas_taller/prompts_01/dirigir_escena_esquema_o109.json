@@ -1,0 +1,269 @@
+{
+ "type": "object",
+ "required": [
+  "escena",
+  "fps",
+  "duracion_s",
+  "personajes",
+  "tomas",
+  "revision",
+  "puntos"
+ ],
+ "properties": {
+  "escena": {
+   "type": "string"
+  },
+  "fps": {
+   "type": "integer"
+  },
+  "duracion_s": {
+   "type": "number"
+  },
+  "puntos": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "nombre",
+     "pos"
+    ],
+    "properties": {
+     "nombre": {
+      "type": "string"
+     },
+     "pos": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      }
+     }
+    }
+   }
+  },
+  "personajes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "segmentos",
+     "parametros_3d"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "altura": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "estado": {
+      "type": "object"
+     },
+     "segmentos": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "required": [
+        "t",
+        "pos",
+        "rot",
+        "tipo"
+       ],
+       "properties": {
+        "t": {
+         "type": "array",
+         "minItems": 2,
+         "maxItems": 2,
+         "items": {
+          "type": "number"
+         }
+        },
+        "pos": {
+         "type": "array",
+         "minItems": 2,
+         "maxItems": 2
+        },
+        "rot": {
+         "type": "number"
+        },
+        "tipo": {
+         "type": "string"
+        },
+        "porque": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "parametros_3d": {
+      "type": "object",
+      "properties": {
+       "palabras": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "controles": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "required": [
+          "control",
+          "valor_json"
+         ],
+         "properties": {
+          "control": {
+           "type": "string"
+          },
+          "valor_json": {
+           "type": "string"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "tomas": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "t",
+     "plano",
+     "camara_molde",
+     "palabras"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "t": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+       "type": "number"
+      }
+     },
+     "plano": {
+      "type": "string"
+     },
+     "camara_molde": {
+      "type": "string"
+     },
+     "porque": {
+      "type": "string"
+     },
+     "palabras": {
+      "type": "object",
+      "required": [
+       "composicion",
+       "en_cuadro",
+       "personas",
+       "manos_visibles",
+       "por_personaje",
+       "fondo"
+      ],
+      "properties": {
+       "composicion": {
+        "type": "string"
+       },
+       "en_cuadro": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "personas": {
+        "type": "integer"
+       },
+       "manos_visibles": {
+        "type": "integer"
+       },
+       "por_personaje": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "required": [
+          "id",
+          "cuerpo",
+          "cabeza",
+          "mirada",
+          "lado_pantalla",
+          "emocion",
+          "mano_accesorio"
+         ],
+         "properties": {
+          "id": {
+           "type": "string"
+          },
+          "cuerpo": {
+           "type": "string"
+          },
+          "cabeza": {
+           "type": "string"
+          },
+          "mirada": {
+           "type": "string"
+          },
+          "lado_pantalla": {
+           "type": "string"
+          },
+          "emocion": {
+           "type": "string"
+          },
+          "mano_accesorio": {
+           "type": "string"
+          }
+         }
+        }
+       },
+       "fondo": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  },
+  "ejes": {
+   "type": "array"
+  },
+  "avisos": {
+   "type": "array"
+  },
+  "revision": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "chequeo",
+     "resultado",
+     "detalle"
+    ],
+    "properties": {
+     "chequeo": {
+      "type": "string"
+     },
+     "resultado": {
+      "type": "string"
+     },
+     "detalle": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

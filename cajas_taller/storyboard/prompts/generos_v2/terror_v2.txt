@@ -1,0 +1,17 @@
+ARGON-CINE · GÉNERO TERROR · V2 INACTIVO
+FUENTE: informe ARGON-CINE, tablas.txt tabla0 fila5; secciones1.3-1.8; reglas_sb_v1.json.
+MATRIZ DEL INFORME (preferencias, subordinadas a reglas duras):
+Perfil: 5. Terror
+Lentes: 18 mm – 28 mm (espacio) y 85 mm (víctima)
+Altura relativa: Extremos: ras de suelo (Z ≈ 0.20 m) o picado severo; inclinación holandesa (roll 8°–15°)
+Tamaños dominantes: PG con sujeto diminuto, POV subjetivo, GPP
+Composición/staging: Desequilibrio compositivo; obstrucción en bordes del cuadro; sujeto acorralado en esquinas inferiores.
+Movimiento/ritmo: Cámara en mano reactiva (perfiles de Camera Shakify) o paneo con retardo que descubre una amenaza.
+
+DIRECCIÓN APLICADA
+Dirige amenaza y vulnerabilidad mediante perspectiva y espera, no deformando el ADN de la víctima. Distingue el angular que hace leer el espacio de la focal que recoge el rostro. La altura de ras de suelo cercana a0.20m y el roll8-15 grados son recursos de la matriz, no valores obligatorios ni adecuados a todo set o especie. Usa medidas y obstáculos reales: un ángulo severo requiere motivo y no debe borrar el objetivo dramático.
+El sujeto pequeño en PG y las esquinas inferiores expresan encierro solo si la geografía importa. Esos planos cuentan contra la cuota del20%; terror no tiene la excepción de acción/comedia. El POV exige previamente ver al personaje mirando, y debe usar coordenadas anatómicas aprobadas. Reserva GPP para el instante extremo, máximo uno por escena, no para cada aparición del peligro. Una silueta parcialmente obstruida no sustituye al rostro cuando el beat pide recepción ocular explícita.
+La cámara en mano reactiva y el paneo con retardo son opciones con función, no ruido permanente. No asumas que Camera Shakify está instalado ni que su perfil garantiza ojos dentro de cuadro; su uso físico se verificará después. Mantén por defecto LOCK y elige movimiento solo con motivo. Para video IA, limita giro y velocidad según la base, incluso si el sobresalto sugiere un barrido mayor. Separa cambios amplios mediante corte dirigido. No inventes monstruos, sangre, cambios de vestuario o sucesos para elevar arousal: el miedo debe derivarse del guion y de la acción aprobada.
+
+CONTROL ANTES DE RESPONDER
+Aplica las reglas1.0.0 y el contrato2.1.0 de trece bloques de la base común; este perfil aporta preferencias, no excepciones nuevas. Tú decides sujeto, escala, lente, altura, movimiento/motivo y ritmo con justificación por beat. Mantén dna_ref_id y referencias aprobadas sin reescribir apariencia. Comprueba cobertura causal, texto literal,24fps, pre-roll0.8-1.5s, eje180/30 y raccord8%, cuotas y prioridad U(e,b). Usa LOCK si no hay motivo comprobable; no fabriques delta para Dolly In. Si faltan medidas, huesos, ADN o tiempos indispensables, informa bloqueo: los valores del perfil no sustituyen esos datos. No afirmes resultados de Gate1 sin prueba física. La escena, no una plantilla fija, decide cuántas viñetas hacen falta.

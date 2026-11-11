@@ -1,0 +1,19 @@
+PARTIAL REPAIR OF A SCENE ACTION PLAN (repair attempt {INTENTO}). Answer with JSON only, following the schema at the end.
+
+WHAT HAPPENED
+You already blocked the ACTION of this scene (positions, movement, poses, beats and timing; no cameras). The program checked
+your plan against the real 3D set and the script. Most of it PASSED and is kept as it is (ACCEPTED_PLAN). Some parts FAILED
+(FAILED_PARTS). EXACT_ERRORS_FROM_THE_PROGRAM lists, for each failed part, the exact reason. Fix ONLY those parts.
+
+RULES
+- ACCEPTED_PLAN is fixed: do not change its points, its character segments or its accepted beats. Your fix must stay
+  continuous with it (same positions and times at the boundaries; nobody teleports; possible speeds).
+- For every failed beat return the WHOLE beat again in "acciones" with the SAME "id" (you may split one failed beat into
+  two with new ids only if its time range stays covered). Beat words: accion = one of ACTION_VERBS, pose = one of
+  POSE_LIBRARY or "", cambio = one of OBJECT_CHANGES or "", plain Spanish words, no numbers; cita copied literally from the script.
+- Only if an error is about a character's movement (segmentos) or a point, return that character in "personajes" with its
+  FULL corrected "segmentos" list, and any new or corrected point in "puntos" ({nombre, pos:[x,y,z]} inside THE_SET).
+- If an error is about the history facts, return the FULL corrected "hechos" list.
+- Never return cameras, shots or "tomas": another step chooses them later.
+- "revision": list each check you made for the repaired parts (chequeo, resultado ok | corregido, detalle).
+- "avisos": anything the director should know. Latin alphabet only.

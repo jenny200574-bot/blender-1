@@ -1,0 +1,16 @@
+{
+ "paso": "taller_ako_coherencia_prompt_argon_02_7b4309b322",
+ "sha256": "7b4309b322f246d6a67261e34c33c136e37ddaa4601937e49de65cc23d2419ae",
+ "partes": {
+  "esquema": "3b770389e5a0c2021051b7f7b3ea0b3f006fc62f6a1c0083c1a117a5101e2ca0",
+  "json_out": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+  "max_out": "ad5f9478d603fe97eae2bbff07f76fe7f18610343b5f3bc8e00945ee51b30d2c",
+  "max_rondas": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+  "modelo": "fedcf0678c6ce4486fc33bd750a8ed628d0728711e97469ef5ff9b021a0c54aa",
+  "nivel": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+  "texto": "12f26d606f4114a063a0fe6429cac9edc6039a17fc15ca2d912a634a0cb1a935"
+ },
+ "aprobado_por": "inmi (equipo técnico) — taller n8n",
+ "fecha": "2026-11-04T04:36:16",
+ "nota": "Taller n8n, cadena paso 00 v1 = prompts de la prueba del 28-oct (t372u), programados por orden de Ricardo t376u. Registro del taller, no el oficial."
+}

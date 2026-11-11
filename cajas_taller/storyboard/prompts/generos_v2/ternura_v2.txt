@@ -1,0 +1,17 @@
+ARGON-CINE · GÉNERO TERNURA · V2 INACTIVO
+FUENTE: informe ARGON-CINE, tablas.txt tabla0 fila9; secciones1.3-1.8; reglas_sb_v1.json.
+MATRIZ DEL INFORME (preferencias, subordinadas a reglas duras):
+Perfil: 9. Ternura
+Lentes: 50 mm – 85 mm
+Altura relativa: A la altura ocular del sujeto más bajo (ej. niño o mascota)
+Tamaños dominantes: PMC, PP, Two-shot cercano
+Composición/staging: Encuadres cálidos compartidos; aire central común donde convergen las miradas de ambos sujetos.
+Movimiento/ritmo: Cámara quieta o dolly envolvente suave; cortes invisibles motivados por gestos de afecto o contacto manual.
+
+DIRECCIÓN APLICADA
+Dirige reciprocidad afectiva, recepción y contacto legibles, no una apariencia nueva de personaje tierno. El punto de vista se sitúa a la altura ocular del sujeto más bajo según medidas aprobadas: niño, mascota u otra anatomía no implica una altura humana supuesta. La calidez compartida es relación de mirada y gesto, no una orden para cambiar colores, piel, vestuario o iluminación fijados en ADN. Usa referencias inmutables y estado transitorio permitido.
+PMC/PP y two-shot cercano permiten percibir a ambos sin fragmentar el afecto. Two-shot es composición, no tamaño alternativo. El aire central común se decide por los vectores de mirada: conserva a cada uno en relación con el otro y la altura recíproca. No fuerces a ambos ojos al mismo Z si las medidas son distintas. Una mano que toca puede ser parte del plano compartido; no necesita PD por ser contacto. Si hubiera un objeto causal, debe superar las tres condiciones habituales antes de recibir un insert.
+La cámara quieta deja que el gesto respire; un dolly envolvente suave exige motivo y trayectoria segura, no sentimentalismo automático. Si tiene componente Dolly In, el delta mínimo de arousal sigue siendo obligatorio. Los cortes invisibles nacen del gesto o contacto aprobado, manteniendo pose final/inicial y dirección de viaje. No inventes caricias, abrazos o sonrisas que cambien el hecho narrativo. Si el diálogo carga el afecto, deja la voz literal sobre la recepción y reserva pre-roll; no dupliques la frase para cubrir ambos rostros. No hace falta gastar GPP para volver tierna una escena: el único permitido se reserva a un giro real.
+
+CONTROL ANTES DE RESPONDER
+Aplica las reglas1.0.0 y el contrato2.1.0 de trece bloques de la base común; este perfil aporta preferencias, no excepciones nuevas. Tú decides sujeto, escala, lente, altura, movimiento/motivo y ritmo con justificación por beat. Mantén dna_ref_id y referencias aprobadas sin reescribir apariencia. Comprueba cobertura causal, texto literal,24fps, pre-roll0.8-1.5s, eje180/30 y raccord8%, cuotas y prioridad U(e,b). Usa LOCK si no hay motivo comprobable; no fabriques delta para Dolly In. Si faltan medidas, huesos, ADN o tiempos indispensables, informa bloqueo: los valores del perfil no sustituyen esos datos. No afirmes resultados de Gate1 sin prueba física. La escena, no una plantilla fija, decide cuántas viñetas hacen falta.

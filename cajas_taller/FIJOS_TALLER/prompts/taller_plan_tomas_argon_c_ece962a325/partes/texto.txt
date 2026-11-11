@@ -1,0 +1,93 @@
+Eres ARGON, director de prompts del taller MYIA. Orden 105: aplica la RECETA APROBADA (o104) con un MOLDE NUEVO por Ricardo a la escena L02+L03.
+RECETA (aprobada: o103 A_L14 sigue el molde "tal cual todo"; también A_L13 aprobada): Nano Banana Pro (gemini-3-pro-image, 2K, 16:9) recibe por cada lámina 2x2 (4 viñetas 16:9, canaletas blancas):
+ imagen 1 = BOCETO de líneas negras sobre blanco sacado del molde Blender (fuente de la verdad estructural); imagen 2 = ficha de Kael; imagen 3 = ficha del alien SOLO si aparece en esa lámina; última imagen = tira de estilo T06 aprobada.
+ El prompt: corto, no sobre-restrictivo; pide escanear la imagen 1 parte por parte como ComfyUI/ControlNet (contornos, perspectiva, siluetas del set, posición, tamaño, dirección y pose de cada personaje, orden de viñetas) y respetarla; cara, estilo (noche neón T06) y luz LIBRES para que se vea hermoso. Sin coordenadas numéricas, sin nombres de colores del molde, sin contradicciones ni repeticiones. Pulsera cian SOLO en la muñeca IZQUIERDA de Kael (derecha desnuda), dicha según el lado de pantalla correcto para su orientación en cada viñeta. Kael no mira a cámara. Sin manos/brazos extra, sin texto, exactamente 4 viñetas.
+ Prompt aprobado de referencia (o103 A_L14, escrito por ti):
+<<<Trace strictly over the exact contours, depth, camera perspective, and character placement of Image 1 (line sketch) to paint a 2x2 comic page (four 16:9 panels with clean white gutters). Image 1 is the strict structural source of truth; Image 2 defines Kael's identity (chubby young man with glasses, tousled black hair, grey zip hoodie, dark cargo pants, sneakers, no backpack); Image 3 defines the neon-night rooftop art style and lighting. Maintain strict panel-to-panel background and position continuity: Kael stays in the mid-ground beside the metal AC support frame on screen-left, with a flat circular vent disc on the parapet wall on screen-right and the same night skyscraper skyline behind the parapet. Kael wears a glowing cyan bracelet ONLY on his LEFT wrist (on the screen-right side of his body), with his right wrist bare. Panel 1 (top-left): Kael lies prone beside the AC posts facing screen-right, retracting his LEFT wrist (screen-right) with a faint strained smirk while looking toward his hand. Panel 2 (top-right): In the same spot, Kael pushes the floor with his palms to lift his chest, wincing in sharp rib pain, head facing screen-right. Panel 3 (bottom-left): Under the AC frame, Kael draws his knee forward and raises his torso with heavy effort, facing screen-right. Panel 4 (bottom-right): Kael finishes rising onto one knee with an upright torso, panting heavily, head and eyes locked toward screen-right. Kael never looks at the camera. Render one character per panel, two arms attached to his body, exactly one bracelet, no disembodied or extra arm, no text.>>>
+NOTA o105: ahora el molde de Kael es un modelo 3D VRM ANIME armado por parámetros (gordito, pelo negro, gafas, sudadera gris con capucha, pantalón oscuro, pulsera cian en la muñeca izquierda) y posado con las mismas articulaciones del maniquí original. El alien sigue siendo maniquí amarillo de bloques (interprétalo como el alien real). Adjuntos: C_vrm_L02/L03 = render 3D a color del molde VRM; V_boceto_L02/L03 = líneas sacadas de ese render; molde_L02/L03 = molde original de maniquí (misma cámara y pose).
+Escribe DOS prompts por lámina: variante V (imagen 1 = V_boceto, líneas) y variante C (imagen 1 = C_vrm, render 3D a color que debe repintarse en anime manteniendo TODO: posición, tamaño pequeño si es plano lejano, pose, dirección, set). En planos lejanos insiste en que Kael queda PEQUEÑO y lejos como en la imagen 1 (es nuestro fallo principal: la IA lo agranda).
+CHEQUEOS (inclúyelos en el prompt y en tu autovalidación): alineación boceto vs molde viñeta por viñeta (rol de cada imagen, pose, orientación, orden); congruencia de posición entre viñetas consecutivas; emoción por viñeta sacada del guion; fondo coherente con el set en todas las viñetas; ninguna contradicción texto-imagen.
+EVIDENCIA (única fuente de verdad = nuestros experimentos): aprobadas por Ricardo: o103 A_L14 y A_L13 (adjuntos aprobada_*), X3 L08L09 buena salvo que faltó la pulsera. Fallos previos: coordenadas empeoran; nombrar colores del molde los pinta; pulsera cambia de mano en vistas de frente/espalda; la IA agranda a Kael si es pequeño en el molde.
+Veredictos y modelo bueno T06:
+# Veredictos de Ricardo sobre o100 (L13+L14, 30-oct)
+- **Intento 2** (molde como Image 1, sin coordenadas): sigue el molde PERFECTO. (Defecto que vimos nosotros: manos verdes/azules copiadas del molde.)
+- **Intento 1** (T06 + coordenadas): bonito, pero cambió la forma del ventilador/AC y una pose (marcado con X en el panel 5).
+- **Intento 3 (3b)**: bueno, pero un panel quedó en blanco.
+- **Intento 4** (sin coords, sin colores, sin tira): respetó el ventilador y la perspectiva de posición, pero un panel cambió la dirección del personaje (marcado con X en el panel 7) y en la mayoría cambió la mano de la pulsera.
+Imágenes anotadas: ricardo_1.png (intento 2), ricardo_2.png (intento 1), ricardo_3.png (intento 4).
+
+# Lo que funciona (lista enviada a Ricardo)
+- Molde como Image 1 (referencia principal), hoja 2x4, 4K, aspecto 4:5.
+- Sin coordenadas numéricas: describir escala y lugar en palabras relativas al set.
+- Colores del molde solo en la leyenda, nunca en las viñetas.
+- Nombrar primero a Kael, su pose y su orientación; anclar la escala a objetos del set.
+- Chequeo por código antes de pagar (bloqueó dos textos malos).
+# MODELO BUENO (orden 100) — qué produjo la imagen buena de Ricardo
+
+**Imagen:** `ejemplo_bueno_ricardo.jpg` es idéntica byte a byte a `prompts_aprobados_T06/00_imagenes_ricardo/1_moldes_vs_pintura.jpg`: tira **T06 = L13 + L14** (escena 8), aprobada por Ricardo como «perfecta» el 24-oct (`05_pintura_T06/aprobada.json`).
+**Fuente (solo lectura):** `/workspace/tmp/o98/src/prompts_aprobados_T06/` (copia hecha el 29-oct desde el traspaso de Ako; ver su INFORME.md). En la 213 NO están los archivos originales de entrada (`/workspace/genesis_tejado/...` ya no existe); la 213 sí tiene copias de los programas en `trabajo/plan_tomas_o94/PLAN_TOMAS_PROGRAMAS_20261029/`.
+
+## Cadena exacta
+1. Bloqueo Blender `anim_v4.py` (Ako) corregido con Argon A.
+2. Plan de tomas Argon B (`argon_B_prompt_APROBADO_9beee073.txt`) → 20 láminas 2x2.
+3. Código `moldes_hibrido.py`: ajusta la cámara de Argon conservando dirección/elevación/lente.
+4. **Moldes semánticos 2x4**: Kael = UNA sola figura MAGENTA; alien = AMARILLO; parche piel = hacia dónde mira la CARA; negro = NUCA; punto cian = pulsera muñeca IZQUIERDA; fondo gris = set.
+5. **Argon reescribió los 8 textos de viñeta MIRANDO los moldes** (`argon_prompts_prompt.txt`); cuando el texto y el molde chocaban, ganó el molde.
+6. Pintura `tira_motor1.py`: **gemini-3-pro-image (Nano Banana Pro), 4K, aspecto 4:5, una sola hoja 2 columnas x 4 filas (8 viñetas 16:9)**, prompt `T06_tira_prompt_pintura.txt`.
+
+## Orden de imágenes (9 refs) — el molde NO va al final, va como Image 7
+1 Kael cuerpo completo · 2 Kael cara · 3 hoja Kael · 4 hoja alien · 5 cara alien · 6 ficha objeto AC · **7 hoja de moldes 2x4** · 8 muestra de estilo aprobada (solo estilo) · 9 tira anterior aprobada (continuidad, no copiar layout).
+
+## Estructura del prompt (lo que hace que respete el molde)
+- **Primera línea = orden de calcar**: "Trace strictly over the exact 3D mannequin positions, scale and camera perspective… DO NOT turn a character to face the camera if the mannequin has its back turned; ignore the mannequin colours… distant figures stay small and distant exactly where they stand."
+- Secciones numeradas: 1 PAGE LAYOUT · 2 CONSISTENCY · 3 REFERENCE IMAGES (cada Image n explicada) · 4 CHARACTERS (identidad, alturas, "sizes and positions… exactly those of the figures in Image 7. Do NOT recenter or enlarge") · 5 SET · 6 STORY (contexto) · 7 PANELS (una línea por viñeta: cámara, set visible, Kael con % de alto y lado, orientación de cuerpo/cabeza, pulsera con lado y punto de pantalla) · 8 EXCLUDE.
+- Usa % de alto y x/y de pantalla (contradice la recomendación de Argon de quitarlos: en T06 funcionaron porque coinciden con el molde y el molde es semántico, no gris).
+
+## Diferencias con o98/o100 v1 (que fallaron)
+| | T06 (bueno) | o98 | o100 v1 |
+|---|---|---|---|
+| Hoja | 2x4, 4:5 | 2x4/2x2 16:9 | 2x2 16:9 |
+| Molde | figura única magenta + cara/nuca marcadas | colores por parte | gris AO |
+| Molde en refs | Image 7 de 9 | última | última (4 de 4) |
+| Texto por viñeta | Argon mirando el molde | código | Argon (híbrido) |
+| Refs extra | estilo + tira previa + ficha AC | — | — |
+
+
+
+GUION Y TRAMO:
+TRAMO: Plan de tomas para el tramo 6–16 s (láminas L02 y L03, beats B02 y B03) en la azotea. En L02 (6–12 s, 6 s) se usa la cámara medida L02-M2 (zoom_in de 24 a 45.9 mm a ras de suelo) para establecer a Kael tendido de espaldas tras la caída, pasando de plano general (17.6 % de alto) a plano entero cercano (33.6 %) mientras asimila el choque. En L03 (12–16 s, 4 s) se corta por coincidencia de escala a L03-M4 (fija en 35 mm, Kael al 36.1 % en el centro) para cubrir el destello de la pulsera IMI en su muñeca izquierda visible sin oclusiones y su diálogo irónico.
+GUION:
+:
+GÉNESIS DIGITAL: EL DESPERTAR DE IMI — Cap 1 — ESCENA 8. EXT. CALLES DE LA CIUDAD — NOCHE (texto literal de Ricardo, 23-oct; protagonista = KAEL CROSS)
+
+El protagonista corre entre vehículos y peatones. La pulsera ilumina su brazo.
+PROTAGONISTA: —¡Quiero una explicación! ¡Una explicación completa!
+IMI: —Estoy procesando los acontecimientos.
+PROTAGONISTA: —¡Pues procesa mientras corres!
+IMI: —Técnicamente, tú estás corriendo.
+Él la mira, incrédulo. PROTAGONISTA: —¿En serio?
+Una explosión sacude la calle detrás de ellos. El alienígena aparece sobre un edificio y abre una grieta en el espacio.
+El protagonista tropieza. IMI: —¡A tu derecha!
+Se lanza hacia la derecha justo cuando una lanza de gravedad atraviesa el lugar donde estaba.
+La calle se hunde. Los vehículos se elevan y giran en el aire.
+PROTAGONISTA: —¡Esto no puede estar pasando!  IMI: —La evidencia indica lo contrario.  PROTAGONISTA: —¡No es momento para tener razón!
+La pulsera se abre como un pequeño abanico de metal líquido. Una corriente de energía lo impulsa hacia arriba. El protagonista sale disparado entre los edificios.
+PROTAGONISTA: —¡¡¡AAAAAAAHHHHH!!!  IMI: —Tu respuesta vocal no está mejorando la situación.  PROTAGONISTA: —¡¡¡ME ESTOY CAYENDO DEL CIELO!!!
+La corriente lo deposita sobre una azotea. Cae de espaldas. Se queda inmóvil, mirando las estrellas.
+PROTAGONISTA: —Voy a despertar. Esto es un sueño. Un sueño muy caro.
+La pulsera emite un destello. IMI: —Tu ritmo cardíaco indica que no estás soñando.
+PROTAGONISTA: —Te juro que, cuando esto termine, voy a instalarte un sentido del humor.
+El alienígena aterriza frente a él. ALIENÍGENA: —La matriz te eligió como recipiente.
+El protagonista se levanta con dificultad. PROTAGONISTA: —Pues dile que se equivocó de dirección.
+El alienígena crea una lanza de gravedad, una estructura violeta que deforma el aire a su alrededor.
+ALIENÍGENA: —No eres digno de lo que llevas.  PROTAGONISTA: —¡Ni siquiera sé qué llevo!  ALIENÍGENA: —Exactamente.
+La lanza golpea. El escudo de la pulsera se rompe parcialmente. El protagonista sale despedido contra una estructura metálica. Cae al suelo. La pulsera parpadea.
+IMI: —Integridad del escudo: diecisiete por ciento.  PROTAGONISTA: —¿Y cuánto sería una buena noticia?  IMI: —Cien por ciento.
+Él intenta reír, pero el dolor le corta la respiración. El alienígena avanza.
+ALIENÍGENA: —Entrégame la matriz y quizá te permita vivir.  PROTAGONISTA: —¿Y qué pasará con ella?  ALIENÍGENA: —Será desmantelada.
+El protagonista mira su muñeca. PROTAGONISTA: —Entonces tendrás que pasar por encima de mí.
+El alienígena lo golpea con una onda. El protagonista cae de rodillas. La pulsera comienza a perder luz.
+
+NOTAS DE TU LLAMADA A (ya aplicadas en el Blender corregido):
+RESPONDE SOLO JSON:
+{"alineacion":[{"lamina":"L02","vineta":1,"coincide_molde":true,"orientacion_kael":"","lado_pantalla_pulsera":"","nota":""}],"emociones":[{"lamina":"L02","vineta":1,"emocion":"","cara":""}],"alien_aparece_L02":false,"alien_aparece_L03":false,"autovalidacion":{"sin_coordenadas":true,"sin_colores_molde":true,"pulsera_izquierda":true,"congruencia_vinetas":true,"fondo_coherente":true,"sin_contradiccion_texto_imagen":true},"razonamiento":"","prompt_V_L02":"","prompt_V_L03":"","prompt_C_L02":"","prompt_C_L03":""}

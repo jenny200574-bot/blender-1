@@ -1,0 +1,18 @@
+{
+ "schema": "myia.sello_estilo/v1",
+ "canal": "cn-los-guardianes-de-la-9fb323be",
+ "canal_nombre": "Los Guardianes de la Ceiba",
+ "version": 2,
+ "nombre": "Los Guardianes de la Ceiba · 3D CGI estilizado (imagen de Spark)",
+ "descripcion_en": "High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges and soft ambient occlusion. Physically based rendering: warm subsurface scattering on skin, glossy translucent plastics, satin anodized metals, matte fabrics. Volumetric studio lighting with strong rim lights, neon emissive glow, soft bloom and shallow depth of field with subtle bokeh. Palette of metallic cyan, deep blue and glowing amber orange on a soft warm beige background.",
+ "negativo": "Avoid: photorealistic rendering, live-action photo style, anime style, flat 2D vector look, sharp teeth, claws, scary expressions, dark horror lighting, extra fingers, extra limbs, text, letters, numbers, captions, watermark, logos, busy background, extra characters that were not described, any change to the characters' faces, proportions, outfits or colors, cropped bodies, resemblance to famous cartoon characters.",
+ "paleta_en": "Morado Caos #6B2FA0 Familia Caos, títulos; Azul Spark #2F7DE1 Spark; Magenta Valentina #D6338A Valentina; Verde Eco #3BAA4A Eco; Amarillo Pintor #FFC928 Pintor; Dorado #F5C542 Semillas, escudo, magia, sellos; Naranja #F2792A Acentos; Azul noche #1B2240 Cielos de noche y espacio; Gris niebla #9AA3A8 Tic, cosas cansadas o viejas; Celeste holograma #8FD3FF Visor, pantallas, luz mágica fría",
+ "texto_sha256": "19cd946f8e2b23c467945587566b187c8593d350abc2f78fb320f3e0ef495663",
+ "imagen": "/opt/myia-taller-n8n/cajas/FIJOS_TALLER/estilo/cn-los-guardianes-de-la-9fb323be/ESTILO_CANAL_v2.png",
+ "imagen_sha256": "b033ea81f7b713cbf5da7a4250b9b75b67dfad64102cb8ad89e241339f081280",
+ "imagen_origen": "imagen aprobada del canal en la app (estilo/cn-los-guardianes-de-la-9fb323be-estilo.png)",
+ "estado": "imagen+texto",
+ "fijado": "2026-11-02T23:15:22+01:00",
+ "programa": "estilo_oficial v2 (sello por canal, 2-nov-2026)",
+ "regla": "FIJO: los pasos lo consultan; no se edita a mano. Cambia solo si cambia el style_fijo aprobado en la app."
+}

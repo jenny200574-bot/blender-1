@@ -1,0 +1,1438 @@
+{
+  "version": "entradas_sb_v2.0.0_inactivo",
+  "pruebas": {
+    "pasan": 181,
+    "fallan": 0
+  },
+  "datos_reales_sin_modificar": true,
+  "channels": {
+    "cn-gnesis-digital-el-de-ed178619": {
+      "capitulo": "cap01_ep-17127be0eb",
+      "scenes_in_map": 15,
+      "saved_01_scenes": [
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "no_saved_01": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "6",
+        "11",
+        "12",
+        "13",
+        "14",
+        "POSCREDITOS"
+      ],
+      "actions": 21,
+      "segments": 71,
+      "manifest_found": false
+    },
+    "cn-los-guardianes-de-la-9fb323be": {
+      "capitulo": "cap01_ep-89b93118ad",
+      "scenes_in_map": 9,
+      "saved_01_scenes": [
+        "1",
+        "2",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "no_saved_01": [
+        "3"
+      ],
+      "actions": 206,
+      "segments": 183,
+      "manifest_found": false
+    }
+  },
+  "escenas": [
+    {
+      "canal": "cn-gnesis-digital-el-de-ed178619",
+      "capitulo": "cap01_ep-17127be0eb",
+      "escena": "4",
+      "coverage": {
+        "01_actions": 0,
+        "01_segments": 16,
+        "01_points": 0,
+        "gaze_id_source": 0,
+        "gaze_resolved_entity": 0,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 0,
+        "script_dialogues_parsed": 8,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 6,
+          "characters_with_verified_refs": 2,
+          "images": 4
+        },
+        "set_prop_refs": {
+          "requested": 1,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_UPSTREAM_ACTION",
+          "reason": "legacy01 sin acciones accion_v1"
+        },
+        {
+          "code": "ADN_FALTA_NO_APROBADO_O_AMBIGUO",
+          "entity_id": "pj-companero-1",
+          "form_id": "fn-companero-1-base"
+        },
+        {
+          "code": "ADN_FALTA_NO_APROBADO_O_AMBIGUO",
+          "entity_id": "pj-companero-2",
+          "form_id": "fn-companero-2-base"
+        },
+        {
+          "code": "ADN_FALTA_NO_APROBADO_O_AMBIGUO",
+          "entity_id": "pj-jefe",
+          "form_id": "fn-jefe-base"
+        },
+        {
+          "code": "ADN_FALTA_NO_APROBADO_O_AMBIGUO",
+          "entity_id": "pj-otro-empleado",
+          "form_id": "fn-otro-empleado-base"
+        },
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "falta",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-gnesis-digital-el-de-ed178619",
+      "capitulo": "cap01_ep-17127be0eb",
+      "escena": "7",
+      "coverage": {
+        "01_actions": 0,
+        "01_segments": 29,
+        "01_points": 0,
+        "gaze_id_source": 0,
+        "gaze_resolved_entity": 0,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 0,
+        "script_dialogues_parsed": 31,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 4,
+          "characters_with_verified_refs": 4,
+          "images": 9
+        },
+        "set_prop_refs": {
+          "requested": 1,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_UPSTREAM_ACTION",
+          "reason": "legacy01 sin acciones accion_v1"
+        },
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "falta",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-gnesis-digital-el-de-ed178619",
+      "capitulo": "cap01_ep-17127be0eb",
+      "escena": "8",
+      "coverage": {
+        "01_actions": 0,
+        "01_segments": 0,
+        "01_points": 0,
+        "gaze_id_source": 0,
+        "gaze_resolved_entity": 0,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 0,
+        "script_dialogues_parsed": 27,
+        "transient_controls_preserved": 0,
+        "fps_source": 8.0,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 4,
+          "characters_with_verified_refs": 3,
+          "images": 5
+        },
+        "set_prop_refs": {
+          "requested": 1,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_UPSTREAM_ACTION",
+          "reason": "legacy01 sin acciones accion_v1"
+        },
+        {
+          "code": "ADN_FALTA_NO_APROBADO_O_AMBIGUO",
+          "entity_id": "pj-peatones",
+          "form_id": "fn-peatones-base"
+        },
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "falta",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "falta",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-gnesis-digital-el-de-ed178619",
+      "capitulo": "cap01_ep-17127be0eb",
+      "escena": "9",
+      "coverage": {
+        "01_actions": 21,
+        "01_segments": 11,
+        "01_points": 4,
+        "gaze_id_source": 0,
+        "gaze_resolved_entity": 13,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 15,
+        "script_dialogues_parsed": 17,
+        "transient_controls_preserved": 2,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 4,
+          "characters_with_verified_refs": 4,
+          "images": 7
+        },
+        "set_prop_refs": {
+          "requested": 3,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "parcial",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-gnesis-digital-el-de-ed178619",
+      "capitulo": "cap01_ep-17127be0eb",
+      "escena": "10",
+      "coverage": {
+        "01_actions": 0,
+        "01_segments": 15,
+        "01_points": 0,
+        "gaze_id_source": 0,
+        "gaze_resolved_entity": 0,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 0,
+        "script_dialogues_parsed": 7,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 2,
+          "characters_with_verified_refs": 2,
+          "images": 4
+        },
+        "set_prop_refs": {
+          "requested": 1,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_UPSTREAM_ACTION",
+          "reason": "legacy01 sin acciones accion_v1"
+        },
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "falta",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-los-guardianes-de-la-9fb323be",
+      "capitulo": "cap01_ep-89b93118ad",
+      "escena": "1",
+      "coverage": {
+        "01_actions": 25,
+        "01_segments": 35,
+        "01_points": 11,
+        "gaze_id_source": 14,
+        "gaze_resolved_entity": 4,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 11,
+        "script_dialogues_parsed": 8,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 6,
+          "characters_with_verified_refs": 6,
+          "images": 6
+        },
+        "set_prop_refs": {
+          "requested": 5,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "parcial",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-los-guardianes-de-la-9fb323be",
+      "capitulo": "cap01_ep-89b93118ad",
+      "escena": "2",
+      "coverage": {
+        "01_actions": 16,
+        "01_segments": 20,
+        "01_points": 9,
+        "gaze_id_source": 2,
+        "gaze_resolved_entity": 2,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 8,
+        "script_dialogues_parsed": 8,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 6,
+          "characters_with_verified_refs": 6,
+          "images": 6
+        },
+        "set_prop_refs": {
+          "requested": 4,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "parcial",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-los-guardianes-de-la-9fb323be",
+      "capitulo": "cap01_ep-89b93118ad",
+      "escena": "4",
+      "coverage": {
+        "01_actions": 42,
+        "01_segments": 38,
+        "01_points": 15,
+        "gaze_id_source": 30,
+        "gaze_resolved_entity": 17,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 12,
+        "script_dialogues_parsed": 13,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 5,
+          "characters_with_verified_refs": 5,
+          "images": 5
+        },
+        "set_prop_refs": {
+          "requested": 15,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "parcial",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-los-guardianes-de-la-9fb323be",
+      "capitulo": "cap01_ep-89b93118ad",
+      "escena": "5",
+      "coverage": {
+        "01_actions": 26,
+        "01_segments": 12,
+        "01_points": 6,
+        "gaze_id_source": 0,
+        "gaze_resolved_entity": 2,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 11,
+        "script_dialogues_parsed": 12,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 2,
+          "characters_with_verified_refs": 2,
+          "images": 2
+        },
+        "set_prop_refs": {
+          "requested": 7,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "parcial",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-los-guardianes-de-la-9fb323be",
+      "capitulo": "cap01_ep-89b93118ad",
+      "escena": "6",
+      "coverage": {
+        "01_actions": 18,
+        "01_segments": 12,
+        "01_points": 10,
+        "gaze_id_source": 0,
+        "gaze_resolved_entity": 6,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 10,
+        "script_dialogues_parsed": 10,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 6,
+          "characters_with_verified_refs": 6,
+          "images": 6
+        },
+        "set_prop_refs": {
+          "requested": 8,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "parcial",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-los-guardianes-de-la-9fb323be",
+      "capitulo": "cap01_ep-89b93118ad",
+      "escena": "7",
+      "coverage": {
+        "01_actions": 25,
+        "01_segments": 12,
+        "01_points": 8,
+        "gaze_id_source": 0,
+        "gaze_resolved_entity": 16,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 14,
+        "script_dialogues_parsed": 9,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 6,
+          "characters_with_verified_refs": 6,
+          "images": 6
+        },
+        "set_prop_refs": {
+          "requested": 2,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "parcial",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-los-guardianes-de-la-9fb323be",
+      "capitulo": "cap01_ep-89b93118ad",
+      "escena": "8",
+      "coverage": {
+        "01_actions": 26,
+        "01_segments": 28,
+        "01_points": 12,
+        "gaze_id_source": 12,
+        "gaze_resolved_entity": 6,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 12,
+        "script_dialogues_parsed": 11,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 6,
+          "characters_with_verified_refs": 6,
+          "images": 6
+        },
+        "set_prop_refs": {
+          "requested": 8,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "parcial",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    },
+    {
+      "canal": "cn-los-guardianes-de-la-9fb323be",
+      "capitulo": "cap01_ep-89b93118ad",
+      "escena": "9",
+      "coverage": {
+        "01_actions": 28,
+        "01_segments": 26,
+        "01_points": 7,
+        "gaze_id_source": 14,
+        "gaze_resolved_entity": 13,
+        "gaze_bone_measured": 0,
+        "actions_with_gesture_field": 0,
+        "actions_with_hands_field": 0,
+        "speech_actions": 7,
+        "script_dialogues_parsed": 5,
+        "transient_controls_preserved": 0,
+        "fps_source": 8,
+        "fps_context": 24,
+        "dna": {
+          "characters_requested": 6,
+          "characters_with_verified_refs": 6,
+          "images": 6
+        },
+        "set_prop_refs": {
+          "requested": 3,
+          "approved_with_verified_images": 0
+        },
+        "manifest": "falta manifiesto"
+      },
+      "blocking_fields_step4": [
+        {
+          "code": "MISSING_SET_OR_RIG_BONES",
+          "reason": "falta manifiesto"
+        }
+      ],
+      "contract_input_coverage": [
+        {
+          "block": 1,
+          "status": "parcial",
+          "input": "acciones, citas y emociones cualitativas01; beat cinematográfico/arousal/valence y propósito los decide Argon con fuente"
+        },
+        {
+          "block": 2,
+          "status": "parcial",
+          "input": "guion literal si existe, citas/intervalos de habla01; no voz medida, tono completo, pre-roll ni reacción estructurada garantizados"
+        },
+        {
+          "block": 3,
+          "status": "pendiente_Argon",
+          "input": "catálogo IDs disponible; U, pesos y sujeto los decide SB, no este programa"
+        },
+        {
+          "block": 4,
+          "status": "parcial",
+          "input": "referencias/hash aprobados según cobertura; postura/mirada01; manos/huesos/ojos medidos pueden faltar"
+        },
+        {
+          "block": 5,
+          "status": "parcial",
+          "input": "puntos y segmentos01 intactos, no equivalen a transforms/rig Blender medidos"
+        },
+        {
+          "block": 6,
+          "status": "parcial",
+          "input": "escenario_ID, duración y reloj24; bounds/luz física requieren manifiesto"
+        },
+        {
+          "block": 7,
+          "status": "pendiente_Argon",
+          "input": "tamaño/encuadre corresponde a SB; no heredar tomas del01 como mandato"
+        },
+        {
+          "block": 8,
+          "status": "falta",
+          "input": "geometría exacta exige manifiesto y solver; no se inventa XYZ"
+        },
+        {
+          "block": 9,
+          "status": "pendiente_Argon",
+          "input": "movimiento y motivo son decisión SB, LOCK por defecto"
+        },
+        {
+          "block": 10,
+          "status": "parcial",
+          "input": "ejes y posiciones01 como fuente; continuidad geométrica todavía por comprobar"
+        },
+        {
+          "block": 11,
+          "status": "parcial",
+          "input": "catálogo ordenado de refs verificadas; roles por viñeta los decide Argon"
+        },
+        {
+          "block": 12,
+          "status": "falta",
+          "input": "sin resultados Gate1/Gate2; jamás se certifica aceptación por preparar contexto"
+        },
+        {
+          "block": 13,
+          "status": "parcial",
+          "input": "bloqueos de entrada explícitos; faltan validación de contrato y aceptación física"
+        }
+      ]
+    }
+  ]
+}

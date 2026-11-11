@@ -1,0 +1,133 @@
+{
+ "_nota": "fichas reales esc 9 (copia de lectura, sin imágenes)",
+ "fichas": [
+  {
+   "id": "ch-el-aliengena-73a9",
+   "name": "EL ALIENÍGENA",
+   "height_m": null,
+   "version": {
+    "name": "FORMA COMPLETA",
+    "form": "fm-50a3aa4478e4",
+    "description": "Humanoide de complexión esbelta y atlética, piel pálida, cabello largo liso blanco plateado, ojos azules luminosos y orejas largas y puntiagudas. Viste una armadura ceñida de placas negras metálicas con detalles y líneas luminosas azules, hombreras estilizadas y un núcleo de energía azul brillante incrustado en el centro del pecho.",
+    "never_changes": "Cabello largo liso de color blanco plateado; Ojos azules brillantes; Orejas largas y puntiagudas; Piel pálida; Armadura negra biomecánica con líneas de energía azules y núcleo luminoso en el pecho"
+   },
+   "images": []
+  },
+  {
+   "id": "ch-protagonista-c71a",
+   "name": "PROTAGONISTA",
+   "height_m": null,
+   "version": {
+    "name": "ANTES",
+    "form": "fm-ce5c321a280b",
+    "description": "Joven de complexión robusta y rostro redondeado, piel clara, cabello negro corto y despeinado con flequillo, ojos azul oscuro y gafas de montura negra rectangular. Viste una sudadera gris con capucha y cremallera abierta, camiseta interior negra con un diseño circular dorado y azul en el pecho, pantalones holgados azul oscuro con bolsillos laterales tipo cargo, zapatillas deportivas negras con suela y detalles blancos, y una mochila negra colgada sobre el hombro derecho.",
+    "never_changes": "Cabello negro corto y despeinado con flequillo sobre la frente; Ojos de color azul oscuro; Esencia de los rasgos faciales base"
+   },
+   "images": []
+  },
+  {
+   "id": "ch-la-novia-5cdf",
+   "name": "LA NOVIA",
+   "height_m": null,
+   "version": {
+    "name": "FORMA HUMANA (VIDA COTIDIANA)",
+    "form": "fm-226362c091d9",
+    "description": "Mujer joven de piel clara, cabello largo y liso de color castaño muy oscuro/negro con flequillo y mechones sueltos a los lados del rostro, y ojos oscuros con reflejos grisáceos y violáceos. Viste un suéter o prenda de punto holgada de color blanco/crema que deja parte de un hombro descubierto. En la vista nocturna de espaldas lleva una prenda exterior oscura de manga larga.",
+    "never_changes": "Rostro de mujer joven de facciones suaves; Cabello largo con flequillo sobre la frente"
+   },
+   "images": []
+  },
+  {
+   "id": "ch-imi-69f6",
+   "name": "IMI",
+   "height_m": null,
+   "version": {
+    "name": "NÚCLEO DE COMBATE",
+    "form": "fm-40c9ed5b09a5",
+    "description": "Brazalete tecnológico de metal oscuro de aspecto líquido ajustado a una muñeca humana, con un núcleo circular central que brilla intensamente en color azul eléctrico/cian y líneas de energía luminosas que recorren las correas.",
+    "never_changes": "Esquema de colores azul eléctrico / cian y azul medianoche / negro; En todas sus formas con apariencia humana: cabello de tonos azulados/plateados con filamentos de luz y ojos azules con brillo digital"
+   },
+   "images": []
+  }
+ ],
+ "escena": {
+  "numero": "9",
+  "escenario_id": "esc-azotea",
+  "titulo": "ACTO IV — LO QUE ESTAMOS DISPUESTOS A PERDER — ESCENA 9. EXT. AZOTEA — CONTINUACIÓN",
+  "personajes": [
+   "ch-el-aliengena-73a9",
+   "ch-protagonista-c71a",
+   "ch-la-novia-5cdf",
+   "ch-imi-69f6"
+  ],
+  "datos": {
+   "numero": "9",
+   "titulo": "ACTO IV — LO QUE ESTAMOS DISPUESTOS A PERDER — ESCENA 9. EXT. AZOTEA — CONTINUACIÓN",
+   "tipo": "continuacion",
+   "escena_ancla": null,
+   "escenario_id": "esc-azotea",
+   "escenario": {
+    "valor": "AZOTEA",
+    "origen": "explicito",
+    "cita": "ESCENA 9. EXT. AZOTEA — CONTINUACIÓN",
+    "justificacion": ""
+   },
+   "sets": [],
+   "int_ext": {
+    "valor": "EXT",
+    "origen": "explicito",
+    "cita": "ESCENA 9. EXT. AZOTEA — CONTINUACIÓN",
+    "justificacion": ""
+   },
+   "hora": {
+    "valor": "NOCHE",
+    "origen": "heredado",
+    "cita": "ESCENA 9. EXT. AZOTEA — CONTINUACIÓN",
+    "justificacion": "Es continuación directa de la escena 8 en la misma azotea de noche."
+   },
+   "clima": {
+    "valor": "Despejado con estrellas",
+    "origen": "heredado",
+    "cita": "falta",
+    "justificacion": "Heredado de la escena 8 al ser continuación directa en la azotea."
+   },
+   "deducidos": [],
+   "personajes": [
+    {
+     "personaje_id": "ch-el-aliengena-73a9",
+     "presencia": "en_cuadro",
+     "entrada": "ya estaba",
+     "salida": "sigue en la siguiente"
+    },
+    {
+     "personaje_id": "ch-protagonista-c71a",
+     "presencia": "en_cuadro",
+     "entrada": "ya estaba",
+     "salida": "sigue en la siguiente"
+    },
+    {
+     "personaje_id": "ch-la-novia-5cdf",
+     "presencia": "en_cuadro",
+     "entrada": "aparece dentro de una prisión transparente cuando el espacio se abre",
+     "salida": "sigue en la siguiente"
+    },
+    {
+     "personaje_id": "ch-imi-69f6",
+     "presencia": "en_cuadro",
+     "entrada": "ya estaba",
+     "salida": "sigue en la siguiente"
+    }
+   ],
+   "continuidad": {
+    "con_anterior": "continuacion",
+    "hechos_primarios": [
+     "El alienígena revela a la novia encerrada en una prisión transparente suspendida que comienza a comprimirse",
+     "Imi propone reconstruir la estructura biológica del protagonista y sincronizarla con la matriz de génesis"
+    ],
+    "hechos_secundarios": [
+     "La integración conlleva el riesgo de que tanto el protagonista como Imi pierdan su identidad"
+    ]
+   }
+  }
+ }
+}

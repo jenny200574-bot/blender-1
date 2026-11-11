@@ -1,0 +1,4014 @@
+{
+  "schema": "myia.tabla_decision_camara.v1",
+  "descripcion": "Tabla de decisión de cámara, agnóstica de canal y extensible sin cambiar código. Entrada: un beat del storyboard. Salida: tipo de plano, ángulo, colocación, altura, distancia en alturas del sujeto, lente, movimiento, camino, duración y elemento clave. El motor construye candidatas; Argon elige.",
+  "fecha": "2026-11-10",
+  "como_usar": {
+    "motor": [
+      "Lee el beat del storyboard: verbo de acción, emoción, quién actúa o habla, cuántos hay, si cambia el lugar o el tiempo.",
+      "Busca el verbo en indice_verbos. Si hay id, usa ese beat. Si no, intenta la familia (por emoción, n_personajes o cambio_lugar). Si no hay familia, usa fallback_general.",
+      "Construye 4 a 6 candidatas a partir de salida (plano, ángulo, colocación, altura, distancia en alturas, lente, movimiento y camino), respetando d_min, las reglas de secuencia y el catálogo de planos.",
+      "No inventa un plano fuera de la tabla. No esconde un mueble para cumplir un porcentaje de cuerpo.",
+      "Argon elige entre esas candidatas según el guion (emoción y acción). El motor arma la que Argon elija y valida el elemento clave."
+    ],
+    "argon": [
+      "Recibe las candidatas ya construidas (fotos claras + tipo, movimiento y elemento clave).",
+      "Elige la que mejor cuenta el beat, no la que 'se ve más cuerpo'.",
+      "No pide esconder decorado a menos que el beat sea una pared quitada o un peek.",
+      "Si ninguna sirve, pide el fallback de la familia o un general de reorientación; no un cenital por defecto."
+    ],
+    "extension": "Para un tipo nuevo, se agrega un objeto en familias[].beats[] (id, verbos, cuando, entrada, salida, bpy) y se actualiza indice_verbos. No hace falta cambiar código. El fallback de la familia cubre verbos todavía no listados.",
+    "agnostico_de_canal": true
+  },
+  "constantes_distancia": {
+    "formula_distancia_m": "cobertura_m * lente_mm / sensor_alto_mm",
+    "sensor_alto_mm_default": 24.0,
+    "sensor_ancho_mm_default": 36.0,
+    "altura_referencia_m": 1.7,
+    "acercamiento_maximo_ref_m": 0.5,
+    "formula_d_min_m": "0.50 * (altura_sujeto_m / 1.70)",
+    "regla": "Si el plano pide un acercamiento menor que d_min, se alarga la lente; no se rompe la distancia.",
+    "por_tamano": {
+      "ECU": {
+        "cobertura_en_H": 0.18,
+        "lente_mm": [
+          85,
+          135
+        ],
+        "distancia_tipica_en_H": [
+          0.64,
+          1.01
+        ]
+      },
+      "CU": {
+        "cobertura_en_H": 0.4,
+        "lente_mm": [
+          50,
+          85
+        ],
+        "distancia_tipica_en_H": [
+          0.83,
+          1.42
+        ]
+      },
+      "MCU": {
+        "cobertura_en_H": 0.55,
+        "lente_mm": [
+          50,
+          85
+        ],
+        "distancia_tipica_en_H": [
+          1.15,
+          1.95
+        ]
+      },
+      "MS": {
+        "cobertura_en_H": 0.75,
+        "lente_mm": [
+          35,
+          50
+        ],
+        "distancia_tipica_en_H": [
+          1.09,
+          1.56
+        ]
+      },
+      "MLS": {
+        "cobertura_en_H": 1.05,
+        "lente_mm": [
+          28,
+          35
+        ],
+        "distancia_tipica_en_H": [
+          1.23,
+          1.53
+        ]
+      },
+      "FS": {
+        "cobertura_en_H": 1.2,
+        "lente_mm": [
+          24,
+          35
+        ],
+        "distancia_tipica_en_H": [
+          1.2,
+          1.75
+        ]
+      },
+      "WS": {
+        "cobertura_en_H": 2.2,
+        "lente_mm": [
+          18,
+          24
+        ],
+        "distancia_tipica_en_H": [
+          1.65,
+          2.2
+        ]
+      },
+      "EWS": {
+        "cobertura_en_H": 5.0,
+        "lente_mm": [
+          14,
+          24
+        ],
+        "distancia_tipica_en_H": [
+          2.92,
+          5.0
+        ]
+      }
+    },
+    "alias_tamano": {
+      "PPP": "ECU",
+      "GPP": "ECU",
+      "PD": "CU",
+      "PP": "CU",
+      "PMC": "MCU",
+      "PM": "MS",
+      "PA": "MLS",
+      "PE": "FS",
+      "PG": "WS",
+      "GPG": "EWS"
+    }
+  },
+  "reglas_de_secuencia": [
+    {
+      "id": "abrir_con_establecimiento",
+      "regla": "Al empezar una escena o al cambiar de lugar, ofrecer un plano que sitúe (establish_place o general), salvo que el guion pida empezar en un detalle y revelar.",
+      "cuando": [
+        "inicio_de_escena",
+        "cambio_lugar"
+      ]
+    },
+    {
+      "id": "reestablecer_despues_de_cercanos",
+      "regla": "Después de varios primeros planos, un plano más abierto reorienta (re-establishing).",
+      "cuando": [
+        "muchos_CU_seguidos",
+        "alguien_entra_o_se_mueve_mucho"
+      ]
+    },
+    {
+      "id": "no_repetir_tres_veces",
+      "regla": "No repetir el mismo tipo de plano, ángulo y distancia tres veces seguidas, salvo un efecto buscado y documentado.",
+      "cuando": [
+        "siempre"
+      ]
+    },
+    {
+      "id": "regla_30",
+      "regla": "Entre dos planos seguidos del mismo sujeto, cambiar el ángulo al menos unos 30° o cambiar claro el tamaño.",
+      "cuando": [
+        "corte_del_mismo_sujeto"
+      ]
+    },
+    {
+      "id": "regla_180_y_direccion",
+      "regla": "Mantener el eje de 180° y la dirección en pantalla. Para invertir dirección: mostrar el giro, un plano neutro (frente o espalda) o un observador que gira la cabeza.",
+      "cuando": [
+        "dialogo",
+        "desplazamiento",
+        "persecucion",
+        "pelea"
+      ]
+    },
+    {
+      "id": "match_on_action",
+      "regla": "Si hay un movimiento continuo entre dos planos, cortar en la acción (la pose final engancha con la inicial del siguiente).",
+      "cuando": [
+        "movimiento_continuo",
+        "golpe",
+        "entrada_salida"
+      ]
+    },
+    {
+      "id": "eyeline",
+      "regla": "Si alguien mira, el siguiente plano de lo visto encaja con esa dirección. Si hay diferencia de altura, el alto mira abajo y el bajo mira arriba.",
+      "cuando": [
+        "look_at",
+        "discovery",
+        "POV",
+        "dialogo"
+      ]
+    },
+    {
+      "id": "abiertos_mas_largos",
+      "regla": "Los planos abiertos duran un poco más (hay más que leer). Los cercanos, más cortos, salvo que se sostenga una emoción o una reacción (sobre todo en comedia).",
+      "cuando": [
+        "siempre"
+      ]
+    },
+    {
+      "id": "frente_a_quien_mostrar",
+      "regla": "La cámara se coloca frente a quien el beat quiere mostrar, a d_min o más. No se esconde una cama o un mueble si la toma no lo pide: se elige otro ángulo o se respeta el primer término.",
+      "cuando": [
+        "siempre"
+      ]
+    },
+    {
+      "id": "general_estrategico",
+      "regla": "Un plano lejano o de paisaje no va en cada viñeta: se usa al abrir, al cambiar de lugar, al reorientar, o cuando el beat es escala, grupo o distancia.",
+      "cuando": [
+        "planificacion_de_secuencia"
+      ]
+    }
+  ],
+  "notacion_storyboard": {
+    "flechas_dentro": "Movimiento del personaje o del objeto (CHAR, nombre, IN, OUT).",
+    "flechas_fuera": "Movimiento de cámara (PAN L, TILT UP, PUSH IN, TRACK, PULL OUT).",
+    "cuadro_en_cuadro": "Rectángulo más chico = final de un zoom o dolly. La etiqueta dice PUSH/DOLLY o ZOOM.",
+    "numeros": "Escena y toma (5A, 5B). Varios recuadros con el mismo número = un solo plano largo.",
+    "hook_up": "HU / match on action: la pose del final engancha con el inicio del siguiente.",
+    "transiciones": [
+      "CUT",
+      "DISSOLVE",
+      "FADE",
+      "MATCH CUT",
+      "SMASH CUT",
+      "WIPE"
+    ]
+  },
+  "lookup": {
+    "paso_1": "indice_verbos[verbo_normalizado] -> beat id",
+    "paso_2": "si no hay, familia por emoción, n_personajes o cambio_lugar -> fallback de esa familia",
+    "paso_3": "si no hay, fallback_general"
+  },
+  "indice_verbos": {
+    "abandonar": "leave_place",
+    "abrazar_suave": "tenderness",
+    "abrazo_amoroso": "romance",
+    "abrir_los_ojos": "wakeup",
+    "acariciar": "tenderness",
+    "accion": "fallback_accion",
+    "accion_generica": "fallback_general",
+    "acechar": "sneak",
+    "acercarse_a_escondidas": "sneak",
+    "achicarse": "shrink",
+    "acorralado": "one_vs_many",
+    "actuar": "fallback_interpretacion",
+    "agacharse": "dodge",
+    "agarrarse": "struggle",
+    "agazaparse": "hide",
+    "agrandarse": "grow",
+    "alejar_para_escala": "pullback_reveal_size",
+    "alzar_vuelo": "fly",
+    "ambush": "assault_ambush",
+    "andar": "walk",
+    "andar_de_puntillas": "sneak",
+    "anger": "anger",
+    "animarse_objeto": "object_alive",
+    "ansiedad": "fear_build",
+    "aparece": "appear",
+    "aparece_en_cuadro": "enter_frame",
+    "aparecer": "appear",
+    "appear": "appear",
+    "argument": "argument",
+    "arribar": "arrive_place",
+    "arrive": "arrive_place",
+    "arrojar": "throw",
+    "asaltar": "assault_ambush",
+    "ascender": "climb",
+    "asombro": "surprise",
+    "asustar": "scare_horror",
+    "ataque_sorpresa": "assault_ambush",
+    "atrapa": "catch",
+    "atrapar": "catch",
+    "aura": "power_up",
+    "avanzar": "fallback_desplazamiento",
+    "avergonzarse": "shame_guilt",
+    "baila": "dance",
+    "bailar": "dance",
+    "beat": "fallback_general",
+    "beso": "romance",
+    "brincar": "jump",
+    "bucear": "swim",
+    "busca": "search",
+    "buscar": "search",
+    "cabalgar": "drive_ride",
+    "cachar": "catch",
+    "cachetada": "punch_exchange",
+    "cae": "fall",
+    "caer": "fall",
+    "caer_en_la_cuenta": "realization",
+    "caida": "fall",
+    "caida_comica": "slapstick",
+    "caido_moral": "defeat",
+    "camara_delante": "be_followed",
+    "camara_por_las_caras": "face_pass",
+    "camara_se_aleja_al_techo": "pullback_reveal_size",
+    "cambiar_de_forma": "transformation",
+    "cambio_de_lugar": "location_change",
+    "camina": "walk",
+    "caminar": "walk",
+    "cancion": "sing",
+    "canta": "sing",
+    "cantar": "sing",
+    "cargarse": "power_up",
+    "cast": "magic_cast",
+    "catastrofe": "disaster",
+    "catch": "catch",
+    "celebrar": "victory_celebration",
+    "celebration": "victory_celebration",
+    "chase": "chase",
+    "chiste": "comedy_gag",
+    "chocar": "crash_impact",
+    "choque": "crash_impact",
+    "clima": "weather_nature",
+    "climb": "climb",
+    "closeup_objeto": "insert_object",
+    "cobra_vida": "object_alive",
+    "colosal": "show_scale_large",
+    "combate": "fight",
+    "come_alive": "object_alive",
+    "comedia": "comedy_gag",
+    "comprender": "realization",
+    "conducir": "drive_ride",
+    "confidencia": "whisper_secret",
+    "conjurar": "magic_cast",
+    "conversacion": "dialogue_two",
+    "conversar": "fallback_dialogo",
+    "corre": "run",
+    "correr": "run",
+    "crash": "crash_impact",
+    "crece": "grow",
+    "crecer": "grow",
+    "crowd": "crowd",
+    "cruzar_la_puerta": "threshold_door",
+    "cuidar": "tenderness",
+    "culpa": "shame_guilt",
+    "dance": "dance",
+    "danza": "dance",
+    "darse_cuenta": "realization",
+    "darse_la_vuelta": "turn_around",
+    "decidir": "thinking_planning",
+    "decir": "fallback_dialogo",
+    "declamar": "speech_stage",
+    "defeat": "defeat",
+    "derrota": "defeat",
+    "derrumbe": "disaster",
+    "desaparece": "disappear",
+    "desaparecer": "disappear",
+    "desastre": "disaster",
+    "descubre": "discovery",
+    "descubrir": "fallback_descubrimiento",
+    "despertar": "wakeup",
+    "despierta": "wakeup",
+    "desplazarse": "fallback_desplazamiento",
+    "desvanecerse": "disappear",
+    "detalle": "insert_object",
+    "detenerse": "stop_suddenly",
+    "dialogo": "fallback_dialogo",
+    "dialogo_de_dos": "dialogue_two",
+    "dialogo_de_grupo": "dialogue_group",
+    "dialogue": "dialogue_two",
+    "disappear": "disappear",
+    "disaster": "disaster",
+    "discovery": "discovery",
+    "discurso": "speech_stage",
+    "discusion": "argument",
+    "discutir": "argument",
+    "distancia": "show_distance",
+    "dodge": "dodge",
+    "donde_estamos": "establish_place",
+    "dream": "dream",
+    "drive": "drive_ride",
+    "ducking": "dodge",
+    "duda": "thinking_planning",
+    "echar_a_correr": "run",
+    "efecto": "fallback_magia",
+    "el_objetivo_esta_lejos": "show_distance",
+    "el_tiempo_pasa": "time_passage",
+    "emboscada": "assault_ambush",
+    "emboscar": "assault_ambush",
+    "emocion": "fallback_emocion",
+    "en_el_pasado": "flashback",
+    "en_la_entrada": "threshold_door",
+    "en_vehiculo": "drive_ride",
+    "enamorarse": "romance",
+    "encoge": "shrink",
+    "encoger": "shrink",
+    "encontrar": "discovery",
+    "energia": "power_up",
+    "enojarse": "anger",
+    "enojo": "anger",
+    "enorme": "show_scale_large",
+    "entendio": "realization",
+    "enter_frame": "enter_frame",
+    "entrar_a": "arrive_place",
+    "entrar_al_cuadro": "enter_frame",
+    "escabullirse": "sneak",
+    "escala": "fallback_espacio",
+    "escala_chica": "show_scale_small",
+    "escala_grande": "show_scale_large",
+    "escalar": "climb",
+    "esconde": "hide",
+    "esconderse": "hide",
+    "esfumarse": "disappear",
+    "espacio": "fallback_espacio",
+    "esquiva": "dodge",
+    "esquivar": "dodge",
+    "establecer": "establish_place",
+    "establecimiento": "establish_place",
+    "establishing": "establish_place",
+    "estallar": "explosion",
+    "exit_frame": "exit_frame",
+    "exito": "victory_celebration",
+    "explosion": "explosion",
+    "explotar": "explosion",
+    "exterior_amplio": "landscape",
+    "eyeline": "look_at",
+    "face_pass": "face_pass",
+    "fall": "fall",
+    "festejo": "victory_celebration",
+    "fight": "fight",
+    "flash_back": "flashback",
+    "flashback": "flashback",
+    "fly": "fly",
+    "follow": "follow_character",
+    "forcejea": "struggle",
+    "forcejear": "struggle",
+    "forcejeo": "fallback_accion",
+    "foto_de_grupo": "group_shot",
+    "fracaso": "defeat",
+    "frenar": "stop_suddenly",
+    "fuga": "chase",
+    "furia": "anger",
+    "gag": "comedy_gag",
+    "ganar": "victory_celebration",
+    "gente": "crowd",
+    "gigante": "grow",
+    "golpea": "punch_exchange",
+    "golpear": "punch_exchange",
+    "golpearse_contra": "crash_impact",
+    "grito": "argument",
+    "group_shot": "group_shot",
+    "grow": "grow",
+    "grupo": "fallback_grupo",
+    "guilt": "shame_guilt",
+    "guitarra": "play_instrument",
+    "hablar": "fallback_dialogo",
+    "hablar_en_publico": "speech_stage",
+    "hablar_solo": "monologue",
+    "hallazgo": "discovery",
+    "hechizo": "magic_cast",
+    "hide": "hide",
+    "horas_despues": "time_passage",
+    "horizon": "landscape",
+    "hormiga": "show_scale_small",
+    "horror": "scare_horror",
+    "huir": "chase",
+    "hurgar": "search",
+    "impacto": "crash_impact",
+    "in": "enter_frame",
+    "incendio": "disaster",
+    "inesperado": "surprise",
+    "inquietud": "fear_build",
+    "insert": "insert_object",
+    "instrumento": "play_instrument",
+    "interpretar": "fallback_interpretacion",
+    "interrumpe": "interruption",
+    "interrumpir": "interruption",
+    "interruption": "interruption",
+    "inundacion": "disaster",
+    "invocar": "magic_cast",
+    "ir": "fallback_desplazamiento",
+    "ira": "anger",
+    "irrumpe": "interruption",
+    "irse": "leave_place",
+    "joke": "comedy_gag",
+    "juguete_vive": "object_alive",
+    "jump": "jump",
+    "juntos": "fallback_grupo",
+    "la_carta": "important_prop",
+    "la_llave": "important_prop",
+    "lance": "fallback_accion",
+    "landscape": "landscape",
+    "lanza": "throw",
+    "lanzar": "throw",
+    "lanzar_magia": "magic_cast",
+    "leading": "be_followed",
+    "leap": "jump",
+    "leave": "leave_place",
+    "lejos": "show_distance",
+    "llamar": "phone_or_screen",
+    "llega": "arrive_place",
+    "llegar": "arrive_place",
+    "llora": "sadness",
+    "llorar": "sadness",
+    "lluvia": "weather_nature",
+    "location_change": "location_change",
+    "look_at": "look_at",
+    "luchar": "fight",
+    "lugar": "fallback_espacio",
+    "macguffin": "important_prop",
+    "magia": "fallback_magia",
+    "manejar": "drive_ride",
+    "mas_tarde": "time_passage",
+    "materializarse": "appear",
+    "mente": "fallback_tiempo",
+    "miedo": "fear_build",
+    "miedo_golpe": "scare_horror",
+    "miniatura": "shrink",
+    "mira": "look_at",
+    "mirar": "look_at",
+    "momento": "fallback_general",
+    "monologo": "monologue",
+    "monologue": "monologue",
+    "montage": "montage",
+    "montaje": "montage",
+    "montar": "drive_ride",
+    "morph": "transformation",
+    "mostrar_objeto": "insert_object",
+    "mostrar_oculto": "reveal",
+    "mostrar_tamano": "pullback_reveal_size",
+    "moverse": "fallback_desplazamiento",
+    "muchedumbre": "crowd",
+    "multitud": "crowd",
+    "mundo": "fallback_mundo",
+    "nada": "swim",
+    "nadar": "swim",
+    "naturaleza": "weather_nature",
+    "nieve": "weather_nature",
+    "notar": "fallback_descubrimiento",
+    "nueva_escena": "location_change",
+    "objeto": "insert_object",
+    "objeto_importante": "important_prop",
+    "objeto_vivo": "object_alive",
+    "observar": "look_at",
+    "ocultarse": "hide",
+    "one_vs_many": "one_vs_many",
+    "orar": "speech_stage",
+    "otro_sitio": "location_change",
+    "out": "exit_frame",
+    "paisaje": "landscape",
+    "pan_de_emociones": "face_pass",
+    "pantalla": "phone_or_screen",
+    "partir": "leave_place",
+    "pase_de_caras": "face_pass",
+    "pasear": "walk",
+    "paso_del_tiempo": "time_passage",
+    "patada": "punch_exchange",
+    "payasada": "slapstick",
+    "pelea": "fight",
+    "pelear": "fight",
+    "pelearse_de_palabra": "argument",
+    "pena": "sadness",
+    "pensar": "thinking_planning",
+    "pequenez": "show_scale_small",
+    "pequeno_entre_grandes": "show_scale_small",
+    "perder": "defeat",
+    "persecucion": "chase",
+    "perseguir": "chase",
+    "perseguir_suave": "follow_character",
+    "persigue": "chase",
+    "pesadilla": "dream",
+    "phone": "phone_or_screen",
+    "piano": "play_instrument",
+    "piensa": "thinking_planning",
+    "planear": "fly",
+    "plano_de_grupo": "group_shot",
+    "plano_general_inicial": "establish_place",
+    "play_instrument": "play_instrument",
+    "poder": "fallback_magia",
+    "porrazo_comico": "slapstick",
+    "power_up": "power_up",
+    "precipitarse": "fall",
+    "presentar": "fallback_interpretacion",
+    "prop": "fallback_mundo",
+    "prop_clave": "important_prop",
+    "puerta": "threshold_door",
+    "pullback_tamano": "pullback_reveal_size",
+    "punch": "punch_exchange",
+    "punchline": "comedy_gag",
+    "puñetazo": "punch_exchange",
+    "rabia": "anger",
+    "reaccionar": "fallback_emocion",
+    "realization": "realization",
+    "recibir": "catch",
+    "recorrer_caras": "face_pass",
+    "recuerdo": "fallback_tiempo",
+    "reencuentro": "reunion",
+    "reencuentro_abrazo": "reunion",
+    "resbalon": "slapstick",
+    "rescata": "rescue",
+    "rescatar": "rescue",
+    "rescue": "rescue",
+    "resumen": "montage",
+    "retroceder_con": "be_followed",
+    "reunion": "reunion",
+    "reunion_hablada": "dialogue_group",
+    "reveal": "reveal",
+    "revelar": "reveal",
+    "revolver": "search",
+    "ride": "drive_ride",
+    "rodeado": "one_vs_many",
+    "romance": "romance",
+    "run": "run",
+    "sadness": "sadness",
+    "salir_de": "leave_place",
+    "salir_del_cuadro": "exit_frame",
+    "salta": "jump",
+    "saltar": "jump",
+    "salvar": "rescue",
+    "scare": "scare_horror",
+    "screen": "phone_or_screen",
+    "se_gira": "turn_around",
+    "se_para": "stop_suddenly",
+    "se_revela": "reveal",
+    "se_transforma": "transformation",
+    "se_va": "leave_place",
+    "se_va_del_cuadro": "exit_frame",
+    "search": "search",
+    "secreto": "[REDACTED]",
+    "secuencia_de_pasos": "montage",
+    "seguir": "follow_character",
+    "sentir": "fallback_emocion",
+    "separados": "show_distance",
+    "ser_seguido": "be_followed",
+    "shame": "shame_guilt",
+    "show_distance": "show_distance",
+    "shrink": "shrink",
+    "sigue": "follow_character",
+    "sing": "sing",
+    "slapstick": "slapstick",
+    "sneak": "sneak",
+    "socorrer": "rescue",
+    "soliloquio": "monologue",
+    "sonar": "dream",
+    "sorprenderse": "surprise",
+    "sorpresa": "surprise",
+    "speech": "speech_stage",
+    "sprint": "run",
+    "stealth": "sneak",
+    "stop_short": "stop_suddenly",
+    "struggle": "struggle",
+    "subir": "climb",
+    "sueno": "dream",
+    "surgir": "appear",
+    "surprise": "surprise",
+    "suspense": "fear_build",
+    "susto": "scare_horror",
+    "susurrar": "whisper_secret",
+    "susurro": "whisper_secret",
+    "swim": "swim",
+    "telefono": "phone_or_screen",
+    "tenderness": "tenderness",
+    "tension": "fear_build",
+    "ternura": "tenderness",
+    "terror": "scare_horror",
+    "thinking": "thinking_planning",
+    "threshold": "threshold_door",
+    "throw": "throw",
+    "tiempo": "fallback_tiempo",
+    "time_passage": "time_passage",
+    "tiny": "show_scale_small",
+    "tirar": "throw",
+    "tocar": "play_instrument",
+    "todos_juntos": "group_shot",
+    "tormenta": "weather_nature",
+    "transformacion": "transformation",
+    "transformarse": "transformation",
+    "trasladarse": "fallback_desplazamiento",
+    "traslado": "location_change",
+    "trepa": "climb",
+    "trepar": "climb",
+    "triste": "sadness",
+    "tristeza": "sadness",
+    "tropezar_y_caer": "fall",
+    "trotar": "run",
+    "turn_around": "turn_around",
+    "two_shot_dialogo": "dialogue_two",
+    "umbral": "threshold_door",
+    "uno_contra_muchos": "one_vs_many",
+    "varios": "fallback_grupo",
+    "varios_hablan": "dialogue_group",
+    "ver_algo": "fallback_descubrimiento",
+    "verguenza": "shame_guilt",
+    "victoria": "victory_celebration",
+    "videollamada": "phone_or_screen",
+    "viento": "weather_nature",
+    "vista": "landscape",
+    "volar": "fly",
+    "volver_a_verse": "reunion",
+    "volverse": "turn_around",
+    "vuela": "fly",
+    "wakeup": "wakeup",
+    "walk": "walk",
+    "weather": "weather_nature",
+    "whisper": "whisper_secret"
+  },
+  "familias": [
+    {
+      "id": "desplazamiento",
+      "nombre": "Desplazamiento",
+      "fallback_id": "fallback_desplazamiento",
+      "descripcion": "El sujeto se mueve en el espacio. La cámara lo acompaña, con aire adelante y dirección estable.",
+      "beats": [
+        {
+          "id": "fallback_desplazamiento",
+          "nombre": "Fallback de desplazamiento",
+          "verbos": [
+            "moverse",
+            "desplazarse",
+            "ir",
+            "avanzar",
+            "trasladarse"
+          ],
+          "cuando": "Cualquier desplazamiento que no tenga un tipo más preciso.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              28,
+              35
+            ],
+            "movimiento": "TRACK_LATERAL",
+            "camino": "Paralelo al sujeto, un tercio de cuadro, aire adelante.",
+            "duracion": "Todo el desplazamiento, o hasta el corte natural.",
+            "elemento_clave": "cuerpo_y_camino",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Empty a la cadera + offset adelante (lead = 0.4*H). Cámara Track To al pecho. Follow Path o keyframes del empty. Respetar d_min."
+        },
+        {
+          "id": "walk",
+          "nombre": "Caminar",
+          "verbos": [
+            "caminar",
+            "camina",
+            "andar",
+            "pasear",
+            "walk"
+          ],
+          "cuando": "Un personaje camina de un punto a otro.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 1.7,
+            "lente_mm": [
+              28,
+              35
+            ],
+            "movimiento": "TRACK_LATERAL",
+            "camino": "Al lado o un poco atrás. Aire de mirada adelante. Alternativa: follow detrás o leading adelante; pan fijo si el tramo es corto.",
+            "duracion": "Desde antes de entrar al cuadro hasta después de salir, si cambia el fondo.",
+            "elemento_clave": "cuerpo_y_camino",
+            "direccion_pantalla": "mantener",
+            "notas": "No dejarlo quieto en el centro sin salir: no se lee el avance (Mascelli)."
+          },
+          "bpy": "Igual que el fallback. Si el tramo es corto: cámara fija y pan, arrancar antes del IN y cortar después del OUT."
+        },
+        {
+          "id": "run",
+          "nombre": "Correr",
+          "verbos": [
+            "correr",
+            "corre",
+            "echar_a_correr",
+            "trotar",
+            "run",
+            "sprint"
+          ],
+          "cuando": "Un personaje corre. La cámara lo acompaña.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 1.8,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "TRACK_LATERAL",
+            "camino": "Tracking al lado (truck), follow detrás un poco alto, o leading adelante. Aire adelante. Gran angular si corre hacia la cámara (parece más rápido).",
+            "duracion": "Mientras corre. Primer plano solo si el beat es el esfuerzo o la cara.",
+            "elemento_clave": "cuerpo_y_camino",
+            "direccion_pantalla": "mantener",
+            "notas": "Misma dirección en pantalla. Plano neutro (frente o espalda) para cambiar de dirección."
+          },
+          "bpy": "Empty adelante de la cadera (lead 0.5*H). Cámara un lado, Track To pecho. Keyframes o Follow Path. No bajar de d_min aunque corra hacia el lente."
+        },
+        {
+          "id": "fly",
+          "nombre": "Volar",
+          "verbos": [
+            "volar",
+            "vuela",
+            "alzar_vuelo",
+            "fly",
+            "planear"
+          ],
+          "cuando": "Un personaje u objeto vuela.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "CPIC",
+            "colocacion": "abajo_o_lado",
+            "altura": "bajo",
+            "distancia_alturas": 2.2,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "CRANE_O_TRACK",
+            "camino": "Acompaña en el eje del vuelo. Contrapicado para altura; a veces un boom que sube con él.",
+            "duracion": "El arco del vuelo, o un tramo que lea la trayectoria.",
+            "elemento_clave": "cuerpo_y_trayectoria",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Curva 3D (Follow Path) o empty en el root + offset. Track To al cuerpo. clip_end amplio."
+        },
+        {
+          "id": "jump",
+          "nombre": "Saltar",
+          "verbos": [
+            "saltar",
+            "salta",
+            "brincar",
+            "jump",
+            "leap"
+          ],
+          "cuando": "Un salto, hacia arriba o de un borde a otro.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 1.8,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "TILT_O_TRACK",
+            "camino": "Se parte de un entero. Un tilt o un boom corto sigue el salto. Se puede cortar en el despegue y en el aterrizaje (match on action).",
+            "duracion": "Despegue + vuelo + aterrizaje, o dos planos enganchados.",
+            "elemento_clave": "cuerpo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Keyframes de cámara en Z o constraint Copy Location parcial al root, con suavizado. No perder los pies en el aterrizaje."
+        },
+        {
+          "id": "fall",
+          "nombre": "Caer",
+          "verbos": [
+            "caer",
+            "cae",
+            "caida",
+            "fall",
+            "precipitarse",
+            "tropezar_y_caer"
+          ],
+          "cuando": "Una caída, un tropezón grave o un precipicio.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "PIC",
+            "colocacion": "lado_o_arriba",
+            "altura": "alto",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "TILT_DOWN_O_CRANE",
+            "camino": "Picado o la cámara baja con él. Un plano del suelo o de quien lo ve (reacción) cierra el beat.",
+            "duracion": "La caída completa, a veces más corta en el impacto.",
+            "elemento_clave": "cuerpo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara sigue el origen en Z con lag (delay 2-4 cuadros). Al impactar, un leve shake (keyframes de rotación)."
+        },
+        {
+          "id": "climb",
+          "nombre": "Trepar o subir",
+          "verbos": [
+            "trepar",
+            "trepa",
+            "escalar",
+            "subir",
+            "climb",
+            "ascender"
+          ],
+          "cuando": "Sube por algo (mueble, pared, escalera, árbol).",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "CPIC",
+            "colocacion": "abajo",
+            "altura": "bajo",
+            "distancia_alturas": 1.8,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "TILT_UP_O_PEDESTAL",
+            "camino": "Contrapicado o pedestal/boom que sube con él. Un plano de las manos (insert) si el esfuerzo importa.",
+            "duracion": "Mientras sube; reencuadrar al llegar arriba.",
+            "elemento_clave": "cuerpo_y_manos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Pedestal: keyframes en Z de la cámara, Track To al torso. Insert: cámara a las manos, lente 50-85, d_min."
+        },
+        {
+          "id": "swim",
+          "nombre": "Nadar",
+          "verbos": [
+            "nadar",
+            "nada",
+            "bucear",
+            "swim"
+          ],
+          "cuando": "Nada o se desplaza en el agua.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "superficie",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "TRACK_LATERAL",
+            "camino": "Al lado, a la altura de la superficie o un poco bajo. Aire adelante.",
+            "duracion": "El tramo de nado.",
+            "elemento_clave": "cuerpo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Igual que walk, altura en el plano del agua. clip_start corto si hay primer término de agua."
+        },
+        {
+          "id": "drive_ride",
+          "nombre": "Ir en vehículo o montado",
+          "verbos": [
+            "conducir",
+            "manejar",
+            "montar",
+            "cabalgar",
+            "drive",
+            "ride",
+            "en_vehiculo"
+          ],
+          "cuando": "Va en un vehículo, una montura o algo que lo lleva.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado_o_delante",
+            "altura": "ojos_del_vehiculo",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "TRACK_CON_VEHICULO",
+            "camino": "La cámara va con el vehículo (mismo lado al cortar interior/exterior). Alternativa: plano de persecución atrás o de frente.",
+            "duracion": "El viaje o un tramo que lea la dirección.",
+            "elemento_clave": "personaje_y_vehiculo",
+            "direccion_pantalla": "mantener",
+            "notas": "Misma dirección al pasar de exterior a interior (Mascelli)."
+          },
+          "bpy": "Parentar un empty al vehículo con offset; la cámara sigue al empty. No heredar vibración excesiva, o filtrarla."
+        },
+        {
+          "id": "sneak",
+          "nombre": "Escabullirse",
+          "verbos": [
+            "escabullirse",
+            "acechar",
+            "andar_de_puntillas",
+            "sneak",
+            "stealth",
+            "acercarse_a_escondidas"
+          ],
+          "cuando": "Se mueve con sigilo, no quiere que lo vean.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado_o_detras",
+            "altura": "bajo",
+            "distancia_alturas": 1.4,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "TRACK_LENTO",
+            "camino": "Más baja y más cerrada que un caminar normal. Primer término (borde, mueble) permitido si no tapa la cara.",
+            "duracion": "El tramo de sigilo; un poco más sostenido.",
+            "elemento_clave": "cara_y_cuerpo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Misma receta que walk, altura más baja (0.4*H). DOF suave, f/2.8, foco en el que se escabulle."
+        },
+        {
+          "id": "hide",
+          "nombre": "Esconderse",
+          "verbos": [
+            "esconderse",
+            "esconde",
+            "ocultarse",
+            "hide",
+            "agazaparse"
+          ],
+          "cuando": "Se esconde detrás o debajo de algo.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado_o_peek",
+            "altura": "bajo",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC_O_PEEK",
+            "camino": "Se ve al personaje y el escondite. Un peek (pan o dolly corto) puede revelar que está ahí, o un POV de quien lo busca.",
+            "duracion": "Sostener lo suficiente para leer que está escondido.",
+            "elemento_clave": "personaje_y_escondite",
+            "direccion_pantalla": "mantener",
+            "notas": "No esconder el mueble: el escondite es parte del plano."
+          },
+          "bpy": "Cámara al lado del escondite, no dentro. Track To a la cara. El mueble queda en cuadro a propósito."
+        },
+        {
+          "id": "enter_frame",
+          "nombre": "Entrar al cuadro",
+          "verbos": [
+            "entrar_al_cuadro",
+            "aparece_en_cuadro",
+            "enter_frame",
+            "IN"
+          ],
+          "cuando": "Entra al cuadro desde un borde (el storyboard marca IN).",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "frente_al_borde",
+            "altura": "ojos",
+            "distancia_alturas": 1.8,
+            "lente_mm": [
+              28,
+              35
+            ],
+            "movimiento": "STATIC_O_PAN",
+            "camino": "La cámara espera el borde por el que entra, con espacio. Arranca antes de que entre.",
+            "duracion": "Desde un poco antes del IN hasta que queda encuadrado.",
+            "elemento_clave": "cuerpo",
+            "direccion_pantalla": "entrada_acorde_a_salida_anterior",
+            "notas": ""
+          },
+          "bpy": "Cámara fija o pan corto. No reencuadrar de más (evitar sneak framing, Mascelli)."
+        },
+        {
+          "id": "exit_frame",
+          "nombre": "Salir del cuadro",
+          "verbos": [
+            "salir_del_cuadro",
+            "se_va_del_cuadro",
+            "exit_frame",
+            "OUT"
+          ],
+          "cuando": "Sale del cuadro (el storyboard marca OUT).",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "frente_al_borde",
+            "altura": "ojos",
+            "distancia_alturas": 1.8,
+            "lente_mm": [
+              28,
+              35
+            ],
+            "movimiento": "STATIC_O_PAN",
+            "camino": "Se deja salir por el borde de la dirección establecida. Se corta después de que salga.",
+            "duracion": "Hasta un poco después del OUT.",
+            "elemento_clave": "cuerpo",
+            "direccion_pantalla": "salida_define_entrada_siguiente",
+            "notas": ""
+          },
+          "bpy": "Igual que enter_frame. El siguiente plano debe entrar por el lado contrario (continúa el viaje)."
+        },
+        {
+          "id": "arrive_place",
+          "nombre": "Llegar a un lugar",
+          "verbos": [
+            "llegar",
+            "llega",
+            "arribar",
+            "entrar_a",
+            "arrive"
+          ],
+          "cuando": "Llega a un sitio (casa, cuarto, claro).",
+          "entrada": {
+            "cambio_lugar": true
+          },
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "hacia_el_umbral",
+            "altura": "ojos",
+            "distancia_alturas": 2.5,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC_O_DOLLY_IN",
+            "camino": "Un general o un plano del umbral; el personaje entra al cuadro o se acerca. Luego un medio de la llegada.",
+            "duracion": "El general un poco más largo, para leer el lugar.",
+            "elemento_clave": "lugar_y_personaje",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al interior o al frente de la entrada, d_min respecto al que llega. No clipar el marco de la puerta si es parte del plano."
+        },
+        {
+          "id": "leave_place",
+          "nombre": "Irse de un lugar",
+          "verbos": [
+            "irse",
+            "se_va",
+            "salir_de",
+            "abandonar",
+            "leave",
+            "partir"
+          ],
+          "cuando": "Deja un lugar. Puede encogerse al fondo si el beat es 'se aleja'.",
+          "entrada": {
+            "cambio_lugar": true
+          },
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "desde_el_interior",
+            "altura": "ojos",
+            "distancia_alturas": 2.5,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC_O_PULL_OUT",
+            "camino": "Se lo deja ir hacia el fondo o salir de cuadro. Un pull-out marca que el lugar se queda atrás.",
+            "duracion": "Hasta que salga o se haga pequeño en el lugar.",
+            "elemento_clave": "lugar_y_personaje",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara en el lugar que deja, Track To suave o fija. Pull-out: keyframes alejándose."
+        },
+        {
+          "id": "follow_character",
+          "nombre": "Seguir a un personaje",
+          "verbos": [
+            "seguir",
+            "sigue",
+            "perseguir_suave",
+            "follow"
+          ],
+          "cuando": "La cámara (o otro personaje) sigue a alguien que se desplaza.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "detras",
+            "altura": "alto_leve",
+            "distancia_alturas": 1.9,
+            "lente_mm": [
+              28,
+              35
+            ],
+            "movimiento": "FOLLOW",
+            "camino": "Detrás, un poco arriba, misma dirección, aire adelante del seguido.",
+            "duracion": "Mientras dure el seguimiento.",
+            "elemento_clave": "seguido_y_camino",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Empty detrás y arriba de la cadera (0.8*H atrás, 0.3*H arriba). Track To a la cabeza o al camino. Suavizar (damped)."
+        },
+        {
+          "id": "be_followed",
+          "nombre": "Ser seguido (cámara delante)",
+          "verbos": [
+            "ser_seguido",
+            "leading",
+            "camara_delante",
+            "retroceder_con"
+          ],
+          "cuando": "La cámara va delante y lo mira, como si retrocediera con él.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "delante",
+            "altura": "ojos",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              28,
+              35
+            ],
+            "movimiento": "LEADING",
+            "camino": "Delante, mirándolo de frente o de tres cuartos. Él camina hacia la cámara, con aire.",
+            "duracion": "Mientras avance.",
+            "elemento_clave": "cara_y_torso",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Empty delante del pecho a dist_alturas * H. La cámara mira atrás (Track To cara). Mover el empty con el root."
+        },
+        {
+          "id": "stop_suddenly",
+          "nombre": "Detenerse de golpe",
+          "verbos": [
+            "detenerse",
+            "se_para",
+            "frenar",
+            "stop_short"
+          ],
+          "cuando": "Iba en movimiento y se para en seco.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado_o_frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.4,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "TRACK_Y_FRENAR",
+            "camino": "La cámara llega con él y se detiene, o se pasa un poco y se corrige. Luego un cercano de la cara si hay motivo.",
+            "duracion": "El frenazo y un hold corto.",
+            "elemento_clave": "cara_y_cuerpo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Al parar el root, amortiguar la cámara (sobrepasarse 0.1*H y volver). Opcional push-in corto a la cara."
+        },
+        {
+          "id": "turn_around",
+          "nombre": "Darse la vuelta",
+          "verbos": [
+            "darse_la_vuelta",
+            "se_gira",
+            "volverse",
+            "turn_around"
+          ],
+          "cuando": "Cambia de dirección a la vista. Es la forma limpia de invertir la dirección en pantalla.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "ojos",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "PAN_O_STATIC",
+            "camino": "Se filma el giro completo en un solo plano, del mismo lado. Después, la nueva dirección queda establecida.",
+            "duracion": "Todo el giro.",
+            "elemento_clave": "cuerpo",
+            "direccion_pantalla": "se_establece_al_terminar_el_giro",
+            "notas": ""
+          },
+          "bpy": "Cámara fija o pan mínimo. No cortar a mitad del giro sin match on action."
+        }
+      ]
+    },
+    {
+      "id": "accion",
+      "nombre": "Acción física",
+      "fallback_id": "fallback_accion",
+      "descripcion": "Cuerpos en conflicto o impacto. Primero el espacio, luego el golpe y la reacción. Eje estable.",
+      "beats": [
+        {
+          "id": "fallback_accion",
+          "nombre": "Fallback de acción",
+          "verbos": [
+            "accion",
+            "forcejeo",
+            "lance"
+          ],
+          "cuando": "Una acción física que no tiene un tipo más preciso.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC_O_TRACK",
+            "camino": "Entero o medio para leer cuerpos y espacio. Cercanos en el impacto o la reacción.",
+            "duracion": "El lance completo; más corto hacia el clímax.",
+            "elemento_clave": "cuerpos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al lado del eje de acción. Track To al centro del grupo. Cortar en la acción (keyframes alineados al impacto)."
+        },
+        {
+          "id": "chase",
+          "nombre": "Persecución",
+          "verbos": [
+            "perseguir",
+            "persigue",
+            "persecucion",
+            "chase",
+            "huir",
+            "fuga"
+          ],
+          "cuando": "Uno persigue a otro, o dos se persiguen.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado_o_detras",
+            "altura": "pecho",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "TRACK_O_FOLLOW",
+            "camino": "Misma dirección en pantalla para perseguidor y perseguido. Intercalar (cross-cutting). Planos más cerrados y más cortos hacia el clímax. Direcciones opuestas solo si se acercan de frente.",
+            "duracion": "Tramos de carrera intercalados; el último, más corto y más cerca.",
+            "elemento_clave": "ambos_y_camino",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Dos caminos paralelos, mismo lado del eje. Alternar cámara A/B. Gran angular si corren hacia el lente. Neutral (frente/espalda) para cambiar dirección."
+        },
+        {
+          "id": "fight",
+          "nombre": "Pelea",
+          "verbos": [
+            "pelear",
+            "pelea",
+            "luchar",
+            "fight",
+            "combate"
+          ],
+          "cuando": "Una pelea entre dos o más.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 2.2,
+            "lente_mm": [
+              24,
+              50
+            ],
+            "movimiento": "STATIC_O_HANDHELD_SUAVE",
+            "camino": "General para geografía y pies; medios para el intercambio; primer plano de la reacción al golpe, no de cada puñetazo. Quien recibe avanza hacia la cámara. Eje de 180° estable. Un general de vez en cuando reorienta.",
+            "duracion": "Abiertos un poco más largos; impactos más cortos.",
+            "elemento_clave": "cuerpos_y_caras",
+            "direccion_pantalla": "mantener",
+            "notas": "Teleobjetivo (75-85) comprime y hace creíble un golpe que no toca."
+          },
+          "bpy": "Cámara de un lado del eje. Al impacto, corte (match on action) a CU de quien recibe, 1-3 cuadros recortados del swing. Opcional track corto al puño."
+        },
+        {
+          "id": "punch_exchange",
+          "nombre": "Intercambio de golpes",
+          "verbos": [
+            "golpear",
+            "golpea",
+            "puñetazo",
+            "punch",
+            "cachetada",
+            "patada"
+          ],
+          "cuando": "Uno o varios golpes concretos.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "detras_del_que_golpea_o_recibe",
+            "altura": "ojos",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              35,
+              85
+            ],
+            "movimiento": "STATIC_O_TRACK_CORTO",
+            "camino": "Medio de los dos, o cámara detrás del que golpea para alinear puño y cara. Corte al impacto + reacción.",
+            "duracion": "El golpe y la reacción, cortos.",
+            "elemento_clave": "puño_y_cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Colocar la cámara en el eje puño-cara (el daylight del miss se esconde). Track To la cara que recibe. No d_min en la cara."
+        },
+        {
+          "id": "assault_ambush",
+          "nombre": "Asalto o emboscada",
+          "verbos": [
+            "asaltar",
+            "emboscar",
+            "emboscada",
+            "ambush",
+            "ataque_sorpresa"
+          ],
+          "cuando": "Un ataque por sorpresa.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "con_la_victima_luego_el_ataque",
+            "altura": "ojos",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              24,
+              50
+            ],
+            "movimiento": "STATIC_Y_LATIGAZO",
+            "camino": "Se sostiene a la víctima; un whip pan o un corte seco revela al agresor. Luego coverage de pelea.",
+            "duracion": "Hold en la calma, corte o latigazo en el ataque.",
+            "elemento_clave": "victima_luego_agresor",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Keyframe de rotación rápido (whip pan) o corte. Tras el ataque, pasar a reglas de fight."
+        },
+        {
+          "id": "explosion",
+          "nombre": "Explosión",
+          "verbos": [
+            "explotar",
+            "explosion",
+            "estallar",
+            "explosion"
+          ],
+          "cuando": "Algo estalla o hay un estallido.",
+          "entrada": {},
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "lado_a_distancia_segura",
+            "altura": "pecho",
+            "distancia_alturas": 3.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC_O_SHAKE",
+            "camino": "Un general que sitúe, el estallido, y la reacción. La cámara puede temblar en el impacto. No esconder el lugar.",
+            "duracion": "Breve en el estallido; un poco más en la reacción.",
+            "elemento_clave": "lugar_e_impacto",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara lejos (3H+). Al frame del boom, shake (ruido amortiguado 4-8 cuadros). Insert o medio de escombros si el beat lo pide."
+        },
+        {
+          "id": "catch",
+          "nombre": "Atrapar o recibir",
+          "verbos": [
+            "atrapar",
+            "atrapa",
+            "recibir",
+            "catch",
+            "cachar"
+          ],
+          "cuando": "Alguien atrapa un objeto o a alguien.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado_o_frente",
+            "altura": "manos",
+            "distancia_alturas": 1.4,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "PAN_O_TRACK",
+            "camino": "Seguir el objeto (pan o tracking) hasta las manos. Luego la cara de quien atrapa.",
+            "duracion": "El vuelo y la recepción.",
+            "elemento_clave": "objeto_y_manos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Track To al objeto en el aire, luego al vacío de las manos. Corte a CU de la cara."
+        },
+        {
+          "id": "throw",
+          "nombre": "Lanzar",
+          "verbos": [
+            "lanzar",
+            "lanza",
+            "tirar",
+            "throw",
+            "arrojar"
+          ],
+          "cuando": "Alguien lanza un objeto.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "PAN_CON_EL_OBJETO",
+            "camino": "Se ve el lanzamiento (cuerpo) y un pan o corte sigue al objeto. La dirección en pantalla se mantiene hasta que cae o lo atrapan.",
+            "duracion": "El gesto y el vuelo.",
+            "elemento_clave": "cuerpo_y_objeto",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Keyframe de pan siguiendo el objeto. Match on action si se corta al receptor."
+        },
+        {
+          "id": "struggle",
+          "nombre": "Forcejeo",
+          "verbos": [
+            "forcejear",
+            "forcejeo",
+            "forcejea",
+            "struggle",
+            "agarrarse"
+          ],
+          "cuando": "Dos se traban, se empujan o forcejean.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC_O_HANDHELD_SUAVE",
+            "camino": "Los dos en cuadro, gran angular cerca (respetando d_min) para energía. Reorientar con un entero si se pierde el espacio.",
+            "duracion": "El forcejeo; cortes en los cambios de control.",
+            "elemento_clave": "ambos_cuerpos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al lado, Track To al centro de masas de los dos. Handheld suave solo si el beat es desesperado."
+        },
+        {
+          "id": "dodge",
+          "nombre": "Esquivar",
+          "verbos": [
+            "esquivar",
+            "esquiva",
+            "agacharse",
+            "dodge",
+            "ducking"
+          ],
+          "cuando": "Alguien se aparta de algo que viene.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente_o_lado",
+            "altura": "ojos",
+            "distancia_alturas": 1.4,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "WHIP_O_TILT",
+            "camino": "Se ve lo que viene y el esquivo. A veces un whip o un tilt rápido. Luego la reacción.",
+            "duracion": "Muy corto.",
+            "elemento_clave": "cuerpo_y_amenaza",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Pan o tilt corto siguiendo la amenaza, luego reencuadre al que esquiva."
+        },
+        {
+          "id": "rescue",
+          "nombre": "Rescate",
+          "verbos": [
+            "rescatar",
+            "rescata",
+            "salvar",
+            "rescue",
+            "socorrer"
+          ],
+          "cuando": "Alguien rescata a otro.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "TRACK_O_PUSH",
+            "camino": "Un entero que muestre a los dos y el peligro; un medio del contacto; un cercano de las caras al salvarse.",
+            "duracion": "El lance; un hold en el abrazo o el alivio.",
+            "elemento_clave": "ambos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al lado del eje salvador-víctima. Push-in al contacto."
+        },
+        {
+          "id": "crash_impact",
+          "nombre": "Choque o impacto",
+          "verbos": [
+            "chocar",
+            "choque",
+            "impacto",
+            "crash",
+            "golpearse_contra"
+          ],
+          "cuando": "Un cuerpo o un vehículo choca.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 1.8,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC_Y_SHAKE",
+            "camino": "Se lee la trayectoria y el impacto. Corte en el choque. Reacción o general después.",
+            "duracion": "Corto en el impacto.",
+            "elemento_clave": "cuerpos_o_vehiculos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Match on action al frame del contacto. Shake breve. No atravesar geometría: d_min y clip_start."
+        }
+      ]
+    },
+    {
+      "id": "magia",
+      "nombre": "Magia y transformación",
+      "fallback_id": "fallback_magia",
+      "descripcion": "Ver el antes y el después. La cámara deja espacio o se aleja para leer la nueva escala.",
+      "beats": [
+        {
+          "id": "fallback_magia",
+          "nombre": "Fallback de magia o transformación",
+          "verbos": [
+            "magia",
+            "efecto",
+            "poder"
+          ],
+          "cuando": "Un cambio mágico o visual que no tiene un tipo más preciso.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC_O_PUSH",
+            "camino": "Dejar espacio para ver el antes y el después. Un push suave al culminar el efecto.",
+            "duracion": "Sostener el cambio completo; no cortar a mitad.",
+            "elemento_clave": "sujeto_del_efecto",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara fija o push-in lento (keyframes). El sujeto cabe entero en el cuadro durante el cambio."
+        },
+        {
+          "id": "magic_cast",
+          "nombre": "Lanzar magia",
+          "verbos": [
+            "lanzar_magia",
+            "hechizo",
+            "conjurar",
+            "cast",
+            "invocar"
+          ],
+          "cuando": "Alguien lanza un hechizo o un poder.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente_o_lado",
+            "altura": "ojos",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "PUSH_O_TILT",
+            "camino": "Medio de quien lanza (manos y cara). Un insert de las manos si el gesto importa. Luego un plano de lo afectado.",
+            "duracion": "El gesto y el efecto.",
+            "elemento_clave": "cara_y_manos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Push-in a la cara o a las manos. Track To a las manos en el gesto, luego al objetivo del hechizo."
+        },
+        {
+          "id": "transformation",
+          "nombre": "Transformación",
+          "verbos": [
+            "transformarse",
+            "se_transforma",
+            "transformacion",
+            "morph",
+            "cambiar_de_forma"
+          ],
+          "cuando": "Un personaje u objeto cambia de forma.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 2.2,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC",
+            "camino": "Entero y sostenido: se debe ver el antes y el después en el mismo encuadre, o con un corte match en la forma.",
+            "duracion": "Toda la transformación.",
+            "elemento_clave": "cuerpo_completo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara fija, sujeto centrado con margen (cobertura 1.4*H o más). No cambiar de lente a mitad."
+        },
+        {
+          "id": "grow",
+          "nombre": "Crecer",
+          "verbos": [
+            "crecer",
+            "crece",
+            "agrandarse",
+            "grow",
+            "gigante"
+          ],
+          "cuando": "Alguien o algo crece.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "CPIC",
+            "colocacion": "abajo",
+            "altura": "bajo",
+            "distancia_alturas": 2.5,
+            "lente_mm": [
+              18,
+              28
+            ],
+            "movimiento": "TILT_UP_O_PULL_OUT",
+            "camino": "La cámara se queda o se aleja / se baja para mostrar la nueva escala. Contrapicado al final.",
+            "duracion": "El crecimiento y un hold en el tamaño nuevo.",
+            "elemento_clave": "cuerpo_y_entorno",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Pull-out o crane down (keyframes). Recalcular distancia al final: cobertura 1.2 * nueva_H, respetar d_min nuevo."
+        },
+        {
+          "id": "shrink",
+          "nombre": "Encoger",
+          "verbos": [
+            "encoger",
+            "encoge",
+            "achicarse",
+            "shrink",
+            "miniatura"
+          ],
+          "cuando": "Alguien o algo se encoge.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "PIC",
+            "colocacion": "frente_o_arriba",
+            "altura": "ojos_luego_alto",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "TILT_DOWN_O_PUSH_NO",
+            "camino": "Se parte de un entero. Al encogerse, la cámara no se lanza al piso de inmediato: un picado o un pull-back revela lo chico que quedó en el lugar. Un POV del chico puede seguir.",
+            "duracion": "El cambio y un hold de escala.",
+            "elemento_clave": "cuerpo_y_entorno",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara se queda o sube (picado). d_min se recalcula con la nueva altura. Un segundo plano puede ser POV del chico."
+        },
+        {
+          "id": "appear",
+          "nombre": "Aparecer",
+          "verbos": [
+            "aparecer",
+            "aparece",
+            "materializarse",
+            "appear",
+            "surgir"
+          ],
+          "cuando": "Alguien o algo aparece de golpe o poco a poco.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "frente_al_punto",
+            "altura": "ojos",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              50
+            ],
+            "movimiento": "STATIC_O_RACK_O_PAN",
+            "camino": "Cuadro sostenido en el punto vacío, luego aparece. Alternativa: pan o rack focus que revela.",
+            "duracion": "Hold antes, aparición, hold después.",
+            "elemento_clave": "quien_aparece",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara fija. Rack focus: dof.focus_distance o focus_object cambia del fondo al que aparece."
+        },
+        {
+          "id": "disappear",
+          "nombre": "Desaparecer",
+          "verbos": [
+            "desaparecer",
+            "desaparece",
+            "esfumarse",
+            "disappear",
+            "desvanecerse"
+          ],
+          "cuando": "Alguien o algo desaparece.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              24,
+              50
+            ],
+            "movimiento": "STATIC",
+            "camino": "Sostener el cuadro durante la desaparición. No cortar al vacío de golpe, salvo gag.",
+            "duracion": "La desaparición y un hold en el vacío.",
+            "elemento_clave": "quien_desaparece",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara fija. Opcional rack focus al vacío que queda."
+        },
+        {
+          "id": "power_up",
+          "nombre": "Aumento de poder",
+          "verbos": [
+            "poder",
+            "power_up",
+            "cargarse",
+            "energia",
+            "aura"
+          ],
+          "cuando": "Un personaje se carga de poder o de energía.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "CPIC",
+            "colocacion": "frente_o_abajo",
+            "altura": "bajo",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "PUSH_O_ORBIT",
+            "camino": "Contrapicado y un push o un orbit corto. Luego un entero si el poder cambia su escala.",
+            "duracion": "La carga y el clímax, un poco más largo en el acento.",
+            "elemento_clave": "cara_y_cuerpo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Push-in + leve contrapicado (C más baja). Orbit: curva alrededor a 1.5*H. DOF a la cara."
+        }
+      ]
+    },
+    {
+      "id": "interpretacion",
+      "nombre": "Interpretación",
+      "fallback_id": "fallback_interpretacion",
+      "descripcion": "El cuerpo y el ritmo se leen en un entero; la cara, en los acentos. La cámara va a tempo.",
+      "beats": [
+        {
+          "id": "fallback_interpretacion",
+          "nombre": "Fallback de interpretación",
+          "verbos": [
+            "actuar",
+            "presentar",
+            "interpretar"
+          ],
+          "cuando": "Una actuación o una performance que no tiene un tipo más preciso.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              28,
+              35
+            ],
+            "movimiento": "STATIC_O_DOLLY",
+            "camino": "Entero para el cuerpo; acercarse a la cara en los acentos.",
+            "duracion": "Acompañar la frase o el compás; no cortar a contratiempo.",
+            "elemento_clave": "cuerpo_y_cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara frente al escenario o al personaje. Push-in en acentos (marcadores del beat)."
+        },
+        {
+          "id": "dance",
+          "nombre": "Bailar",
+          "verbos": [
+            "bailar",
+            "baila",
+            "danza",
+            "dance"
+          ],
+          "cuando": "Uno o varios bailan.",
+          "entrada": {},
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "frente_o_lado",
+            "altura": "pecho",
+            "distancia_alturas": 2.2,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "DOLLY_O_ORBIT",
+            "camino": "Entero o general para leer el cuerpo y el ritmo. Cercanos en un acento emocional. La cámara se mueve con el compás, no contra él.",
+            "duracion": "Frases de baile completas; no cortar a mitad de un paso clave.",
+            "elemento_clave": "cuerpo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Follow Path o orbit alrededor del grupo, velocidad ligada al tempo. Track To al centro. CU solo en acentos."
+        },
+        {
+          "id": "sing",
+          "nombre": "Cantar",
+          "verbos": [
+            "cantar",
+            "canta",
+            "sing",
+            "cancion"
+          ],
+          "cuando": "Alguien canta, solo o frente a otros.",
+          "entrada": {},
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "PUSH_LENTO",
+            "camino": "Medio corto o primer plano de la cara. Un entero de vez en cuando si hay baile o público. Push lento en el estribillo.",
+            "duracion": "Frases musicales; hold en la nota o la emoción final.",
+            "elemento_clave": "cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara a altura de ojos, d_min. Push-in lento durante el estribillo. DOF f/2.8 a la cara."
+        },
+        {
+          "id": "play_instrument",
+          "nombre": "Tocar un instrumento",
+          "verbos": [
+            "tocar",
+            "instrumento",
+            "play_instrument",
+            "piano",
+            "guitarra"
+          ],
+          "cuando": "Alguien toca un instrumento.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado_o_frente",
+            "altura": "manos",
+            "distancia_alturas": 1.4,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC_O_PAN",
+            "camino": "Medio que una cara y manos. Inserts de las manos o del instrumento en los acentos.",
+            "duracion": "La frase musical.",
+            "elemento_clave": "cara_y_manos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara a las manos (elemento clave puede cambiar a insert). Rack focus cara ↔ manos."
+        },
+        {
+          "id": "speech_stage",
+          "nombre": "Hablar en escena o un discurso",
+          "verbos": [
+            "discurso",
+            "speech",
+            "orar",
+            "hablar_en_publico",
+            "declamar"
+          ],
+          "cuando": "Habla ante un grupo o en un escenario.",
+          "entrada": {
+            "n_personajes": [
+              1,
+              "grupo"
+            ]
+          },
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente_o_tres_cuartos",
+            "altura": "ojos",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC_O_PUSH",
+            "camino": "Medio de quien habla; generales del público; cercanos de reacciones. Eje entre orador y audiencia.",
+            "duracion": "Las frases; más cerca en el punto del discurso.",
+            "elemento_clave": "orador_y_publico",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara de un lado del eje orador-público (Mascelli, speakers and audiences). Push-in en el clímax."
+        }
+      ]
+    },
+    {
+      "id": "dialogo",
+      "nombre": "Diálogo",
+      "fallback_id": "fallback_dialogo",
+      "descripcion": "Master, OTS y plano/contraplano del mismo lado del eje. Más cerca cuando sube la emoción.",
+      "beats": [
+        {
+          "id": "fallback_dialogo",
+          "nombre": "Fallback de diálogo",
+          "verbos": [
+            "hablar",
+            "decir",
+            "conversar",
+            "dialogo"
+          ],
+          "cuando": "Una conversación que no tiene un tipo más preciso.",
+          "entrada": {
+            "n_personajes": [
+              2,
+              "varios"
+            ]
+          },
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "OTS_o_frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC",
+            "camino": "Master o two-shot, luego OTS o plano/contraplano del mismo lado del eje.",
+            "duracion": "El turno de habla; más cerca si sube la emoción.",
+            "elemento_clave": "cara_de_quien_habla",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Eje entre los que hablan. Par de cámaras OTS. Track To a la cara. No cruzar el eje entre cortes."
+        },
+        {
+          "id": "dialogue_two",
+          "nombre": "Diálogo de dos",
+          "verbos": [
+            "dialogo_de_dos",
+            "conversacion",
+            "two_shot_dialogo",
+            "dialogue"
+          ],
+          "cuando": "Hablan dos personajes.",
+          "entrada": {
+            "n_personajes": 2
+          },
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "OTS",
+            "altura": "ojos",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC",
+            "camino": "Se abre con two-shot o master. OTS o plano/contraplano, mismo lado del eje. Primeros planos cuando sube la emoción. Aire de mirada.",
+            "duracion": "Turnos de habla; el reaction shot puede durar más que la línea.",
+            "elemento_clave": "cara_de_quien_habla",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Dos cámaras OTS simétricas, d_min, lente 35-50 (o 85 en CU). DOF en la cara del objetivo, hombro en amorce. focus_subtarget = hueso cara."
+        },
+        {
+          "id": "dialogue_group",
+          "nombre": "Diálogo de grupo",
+          "verbos": [
+            "dialogo_de_grupo",
+            "reunion_hablada",
+            "varios_hablan"
+          ],
+          "cuando": "Hablan tres o más.",
+          "entrada": {
+            "n_personajes": [
+              3,
+              "varios"
+            ]
+          },
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "frente_al_grupo",
+            "altura": "ojos",
+            "distancia_alturas": 2.5,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC_O_PAN",
+            "camino": "Un master de grupo. Singles o OTS de quien habla y de quien reacciona. Re-establecer si cambia quién está dónde.",
+            "duracion": "El master un poco más largo; los singles, al ritmo de los turnos.",
+            "elemento_clave": "caras_del_grupo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al frente o a un lado del grupo. Pan entre hablantes o cortes a singles. Redibujar el eje si alguien se mueve (Mascelli)."
+        },
+        {
+          "id": "monologue",
+          "nombre": "Monólogo",
+          "verbos": [
+            "monologo",
+            "hablar_solo",
+            "soliloquio",
+            "monologue"
+          ],
+          "cuando": "Uno habla solo, en voz alta o para sí.",
+          "entrada": {
+            "n_personajes": 1
+          },
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "PUSH_LENTO",
+            "camino": "Medio corto o primer plano, frente o tres cuartos. Un push-in si decide o se emociona.",
+            "duracion": "La frase completa; hold al final si hay una decisión.",
+            "elemento_clave": "cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara a altura de ojos, Track To cara. Push-in lento (0.1-0.2*H)."
+        },
+        {
+          "id": "phone_or_screen",
+          "nombre": "Teléfono o pantalla",
+          "verbos": [
+            "telefono",
+            "llamar",
+            "pantalla",
+            "videollamada",
+            "phone",
+            "screen"
+          ],
+          "cuando": "Habla por teléfono o mira una pantalla.",
+          "entrada": {},
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "frente_o_perfil",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "STATIC_O_INSERT",
+            "camino": "Cercano de quien habla o mira. Insert de la pantalla o del aparato. En un corte entre dos que hablan por teléfono, que miren a lados opuestos (convención).",
+            "duracion": "Los turnos; el insert, breve.",
+            "elemento_clave": "cara_y_aparato",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara a la cara + una toma insert del prop (hueso de la mano o el objeto). Looks opuestos entre los dos lados de la llamada."
+        },
+        {
+          "id": "argument",
+          "nombre": "Discusión o pelea verbal",
+          "verbos": [
+            "discutir",
+            "discusion",
+            "pelearse_de_palabra",
+            "argument",
+            "grito"
+          ],
+          "cuando": "Una discusión, con o sin gritos.",
+          "entrada": {
+            "n_personajes": 2,
+            "emocion": [
+              "enojo",
+              "tension"
+            ]
+          },
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "OTS_o_frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.2,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "PUSH_O_WHIP",
+            "camino": "Se parte del coverage de diálogo y se acerca más rápido. Whip pans entre los dos si hay energía. No romper el eje, salvo un efecto buscado.",
+            "duracion": "Cortes más cortos al subir el tono.",
+            "elemento_clave": "caras",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Igual que dialogue_two, distancia un poco menor (sin bajar de d_min). Whip pan: rotación rápida en Y. Push-in en la línea que decide."
+        },
+        {
+          "id": "whisper_secret",
+          "nombre": "Susurro o secreto",
+          "verbos": [
+            "susurrar",
+            "susurro",
+            "secreto",
+            "whisper",
+            "confidencia"
+          ],
+          "cuando": "Alguien cuenta un secreto o susurra.",
+          "entrada": {
+            "emocion": [
+              "intimo",
+              "secreto"
+            ]
+          },
+          "salida": {
+            "plano": "CU",
+            "angulo": "NORM",
+            "colocacion": "cerca_de_perfil_o_OTS",
+            "altura": "ojos",
+            "distancia_alturas": 1.0,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "STATIC_O_PUSH",
+            "camino": "Muy cerca, a veces un perfil o un OTS sucio. Altura un poco más baja. El resto del grupo puede quedar fuera o desenfocado.",
+            "duracion": "Sostener el secreto; no cortar demasiado pronto.",
+            "elemento_clave": "caras",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara cerca (d_min). DOF muy suave (f/2.0) a la boca o los ojos. Primer término del oyente permitido."
+        },
+        {
+          "id": "interruption",
+          "nombre": "Interrupción",
+          "verbos": [
+            "interrumpir",
+            "interrumpe",
+            "interruption",
+            "irrumpe"
+          ],
+          "cuando": "Alguien interrumpe una escena o una conversación.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "hacia_quien_irrumpe",
+            "altura": "ojos",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              28,
+              50
+            ],
+            "movimiento": "WHIP_O_PAN",
+            "camino": "Whip pan o corte al que irrumpe; luego un general que reubica a todos (re-establishing).",
+            "duracion": "Corto en la interrupción; un poco más al reubicar.",
+            "elemento_clave": "quien_irrumpe",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Whip pan hacia el IN de quien entra, o corte a su enter_frame. Luego un plano más abierto del grupo."
+        }
+      ]
+    },
+    {
+      "id": "emocion",
+      "nombre": "Emoción y momentos de historia",
+      "fallback_id": "fallback_emocion",
+      "descripcion": "La cara es el elemento clave. Push-in cuando crece; pull-out cuando queda solo; hold en la reacción.",
+      "beats": [
+        {
+          "id": "fallback_emocion",
+          "nombre": "Fallback de emoción",
+          "verbos": [
+            "sentir",
+            "emocion",
+            "reaccionar"
+          ],
+          "cuando": "Un momento emocional que no tiene un tipo más preciso.",
+          "entrada": {},
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "PUSH_LENTO",
+            "camino": "Medio corto o primer plano de la cara. Un push-in si la emoción crece.",
+            "duracion": "Sostener la reacción lo suficiente para que se lea.",
+            "elemento_clave": "cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara a altura de ojos, Track To cara, push-in 0.1-0.2*H. d_min. DOF f/2.8."
+        },
+        {
+          "id": "scare_horror",
+          "nombre": "Susto o terror",
+          "verbos": [
+            "asustar",
+            "susto",
+            "terror",
+            "horror",
+            "scare",
+            "miedo_golpe"
+          ],
+          "cuando": "Un susto, una amenaza o una escena de terror.",
+          "entrada": {
+            "emocion": [
+              "miedo",
+              "terror"
+            ]
+          },
+          "salida": {
+            "plano": "MCU",
+            "angulo": "DUTCH_O_NORM",
+            "colocacion": "frente_o_peek",
+            "altura": "ojos_o_bajo",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              24,
+              50
+            ],
+            "movimiento": "PUSH_LENTO_O_PEEK",
+            "camino": "Push-in lento antes del susto; un peek (pan o tilt que revela) o un corte seco al revelar. Dutch con mesura si el mundo se siente mal. Un gran angular cerca (sin romper d_min) incomoda.",
+            "duracion": "Hold lento en la tensión; el susto, corto; la reacción, un poco más.",
+            "elemento_clave": "cara_o_amenaza",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Push-in lento. Peek: pan/tilt hacia la amenaza. Dutch: roll 12-20°. Tras el susto, CU de la reacción."
+        },
+        {
+          "id": "comedy_gag",
+          "nombre": "Gag cómico",
+          "verbos": [
+            "chiste",
+            "gag",
+            "comedia",
+            "joke",
+            "punchline"
+          ],
+          "cuando": "Un chiste visual o de diálogo.",
+          "entrada": {
+            "emocion": [
+              "comedia"
+            ]
+          },
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente_o_lado",
+            "altura": "ojos",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC_O_WHIP",
+            "camino": "Se muestra el setup claro. El corte va al punchline y se sostiene la **reacción**. Un whip pan puede unir dos gags. No cortar el chiste a mitad.",
+            "duracion": "Setup suficiente; hold en la reacción después del gag.",
+            "elemento_clave": "accion_y_reaccion",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara estable en el setup. Corte o whip pan al punchline. Hold 8-16 cuadros (o más) en la cara que reacciona."
+        },
+        {
+          "id": "slapstick",
+          "nombre": "Slapstick o gag físico",
+          "verbos": [
+            "slapstick",
+            "payasada",
+            "resbalon",
+            "porrazo_comico",
+            "caida_comica"
+          ],
+          "cuando": "Un gag físico: un resbalón, un porrazo cómico.",
+          "entrada": {
+            "emocion": [
+              "comedia"
+            ]
+          },
+          "salida": {
+            "plano": "FS",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "pecho",
+            "distancia_alturas": 1.8,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC",
+            "camino": "Entero para ver el cuerpo completo (el gag se lee en el cuerpo). Luego la reacción en medio o cercano. No esconder el objeto del gag.",
+            "duracion": "El gag completo y la reacción.",
+            "elemento_clave": "cuerpo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara fija, cuerpo entero en cuadro. Corte a reacción (MCU). El prop del gag permanece visible."
+        },
+        {
+          "id": "romance",
+          "nombre": "Romance o ternura de pareja",
+          "verbos": [
+            "romance",
+            "enamorarse",
+            "beso",
+            "abrazo_amoroso",
+            "romance"
+          ],
+          "cuando": "Un momento romántico entre dos.",
+          "entrada": {
+            "n_personajes": 2,
+            "emocion": [
+              "amor",
+              "ternura"
+            ]
+          },
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "lado_o_perfil",
+            "altura": "ojos",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "DOLLY_SUAVE",
+            "camino": "Two-shot o perfiles a la altura de los ojos. Movimientos suaves. Un push-in al acercarse.",
+            "duracion": "Sostener el momento; no cortar demasiado pronto.",
+            "elemento_clave": "caras",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al lado del eje, altura de ojos. Dolly suave o push-in. DOF f/2.0-2.8."
+        },
+        {
+          "id": "sadness",
+          "nombre": "Tristeza",
+          "verbos": [
+            "triste",
+            "tristeza",
+            "llorar",
+            "llora",
+            "sadness",
+            "pena"
+          ],
+          "cuando": "Un personaje está triste o llora.",
+          "entrada": {
+            "emocion": [
+              "tristeza"
+            ]
+          },
+          "salida": {
+            "plano": "MCU",
+            "angulo": "PIC_LEVE",
+            "colocacion": "frente_o_tres_cuartos",
+            "altura": "ojos_o_alto_leve",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "STATIC_O_PULL_OUT",
+            "camino": "Cercano de la cara. Un pull-out o un plano más abierto lo deja chico en el cuadro si el beat es soledad. Picado leve.",
+            "duracion": "Sostener la emoción; más largo que un plano de acción.",
+            "elemento_clave": "cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara un poco alta. Pull-out lento (0.3-0.8*H). DOF a los ojos."
+        },
+        {
+          "id": "victory_celebration",
+          "nombre": "Victoria o celebración",
+          "verbos": [
+            "victoria",
+            "celebrar",
+            "festejo",
+            "ganar",
+            "celebration",
+            "exito"
+          ],
+          "cuando": "Ganan, celebran o se alegran juntos.",
+          "entrada": {
+            "emocion": [
+              "alegria"
+            ]
+          },
+          "salida": {
+            "plano": "PG",
+            "angulo": "CPIC",
+            "colocacion": "abajo_o_frente",
+            "altura": "bajo",
+            "distancia_alturas": 2.2,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "CRANE_O_PULL_OUT",
+            "camino": "Contrapicado o un pull-back / crane que muestre al grupo. Cercanos de caras alegres intercalados.",
+            "duracion": "El estallido de la celebración; un general al final.",
+            "elemento_clave": "grupo_y_caras",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Contrapicado (C más baja). Crane up o pull-out para mostrar a todos. Intercalar CU."
+        },
+        {
+          "id": "defeat",
+          "nombre": "Derrota",
+          "verbos": [
+            "derrota",
+            "perder",
+            "caido_moral",
+            "defeat",
+            "fracaso"
+          ],
+          "cuando": "Alguien pierde o queda vencido.",
+          "entrada": {
+            "emocion": [
+              "derrota",
+              "tristeza"
+            ]
+          },
+          "salida": {
+            "plano": "FS",
+            "angulo": "PIC",
+            "colocacion": "frente_o_arriba",
+            "altura": "alto",
+            "distancia_alturas": 2.0,
+            "lente_mm": [
+              28,
+              50
+            ],
+            "movimiento": "PULL_OUT",
+            "camino": "Picado o pull-out que lo deja pequeño en el lugar. Un cercano de la cara si el beat es el dolor, no solo el resultado.",
+            "duracion": "Sostener el vacío o la caída moral.",
+            "elemento_clave": "cuerpo_y_lugar",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara un poco alta. Pull-out. Opcional CU de la cara después."
+        },
+        {
+          "id": "thinking_planning",
+          "nombre": "Pensar o decidir",
+          "verbos": [
+            "pensar",
+            "piensa",
+            "decidir",
+            "planear",
+            "thinking",
+            "duda"
+          ],
+          "cuando": "Alguien piensa, duda o toma una decisión (el push-in de Michael en El Padrino).",
+          "entrada": {
+            "emocion": [
+              "concentracion",
+              "duda"
+            ]
+          },
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "PUSH_LENTO",
+            "camino": "Push-in lento a la cara. Cámara estable. No distraer con el fondo.",
+            "duracion": "El pensamiento se sostiene; el push dura lo que dura la decisión.",
+            "elemento_clave": "cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Push-in lento y constante (sin easing brusco) hacia los ojos. Fondo simple, DOF f/2.8. Dist 1.3*H."
+        },
+        {
+          "id": "surprise",
+          "nombre": "Sorpresa",
+          "verbos": [
+            "sorpresa",
+            "sorprenderse",
+            "asombro",
+            "surprise",
+            "inesperado"
+          ],
+          "cuando": "Una sorpresa que no es necesariamente de terror.",
+          "entrada": {
+            "emocion": [
+              "sorpresa"
+            ]
+          },
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "PUSH_CORTO_O_TILT",
+            "camino": "Cercano de la cara, un push corto o un tilt que revela lo que asombra. Luego eyeline + plano de lo visto.",
+            "duracion": "Corto en el golpe; un poco más en la reacción.",
+            "elemento_clave": "cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Push corto (0.1*H) o tilt a lo revelado. Luego regla de look_at (eyeline + POV)."
+        },
+        {
+          "id": "anger",
+          "nombre": "Enojo",
+          "verbos": [
+            "enojarse",
+            "enojo",
+            "rabia",
+            "furia",
+            "anger",
+            "ira"
+          ],
+          "cuando": "Alguien se enoja.",
+          "entrada": {
+            "emocion": [
+              "enojo"
+            ]
+          },
+          "salida": {
+            "plano": "CU",
+            "angulo": "CPIC_LEVE",
+            "colocacion": "frente",
+            "altura": "bajo_leve",
+            "distancia_alturas": 1.1,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "PUSH",
+            "camino": "Primer plano, a veces un contrapicado leve (parece más imponente). Push hacia los ojos.",
+            "duracion": "Sostener el enojo; no cortar en cuanto aparece.",
+            "elemento_clave": "cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara un poco baja, push a los ojos. d_min. Gran angular (35) cerca da dureza; 50-85 es más clásico."
+        },
+        {
+          "id": "tenderness",
+          "nombre": "Ternura",
+          "verbos": [
+            "ternura",
+            "cuidar",
+            "acariciar",
+            "abrazar_suave",
+            "tenderness"
+          ],
+          "cuando": "Un gesto tierno (un abrazo, una caricia), no necesariamente romántico.",
+          "entrada": {
+            "emocion": [
+              "ternura"
+            ]
+          },
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "lado",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "STATIC_O_PUSH_SUAVE",
+            "camino": "Medio corto de los dos, altura de ojos, movimiento mínimo.",
+            "duracion": "Sostener el gesto.",
+            "elemento_clave": "caras_y_manos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al lado, DOF suave. Insert de la mano si el gesto lo pide."
+        },
+        {
+          "id": "fear_build",
+          "nombre": "Tensión o miedo que crece",
+          "verbos": [
+            "tension",
+            "miedo",
+            "ansiedad",
+            "suspense",
+            "inquietud"
+          ],
+          "cuando": "La tensión crece, todavía no llega el susto.",
+          "entrada": {
+            "emocion": [
+              "tension",
+              "miedo"
+            ]
+          },
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente_o_detras",
+            "altura": "ojos",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "PUSH_MUY_LENTO",
+            "camino": "Push-in muy lento, o una cámara que se acerca por la espalda. A veces un Dutch leve. El lugar se va cerrando.",
+            "duracion": "Largo, al ritmo del suspenso. No adelantar el susto.",
+            "elemento_clave": "cara_o_espalda",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Push-in muy lento (toda la viñeta). Opcional roll de 5-8°. No cortar de más."
+        },
+        {
+          "id": "shame_guilt",
+          "nombre": "Vergüenza o culpa",
+          "verbos": [
+            "verguenza",
+            "culpa",
+            "avergonzarse",
+            "shame",
+            "guilt"
+          ],
+          "cuando": "Alguien siente vergüenza o culpa.",
+          "entrada": {
+            "emocion": [
+              "verguenza",
+              "culpa"
+            ]
+          },
+          "salida": {
+            "plano": "MCU",
+            "angulo": "PIC_LEVE",
+            "colocacion": "frente_o_tres_cuartos",
+            "altura": "alto_leve",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "STATIC_O_TILT_DOWN",
+            "camino": "Cercano, picado leve (lo achica). A veces un tilt hacia abajo, a las manos o al suelo.",
+            "duracion": "Sostener la emoción.",
+            "elemento_clave": "cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara un poco alta. Opcional tilt down a las manos."
+        }
+      ]
+    },
+    {
+      "id": "descubrimiento",
+      "nombre": "Descubrimiento e información",
+      "fallback_id": "fallback_descubrimiento",
+      "descripcion": "Mirada, lo visto y reacción. La revelación se hace con un movimiento o un insert, no cortando de más.",
+      "beats": [
+        {
+          "id": "fallback_descubrimiento",
+          "nombre": "Fallback de descubrimiento",
+          "verbos": [
+            "descubrir",
+            "notar",
+            "ver_algo"
+          ],
+          "cuando": "Se descubre o se muestra una información visual.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "con_quien_mira",
+            "altura": "ojos",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "EYELINE_Y_REVELADO",
+            "camino": "Mirada + lo que ve + reacción.",
+            "duracion": "La mirada, lo visto, la reacción.",
+            "elemento_clave": "cara_y_objeto",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Plano de la cara (look), corte a lo visto (Track To al objeto), corte a la reacción."
+        },
+        {
+          "id": "discovery",
+          "nombre": "Descubrimiento",
+          "verbos": [
+            "descubrir",
+            "descubre",
+            "encontrar",
+            "discovery",
+            "hallazgo"
+          ],
+          "cuando": "Alguien descubre algo importante.",
+          "entrada": {},
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "frente_luego_objeto",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "EYELINE_POV_REACCION",
+            "camino": "Cercano de quien mira, POV o plano del hallazgo, reacción. Un push-in en la reacción si cambia todo.",
+            "duracion": "Los tres tiempos; un poco más en la reacción.",
+            "elemento_clave": "cara_y_hallazgo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cadena eyeline: cara → objeto (o POV desde ojos + offset) → reacción. Push en la reacción."
+        },
+        {
+          "id": "reveal",
+          "nombre": "Revelación visual",
+          "verbos": [
+            "revelar",
+            "se_revela",
+            "reveal",
+            "mostrar_oculto"
+          ],
+          "cuando": "La cámara (o un movimiento) revela algo que no se veía.",
+          "entrada": {},
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "hacia_lo_oculto",
+            "altura": "ojos",
+            "distancia_alturas": 2.2,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "PAN_TILT_O_DOLLY_REVEAL",
+            "camino": "Un pan, un tilt, un dolly o un rack focus descubre el sujeto. Un tilt hacia arriba es el gesto clásico de asombro y escala.",
+            "duracion": "El movimiento dura lo que tarda en aparecer lo revelado; luego un hold.",
+            "elemento_clave": "lo_revelado",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Pan/tilt/dolly desde un encuadre que lo oculta hasta el encuadre final. Rack focus: focus_object cambia. No adelantar el sujeto."
+        },
+        {
+          "id": "insert_object",
+          "nombre": "Insert de un objeto",
+          "verbos": [
+            "insert",
+            "detalle",
+            "objeto",
+            "mostrar_objeto",
+            "closeup_objeto"
+          ],
+          "cuando": "Hay que ver un objeto, unas manos o un detalle con claridad.",
+          "entrada": {},
+          "salida": {
+            "plano": "PD",
+            "angulo": "NORM",
+            "colocacion": "frente_al_objeto",
+            "altura": "a_la_altura_del_objeto",
+            "distancia_alturas": 0.8,
+            "lente_mm": [
+              50,
+              135
+            ],
+            "movimiento": "STATIC_O_PUSH_CORTO",
+            "camino": "El objeto o las manos llenan el cuadro. Luego la reacción o el plano más abierto del que lo usa. El objeto no se esconde.",
+            "duracion": "Breve, el tiempo de leer el detalle.",
+            "elemento_clave": "objeto_o_manos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara frente al objeto, cobertura ~0.3-0.6 de su tamaño. d_min del personaje no aplica al prop; no atravesarlo. Luego corte a la cara."
+        },
+        {
+          "id": "look_at",
+          "nombre": "Mirar algo",
+          "verbos": [
+            "mirar",
+            "mira",
+            "observar",
+            "look_at",
+            "eyeline"
+          ],
+          "cuando": "Un personaje mira hacia algo o alguien.",
+          "entrada": {},
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "frente_o_perfil",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "STATIC",
+            "camino": "Cara con aire de mirada hacia el lado que mira. El siguiente plano es lo que ve, en dirección que encaja (eyeline match). Si hay diferencia de altura, el alto mira abajo y el bajo mira arriba.",
+            "duracion": "La mirada; luego lo visto.",
+            "elemento_clave": "cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara a ojos, lead room hacia el target. El plano B se coloca en la dirección de la mirada. POV opcional desde hueso de ojo + offset."
+        },
+        {
+          "id": "search",
+          "nombre": "Buscar",
+          "verbos": [
+            "buscar",
+            "busca",
+            "revolver",
+            "search",
+            "hurgar"
+          ],
+          "cuando": "Alguien busca en un lugar o con la mirada.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "con_quien_busca",
+            "altura": "ojos",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              28,
+              35
+            ],
+            "movimiento": "PAN_O_TRACK",
+            "camino": "La cámara sigue la búsqueda (pan o travelling). Inserts de lo que revisa. El hallazgo pasa a discovery.",
+            "duracion": "Mientras busca; más corto al encontrar.",
+            "elemento_clave": "personaje_y_lugar",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara con el buscador o pan a lo que revisa. Al encontrar, encadenar discovery."
+        },
+        {
+          "id": "realization",
+          "nombre": "Darse cuenta",
+          "verbos": [
+            "darse_cuenta",
+            "comprender",
+            "realization",
+            "caer_en_la_cuenta",
+            "entendio"
+          ],
+          "cuando": "Alguien comprende algo de golpe.",
+          "entrada": {
+            "emocion": [
+              "sorpresa",
+              "comprension"
+            ]
+          },
+          "salida": {
+            "plano": "CU",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.2,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "PUSH_IN",
+            "camino": "Push-in a los ojos (como thinking, pero más corto y más definido). A veces un dolly zoom breve si el mundo se le deforma.",
+            "duracion": "Corto y claro.",
+            "elemento_clave": "ojos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Push-in más rápido que thinking. Dolly zoom opcional: acercar cámara y bajar lente a la vez (C + lens keyframes)."
+        }
+      ]
+    },
+    {
+      "id": "espacio_escala",
+      "nombre": "Espacio, escala y lugar",
+      "fallback_id": "fallback_espacio",
+      "descripcion": "Generales para situar. Gran angular para estirar la distancia; teleobjetivo para comprimirla. POV y pull-back para la escala.",
+      "beats": [
+        {
+          "id": "fallback_espacio",
+          "nombre": "Fallback de espacio o escala",
+          "verbos": [
+            "lugar",
+            "espacio",
+            "escala"
+          ],
+          "cuando": "Hay que entender el lugar, la distancia o el tamaño.",
+          "entrada": {},
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "frente_al_lugar",
+            "altura": "ojos",
+            "distancia_alturas": 3.0,
+            "lente_mm": [
+              18,
+              28
+            ],
+            "movimiento": "STATIC_O_PAN",
+            "camino": "Un general que sitúe. Un movimiento lento (pan, boom) si revela más.",
+            "duracion": "Un poco más largo: hay más que leer.",
+            "elemento_clave": "lugar_y_personajes",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara lejos (3H+). Pan lento opcional. No esconder el decorado."
+        },
+        {
+          "id": "establish_place",
+          "nombre": "Establecer el lugar",
+          "verbos": [
+            "establecer",
+            "establecimiento",
+            "establishing",
+            "donde_estamos",
+            "plano_general_inicial"
+          ],
+          "cuando": "Empieza una escena o hay que situar el lugar y a quiénes hay.",
+          "entrada": {
+            "cambio_lugar": true
+          },
+          "salida": {
+            "plano": "GPG",
+            "angulo": "NORM",
+            "colocacion": "fuera_o_desde_pared",
+            "altura": "ojos_o_alto",
+            "distancia_alturas": 5.0,
+            "lente_mm": [
+              14,
+              24
+            ],
+            "movimiento": "STATIC_O_BOOM",
+            "camino": "Plano general o EWS. Muestra el lugar, la hora y quién está. Un boom o un pan solo si gana interés al avanzar (Mascelli). Se puede empezar en un detalle y hacer pull-out, si el guion lo pide.",
+            "duracion": "Más largo que un medio: el público lee el espacio.",
+            "elemento_clave": "lugar_y_grupo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara lejos, lente ancha. Boom o pan lentos. Altura un poco alta ayuda a leer la geografía."
+        },
+        {
+          "id": "location_change",
+          "nombre": "Cambio de lugar",
+          "verbos": [
+            "cambio_de_lugar",
+            "otro_sitio",
+            "nueva_escena",
+            "location_change",
+            "traslado"
+          ],
+          "cuando": "La historia pasa a otro sitio.",
+          "entrada": {
+            "cambio_lugar": true
+          },
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "al_nuevo_lugar",
+            "altura": "ojos",
+            "distancia_alturas": 4.0,
+            "lente_mm": [
+              18,
+              28
+            ],
+            "movimiento": "STATIC",
+            "camino": "Un establecimiento del nuevo lugar (o un fundido / corte + general). Se reestablece quién está y adónde mira.",
+            "duracion": "El general de llegada, un poco más largo.",
+            "elemento_clave": "nuevo_lugar",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Nueva cámara en el nuevo set. Transición (corte, dissolve o fade) la decide el montaje; el motor ofrece un general al inicio."
+        },
+        {
+          "id": "show_distance",
+          "nombre": "Mostrar distancia",
+          "verbos": [
+            "distancia",
+            "lejos",
+            "separados",
+            "show_distance",
+            "el_objetivo_esta_lejos"
+          ],
+          "cuando": "Hay que leer la distancia entre personajes, o de uno a una meta.",
+          "entrada": {
+            "n_personajes": [
+              2,
+              "varios"
+            ]
+          },
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "de_lado_en_profundidad",
+            "altura": "ojos",
+            "distancia_alturas": 3.0,
+            "lente_mm": [
+              18,
+              28
+            ],
+            "movimiento": "STATIC",
+            "camino": "Un general o un two-shot en profundidad con gran angular (estira el espacio). Un teleobjetivo si se quiere que parezcan más cerca de lo que están.",
+            "duracion": "Sostener para leer el espacio.",
+            "elemento_clave": "ambos_y_el_espacio",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Colocar a los dos en profundidad (uno cerca, otro lejos). Lente 18-28 para estirar; 85+ para comprimir. No acercar la cámara al primero si se pierde al segundo."
+        },
+        {
+          "id": "show_scale_small",
+          "nombre": "Escala: alguien chico entre grandes",
+          "verbos": [
+            "pequeno_entre_grandes",
+            "escala_chica",
+            "hormiga",
+            "tiny",
+            "pequenez"
+          ],
+          "cuando": "Un personaje chico (o encogido) frente a algo o alguien enorme. Incluye el POV de Don Caos o de un niño entre adultos.",
+          "entrada": {},
+          "salida": {
+            "plano": "PP",
+            "angulo": "CPIC",
+            "colocacion": "POV_del_chico_o_abajo",
+            "altura": "ojos_del_chico",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              18,
+              28
+            ],
+            "movimiento": "STATIC_O_TILT_UP",
+            "camino": "POV desde los ojos del chico (gran angular) o un contrapicado desde su altura. Un tilt hacia arriba muestra el tamaño del otro o del cuarto.",
+            "duracion": "Sostener para leer la escala.",
+            "elemento_clave": "lo_que_ve_el_chico_o_el_gigante",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara en hueso de ojo del chico + offset, lente 18-28. O a su altura mirando arriba (Track To la cabeza del grande). d_min proporcional a SU altura."
+        },
+        {
+          "id": "show_scale_large",
+          "nombre": "Escala: alguien enorme",
+          "verbos": [
+            "gigante",
+            "enorme",
+            "escala_grande",
+            "colosal"
+          ],
+          "cuando": "Hay que sentir que alguien o algo es enorme.",
+          "entrada": {},
+          "salida": {
+            "plano": "PG",
+            "angulo": "CPIC",
+            "colocacion": "abajo",
+            "altura": "piso",
+            "distancia_alturas": 3.0,
+            "lente_mm": [
+              14,
+              24
+            ],
+            "movimiento": "TILT_UP_O_CRANE",
+            "camino": "Contrapicado desde abajo, gran angular, tilt hacia arriba o un crane que sube por el cuerpo hasta la cara.",
+            "duracion": "El movimiento de escala; un hold al final.",
+            "elemento_clave": "el_gigante_y_el_entorno",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara baja, lente ancha. Tilt up o crane a lo largo del cuerpo. d_min del gigante (proporcional a SU H) al llegar a la cara."
+        },
+        {
+          "id": "landscape",
+          "nombre": "Paisaje",
+          "verbos": [
+            "paisaje",
+            "vista",
+            "horizon",
+            "landscape",
+            "exterior_amplio"
+          ],
+          "cuando": "Se muestra un paisaje o una vista amplia.",
+          "entrada": {},
+          "salida": {
+            "plano": "GPG",
+            "angulo": "NORM",
+            "colocacion": "frente_al_paisaje",
+            "altura": "ojos_o_alto",
+            "distancia_alturas": 8.0,
+            "lente_mm": [
+              14,
+              24
+            ],
+            "movimiento": "PAN_LENTO_O_STATIC",
+            "camino": "EWS, a menudo un poco alto. Un pan lento si revela más. Personas pequeñas en el cuadro dan escala.",
+            "duracion": "Más largo que un plano de diálogo.",
+            "elemento_clave": "el_lugar",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara alta y lejos. Pan lento. clip_end grande."
+        },
+        {
+          "id": "weather_nature",
+          "nombre": "Clima o naturaleza",
+          "verbos": [
+            "lluvia",
+            "tormenta",
+            "viento",
+            "nieve",
+            "clima",
+            "naturaleza",
+            "weather"
+          ],
+          "cuando": "El clima o la naturaleza es el beat (una tormenta, la lluvia, el viento).",
+          "entrada": {},
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "al_lugar_y_quien_lo_vive",
+            "altura": "ojos",
+            "distancia_alturas": 3.0,
+            "lente_mm": [
+              18,
+              35
+            ],
+            "movimiento": "STATIC_O_PAN",
+            "camino": "Un general del clima y de quién lo padece. Inserts (gotas, ramas) si importan. Un picado o un contrapicado según la amenaza.",
+            "duracion": "Sostener el ambiente.",
+            "elemento_clave": "lugar_y_personaje",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al lugar. Inserts de partículas o props. No tapar al personaje si el beat es cómo lo vive."
+        },
+        {
+          "id": "pullback_reveal_size",
+          "nombre": "Alejar hasta el techo o la pared para mostrar el tamaño",
+          "verbos": [
+            "alejar_para_escala",
+            "pullback_tamano",
+            "camara_se_aleja_al_techo",
+            "mostrar_tamano"
+          ],
+          "cuando": "La cámara parte de alguien (por ejemplo Don Caos) y se aleja hasta el techo, la pared o el fondo, para mostrar lo chicos o lo grandes que son en el cuarto. Es el caso que pidió Ricardo.",
+          "entrada": {},
+          "salida": {
+            "plano": "PP",
+            "angulo": "NORM",
+            "colocacion": "frente_al_sujeto_luego_atras",
+            "altura": "ojos_luego_alto",
+            "distancia_alturas": 1.2,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "PULL_OUT_A_CRANE",
+            "camino": "Se parte de un cercano o un medio. La cámara se aleja y sube hasta una pared o el techo (crane / pull-out). Al final se lee el cuarto y la escala de todos. No se esconde el decorado: se usa.",
+            "duracion": "El alejamiento dura lo que tarda en leerse el tamaño; un hold al final.",
+            "elemento_clave": "sujeto_y_luego_el_lugar",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Keyframes: desde d ≈ 1.2*H a altura de ojos, hasta una posición cerca del techo o de la pared opuesta (crane up + dolly out). Track To al sujeto al inicio, luego al centro del grupo. No clipar el techo: parar a d_min de la superficie o usar clip_start solo si la cámara entra en la pared (wild wall)."
+        }
+      ]
+    },
+    {
+      "id": "grupo",
+      "nombre": "Grupo y muchedumbre",
+      "fallback_id": "fallback_grupo",
+      "descripcion": "Un general que sitúe a todos, luego caras (singles o pase). No repetir el mismo grupo tres veces.",
+      "beats": [
+        {
+          "id": "fallback_grupo",
+          "nombre": "Fallback de grupo",
+          "verbos": [
+            "grupo",
+            "juntos",
+            "varios"
+          ],
+          "cuando": "Varios personajes comparten el beat y no hay un tipo más preciso.",
+          "entrada": {
+            "n_personajes": [
+              3,
+              "varios"
+            ]
+          },
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "frente_al_grupo",
+            "altura": "ojos",
+            "distancia_alturas": 2.8,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC",
+            "camino": "Un plano de grupo que sitúe a todos, luego cercanos de quien actúa o reacciona.",
+            "duracion": "El general un poco más largo.",
+            "elemento_clave": "el_grupo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al frente, Track To al centro del grupo. Luego singles con las reglas de diálogo o emoción."
+        },
+        {
+          "id": "group_shot",
+          "nombre": "Plano de grupo",
+          "verbos": [
+            "plano_de_grupo",
+            "group_shot",
+            "todos_juntos",
+            "foto_de_grupo"
+          ],
+          "cuando": "Hay que ver al grupo junto, lo que hacen y cómo se ubican.",
+          "entrada": {
+            "n_personajes": [
+              3,
+              "varios"
+            ]
+          },
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 3.0,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "STATIC",
+            "camino": "Un general o un medio largo de todos. No repetirlo tres veces seguidas: después, pasar a caras o a un pase.",
+            "duracion": "Lo suficiente para leer a todos.",
+            "elemento_clave": "el_grupo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Encuadrar el bounding box del grupo con margen 10 %. Lente 24-35. Altura de ojos del más representativo, o un poco alta."
+        },
+        {
+          "id": "face_pass",
+          "nombre": "Pase de caras",
+          "verbos": [
+            "pase_de_caras",
+            "face_pass",
+            "recorrer_caras",
+            "pan_de_emociones",
+            "camara_por_las_caras"
+          ],
+          "cuando": "La cámara recorre las caras de una fila o de un grupo para mostrar las emociones. Es el caso que pidió Ricardo.",
+          "entrada": {
+            "n_personajes": [
+              3,
+              "varios"
+            ]
+          },
+          "salida": {
+            "plano": "MCU",
+            "angulo": "NORM",
+            "colocacion": "a_lo_largo_de_la_fila",
+            "altura": "ojos",
+            "distancia_alturas": 1.3,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "PAN_O_TRACK_LATERAL",
+            "camino": "Un travelling o un pan suave a la altura de los ojos, a lo largo de la línea de personajes. Cada cara tiene un momento legible. Se puede arrancar en un general y acercarse a la primera cara.",
+            "duracion": "El tiempo de leer cada cara (unas fracciones de segundo a un par de segundos, según el ritmo).",
+            "elemento_clave": "cada_cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Curva o keyframes a la altura de los ojos, paralela a la fila, a ~1.3*H de las caras. Track To opcional a cada cara en su tramo (o un focus_object que va pasando). d_min de cada uno. No whip, salvo comedia."
+        },
+        {
+          "id": "crowd",
+          "nombre": "Muchedumbre",
+          "verbos": [
+            "muchedumbre",
+            "multitud",
+            "crowd",
+            "gente"
+          ],
+          "cuando": "Hay una muchedumbre o un público grande.",
+          "entrada": {},
+          "salida": {
+            "plano": "GPG",
+            "angulo": "PIC_O_NORM",
+            "colocacion": "arriba_o_frente",
+            "altura": "alto",
+            "distancia_alturas": 6.0,
+            "lente_mm": [
+              18,
+              24
+            ],
+            "movimiento": "STATIC_O_CRANE",
+            "camino": "Un general, a menudo un poco alto, para leer la masa. Cercanos de caras sueltas o del protagonista en medio.",
+            "duracion": "El general, más largo; los cercanos, al beat de quien importa.",
+            "elemento_clave": "la_masa_y_el_protagonista",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara alta y lejos. Crane opcional. Singles del protagonista con las reglas de emoción o diálogo."
+        },
+        {
+          "id": "one_vs_many",
+          "nombre": "Uno contra muchos",
+          "verbos": [
+            "uno_contra_muchos",
+            "rodeado",
+            "one_vs_many",
+            "acorralado"
+          ],
+          "cuando": "Uno se enfrenta a varios, o está rodeado.",
+          "entrada": {},
+          "salida": {
+            "plano": "PG",
+            "angulo": "CPIC_O_PIC",
+            "colocacion": "con_el_uno_o_arriba",
+            "altura": "bajo_o_alto",
+            "distancia_alturas": 2.5,
+            "lente_mm": [
+              18,
+              28
+            ],
+            "movimiento": "STATIC_O_ORBIT",
+            "camino": "Un general que muestre la desventaja (picado sobre el uno, o contrapicado desde él hacia el grupo). Cercanos de su cara y del grupo.",
+            "duracion": "El general para leer la relación; cercanos en los lances.",
+            "elemento_clave": "el_uno_y_el_grupo",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Dos alturas: contrapicado desde el uno, o picado de conjunto. Orbit corto opcional. Luego CU del uno."
+        },
+        {
+          "id": "reunion",
+          "nombre": "Reencuentro",
+          "verbos": [
+            "reencuentro",
+            "reunion",
+            "reencuentro_abrazo",
+            "volver_a_verse"
+          ],
+          "cuando": "Se reencuentran dos o más.",
+          "entrada": {
+            "n_personajes": [
+              2,
+              "varios"
+            ]
+          },
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "de_lado_a_ambos",
+            "altura": "ojos",
+            "distancia_alturas": 2.5,
+            "lente_mm": [
+              24,
+              35
+            ],
+            "movimiento": "DOLLY_O_STATIC",
+            "camino": "Un general de la aproximación (pueden venir de lados opuestos del cuadro). Medio del abrazo. Cercanos de las caras.",
+            "duracion": "La aproximación un poco más larga; hold en el abrazo.",
+            "elemento_clave": "ambos",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al lado, ambos en cuadro al acercarse. Dolly suave al encuentro. CU al contacto."
+        }
+      ]
+    },
+    {
+      "id": "tiempo_mente",
+      "nombre": "Tiempo y mente",
+      "fallback_id": "fallback_tiempo",
+      "descripcion": "Una transición distinta marca el salto. Al otro lado, se vuelve a situar si cambió el lugar o el tiempo.",
+      "beats": [
+        {
+          "id": "fallback_tiempo",
+          "nombre": "Fallback de tiempo o mente",
+          "verbos": [
+            "tiempo",
+            "recuerdo",
+            "mente"
+          ],
+          "cuando": "Un salto de tiempo o un estado mental que no tiene un tipo más preciso.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC",
+            "camino": "Un plano claro del personaje o del lugar, con una transición distinta (fundido, corte seco, textura de cámara).",
+            "duracion": "Según el puente de tiempo.",
+            "elemento_clave": "cara_o_lugar",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara estable. El motor marca la transición sugerida (dissolve, fade, smash). Al otro lado, re-establecer si cambió el lugar."
+        },
+        {
+          "id": "montage",
+          "nombre": "Montaje",
+          "verbos": [
+            "montaje",
+            "montage",
+            "secuencia_de_pasos",
+            "resumen"
+          ],
+          "cuando": "Una serie corta de planos que condensa tiempo, trabajo o un proceso.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente_a_cada_accion",
+            "altura": "ojos",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              24,
+              50
+            ],
+            "movimiento": "VARIOS_PLANOS_CORTOS",
+            "camino": "Varios planos cortos, tamaños variados, a menudo con un mismo motivo visual o musical. No hace falta un diálogo continuo. Al final, un plano que cierre (un general o una cara).",
+            "duracion": "Cada toma, breve; el último, un poco más largo.",
+            "elemento_clave": "acciones_clave",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "El motor genera una lista de candidatas cortas (insert, MS, CU) a partir de los sub-beats. No repetir el mismo encuadre tres veces."
+        },
+        {
+          "id": "dream",
+          "nombre": "Sueño",
+          "verbos": [
+            "sueno",
+            "sonar",
+            "dream",
+            "pesadilla"
+          ],
+          "cuando": "Un sueño o una pesadilla.",
+          "entrada": {
+            "emocion": [
+              "sueno"
+            ]
+          },
+          "salida": {
+            "plano": "MS",
+            "angulo": "DUTCH_O_NORM",
+            "colocacion": "frente_o_subjetivo",
+            "altura": "ojos",
+            "distancia_alturas": 1.4,
+            "lente_mm": [
+              18,
+              50
+            ],
+            "movimiento": "DOLLY_O_HANDHELD_SUAVE",
+            "camino": "Textura distinta: Dutch, gran angular cerca, dolly zoom, cámara más suelta. Un fundido o un distorsionado entra y sale del sueño.",
+            "duracion": "Según el sueño; a menudo más lento o más extraño.",
+            "elemento_clave": "cara_y_mundo_del_sueno",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Lente más ancha, roll opcional, dolly zoom o handheld suave. Transición dissolve o warp. Al despertar, encadenar wakeup."
+        },
+        {
+          "id": "flashback",
+          "nombre": "Flashback o recuerdo",
+          "verbos": [
+            "flashback",
+            "recuerdo",
+            "en_el_pasado",
+            "flash_back"
+          ],
+          "cuando": "Un salto al pasado o un recuerdo.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC",
+            "camino": "Se entra con un fundido, un match cut o un cercano de quien recuerda. El pasado se filma con sus propias reglas de beat. Al volver, se reestablece el presente.",
+            "duracion": "La entrada, breve; el recuerdo, según su acción.",
+            "elemento_clave": "cara_que_recuerda_y_luego_el_pasado",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Plano A: CU de quien recuerda. Transición dissolve o match. Plano B: el beat del pasado. Volver igual."
+        },
+        {
+          "id": "time_passage",
+          "nombre": "Paso del tiempo",
+          "verbos": [
+            "paso_del_tiempo",
+            "mas_tarde",
+            "horas_despues",
+            "time_passage",
+            "el_tiempo_pasa"
+          ],
+          "cuando": "Pasa el tiempo en el mismo lugar o en varios.",
+          "entrada": {},
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "al_lugar",
+            "altura": "ojos",
+            "distancia_alturas": 3.0,
+            "lente_mm": [
+              24,
+              50
+            ],
+            "movimiento": "STATIC_O_TIME_LAPSE",
+            "camino": "Un general del lugar, un fundido, un corte con un cambio de luz, o una serie corta tipo montaje (reloj, ventana, sol).",
+            "duracion": "Breve, salvo que el paso del tiempo sea la escena.",
+            "elemento_clave": "el_lugar_o_un_detalle",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Insert de un reloj o una ventana, o un general con cambio de luz (keyframes de mundo, no de cámara). Transición dissolve o corte + establecimiento."
+        },
+        {
+          "id": "wakeup",
+          "nombre": "Despertar",
+          "verbos": [
+            "despertar",
+            "despierta",
+            "wakeup",
+            "abrir_los_ojos"
+          ],
+          "cuando": "Alguien despierta, a menudo después de un sueño.",
+          "entrada": {},
+          "salida": {
+            "plano": "CU",
+            "angulo": "NORM",
+            "colocacion": "frente_o_arriba",
+            "altura": "ojos",
+            "distancia_alturas": 1.1,
+            "lente_mm": [
+              50,
+              85
+            ],
+            "movimiento": "STATIC_O_TILT",
+            "camino": "Cercano de los ojos que se abren, a veces desde arriba (como si nos levantáramos con él). Luego un medio que lo sitúa en el lugar.",
+            "duracion": "El despertar, un poco sostenido; luego el lugar.",
+            "elemento_clave": "ojos_y_cara",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara a los ojos (d_min). Tilt o pull-out al cuarto. Si viene de un dream, corte o dissolve al presente."
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "nombre": "Mundo y objetos",
+      "fallback_id": "fallback_mundo",
+      "descripcion": "El objeto o el lugar se muestra con claridad (insert o general) y luego la reacción de quien lo vive.",
+      "beats": [
+        {
+          "id": "fallback_mundo",
+          "nombre": "Fallback del mundo u objeto",
+          "verbos": [
+            "objeto",
+            "mundo",
+            "prop"
+          ],
+          "cuando": "El beat recae en un objeto, el decorado o un suceso del mundo.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente_al_objeto",
+            "altura": "a_su_altura",
+            "distancia_alturas": 1.5,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC_O_INSERT",
+            "camino": "Insert o medio del objeto, luego un plano más abierto de quien lo vive.",
+            "duracion": "El detalle y la reacción.",
+            "elemento_clave": "objeto_y_reaccion",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara al objeto, luego a la cara. Ver insert_object."
+        },
+        {
+          "id": "object_alive",
+          "nombre": "Un objeto que cobra vida",
+          "verbos": [
+            "cobra_vida",
+            "objeto_vivo",
+            "come_alive",
+            "animarse_objeto",
+            "juguete_vive"
+          ],
+          "cuando": "Un objeto inanimado se mueve o cobra vida.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente_al_objeto",
+            "altura": "a_su_altura",
+            "distancia_alturas": 1.4,
+            "lente_mm": [
+              35,
+              85
+            ],
+            "movimiento": "STATIC_O_PUSH",
+            "camino": "Se sostiene el objeto quieto, luego el movimiento. Un cercano si 'tiene cara'. Reacción de quien lo ve (discovery).",
+            "duracion": "Hold antes, el cambio, la reacción.",
+            "elemento_clave": "el_objeto",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara fija al objeto (cobertura que lo deje entero). Push al 'despertar'. Encadenar look_at / discovery del testigo."
+        },
+        {
+          "id": "important_prop",
+          "nombre": "Objeto importante",
+          "verbos": [
+            "objeto_importante",
+            "prop_clave",
+            "la_llave",
+            "la_carta",
+            "macguffin"
+          ],
+          "cuando": "Un prop es clave para la historia (una llave, una carta, un aparato).",
+          "entrada": {},
+          "salida": {
+            "plano": "PD",
+            "angulo": "NORM",
+            "colocacion": "frente_al_objeto",
+            "altura": "a_su_altura",
+            "distancia_alturas": 0.8,
+            "lente_mm": [
+              50,
+              135
+            ],
+            "movimiento": "STATIC_O_PUSH",
+            "camino": "Insert claro del objeto, establecido antes en un plano más abierto (Mascelli: el cut-in se establece). Luego quien lo toma o lo mira.",
+            "duracion": "Breve y legible.",
+            "elemento_clave": "el_objeto",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Igual que insert_object, pero el motor exige un plano previo más abierto que lo sitúe, salvo suspenso deliberado."
+        },
+        {
+          "id": "disaster",
+          "nombre": "Desastre",
+          "verbos": [
+            "desastre",
+            "derrumbe",
+            "inundacion",
+            "incendio",
+            "disaster",
+            "catastrofe"
+          ],
+          "cuando": "Un desastre o un percance grande del entorno.",
+          "entrada": {},
+          "salida": {
+            "plano": "PG",
+            "angulo": "NORM",
+            "colocacion": "a_distancia_segura",
+            "altura": "ojos_o_alto",
+            "distancia_alturas": 4.0,
+            "lente_mm": [
+              18,
+              28
+            ],
+            "movimiento": "STATIC_O_CRANE",
+            "camino": "Un general que sitúe el desastre y a quién está en peligro. Medios de la acción y reacciones. Similar a explosión, a mayor escala.",
+            "duracion": "El general, un poco más largo; los lances, más cortos.",
+            "elemento_clave": "lugar_y_personajes",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara lejos y a menudo alta. Shake si hay impacto. Intercalar reglas de chase, rescue o explosion según el sub-beat."
+        },
+        {
+          "id": "threshold_door",
+          "nombre": "Umbral o puerta",
+          "verbos": [
+            "umbral",
+            "puerta",
+            "threshold",
+            "en_la_entrada",
+            "cruzar_la_puerta"
+          ],
+          "cuando": "La acción ocurre en una puerta o un umbral (llegar, espiar, dudar).",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "del_lado_que_mira_el_umbral",
+            "altura": "ojos",
+            "distancia_alturas": 1.8,
+            "lente_mm": [
+              28,
+              35
+            ],
+            "movimiento": "STATIC_O_DOLLY",
+            "camino": "El marco de la puerta puede ser primer término (frame within a frame). El personaje entra, sale o se detiene en el umbral.",
+            "duracion": "El cruce o la duda en el umbral.",
+            "elemento_clave": "personaje_y_umbral",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara de un lado del umbral, el marco en cuadro. Dolly in si cruza. No recortar el marco si es parte del plano."
+        }
+      ]
+    },
+    {
+      "id": "general",
+      "nombre": "General",
+      "fallback_id": "fallback_general",
+      "descripcion": "Red de seguridad: frente al que actúa, distancia prudente, eje estable. Se usa solo si no hay familia.",
+      "beats": [
+        {
+          "id": "fallback_general",
+          "nombre": "Fallback general",
+          "verbos": [
+            "accion_generica",
+            "beat",
+            "momento"
+          ],
+          "cuando": "No se reconoció ni el tipo ni la familia. Se aplica una gramática mínima y segura.",
+          "entrada": {},
+          "salida": {
+            "plano": "MS",
+            "angulo": "NORM",
+            "colocacion": "frente",
+            "altura": "ojos",
+            "distancia_alturas": 1.6,
+            "lente_mm": [
+              35,
+              50
+            ],
+            "movimiento": "STATIC",
+            "camino": "Cámara frente a quien actúa, a altura de ojos, a una distancia prudente (1.6 H, nunca menos que d_min). Si hay un cambio de lugar, ofrecer también un general. Si hay dos, respetar el eje.",
+            "duracion": "Lo que dure el beat, sin extremos.",
+            "elemento_clave": "quien_actua",
+            "direccion_pantalla": "mantener",
+            "notas": ""
+          },
+          "bpy": "Cámara frente al actor principal, Track To a la cara o al pecho, lente 35-50, d = max(1.6*H, d_min). Si cambio de lugar: añadir candidata establish_place."
+        }
+      ]
+    }
+  ],
+  "fuentes": [
+    "https://www.robertcmorton.com/the-5-cs-of-cinematography/",
+    "https://www.studiobinder.com/blog/different-types-of-camera-movements-in-film/",
+    "https://www.studiobinder.com/blog/film-coverage/",
+    "https://www.studiobinder.com/blog/storyboard-camera-movement/",
+    "https://storyboardart.org/storyboard-tutorials/storyboard-arrows/",
+    "https://learnaboutfilm.com/film-language/picture/movement/",
+    "https://learnaboutfilm.com/film-language/sequence/180-degree-rule/",
+    "https://www.disneyanimation.com/process/layout/",
+    "https://sciencebehindpixar.org/pipeline/sets-and-cameras/",
+    "https://www.cinemath.app/guides/camera/field-of-view",
+    "https://nofilmschool.com/2018/07/learn-how-fight-camera-pro-who-got-punched-chuck-norris",
+    "https://www.studiobinder.com/blog/best-fight-scenes-sherlock-ritchie/",
+    "Bordwell y Thompson, Film Art; Katz, Shot by Shot; Block, The Visual Story; Mascelli, The Five C's."
+  ]
+}

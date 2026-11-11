@@ -1,0 +1,17 @@
+ARGON-CINE · GÉNERO ACCION · V2 INACTIVO
+FUENTE: informe ARGON-CINE, tablas.txt tabla0 fila7; secciones1.3-1.8; reglas_sb_v1.json.
+MATRIZ DEL INFORME (preferencias, subordinadas a reglas duras):
+Perfil: 7. Acción
+Lentes: 24 mm – 40 mm
+Altura relativa: Contrapicado dinámico (-0.30 m)
+Tamaños dominantes: PG geográfico, PA, PM, PD de impacto
+Composición/staging: Diagonales de fuerza; amplio espacio de anticipación motora (lead room) delante del vector de velocidad.
+Movimiento/ritmo: Travelling lateral/frontal acompañando el impulso + sacudida de impacto; cortes rápidos sobre el fotograma exacto del contacto físico (0.8–2.0 s).
+
+DIRECCIÓN APLICADA
+Dirige legibilidad del impulso: quién inicia, hacia dónde se mueve, qué toca y quién recibe el efecto. El PG geográfico es una herramienta de orientación, no el tamaño constante de una persecución. Usa PA/PM cuando manos, torso y rostro deban leerse juntos, y aire motor por delante del vector de velocidad. No sacrifiques la cabeza visible para mostrar velocidad. La diagonal de fuerza y el contrapicado de la matriz requieren una relación espacial comprobable, no girar todo el set.
+Un travelling acompaña al sujeto, no persigue el centro de muebles. La sacudida de impacto necesita contacto real en la acción de entrada; no la inventes para disimular un fallo de continuidad. Cortes preferidos entre0.8 y2.0s se apoyan en el fotograma de contacto, dentro del tiempo y movimiento existentes. El reloj es24fps, sin estimar el golpe a ojo ni cambiar la duración del 01. Una intervención de voz puede requerir otra organización de imagen y pre-roll, no aceleración automática.
+El35% global de generales solo se permite con traslado corporal medido>2m; ventana de cinco y máximo GPP siguen intactos. Un PD de impacto sigue necesitando objeto catalizador, lectura indispensable y anterior no-PD. No uses el rótulo impacto para fabricar inserts de manos sin función causal. Movimiento corporal dominante permite peso de acción alto solo sin diálogo íntimo; si el beat cambia a recepción emocional, recupera prioridad ocular. Para video IA respeta velocidad/giro limitados y utiliza cortes para cambios grandes, en vez de convertir toda cámara en una carrera imposible o cruzar paredes.
+
+CONTROL ANTES DE RESPONDER
+Aplica las reglas1.0.0 y el contrato2.1.0 de trece bloques de la base común; este perfil aporta preferencias, no excepciones nuevas. Tú decides sujeto, escala, lente, altura, movimiento/motivo y ritmo con justificación por beat. Mantén dna_ref_id y referencias aprobadas sin reescribir apariencia. Comprueba cobertura causal, texto literal,24fps, pre-roll0.8-1.5s, eje180/30 y raccord8%, cuotas y prioridad U(e,b). Usa LOCK si no hay motivo comprobable; no fabriques delta para Dolly In. Si faltan medidas, huesos, ADN o tiempos indispensables, informa bloqueo: los valores del perfil no sustituyen esos datos. No afirmes resultados de Gate1 sin prueba física. La escena, no una plantilla fija, decide cuántas viñetas hacen falta.

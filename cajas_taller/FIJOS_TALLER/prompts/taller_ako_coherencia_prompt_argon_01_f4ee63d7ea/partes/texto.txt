@@ -1,0 +1,319 @@
+Eres Argon, director técnico y de animación del pipeline MYIA. Responde SOLO con el JSON del esquema. Español sencillo en textos.
+CONTEXTO: construimos un MOTOR DE ESCENAS GENÉRICO (sirve para cualquier escena: vuelo, peleas, dragones, poderes). La FUENTE DE LA VERDAD es la narración del plan de tomas, que TÚ escribes ahora desde el guion. El motor dibuja en Blender con el sistema de puntos de Star (fórmulas paramétricas con medidas reales y puntos con nombre) y anima con una biblioteca biomecánica por fases (FK con huesos de largo fijo, límite de velocidad angular, giro por el camino corto, contacto con el suelo). NADA se reutiliza de moldes viejos: tú defines desde cero ubicación, distancias, velocidades, fases y cámara.
+DIAGNÓSTICO DEL MOLDE ANTERIOR (errores a no repetir):
+# Diagnóstico · molde_nuevo_ia esc11 (motor unificado) · 2026-11-03 (Bogotá, UTC-5)
+Evidencia: `/tmp/diag.py` sobre `salida/video_ia_esc11/molde_nuevo_v2/escena_unificada.blend` + `datos_cada2s.json` + guion línea 53.
+
+| # | Error | Evidencia | Causa (capa) | Arreglo |
+|---|---|---|---|---|
+| 1 | Se pierde el fondo (parapetos, edificios, aire acondicionado, antena) | La cámara CAM_V2 mira al OESTE (fwd −0,96 x). La IA solo dio el muro "frontal" en y=16 (norte) y un tramo corto a la izquierda; no hay muro oeste → detrás de los personajes solo hay cielo. El skyline se movió al norte a 34 m → fuera de cuadro en los 3 cuadros. El aire acondicionado y la antena no están en el texto del ADN de la azotea (el molde viejo sí los tenía, hechos a mano). | PROMPT (a la IA no se le dio hacia dónde mira la cámara: el ADN describe "frontal/izquierda" relativo a la IMAGEN y la IA lo pasó a ejes del mundo) + SALIDA IA (omitió los otros tramos del perímetro) + REGLAS (corregir_fisica empuja el skyline en la dirección del centro, no detrás de lo que ve la cámara) + ADN (no menciona aire/antena) | Dar a la IA la cámara de la toma; el fondo descrito "relativo a la imagen" se resuelve en espacio de cámara; validador "fondo en cuadro" (todo objeto de fondo del ADN debe verse en ≥1 cuadro y nunca se empuja fuera). Aire/antena: si Ricardo los quiere, agregarlos al ADN. |
+| 2 | El Alien se acerca a ~0,5 m de Kael (el guion solo dice "El alienígena prepara una nueva lanza") | Raíz Alien va de (−1,0;1,0) a (−1,41;0,39) entre f121 y f217; raíz Kael de (−1,0;−1,0) a (−1,01;0,01). Distancia final ≈0,55 m. La IA además los puso a 1 m (la regla los llevó a 2 m). | MOLDE (se reusa la animación vieja `AlienAction.001`/`KaelAction.001` del molde v2 de v3g, hecha para "the warrior takes one step forward") + SALIDA IA (1 m de separación) | Animar desde el plan de tomas, no desde el molde viejo; validador de distancia mínima por cuadro; acercamiento solo si el plan lo dice, con velocidad. |
+| 3 | La lanza se levanta en vez de apuntar/prepararse | `Alien_md` (mano der.) con keyframes que suben sobre la cabeza (lanza puntas y31→y62 % a 6-8 s). | MOLDE (animación vieja de v3g: "raises the spear straight overhead") | Acción desde el plan: "prepara una nueva lanza" → materializar/empuñar al frente, sin alzar. |
+| 4 | Kael se para como robot/transformer y se voltea | Cabeza z: 0,12→1,10 (2 s)→1,60 (f145)→1,10 (f169)→1,56; giro raíz +27°→−12° entre f121 y f169 (≈40° en 1 s); orientación vs cámara −95°→−139°. El cuerpo son esferas sueltas con keyframes independientes interpoladas en línea recta + segmentos "stretch-to": no hay esqueleto, ni rodilla/mano/cadera como apoyos. | MOLDE (animación vieja por puntos sueltos, sin biomecánica) — el código de Star no se usa para Kael en este molde | Levantarse por fases (lado → mano → rodilla → cadera → de pie) con IK y apoyos; validador de continuidad de pose (giro máx. por cuadro, sin saltos de orientación, largo de huesos constante). |
+| 5 | La prisión se ve redonda | La malla SÍ es octogonal (16 vértices = 8 lados), pero el panel emite fuerte (emit 12 + panel 0,8 alfa) y las 8 columnas brillan blanco → las caras se funden; con la cámara cerca parece un cilindro. | FÓRMULA (la escribí yo, Ako: material/emisión sin bordes marcados) | Aristas/marcos más gruesos y oscuros entre caras, emisión menor en el panel, rayos en arco entre columnas. |
+| 6 | ¿Se reusan animaciones o videos viejos? | SÍ animaciones: `dibujar.py --molde` trae `KaelAction.001`, `AlienAction.001`, `NoviaAction.001` y `CAM_V2Action` de `esc11_molde_v2_camara.blend`. NO videos: el video del molde se renderizó nuevo y Omni no se llamó. | MOLDE / decisión de diseño (mía) | Generador de animación desde el plan de tomas (fuente de la verdad). |
+
+SISTEMA DE PUNTOS DE STAR: fórmulas Star disponibles: almohada_simple, arbol_simple, armario_2puertas, auto_simple, banco_calle, bbox, bicicletero_calle, bloque_edificio, bolardo_calle, cables_haz, caja, cama_marco_colchon, cilindro, columna_estructural, cortina_enrollable, escritorio_patas, estanteria_abierta, farola_poste, hidrante_calle, jardinera_calle, lampara_arquitecto, letrero_calle, manta_simple, mesa_simple, monitor_pantalla, muro_plano, muros_caja_con_huecos, papelera_calle, papelera_cilindro, parada_autobus, perchero_pie, plafon_area, plano, puerta_bisagra, punto, quiosco_calle, rack_servidores, semaforo_calle, silla_giratoria_ergonomica, silla_simple, teclado_simple, toldo_calle, torre_pc, ventana_marco_vidrio. Fórmulas nuevas (tamaño por defecto en m): {"brazalete_tecnologico": [0.09, 0.09, 0.03], "skyline_neon": [40, 4, 14], "antena_mastil": [0.8, 0.8, 5.0], "murete_cornisa": [10, 0.25, 1.05], "lanza_doble_punta": [0.16, 0.16, 1.9], "piso_losas_juntas": [16, 16, 0.02], "tanque_agua_elevado": [2.2, 2.2, 4.6], "prision_octogonal": [1.6, 1.6, 2.3], "aire_acondicionado": [1.0, 0.7, 0.8]}. Coordenadas: origen en la ESQUINA del espacio, metros, z=0 suelo, pos_m = centro de la base.
+BIBLIOTECA BIOMECÁNICA: {"acciones": ["levantarse", "arrodillarse", "caer", "acercarse", "quieto", "apuntar_arma", "mirar", "volar", "golpear"], "poses": ["de_pie", "tendido", "lado_mano", "manos_rodillas", "rodilla_apoyo", "cadera_arriba", "arrodillado", "apuntar", "golpe", "vuelo"], "fases": {"levantarse": ["lado_mano", "manos_rodillas", "rodilla_apoyo", "cadera_arriba", "de_pie"], "arrodillarse": ["cadera_arriba", "arrodillado"], "caer": ["rodilla_apoyo", "tendido"], "apuntar_arma": ["apuntar"], "golpear": ["golpe", "de_pie"], "volar": ["vuelo"]}, "puntos_cuerpo": ["cabeza", "cuello", "pecho", "pelvis", "hombro_L/R", "codo_L/R", "mano_L/R", "cadera_L/R", "rodilla_L/R", "pie_L/R"], "limites": {"max_deg_por_s": 300.0, "max_yaw_por_s": 120.0, "dist_min_m": 1.0}}
+TAREAS:
+A) validacion_star: ¿el sistema parametrizado de Star (puntos + c∈[0,1] + IK) puede producir movimiento coherente? Qué falta.
+B) especificacion_generica: reglas para cualquier escena (biomecánica por fases sin volteos, velocidades reales m/s y °/s, distancias coherentes, acercamiento SOLO si el plan lo dice con trayectoria y velocidad, fondo siempre preservado y en cuadro, nada cortado).
+C) escena esc11 (toma única de 10 s, 24 fps): para el tramo del guion «La prisión comienza a resquebrajarse… El protagonista mira a Imi» escribe la narración del plan de tomas por tramos y el JSON: espacio, objetos (fórmula del catálogo, pos_m, tamano_m, rot_z_deg), personajes (id: kael, alien, novia; pos_m, yaw_deg, altura_m del ADN), acciones (tipo de la biblioteca, t0, t1, objetivo, velocidad_m_s, distancia_m, notas), cámara (loc, mira, lente_mm, y movimiento por keyframes t/loc/mira; sin zoom brusco), objetos de fondo que deben verse. El Alien NO se acerca; prepara la lanza al frente apuntando a Kael (no la alza). Kael se levanta por fases. Elige una cámara que muestre a los tres, la prisión octogonal, el tanque a la derecha y el muro/horizonte de fondo.
+D) agregados_argon: todo lo que agregues o cambies para la coherencia, marcado.
+E) reglas_prompt_maestro (lista) y validadores (lista con umbrales numéricos).
+=== ADN ===
+# ADN Alien / Guardian - Ricardo 2026-11-03
+Hoja: alien_hoja.jpg (frente, perfil, espalda + 5 expresiones). OJO: en el perfil de la hoja las piernas salen borrosas/cortadas.
+## 1. Ficha
+- Adulto joven 20-28. Estatura ~1.90 m (molde Blender ~1.88 m), atletico, esbelto y musculado, hombros anchos, cintura estrecha, extremidades largas. ~8 cabezas.
+- Anime sci-fi/fantasia detallado, trazo fino, alto contraste, armadura metalica brillante con especulares frios y emision neon.
+## 2. Rostro y pelo
+- Rostro alargado anguloso, pomulos marcados, mandibula y barbilla afiladas; tez palida gris-azulada fria.
+- Orejas largas puntiagudas hacia afuera y arriba en diagonal.
+- Ojos rasgados, iris y esclerotica cian electrico brillante, sin pupila oscura; marca/vena luminosa azul neon desde la frente sobre la ceja derecha.
+- Pelo hasta la cintura, liso, blanco platinado / gris hielo, capas con puntas finas, hacia atras en la frente, dos mechones largos al frente sobre las claviculas.
+- Cejas finas blanco/gris claro, tensas.
+## 3. Expresiones
+01 Normal: mirada gelida directa, boca en linea firme. 02 Feliz: sonrisa leve contenida, de superioridad.
+03 Nervioso: ojos tensos, cejas fruncidas, labios apretados, sudor. 04 Enojado (combate): cejas en diagonal, ojos muy abiertos, marca brilla fuerte, boca abierta en grito con dientes.
+05 Triste: mirada baja, cejas arriba al centro, labios en linea descendente.
+## 4. Vestuario
+- Exotraje/armadura biomecanica de cuerpo entero (cuello a pies), ajustada, sin tela; negro azabache, antracita y gris oscuro, brillante, placas con volumen.
+- Cuello alto segmentado, hombreras angulares en capas; pectorales y abdominales que imitan musculos; nucleo de energia en el esternon en estrella/rombo cian con bloom.
+- Del nucleo salen grietas y lineas azul neon por articulaciones, brazos, abdomen, costados y piernas.
+- Protectores de antebrazo segmentados, guanteletes blindados con nudillos articulados; musleras en capas, rodilleras en punta, espinilleras con fisuras luminosas.
+- Botas blindadas pesadas integradas, negro/gris oscuro, lineas de energia en el empeine.
+## 5. Vistas
+- Frente: armadura simetrica, nucleo y marca visibles, dos mechones al frente, manos neutras.
+- Perfil: orejas hacia atras, rostro anguloso, segmentos en hombro, codo, muslo y pantorrilla.
+- Espalda: melena blanca hasta la cintura cubre espalda y hombros; armadura oscura con lineas neon en brazos, cintura y pantorrillas; SIN mochila ni accesorios.
+## Regla de escena esc11
+De espaldas a camara, frente a Kael, lanza en la MANO DERECHA. Altura fija ~1.90 m = 1.10 x Kael (1.72 m); la misma en TODOS los cuadros.
+
+
+# 🧬 ADN de Escenario: Azotea Urbana Nocturna
+(Enviado por Ricardo el 03-nov-2026. Imagen: azotea_referencia.png)
+
+## 1. Composición Estructural y Suelo (Primer Plano / Nivel Base)
+- Superficie del piso: Pavimento de grandes losas o baldosas cuadradas/rectangulares de concreto de tono gris oscuro y desgastado.
+- Juntas y Patrón: Separadas por líneas de ranuras profundas, oscuras y continuas en una cuadrícula ortogonal que se fugan en diagonal hacia la izquierda y el fondo, acentuando la perspectiva de la azotea.
+- Desgaste y Textura del Suelo: Textura porosa con manchas orgánicas irregulares y oscuras de suciedad, humedad acumulada, desgaste y pisadas que rompen la homogeneidad del concreto.
+- Muro perimetral (Parapeto): Un muro bajo de concreto que delimita la azotea y cruza horizontalmente la escena.
+  - Lateral izquierdo: Se conecta en esquina con un tramo corto de muro que va hacia el primer plano izquierdo. Su cara interna está en sombra.
+  - Sección frontal: Muro largo que corre de izquierda a derecha en el plano medio. Presenta un borde o cornisa superior plana, de tono más claro y sutilmente metálico.
+  - Desgaste del muro: La superficie de concreto gris muestra manchas verticales oscuras causadas por escurrimiento de agua, humedad, desconchados y marcas de intemperie.
+
+## 2. Arquitectura de Fondo y Skyline (Horizonte)
+- Cielo nocturno: Cielo nocturno de tono azul cobalto profundo y oscuro, en degradado hacia un tono más claro cerca de la línea del muro. Está cubierto por multitud de estrellas pequeñas de brillo tenue e irregular, más concentradas hacia la parte superior e izquierda.
+- Línea de horizonte: La silueta de la ciudad está representada por un degradado horizontal de resplandores y formas rectangulares difusas en tono azul cian brillante y turquesa eléctrico justo detrás del muro, simulando el resplandor nocturno de edificios lejanos.
+- Estructura en el borde derecho: Se asoman los soportes verticales de una estructura de apariencia metálica (viga e inicio de plataforma o tanque elevado).
+
+## 3. Iluminación, Atmósfera y Color (Lighting & Mood)
+- Key Light (Luz Principal): Proviene de una fuente intensa de luz azulada/lunar fría en la parte superior derecha, que se dispersa por el cielo en esa esquina con pequeñas partículas luminosas o polvo estelar visible, y baña suavemente el borde superior del muro y el suelo.
+- Shadows (Sombras): Una sombra en diagonal bien marcada se proyecta desde la esquina del muro del lateral izquierdo hacia el suelo, y el resto de las zonas alejadas o pegadas a los muros quedan en penumbra natural.
+- Paleta cromática: Dominada por gamas de azul noche, azul cobalto, azul cian neón difuso, y los grises oscuros, desaturados y fríos del concreto en el suelo y el parapeto.
+
+## 4. Prompt Compacto de Inyección (Para NanoBanana)
+Azotea urbana nocturna con suelo de losas de concreto gris oscuro desgastado y manchado por humedad; delimitada al fondo por un muro perimetral de concreto gris con manchas verticales y esquina a la izquierda. Al fondo, un cielo nocturno azul profundo estrellado sobre un horizonte difuso de edificios iluminados en azul cian neón; con soportes metálicos en el extremo derecho bajo una iluminación cenital fría proveniente de arriba a la derecha que proyecta sombras en diagonal en el suelo.
+
+
+# ADN de estilo grafico - Ricardo 2026-11-03
+Imagen: estilo_referencia.png (OJO: la chica de la imagen es SOLO referencia de estilo, no un personaje)
+1. Linea: fina, limpia, definida, color azul marino muy oscuro / gris pizarra (no negro puro); pelo con puntas afiladas, contornos suaves en rostro, claviculas y capucha.
+2. Color/sombreado: anime digital de alta gama, cel-shading avanzado con mezclas semirrealistas; sombra plana con gradientes suaves en pliegues, cuello y bajo el menton; piel con subtono calido/rosado; pelo en capas con mechones individuales y brillos especulares alargados azulado/plateado.
+3. Luz: nocturna azul cobalto y cian profundo; rim light y rebote fuerte; lineas emisivas cian neon con bloom sobre piel y pelo; ojos con varias capas de brillo, pupilas azul oscuro, destellos blancos.
+4. Paleta: azules nocturnos, azul marino, gris pizarra, acentos cian neon; contraste calido en piel, rubor en mejillas y nariz, labios rosados.
+## Prompt compacto
+Estilo de arte digital anime de alta calidad con sombreado semirrealista y lineas finas y limpias; paleta cromatica nocturna dominada por tonos azul marino y azul cobalto, con iluminacion interactiva de bordes en azul cian neon brillante que emite un suave resplandor (bloom) sobre la piel y el cabello; ojos grandes y detallados con intensos reflejos de luz y texturas fluidas en el cabello.
+
+
+# ADN Kael (version sin mochila) - entregado por Ricardo 2026-11-03
+Hoja: kael_hoja_sin_mochila.jpg (frente, espalda, perfil izq + 5 expresiones)
+
+## 1. Ficha
+- Edad visual 16-19. Estatura ~1.72 m, ligeramente robusto, ancho, natural (no atletico). ~7 cabezas.
+- Anime contemporaneo, lineas limpias, cel-shading plano, colores desaturados, luz natural.
+## 2. Rostro
+- Ovalo redondeado, barbilla sutil, mandibula suave, orejas estandar.
+- Pelo casi negro/carbon, abundante, desordenado, mechones puntiagudos en capas sobre frente y sienes; puntas cortas rebeldes en nuca; volumen ondulado, no lacio.
+- Ojos medianos marron-grisaceo profundo; cejas oscuras gruesas pegadas a la montura.
+- Gafas fijas: montura completa fina negra/marron muy oscuro, rectangular de bordes suaves (no circular, no gruesa).
+- Nariz pequena levemente respingada, boca pequena; gotas de sudor en tension/esfuerzo.
+## 3. Expresiones
+01 Normal: mirada serena neutra, labios en linea recta, timido/introvertido.
+02 Feliz: ojos achinados (a veces guino izq), sonrisa suave.
+03 Nervioso: cejas arriba/adentro, sonrisa forzada con dientes, sudor.
+04 Enojado: cejas fruncidas en diagonal, ojos abiertos, grito con dientes inferiores, sudor.
+05 Triste: ojos caidos, cejas elevadas al centro, boca curva hacia abajo.
+## 4. Vestuario (SIN MOCHILA)
+- Sudadera gris medio/claro desaturado, capucha caida, cremallera totalmente abierta, mangas remangadas a 3/4 (munecas al descubierto), bolsillos canguro, punos y bajo elasticos, SIN logo ni estampado.
+- Camiseta azul marino desaturado, cuello redondo holgada, estampado circular dorado/ocre de estilo fantastico en el pecho.
+- Pantalon cargo azul noche muy holgado, recto, arrugado sobre el calzado, bolsillos de parche con solapa en muslos, sin tiras.
+- Zapatillas de lona low-top azul oscuro/negro, puntera de goma blanca, cordones blancos, suela blanca con franja fina oscura.
+## 5. Vistas
+- Frente: manos en bolsillos, estampado dorado visible, pies algo hacia fuera.
+- Perfil: capucha caida atras, sudadera recta holgada, bolsillo cargo visible, SIN correas ni bulto en la espalda.
+- Espalda: capucha grande sobre hombros, espalda gris lisa SIN mochila ni accesorio, pantalon holgado.
+
+
+# ADN objeto fijo: Lanza de doble punta - Ricardo 2026-11-03
+Hoja: lanza_hoja.jpg (activa, 3 vistas inactivas, detalles de energia)
+- Lanza magica/tecnologica SIMETRICA de doble punta; se estrecha desde un abultamiento central hacia dos puntas muy afiladas; SIN astil liso: todo el cuerpo son hebras trenzadas helicoidales.
+- Largo ~1.80-2.00 m (prompt: ~1.90 m, como la altura del Alien).
+- Nucleo central: esfera / vacio negro absoluto, mate, en el centro exacto.
+- Hebras violeta oscuro, purpura y azul electrico/marino, satinadas (metalico/cristalino/biologico), en espiral desde el nucleo hacia ambas puntas, con huecos entre ellas; las puntas son conos solidos.
+- Inactiva: solo materiales, sin luz ni particulas.
+- Activa (por defecto): aura violeta/magenta/lavanda, sobre todo en las puntas; anillos y orbitas concentricos translucidos lavanda/cian claro; particulas y chispas.
+- Ataque: energia mas caotica, rafagas, mas particulas, cian y violeta brillante en los extremos.
+- Plano lejano: barra simetrica violeta brillante de doble punta con aura circular difusa lavanda/magenta, sin detallar el trenzado.
+- Simetrica a 180 grados y casi igual desde cualquier angulo lateral.
+## Prompt compacto
+Lanza magica simetrica de doble punta de ~1.90 m, con un nucleo esferico negro absoluto en el centro; su cuerpo esta formado por multiples hebras fisicas de color violeta oscuro, purpura y azul que se retuercen y entrelazan de forma helicoidal hacia ambos extremos afilados. En estado activo, todo el objeto emite un resplandor vibrante violeta y magenta, rodeado por orbitas, anillos de energia concentricos y translucidos de color lavanda y pequenas particulas de luz flotantes.
+## Regla esc11
+El Alien la sostiene por el CENTRO (el nucleo) con la mano derecha. Ya no aplica "dark shaft, glowing violet tip" del prompt #317.
+
+
+# ADN objeto fijo: Brazalete tecnologico de Kael - Ricardo 2026-11-03
+Imagen: manilla_brazalete.png
+- Aro rigido cerrado de una pieza, sin broches ni bisagras; anillo circular grueso tubular achatado, bordes biselados suaves.
+- Anclaje: MUNECA IZQUIERDA de Kael, con ligera holgura.
+- Chasis: aleacion gris plomo oscuro / azul pizarra apagado, mate satinado, reflejos frios en biseles.
+- Cara interna: revestimiento oscuro segmentado, paneles ergonomicos en relieve, ranura central lisa.
+- Emision: cian / azul electrico neon con bloom suave.
+- Grabados exteriores: rombo doble concentrico al centro; a cada lado dos lineas paralelas de circuito que terminan en nodos circulares huecos; micro-glifos geometricos tipo runa por toda la circunferencia.
+- Activo: luz cian intensa constante, rebote turquesa sobre el aro y la muneca/mano.
+- Plano lejano: aro gris oscuro solido con una linea continua cian brillante.
+## Prompt compacto
+Brazalete tecnologico rigido de metal gris plomo oscuro con bordes biselados en la muneca izquierda; su cara exterior tiene grabados de circuitos luminosos en color cian neon que destacan un rombo doble central flanqueado por lineas paralelas, nodos circulares y glifos geometricos brillantes.
+
+
+# ADN Novia "Chica del Cardigan" - entregado por Ricardo 2026-11-03
+Hoja: novia_hoja.jpg (frente, perfil izq, espalda + 6 expresiones)
+
+## 1. Ficha
+- Edad visual 16-20. Estatura ~1.65 m, delgada, esbelta, brazos finos, cuello alargado. ~7.5 cabezas.
+- Anime 2D alta calidad, lineas finas suaves, cel-shading con transiciones suaves en pelo, luz suave, colores desaturados naturales.
+## 2. Rostro y pelo
+- Ovalo fino, barbilla sutil en punta, mandibula delgada; orejas casi ocultas por el pelo.
+- Pelo largo hasta media espalda, negro/marron muy oscuro con reflejos sutiles, desordenado, con volumen, mechones sueltos, flequillo deshilachado sobre frente y entre los ojos.
+- Ojos grandes gris oscuro / violaceo desaturado; cejas oscuras finas, en parte bajo el flequillo.
+- Nariz pequena, boca pequena; hombro IZQUIERDO expuesto por la caida del cardigan.
+## 3. Expresiones
+01 Normal: mirada tranquila, sonrisa cerrada leve. 02 Feliz: ojos cerrados curvos, sonrisa abierta.
+03 Nerviosa: cejas preocupadas, evita mirar, boca semicerrada, sudor. 04 Enojada: cejas fruncidas, boca abierta tensa.
+05 Triste: mirada baja, cejas arriba al centro, labios en linea descendente.
+## 4. Vestuario
+- Cardigan de punto canale oversized crema/marfil, mangas muy holgadas abullonadas en punos, parcialmente desabrochado, cuello caido sobre el hombro izquierdo (clavicula y tirante visibles).
+- Camiseta de tirantes blanca ajustada, escote redondo, tirante izq visible.
+- Jeans de tiro alto, corte recto, denim oscuro desaturado con lavado sutil, costuras visibles, boton y cremallera.
+- Zapatillas bajas de lona blancas (cordones blancos/gris muy claro), suela plana.
+## 5. Vistas
+- Frente: asimetria del hombro izq, manos relajadas cubiertas por las mangas.
+- Perfil: mucha holgura en la manga, contraste cardigan ancho / jeans rectos, pelo cae por la espalda; nada en la espalda.
+- Espalda: cardigan liso con canale, pelo en capas al centro, dos bolsillos traseros; SIN mochila ni accesorios.
+
+
+# ADN objeto especial: Prision de energia OCTOGONAL (oficial, alineada al molde Blender) - Ricardo 2026-11-03
+Hoja: prision_octogonal_hoja.jpg (reemplaza a la del cubo, descartada)
+- Celda de contencion electromagnetica traslucida. PRISMA OCTOGONAL VERTICAL: base octogonal en el suelo, techo octogonal plano, 8 columnas/aristas verticales y 8 paneles de fuerza. PROHIBIDO el cubo.
+- Asentada en el suelo de la azotea (o flotando a ras), rebote de luz violeta/magenta sobre las baldosas.
+- Escala: ~2.3 m de alto x ~1.6 m de diametro; el personaje encerrado va de pie en el eje central (la Novia; el ADN decia "Imi" por error, NO es su nombre).
+- Marcos (8 columnas + anillos superior e inferior): energia condensada violeta/purpura/magenta brillante.
+- 8 paneles semitraslucidos magenta/violeta con fracturas de cristal y rayos blanco-purpura que salen de un destello central en cada cara.
+- Aura: halo de distorsion purpura oscuro con chispas y fragmentos cristalinos flotantes.
+- Activa: brillo constante en los 8 marcos, grietas parpadeando, el personaje de dentro se ve con claridad.
+- Plano general: capsula octogonal vertical magenta/violeta traslucida con bordes definidos y destellos sutiles.
+- Simetria radial: la misma silueta de 8 caras desde cualquier angulo.
+## Prompt compacto
+Prision de energia con forma de prisma octogonal vertical (capsula poligonal de 8 lados, NO cubica) de ~2.3 m de alto; su estructura tiene 8 aristas verticales y bases octogonales de energia magenta y violeta brillante que enmarcan paneles traslucidos atravesados por grietas de luz electrica blanco-purpura y destellos centrales, rodeada por un aura purpura con particulas luminosas flotantes.
+
+=== GUION esc11 ===
+ESCENA 11. LA ELECCIÓN
+
+El protagonista se incorpora lentamente.
+
+PROTAGONISTA:
+
+—Imi…
+
+IMI:
+
+—Estoy aquí.
+
+PROTAGONISTA:
+
+—Cuando te creé, pensé que algún día podrías hacer algo extraordinario.
+
+Mira la pulsera.
+
+PROTAGONISTA:
+
+—Quería que aprendieras. Que pensaras. Que pudieras elegir por ti misma.
+
+Una respiración profunda.
+
+PROTAGONISTA:
+
+—Nunca imaginé que tendrías que arriesgarte para salvarme.
+
+IMI:
+
+—No sé por qué quiero hacerlo.
+
+PROTAGONISTA:
+
+—No tienes que saberlo todo.
+
+Una pequeña sonrisa aparece en su rostro.
+
+PROTAGONISTA:
+
+—Eso también es aprender.
+
+La prisión comienza a resquebrajarse.
+
+La novia cae de rodillas dentro de ella.
+
+NOVIA:
+
+—¡Por favor!
+
+El protagonista intenta correr, pero sus piernas apenas responden.
+
+El alienígena prepara una nueva lanza.
+
+ALIENÍGENA:
+
+—Se acabó.
+
+El protagonista mira a Imi.
+
+Tiene miedo.
+
+No intenta ocultarlo.
+
+PROTAGONISTA:
+
+—No quiero dejar de ser humano.
+
+IMI:
+
+—Lo sé.
+
+PROTAGONISTA:
+
+—No quiero despertar un día y descubrir que ya no reconozco mi propia voz.
+
+IMI:
+
+—Yo tampoco quiero perderte.
+
+Él cierra los ojos.
+
+Recuerda la voz de su novia.
+
+«No tienes que ser otra persona para que yo te quiera».
+
+Abre los ojos.
+
+PROTAGONISTA:
+
+—Entonces no me conviertas en alguien más.
+
+La pulsera comienza a iluminarse.
+
+PROTAGONISTA:
+
+—Muéstrame hasta dónde puedo llegar.
+
+Silencio absoluto.
+
+La voz de Imi tiembla ligeramente.
+
+IMI:
+
+—Entendido.
+
+La luz azul recorre su brazo.
+
+IMI:
+
+—Iniciando protocolo de génesis.
+
+Una pausa.
+
+IMI:
+
+—Pero esta decisión es nuestra. No permitiré que enfrentes esto solo.
+
+El protagonista mira al alienígena.
+
+PROTAGONISTA:
+
+—Hazlo.
+
+---
+
+ACTO V — EL NACIMIENTO DE UNA NUEVA HUMANIDAD
+
+

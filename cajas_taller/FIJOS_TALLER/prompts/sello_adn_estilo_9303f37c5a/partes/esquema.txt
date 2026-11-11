@@ -1,0 +1,1 @@
+texto libre: 5 bloques numerados con los títulos del Maestro de Ako (lo revisa parse_ako de cubo_fijo)

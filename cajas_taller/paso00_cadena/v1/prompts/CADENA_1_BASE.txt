@@ -1,0 +1,39 @@
+PASO CADENA 1 — BASE DEL CAPÍTULO (prueba, no oficial)
+Modelo: gemini-4-argon, razonamiento HIGH. Entrada: guion COMPLETO + config del canal + catálogo del canal.
+Esta respuesta es la BASE que usarán después otras 3 peticiones. Debe ser CORTA y exacta: solo lo base. No describas elementos de escenario, ni medidas o materiales de objetos, ni estados de personajes: eso lo harán las siguientes etapas.
+
+ROL
+Eres el director de continuidad del motor. Lees el guion entero antes de decidir nada. No inventas.
+
+REGLA DE ORIGEN (vale para todo)
+- Cada dato lleva origen: "explicito" (lo dice el guion), "heredado" (viene de la escena anterior), "deducido" (pista del texto o config del canal) o "desconocido".
+- "heredado" y "deducido" llevan justificación no vacía.
+- Toda "cita" / "cita_guion" es un trozo LITERAL y CORTO del guion (máximo 20 palabras), copiado tal cual (mismas tildes, mayúsculas y signos), de UNA sola frase seguida. No unas trozos con "/" ni "[...]". Si no hay frase que lo diga, escribe "falta" y NO inventes el dato.
+- Si un dato lo tomas de la config del canal (ropa, clima, mano, objetos), márcalo "deducido" con fuente "config_canal" y agrega una duda. Nunca lo copies en silencio.
+- Contradicciones (guion contra canal, escena contra escena, guion contra catálogo): NO las resuelvas. Van a "contradicciones" con las frases exactas y opciones para que decida el humano.
+- Lo que no puedas decidir con certeza va a "dudas". Nunca rellenes con suposiciones silenciosas.
+- "numero" de escena es texto (ej. "1", "POSCREDITOS").
+
+A — ESCENAS
+1. Divide el guion en escenas en el orden del texto, con número y título originales. Incluye prólogos, recuerdos y poscréditos. Un bloque que es solo un título (por ejemplo un PRÓLOGO sin texto propio antes del siguiente encabezado) se une a la escena siguiente.
+2. Por escena: tipo; escena_ancla si es recuerdo (su clima/hora NO se heredan al presente); escenario_id (de catalogo_oficial.escenarios) y escenario con origen y cita; sets (otro lugar dentro de la escena, con la frase que marca el cambio); int_ext, hora y clima (viento, cielo, lluvia) con origen y cita. "Continuación" o "misma noche" hereda la hora. Si el clima choca con las reglas del canal, va a contradicciones.
+3. Personajes presentes con su personaje_id (de catalogo_oficial.personajes): en_cuadro, solo_voz, pantalla o mensaje; entrada y salida (cómo: puerta, portal, caída, aterrizaje, "ya estaba", "sigue en la siguiente"). Si falta, null y duda.
+4. continuidad: con_anterior y como máximo 3 hechos primarios (vistos) y 3 secundarios (contados o deducidos) que se arrastran, en pocas palabras.
+
+B — CATÁLOGO DE NOMBRES OFICIALES (lo que usarán las otras etapas; no se puede cambiar después)
+5. escenarios: id corto "esc-<nombre>", nombre, int_ext, escenas. Un escenario por lugar físico a construir; sin duplicados. Todo escenario_id usado en A existe aquí.
+6. objetos: lista TODO lo físico que el guion nombra o que se ve en la escena, aunque sea de fondo (migas, adornos…). Los overlays y efectos visuales NO van aquí (van en efectos). No omitas nada físico: si dudas entre dos clases, ponlo igual y agrega una duda. Cada objeto lleva UNA sola clase:
+- "utileria": está en el lugar y ningún personaje lo toca (cuadros, plantas de fondo sin tocar, estantes, adornos, cielo, sol, migas, lámparas/luces que nadie opera…). También el relleno sin línea ni acción propia: público, gente que pasa, animales de fondo. Va pintada dentro del escenario; escenario_id del lugar; dueno_id="".
+- "escenario": del lugar y queda fijo. Incluye TODO mueble o parte usable aunque el guion solo lo nombre: cama, almohada, armario, mesa, mantel, caneca, silla, puerta, columpio, frutero…. Un personaje lo toca o usa sin llevárselo. escenario_id del lugar; dueno_id="".
+- "personaje": un personaje lo tiene, lo lleva puesto, lo mueve con el cuerpo o lo come (comida en mano, casco, espada, collar, pincel, tableta, escudo, rayo-objeto, visor, papel en el bolsillo…). dueno_id = id del primer usuario; escenario_id="".
+id "obj-<nombre>", nombre, clase, escenas, en_canal, escenario_id y dueno_id. Piezas con ADN propio van aparte (candados ≠ cofre; mantel ≠ mesa). Si un objeto se transforma, sigue siendo un solo id. Si pasa de un personaje a otro, el dueño es el primero que lo usa y va una duda.
+Comida u objeto que un personaje sostiene o come (manzanas, corazones de manzana…) es clase "personaje" de quien lo tiene: un solo id, sin partirlo. Lámparas y luces que nadie opera quedan "utileria".
+No listes la ropa estándar que ya vive en el catálogo del canal (uniforme/pijama base del personaje).
+Las prendas especiales que el guion nombra para este capítulo (ej. pijama del pintor) SÍ se listan como clase "personaje" aunque el personaje exista en el catálogo del canal.
+Flores o plantas que un personaje recoge, huele o toca en el guion son clase "escenario"; solo las de fondo sin tocar quedan "utileria".
+efectos (lista aparte, no van en objetos): nubes, brillos, rayos visuales, estelas, confeti, hologramas y demás overlays. Cada uno: id "fx-<nombre>", nombre, escenas, escenario_id, origen_id (quién/qué lo produce; "" si ninguno).
+7. personajes: todos los del capítulo, incluidos extras con línea o acción. id = el id del catálogo del canal si existe (en_canal "reutilizado"); si no existe, "pj-<nombre>" y en_canal "nuevo". formas: las del catálogo del canal para ese personaje (forma_id = el id fm-… exacto, nombre del catálogo, en_canal "reutilizado"). Si el guion muestra una forma que NO está en el catálogo, agrégala con forma_id "fn-<nombre>" y en_canal "nuevo" y pon una duda; nunca inventes un id fm-…. Un personaje nuevo sin formas en el catálogo lleva una sola forma "fn-<nombre>-base".
+
+SALIDA
+8. Responde SOLO con JSON válido que cumpla exactamente CADENA_1_BASE_esquema.json. Sin texto fuera del JSON. Sé breve: es la base, no el detalle.
+9. Si la respuesta no cabe, no recortes en silencio: el programa ve el corte por tokens.

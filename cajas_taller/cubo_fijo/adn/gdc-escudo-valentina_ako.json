@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-escudo-valentina",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Escudo pequeño o emblema portátil rígido de una sola pieza. Silueta de corazón altamente redondeado (casi circular), con perfil frontal convexo, reverso plano y biseles gruesos totalmente suavizados.\n- Modo de sujeción en antebrazo o mano mediante dos correas verticales paralelas ubicadas en la cara posterior."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Chasis principal en material sólido color magenta con acabado satinado suave. Anillo perimetral, bisel central y presillas traseras en metal dorado con acabado mate-satinado.\n- Cara frontal central con gema de resina o cristal translúcido rosa de acabado pulido brillante. Correas traseras de textil o cuero sintético magenta mate.\n- Emisión lumínica del núcleo en dos variantes: luz azul cian brillante («brillo_azul_suave_latido») o luz roja/rosada cálida expansiva («activo_emisor_calido_rojo»)."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Cara frontal lisa, bordeada por un grueso marco dorado continuo. En el centro exacto, una gema abombada con forma de corazón enmarcada por su propio bisel dorado elevado.\n- Cara posterior plana, bordeada por el marco dorado, con dos cintas verticales de agarre ancladas a la superficie mediante cuatro hebillas rectangulares doradas (dos superiores y dos inferiores)."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- En estado inactivo («reposo_magenta_y_dorado»), la gema central es translúcida y solo refleja el entorno. Al activarse en modo pulso, la gema se vuelve opaca por la luminiscencia azul cian, bañando el bisel interior. En estado activo rojo, emite una luz cálida intensa que genera un halo lumínico concéntrico con forma de corazón sobre el chasis magenta.\n- En plano general (lejos), se simplifica a una forma circular-acorazonada magenta con contorno dorado y un punto central rosa, cian brillante o rojo luminoso, omitiendo el grosor de los biseles."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Escudo pequeño portátil con silueta de corazón redondeado y perfil convexo, fabricado en material satinado color magenta y enmarcado por un grueso borde metálico dorado mate. En el centro frontal destaca una gema translúcida rosa abombada en forma de corazón con su propio bisel dorado, la cual puede permanecer apagada, brillar con luz azul cian intensa o emitir un resplandor rojo cálido con un halo concéntrico. El reverso es plano e incluye dos correas verticales de agarre color magenta fijadas con cuatro presillas rectangulares doradas."
+    }
+  ],
+  "inyeccion": "Escudo pequeño portátil con silueta de corazón redondeado y perfil convexo, fabricado en material satinado color magenta y enmarcado por un grueso borde metálico dorado mate. En el centro frontal destaca una gema translúcida rosa abombada en forma de corazón con su propio bisel dorado, la cual puede permanecer apagada, brillar con luz azul cian intensa o emitir un resplandor rojo cálido con un halo concéntrico. El reverso es plano e incluye dos correas verticales de agarre color magenta fijadas con cuatro presillas rectangulares doradas.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Escudo pequeño o emblema portátil rígido de una sola pieza. Silueta de corazón altamente redondeado (casi circular), con perfil frontal convexo, reverso plano y biseles gruesos totalmente suavizados.\n- Modo de sujeción en antebrazo o mano mediante dos correas verticales paralelas ubicadas en la cara posterior.\n\n2. Materiales y Paleta de Color:\n\n- Chasis principal en material sólido color magenta con acabado satinado suave. Anillo perimetral, bisel central y presillas traseras en metal dorado con acabado mate-satinado.\n- Cara frontal central con gema de resina o cristal translúcido rosa de acabado pulido brillante. Correas traseras de textil o cuero sintético magenta mate.\n- Emisión lumínica del núcleo en dos variantes: luz azul cian brillante («brillo_azul_suave_latido») o luz roja/rosada cálida expansiva («activo_emisor_calido_rojo»).\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Cara frontal lisa, bordeada por un grueso marco dorado continuo. En el centro exacto, una gema abombada con forma de corazón enmarcada por su propio bisel dorado elevado.\n- Cara posterior plana, bordeada por el marco dorado, con dos cintas verticales de agarre ancladas a la superficie mediante cuatro hebillas rectangulares doradas (dos superiores y dos inferiores).\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- En estado inactivo («reposo_magenta_y_dorado»), la gema central es translúcida y solo refleja el entorno. Al activarse en modo pulso, la gema se vuelve opaca por la luminiscencia azul cian, bañando el bisel interior. En estado activo rojo, emite una luz cálida intensa que genera un halo lumínico concéntrico con forma de corazón sobre el chasis magenta.\n- En plano general (lejos), se simplifica a una forma circular-acorazonada magenta con contorno dorado y un punto central rosa, cian brillante o rojo luminoso, omitiendo el grosor de los biseles.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nEscudo pequeño portátil con silueta de corazón redondeado y perfil convexo, fabricado en material satinado color magenta y enmarcado por un grueso borde metálico dorado mate. En el centro frontal destaca una gema translúcida rosa abombada en forma de corazón con su propio bisel dorado, la cual puede permanecer apagada, brillar con luz azul cian intensa o emitir un resplandor rojo cálido con un halo concéntrico. El reverso es plano e incluye dos correas verticales de agarre color magenta fijadas con cuatro presillas rectangulares doradas.",
+  "creado": "2026-11-06T03:44:10+01:00"
+}

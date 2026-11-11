@@ -1,0 +1,18 @@
+{
+ "paso": "taller00_v1_4a1_o72_m24_t336_divA",
+ "sha256": "f1ace9d5ebc6c6b9901ed551d8d73e1176d31cd2d36710f011f2461b39acb407",
+ "partes": {
+  "esquema": "8752b2c5cd92ccfe27fb5d4284fc5889684d4576954b2b5b3be6100d4eabf06d",
+  "json_out": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+  "json_schema_api": "7f2e4a2f441736038c9e07b707e242c220a3afcc9a9e6dcffd19fe4ae31c88bb",
+  "max_out": "762c03e28410c570830244270be8eb45029c1f3bd75db7c814dd9871648641c2",
+  "max_rondas": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+  "modelo": "fedcf0678c6ce4486fc33bd750a8ed628d0728711e97469ef5ff9b021a0c54aa",
+  "nivel": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+  "rotulos_bloques": "59697575185fc8523efaa4a9964368ffd4f271af09785b73cf35705bf0a99045",
+  "texto": "bb1bc5210725d951afdc3591f74a58c8b4711aceef52c61c4556f2f18800e27c"
+ },
+ "aprobado_por": "inmi (equipo técnico) — taller n8n",
+ "fecha": "2026-11-03T14:01:54",
+ "nota": "Taller n8n, cadena paso 00 v1 = prompts de la prueba del 28-oct (t372u), programados por orden de Ricardo t376u. Registro del taller, no el oficial."
+}

@@ -1,0 +1,280 @@
+{
+ "id": "papel_numeros",
+ "nombre_generico": "Papel con números del 6 al 10",
+ "nombre_en": "number paper",
+ "categoria": "utiles",
+ "medidas_tipicas": {
+  "ancho_m": 0.06,
+  "fondo_m": 0.002,
+  "alto_m": 0.045
+ },
+ "medidas_fuente": "receta Argon vía B G3_utiles_dibujo (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.06,
+  0.002,
+  0.045
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": 0.0,
+ "apoyo": "piso",
+ "conjunto": false,
+ "piezas": 8,
+ "tipos_de_pieza": [
+  "caja"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "lamina_cartulina",
+   "color_guia_rgb": [
+    0.949,
+    0.886,
+    0.808
+   ],
+   "centro_m": [
+    0.0,
+    0.0002,
+    0.0225
+   ],
+   "tam_m": [
+    0.06,
+    0.0016,
+    0.045
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "pliegue_vertical",
+   "color_guia_rgb": [
+    0.949,
+    0.886,
+    0.808
+   ],
+   "centro_m": [
+    0.0,
+    -0.0007,
+    0.0225
+   ],
+   "tam_m": [
+    0.0015,
+    0.0002,
+    0.045
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "pliegue_horizontal",
+   "color_guia_rgb": [
+    0.949,
+    0.886,
+    0.808
+   ],
+   "centro_m": [
+    0.0,
+    -0.0007,
+    0.0225
+   ],
+   "tam_m": [
+    0.06,
+    0.0002,
+    0.0015
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "dibujo_canon_rayo",
+   "color_guia_rgb": [
+    0.48,
+    0.2,
+    0.65
+   ],
+   "centro_m": [
+    0.002,
+    -0.0008,
+    0.026
+   ],
+   "tam_m": [
+    0.022,
+    0.0004,
+    0.004
+   ],
+   "rot_grados": [
+    0.0,
+    -25.0,
+    0.0
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "dibujo_empunadura_rayo",
+   "color_guia_rgb": [
+    0.48,
+    0.2,
+    0.65
+   ],
+   "centro_m": [
+    -0.005,
+    -0.0008,
+    0.019
+   ],
+   "tam_m": [
+    0.004,
+    0.0004,
+    0.009
+   ],
+   "rot_grados": [
+    0.0,
+    15.0,
+    0.0
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "dibujo_punta_rayo",
+   "color_guia_rgb": [
+    0.48,
+    0.2,
+    0.65
+   ],
+   "centro_m": [
+    0.013,
+    -0.0008,
+    0.031
+   ],
+   "tam_m": [
+    0.004,
+    0.0004,
+    0.004
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "dibujo_chispas_superiores",
+   "color_guia_rgb": [
+    0.72,
+    0.55,
+    0.86
+   ],
+   "centro_m": [
+    -0.004,
+    -0.0008,
+    0.036
+   ],
+   "tam_m": [
+    0.028,
+    0.0004,
+    0.003
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "dibujo_franja_numeros",
+   "color_guia_rgb": [
+    0.48,
+    0.2,
+    0.65
+   ],
+   "centro_m": [
+    0.0,
+    -0.0008,
+    0.007
+   ],
+   "tam_m": [
+    0.044,
+    0.0004,
+    0.006
+   ]
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.06,
+  "fondo": 0.002,
+  "alto": 0.045
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.045
+  ],
+  "frente": [
+   0.0,
+   -0.001,
+   0.0225
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G3_utiles_dibujo",
+  "objeto_id_origen": "obj-papel-numeros",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "b9f6c66b911e58656e00b37eeff7d12a3b4d5bc1c7512a43a0c0a1e446a9a47d",
+  "costo_usd_grupo": 0.1985,
+  "costo_usd_repartido": 0.049625,
+  "citas": [
+   {
+    "fuente_id": "F04",
+    "clave": "material.cartulina",
+    "cita": "Card stock, also called cover stock and pasteboard, is paper that is thicker and more durable than normal writing and printing paper"
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [
+   "A_COLOR obj-papel-numeros.dibujo_canon_rayo: color fuera de la paleta de la ficha",
+   "A_COLOR obj-papel-numeros.dibujo_empunadura_rayo: color fuera de la paleta de la ficha",
+   "A_COLOR obj-papel-numeros.dibujo_punta_rayo: color fuera de la paleta de la ficha",
+   "A_COLOR obj-papel-numeros.dibujo_chispas_superiores: color fuera de la paleta de la ficha",
+   "A_COLOR obj-papel-numeros.dibujo_franja_numeros: color fuera de la paleta de la ficha"
+  ],
+  "vacios": [],
+  "info": {
+   "partes": 8,
+   "piezas": 8,
+   "bbox_m": [
+    0.06,
+    0.002,
+    0.045
+   ],
+   "grupos": 1,
+   "datos": 8,
+   "con_fuente": 1
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "obj-papel-numeros"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

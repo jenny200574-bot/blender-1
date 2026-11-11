@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-pintor",
+  "clase": "personaje",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "02_MAESTRO_PERSONAJE_HOJA_ADN.txt",
+  "maestro_sha256": "c79a8ef378a006dd",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Ficha Antropométrica:",
+      "texto": "- Edad visual: 25 a 30 años.\n- Estatura y complexión: 1.06 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida), complexión delgada estilizada (ectomorfo).\n- Proporción: 6.5 cabezas de altura.\n- Estilo visual: 3D CGI estilizado, volúmenes suaves, sin línea de contorno, sombreado realista con dispersión subsuperficial (SSS) en la piel y materiales con microtextura."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Fisonomía Facial y Cabello:",
+      "texto": "- Rostro: Ovalado de mandíbula suave y mentón redondeado; piel clara de subtono cálido.\n- Cabello: Castaño claro, modelado en bloques suaves; corto en laterales y nuca, con tupé frontal voluminoso peinado hacia arriba y atrás.\n- Ojos: Grandes y almendrados, iris marrón cálido con brillos especulares definidos.\n- Cejas: Gruesas, color castaño, de geometría curva y bordes suavizados.\n- Accesorios faciales: Ninguno (rostro limpio sin gafas, cicatrices, vello facial ni pendientes)."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Paleta de Expresiones:",
+      "texto": "- Normal: Cejas relajadas horizontales, apertura ocular media, boca cerrada con leve sonrisa simétrica.\n- Feliz: Cejas elevadas en arco, apertura ocular máxima, boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n- Nervioso: Cejas arqueadas con extremos internos elevados, ojos muy abiertos, boca entreabierta asimétrica mostrando dientes apretados, gotas de sudor translúcidas en las sienes.\n- Enojado: Cejas bajas fruncidas hacia el centro, párpados superiores tensos cubriendo parte del iris, boca abierta rectangular en gesto de grito mostrando dientes y lengua.\n- Triste: Cejas inclinadas con el interior elevado, párpados superiores caídos a media altura, boca cerrada con comisuras arqueadas hacia abajo."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Vestuario por Capas:",
+      "texto": "- Prenda exterior: Saco formal corte slim en tela azul marino mate, solapa de muesca, cierre de un botón y dos bolsillos laterales con tapeta. Textura salpicada con manchas de pintura neón (verde, amarillo, fucsia, cian y naranja).\n- Prenda interior: Camisa de vestir color amarillo mostaza, corte ajustado, cuello desabotonado sin corbata, puños asomando 1 cm bajo las mangas del saco.\n- Prenda inferior: Pantalón de vestir azul marino a juego con el saco, corte recto entallado, pliegue frontal suave y salpicaduras de pintura multicolor.\n- Calzado y accesorios: Zapatos Oxford de cuero marrón oscuro con suela baja y cordones finos. Reloj metálico dorado en la muñeca izquierda."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Reglas de Giro:",
+      "texto": "- Frente: Apertura en \"V\" de la camisa amarilla, solapas del saco, pliegue de los bolsillos frontales y esfera del reloj visible en la muñeca izquierda.\n- Perfil: Silueta pronunciada del tupé frontal y puente nasal recto; curva entallada de la espalda del saco; hilera de botones pequeños en el puño de la manga.\n- Espaldas: Costura vertical central que divide el saco, caída limpia sin aberturas ni bolsillos traseros visibles, capas de cabello escalonadas en la nuca y manchas de pintura distribuidas en hombros y pantorrillas."
+    }
+  ],
+  "inyeccion": null,
+  "texto": "1. Ficha Antropométrica:\n- Edad visual: 25 a 30 años.\n- Estatura y complexión: 1.06 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida), complexión delgada estilizada (ectomorfo).\n- Proporción: 6.5 cabezas de altura.\n- Estilo visual: 3D CGI estilizado, volúmenes suaves, sin línea de contorno, sombreado realista con dispersión subsuperficial (SSS) en la piel y materiales con microtextura.\n\n2. Fisonomía Facial y Cabello:\n- Rostro: Ovalado de mandíbula suave y mentón redondeado; piel clara de subtono cálido.\n- Cabello: Castaño claro, modelado en bloques suaves; corto en laterales y nuca, con tupé frontal voluminoso peinado hacia arriba y atrás.\n- Ojos: Grandes y almendrados, iris marrón cálido con brillos especulares definidos.\n- Cejas: Gruesas, color castaño, de geometría curva y bordes suavizados.\n- Accesorios faciales: Ninguno (rostro limpio sin gafas, cicatrices, vello facial ni pendientes).\n\n3. Paleta de Expresiones:\n- Normal: Cejas relajadas horizontales, apertura ocular media, boca cerrada con leve sonrisa simétrica.\n- Feliz: Cejas elevadas en arco, apertura ocular máxima, boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n- Nervioso: Cejas arqueadas con extremos internos elevados, ojos muy abiertos, boca entreabierta asimétrica mostrando dientes apretados, gotas de sudor translúcidas en las sienes.\n- Enojado: Cejas bajas fruncidas hacia el centro, párpados superiores tensos cubriendo parte del iris, boca abierta rectangular en gesto de grito mostrando dientes y lengua.\n- Triste: Cejas inclinadas con el interior elevado, párpados superiores caídos a media altura, boca cerrada con comisuras arqueadas hacia abajo.\n\n4. Vestuario por Capas:\n- Prenda exterior: Saco formal corte slim en tela azul marino mate, solapa de muesca, cierre de un botón y dos bolsillos laterales con tapeta. Textura salpicada con manchas de pintura neón (verde, amarillo, fucsia, cian y naranja).\n- Prenda interior: Camisa de vestir color amarillo mostaza, corte ajustado, cuello desabotonado sin corbata, puños asomando 1 cm bajo las mangas del saco.\n- Prenda inferior: Pantalón de vestir azul marino a juego con el saco, corte recto entallado, pliegue frontal suave y salpicaduras de pintura multicolor.\n- Calzado y accesorios: Zapatos Oxford de cuero marrón oscuro con suela baja y cordones finos. Reloj metálico dorado en la muñeca izquierda.\n\n5. Reglas de Giro:\n- Frente: Apertura en \"V\" de la camisa amarilla, solapas del saco, pliegue de los bolsillos frontales y esfera del reloj visible en la muñeca izquierda.\n- Perfil: Silueta pronunciada del tupé frontal y puente nasal recto; curva entallada de la espalda del saco; hilera de botones pequeños en el puño de la manga.\n- Espaldas: Costura vertical central que divide el saco, caída limpia sin aberturas ni bolsillos traseros visibles, capas de cabello escalonadas en la nuca y manchas de pintura distribuidas en hombros y pantorrillas.",
+  "creado": "2026-11-06T03:34:21+01:00"
+}

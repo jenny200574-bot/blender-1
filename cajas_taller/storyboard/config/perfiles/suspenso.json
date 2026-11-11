@@ -1,0 +1,55 @@
+{
+ "id": "suspenso",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Suspenso",
+ "tonos": [
+  "tensión",
+  "incertidumbre"
+ ],
+ "reglas": {
+  "intencion": "tensión sostenida: ¿qué va a pasar?",
+  "beats": "mostrar la amenaza o el reloj al público antes que al personaje",
+  "secuencia": "información dosificada; planos de inserto que marcan el peligro",
+  "direccion": "acercamientos lentos, planos cerrados alternados con insertos, lentes 50-85 mm",
+  "actuacion": "contenida, micro gestos",
+  "composicion": "aislamiento del personaje, encuadres apretados",
+  "ritmo": "se alarga el momento; silencios",
+  "transiciones": "cortes retenidos, J-cut con sonido que anticipa",
+  "continuidad": "los insertos respetan la posición del objeto en el set",
+  "justificacion": "mantener al público un paso adelante del personaje"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   2.0,
+   10.0
+  ],
+  "lente_mm": [
+   35,
+   100
+  ],
+  "planos_preferidos": [
+   "MCU",
+   "CU",
+   "ECU",
+   "INSERT"
+  ],
+  "angulos_preferidos": [
+   "EYELEVEL",
+   "HIGHANGLE"
+  ],
+  "movimientos_preferidos": [
+   "DOLLYIN",
+   "STATIC",
+   "RACKFOCUS"
+  ],
+  "movimientos_evitar": [
+   "WHIPPAN"
+  ],
+  "transiciones_preferidas": [
+   "CORTE",
+   "J_CUT"
+  ],
+  "pausas": "muchas"
+ },
+ "ejemplo_puerta": "Inserto del picaporte girando, primer plano del personaje que contiene la respiración, la puerta se abre fuera de cuadro."
+}

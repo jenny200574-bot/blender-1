@@ -1,0 +1,6 @@
+{"grupo": "esc-jardin-manguera", "objetos": [
+ {"id": "amb-esc-jardin-manguera-enrollada", "objeto_id": "amb-esc-jardin-manguera-enrollada",
+  "nombre": "Manguera de riego enrollada junto al grifo",
+  "caja_m": {"ancho": 0.4, "fondo": 0.25, "alto": 0.4}, "apoyo": "piso",
+  "fuente_caja": "dato: plan esc-jardin v004, objeto amb-esc-jardin-manguera-enrollada 0,4 × 0,25 × 0,4 m; apoyo piso; material y color del plan"}
+]}

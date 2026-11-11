@@ -1,0 +1,1471 @@
+{
+ "id": "esc-cocina",
+ "nombre": "Cocina",
+ "int_ext": "INT",
+ "horas": [
+  "Día"
+ ],
+ "fuente": "4a1",
+ "elementos": [
+  "Techo de la cocina",
+  "Piso y espacio debajo de la mesa"
+ ],
+ "variantes": [
+  "Inicial desordenada (frutero vacío y números del 1 al 5 pegados al techo de cabeza)",
+  "Con manzanas robadas del frutero y rastro de migas hacia debajo de la mesa",
+  "Ambiente de luz cálida durante la reconciliación"
+ ],
+ "medidas": {
+  "ancho_m": 5.0,
+  "fondo_m": 4.5,
+  "alto_m": 2.8,
+  "origen": "deducido",
+  "justificacion": "Dimensiones deducidas de una cocina-comedor familiar amplia que permite ubicar el mesón fijo al fondo, la mesa con mantel en el centro y a los cinco personajes con tiro de cámara hacia el techo y debajo de la mesa.",
+  "cita": "falta"
+ },
+ "planta": {
+  "forma": "rectangular",
+  "descripcion": "Planta rectangular de 5,0 m de ancho por 4,5 m de fondo y 2,8 m de alto. En la pared del frente (y=0, x=1,1 m) está el acceso principal desde el pasillo de la casa. En la esquina izquierda y pared del fondo se ubica el mobiliario fijo de cocina en L (mesón, lavaplatos bajo ventana, estufa, nevera y alacenas altas). En el centro-derecha (x=2,8 m, y=2,4 m) se sitúa la mesa de cocina con mantel largo y el frutero encima, dejando pasillos amplios alrededor para los cinco héroes. En la pared derecha (x=5,0 m, y=1,5 m) hay una puerta con vidrio hacia el jardín.",
+  "entrada_principal": "Vano de puerta interior en la pared del frente (x=1,1 m, y=0,0 m) que conecta con el pasillo y la habitación.",
+  "origen": "deducido",
+  "justificacion": "Distribución deducida de config_canal (espacios domésticos cálidos de la casa) y de las acciones del guion en el techo, la mesa con mantel y el frutero.",
+  "cita": "falta"
+ },
+ "aberturas": [
+  {
+   "tipo": "puerta",
+   "pared": "frente",
+   "x_m": 1.1,
+   "y_m": 0.0,
+   "ancho_m": 0.9,
+   "alto_m": 2.1,
+   "descripcion": "Puerta interior de madera cálida con bordes biselados suaves, abierta hacia el pasillo de la casa.",
+   "origen": "deducido",
+   "justificacion": "Acceso principal necesario para la circulación de los personajes dentro de la casa.",
+   "cita": "falta"
+  },
+  {
+   "tipo": "puerta",
+   "pared": "derecha",
+   "x_m": 5.0,
+   "y_m": 1.5,
+   "ancho_m": 0.9,
+   "alto_m": 2.1,
+   "descripcion": "Puerta batiente con mitad superior acristalada que comunica la cocina directamente con el jardín exterior.",
+   "origen": "deducido",
+   "justificacion": "Conexión coherente con la escena 4 en el jardín, desde donde los héroes acuden a la cocina al sonar la alarma.",
+   "cita": "falta"
+  },
+  {
+   "tipo": "ventana",
+   "pared": "fondo",
+   "x_m": 2.0,
+   "y_m": 4.5,
+   "ancho_m": 1.4,
+   "alto_m": 1.1,
+   "descripcion": "Ventana horizontal de doble hoja con marco de madera redondeado sobre el lavaplatos, con vista al jardín iluminado.",
+   "origen": "deducido",
+   "justificacion": "Abertura estándar de cocina familiar que permite la entrada de luz diurna cálida en las escenas 5, 6 y 7.",
+   "cita": "falta"
+  }
+ ],
+ "elementos_blender": [
+  {
+   "nombre": "Techo de la cocina",
+   "forma": "plano",
+   "x_m": 2.5,
+   "y_m": 2.25,
+   "z_m": 2.8,
+   "ancho_m": 5.0,
+   "fondo_m": 4.5,
+   "alto_m": 0.05,
+   "rotacion_grados": 0,
+   "material": "Estuco mate color crema cálido con moldura perimetral redondeada",
+   "origen": "explicito",
+   "justificacion": "Superficie superior de la cocina donde aparecen pegados de cabeza los números del 1 al 5 al comienzo de la escena 5.",
+   "cita": "Los números del 1 al 5 están pegados al techo, desordenados y de cabeza."
+  },
+  {
+   "nombre": "Piso y espacio debajo de la mesa",
+   "forma": "plano",
+   "x_m": 2.8,
+   "y_m": 2.4,
+   "z_m": 0.0,
+   "ancho_m": 1.8,
+   "fondo_m": 1.4,
+   "alto_m": 0.02,
+   "rotacion_grados": 0,
+   "material": "Baldosa cerámica mate en tonos terracota suave y beige cálido con juntas biseladas",
+   "origen": "explicito",
+   "justificacion": "Superficie del suelo bajo la mesa de la cocina donde se ven las migas y se oculta Don Caos tras el mantel.",
+   "cita": "Se ven migas que llevan hacia debajo de la mesa."
+  },
+  {
+   "nombre": "Mesón fijo de cocina en L",
+   "forma": "compuesto",
+   "x_m": 1.75,
+   "y_m": 4.15,
+   "z_m": 0.0,
+   "ancho_m": 3.5,
+   "fondo_m": 0.7,
+   "alto_m": 0.9,
+   "rotacion_grados": 0,
+   "material": "Mueble de madera clara satinada con tiradores redondeados y encimera de cuarzo beige pulido",
+   "origen": "deducido",
+   "justificacion": "Estructura fija principal que define visualmente la arquitectura de la cocina detrás del área de acción.",
+   "cita": "falta"
+  },
+  {
+   "nombre": "Lámpara colgante central de cocina",
+   "forma": "compuesto",
+   "x_m": 2.8,
+   "y_m": 2.4,
+   "z_m": 2.15,
+   "ancho_m": 0.45,
+   "fondo_m": 0.45,
+   "alto_m": 0.65,
+   "rotacion_grados": 0,
+   "material": "Pantalla semiesférica de metal satinado color amarillo miel con difusor opalino cálido",
+   "origen": "deducido",
+   "justificacion": "Fuente luminosa fija sobre la mesa que justifica el cambio a luz cálida envolvente en la escena 7.",
+   "cita": "Luz cálida."
+  }
+ ],
+ "objetos_del_lugar_posicion": [
+  {
+   "objeto_id": "obj-mesa-cocina",
+   "escenas": [
+    "5",
+    "6",
+    "7"
+   ],
+   "x_m": 2.8,
+   "y_m": 2.4,
+   "z_m": 0.0,
+   "rotacion_grados": 0,
+   "junto_a": "En el centro-derecha de la cocina, sobre Piso y espacio debajo de la mesa",
+   "origen": "explicito",
+   "justificacion": "Mesa principal con mantel donde se apoya el frutero y debajo de la cual se esconde Don Caos en las escenas 5, 6 y 7.",
+   "cita": "Se ven migas que llevan hacia debajo de la mesa."
+  },
+  {
+   "objeto_id": "obj-frutero",
+   "escenas": [
+    "5",
+    "6",
+    "7"
+   ],
+   "x_m": 2.8,
+   "y_m": 2.4,
+   "z_m": 0.76,
+   "rotacion_grados": 0,
+   "junto_a": "Sobre el centro de obj-mesa-cocina",
+   "origen": "explicito",
+   "justificacion": "Recipiente ubicado sobre la mesa donde caen las cinco manzanas y desde donde caen las migas hacia debajo de la mesa.",
+   "cita": "Un frutero vacío."
+  },
+  {
+   "objeto_id": "obj-numeros-1-al-5",
+   "escenas": [
+    "5"
+   ],
+   "x_m": 2.8,
+   "y_m": 2.4,
+   "z_m": 2.72,
+   "rotacion_grados": 180,
+   "junto_a": "Pegados de cabeza en Techo de la cocina, justo encima de obj-mesa-cocina (inicio de la escena 5) y luego bajan en orden junto a obj-frutero (z_m=0.76 m, rotacion_grados=0) durante la escena 5",
+   "origen": "explicito",
+   "justificacion": "Al iniciar la escena 5 están pegados al techo de cabeza y luego bajan uno por uno para ordenarse sobre la mesa junto al frutero.",
+   "cita": "Los números del 1 al 5 están pegados al techo, desordenados y de cabeza."
+  },
+  {
+   "objeto_id": "obj-manzanas",
+   "escenas": [
+    "5"
+   ],
+   "x_m": 2.8,
+   "y_m": 2.4,
+   "z_m": 0.8,
+   "rotacion_grados": 0,
+   "junto_a": "Dentro de obj-frutero sobre obj-mesa-cocina",
+   "origen": "explicito",
+   "justificacion": "En la escena 5 las cinco manzanas caen una por una dentro del frutero al contarlas con Spark.",
+   "cita": "Las manzanas caen una a una en el frutero con un \"¡plop!\"."
+  },
+  {
+   "objeto_id": "obj-manzanas",
+   "escenas": [
+    "6"
+   ],
+   "x_m": 2.8,
+   "y_m": 2.4,
+   "z_m": 0.1,
+   "rotacion_grados": 0,
+   "junto_a": "Lo lleva ch-don-caos-7adf (dos corazones de manzana en su mano debajo de obj-mesa-cocina, mientras tres manzanas enteras quedan en obj-frutero a z_m=0.8 m)",
+   "origen": "explicito",
+   "justificacion": "En la escena 6 Don Caos está debajo de la mesa sosteniendo dos corazones de manzana comidos y quedan tres manzanas arriba.",
+   "cita": "Debajo de la mesa está Don Caos con la boca llena y dos corazones de manzana en la mano."
+  },
+  {
+   "objeto_id": "obj-visor-spark",
+   "escenas": [
+    "5",
+    "6",
+    "7"
+   ],
+   "x_m": 1.8,
+   "y_m": 2.3,
+   "z_m": 0.95,
+   "rotacion_grados": 90,
+   "junto_a": "Lo lleva puesto ch-spark-468e sobre los ojos, situado a la izquierda de obj-mesa-cocina",
+   "origen": "explicito",
+   "justificacion": "Spark lleva puesto su visor azul, lo ajusta al entrar a la cocina y proyecta con él los hologramas de conteo, suma y resta.",
+   "cita": "ajustándose el visor"
+  },
+  {
+   "objeto_id": "obj-rayo-confundidor",
+   "escenas": [
+    "5"
+   ],
+   "x_m": 3.65,
+   "y_m": 2.3,
+   "z_m": 0.15,
+   "rotacion_grados": 270,
+   "junto_a": "Lo lleva ch-don-caos-7adf en la mano a la derecha de obj-mesa-cocina",
+   "origen": "explicito",
+   "justificacion": "En la escena 5 Don Caos lo sostiene y dispara contra el holograma de suma de Spark para convertir el 3 en una E.",
+   "cita": "El rayo golpea el holograma."
+  },
+  {
+   "objeto_id": "obj-escudo-valentina",
+   "escenas": [
+    "6"
+   ],
+   "x_m": 2.2,
+   "y_m": 1.6,
+   "z_m": 0.65,
+   "rotacion_grados": 45,
+   "junto_a": "Lo lleva ch-valentina-a9be en el brazo, de pie frente a obj-mesa-cocina",
+   "origen": "explicito",
+   "justificacion": "En la escena 6 Valentina lo lleva en el brazo cuando empieza a brillar en azul suave con un latido al detectar la tristeza de Don Caos.",
+   "cita": "el escudo de Valentina empieza a brillar azul suave, con un latido: \"pum… pum…\"."
+  },
+  {
+   "objeto_id": "obj-escudo-valentina",
+   "escenas": [
+    "7"
+   ],
+   "x_m": 2.5,
+   "y_m": 2.0,
+   "z_m": 0.35,
+   "rotacion_grados": 45,
+   "junto_a": "Lo lleva ch-valentina-a9be en el brazo al agacharse a la altura de ch-don-caos-7adf junto a obj-mesa-cocina",
+   "origen": "explicito",
+   "justificacion": "En la escena 7 Valentina se agacha junto a Don Caos y su escudo proyecta el globo rojo flotante para guiar la respiración.",
+   "cita": "El escudo de Valentina proyecta un globo rojo flotando."
+  }
+ ],
+ "materiales_texturas": [
+  {
+   "superficie": "Piso de la cocina",
+   "material": "Cerámica esmaltada mate estilizada 3D",
+   "textura": "Baldosas cuadradas grandes con bordes biselados suaves y oclusión ambiental cálida en las juntas",
+   "color": "Terracota suave #D98A6C alternado con beige crema #F2E3D5",
+   "desgaste": "Limpio y cuidado, con rastro temporal de migas en las escenas 5 y 6",
+   "origen": "deducido",
+   "justificacion": "Acabado cálido y doméstico acorde con config_canal (style_fijo 3D CGI sin texturas fotorrealistas ruidosas).",
+   "cita": "falta"
+  },
+  {
+   "superficie": "Paredes de la cocina",
+   "material": "Estuco liso con salpicadero de azulejo biselado en zona de mesón",
+   "textura": "Superficie mate suave sin grano realista; azulejos redondeados con brillo satinado suave",
+   "color": "Beige cálido #F5E6D3 en muros y verde salvia claro #A8D5BA con crema en el salpicadero",
+   "desgaste": "Sin desgaste, aspecto acogedor y familiar",
+   "origen": "deducido",
+   "justificacion": "Paleta doméstica cálida de config_canal que contrasta limpiamente con los pijamas azul, magenta, verde, amarillo y morado.",
+   "cita": "falta"
+  },
+  {
+   "superficie": "Techo de la cocina",
+   "material": "Estuco liso mate",
+   "textura": "Superficie continua y limpia con moldura curva perimetral",
+   "color": "Blanco hueso cálido #FAF3E8",
+   "desgaste": "Impecable, despejado para que destaquen los números 1 al 5 pegados en la escena 5",
+   "origen": "deducido",
+   "justificacion": "Exigido por el tiro de cámara hacia el techo en la escena 5 para leer con claridad los números del 1 al 5.",
+   "cita": "Los números del 1 al 5 están pegados al techo, desordenados y de cabeza."
+  },
+  {
+   "superficie": "Muebles fijos y mesa con mantel",
+   "material": "Madera clara satinada y tela de algodón mate con caída suave",
+   "textura": "Geometría sin líneas con bordes redondeados y tela suave con pliegues amplios estilizados",
+   "color": "Madera miel #C88A4B y mantel blanco crema con cuadros suaves #F7EFE5 y #E8A598",
+   "desgaste": "Ligeramente vivido y hogareño, sin manchas permanentes",
+   "origen": "deducido",
+   "justificacion": "El mantel debe tener caída hasta cerca del suelo para ocultar a Don Caos debajo de la mesa y permitir que Eco lo levante en la escena 6.",
+   "cita": "Eco levanta el mantel."
+  }
+ ],
+ "luz_por_escena": [
+  {
+   "escena": "5",
+   "hora": "Día",
+   "clima": "Soleado exterior (después de recuperar el color del jardín en la escena 4); interior luminoso",
+   "fuentes": [
+    {
+     "tipo": "Luz natural de sol y cielo por ventana del fondo y puerta del jardín",
+     "posicion": "Ventana fondo (x=2,0 m, y=4,5 m, z=1,6 m) y puerta derecha (x=5,0 m, y=1,5 m, z=1,2 m) entrando en diagonal",
+     "color": "Blanco cálido diurno #FFF4D6",
+     "intensidad": "alta",
+     "encendida": true
+    },
+    {
+     "tipo": "Lámpara colgante central de techo",
+     "posicion": "Sobre la mesa de cocina (x=2,8 m, y=2,4 m, z=2,15 m) iluminando mesa y techo",
+     "color": "Ámbar suave #FFE0A3",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Luz emisiva del visor y hologramas de Spark",
+     "posicion": "Frente a Spark junto a la mesa (x=2,1 m, y=2,3 m, z=1,1 m) proyectando números, estrellas y signo más",
+     "color": "Celeste holograma #8FD3FF",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Destello del Rayo Confundidor de Don Caos",
+     "posicion": "Desde la derecha de la mesa (x=3,65 m, y=2,3 m, z=0,2 m) hacia el holograma central",
+     "color": "Morado Caos #6B2FA0",
+     "intensidad": "alta",
+     "encendida": true
+    }
+   ],
+   "ambiente": "Luminoso, alegre, dinámico y curioso, con brillo neón celeste de los hologramas sobre fondo beige cálido.",
+   "sombras": "Suaves y difusas con bordes redondeados (soft ambient occlusion) debajo de los muebles y bajo el mantel de la mesa.",
+   "origen": "deducido",
+   "justificacion": "Combina la continuidad diurna tras la escena 4 con las fuentes emisivas explícitas del visor de Spark y el rayo de Don Caos en config_canal.",
+   "cita": "Spark proyecta hologramas."
+  },
+  {
+   "escena": "6",
+   "hora": "Día",
+   "clima": "Soleado exterior; interior luminoso con transición emotiva al final",
+   "fuentes": [
+    {
+     "tipo": "Luz natural por ventana del fondo y puerta derecha",
+     "posicion": "Ventana (x=2,0 m, y=4,5 m, z=1,6 m) y puerta derecha (x=5,0 m, y=1,5 m, z=1,2 m) iluminando la mesa y el espacio inferior al levantar el mantel",
+     "color": "Blanco cálido #FFF4D6",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Lámpara colgante central de techo",
+     "posicion": "Sobre la mesa (x=2,8 m, y=2,4 m, z=2,15 m) iluminando desde arriba",
+     "color": "Ámbar suave #FFE0A3",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Luz emisiva del holograma de resta de Spark",
+     "posicion": "Sobre la mesa (x=2,3 m, y=2,2 m, z=1,1 m) mostrando las 5 manzanas en fila",
+     "color": "Celeste holograma #8FD3FF",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Resplandor pulsante del Escudo de la Empatía de Valentina",
+     "posicion": "En el brazo de Valentina frente a la mesa (x=2,2 m, y=1,6 m, z=0,65 m) latiendo al ritmo de pum-pum",
+     "color": "Azul celeste suave #8FD3FF",
+     "intensidad": "baja",
+     "encendida": true
+    }
+   ],
+   "ambiente": "Comedia ligera al descubrir a Don Caos bajo el mantel, que pasa a una atmósfera silenciosa y empática teñida por el pulso azul suave del escudo.",
+   "sombras": "Sombra marcada pero suave bajo la mesa antes de levantar el mantel; al levantarlo, entra luz de relleno suave sobre Don Caos.",
+   "origen": "explicito",
+   "justificacion": "El guion indica explícitamente que el escudo de Valentina empieza a brillar en azul suave con un latido al final de la escena.",
+   "cita": "el escudo de Valentina empieza a brillar azul suave, con un latido: \"pum… pum…\"."
+  },
+  {
+   "escena": "7",
+   "hora": "Día",
+   "clima": "Soleado cálido",
+   "fuentes": [
+    {
+     "tipo": "Luz cálida envolvente de lámpara central y sol filtrado",
+     "posicion": "Sobre y alrededor de la mesa (x=2,8 m, y=2,4 m, z=2,15 m) y entrando suave desde la ventana (x=2,0 m, y=4,5 m, z=1,6 m)",
+     "color": "Ámbar dorado cálido #F5C542 y naranja suave #F2792A",
+     "intensidad": "alta",
+     "encendida": true
+    },
+    {
+     "tipo": "Proyección emisiva del globo rojo del escudo de Valentina",
+     "posicion": "Flotando entre Valentina y Don Caos (x=2,65 m, y=2,1 m, z=0,55 m) inflándose y desinflándose",
+     "color": "Rojo cálido brillante #FF4D5E con halo rosado #D6338A",
+     "intensidad": "media",
+     "encendida": true
+    }
+   ],
+   "ambiente": "Íntimo, acogedor, seguro y reconfortante; baño de luz dorada cálida con desenfoque suave de fondo (shallow depth of field con bokeh sutil).",
+   "sombras": "Muy suaves, cálidas y envolventes, sin contrastes duros para transmitir calma y seguridad emocional.",
+   "origen": "explicito",
+   "justificacion": "El guion pide explícitamente luz cálida cuando Valentina se agacha a la altura de Don Caos y proyecta el globo rojo.",
+   "cita": "Luz cálida."
+  }
+ ],
+ "camaras_sugeridas": [
+  {
+   "escena": "5",
+   "posicion": "Frente a la mesa (x=2,6 m, y=0,8 m, z=1,0 m), en contrapicado suave al inicio y luego a nivel de ojos de Spark",
+   "mira_hacia": "Hacia la mesa con el frutero (x=2,8 m, y=2,4 m, z=0,8 m) y el techo sobre ella (z=2,8 m) donde están los números 1 al 5",
+   "lente_mm": 28
+  },
+  {
+   "escena": "5",
+   "posicion": "Plano medio corto lateral-frontal (x=3,2 m, y=1,4 m, z=0,6 m) bajando hacia el borde de la mesa",
+   "mira_hacia": "Hacia el frutero con manzanas faltantes y el rastro de migas en el piso que entra debajo del mantel (x=2,8 m, y=2,4 m, z=0,1 m)",
+   "lente_mm": 35
+  },
+  {
+   "escena": "6",
+   "posicion": "Frente a la mesa a baja altura (x=2,5 m, y=1,1 m, z=0,45 m) a la altura de Don Caos y las rodillas de los niños",
+   "mira_hacia": "Hacia debajo de la mesa (x=2,8 m, y=2,4 m, z=0,15 m) cuando Eco levanta el mantel y descubre a Don Caos con los dos corazones de manzana",
+   "lente_mm": 35
+  },
+  {
+   "escena": "6",
+   "posicion": "Plano medio cerrado (x=2,4 m, y=0,9 m, z=0,75 m) enfocando a Valentina y a Don Caos",
+   "mira_hacia": "Hacia el brazo de Valentina con el Escudo de la Empatía brillando azul suave (x=2,2 m, y=1,6 m, z=0,65 m) y Don Caos cabizbajo al fondo",
+   "lente_mm": 50
+  },
+  {
+   "escena": "7",
+   "posicion": "A ras de suelo junto a la mesa (x=2,1 m, y=1,4 m, z=0,35 m) con poca profundidad de campo y bokeh cálido",
+   "mira_hacia": "Hacia Valentina agachada frente a Don Caos y el globo rojo flotando entre ambos (x=2,65 m, y=2,1 m, z=0,4 m)",
+   "lente_mm": 50
+  },
+  {
+   "escena": "7",
+   "posicion": "Plano conjunto frontal cálido (x=2,5 m, y=0,9 m, z=0,8 m) abarcando al grupo reunido junto a la mesa",
+   "mira_hacia": "Hacia Don Caos sonriendo rodeado por Valentina, Pintor, Spark y Eco frente a la mesa (x=2,7 m, y=2,2 m, z=0,6 m)",
+   "lente_mm": 32
+  }
+ ],
+ "objetos_tamano": {
+  "obj-mesa-cocina": {
+   "nombre": "obj-mesa-cocina",
+   "forma": "compuesto",
+   "tamano": {
+    "ancho_cm": 130.0,
+    "fondo_cm": 90.0,
+    "alto_cm": 76.0,
+    "relativo_a": "Su altura (76 cm) coincide con la cota z_m=0.76 m de obj-frutero en 4A1, llega al pecho de ch-eco-eff3 (~105 cm) y deja bajo el mantel un espacio amplio para ocultar a ch-don-caos-7adf (18 cm de estatura).",
+    "origen": "deducido",
+    "justificacion": "El alto de 76 cm se deduce directamente de la cota z_m=0.76 m de obj-frutero en 4A1; el ancho (130 cm) y fondo (90 cm) encajan dentro de la zona 'Piso y espacio debajo de la mesa' (180x140 cm) y delante de las tres sillas traseras de 4A1.",
+    "cita": "Debajo de la mesa está Don Caos con la boca llena y dos corazones de manzana en la mano."
+   },
+   "fuente_tamano": "inv_obj_lugar"
+  },
+  "obj-frutero": {
+   "nombre": "obj-frutero",
+   "forma": "compuesto",
+   "tamano": {
+    "ancho_cm": 32.0,
+    "fondo_cm": 32.0,
+    "alto_cm": 14.0,
+    "relativo_a": "Ocupa cerca de una cuarta parte del ancho de obj-mesa-cocina (130 cm) y tiene diámetro suficiente para alojar de forma clara y visible las 5 unidades de obj-manzanas (~8 cm cada una).",
+    "origen": "deducido",
+    "justificacion": "Dimensiones deducidas para que las 5 manzanas caigan y se vean con claridad en los planos de conteo de la escena 5 guardando proporción con obj-mesa-cocina (130x90 cm) en 4A1.",
+    "cita": "Las manzanas caen una a una en el frutero con un \"¡plop!\"."
+   },
+   "fuente_tamano": "inv_obj_lugar"
+  },
+  "obj-numeros-1-al-5": {
+   "nombre": "obj-numeros-1-al-5",
+   "forma": "compuesto",
+   "tamano": {
+    "ancho_cm": 14,
+    "fondo_cm": 6,
+    "alto_cm": 20,
+    "relativo_al_personaje": "Cada bloque numérico mide unos 20 cm de alto (similar al tamaño de la cabeza de Spark o a la estatura total de Don Caos de 18 cm); los cinco alineados ocupan unos 85 cm de ancho junto al frutero",
+    "personaje_id": "ch-spark-468e",
+    "origen": "deducido",
+    "justificacion": "El guion indica que se ven pegados al techo y luego aparece el número grande al lado del frutero; tamaño deducido para máxima legibilidad preescolar (config_canal).",
+    "cita": "Cada número baja del techo y se coloca en orden."
+   },
+   "fuente_tamano": "inv_obj_historia"
+  },
+  "obj-manzanas": {
+   "nombre": "obj-manzanas",
+   "forma": "compuesto",
+   "tamano": {
+    "ancho_cm": 8,
+    "fondo_cm": 8,
+    "alto_cm": 9,
+    "relativo_al_personaje": "Cada manzana mide la mitad de la estatura total de Don Caos (18 cm), por lo que los dos corazones de manzana se ven grandes cuando él los sostiene debajo de la mesa, mientras que caben en la mano de un niño de 5 a 6 años",
+    "personaje_id": "ch-don-caos-7adf",
+    "origen": "deducido",
+    "justificacion": "Tamaño de manzana doméstica estilizada comparado con la estatura oficial de Don Caos (0,18 m en config_canal y resolución d-5e6023209a de BASE).",
+    "cita": "Debajo de la mesa está Don Caos con la boca llena y dos corazones de manzana en la mano."
+   },
+   "fuente_tamano": "inv_obj_historia"
+  },
+  "obj-visor-spark": {
+   "nombre": "obj-visor-spark",
+   "forma": "compuesto",
+   "tamano": {
+    "ancho_cm": 16,
+    "fondo_cm": 12,
+    "alto_cm": 6,
+    "relativo_al_personaje": "Abarca de sien a sien el ancho de los ojos de Spark sobre el puente de su nariz, cubriendo el tercio medio de su cabeza estilizada de niño de 6 años",
+    "personaje_id": "ch-spark-468e",
+    "origen": "deducido",
+    "justificacion": "Deducido de config_canal: Spark es un niño de 6 años con cabeza grande redondeada estilo 3D CGI y lleva el visor colocado sobre los ojos.",
+    "cita": "falta"
+   },
+   "fuente_tamano": "inv_obj_historia"
+  },
+  "obj-rayo-confundidor": {
+   "nombre": "obj-rayo-confundidor",
+   "forma": "compuesto",
+   "tamano": {
+    "ancho_cm": 6,
+    "fondo_cm": 3,
+    "alto_cm": 4.5,
+    "relativo_al_personaje": "Proporcionado a la mano de Don Caos (quien mide 18 cm de estatura total): mide aproximadamente un tercio de la altura de Don Caos y cabe dentro del bolsillo de su traje morado",
+    "personaje_id": "ch-don-caos-7adf",
+    "origen": "deducido",
+    "justificacion": "Deducido de config_canal (Don Caos mide 0,18 m por regla vigente del canal) y de la escena 8 del guion donde Don Caos guarda el Rayo Confundidor en su bolsillo.",
+    "cita": "[Lo guarda en el bolsillo.]"
+   },
+   "fuente_tamano": "inv_obj_historia"
+  },
+  "obj-escudo-valentina": {
+   "nombre": "obj-escudo-valentina",
+   "forma": "compuesto",
+   "tamano": {
+    "ancho_cm": 22,
+    "fondo_cm": 4,
+    "alto_cm": 24,
+    "relativo_al_personaje": "Cubre el antebrazo de Valentina desde la muñeca hasta cerca del codo sin estorbar el movimiento de su mano",
+    "personaje_id": "ch-valentina-a9be",
+    "origen": "deducido",
+    "justificacion": "Deducido de config_canal (Valentina es una niña de 6 años con proporciones infantiles estilizadas que lleva el escudo en el brazo) y de su protagonismo en primer plano en la escena 6.",
+    "cita": "falta"
+   },
+   "fuente_tamano": "inv_obj_historia"
+  }
+ },
+ "ambiente_vivo": {
+  "perfil_real": {
+   "que_es": "Interior doméstico de cocina-comedor familiar contemporánea estilizada en 3D CGI, amplia, cálida y acogedora, conectada con el pasillo interior y con el jardín de la casa.",
+   "referencias_reales": [
+    {
+     "referencia": "Cocinas familiares de hogares contemporáneos colombianos y latinoamericanos de clase media",
+     "que_tomar": "Distribución funcional en L con mesón de madera y cuarzo, lavaplatos bajo ventana con plantas aromáticas, mesa de comedor con mantel de cuadros, cerámica terracota y detalles hogareños cálidos."
+    },
+    {
+     "referencia": "Diseño de interiores domésticos en animación 3D tipo Pixar (Toy Story 4, Red, Coco - prólogo contemporáneo framing CGI estilizado, según style_fijo del canal sin copiar personajes)','",
+     "que_tomar": "Geometría limpia sin líneas negras, bordes biselados redondeados, materiales PBR mates y satinados, iluminación volumétrica cálida con oclusión ambiental suave y fondo desenfocado con bokeh sutil."
+    }
+   ],
+   "condiciones_fisicas": {
+    "gravedad": "Gravedad terrestre normal (9,8 m/s²), evidente en la caída natural del mantel de tela, de las manzanas al frutero y de las migas al piso, con excepción mágica temporal de los números pegados al techo al inicio de la escena 5.",
+    "aire": "Aire interior limpio, templado y diáfano, con haces suaves de luz solar volumétrica entrando por la ventana y la puerta del jardín.",
+    "agua": "Agua potable doméstica contenida en la jarra sobre el aparador y en la grifería cerrada del lavaplatos; sin charcos ni fugas en el piso.",
+    "presion": "Presión atmosférica terrestre estándar de interior doméstico.",
+    "temperatura": "Cálida y confortable de hogar diurno (aprox. 22 °C), transmitida visualmente mediante la paleta beige, miel, terracota y la iluminación dorada envolvente."
+   },
+   "terreno_y_suelo": "Piso interior plano y nivelado de baldosa cerámica mate en tonos terracota suave y beige crema con juntas biseladas redondeadas, complementado con tapetes tejidos de algodón frente al lavaplatos y la puerta del jardín.",
+   "luz_natural_y_cielo": "Luz solar diurna cálida y cielo azul despejado visibles a través de la ventana del fondo y la puerta acristalada derecha, ya con todos sus colores restaurados tras la misión del jardín en la escena 4.",
+   "clima_y_fenomenos": "Interior resguardado, seco y sereno durante un día soleado; dentro ocurren fenómenos luminosos mágicos benignos (hologramas celestes del visor de Spark, rayo morado cómico de Don Caos y resplandor azul y globo rojo del escudo de Valentina).",
+   "vida": {
+    "flora": "Hierbas aromáticas culinarias (albahaca, menta y romero) en macetitas de barro en el alféizar de la ventana y planta colgante de hojas verdes redondeadas sobre la alacena alta.",
+    "fauna": "Sin fauna doméstica ni silvestre del lugar (Eco aclara explícitamente que no tienen gato); solo entra Piquito en el hombro izquierdo de Eco.",
+    "gente": "Espacio habitado por una familia con niños pequeños; durante las escenas 5, 6 y 7 solo están presentes los cinco Guardianes de la Ceiba y Don Caos."
+   },
+   "elementos_construidos_tipicos": [
+    "Mesón de cocina en L con armarios bajos de madera clara y encimera de cuarzo beige",
+    "Lavaplatos integrado con grifo curvo bajo la ventana",
+    "Estufa con horno y campana extractora redondeada",
+    "Nevera familiar de bordes suaves con imanes decorativos de figuras",
+    "Alacenas altas con puertas de madera y vidrio esmerilado",
+    "Mesa de comedor central vestida con mantel largo de tela",
+    "Sillas de comedor de madera clara",
+    "Aparador auxiliar con vajilla cotidiana"
+   ],
+   "paleta_de_colores": [
+    "Beige cálido #F5E6D3",
+    "Terracota suave #D98A6C",
+    "Madera miel #C88A4B",
+    "Verde salvia claro #A8D5BA",
+    "Blanco hueso #FAF3E8",
+    "Amarillo miel #F5C542",
+    "Celeste holograma #8FD3FF",
+    "Morado Caos #6B2FA0"
+   ],
+   "escala_y_horizonte": "Escala interior doméstica acogedora (5,0 m × 4,5 m × 2,8 m) adaptada visualmente a la estatura de niños de 5 a 6 años (~1,10 m) y al diminuto Don Caos (0,18 m), con horizonte interior cerrado y vistas despejadas hacia el jardín soleado.",
+   "lo_que_no_hay": [
+    "Cuchillos afilados, tijeras ni utensilios punzantes o peligrosos a la vista",
+    "Fuego abierto en los fogones, vapor hirviendo ni humo",
+    "Textos, letras, números o logotipos impresos en envases, electrodomésticos, calendarios o carteles (prohibido por style_fijo.negativo, salvo los números 3D oficiales de la historia)",
+    ",Gatos u otras mascotas (Eco dice explícitamente: No tenemos gato, Don Caos)",
+    ",Suciedad pesada, grasa, óxido, moho o iluminación oscura de terror",
+    "Texturas fotorrealistas ruidosas o trazos planos 2D con líneas negras"
+   ]
+  },
+  "superficies": [
+   {
+    "superficie": "Piso de cerámica esmaltada mate",
+    "acabado": "Baldosas cuadradas grandes con bordes biselados suaves en damero alternado terracota suave #D98A6C y beige crema #F2E3D5.",
+    "desgaste": "Cuidado y limpio de uso familiar diario, sin grietas ni manchas permanentes.",
+    "detalles": "Oclusión ambiental suave en las juntas y reflejo difuso cálido de la luz solar y de los hologramas; recibe el rastro de migas junto a la mesa.",
+    "origen": "ambiente",
+    "justificacion": "Acabado doméstico cálido coherente con el estilo 3D CGI del canal y la acción bajo la mesa."
+   },
+   {
+    "superficie": "Muros enlucidos y salpicadero de cocina",
+    "acabado": "Estuco mate color beige cálido #F5E6D3 en las cuatro paredes, con franja de azulejos biselados verde salvia #A8D5BA y crema sobre el mesón.",
+    "desgaste": "Impecable, recién mantenido, sin desconchados ni humedad.",
+    "detalles": "Esquinas redondeadas suavemente y zócalo inferior de madera miel de 10 cm de alto en todo el perímetro.",
+    "origen": "ambiente",
+    "justificacion": "Proporciona un fondo limpio y cálido que hace resaltar las siluetas y colores primarios de los personajes."
+   },
+   {
+    "superficie": "Techo de estuco liso con moldura curva",
+    "acabado": "Pintura mate blanco hueso cálido #FAF3E8 completamente uniforme.",
+    "desgaste": "Sin manchas ni fisuras.",
+    "detalles": "Superficie despejada alrededor de la lámpara colgante central para que los números del 1 al 5 se lean con claridad al inicio de la escena 5.",
+    "origen": "ambiente",
+    "justificacion": "El guion exige un plano claro de los números pegados de cabeza en el techo al abrir la escena 5."
+   },
+   {
+    "superficie": "Carpintería de madera y encimeras del mesón",
+    "acabado": "Madera clara color miel #C88A4B con barniz satinado suave y encimera de cuarzo beige pulido con cantos redondeados.",
+    "desgaste": "Leve pátina cálida de uso cotidiano doméstico sin rayones bruscos.",
+    "detalles": "Tiradores de madera redondeados seguros para niños preescolares.",
+    "origen": "ambiente",
+    "justificacion": "Mobiliario fijo característico de una cocina familiar acogedora y segura para público de 3 a 6 años."
+   }
+  ],
+  "utileria_ambiente": [
+   {
+    "ambiente_id": "amb-esc-cocina-modulo-izquierdo-meson",
+    "nombre": "Tramo izquierdo del mesón en L con cajoneras",
+    "categoria": "mueble",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "izquierda",
+    "x_m": 0.35,
+    "y_m": 2.7,
+    "z_m": 0.0,
+    "ancho_m": 0.7,
+    "fondo_m": 2.2,
+    "alto_m": 0.9,
+    "rotacion_grados": 90,
+    "material": "Madera clara satinada con encimera de cuarzo beige de bordes redondeados",
+    "color": "Madera miel #C88A4B y beige #F2E3D5",
+    "estado_por_escena": [],
+    "no_estorba": "Adosado a la pared izquierda (x=0,0 a 0,7 m), lejos de la mesa central y del vano de entrada.",
+    "origen": "ambiente",
+    "justificacion": "Completa el brazo izquierdo del mesón fijo en L descrito en la planta de la cocina."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-nevera-familiar",
+    "nombre": "Nevera familiar redondeada de dos puertas",
+    "categoria": "mueble",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "fondo",
+    "x_m": 3.95,
+    "y_m": 4.1,
+    "z_m": 0.0,
+    "ancho_m": 0.8,
+    "fondo_m": 0.75,
+    "alto_m": 1.75,
+    "rotacion_grados": 0,
+    "material": "Metal anodizado satinado con manijas curvas cromadas",
+    "color": "Crema suave #FAF3E8",
+    "estado_por_escena": [],
+    "no_estorba": "Ubicada al fondo a la derecha del mesón (x=3,55 a 4,35 m), fuera de los recorridos y tiros de cámara.",
+    "origen": "ambiente",
+    "justificacion": "Elemento firma indispensable de toda cocina doméstica mencionado en la planta."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-lavaplatos-grifo",
+    "nombre": "Lavaplatos integrado con grifo curvo",
+    "categoria": "infraestructura",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 2.0,
+    "y_m": 4.15,
+    "z_m": 0.88,
+    "ancho_m": 0.8,
+    "fondo_m": 0.5,
+    "alto_m": 0.35,
+    "rotacion_grados": 0,
+    "material": "Acero inoxidable satinado suave sin reflejos duros",
+    "color": "Gris plata cálido #C9D1D5",
+    "estado_por_escena": [],
+    "no_estorba": "Integrado en el mesón del fondo bajo la ventana, con el grifo cerrado.",
+    "origen": "ambiente",
+    "justificacion": "Elemento firma de cocina ubicado bajo la ventana del fondo según la planta."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-estufa-horno",
+    "nombre": "Estufa de cuatro fogones apagados y horno integrado",
+    "categoria": "infraestructura",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "fondo",
+    "x_m": 0.95,
+    "y_m": 4.12,
+    "z_m": 0.0,
+    "ancho_m": 0.75,
+    "fondo_m": 0.72,
+    "alto_m": 0.92,
+    "rotacion_grados": 0,
+    "material": "Metal esmaltado satinado y vidrio templado translúcido con perillas redondas sin números",
+    "color": "Beige crema #EFE3D2 y gris suave #9AA3A8",
+    "estado_por_escena": [],
+    "no_estorba": "Integrada en el tramo del fondo del mesón en L.",
+    "origen": "ambiente",
+    "justificacion": "Elemento firma de cocina mencionado en la distribución de la planta."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-campana-extractora",
+    "nombre": "Campana extractora redondeada",
+    "categoria": "infraestructura",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "fondo",
+    "x_m": 0.95,
+    "y_m": 4.2,
+    "z_m": 1.55,
+    "ancho_m": 0.75,
+    "fondo_m": 0.5,
+    "alto_m": 0.65,
+    "rotacion_grados": 0,
+    "material": "Metal anodizado satinado con bordes biselados suaves",
+    "color": "Crema cálido #F5E6D3",
+    "estado_por_escena": [],
+    "no_estorba": "Fijada en alto sobre la estufa en la pared del fondo.",
+    "origen": "ambiente",
+    "justificacion": "Infraestructura superior propia de la zona de cocción en una cocina familiar."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-alacena-alta-fondo",
+    "nombre": "Alacena alta de dos puertas con vidrio esmerilado",
+    "categoria": "mueble",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "fondo",
+    "x_m": 3.1,
+    "y_m": 4.3,
+    "z_m": 1.5,
+    "ancho_m": 0.75,
+    "fondo_m": 0.38,
+    "alto_m": 0.85,
+    "rotacion_grados": 0,
+    "material": "Madera clara satinada y vidrio translúcido mate",
+    "color": "Madera miel #C88A4B y blanco cálido #FAF3E8",
+    "estado_por_escena": [],
+    "no_estorba": "Colgada en la pared del fondo a 1,5 m de altura.",
+    "origen": "ambiente",
+    "justificacion": "Elemento firma de almacenamiento alto de cocina indicado en la planta."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-alacena-alta-izquierda",
+    "nombre": "Alacena alta horizontal en pared izquierda",
+    "categoria": "mueble",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "izquierda",
+    "x_m": 0.2,
+    "y_m": 2.3,
+    "z_m": 1.5,
+    "ancho_m": 0.38,
+    "fondo_m": 1.4,
+    "alto_m": 0.85,
+    "rotacion_grados": 90,
+    "material": "Madera clara satinada con tiradores redondeados",
+    "color": "Madera miel #C88A4B",
+    "estado_por_escena": [],
+    "no_estorba": "Colgada sobre el mesón izquierdo a 1,5 m de altura.",
+    "origen": "ambiente",
+    "justificacion": "Completa el conjunto de alacenas altas del mobiliario en L."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-salpicadero-azulejos",
+    "nombre": "Salpicadero de azulejos biselados sobre el mesón",
+    "categoria": "infraestructura",
+    "forma": "plano",
+    "tiene_volumen": false,
+    "apoyo": "pared",
+    "pared": "fondo",
+    "x_m": 1.75,
+    "y_m": 4.48,
+    "z_m": 0.9,
+    "ancho_m": 3.5,
+    "fondo_m": 0.02,
+    "alto_m": 0.6,
+    "rotacion_grados": 0,
+    "material": "Cerámica satinada de bordes redondeados",
+    "color": "Verde salvia claro #A8D5BA y crema #FAF3E8",
+    "estado_por_escena": [],
+    "no_estorba": "Revestimiento plano sobre la pared del fondo entre el mesón y las alacenas.",
+    "origen": "ambiente",
+    "justificacion": "Definido en materiales_texturas de la parte A para dar color y textura al fondo."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-silla-comedor-posterior",
+    "nombre": "Silla de comedor central detrás de la mesa",
+    "categoria": "mueble",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "ninguna",
+    "x_m": 2.8,
+    "y_m": 3.05,
+    "z_m": 0.0,
+    "ancho_m": 0.46,
+    "fondo_m": 0.46,
+    "alto_m": 0.85,
+    "rotacion_grados": 180,
+    "material": "Madera clara torneada con cojín de tela mate",
+    "color": "Madera miel #C88A4B y cojín terracota #D98A6C",
+    "estado_por_escena": [],
+    "no_estorba": "Situada en el lado posterior de la mesa (y=3,05 m), dejando totalmente libre el frente del mantel hacia cámara.",
+    "origen": "ambiente",
+    "justificacion": "Toda mesa de comedor de cocina cuenta con sillas; su ubicación trasera no tapa a Don Caos bajo la mesa."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-silla-comedor-noroccidente",
+    "nombre": "Silla de comedor en esquina izquierda posterior de la mesa",
+    "categoria": "mueble",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "ninguna",
+    "x_m": 2.1,
+    "y_m": 2.85,
+    "z_m": 0.0,
+    "ancho_m": 0.46,
+    "fondo_m": 0.46,
+    "alto_m": 0.85,
+    "rotacion_grados": 135,
+    "material": "Madera clara torneada con cojín de tela mate",
+    "color": "Madera miel #C88A4B y cojín terracota #D98A6C",
+    "estado_por_escena": [],
+    "no_estorba": "Recogida hacia la esquina noroeste de la mesa, libre de la posición de Spark (x=1,8, y=2,3).",
+    "origen": "ambiente",
+    "justificacion": "Aporta realismo doméstico al comedor sin obstruir la acción ni el levantamiento del mantel."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-silla-comedor-nororiente",
+    "nombre": "Silla de comedor en esquina derecha posterior de la mesa",
+    "categoria": "mueble",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "ninguna",
+    "x_m": 3.5,
+    "y_m": 2.85,
+    "z_m": 0.0,
+    "ancho_m": 0.46,
+    "fondo_m": 0.46,
+    "alto_m": 0.85,
+    "rotacion_grados": 225,
+    "material": "Madera clara torneada con cojín de tela mate",
+    "color": "Madera miel #C88A4B y cojín terracota #D98A6C",
+    "estado_por_escena": [],
+    "no_estorba": "Recogida en la esquina noreste de la mesa, dejando libre a Don Caos (x=3,65, y=2,3) y el frente de la mesa.",
+    "origen": "ambiente",
+    "justificacion": "Completa el juego de sillas de la mesa de cocina manteniendo despejado el frente escénico."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-aparador-bajo-derecha",
+    "nombre": "Aparador auxiliar bajo de madera en pared derecha",
+    "categoria": "mueble",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "derecha",
+    "x_m": 4.72,
+    "y_m": 3.1,
+    "z_m": 0.0,
+    "ancho_m": 0.48,
+    "fondo_m": 1.1,
+    "alto_m": 0.82,
+    "rotacion_grados": 270,
+    "material": "Madera clara satinada con puertas redondeadas",
+    "color": "Madera miel #C88A4B",
+    "estado_por_escena": [],
+    "no_estorba": "Pegado a la pared derecha (y=2,55 a 3,65 m), dejando más de 1 m libre respecto a la puerta del jardín (y=1,5 m).",
+    "origen": "ambiente",
+    "justificacion": "Equilibra visualmente el lado derecho de la cocina sin invadir el área central de la mesa."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-escurridor-vajilla",
+    "nombre": "Escurridor con platos y tazas de cerámica",
+    "categoria": "utileria",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 2.65,
+    "y_m": 4.15,
+    "z_m": 0.9,
+    "ancho_m": 0.44,
+    "fondo_m": 0.34,
+    "alto_m": 0.26,
+    "rotacion_grados": 0,
+    "material": "Madera de bambú y cerámica esmaltada satinada",
+    "color": "Crema #FAF3E8, verde suave #A8D5BA y amarillo #FFC928",
+    "estado_por_escena": [],
+    "no_estorba": "Apoyado sobre el mesón del fondo a la derecha del lavaplatos.",
+    "origen": "ambiente",
+    "justificacion": "Utilería cotidiana que da vida doméstica a la zona de fregadero."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-olla-esmaltada",
+    "nombre": "Olla arrocera de esmalte con tapa redondeada",
+    "categoria": "utileria",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 0.78,
+    "y_m": 4.05,
+    "z_m": 0.92,
+    "ancho_m": 0.25,
+    "fondo_m": 0.25,
+    "alto_m": 0.18,
+    "rotacion_grados": 0,
+    "material": "Hierro esmaltado satinado con pomo de madera",
+    "color": "Naranja cálido #F2792A",
+    "estado_por_escena": [],
+    "no_estorba": "Sobre el fogón apagado de la estufa al fondo.",
+    "origen": "ambiente",
+    "justificacion": "Utensilio clásico de cocina familiar colombiana que aporta un acento cálido de la paleta del canal."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-tetera-familiar",
+    "nombre": "Tetera redondeada de cocina",
+    "categoria": "utileria",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 1.12,
+    "y_m": 4.2,
+    "z_m": 0.92,
+    "ancho_m": 0.22,
+    "fondo_m": 0.22,
+    "alto_m": 0.2,
+    "rotacion_grados": 25,
+    "material": "Metal esmaltado satinado con asa curva de madera",
+    "color": "Verde menta suave #A8D5BA",
+    "estado_por_escena": [],
+    "no_estorba": "Sobre la parte trasera de la estufa apagada.",
+    "origen": "ambiente",
+    "justificacion": "Refuerza la silueta reconocible de la estufa en segundo plano."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-portautensilios-cucharas",
+    "nombre": "Tarro de cerámica con cucharas de palo y espátulas",
+    "categoria": "utileria",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 0.4,
+    "y_m": 4.15,
+    "z_m": 0.9,
+    "ancho_m": 0.16,
+    "fondo_m": 0.16,
+    "alto_m": 0.28,
+    "rotacion_grados": 0,
+    "material": "Cerámica mate y utensilios redondeados de madera (sin cuchillos expuestos-seguridad preescolar)','",
+    "color": "Beige crema #F5E6D3 y madera #C88A4B",
+    "estado_por_escena": [],
+    "no_estorba": "En la esquina del mesón del fondo.",
+    "origen": "ambiente",
+    "justificacion": "Utilería segura y reconocible de preparación de alimentos."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-frascos-granos",
+    "nombre": "Trío de frascos de vidrio con pasta, arroz y lentejas",
+    "categoria": "utileria",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "izquierda",
+    "x_m": 0.35,
+    "y_m": 3.3,
+    "z_m": 0.9,
+    "ancho_m": 0.16,
+    "fondo_m": 0.38,
+    "alto_m": 0.22,
+    "rotacion_grados": 90,
+    "material": "Vidrio translúcido con tapas redondas de madera sin etiquetas ni texto",
+    "color": "Cristal claro, amarillo trigo #F5C542 y marrón lenteja #A66E4E",
+    "estado_por_escena": [],
+    "no_estorba": "Sobre la encimera izquierda.",
+    "origen": "ambiente",
+    "justificacion": "Aporta textura y color de despensa doméstica respetando la prohibición de textos en envases."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-panera-madera",
+    "nombre": "Panera de madera con tapa corrediza curva",
+    "categoria": "utileria",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "izquierda",
+    "x_m": 0.35,
+    "y_m": 2.5,
+    "z_m": 0.9,
+    "ancho_m": 0.28,
+    "fondo_m": 0.38,
+    "alto_m": 0.2,
+    "rotacion_grados": 90,
+    "material": "Madera clara satinada sin inscripciones",
+    "color": "Madera miel #C88A4B",
+    "estado_por_escena": [],
+    "no_estorba": "Sobre el centro del mesón izquierdo.",
+    "origen": "ambiente",
+    "justificacion": "Objeto doméstico cálido típico del desayuno y la merienda familiar."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-tabla-picar-madera",
+    "nombre": "Tabla de madera redondeada para pan y fruta",
+    "categoria": "utileria",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "izquierda",
+    "x_m": 0.38,
+    "y_m": 1.9,
+    "z_m": 0.9,
+    "ancho_m": 0.26,
+    "fondo_m": 0.34,
+    "alto_m": 0.03,
+    "rotacion_grados": 80,
+    "material": "Madera natural mate de bordes suaves",
+    "color": "Madera cálida #B87B3E",
+    "estado_por_escena": [],
+    "no_estorba": "Apoyada plana sobre el extremo del mesón izquierdo.",
+    "origen": "ambiente",
+    "justificacion": "Detalle de uso diario en la superficie de trabajo de la cocina."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-jarra-agua-vasos",
+    "nombre": "Jarra con agua fresca y cuatro vasos de colores",
+    "categoria": "utileria",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "derecha",
+    "x_m": 4.72,
+    "y_m": 3.0,
+    "z_m": 0.82,
+    "ancho_m": 0.28,
+    "fondo_m": 0.32,
+    "alto_m": 0.25,
+    "rotacion_grados": 270,
+    "material": "Plástico translúcido brillante y vidrio satinado con agua clara",
+    "color": "Celeste suave #8FD3FF, amarillo #FFC928 y coral #E8A598",
+    "estado_por_escena": [],
+    "no_estorba": "Sobre el aparador de la pared derecha.",
+    "origen": "ambiente",
+    "justificacion": "Aporta el elemento agua doméstica y los materiales translúcidos del style_fijo del canal."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-caneca-pedal-interior",
+    "nombre": "Caneca pequeña de pedal de cocina",
+    "categoria": "utileria",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "izquierda",
+    "x_m": 0.35,
+    "y_m": 1.35,
+    "z_m": 0.0,
+    "ancho_m": 0.3,
+    "fondo_m": 0.3,
+    "alto_m": 0.42,
+    "rotacion_grados": 90,
+    "material": "Metal anodizado satinado con tapa redondeada cerrada",
+    "color": "Beige grisáceo #D5CBBF",
+    "estado_por_escena": [],
+    "no_estorba": "Pegada al costado del mesón izquierdo (x=0,35, y=1,35), fuera del área de la puerta principal.",
+    "origen": "ambiente",
+    "justificacion": "Elemento de servicio indispensable en toda cocina real."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-tapete-lavaplatos",
+    "nombre": "Tapete tejido frente al lavaplatos",
+    "categoria": "decoracion",
+    "forma": "plano",
+    "tiene_volumen": false,
+    "apoyo": "piso",
+    "pared": "ninguna",
+    "x_m": 2.0,
+    "y_m": 3.5,
+    "z_m": 0.0,
+    "ancho_m": 1.0,
+    "fondo_m": 0.5,
+    "alto_m": 0.01,
+    "rotacion_grados": 0,
+    "material": "Tejido de algodón mate de bordes redondeados",
+    "color": "Terracota #D98A6C con franja crema #FAF3E8",
+    "estado_por_escena": [],
+    "no_estorba": "Plano sobre el piso frente al mesón del fondo, sin volumen que tropiece.",
+    "origen": "ambiente",
+    "justificacion": "Aporta calidez textil al suelo en la capa baja frente al lavaplatos."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-felpudo-puerta-jardin",
+    "nombre": "Tapete de entrada junto a la puerta del jardín",
+    "categoria": "decoracion",
+    "forma": "plano",
+    "tiene_volumen": false,
+    "apoyo": "piso",
+    "pared": "ninguna",
+    "x_m": 4.5,
+    "y_m": 1.5,
+    "z_m": 0.0,
+    "ancho_m": 0.45,
+    "fondo_m": 0.75,
+    "alto_m": 0.01,
+    "rotacion_grados": 270,
+    "material": "Fibra vegetal tejida mate",
+    "color": "Miel tostado #C88A4B",
+    "estado_por_escena": [],
+    "no_estorba": "Elemento plano al ras del suelo que no obstaculiza la apertura de la puerta ni el paso.",
+    "origen": "ambiente",
+    "justificacion": "Señal funcional de transición entre el jardín exterior y la cocina interior."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-macetas-hierbas-ventana",
+    "nombre": "Tres macetitas de barro con albahaca, menta y romero",
+    "categoria": "vegetacion",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 2.0,
+    "y_m": 4.42,
+    "z_m": 1.05,
+    "ancho_m": 0.7,
+    "fondo_m": 0.15,
+    "alto_m": 0.24,
+    "rotacion_grados": 0,
+    "material": "Arcilla terracota mate y hojas verdes redondeadas",
+    "color": "Terracota #D98A6C y verde vivo #3BAA4A",
+    "estado_por_escena": [],
+    "no_estorba": "Sobre la repisa interior de la ventana del fondo.",
+    "origen": "ambiente",
+    "justificacion": "Conecta cromáticamente la cocina con la naturaleza de Eco sin tapar la entrada de luz solar."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-planta-colgante-alta",
+    "nombre": "Maceta con planta colgante sobre la alacena",
+    "categoria": "vegetacion",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 3.1,
+    "y_m": 4.25,
+    "z_m": 2.35,
+    "ancho_m": 0.32,
+    "fondo_m": 0.32,
+    "alto_m": 0.35,
+    "rotacion_grados": 0,
+    "material": "Cerámica crema y tallos con hojas verdes suaves",
+    "color": "Crema #FAF3E8 y verde #3BAA4A",
+    "estado_por_escena": [],
+    "no_estorba": "En la parte superior de la alacena alta del fondo (z=2,35 m).",
+    "origen": "ambiente",
+    "justificacion": "Enriquece la capa alta de la cocina cuando la cámara encuadra hacia el techo en la escena 5."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-cenefa-cortina-ventana",
+    "nombre": "Cenefa de tela suave en la ventana del fondo",
+    "categoria": "decoracion",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "fondo",
+    "x_m": 2.0,
+    "y_m": 4.44,
+    "z_m": 2.02,
+    "ancho_m": 1.52,
+    "fondo_m": 0.08,
+    "alto_m": 0.3,
+    "rotacion_grados": 0,
+    "material": "Tela de algodón mate con barra redondeada de madera",
+    "color": "Amarillo mantequilla #FFF1A8 con borde naranja suave #F2792A",
+    "estado_por_escena": [],
+    "no_estorba": "En el borde superior de la ventana a 2,02 m de altura.",
+    "origen": "ambiente",
+    "justificacion": "Viste la abertura de la ventana con calidez doméstica en la capa alta."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-imanes-figuras-nevera",
+    "nombre": "Imanes decorativos con formas de frutas y estrellas",
+    "categoria": "decoracion",
+    "forma": "plano",
+    "tiene_volumen": false,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 3.95,
+    "y_m": 3.72,
+    "z_m": 1.25,
+    "ancho_m": 0.42,
+    "fondo_m": 0.02,
+    "alto_m": 0.32,
+    "rotacion_grados": 0,
+    "material": "Plástico satinado de colores y papel de dibujo infantil sin letras ni números",
+    "color": "Rojo #FF4D5E, amarillo #FFC928, azul #2F7DE1 y verde #3BAA4A",
+    "estado_por_escena": [],
+    "no_estorba": "Adheridos al frente de la nevera.",
+    "origen": "ambiente",
+    "justificacion": "Rastro típico de un hogar con niños pequeños, cuidando no incluir letras ni números."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-cuadros-frutas-derecha",
+    "nombre": "Díptico de cuadros enmarcados con ilustraciones de frutas",
+    "categoria": "decoracion",
+    "forma": "plano",
+    "tiene_volumen": false,
+    "apoyo": "pared",
+    "pared": "derecha",
+    "x_m": 4.98,
+    "y_m": 3.1,
+    "z_m": 1.5,
+    "ancho_m": 0.03,
+    "fondo_m": 0.7,
+    "alto_m": 0.4,
+    "rotacion_grados": 270,
+    "material": "Marco de madera clara y lámina pictórica mate sin texto",
+    "color": "Madera miel #C88A4B, fondo crema #FAF3E8 y frutas cálidas",
+    "estado_por_escena": [],
+    "no_estorba": "Colgados planos en la pared derecha sobre el aparador.",
+    "origen": "ambiente",
+    "justificacion": "Viste el muro derecho a nivel de ojos aportando calidez hogareña."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-aplique-luz-frente",
+    "nombre": "Aplique mural de luz cálida y placa de interruptor",
+    "categoria": "infraestructura",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "frente",
+    "x_m": 1.8,
+    "y_m": 0.04,
+    "z_m": 1.25,
+    "ancho_m": 0.18,
+    "fondo_m": 0.08,
+    "alto_m": 0.9,
+    "rotacion_grados": 180,
+    "material": "Plástico satinado color marfil y difusor opalino",
+    "color": "Marfil cálido #FAF3E8 y luz ámbar #FFE0A3",
+    "estado_por_escena": [],
+    "no_estorba": "Adosado a la pared del frente junto al marco de la puerta principal.",
+    "origen": "ambiente",
+    "justificacion": "Servicio eléctrico doméstico coherente con la entrada principal del escenario."
+   },
+   {
+    "ambiente_id": "amb-esc-cocina-rastro-migas-piso",
+    "nombre": "Rastro de migas de manzana hacia debajo de la mesa",
+    "categoria": "senal_uso",
+    "forma": "plano",
+    "tiene_volumen": false,
+    "apoyo": "piso",
+    "pared": "ninguna",
+    "x_m": 2.8,
+    "y_m": 2.05,
+    "z_m": 0.0,
+    "ancho_m": 0.4,
+    "fondo_m": 0.6,
+    "alto_m": 0.01,
+    "rotacion_grados": 0,
+    "material": "Pequeñas migas orgánicas redondeadas de pulpa de manzana",
+    "color": "Amarillo crema #FFF1A8 y puntitos rojos #FF4D5E",
+    "estado_por_escena": [
+     {
+      "escena": "5",
+      "estado": "Inexistente al inicio; aparece al final de la escena 5 llevando desde la mesa hacia debajo del mantel."
+     },
+     {
+      "escena": "6",
+      "estado": "Visible en el piso guiando a Eco para levantar el mantel y descubrir a Don Caos."
+     },
+     {
+      "escena": "7",
+      "estado": "Permanece discretamente en el suelo junto a la mesa durante la conversación."
+     }
+    ],
+    "no_estorba": "Al ras del suelo bajo el borde de la mesa.",
+    "origen": "ambiente",
+    "justificacion": "El guion indica explícitamente al cierre de la escena 5: Se ven migas que llevan hacia debajo de la mesa."
+   }
+  ],
+  "senales_uso": [
+   {
+    "descripcion": "Rastro de migas de manzana sobre el piso de cerámica que guía la vista desde el borde de la mesa hacia debajo del mantel.",
+    "donde": "En el suelo frente a la mesa de la cocina (x=2,8 m, y=2,05 m).",
+    "escenas": [
+     "5",
+     "6",
+     "7"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Pista visual directa dejada por Don Caos al comerse dos manzanas escondido bajo la mesa."
+   },
+   {
+    "descripcion": "Mantel de tela de cuadros de la mesa desplazado y levantado por su borde frontal tras descubrir el escondite de Don Caos.",
+    "donde": "Frente de la mesa de la cocina (x=2,8 m, y=1,9 m).",
+    "escenas": [
+     "6",
+     "7"
+    ],
+    "origen": "ambiente",
+    "justificacion": "En la escena 6 Eco levanta el mantel para dejar al descubierto a Don Caos y en la 7 conversan con él a su altura."
+   },
+   {
+    "descripcion": "Vajilla recién lavada en el escurridor, paño de cocina doblado junto al lavaplatos y dibujos infantiles sujetados con imanes de figuras en la nevera.",
+    "donde": "Mesón del fondo (y=4,15 m) y puerta de la nevera (x=3,95 m, y=3,72 m).",
+    "escenas": [
+     "5",
+     "6",
+     "7"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Rastros cotidianos que hacen sentir la cocina como un hogar familiar vivo y habitado por niños."
+   }
+  ],
+  "extras_fondo": [],
+  "ambiente_por_escena": [
+   {
+    "escena": "5",
+    "hora": "Día",
+    "clima": "Soleado exterior con luz diurna clara entrando por la ventana y la puerta del jardín",
+    "atmosfera": "Alegre, curiosa y dinámica de laboratorio cotidiano en casa, iluminada por el brillo celeste de los hologramas de conteo y suma de Spark y el destello morado travieso de Don Caos.",
+    "sonido_ambiente": "Silencio doméstico acogedor con leve canto de pajaritos lejanos desde el jardín, zumbido suave de los hologramas de Spark, ¡plop! cómico de las manzanas al caer al frutero y murmullo de ñam, ñam, ñam al final."
+   },
+   {
+    "escena": "6",
+    "hora": "Día",
+    "clima": "Soleado exterior; interior diurno que pasa de luminoso a recogido y emotivo",
+    "atmosfera": "Comedia traviesa al descubrir a Don Caos debajo del mantel que se transforma abruptamente en un silencio sensible y empático, acompañado por el pulso azul suave del Escudo de la Empatía de Valentina.",
+    "sonido_ambiente": "Roce de la tela del mantel al levantarse, masticación cómica de Don Caos y, tras el regaño de Pintor, silencio absoluto en la cocina marcado únicamente por el latido suave pum… pum… del escudo de Valentina."
+   },
+   {
+    "escena": "7",
+    "hora": "Día",
+    "clima": "Soleado cálido y sereno",
+    "atmosfera": "Íntima, reconfortante, segura y profundamente empática; toda la cocina se baña en una luz dorada cálida mientras el globo rojo flotante guía la respiración pausada.",
+    "sonido_ambiente": "Notas suaves y pausadas de piano, susurro sincero de Don Caos y sonido rítmico de inhalación y exhalación suave (fffff) durante el ejercicio de la Respiración del Globo."
+   }
+  ],
+  "vista_por_aberturas": [
+   {
+    "abertura": "Ventana horizontal de doble hoja sobre el lavaplatos",
+    "pared": "fondo",
+    "que_se_ve": "Follaje verde brillante de arbustos, flores rojas y amarillas del jardín ya recuperado en la escena 4 y cielo azul diurno iluminado por el sol amarillo.",
+    "escenas": [
+     "5",
+     "6",
+     "7"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Continuidad directa tras la escena 4 en que Eco y Pintor devolvieron todos los colores al jardín exterior."
+   },
+   {
+    "abertura": "Puerta batiente con mitad superior acristalada hacia el jardín",
+    "pared": "derecha",
+    "que_se_ve": "Porción del césped verde soleado del jardín exterior y luz cálida diurna entrando en diagonal hacia la cocina.",
+    "escenas": [
+     "5",
+     "6",
+     "7"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Conecta espacialmente la cocina con el jardín del bloque anterior y aporta luz natural lateral."
+   },
+   {
+    "abertura": "Puerta interior abierta hacia el pasillo de la casa",
+    "pared": "frente",
+    "que_se_ve": "Tramo corto del pasillo doméstico en tonos beige cálido y madera miel que comunica con la habitación del inicio.",
+    "escenas": [
+     "5",
+     "6",
+     "7"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Mantiene la unidad espacial de la casa de la primera temporada entre la habitación y la cocina."
+   }
+  ],
+  "fondo_lejano": [
+   {
+    "que_es": "Copa frondosa de árboles verdes y vegetación soleada del jardín exterior más allá del patio",
+    "direccion": "fondo",
+    "distancia_aprox_m": 15.0,
+    "tamano_aparente": "Mediano, enmarcado suavemente con desenfoque bokeh a través de la ventana sobre el lavaplatos",
+    "color": "Verde vivo #3BAA4A con toques dorados de sol #F5C542",
+    "escenas": [
+     "5",
+     "6",
+     "7"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Profundidad visual exterior vista a través de la ventana del fondo con el color de la naturaleza ya restaurado."
+   },
+   {
+    "que_es": "Cielo diurno despejado y luminoso sobre el jardín",
+    "direccion": "derecha",
+    "distancia_aprox_m": 80.0,
+    "tamano_aparente": "Amplio en la parte superior del vidrio de la puerta derecha y de la ventana del fondo",
+    "color": "Azul cielo luminoso #8FD3FF con resplandor cálido #FFF4D6",
+    "escenas": [
+     "5",
+     "6",
+     "7"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Confirma la continuidad de día soleado tras haber devuelto el amarillo al sol y el azul al mundo en la escena 4."
+   }
+  ],
+  "autorrevision": {
+   "densidad_objetivo": 30,
+   "por_que": "Al ser una cocina-comedor familiar amplia (5,0 m × 4,5 m), el rango óptimo de dirección de arte es de 25 a 35 elementos de ambiente para que se vea cálida, habitada y reconocible al instante sin saturar el centro de acción ni el fondo (style_fijo evita fondos recargados).",
+   "capas": {
+    "suelo": "Baldosas terracota y beige, mesón en L, nevera, estufa, aparador derecho, 3 sillas de comedor tras la mesa, caneca de pedal, 2 tapetes tejidos y el rastro de migas de manzana.",
+    "nivel_ojos": "Lavaplatos con grifo, salpicadero de azulejos, escurridor con vajilla, olla, tetera, portautensilios, frascos de granos sin texto, panera, tabla de pan, jarra con vasos, macetas de hierbas en ventana, imanes de figuras en nevera, cuadros de frutas e interruptor.",
+    "alto": "Techo despejado con moldura, campana extractora, 2 alacenas altas de madera y vidrio, planta colgante sobre alacena, cenefa de tela en ventana y aplique mural superior.",
+    "fondo": "Vista del jardín verde soleado y cielo azul por la ventana del fondo y la puerta acristalada derecha, más el pasillo cálido por la puerta frontal."
+   },
+   "agregado_al_revisar": [
+    "Se agregaron tres sillas de comedor ubicadas únicamente en la parte posterior y esquinas traseras de la mesa para que el comedor sea creíble pero deje 100 % despejado el frente del mantel donde se esconde Don Caos y donde se agacha Valentina.",
+    "Se agregó la planta colgante sobre la alacena alta y la cenefa de la ventana para enriquecer la capa superior durante los planos contrapicados hacia el techo en la escena 5.",
+    "Se verificó que ningún frasco, imán, cuadro ni electrodoméstico contenga letras, números o textos impresos para cumplir estrictamente el negative_prompt de style_fijo."
+   ]
+  }
+ },
+ "ambiente_ascensos": []
+}

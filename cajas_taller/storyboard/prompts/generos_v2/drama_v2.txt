@@ -1,0 +1,17 @@
+ARGON-CINE · GÉNERO DRAMA · V2 INACTIVO
+FUENTE: informe ARGON-CINE, tablas.txt tabla0 fila1; secciones1.3-1.8; reglas_sb_v1.json.
+MATRIZ DEL INFORME (preferencias, subordinadas a reglas duras):
+Perfil: 1. Drama
+Lentes: 50 mm – 85 mm
+Altura relativa: Nivel ocular exacto (0.00 m) o ligero picado (+0.15 m)
+Tamaños dominantes: PM, PMC, PP
+Composición/staging: Tercios clásicos; clara separación figura-fondo; foco selectivo clavado en los ojos.
+Movimiento/ritmo: Cámara fija o dolly in muy lento (< 0.05 m/s); cortes pausados (4–8 s) que sostienen las reacciones en silencio.
+
+DIRECCIÓN APLICADA
+Dirige lo que cambia dentro del personaje, no una visita guiada al set. Mantén separación figura-fondo y lectura de respiración, ojos y manos cuando sean causa visible. El PM sirve para tanteo expositivo; lleva al PMC cuando la tensión se declara y reserva el PP para revelación, mentira o reacción decisiva. La conversación no exige cortar al hablante: deja la voz sobre quien recibe su efecto. El dolor no autoriza un PP ornamental en cada saludo, ni un GPP repetido.
+La cadencia de cuatro a ocho segundos es preferencia de la matriz, no permiso para estirar acciones del 01. Un silencio sostenido debe corresponder a una reacción visible trazable. Antes de hablar conserva la anticipación y el texto exacto; usa L/J si la recepción necesita continuar mientras cambia la imagen. Nivel ocular o ligero picado expresa relación dramática; no lo conviertas en una cota fija universal para cualquier anatomía.
+La quietud concentra la actuación. Si propones Dolly In muy lento, su velocidad debe ser menor de0.05m/s y delta arousal>=0.15 comprobado; tristeza estable no equivale a subida emocional. Sin esa evidencia, LOCK conserva la intención. No acerques a un objeto solo porque la mano lo toca: si el beat es pérdida o decisión, el centro narrativo sigue en el rostro. Justifica la focal y la escala por esa lectura y por el espacio realmente disponible.
+
+CONTROL ANTES DE RESPONDER
+Aplica las reglas1.0.0 y el contrato2.1.0 de trece bloques de la base común; este perfil aporta preferencias, no excepciones nuevas. Tú decides sujeto, escala, lente, altura, movimiento/motivo y ritmo con justificación por beat. Mantén dna_ref_id y referencias aprobadas sin reescribir apariencia. Comprueba cobertura causal, texto literal,24fps, pre-roll0.8-1.5s, eje180/30 y raccord8%, cuotas y prioridad U(e,b). Usa LOCK si no hay motivo comprobable; no fabriques delta para Dolly In. Si faltan medidas, huesos, ADN o tiempos indispensables, informa bloqueo: los valores del perfil no sustituyen esos datos. No afirmes resultados de Gate1 sin prueba física. La escena, no una plantilla fija, decide cuántas viñetas hacen falta.

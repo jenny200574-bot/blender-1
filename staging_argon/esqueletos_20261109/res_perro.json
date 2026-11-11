@@ -1,0 +1,11 @@
+{
+  "caso": "perro",
+  "enviado": true,
+  "id": "esqueleto-perro-20261109-175948",
+  "est": 0.6616,
+  "usd_real": 0.2791,
+  "fin": "FinishReason.STOP",
+  "tokens_entrada": "[REDACTED]",
+  "tokens_salida": "[REDACTED]",
+  "salida": "/opt/myia-staging-arreglos-20261026/esqueletos_20261109/respuestas/perro.json"
+}

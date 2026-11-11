@@ -1,0 +1,294 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "recetas_objetos/v1",
+ "title": "Recetas de objetos faltantes en formato Star (partes de formas_detalle)",
+ "description": "Una receta por objeto. Coordenadas LOCALES en metros: origen en el centro de la base, x = ancho (derecha), y = fondo (hacia atrás), z = arriba; el FRENTE mira a −y. Todas las partes caben en la caja del objeto: x∈[−ancho/2, ancho/2], y∈[−fondo/2, fondo/2], z∈[0, alto]. Cada medida lleva evidencia (fuente + cita literal del CORPUS, hoja = campo de la ficha del objeto, o deduccion).",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "schema",
+  "grupo",
+  "fecha",
+  "recetas"
+ ],
+ "properties": {
+  "schema": {
+   "const": "recetas_objetos/v1"
+  },
+  "grupo": {
+   "type": "string"
+  },
+  "fecha": {
+   "type": "string"
+  },
+  "recetas": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "objeto_id",
+     "nombre",
+     "caja_m",
+     "apoyo",
+     "conjunto",
+     "partes",
+     "datos",
+     "vacios"
+    ],
+    "properties": {
+     "objeto_id": {
+      "type": "string"
+     },
+     "nombre": {
+      "type": "string"
+     },
+     "caja_m": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "ancho",
+       "fondo",
+       "alto"
+      ],
+      "properties": {
+       "ancho": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "fondo": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "alto": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       }
+      }
+     },
+     "apoyo": {
+      "enum": [
+       "piso",
+       "sobre_otro",
+       "pared",
+       "montado_frente",
+       "techo",
+       "colgado",
+       "en_mano"
+      ],
+      "description": "igual al de la ficha. La lista viva está en apoyos.json (el revisor la lee de ahí). piso/sobre_otro: toca z=0. pared/montado_frente: toca y=+fondo/2. techo/colgado: toca z=alto. en_mano: libre."
+     },
+     "conjunto": {
+      "type": "boolean",
+      "description": "true solo si el objeto son piezas sueltas (p. ej. letras o números separados); cada pieza suelta igual debe tocar su apoyo"
+     },
+     "partes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 40,
+      "items": {
+       "type": "object",
+       "required": [
+        "tipo",
+        "nombre",
+        "color_guia_rgb"
+       ],
+       "properties": {
+        "tipo": {
+         "enum": [
+          "caja",
+          "tramo",
+          "cilindro",
+          "esfera",
+          "toro",
+          "tubo",
+          "placa",
+          "cono",
+          "poliedro"
+         ]
+        },
+        "nombre": {
+         "type": "string",
+         "pattern": "^[a-z][a-z0-9_]{0,40}$"
+        },
+        "color_guia_rgb": {
+         "type": "array",
+         "items": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+         },
+         "minItems": 3,
+         "maxItems": 3
+        },
+        "centro_m": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 3,
+         "maxItems": 3
+        },
+        "tam_m": {
+         "type": "array",
+         "items": {
+          "type": "number",
+          "exclusiveMinimum": 0
+         },
+         "minItems": 3,
+         "maxItems": 3
+        },
+        "rot_grados": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 3,
+         "maxItems": 3
+        },
+        "a_m": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 3,
+         "maxItems": 3
+        },
+        "b_m": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 3,
+         "maxItems": 3
+        },
+        "radio_m": {
+         "type": "number",
+         "exclusiveMinimum": 0
+        },
+        "alto_m": {
+         "type": "number",
+         "exclusiveMinimum": 0
+        },
+        "radio_mayor_m": {
+         "type": "number",
+         "exclusiveMinimum": 0
+        },
+        "radio_menor_m": {
+         "type": "number",
+         "exclusiveMinimum": 0
+        },
+        "radio_ext_m": {
+         "type": "number",
+         "exclusiveMinimum": 0
+        },
+        "radio_int_m": {
+         "type": "number",
+         "exclusiveMinimum": 0
+        },
+        "segmentos": {
+         "type": "integer",
+         "minimum": 6,
+         "maximum": 32
+        },
+        "espesor_m": {
+         "type": "number",
+         "exclusiveMinimum": 0
+        },
+        "radio_a_m": {
+         "type": "number",
+         "minimum": 0
+        },
+        "radio_b_m": {
+         "type": "number",
+         "minimum": 0
+        },
+        "vertices_m": {
+         "type": "array",
+         "minItems": 4,
+         "maxItems": 24,
+         "items": {
+          "type": "array",
+          "items": {
+           "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+         }
+        }
+       }
+      }
+     },
+     "datos": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "required": [
+        "clave",
+        "valor",
+        "origen"
+       ],
+       "properties": {
+        "clave": {
+         "type": "string",
+         "description": "p. ej. receta.<parte>.<medida> o proporcion.<algo>"
+        },
+        "valor": {},
+        "unidad": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "origen": {
+         "enum": [
+          "fuente",
+          "hoja",
+          "deduccion"
+         ]
+        },
+        "fuente_id": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "cita": {
+         "type": [
+          "string",
+          "null"
+         ],
+         "description": "8–300 caracteres copiados LITERAL del texto de la fuente"
+        },
+        "campo_hoja": {
+         "type": [
+          "string",
+          "null"
+         ],
+         "description": "ruta con puntos de un campo de la FICHA del objeto, p. ej. caja_m.alto, color_4a1, adn_texto"
+        },
+        "deriva_de": {
+         "type": "array",
+         "items": {
+          "type": "string"
+         }
+        },
+        "razon": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "vacios": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  }
+ }
+}

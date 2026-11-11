@@ -1,0 +1,10 @@
+Make ONE standard character reference image: the FULL-BODY FRONT view of one character version.
+Character: «{PERSONAJE}» — version «{VERSION}».
+{REFERENCIAS}
+Copy exactly what the references show: face, hair, eyes, body proportions, clothing, armor, colors, materials, marks, accessories and the drawing style. Do not redesign or improve anything.
+Parts the sheet does not show ({COMPLETAR}) must be COMPLETED so they match the sheet: continue the same outfit, the same colors, the same materials and the same design elements naturally. Never add new items, logos, emblems, weapons or accessories that the sheet does not show.
+View: seen from the front, facing the viewer, standing upright in a neutral relaxed pose, arms slightly away from the body, both feet flat on the ground, the whole body visible.
+Framing (always the same): {ENCUADRE}.
+Background: {FONDO}. No text, no labels, no logos, no panel borders, no other characters, no effects.
+What the sheet says about this version (only to check, never to add new things): {DESCRIPCION}
+Never changes across versions: {NUNCA_CAMBIA}

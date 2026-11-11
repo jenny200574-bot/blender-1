@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-candados",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Candado estilizado 3D de dos piezas articuladas: cuerpo prismático cuadrangular grueso con bordes biselados suaves y esquinas redondeadas, unido a un arco superior cilíndrico grueso en forma de \"U\".\n- Diseñado para sujetarse colgado mediante su arco superior o manipularse directamente con una mano."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Chasis principal de metal dorado ocre con acabado satinado uniforme.\n- Arco superior de acero plateado con subtono azulado en acabado metálico satinado, y emblemas centrales de cristal o gel translúcido de alto brillo (verde lima, azul cobalto o rosa magenta).\n- Emisión lumínica suave de tono blanco cálido a amarillo pálido que emana del contorno inmediato de los emblemas centrales."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Cara frontal completamente lisa con un único símbolo en relieve incrustado en el centro (variantes: gota de agua verde, tres esferas azules agrupadas o silueta de montaña magenta de dos picos). Cara superior con dos orificios circulares limpios para el anclaje del arco, sin cerraduras ni ranuras visibles."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado cerrado con ambos extremos del arco insertados en el chasis; estado abierto con el arco elevado y rotado hacia el exterior dejando visible el orificio izquierdo, manteniendo el halo luminoso del emblema activo en ambos estados.\n- En planos generales, se simplifica a un bloque cuadrado ocre con una mancha de color brillante en el centro y un arco gris simple, eliminando biseles y reflejos translúcidos."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Candado estilizado 3D de proporciones gruesas, formado por un chasis cuadrado de metal dorado satinado con bordes redondeados y un grueso arco cilíndrico superior de acero plateado azulado. En el centro de su cara frontal lisa destaca un emblema translúcido brillante en relieve (gota verde, tres esferas azules o montaña magenta) rodeado por un halo de luz cálida, contando únicamente con dos orificios circulares superiores para el mecanismo de elevación y giro del arco."
+    }
+  ],
+  "inyeccion": "Candado estilizado 3D de proporciones gruesas, formado por un chasis cuadrado de metal dorado satinado con bordes redondeados y un grueso arco cilíndrico superior de acero plateado azulado. En el centro de su cara frontal lisa destaca un emblema translúcido brillante en relieve (gota verde, tres esferas azules o montaña magenta) rodeado por un halo de luz cálida, contando únicamente con dos orificios circulares superiores para el mecanismo de elevación y giro del arco.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Candado estilizado 3D de dos piezas articuladas: cuerpo prismático cuadrangular grueso con bordes biselados suaves y esquinas redondeadas, unido a un arco superior cilíndrico grueso en forma de \"U\".\n- Diseñado para sujetarse colgado mediante su arco superior o manipularse directamente con una mano.\n\n2. Materiales y Paleta de Color:\n\n- Chasis principal de metal dorado ocre con acabado satinado uniforme.\n- Arco superior de acero plateado con subtono azulado en acabado metálico satinado, y emblemas centrales de cristal o gel translúcido de alto brillo (verde lima, azul cobalto o rosa magenta).\n- Emisión lumínica suave de tono blanco cálido a amarillo pálido que emana del contorno inmediato de los emblemas centrales.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Cara frontal completamente lisa con un único símbolo en relieve incrustado en el centro (variantes: gota de agua verde, tres esferas azules agrupadas o silueta de montaña magenta de dos picos). Cara superior con dos orificios circulares limpios para el anclaje del arco, sin cerraduras ni ranuras visibles.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado cerrado con ambos extremos del arco insertados en el chasis; estado abierto con el arco elevado y rotado hacia el exterior dejando visible el orificio izquierdo, manteniendo el halo luminoso del emblema activo en ambos estados.\n- En planos generales, se simplifica a un bloque cuadrado ocre con una mancha de color brillante en el centro y un arco gris simple, eliminando biseles y reflejos translúcidos.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nCandado estilizado 3D de proporciones gruesas, formado por un chasis cuadrado de metal dorado satinado con bordes redondeados y un grueso arco cilíndrico superior de acero plateado azulado. En el centro de su cara frontal lisa destaca un emblema translúcido brillante en relieve (gota verde, tres esferas azules o montaña magenta) rodeado por un halo de luz cálida, contando únicamente con dos orificios circulares superiores para el mecanismo de elevación y giro del arco.",
+  "creado": "2026-11-06T04:03:14+01:00"
+}

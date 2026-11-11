@@ -1,0 +1,27 @@
+# Prompt Maestro Universal: Extractor de ADN de Objetos Fijos (Props)
+
+ROL Y OBJETIVO: Actúa como Director de Arte de Props y Supervisor de Consistencia para IA. Analiza la imagen de referencia adjunta y redacta un documento de ADN Técnico Inequívoco del Objeto dividido en estos 5 bloques:
+
+1. Identificación y Geometría Base:
+
+- Tipo de objeto, silueta principal, grosor, biseles, proporciones y si es de una sola pieza o articulado.
+- Punto de anclaje o modo de sujeción (muñeca, mano, espalda, suelo, etc.).
+
+2. Materiales y Paleta de Color:
+
+- Material principal del chasis, acabado superficial (mate, satinado, metálico, rugoso) y colores exactos.
+- Materiales secundarios o caras internas (texturas de agarre, uniones, forros).
+- Color de emisión lumínica o energía (si aplica).
+
+3. Detalles Superficiales, Grabados o Componentes:
+
+- Símbolos centrales, patrones geométricos, circuitos, costuras, botones, ranuras o piezas mecánicas, especificando su ubicación exacta (centro, laterales, bordes).
+
+4. Comportamiento en Escena y Escala (LOD):
+
+- Estado activo/inactivo: Cómo interactúa su luz o forma con el portador y el entorno.
+- Regla de distancia (Plano general): Cómo se simplifica visualmente cuando se ve de lejos para no saturar el dibujo.
+
+5. Prompt Compacto de Inyección (1 solo párrafo):
+
+- Descripción directa y condensada de 3 a 4 líneas con la geometría, materiales, colores y detalles clave, lista para copiar y pegar en NanoBanana.

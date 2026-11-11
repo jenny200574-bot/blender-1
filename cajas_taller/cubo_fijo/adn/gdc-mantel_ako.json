@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-mantel",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Mantel rectangular de una sola pieza con caída pesada, moldeado sobre una superficie plana de bordes redondeados. Silueta trapezoidal con parte superior lisa y faldones verticales que forman pliegues tubulares amplios, terminando en cuatro esquinas puntiagudas más bajas que los laterales.\n- Punto de anclaje: Reposa por gravedad sobre el tablero de una mesa rectangular fija."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Material principal: Textil grueso estilizado en 3D con acabado completamente mate, liso y sin grano de tejido visible. Color base beige claro o crema cálido uniforme.\n- Materiales secundarios: Cara interna del mismo material y color; al levantarse revela un tablero inferior rígido del mismo tono crema.\n- Detalles cromáticos: Cenefa bicolor en amarillo mostaza y naranja tostado. Sin emisión lumínica."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Superficie central y superior totalmente limpia, sin costuras, botones ni texturas.\n- Presenta una doble franja decorativa continua que recorre todo el perímetro cercano al dobladillo inferior: una línea interna delgada en amarillo mostaza unida directamente a una banda externa más ancha en color naranja tostado."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado activo/inactivo: En reposo oculta el interior; en interacción, el faldón lateral o frontal se pliega hacia arriba sobre el tablero, exponiendo el borde redondeado de la mesa y la cavidad en sombra.\n- Regla de distancia (Plano general): Se simplifica como un volumen geométrico crema de bordes suaves con una sola línea naranja en el borde inferior, reduciendo los pliegues a siluetas básicas en las esquinas."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Mantel rectangular estilizado 3D de tela gruesa color beige crema con acabado mate liso, colocado sobre una mesa rectangular con caída pesada y pliegues suaves que forman cuatro esquinas puntiagudas colgantes. Presenta una doble franja continua cerca del borde inferior compuesta por una línea fina amarillo mostaza unida a una banda naranja tostado más ancha, manteniendo el resto de la superficie totalmente limpia y sin costuras."
+    }
+  ],
+  "inyeccion": "Mantel rectangular estilizado 3D de tela gruesa color beige crema con acabado mate liso, colocado sobre una mesa rectangular con caída pesada y pliegues suaves que forman cuatro esquinas puntiagudas colgantes. Presenta una doble franja continua cerca del borde inferior compuesta por una línea fina amarillo mostaza unida a una banda naranja tostado más ancha, manteniendo el resto de la superficie totalmente limpia y sin costuras.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Mantel rectangular de una sola pieza con caída pesada, moldeado sobre una superficie plana de bordes redondeados. Silueta trapezoidal con parte superior lisa y faldones verticales que forman pliegues tubulares amplios, terminando en cuatro esquinas puntiagudas más bajas que los laterales.\n- Punto de anclaje: Reposa por gravedad sobre el tablero de una mesa rectangular fija.\n\n2. Materiales y Paleta de Color:\n\n- Material principal: Textil grueso estilizado en 3D con acabado completamente mate, liso y sin grano de tejido visible. Color base beige claro o crema cálido uniforme.\n- Materiales secundarios: Cara interna del mismo material y color; al levantarse revela un tablero inferior rígido del mismo tono crema.\n- Detalles cromáticos: Cenefa bicolor en amarillo mostaza y naranja tostado. Sin emisión lumínica.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Superficie central y superior totalmente limpia, sin costuras, botones ni texturas.\n- Presenta una doble franja decorativa continua que recorre todo el perímetro cercano al dobladillo inferior: una línea interna delgada en amarillo mostaza unida directamente a una banda externa más ancha en color naranja tostado.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado activo/inactivo: En reposo oculta el interior; en interacción, el faldón lateral o frontal se pliega hacia arriba sobre el tablero, exponiendo el borde redondeado de la mesa y la cavidad en sombra.\n- Regla de distancia (Plano general): Se simplifica como un volumen geométrico crema de bordes suaves con una sola línea naranja en el borde inferior, reduciendo los pliegues a siluetas básicas en las esquinas.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nMantel rectangular estilizado 3D de tela gruesa color beige crema con acabado mate liso, colocado sobre una mesa rectangular con caída pesada y pliegues suaves que forman cuatro esquinas puntiagudas colgantes. Presenta una doble franja continua cerca del borde inferior compuesta por una línea fina amarillo mostaza unida a una banda naranja tostado más ancha, manteniendo el resto de la superficie totalmente limpia y sin costuras.",
+  "creado": "2026-11-06T04:03:14+01:00"
+}

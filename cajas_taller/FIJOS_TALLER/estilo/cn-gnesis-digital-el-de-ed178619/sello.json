@@ -1,0 +1,16 @@
+{
+ "schema": "myia.sello_estilo/v1",
+ "canal": "cn-gnesis-digital-el-de-ed178619",
+ "canal_nombre": "GÉNESIS DIGITAL: EL DESPERTAR DE IMI",
+ "version": 1,
+ "nombre": "Ghibli / Cozy Fantasy + Anime Cinemático de Alta Gama",
+ "descripcion_en": "VISUAL STYLE (fixed channel style): cozy fantasy hand-painted anime feature film combined with high-end cinematic anime. Backgrounds: lush hand-painted gouache and watercolor texture, rich layered foliage and stones, visible soft brush texture, warm cozy atmosphere. Lighting: cinematic anime film-still lighting, volumetric light shafts, soft bloom on magical glow, gentle depth of field, atmospheric perspective with distance fading. Characters: fine thin clean lineart, soft.",
+ "texto_sha256": "8b263b5be3bba55d7e4bbd7799b75dd4bdde650ede279a1351c1e285555dca61",
+ "imagen": "/opt/myia-taller-n8n/cajas/FIJOS_TALLER/estilo/cn-gnesis-digital-el-de-ed178619/ESTILO_CANAL_v1.png",
+ "imagen_sha256": "ab0f38e16f1cbcaf5b1736bb59da2902c8e4a6865b924e3bf27a607ffde989f0",
+ "imagen_origen": "legado v1: muestra global aprobada por este canal (se migra a su carpeta propia)",
+ "estado": "imagen+texto",
+ "fijado": "2026-11-02T22:44:20+01:00",
+ "programa": "estilo_oficial v2 (sello por canal, 2-nov-2026)",
+ "regla": "FIJO: los pasos lo consultan; no se edita a mano. Cambia solo si cambia el style_fijo aprobado en la app."
+}

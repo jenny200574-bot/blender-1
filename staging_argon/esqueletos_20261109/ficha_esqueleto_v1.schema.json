@@ -1,0 +1,396 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "ficha_esqueleto/v1",
+ "title": "Ficha de esqueleto MYIA v1",
+ "description": "Unidades: fracción de altura_m. Ejes: +Z arriba, -Y frente, +X izquierda del personaje (L). Suelo z=0, punto más alto de las piezas z≈1. Límites en grados en ejes del cuerpo en reposo (x cabeceo, y alabeo, z giro), orden XYZ, 0=reposo. Espejo L→R: x negado; límite x igual; y,z negados e intercambiados.",
+ "type": "object",
+ "required": [
+  "schema",
+  "id",
+  "nombre",
+  "plantilla",
+  "es_ficticio",
+  "analogo_real",
+  "altura_m",
+  "origen",
+  "fuentes",
+  "huesos",
+  "piezas",
+  "rostro",
+  "poses_prueba"
+ ],
+ "properties": {
+  "schema": {
+   "type": "string",
+   "const": "ficha_esqueleto/v1"
+  },
+  "id": {
+   "type": "string"
+  },
+  "nombre": {
+   "type": "string"
+  },
+  "plantilla": {
+   "type": "string",
+   "enum": [
+    "bipedo_humano",
+    "ave",
+    "cuadrupedo",
+    "pez",
+    "serpiente",
+    "objeto_magico",
+    "otro"
+   ]
+  },
+  "es_ficticio": {
+   "type": "boolean"
+  },
+  "analogo_real": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "description": "animal real del que se deduce el esqueleto si es ficticio"
+  },
+  "altura_m": {
+   "type": "number",
+   "minimum": 0.01,
+   "maximum": 30
+  },
+  "origen": {
+   "type": "object",
+   "required": [
+    "tipo",
+    "autor",
+    "fecha"
+   ],
+   "properties": {
+    "tipo": {
+     "type": "string",
+     "enum": [
+      "EJEMPLO_MANUAL",
+      "argon"
+     ]
+    },
+    "autor": {
+     "type": "string"
+    },
+    "fecha": {
+     "type": "string"
+    },
+    "aviso": {
+     "type": "string"
+    }
+   }
+  },
+  "fuentes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "tipo",
+     "titulo",
+     "url",
+     "afirma"
+    ],
+    "properties": {
+     "tipo": {
+      "type": "string",
+      "enum": [
+       "web",
+       "conocimiento",
+       "hoja_personaje",
+       "deduccion"
+      ]
+     },
+     "titulo": {
+      "type": "string"
+     },
+     "url": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "afirma": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "huesos": {
+   "type": "array",
+   "minItems": 2,
+   "items": {
+    "type": "object",
+    "required": [
+     "nombre",
+     "padre",
+     "cabeza",
+     "cola",
+     "rol",
+     "lado",
+     "limites_deg",
+     "funcion"
+    ],
+    "properties": {
+     "nombre": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_]{0,62}$"
+     },
+     "padre": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "cabeza": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+     },
+     "cola": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+     },
+     "rol": {
+      "type": "string",
+      "enum": [
+       "raiz",
+       "cadera",
+       "columna",
+       "pecho",
+       "cuello",
+       "cabeza",
+       "mandibula",
+       "pico",
+       "oreja",
+       "copete",
+       "cola",
+       "hombro",
+       "brazo",
+       "antebrazo",
+       "mano",
+       "ala",
+       "pierna",
+       "pie",
+       "dedos",
+       "pata_delantera",
+       "pata_trasera",
+       "aleta",
+       "otro"
+      ]
+     },
+     "lado": {
+      "type": "string",
+      "enum": [
+       "C",
+       "L",
+       "R"
+      ]
+     },
+     "limites_deg": {
+      "type": "object",
+      "required": [
+       "x",
+       "y",
+       "z"
+      ],
+      "properties": {
+       "x": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+       },
+       "y": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+       },
+       "z": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+       }
+      }
+     },
+     "funcion": {
+      "type": "string",
+      "description": "hueso o grupo anatómico real que representa"
+     }
+    }
+   }
+  },
+  "piezas": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "nombre",
+     "hueso",
+     "primitiva",
+     "modo",
+     "color"
+    ],
+    "properties": {
+     "nombre": {
+      "type": "string"
+     },
+     "hueso": {
+      "type": "string"
+     },
+     "primitiva": {
+      "type": "string",
+      "enum": [
+       "esfera",
+       "capsula",
+       "cilindro",
+       "cono",
+       "caja",
+       "toro"
+      ]
+     },
+     "modo": {
+      "type": "string",
+      "enum": [
+       "hueso",
+       "libre"
+      ],
+      "description": "hueso: capsula/cilindro/cono a lo largo del hueso con 'radio'; libre: 'centro'+'radios'(+rotacion_deg)"
+     },
+     "radio": {
+      "type": "number"
+     },
+     "centro": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+     },
+     "radios": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+     },
+     "rotacion_deg": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+     },
+     "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     }
+    }
+   }
+  },
+  "rostro": {
+   "type": "object",
+   "required": [
+    "hueso",
+    "ojos",
+    "nariz"
+   ],
+   "properties": {
+    "hueso": {
+     "type": "string"
+    },
+    "ojos": {
+     "type": "object",
+     "required": [
+      "centro_L",
+      "radio"
+     ],
+     "properties": {
+      "centro_L": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "minItems": 3,
+       "maxItems": 3
+      },
+      "radio": {
+       "type": "number"
+      }
+     }
+    },
+    "nariz": {
+     "type": "object",
+     "required": [
+      "centro",
+      "radio",
+      "primitiva"
+     ],
+     "properties": {
+      "centro": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "minItems": 3,
+       "maxItems": 3
+      },
+      "radio": {
+       "type": "number"
+      },
+      "primitiva": {
+       "type": "string",
+       "enum": [
+        "esfera",
+        "cono"
+       ]
+      },
+      "color": {
+       "type": "string"
+      },
+      "nota": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "poses_prueba": {
+   "type": "object",
+   "description": "{nombre_pose: {hueso: [x,y,z] grados}}",
+   "additionalProperties": {
+    "type": "object",
+    "additionalProperties": {
+     "type": "array",
+     "items": {
+      "type": "number"
+     },
+     "minItems": 3,
+     "maxItems": 3
+    }
+   }
+  }
+ }
+}

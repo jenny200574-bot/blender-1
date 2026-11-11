@@ -1,0 +1,35 @@
+{
+  "nota": "Tipos de apoyo de una receta o ficha. El esquema, el revisor y la plantilla leen este archivo. No hay ids de canal, escenario ni pieza.",
+  "apoyos": {
+    "piso": {
+      "toca": "z_min",
+      "descripcion": "lo más bajo toca z = 0"
+    },
+    "sobre_otro": {
+      "toca": "z_min",
+      "descripcion": "lo más bajo toca z = 0 (se apoya sobre otro objeto; en la caja local es el piso de la caja)",
+      "alias": []
+    },
+    "pared": {
+      "toca": "y_max",
+      "descripcion": "la espalda toca y = +fondo/2"
+    },
+    "montado_frente": {
+      "toca": "y_max",
+      "descripcion": "la espalda toca y = +fondo/2"
+    },
+    "techo": {
+      "toca": "z_max",
+      "descripcion": "lo más alto toca z = alto (va montado al techo)"
+    },
+    "colgado": {
+      "toca": "z_max",
+      "descripcion": "cuelga: lo más alto toca z = alto (no apoya en el piso)"
+    },
+    "en_mano": {
+      "toca": "libre",
+      "descripcion": "libre (va en la mano; no tiene que tocar una cara de la caja)",
+      "alias": ["sostenido"]
+    }
+  }
+}

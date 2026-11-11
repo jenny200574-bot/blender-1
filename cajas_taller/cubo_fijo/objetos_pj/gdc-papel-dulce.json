@@ -1,0 +1,34 @@
+{
+  "id": "gdc-papel-dulce",
+  "nombre": "papel dulce",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "historia",
+  "sellado": true,
+  "version": 2,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-papel-dulce.png",
+  "imagen_sha256": "fe2ddf7c9d3ecc08b5e58b207e880e80137b1737974337b52910d681ba1228fe",
+  "imagen_origen": "paso 00 4b2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 6.0,
+    "fondo_cm": 5.0,
+    "alto_cm": 4.5
+  },
+  "medidas_fuente": "4b1 inv_obj_historia__obj-pincel-magico__b2bdc3.json",
+  "ids_capitulo": [
+    "obj-papel-dulce"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-papel-dulce"
+  ],
+  "frase_sello": "Caramelo envuelto 3D de una sola pieza, con cuerpo central esférico, base ligeramente plana y dos extremos retorcidos acampanados en abanico con bordes gruesos ondulados. Textura de papel grueso mate satinado en color gris pizarra frío, decorado con franjas horizontales en gris claro que convergen y se deforman en los dos cuellos de torsión junto con pliegues profundos de tensión.",
+  "actualizado": "2026-11-06T04:03:13+01:00",
+  "origen": "sellar"
+}

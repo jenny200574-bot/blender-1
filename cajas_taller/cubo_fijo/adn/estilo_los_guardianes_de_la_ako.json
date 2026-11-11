@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "estilo_los_guardianes_de_la",
+  "clase": "estilo",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "05_MAESTRO_ESTILO.txt",
+  "maestro_sha256": "a41e1c47e13beede",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Estilo de Línea y Entintado (Lineart):",
+      "texto": "Ausencia total de línea 2D tradicional o entintado. Los contornos y divisiones internas se definen exclusivamente mediante geometría 3D, biselados suaves, oclusión ambiental profunda y ranuras luminosas integradas. Los bordes son limpios, continuos y perfectamente suavizados."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Técnica de Color y Sombreado (Rendering):",
+      "texto": "Renderizado CGI 3D estilizado con sombreado suave basado en físicas (PBR). La piel presenta dispersión subsuperficial (*subsurface scattering*) para un acabado orgánico y cálido, contrastando con materiales sintéticos bien diferenciados: metales anodizados satinados, textiles mate de grano fino y superficies plásticas translúcidas de alto brillo."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Iluminación, Emisión y Atmósfera (Lighting & Bloom):",
+      "texto": "Iluminación de estudio volumétrica con marcadas luces de contorno (*rim light*) y reflejos especulares suaves en las zonas curvas. Fuerte presencia de luz autoiluminada (emisión) con efectos de resplandor (*bloom*) neón y proyecciones translúcidas. Atmósfera limpia con profundidad de campo reducida, fondo desenfocado y sutiles partículas de *bokeh*."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Paleta Cromática Dominante:",
+      "texto": "Esquema complementario de alto contraste dominado por azul cian metálico, azul marino profundo y acentos vibrantes en naranja cálido y ámbar luminoso. El conjunto se equilibra sobre un fondo neutro y suave en tonos beige, crema y melocotón claro."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges and soft ambient occlusion. Physically based rendering featuring warm subsurface scattering on skin, contrasted with glossy translucent plastics, satin anodized metals, and matte fabric textures. Volumetric studio lighting with strong rim lights, vibrant neon emissive glow, soft bloom effects, and a shallow depth of field with subtle bokeh. Complementary color palette dominated by metallic cyan, deep blue, and glowing amber orange against a warm, soft neutral beige background."
+    }
+  ],
+  "inyeccion": "High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges and soft ambient occlusion. Physically based rendering featuring warm subsurface scattering on skin, contrasted with glossy translucent plastics, satin anodized metals, and matte fabric textures. Volumetric studio lighting with strong rim lights, vibrant neon emissive glow, soft bloom effects, and a shallow depth of field with subtle bokeh. Complementary color palette dominated by metallic cyan, deep blue, and glowing amber orange against a warm, soft neutral beige background.",
+  "texto": "1. Estilo de Línea y Entintado (Lineart):\n\nAusencia total de línea 2D tradicional o entintado. Los contornos y divisiones internas se definen exclusivamente mediante geometría 3D, biselados suaves, oclusión ambiental profunda y ranuras luminosas integradas. Los bordes son limpios, continuos y perfectamente suavizados.\n\n2. Técnica de Color y Sombreado (Rendering):\n\nRenderizado CGI 3D estilizado con sombreado suave basado en físicas (PBR). La piel presenta dispersión subsuperficial (*subsurface scattering*) para un acabado orgánico y cálido, contrastando con materiales sintéticos bien diferenciados: metales anodizados satinados, textiles mate de grano fino y superficies plásticas translúcidas de alto brillo.\n\n3. Iluminación, Emisión y Atmósfera (Lighting & Bloom):\n\nIluminación de estudio volumétrica con marcadas luces de contorno (*rim light*) y reflejos especulares suaves en las zonas curvas. Fuerte presencia de luz autoiluminada (emisión) con efectos de resplandor (*bloom*) neón y proyecciones translúcidas. Atmósfera limpia con profundidad de campo reducida, fondo desenfocado y sutiles partículas de *bokeh*.\n\n4. Paleta Cromática Dominante:\n\nEsquema complementario de alto contraste dominado por azul cian metálico, azul marino profundo y acentos vibrantes en naranja cálido y ámbar luminoso. El conjunto se equilibra sobre un fondo neutro y suave en tonos beige, crema y melocotón claro.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nHigh-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges and soft ambient occlusion. Physically based rendering featuring warm subsurface scattering on skin, contrasted with glossy translucent plastics, satin anodized metals, and matte fabric textures. Volumetric studio lighting with strong rim lights, vibrant neon emissive glow, soft bloom effects, and a shallow depth of field with subtle bokeh. Complementary color palette dominated by metallic cyan, deep blue, and glowing amber orange against a warm, soft neutral beige background.",
+  "creado": "2026-11-02T23:15:41+01:00"
+}

@@ -1,0 +1,440 @@
+{
+ "nota": "o110 (t289u): biblioteca basica de poses para cualquier humanoide VRM. Marco del personaje: +X = su izquierda, -Y = su frente, +Z = arriba. Cada parte: dir (direccion hueso, en el marco del personaje de pie) y giro (twist en grados alrededor de dir). 'cuerpo' = orientacion de todo el cuerpo (grados alrededor del eje izquierda-derecha: -90 = boca arriba, +90 = boca abajo). 'apoyo' = que debe tocar el piso. Nombre desconocido = FALTA (nunca se inventa).",
+ "partes": {
+  "torso": "J_Bip_C_Spine",
+  "cuello": "J_Bip_C_Neck",
+  "brazo_izq": "J_Bip_L_UpperArm",
+  "antebrazo_izq": "J_Bip_L_LowerArm",
+  "brazo_der": "J_Bip_R_UpperArm",
+  "antebrazo_der": "J_Bip_R_LowerArm",
+  "muslo_izq": "J_Bip_L_UpperLeg",
+  "pierna_izq": "J_Bip_L_LowerLeg",
+  "muslo_der": "J_Bip_R_UpperLeg",
+  "pierna_der": "J_Bip_R_LowerLeg",
+  "pie_izq": "J_Bip_L_Foot",
+  "pie_der": "J_Bip_R_Foot"
+ },
+ "poses": {
+  "de_pie": {
+   "alias": [
+    "parado",
+    "erguido"
+   ],
+   "cuerpo": 0,
+   "apoyo": "pies",
+   "partes": {
+    "torso": {
+     "dir": [
+      0,
+      0,
+      1
+     ],
+     "giro": 0
+    },
+    "cuello": {
+     "dir": [
+      0,
+      0,
+      1
+     ],
+     "giro": 0
+    },
+    "brazo_izq": {
+     "dir": [
+      0.18,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "antebrazo_izq": {
+     "dir": [
+      0.12,
+      -0.1,
+      -1
+     ],
+     "giro": 0
+    },
+    "brazo_der": {
+     "dir": [
+      -0.18,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "antebrazo_der": {
+     "dir": [
+      -0.12,
+      -0.1,
+      -1
+     ],
+     "giro": 0
+    },
+    "muslo_izq": {
+     "dir": [
+      0.03,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "pierna_izq": {
+     "dir": [
+      0.03,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "muslo_der": {
+     "dir": [
+      -0.03,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "pierna_der": {
+     "dir": [
+      -0.03,
+      0,
+      -1
+     ],
+     "giro": 0
+    }
+   }
+  },
+  "caminando": {
+   "alias": [
+    "andando"
+   ],
+   "cuerpo": 0,
+   "apoyo": "pies",
+   "partes": {
+    "torso": {
+     "dir": [
+      0,
+      -0.05,
+      1
+     ],
+     "giro": 0
+    },
+    "cuello": {
+     "dir": [
+      0,
+      0,
+      1
+     ],
+     "giro": 0
+    },
+    "brazo_izq": {
+     "dir": [
+      0.15,
+      0.35,
+      -1
+     ],
+     "giro": 0
+    },
+    "antebrazo_izq": {
+     "dir": [
+      0.1,
+      0.1,
+      -1
+     ],
+     "giro": 0
+    },
+    "brazo_der": {
+     "dir": [
+      -0.15,
+      -0.35,
+      -1
+     ],
+     "giro": 0
+    },
+    "antebrazo_der": {
+     "dir": [
+      -0.1,
+      -0.6,
+      -1
+     ],
+     "giro": 0
+    },
+    "muslo_izq": {
+     "dir": [
+      0.03,
+      -0.4,
+      -1
+     ],
+     "giro": 0
+    },
+    "pierna_izq": {
+     "dir": [
+      0.03,
+      -0.15,
+      -1
+     ],
+     "giro": 0
+    },
+    "muslo_der": {
+     "dir": [
+      -0.03,
+      0.3,
+      -1
+     ],
+     "giro": 0
+    },
+    "pierna_der": {
+     "dir": [
+      -0.03,
+      0.55,
+      -1
+     ],
+     "giro": 0
+    }
+   }
+  },
+  "sentado": {
+   "alias": [
+    "sentada"
+   ],
+   "cuerpo": 0,
+   "apoyo": "asiento_y_pies",
+   "asiento": true,
+   "partes": {
+    "torso": {
+     "dir": [
+      0,
+      0.05,
+      1
+     ],
+     "giro": 0
+    },
+    "cuello": {
+     "dir": [
+      0,
+      0,
+      1
+     ],
+     "giro": 0
+    },
+    "brazo_izq": {
+     "dir": [
+      0.2,
+      -0.25,
+      -1
+     ],
+     "giro": 0
+    },
+    "antebrazo_izq": {
+     "dir": [
+      0.05,
+      -1,
+      -0.25
+     ],
+     "giro": 0
+    },
+    "brazo_der": {
+     "dir": [
+      -0.2,
+      -0.25,
+      -1
+     ],
+     "giro": 0
+    },
+    "antebrazo_der": {
+     "dir": [
+      -0.05,
+      -1,
+      -0.25
+     ],
+     "giro": 0
+    },
+    "muslo_izq": {
+     "dir": [
+      0.08,
+      -1,
+      0
+     ],
+     "giro": 0
+    },
+    "pierna_izq": {
+     "dir": [
+      0.08,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "muslo_der": {
+     "dir": [
+      -0.08,
+      -1,
+      0
+     ],
+     "giro": 0
+    },
+    "pierna_der": {
+     "dir": [
+      -0.08,
+      0,
+      -1
+     ],
+     "giro": 0
+    }
+   }
+  },
+  "de_rodillas": {
+   "alias": [
+    "arrodillado",
+    "hincado"
+   ],
+   "cuerpo": 0,
+   "apoyo": "rodillas",
+   "partes": {
+    "torso": {
+     "dir": [
+      0,
+      0,
+      1
+     ],
+     "giro": 0
+    },
+    "cuello": {
+     "dir": [
+      0,
+      0,
+      1
+     ],
+     "giro": 0
+    },
+    "brazo_izq": {
+     "dir": [
+      0.18,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "antebrazo_izq": {
+     "dir": [
+      0.1,
+      -0.3,
+      -1
+     ],
+     "giro": 0
+    },
+    "brazo_der": {
+     "dir": [
+      -0.18,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "antebrazo_der": {
+     "dir": [
+      -0.1,
+      -0.3,
+      -1
+     ],
+     "giro": 0
+    },
+    "muslo_izq": {
+     "dir": [
+      0.08,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "pierna_izq": {
+     "dir": [
+      0.08,
+      1,
+      -0.05
+     ],
+     "giro": 0
+    },
+    "muslo_der": {
+     "dir": [
+      -0.08,
+      0,
+      -1
+     ],
+     "giro": 0
+    },
+    "pierna_der": {
+     "dir": [
+      -0.08,
+      1,
+      -0.05
+     ],
+     "giro": 0
+    },
+    "pie_izq": {
+     "dir": [
+      0.08,
+      1,
+      0.0
+     ],
+     "giro": 0
+    },
+    "pie_der": {
+     "dir": [
+      -0.08,
+      1,
+      0.0
+     ],
+     "giro": 0
+    }
+   }
+  },
+  "acostado_boca_arriba": {
+   "alias": [
+    "boca_arriba",
+    "tumbado_boca_arriba",
+    "caido_de_espaldas"
+   ],
+   "cuerpo": -90,
+   "apoyo": "espalda",
+   "base": "de_pie"
+  },
+  "acostado_boca_abajo": {
+   "alias": [
+    "boca_abajo",
+    "tumbado_boca_abajo"
+   ],
+   "cuerpo": 90,
+   "apoyo": "pecho",
+   "base": "de_pie"
+  },
+  "senalando": {
+   "alias": [
+    "señalando",
+    "apuntando"
+   ],
+   "cuerpo": 0,
+   "apoyo": "pies",
+   "base": "de_pie",
+   "partes": {
+    "brazo_der": {
+     "dir": [
+      -0.15,
+      -1,
+      0.08
+     ],
+     "giro": 0
+    },
+    "antebrazo_der": {
+     "dir": [
+      -0.1,
+      -1,
+      0.08
+     ],
+     "giro": 0
+    }
+   }
+  }
+ }
+}

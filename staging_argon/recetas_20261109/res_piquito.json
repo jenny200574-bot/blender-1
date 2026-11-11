@@ -1,0 +1,11 @@
+{
+  "caso": "piquito",
+  "enviado": true,
+  "id": "investigacion-piquito-20261109-193508",
+  "est": 0.7009,
+  "usd_real": 0.6443,
+  "fin": "FinishReason.STOP",
+  "tokens_entrada": "[REDACTED]",
+  "tokens_salida": "[REDACTED]",
+  "salida": "/opt/myia-staging-arreglos-20261026/recetas_20261109/respuestas/piquito.json"
+}

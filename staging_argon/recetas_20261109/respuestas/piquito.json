@@ -1,0 +1,4305 @@
+{
+  "schema": "investigacion/v1",
+  "tipo": "personaje",
+  "id": "polluelo_chibi_mascota",
+  "nombre": "Polluelo Chibi de Hombro",
+  "identificacion": {
+    "clase": "ave",
+    "es_ficticio": true,
+    "altura_o_tamano_m": 0.18,
+    "analogos": [
+      {
+        "nombre": "Gallus gallus domesticus (polluelo precoz de gallina doméstica)",
+        "por_que": "Ave terrestre bípeda de cuerpo redondo, alas cortas, patas desprovistas de plumas con disposición anisodáctila (3 dedos frontales y 1 trasero) y desarrollo precoz nidífugo con plumón amarillo y locomoción inmediata tras la eclosión.",
+        "que_cambia": "Proporción chibi de 2 cabezas de alto (la cabeza ocupa el 50% de los 18 cm de estatura), fusión directa entre cabeza esférica y torso piriforme sin cuello divisorio externo, cresta rígida de 3 plumas curvas naranjas (#FF6B2B) en vez de cresta carnosa, cejas flotantes expresivas y dedos redondeados sin uñas diferenciadas."
+      },
+      {
+        "nombre": "Alectoris chukar juvenil / Columba livia (modelo cinemático alar aviar)",
+        "por_que": "El juvenil de galliforme emplea protoalas cortas cooperativamente con las patas traseras para correr en pendientes asistido por aleteo (WAIR), saltar y realizar vuelos breves mediante una cadena articular de hombro (3 DOF), codo (1 DOF) y muñeca (2 DOF).",
+        "que_cambia": "Simplificación estilizada del ala en una estructura corta bicolor (base amarilla #FFD84D y 3 plumas primarias naranjas #FF6B2B) que además de batir en saltos funciona como extremidad expresiva para gesticular."
+      }
+    ]
+  },
+  "datos": [
+    {
+      "clave": "antropometria.estatura_m",
+      "valor": 0.18,
+      "unidad": "m",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "1. Ficha Antropométrica > Estatura aparente",
+      "razon": "Estatura aparente sellada de 18 cm (0.18 m, escala mascota de hombro)."
+    },
+    {
+      "clave": "antropometria.proporcion_cabezas",
+      "valor": 2,
+      "unidad": "cabezas",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "1. Ficha Antropométrica > Proporción en cabezas",
+      "razon": "Canon chibi de 2 cabezas de alto."
+    },
+    {
+      "clave": "proporcion.cabeza_altura",
+      "valor": 0.5,
+      "unidad": "fraccion_altura",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "1. Ficha Antropométrica > Proporción en cabezas",
+      "razon": "La cabeza representa el 50% de la altura total."
+    },
+    {
+      "clave": "proporcion.silueta_general",
+      "valor": "pera_rechoncha_en_S",
+      "unidad": null,
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "1. Ficha Antropométrica > Complexión física; 5. Reglas de Giro > De perfil",
+      "razon": "Complexión rechoncha, compacta y redondeada en forma de pera con silueta lateral en S y pecho prominente."
+    },
+    {
+      "clave": "proporcion.cuello_visible",
+      "valor": 0.0,
+      "unidad": "fraccion_altura",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "2. Fisonomía Facial y Cabello > Forma del rostro",
+      "razon": "Cabeza esférica fusionada directamente con el torso sin cuello divisorio visible."
+    },
+    {
+      "clave": "proporcion.tronco_altura",
+      "valor": 0.34,
+      "unidad": "fraccion_altura",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "proporcion.cabeza_altura",
+        "proporcion.silueta_general"
+      ],
+      "razon": "El torso piriforme abarca desde la base abdominal baja (0.14) hasta la unión cefálica (0.48), ocupando el 34% de la altura total."
+    },
+    {
+      "clave": "proporcion.patas_altura",
+      "valor": 0.18,
+      "unidad": "fraccion_altura",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "proporcion.cabeza_altura",
+        "proporcion.tronco_altura"
+      ],
+      "razon": "Las patas cortas se articulan internamente en la cadera (z=0.18) y emergen bajo el abdomen redondeado hasta el suelo (z=0.0)."
+    },
+    {
+      "clave": "proporcion.cresta_plumas",
+      "valor": 3,
+      "unidad": "plumas",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "2. Fisonomía Facial y Cabello > Cabello (Cresta)",
+      "razon": "Penacho central rígido compuesto por 3 plumas curvas escalonadas en color naranja rojizo (#FF6B2B)."
+    },
+    {
+      "clave": "proporcion.pecho_ondas",
+      "valor": 4,
+      "unidad": "puntas_pluma",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "4. Vestuario por Capas > Prenda interior (Pecho)",
+      "razon": "Detalle escultórico de 4 puntas de plumas superpuestas en relieve sobre la parte superior del pecho."
+    },
+    {
+      "clave": "proporcion.ala_primarias",
+      "valor": 3,
+      "unidad": "plumas",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "4. Vestuario por Capas > Prenda inferior (Alas y Cola)",
+      "razon": "Alas cortas amarillas en la base con 3 plumas primarias en color naranja rojizo (#FF6B2B) en los extremos."
+    },
+    {
+      "clave": "proporcion.cola_plumas",
+      "valor": 3,
+      "unidad": "plumas",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "4. Vestuario por Capas > Prenda inferior (Alas y Cola); 5. Reglas de Giro > De espaldas",
+      "razon": "Cola corta trasera formada por 3 plumas naranjas rojizas desplegadas como abanico simétrico de 3 pétalos."
+    },
+    {
+      "clave": "proporcion.cola_angulo_perfil_deg",
+      "valor": 45,
+      "unidad": "deg",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "5. Reglas de Giro > De perfil",
+      "razon": "De perfil la cola sobresale hacia atrás y arriba en ángulo de 45 grados."
+    },
+    {
+      "clave": "anatomia.peso_polluelo_real_g",
+      "valor": 37,
+      "unidad": "g",
+      "origen": "fuente",
+      "fuente_id": "F02",
+      "cita": "Newly hatched chicks of both modern and heritage varieties weigh the same, about 37 g (1.3 oz).",
+      "campo_hoja": null,
+      "razon": "Masa corporal de referencia del polluelo recién eclosionado en el análogo real."
+    },
+    {
+      "clave": "anatomia.fraccion_peso_esqueleto",
+      "valor": 0.05,
+      "unidad": "fraccion_peso",
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "A bird's skeleton accounts for only about 5% of its total body weight.",
+      "campo_hoja": null,
+      "razon": "Ligereza estructural del esqueleto aviar respecto al peso corporal total."
+    },
+    {
+      "clave": "anatomia.fraccion_peso_craneo",
+      "valor": 0.01,
+      "unidad": "fraccion_peso",
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The skull of a normal bird usually weighs about 1% of the bird's total body weight.",
+      "campo_hoja": null,
+      "razon": "Cráneo aviar ligero con grandes órbitas oculares y pico sin dientes."
+    },
+    {
+      "clave": "anatomia.vertebras_cervicales_rango",
+      "valor": [
+        8,
+        25
+      ],
+      "unidad": "vertebras",
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The cervical vertebrae provide structural support to the neck and number between 8 and as many as 25 vertebrae",
+      "campo_hoja": null,
+      "razon": "Soporte cervical flexible interno que permite orientar la cabeza y estabilizar la mirada."
+    },
+    {
+      "clave": "anatomia.vertebras_toracicas_rango",
+      "valor": [
+        5,
+        10
+      ],
+      "unidad": "vertebras",
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The thoracic vertebrae number between five and ten, and the first thoracic vertebra is distinguishable due to the fusion of its attached rib to the sternum",
+      "campo_hoja": null,
+      "razon": "Región torácica conectada al esternón y cintura pectoral."
+    },
+    {
+      "clave": "anatomia.sinsacro_composicion",
+      "valor": "1_toracica_6_lumbares_2_sacras_5_sacrocaudales",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The synsacrum consists of one thoracic, six lumbar, two sacral, and five sacro-caudal vertebrae fused into one ossified structure that then fuse with the ilium.",
+      "campo_hoja": null,
+      "razon": "Estructura pélvica fusionada que proporciona el soporte principal cuando el ave está en tierra."
+    },
+    {
+      "clave": "anatomia.vertebras_caudales_libres",
+      "valor": [
+        5,
+        8
+      ],
+      "unidad": "vertebras",
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "Birds have between five and eight free caudal vertebrae.",
+      "campo_hoja": null,
+      "razon": "Segmento caudal móvil en la base de la cola."
+    },
+    {
+      "clave": "anatomia.pigostilo_vertebras_fusionadas",
+      "valor": 4,
+      "unidad": "vertebras",
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "In birds, the last four caudal vertebrae are fused to form the pygostyle.",
+      "campo_hoja": null,
+      "razon": "Hueso terminal de la cola donde se insertan las rectrices del abanico caudal."
+    },
+    {
+      "clave": "anatomia.craneo_huesos_principales",
+      "valor": 5,
+      "unidad": "huesos",
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The skull consists of five major bones: the frontal (top of head), parietal (back of head), premaxillary and nasal (top beak), and the mandible (bottom beak).",
+      "campo_hoja": null,
+      "razon": "División anatómica entre bóveda craneal, pico superior (premaxilar/nasal) y mandíbula inferior."
+    },
+    {
+      "clave": "anatomia.hombro_codo_composicion",
+      "valor": "escapula_coracoides_humero_radio_ulna",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The shoulder consists of the scapula (shoulder blade), coracoid, and humerus (upper arm). The humerus joins the radius and ulna (forearm) to form the elbow.",
+      "campo_hoja": null,
+      "razon": "Cadena proximal e intermedia del esqueleto apendicular superior (ala)."
+    },
+    {
+      "clave": "anatomia.muneca_mano_composicion",
+      "valor": "carpo_metacarpo_digitos_fusionados",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The carpus and metacarpus form the \"wrist\" and \"hand\" of the bird, and the digits are fused together.",
+      "campo_hoja": null,
+      "razon": "Segmento distal del ala que porta las plumas primarias."
+    },
+    {
+      "clave": "anatomia.pierna_composicion",
+      "valor": "femur_tibiotarso_fibula",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The upper leg consists of the femur. At the knee joint, the femur connects to the tibiotarsus (shin) and fibula (side of lower leg).",
+      "campo_hoja": null,
+      "razon": "Segmentos superiores del miembro posterior aviar que bajan el centro de gravedad."
+    },
+    {
+      "clave": "anatomia.pie_composicion",
+      "valor": "tarsometatarso_digitos",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The tarsometatarsus forms the upper part of the foot, digits make up the toes.",
+      "campo_hoja": null,
+      "razon": "Segmento distal visible de la pata aviar y dedos de apoyo."
+    },
+    {
+      "clave": "anatomia.pie_anisodactilo",
+      "valor": "3_frontales_1_trasero",
+      "unidad": "dedos",
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "Anisodactyl is the most common arrangement of digits in birds, with three toes forward and one back.",
+      "campo_hoja": null,
+      "razon": "Disposición digital clásica de aves terrestres y posadoras."
+    },
+    {
+      "clave": "anatomia.pie_personaje_dedos",
+      "valor": "3_frontales_redondeados_1_espolon_trasero_sin_unas",
+      "unidad": null,
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "4. Vestuario por Capas > Calzado (Patas)",
+      "razon": "Patas cortas y delgadas con 3 dedos frontales redondeados y 1 espolón trasero corto sin uñas diferenciadas."
+    },
+    {
+      "clave": "anatomia.morfologia_galliforme",
+      "valor": "cuerpo_redondo_patas_sin_plumas_alas_cortas",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F02",
+      "cita": "The body is round, the legs are unfeathered in most breeds, and the wings are short.",
+      "campo_hoja": null,
+      "razon": "Morfología corporal base del análogo Gallus gallus domesticus."
+    },
+    {
+      "clave": "anatomia.desarrollo_precoz",
+      "valor": "ojos_abiertos_plumon_movilidad_inmediata",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F03",
+      "cita": "Precocial young have open eyes, hair or down, large brains, and are immediately mobile and somewhat able to flee from or defend themselves against predators.",
+      "campo_hoja": null,
+      "razon": "Condición precoz que justifica ojos grandes abiertos, cabeza voluminosa y locomoción activa en un polluelo infantil."
+    },
+    {
+      "clave": "anatomia.plumon_juvenil",
+      "valor": "cubierto_de_plumon_al_eclosionar",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F03",
+      "cita": "Precocial birds hatch with their eyes open and are covered with downy feathers that are soon replaced by adult-type feathers.",
+      "campo_hoja": null,
+      "razon": "Plumaje juvenil suave y continuo que recubre el cuerpo."
+    },
+    {
+      "clave": "anatomia.protoalas_juveniles",
+      "valor": "alas_pequenas_articulaciones_menos_restringidas",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F08",
+      "cita": "Instead of large wings they have small \"protowings\", and instead of robust, interlocking forelimb skeletons their limbs are more gracile and their joints less constrained.",
+      "campo_hoja": null,
+      "razon": "Las protoalas juveniles poseen articulaciones menos restringidas que las de un adulto volador, facilitando gestos amplios."
+    },
+    {
+      "clave": "articulacion.ala_grados_libertad",
+      "valor": "hombro_3DOF_codo_1DOF_muneca_2DOF",
+      "unidad": "DOF",
+      "origen": "fuente",
+      "fuente_id": "F06",
+      "cita": "By systematically evaluating the relationship of joint degrees of freedom (DOFs), we configured the model as a 3-DOF shoulder, 1-DOF elbow and 2-DOF wrist.",
+      "campo_hoja": null,
+      "razon": "Configuración cinemática de tres barras para el miembro anterior aviar."
+    },
+    {
+      "clave": "articulacion.ala_acoplamiento_codo_muneca",
+      "valor": "mecanismo_cuatro_barras_flexion_extension",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F07",
+      "cita": "Since an elbow joint and a wrist joint rotate correlatively to drive a wing to flex/extend, the wing skeleton is simplified as a four-bar mechanism in this paper.",
+      "campo_hoja": null,
+      "razon": "Rotación correlativa de codo y muñeca durante el plegado y extensión del ala."
+    },
+    {
+      "clave": "rango.cuello_interno.xyz",
+      "valor": {
+        "x": [
+          -35,
+          35
+        ],
+        "y": [
+          -30,
+          30
+        ],
+        "z": [
+          -50,
+          50
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "anatomia.vertebras_cervicales_rango",
+        "proporcion.cuello_visible"
+      ],
+      "razon": "Rango activo moderado de la articulación cervical oculta para acompañar el cabeceo sin quebrar la silueta continua entre cabeza y torso."
+    },
+    {
+      "clave": "rango.cabeza.xyz",
+      "valor": {
+        "x": [
+          -40,
+          40
+        ],
+        "y": [
+          -35,
+          35
+        ],
+        "z": [
+          -65,
+          65
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "anatomia.vertebras_cervicales_rango",
+        "proporcion.cabeza_altura"
+      ],
+      "razon": "Permite ladeo curioso (35 deg), asentimiento/picoteo (40 deg) y giro horizontal (65 deg) manteniendo la estética esférica chibi."
+    },
+    {
+      "clave": "rango.pico_mandibula.x",
+      "valor": {
+        "pico": [
+          -15,
+          10
+        ],
+        "mandibula": [
+          -10,
+          45
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "anatomia.craneo_huesos_principales"
+      ],
+      "razon": "Cinesis craneal ligera en el pico superior y apertura amplia de hasta 45 deg en la mandíbula inferior para mostrar lengua e interior bucal en expresiones Feliz y Enojado."
+    },
+    {
+      "clave": "rango.cejas.xyz",
+      "valor": {
+        "x": [
+          -35,
+          35
+        ],
+        "y": [
+          -30,
+          30
+        ],
+        "z": [
+          -25,
+          25
+        ]
+      },
+      "unidad": "deg",
+      "origen": "hoja",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": "3. Paleta de Expresiones > Normal, Feliz, Nervioso, Enojado, Triste",
+      "razon": "Las cejas flotantes requieren inclinación en V pronunciada (Enojado), elevación central oblicua (Nervioso), arco alto (Feliz) y caída exterior (Triste)."
+    },
+    {
+      "clave": "rango.copete.xyz",
+      "valor": {
+        "x": [
+          -25,
+          25
+        ],
+        "y": [
+          -20,
+          20
+        ],
+        "z": [
+          -15,
+          15
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "proporcion.cresta_plumas"
+      ],
+      "razon": "Oscilación elástica secundaria y erizado emocional del penacho de 3 plumas."
+    },
+    {
+      "clave": "rango.tronco_cadera_pecho.xyz",
+      "valor": {
+        "cadera_x": [
+          -35,
+          35
+        ],
+        "columna_x": [
+          -25,
+          25
+        ],
+        "pecho_x": [
+          -25,
+          25
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "anatomia.sinsacro_composicion",
+        "proporcion.silueta_general"
+      ],
+      "razon": "Basculación pélvica bípeda del sinsacro sobre el fémur e inflado pectoral manteniendo la silueta en S."
+    },
+    {
+      "clave": "rango.hombro_brazo.xyz",
+      "valor": {
+        "hombro_x": [
+          -25,
+          25
+        ],
+        "brazo_x": [
+          -70,
+          70
+        ],
+        "brazo_y": [
+          -65,
+          65
+        ],
+        "brazo_z": [
+          -65,
+          65
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "articulacion.ala_grados_libertad",
+        "anatomia.protoalas_juveniles"
+      ],
+      "razon": "El hombro de 3 DOF con articulación juvenil poco restringida permite batido elevado, barrido frontal y gestos expresivos."
+    },
+    {
+      "clave": "rango.codo_antebrazo.xyz",
+      "valor": {
+        "x": [
+          -80,
+          45
+        ],
+        "y": [
+          -25,
+          25
+        ],
+        "z": [
+          -25,
+          25
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "articulacion.ala_grados_libertad",
+        "articulacion.ala_acoplamiento_codo_muneca"
+      ],
+      "razon": "Dominio de flexión-extensión en 1 DOF principal para plegar el ala pegada al cuerpo en reposo o extenderla en vuelo y saludo."
+    },
+    {
+      "clave": "rango.muneca_ala.xyz",
+      "valor": {
+        "x": [
+          -60,
+          50
+        ],
+        "y": [
+          -35,
+          35
+        ],
+        "z": [
+          -35,
+          35
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "articulacion.ala_grados_libertad",
+        "proporcion.ala_primarias"
+      ],
+      "razon": "La muñeca de 2 DOF controla el abanico de 3 plumas primarias naranjas para torsión aerodinámica y expresividad manual."
+    },
+    {
+      "clave": "rango.cola_pigostilo.xyz",
+      "valor": {
+        "cola_base_x": [
+          -35,
+          35
+        ],
+        "pigostilo_x": [
+          -45,
+          45
+        ],
+        "pigostilo_y": [
+          -30,
+          30
+        ],
+        "pigostilo_z": [
+          -35,
+          35
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "anatomia.vertebras_caudales_libres",
+        "anatomia.pigostilo_vertebras_fusionadas",
+        "proporcion.cola_angulo_perfil_deg"
+      ],
+      "razon": "Permite el meneo lateral, elevación y despliegue del abanico de 3 pétalos caudales en torno a su ángulo de reposo de 45 grados."
+    },
+    {
+      "clave": "rango.femur.xyz",
+      "valor": {
+        "x": [
+          -55,
+          45
+        ],
+        "y": [
+          -25,
+          25
+        ],
+        "z": [
+          -25,
+          25
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "anatomia.pierna_composicion",
+        "proporcion.patas_altura"
+      ],
+      "razon": "Oscilación coxofemoral durante la zancada bípeda, el agachado y la patada frontal."
+    },
+    {
+      "clave": "rango.tibiotarso.xyz",
+      "valor": {
+        "x": [
+          -65,
+          65
+        ],
+        "y": [
+          -15,
+          15
+        ],
+        "z": [
+          -15,
+          15
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "anatomia.pierna_composicion",
+        "proporcion.patas_altura"
+      ],
+      "razon": "Flexión-extensión de rodilla para amortiguar aterrizajes, sentarse como bolita e impulsar el salto."
+    },
+    {
+      "clave": "rango.tarso.xyz",
+      "valor": {
+        "x": [
+          -60,
+          60
+        ],
+        "y": [
+          -20,
+          20
+        ],
+        "z": [
+          -20,
+          20
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "anatomia.pie_composicion",
+        "proporcion.patas_altura"
+      ],
+      "razon": "Articulación intratarsal principal visible fuera del plumaje que propulsa la marcha y los saltitos."
+    },
+    {
+      "clave": "rango.dedos.xyz",
+      "valor": {
+        "x": [
+          -45,
+          55
+        ],
+        "y": [
+          -15,
+          15
+        ],
+        "z": [
+          -15,
+          15
+        ]
+      },
+      "unidad": "deg",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "anatomia.pie_anisodactilo",
+        "anatomia.pie_personaje_dedos"
+      ],
+      "razon": "Flexión digital para sujeción en hombro, rascado de tierra e impulso final de despegue."
+    },
+    {
+      "clave": "movimiento.locomocion_terrestre_primaria",
+      "valor": "bipeda_dominada_por_patas_traseras",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F05",
+      "cita": "Domestic laying hens rely primarily on their hindlimbs for terrestrial locomotion.",
+      "campo_hoja": null,
+      "razon": "Predominio de las extremidades posteriores en los desplazamientos terrestres."
+    },
+    {
+      "clave": "movimiento.cabeceo_optocinetico",
+      "valor": "sincrono_con_los_pies_fases_empuje_y_pausa",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "Head-bobbing is synchronous with the feet as the head moves in accordance with the rest of the body.",
+      "campo_hoja": null,
+      "razon": "Coordinación rítmica entre el avance de las patas y el cabeceo al caminar."
+    },
+    {
+      "clave": "movimiento.cabeceo_ordenes",
+      "valor": "presente_en_Galliformes",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F01",
+      "cita": "The neck plays a role in head-bobbing which is present in at least eight out of 44 orders of birds, including Columbiformes, Galliformes, and Gruiformes.",
+      "campo_hoja": null,
+      "razon": "Los Galliformes presentan cabeceo característico durante la marcha."
+    },
+    {
+      "clave": "movimiento.aleteo_fases",
+      "valor": "batida_descendente_empuje_y_ascendente_plegada",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F04",
+      "cita": "Flapping involves two stages: the down-stroke, which provides the majority of the thrust, and the up-stroke, which can also (depending on the bird's wings) provide some thrust.",
+      "campo_hoja": null,
+      "razon": "División del ciclo de aleteo en batida descendente propulsiva y batida ascendente de recuperación."
+    },
+    {
+      "clave": "movimiento.aleteo_plegado_ascendente",
+      "valor": "plegado_interior_en_subida",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F04",
+      "cita": "At each up-stroke the wing is slightly folded inwards to reduce the energetic cost of flapping-wing flight.",
+      "campo_hoja": null,
+      "razon": "Flexión de codo y muñeca hacia adentro durante la fase ascendente del aleteo."
+    },
+    {
+      "clave": "movimiento.aleteo_cinematica_5_parametros",
+      "valor": "batido_barrido_torsion_plegado_flexion",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F06",
+      "cita": "Five key motion parameters are used to quantitatively characterize wing kinematics: flapping, sweeping, twisting, folding and bending.",
+      "campo_hoja": null,
+      "razon": "Parámetros cinemáticos fundamentales para animar las alas con naturalidad."
+    },
+    {
+      "clave": "movimiento.aleteo_acoplamiento_alabeo",
+      "valor": "hombro_y_muneca_en_plano_de_batida",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F06",
+      "cita": "we found that the strongly correlated shoulder and wrist roll within the stroke plane cause wing flap and bending.",
+      "campo_hoja": null,
+      "razon": "Acoplamiento entre hombro y muñeca para generar el batido y curvatura del ala."
+    },
+    {
+      "clave": "movimiento.aleteo_acoplamiento_guinada",
+      "valor": "hombro_codo_y_muneca_fuera_de_plano_barrido_plegado",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F06",
+      "cita": "There is also a strong correlation between shoulder, elbow and wrist yaw out of the stroke plane, which causes wing sweep and fold.",
+      "campo_hoja": null,
+      "razon": "Coordinación de hombro, codo y muñeca para barrer hacia adelante o plegar el ala al costado."
+    },
+    {
+      "clave": "movimiento.despegue_salto",
+      "valor": "salto_vertical_impulsado_por_patas",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F04",
+      "cita": "Take-off is one of the most energetically demanding aspects of flight, as the bird must generate enough airflow across the wing to create lift. Small birds do this with a simple upward jump.",
+      "campo_hoja": null,
+      "razon": "El despegue de aves pequeñas se inicia mediante un salto vertical impulsado por las patas."
+    },
+    {
+      "clave": "movimiento.vuelo_corto_galliforme",
+      "valor": "vuelo_breve_por_peso_muscular_y_alas_cortas",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F02",
+      "cita": "Wild junglefowl can fly, whereas domestic chickens and their flight muscles are too heavy to allow them to fly more than a short distance.",
+      "campo_hoja": null,
+      "razon": "El vuelo se limita a distancias cortas y ráfagas enérgicas debido a la complexión compacta y alas cortas."
+    },
+    {
+      "clave": "movimiento.vuelo_ondulante",
+      "valor": "rafagas_de_aleteo_alternadas_con_alas_plegadas",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F04",
+      "cita": "Small birds often fly long distances using a technique in which short bursts of flapping are alternated with intervals in which the wings are folded against the body.",
+      "campo_hoja": null,
+      "razon": "Alternancia entre ráfagas de aleteo rápido y breves fases balísticas con alas recogidas."
+    },
+    {
+      "clave": "movimiento.wair_carrera_inclinada",
+      "valor": "uso_cooperativo_de_alas_y_patas_en_pendientes",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F05",
+      "cita": "Wing-assisted incline running (WAIR) requires a bird to use its wings to assist the hindlimbs during climbing of an incline",
+      "campo_hoja": null,
+      "razon": "Mecanismo locomotor clave para que el polluelo trepe por el brazo o ropa hasta el hombro del usuario."
+    },
+    {
+      "clave": "movimiento.cooperacion_alas_patas_juvenil",
+      "valor": "protoalas_mejoran_rendimiento_de_patas",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F08",
+      "cita": "juvenile birds thereby demonstrate that the initial function of developing wings is to enhance leg performance",
+      "campo_hoja": null,
+      "razon": "Las alas cortas asisten activamente el equilibrio y la tracción de las patas en saltos y carreras."
+    },
+    {
+      "clave": "movimiento.flap_run_juvenil",
+      "valor": "carrera_con_aleteo_en_pendiente_y_vuelo_breve",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F08",
+      "cita": "young birds with similarly rudimentary anatomies flap-run up slopes and even briefly fly",
+      "campo_hoja": null,
+      "razon": "Comportamiento locomotor específico de aves juveniles con alas cortas."
+    },
+    {
+      "clave": "movimiento.escarbar_suelo",
+      "valor": "rascado_alterno_de_tierra_buscando_alimento",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F02",
+      "cita": "In the wild, they scratch at the soil to search for seeds, insects, and animals as large as lizards, small snakes, and young mice.",
+      "campo_hoja": null,
+      "razon": "Acción típica de escarbar hacia atrás con las patas antes de picotear."
+    },
+    {
+      "clave": "movimiento.salto_combate_patada",
+      "valor": "salto_con_estocada_de_patas_hacia_el_frente",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F02",
+      "cita": "Male chickens tend to leap and use their claws in conflicts.",
+      "campo_hoja": null,
+      "razon": "Salto defensivo o de combate lanzando ambas patas hacia adelante con ayuda del batido alar."
+    },
+    {
+      "clave": "movimiento.danza_circular_ala_baja",
+      "valor": "giro_en_circulo_bajando_el_ala_interior",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F02",
+      "cita": "To initiate courting, some roosters may dance in a circle around or near a hen (a circle dance), often lowering the wing which is closest to the hen.",
+      "campo_hoja": null,
+      "razon": "Danza circular festiva con descenso asimétrico del ala interior."
+    },
+    {
+      "clave": "movimiento.anidar_esponjar_picotear",
+      "valor": "sentarse_esponjando_plumaje_y_picoteo_defensivo",
+      "unidad": null,
+      "origen": "fuente",
+      "fuente_id": "F02",
+      "cita": "The hen sits on the nest, fluffing up or pecking defensively if disturbed.",
+      "campo_hoja": null,
+      "razon": "Postura sentada de anidación con esponjado de plumas y picoteo rápido si se le molesta."
+    },
+    {
+      "clave": "movimiento.ritmo_paso_bipedo_s",
+      "valor": 0.5,
+      "unidad": "s",
+      "origen": "deduccion",
+      "fuente_id": null,
+      "cita": null,
+      "campo_hoja": null,
+      "deriva_de": [
+        "antropometria.estatura_m",
+        "proporcion.patas_altura",
+        "movimiento.locomocion_terrestre_primaria"
+      ],
+      "razon": "Para una estatura de 0.18 m con extremidades posteriores cortas (~3.2 cm), el ciclo completo de paso bípedo dura ~0.5 s y la carrera rápida ~0.3 s."
+    }
+  ],
+  "vacios": [
+    "El corpus no incluye tablas numéricas de rangos articulares activos en grados (ROM) para cada articulación individual del polluelo de Gallus gallus domesticus; se dedujeron a partir de los grados de libertad (3-DOF hombro, 1-DOF codo, 2-DOF muñeca) y las restricciones geométricas del diseño chibi.",
+    "El corpus no especifica la frecuencia exacta de zancada en Hz ni la velocidad lineal en m/s de polluelos; las duraciones de ciclo se dedujeron por escala alométrica para una altura de 0.18 m.",
+    "El corpus no especifica la frecuencia numérica de batido alar en Hz para juveniles de Galliformes durante WAIR (solo menciona 43-80 Hz para colibríes en F04)."
+  ],
+  "payload": {
+    "ficha_esqueleto": {
+      "schema": "ficha_esqueleto/v1",
+      "id": "polluelo_chibi_mascota",
+      "nombre": "Polluelo Chibi de Hombro",
+      "plantilla": "ave",
+      "es_ficticio": true,
+      "analogo_real": "Gallus gallus domesticus (polluelo precoz) y Alectoris chukar juvenil",
+      "altura_m": 0.18,
+      "origen": {
+        "tipo": "argon",
+        "autor": "Argon",
+        "fecha": "2026-11-09",
+        "aviso": "Maniquí articulado derivado del ADN sellado del personaje y de la anatomía y cinemática aviar del corpus F01-F08."
+      },
+      "fuentes": [
+        {
+          "tipo": "hoja_personaje",
+          "titulo": "ADN del personaje: Polluelo / ave infantil de hombro (18 cm, 2 cabezas)",
+          "url": null,
+          "afirma": "Estatura de 0.18 m, cabeza esférica del 50% de la altura fusionada al torso sin cuello divisorio, silueta piriforme en S, cresta de 3 plumas naranjas (#FF6B2B), pecho con 4 ondas (#FFD84D), alas bicolores con 3 primarias naranjas, cola de 3 plumas a 45 grados y patas anisodáctilas sin uñas."
+        },
+        {
+          "tipo": "web",
+          "titulo": "Bird anatomy (Wikipedia, F01)",
+          "url": "https://en.wikipedia.org/wiki/Bird_anatomy",
+          "afirma": "Esqueleto axial y apendicular aviar: vértebras cervicales con cabeceo (head-bobbing), sinsacro fusionado al ilion, vértebras caudales libres y pigostilo, hombro (escápula, coracoides, húmero), codo (radio, ulna), muñeca (carpometacarpo) y miembro posterior (fémur, tibiotarso, tarsometatarso y pie anisodáctilo de 3 dedos frontales y 1 trasero)."
+        },
+        {
+          "tipo": "web",
+          "titulo": "Chicken (Wikipedia, F02)",
+          "url": "https://en.wikipedia.org/wiki/Chicken",
+          "afirma": "Morfología de Gallus gallus domesticus de cuerpo redondo, alas cortas y patas sin plumas; conductas de escarbar el suelo, vuelo corto, salto con patada, danza circular bajando un ala y postura de anidación esponjando el plumaje."
+        },
+        {
+          "tipo": "web",
+          "titulo": "Precociality and altriciality (Wikipedia, F03)",
+          "url": "https://en.wikipedia.org/wiki/Precociality_and_altriciality",
+          "afirma": "Desarrollo precoz nidífugo en polluelos de gallina: eclosionan con ojos abiertos, cubiertos de plumón y con movilidad bípeda inmediata."
+        },
+        {
+          "tipo": "web",
+          "titulo": "Bird flight (Wikipedia, F04)",
+          "url": "https://en.wikipedia.org/wiki/Bird_flight",
+          "afirma": "Mecánica de despegue mediante salto vertical en aves pequeñas, ciclo de batida descendente propulsiva y ascendente con ligero plegado interior, y vuelo ondulante por ráfagas."
+        },
+        {
+          "tipo": "web",
+          "titulo": "A wing-assisted incline running exercise regime during rearing increases initial flight velocity during descent in adult white- and brown-feathered laying hens (F05)",
+          "url": "https://doi.org/10.1016/j.psj.2023.103375",
+          "afirma": "Locomoción terrestre dominada por los miembros posteriores y carrera en pendiente asistida por las alas (WAIR), además de control de descenso aéreo y aterrizaje."
+        },
+        {
+          "tipo": "web",
+          "titulo": "Characterization of Wing Kinematics by Decoupling Joint Movement in the Pigeon (F06)",
+          "url": "https://doi.org/10.3390/biomimetics9090555",
+          "afirma": "Modelo cinemático alar de tres barras con hombro de 3 DOF, codo de 1 DOF y muñeca de 2 DOF, parametrizado en batido, barrido, torsión, plegado y flexión."
+        },
+        {
+          "tipo": "web",
+          "titulo": "Quantitative analysis of the morphing wing mechanism of raptors: Bionic design of Falco Peregrinus wing skeleton (F07)",
+          "url": "https://doi.org/10.1371/journal.pone.0299982",
+          "afirma": "Acoplamiento cinemático entre codo y muñeca como mecanismo de cuatro barras durante la flexión y extensión del ala."
+        },
+        {
+          "tipo": "web",
+          "titulo": "Flapping before Flight: High Resolution, Three-Dimensional Skeletal Kinematics of Wings and Legs during Avian Development (F08)",
+          "url": "https://doi.org/10.1371/journal.pone.0153446",
+          "afirma": "Las aves juveniles poseen protoalas pequeñas con articulaciones menos restringidas que cooperan con las patas para mejorar el rendimiento locomotor antes del vuelo adulto."
+        }
+      ],
+      "huesos": [
+        {
+          "nombre": "raiz",
+          "padre": null,
+          "cabeza": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cola": [
+            0.0,
+            0.0,
+            0.06
+          ],
+          "rol": "raiz",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -45,
+              45
+            ],
+            "y": [
+              -45,
+              45
+            ],
+            "z": [
+              -135,
+              135
+            ]
+          },
+          "funcion": "Referencia global en el suelo entre ambos pies de apoyo"
+        },
+        {
+          "nombre": "cadera",
+          "padre": "raiz",
+          "cabeza": [
+            0.0,
+            0.02,
+            0.18
+          ],
+          "cola": [
+            0.0,
+            0.01,
+            0.28
+          ],
+          "rol": "cadera",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -35,
+              35
+            ],
+            "y": [
+              -25,
+              25
+            ],
+            "z": [
+              -35,
+              35
+            ]
+          },
+          "funcion": "Sinsacro y pelvis fusionada (ilion, isquion y pubis) que sostiene la base en forma de pera"
+        },
+        {
+          "nombre": "columna",
+          "padre": "cadera",
+          "cabeza": [
+            0.0,
+            0.01,
+            0.28
+          ],
+          "cola": [
+            0.0,
+            -0.01,
+            0.38
+          ],
+          "rol": "columna",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -25,
+              25
+            ],
+            "y": [
+              -20,
+              20
+            ],
+            "z": [
+              -25,
+              25
+            ]
+          },
+          "funcion": "Vértebras torácicas inferiores para flexión y curvatura en S del tronco"
+        },
+        {
+          "nombre": "pecho",
+          "padre": "columna",
+          "cabeza": [
+            0.0,
+            -0.01,
+            0.38
+          ],
+          "cola": [
+            0.0,
+            -0.02,
+            0.48
+          ],
+          "rol": "pecho",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -25,
+              25
+            ],
+            "y": [
+              -20,
+              20
+            ],
+            "z": [
+              -25,
+              25
+            ]
+          },
+          "funcion": "Esternón carenado, fúrcula y cintura escapular con relieve pectoral de 4 ondas"
+        },
+        {
+          "nombre": "cuello",
+          "padre": "pecho",
+          "cabeza": [
+            0.0,
+            -0.02,
+            0.48
+          ],
+          "cola": [
+            0.0,
+            -0.02,
+            0.55
+          ],
+          "rol": "cuello",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -35,
+              35
+            ],
+            "y": [
+              -30,
+              30
+            ],
+            "z": [
+              -50,
+              50
+            ]
+          },
+          "funcion": "Vértebras cervicales internas ocultas en la fusión cabeza-torso para cabeceo (head-bobbing)"
+        },
+        {
+          "nombre": "cabeza",
+          "padre": "cuello",
+          "cabeza": [
+            0.0,
+            -0.02,
+            0.55
+          ],
+          "cola": [
+            0.0,
+            -0.05,
+            0.82
+          ],
+          "rol": "cabeza",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -40,
+              40
+            ],
+            "y": [
+              -35,
+              35
+            ],
+            "z": [
+              -65,
+              65
+            ]
+          },
+          "funcion": "Cráneo aviar esférico chibi (frontal y parietal) que ocupa el 50% de la altura total"
+        },
+        {
+          "nombre": "copete",
+          "padre": "cabeza",
+          "cabeza": [
+            0.0,
+            -0.03,
+            0.86
+          ],
+          "cola": [
+            0.0,
+            0.05,
+            0.97
+          ],
+          "rol": "copete",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -25,
+              25
+            ],
+            "y": [
+              -20,
+              20
+            ],
+            "z": [
+              -15,
+              15
+            ]
+          },
+          "funcion": "Base de inserción craneal del penacho central rígido de 3 plumas curvas"
+        },
+        {
+          "nombre": "pico",
+          "padre": "cabeza",
+          "cabeza": [
+            0.0,
+            -0.1,
+            0.61
+          ],
+          "cola": [
+            0.0,
+            -0.25,
+            0.61
+          ],
+          "rol": "pico",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -15,
+              10
+            ],
+            "y": [
+              -5,
+              5
+            ],
+            "z": [
+              -5,
+              5
+            ]
+          },
+          "funcion": "Huesos premaxilar y nasal del pico superior cónico con cinesis craneal aviar"
+        },
+        {
+          "nombre": "mandibula",
+          "padre": "cabeza",
+          "cabeza": [
+            0.0,
+            -0.1,
+            0.58
+          ],
+          "cola": [
+            0.0,
+            -0.24,
+            0.57
+          ],
+          "rol": "mandibula",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -10,
+              45
+            ],
+            "y": [
+              -8,
+              8
+            ],
+            "z": [
+              -8,
+              8
+            ]
+          },
+          "funcion": "Mandíbula inferior articulada para abrir el pico en piar, felicidad y enojo"
+        },
+        {
+          "nombre": "ceja_L",
+          "padre": "cabeza",
+          "cabeza": [
+            0.06,
+            -0.11,
+            0.77
+          ],
+          "cola": [
+            0.12,
+            -0.17,
+            0.78
+          ],
+          "rol": "otro",
+          "lado": "L",
+          "limites_deg": {
+            "x": [
+              -35,
+              35
+            ],
+            "y": [
+              -30,
+              30
+            ],
+            "z": [
+              -30,
+              30
+            ]
+          },
+          "funcion": "Controlador de ceja flotante izquierda para la paleta de 5 expresiones del ADN"
+        },
+        {
+          "nombre": "ceja_R",
+          "padre": "cabeza",
+          "cabeza": [
+            -0.06,
+            -0.11,
+            0.77
+          ],
+          "cola": [
+            -0.12,
+            -0.17,
+            0.78
+          ],
+          "rol": "otro",
+          "lado": "R",
+          "limites_deg": {
+            "x": [
+              -35,
+              35
+            ],
+            "y": [
+              -30,
+              30
+            ],
+            "z": [
+              -30,
+              30
+            ]
+          },
+          "funcion": "Controlador de ceja flotante derecha para la paleta de 5 expresiones del ADN"
+        },
+        {
+          "nombre": "cola_base",
+          "padre": "cadera",
+          "cabeza": [
+            0.0,
+            0.08,
+            0.2
+          ],
+          "cola": [
+            0.0,
+            0.18,
+            0.25
+          ],
+          "rol": "cola",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -35,
+              35
+            ],
+            "y": [
+              -25,
+              25
+            ],
+            "z": [
+              -30,
+              30
+            ]
+          },
+          "funcion": "Vértebras caudales libres (5 a 8) que articulan la raíz de la cola"
+        },
+        {
+          "nombre": "pigostilo",
+          "padre": "cola_base",
+          "cabeza": [
+            0.0,
+            0.18,
+            0.25
+          ],
+          "cola": [
+            0.0,
+            0.26,
+            0.33
+          ],
+          "rol": "cola",
+          "lado": "C",
+          "limites_deg": {
+            "x": [
+              -45,
+              45
+            ],
+            "y": [
+              -30,
+              30
+            ],
+            "z": [
+              -35,
+              35
+            ]
+          },
+          "funcion": "Pigostilo fusionado en ángulo de 45 grados que porta el abanico de 3 plumas caudales"
+        },
+        {
+          "nombre": "hombro_L",
+          "padre": "pecho",
+          "cabeza": [
+            0.05,
+            -0.02,
+            0.45
+          ],
+          "cola": [
+            0.16,
+            0.0,
+            0.44
+          ],
+          "rol": "hombro",
+          "lado": "L",
+          "limites_deg": {
+            "x": [
+              -25,
+              25
+            ],
+            "y": [
+              -25,
+              25
+            ],
+            "z": [
+              -25,
+              25
+            ]
+          },
+          "funcion": "Complejo escapulocoracoideo izquierdo de soporte alar"
+        },
+        {
+          "nombre": "hombro_R",
+          "padre": "pecho",
+          "cabeza": [
+            -0.05,
+            -0.02,
+            0.45
+          ],
+          "cola": [
+            -0.16,
+            0.0,
+            0.44
+          ],
+          "rol": "hombro",
+          "lado": "R",
+          "limites_deg": {
+            "x": [
+              -25,
+              25
+            ],
+            "y": [
+              -25,
+              25
+            ],
+            "z": [
+              -25,
+              25
+            ]
+          },
+          "funcion": "Complejo escapulocoracoideo derecho de soporte alar"
+        },
+        {
+          "nombre": "brazo_L",
+          "padre": "hombro_L",
+          "cabeza": [
+            0.16,
+            0.0,
+            0.44
+          ],
+          "cola": [
+            0.2,
+            0.04,
+            0.37
+          ],
+          "rol": "brazo",
+          "lado": "L",
+          "limites_deg": {
+            "x": [
+              -70,
+              70
+            ],
+            "y": [
+              -65,
+              65
+            ],
+            "z": [
+              -65,
+              65
+            ]
+          },
+          "funcion": "Húmero izquierdo con articulación glenohumeral de 3 DOF para batido y barrido"
+        },
+        {
+          "nombre": "brazo_R",
+          "padre": "hombro_R",
+          "cabeza": [
+            -0.16,
+            0.0,
+            0.44
+          ],
+          "cola": [
+            -0.2,
+            0.04,
+            0.37
+          ],
+          "rol": "brazo",
+          "lado": "R",
+          "limites_deg": {
+            "x": [
+              -70,
+              70
+            ],
+            "y": [
+              -65,
+              65
+            ],
+            "z": [
+              -65,
+              65
+            ]
+          },
+          "funcion": "Húmero derecho con articulación glenohumeral de 3 DOF para batido y barrido"
+        },
+        {
+          "nombre": "antebrazo_L",
+          "padre": "brazo_L",
+          "cabeza": [
+            0.2,
+            0.04,
+            0.37
+          ],
+          "cola": [
+            0.22,
+            0.02,
+            0.3
+          ],
+          "rol": "antebrazo",
+          "lado": "L",
+          "limites_deg": {
+            "x": [
+              -80,
+              45
+            ],
+            "y": [
+              -25,
+              25
+            ],
+            "z": [
+              -25,
+              25
+            ]
+          },
+          "funcion": "Radio y cúbito (ulna) izquierdos con articulación de codo de 1 DOF principal"
+        },
+        {
+          "nombre": "antebrazo_R",
+          "padre": "brazo_R",
+          "cabeza": [
+            -0.2,
+            0.04,
+            0.37
+          ],
+          "cola": [
+            -0.22,
+            0.02,
+            0.3
+          ],
+          "rol": "antebrazo",
+          "lado": "R",
+          "limites_deg": {
+            "x": [
+              -80,
+              45
+            ],
+            "y": [
+              -25,
+              25
+            ],
+            "z": [
+              -25,
+              25
+            ]
+          },
+          "funcion": "Radio y cúbito (ulna) derechos con articulación de codo de 1 DOF principal"
+        },
+        {
+          "nombre": "ala_L",
+          "padre": "antebrazo_L",
+          "cabeza": [
+            0.22,
+            0.02,
+            0.3
+          ],
+          "cola": [
+            0.21,
+            0.07,
+            0.21
+          ],
+          "rol": "ala",
+          "lado": "L",
+          "limites_deg": {
+            "x": [
+              -60,
+              50
+            ],
+            "y": [
+              -35,
+              35
+            ],
+            "z": [
+              -35,
+              35
+            ]
+          },
+          "funcion": "Carpometacarpo y dígitos fusionados izquierdos (2 DOF) con 3 plumas primarias naranjas"
+        },
+        {
+          "nombre": "ala_R",
+          "padre": "antebrazo_R",
+          "cabeza": [
+            -0.22,
+            0.02,
+            0.3
+          ],
+          "cola": [
+            -0.21,
+            0.07,
+            0.21
+          ],
+          "rol": "ala",
+          "lado": "R",
+          "limites_deg": {
+            "x": [
+              -60,
+              50
+            ],
+            "y": [
+              -35,
+              35
+            ],
+            "z": [
+              -35,
+              35
+            ]
+          },
+          "funcion": "Carpometacarpo y dígitos fusionados derechos (2 DOF) con 3 plumas primarias naranjas"
+        },
+        {
+          "nombre": "femur_L",
+          "padre": "cadera",
+          "cabeza": [
+            0.07,
+            0.02,
+            0.18
+          ],
+          "cola": [
+            0.08,
+            -0.02,
+            0.13
+          ],
+          "rol": "pierna",
+          "lado": "L",
+          "limites_deg": {
+            "x": [
+              -55,
+              45
+            ],
+            "y": [
+              -25,
+              25
+            ],
+            "z": [
+              -25,
+              25
+            ]
+          },
+          "funcion": "Fémur izquierdo articulado en el acetábulo pélvico"
+        },
+        {
+          "nombre": "femur_R",
+          "padre": "cadera",
+          "cabeza": [
+            -0.07,
+            0.02,
+            0.18
+          ],
+          "cola": [
+            -0.08,
+            -0.02,
+            0.13
+          ],
+          "rol": "pierna",
+          "lado": "R",
+          "limites_deg": {
+            "x": [
+              -55,
+              45
+            ],
+            "y": [
+              -25,
+              25
+            ],
+            "z": [
+              -25,
+              25
+            ]
+          },
+          "funcion": "Fémur derecho articulado en el acetábulo pélvico"
+        },
+        {
+          "nombre": "tibiotarso_L",
+          "padre": "femur_L",
+          "cabeza": [
+            0.08,
+            -0.02,
+            0.13
+          ],
+          "cola": [
+            0.08,
+            0.02,
+            0.07
+          ],
+          "rol": "pierna",
+          "lado": "L",
+          "limites_deg": {
+            "x": [
+              -65,
+              65
+            ],
+            "y": [
+              -15,
+              15
+            ],
+            "z": [
+              -15,
+              15
+            ]
+          },
+          "funcion": "Tibiotarso y fíbula izquierdos para flexión de rodilla e impulso de salto"
+        },
+        {
+          "nombre": "tibiotarso_R",
+          "padre": "femur_R",
+          "cabeza": [
+            -0.08,
+            -0.02,
+            0.13
+          ],
+          "cola": [
+            -0.08,
+            0.02,
+            0.07
+          ],
+          "rol": "pierna",
+          "lado": "R",
+          "limites_deg": {
+            "x": [
+              -65,
+              65
+            ],
+            "y": [
+              -15,
+              15
+            ],
+            "z": [
+              -15,
+              15
+            ]
+          },
+          "funcion": "Tibiotarso y fíbula derechos para flexión de rodilla e impulso de salto"
+        },
+        {
+          "nombre": "tarso_L",
+          "padre": "tibiotarso_L",
+          "cabeza": [
+            0.08,
+            0.02,
+            0.07
+          ],
+          "cola": [
+            0.08,
+            0.0,
+            0.015
+          ],
+          "rol": "pie",
+          "lado": "L",
+          "limites_deg": {
+            "x": [
+              -60,
+              60
+            ],
+            "y": [
+              -20,
+              20
+            ],
+            "z": [
+              -20,
+              20
+            ]
+          },
+          "funcion": "Tarsometatarso izquierdo delgado y sin plumas con articulación intratarsal"
+        },
+        {
+          "nombre": "tarso_R",
+          "padre": "tibiotarso_R",
+          "cabeza": [
+            -0.08,
+            0.02,
+            0.07
+          ],
+          "cola": [
+            -0.08,
+            0.0,
+            0.015
+          ],
+          "rol": "pie",
+          "lado": "R",
+          "limites_deg": {
+            "x": [
+              -60,
+              60
+            ],
+            "y": [
+              -20,
+              20
+            ],
+            "z": [
+              -20,
+              20
+            ]
+          },
+          "funcion": "Tarsometatarso derecho delgado y sin plumas con articulación intratarsal"
+        },
+        {
+          "nombre": "dedos_L",
+          "padre": "tarso_L",
+          "cabeza": [
+            0.08,
+            0.0,
+            0.015
+          ],
+          "cola": [
+            0.08,
+            -0.07,
+            0.0
+          ],
+          "rol": "dedos",
+          "lado": "L",
+          "limites_deg": {
+            "x": [
+              -45,
+              55
+            ],
+            "y": [
+              -15,
+              15
+            ],
+            "z": [
+              -15,
+              15
+            ]
+          },
+          "funcion": "Pie anisodáctilo izquierdo (3 dedos frontales redondeados y 1 espolón trasero corto)"
+        },
+        {
+          "nombre": "dedos_R",
+          "padre": "tarso_R",
+          "cabeza": [
+            -0.08,
+            0.0,
+            0.015
+          ],
+          "cola": [
+            -0.08,
+            -0.07,
+            0.0
+          ],
+          "rol": "dedos",
+          "lado": "R",
+          "limites_deg": {
+            "x": [
+              -45,
+              55
+            ],
+            "y": [
+              -15,
+              15
+            ],
+            "z": [
+              -15,
+              15
+            ]
+          },
+          "funcion": "Pie anisodáctilo derecho (3 dedos frontales redondeados y 1 espolón trasero corto)"
+        }
+      ],
+      "piezas": [
+        {
+          "nombre": "abdomen_pera",
+          "hueso": "cadera",
+          "primitiva": "esfera",
+          "modo": "libre",
+          "centro": [
+            0.0,
+            0.01,
+            0.27
+          ],
+          "radios": [
+            0.2,
+            0.19,
+            0.15
+          ],
+          "rotacion_deg": [
+            0,
+            0,
+            0
+          ],
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "torso_medio",
+          "hueso": "columna",
+          "primitiva": "esfera",
+          "modo": "libre",
+          "centro": [
+            0.0,
+            -0.01,
+            0.36
+          ],
+          "radios": [
+            0.18,
+            0.18,
+            0.13
+          ],
+          "rotacion_deg": [
+            0,
+            0,
+            0
+          ],
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "pecho_prominente",
+          "hueso": "pecho",
+          "primitiva": "esfera",
+          "modo": "libre",
+          "centro": [
+            0.0,
+            -0.05,
+            0.43
+          ],
+          "radios": [
+            0.17,
+            0.17,
+            0.12
+          ],
+          "rotacion_deg": [
+            10,
+            0,
+            0
+          ],
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "pecho_onda_1_L",
+          "hueso": "pecho",
+          "primitiva": "cono",
+          "modo": "libre",
+          "centro": [
+            0.07,
+            -0.19,
+            0.44
+          ],
+          "radios": [
+            0.025,
+            0.02,
+            0.035
+          ],
+          "rotacion_deg": [
+            155,
+            10,
+            0
+          ],
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "pecho_onda_2_L",
+          "hueso": "pecho",
+          "primitiva": "cono",
+          "modo": "libre",
+          "centro": [
+            0.025,
+            -0.21,
+            0.43
+          ],
+          "radios": [
+            0.025,
+            0.02,
+            0.038
+          ],
+          "rotacion_deg": [
+            160,
+            4,
+            0
+          ],
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "pecho_onda_3_R",
+          "hueso": "pecho",
+          "primitiva": "cono",
+          "modo": "libre",
+          "centro": [
+            -0.025,
+            -0.21,
+            0.43
+          ],
+          "radios": [
+            0.025,
+            0.02,
+            0.038
+          ],
+          "rotacion_deg": [
+            160,
+            -4,
+            0
+          ],
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "pecho_onda_4_R",
+          "hueso": "pecho",
+          "primitiva": "cono",
+          "modo": "libre",
+          "centro": [
+            -0.07,
+            -0.19,
+            0.44
+          ],
+          "radios": [
+            0.025,
+            0.02,
+            0.035
+          ],
+          "rotacion_deg": [
+            155,
+            -10,
+            0
+          ],
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "cabeza_esfera",
+          "hueso": "cabeza",
+          "primitiva": "esfera",
+          "modo": "libre",
+          "centro": [
+            0.0,
+            -0.02,
+            0.69
+          ],
+          "radios": [
+            0.23,
+            0.22,
+            0.23
+          ],
+          "rotacion_deg": [
+            0,
+            0,
+            0
+          ],
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "mejilla_abultada_L",
+          "hueso": "cabeza",
+          "primitiva": "esfera",
+          "modo": "libre",
+          "centro": [
+            0.16,
+            -0.14,
+            0.62
+          ],
+          "radios": [
+            0.065,
+            0.055,
+            0.055
+          ],
+          "rotacion_deg": [
+            0,
+            0,
+            0
+          ],
+          "color": "#FF8844"
+        },
+        {
+          "nombre": "mejilla_abultada_R",
+          "hueso": "cabeza",
+          "primitiva": "esfera",
+          "modo": "libre",
+          "centro": [
+            -0.16,
+            -0.14,
+            0.62
+          ],
+          "radios": [
+            0.065,
+            0.055,
+            0.055
+          ],
+          "rotacion_deg": [
+            0,
+            0,
+            0
+          ],
+          "color": "#FF8844"
+        },
+        {
+          "nombre": "cresta_pluma_frontal",
+          "hueso": "copete",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.0,
+            -0.01,
+            0.94
+          ],
+          "radios": [
+            0.024,
+            0.032,
+            0.06
+          ],
+          "rotacion_deg": [
+            -20,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "cresta_pluma_media",
+          "hueso": "copete",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.0,
+            0.03,
+            0.93
+          ],
+          "radios": [
+            0.022,
+            0.03,
+            0.055
+          ],
+          "rotacion_deg": [
+            -35,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "cresta_pluma_trasera",
+          "hueso": "copete",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.0,
+            0.07,
+            0.9
+          ],
+          "radios": [
+            0.02,
+            0.028,
+            0.048
+          ],
+          "rotacion_deg": [
+            -50,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "pico_superior_cono",
+          "hueso": "pico",
+          "primitiva": "cono",
+          "modo": "hueso",
+          "radio": 0.035,
+          "color": "#FF9933"
+        },
+        {
+          "nombre": "pico_inferior_cono",
+          "hueso": "mandibula",
+          "primitiva": "cono",
+          "modo": "hueso",
+          "radio": 0.028,
+          "color": "#FF9933"
+        },
+        {
+          "nombre": "ceja_flotante_L",
+          "hueso": "ceja_L",
+          "primitiva": "capsula",
+          "modo": "hueso",
+          "radio": 0.016,
+          "color": "#4A2E1B"
+        },
+        {
+          "nombre": "ceja_flotante_R",
+          "hueso": "ceja_R",
+          "primitiva": "capsula",
+          "modo": "hueso",
+          "radio": 0.016,
+          "color": "#4A2E1B"
+        },
+        {
+          "nombre": "ala_hombro_amarillo_L",
+          "hueso": "brazo_L",
+          "primitiva": "capsula",
+          "modo": "hueso",
+          "radio": 0.042,
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "ala_hombro_amarillo_R",
+          "hueso": "brazo_R",
+          "primitiva": "capsula",
+          "modo": "hueso",
+          "radio": 0.042,
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "ala_media_amarilla_L",
+          "hueso": "antebrazo_L",
+          "primitiva": "capsula",
+          "modo": "hueso",
+          "radio": 0.038,
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "ala_media_amarilla_R",
+          "hueso": "antebrazo_R",
+          "primitiva": "capsula",
+          "modo": "hueso",
+          "radio": 0.038,
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "ala_primaria_1_L",
+          "hueso": "ala_L",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.21,
+            0.03,
+            0.24
+          ],
+          "radios": [
+            0.016,
+            0.025,
+            0.05
+          ],
+          "rotacion_deg": [
+            15,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "ala_primaria_2_L",
+          "hueso": "ala_L",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.21,
+            0.06,
+            0.23
+          ],
+          "radios": [
+            0.016,
+            0.025,
+            0.052
+          ],
+          "rotacion_deg": [
+            25,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "ala_primaria_3_L",
+          "hueso": "ala_L",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.21,
+            0.09,
+            0.25
+          ],
+          "radios": [
+            0.016,
+            0.025,
+            0.048
+          ],
+          "rotacion_deg": [
+            35,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "ala_primaria_1_R",
+          "hueso": "ala_R",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            -0.21,
+            0.03,
+            0.24
+          ],
+          "radios": [
+            0.016,
+            0.025,
+            0.05
+          ],
+          "rotacion_deg": [
+            15,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "ala_primaria_2_R",
+          "hueso": "ala_R",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            -0.21,
+            0.06,
+            0.23
+          ],
+          "radios": [
+            0.016,
+            0.025,
+            0.052
+          ],
+          "rotacion_deg": [
+            25,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "ala_primaria_3_R",
+          "hueso": "ala_R",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            -0.21,
+            0.09,
+            0.25
+          ],
+          "radios": [
+            0.016,
+            0.025,
+            0.048
+          ],
+          "rotacion_deg": [
+            35,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "cola_petalo_central",
+          "hueso": "pigostilo",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.0,
+            0.23,
+            0.3
+          ],
+          "radios": [
+            0.024,
+            0.055,
+            0.024
+          ],
+          "rotacion_deg": [
+            45,
+            0,
+            0
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "cola_petalo_L",
+          "hueso": "pigostilo",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.04,
+            0.22,
+            0.29
+          ],
+          "radios": [
+            0.022,
+            0.05,
+            0.022
+          ],
+          "rotacion_deg": [
+            45,
+            0,
+            25
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "cola_petalo_R",
+          "hueso": "pigostilo",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            -0.04,
+            0.22,
+            0.29
+          ],
+          "radios": [
+            0.022,
+            0.05,
+            0.022
+          ],
+          "rotacion_deg": [
+            45,
+            0,
+            -25
+          ],
+          "color": "#FF6B2B"
+        },
+        {
+          "nombre": "muslo_plumaje_L",
+          "hueso": "tibiotarso_L",
+          "primitiva": "capsula",
+          "modo": "hueso",
+          "radio": 0.024,
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "muslo_plumaje_R",
+          "hueso": "tibiotarso_R",
+          "primitiva": "capsula",
+          "modo": "hueso",
+          "radio": 0.024,
+          "color": "#FFD84D"
+        },
+        {
+          "nombre": "caña_tarso_L",
+          "hueso": "tarso_L",
+          "primitiva": "cilindro",
+          "modo": "hueso",
+          "radio": 0.012,
+          "color": "#D97724"
+        },
+        {
+          "nombre": "caña_tarso_R",
+          "hueso": "tarso_R",
+          "primitiva": "cilindro",
+          "modo": "hueso",
+          "radio": 0.012,
+          "color": "#D97724"
+        },
+        {
+          "nombre": "dedos_frontales_L",
+          "hueso": "dedos_L",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.08,
+            -0.035,
+            0.012
+          ],
+          "radios": [
+            0.028,
+            0.04,
+            0.012
+          ],
+          "rotacion_deg": [
+            0,
+            0,
+            0
+          ],
+          "color": "#D97724"
+        },
+        {
+          "nombre": "espolon_trasero_L",
+          "hueso": "dedos_L",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            0.08,
+            0.02,
+            0.012
+          ],
+          "radios": [
+            0.01,
+            0.02,
+            0.01
+          ],
+          "rotacion_deg": [
+            0,
+            0,
+            0
+          ],
+          "color": "#D97724"
+        },
+        {
+          "nombre": "dedos_frontales_R",
+          "hueso": "dedos_R",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            -0.08,
+            -0.035,
+            0.012
+          ],
+          "radios": [
+            0.028,
+            0.04,
+            0.012
+          ],
+          "rotacion_deg": [
+            0,
+            0,
+            0
+          ],
+          "color": "#D97724"
+        },
+        {
+          "nombre": "espolon_trasero_R",
+          "hueso": "dedos_R",
+          "primitiva": "capsula",
+          "modo": "libre",
+          "centro": [
+            -0.08,
+            0.02,
+            0.012
+          ],
+          "radios": [
+            0.01,
+            0.02,
+            0.01
+          ],
+          "rotacion_deg": [
+            0,
+            0,
+            0
+          ],
+          "color": "#D97724"
+        }
+      ],
+      "rostro": {
+        "hueso": "cabeza",
+        "ojos": {
+          "centro_L": [
+            0.09,
+            -0.21,
+            0.69
+          ],
+          "radio": 0.045
+        },
+        "nariz": {
+          "centro": [
+            0.0,
+            -0.25,
+            0.61
+          ],
+          "radio": 0.035,
+          "primitiva": "cono",
+          "color": "#FF9933",
+          "nota": "Pico corto, cónico y pequeño en el centro del rostro, color naranja medio"
+        }
+      },
+      "poses_prueba": {
+        "alerta_feliz": {
+          "cabeza": [
+            -10,
+            12,
+            15
+          ],
+          "mandibula": [
+            30,
+            0,
+            0
+          ],
+          "ceja_L": [
+            15,
+            0,
+            0
+          ],
+          "ceja_R": [
+            15,
+            0,
+            0
+          ],
+          "copete": [
+            10,
+            0,
+            0
+          ],
+          "brazo_L": [
+            0,
+            -35,
+            20
+          ],
+          "brazo_R": [
+            0,
+            35,
+            -20
+          ],
+          "pigostilo": [
+            15,
+            0,
+            0
+          ]
+        },
+        "salto_aleteo": {
+          "cadera": [
+            -15,
+            0,
+            0
+          ],
+          "pecho": [
+            -10,
+            0,
+            0
+          ],
+          "cabeza": [
+            -15,
+            0,
+            0
+          ],
+          "brazo_L": [
+            20,
+            -55,
+            35
+          ],
+          "brazo_R": [
+            20,
+            55,
+            -35
+          ],
+          "antebrazo_L": [
+            -25,
+            0,
+            0
+          ],
+          "antebrazo_R": [
+            -25,
+            0,
+            0
+          ],
+          "ala_L": [
+            15,
+            -20,
+            0
+          ],
+          "ala_R": [
+            15,
+            20,
+            0
+          ],
+          "femur_L": [
+            25,
+            0,
+            0
+          ],
+          "femur_R": [
+            25,
+            0,
+            0
+          ],
+          "tibiotarso_L": [
+            -35,
+            0,
+            0
+          ],
+          "tibiotarso_R": [
+            -35,
+            0,
+            0
+          ],
+          "tarso_L": [
+            30,
+            0,
+            0
+          ],
+          "tarso_R": [
+            30,
+            0,
+            0
+          ]
+        },
+        "enojado_graznido": {
+          "cadera": [
+            15,
+            0,
+            0
+          ],
+          "pecho": [
+            15,
+            0,
+            0
+          ],
+          "cabeza": [
+            12,
+            0,
+            0
+          ],
+          "pico": [
+            -10,
+            0,
+            0
+          ],
+          "mandibula": [
+            40,
+            0,
+            0
+          ],
+          "ceja_L": [
+            -25,
+            20,
+            -15
+          ],
+          "ceja_R": [
+            -25,
+            -20,
+            15
+          ],
+          "copete": [
+            18,
+            0,
+            0
+          ],
+          "brazo_L": [
+            -30,
+            -40,
+            -25
+          ],
+          "brazo_R": [
+            -30,
+            40,
+            25
+          ],
+          "pigostilo": [
+            25,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "catalogo_movimientos": [
+      {
+        "nombre": "caminar_cabeceo_pollito",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.5,
+        "huesos_mandan": [
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "cuello",
+          "cabeza"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.locomocion_terrestre_primaria",
+          "movimiento.cabeceo_optocinetico",
+          "movimiento.cabeceo_ordenes",
+          "movimiento.ritmo_paso_bipedo_s"
+        ]
+      },
+      {
+        "nombre": "caminar_lento_sigiloso",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.8,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.locomocion_terrestre_primaria",
+          "rango.femur.xyz",
+          "rango.tibiotarso.xyz",
+          "rango.tarso.xyz"
+        ]
+      },
+      {
+        "nombre": "caminar_atras_pasitos",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.6,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.locomocion_terrestre_primaria",
+          "rango.femur.xyz",
+          "rango.tarso.xyz"
+        ]
+      },
+      {
+        "nombre": "correr_rapido_compacto",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.3,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "cabeza"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.locomocion_terrestre_primaria",
+          "anatomia.desarrollo_precoz",
+          "movimiento.ritmo_paso_bipedo_s"
+        ]
+      },
+      {
+        "nombre": "correr_aleteando_frenetico",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.35,
+        "huesos_mandan": [
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "brazo_L",
+          "brazo_R",
+          "ala_L",
+          "ala_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.cooperacion_alas_patas_juvenil",
+          "movimiento.flap_run_juvenil",
+          "movimiento.aleteo_fases"
+        ]
+      },
+      {
+        "nombre": "carrera_inclinada_wair",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.4,
+        "huesos_mandan": [
+          "cadera",
+          "pecho",
+          "brazo_L",
+          "brazo_R",
+          "ala_L",
+          "ala_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.wair_carrera_inclinada",
+          "movimiento.cooperacion_alas_patas_juvenil",
+          "movimiento.flap_run_juvenil"
+        ]
+      },
+      {
+        "nombre": "saltito_dos_patas_avance",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.45,
+        "huesos_mandan": [
+          "cadera",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "dedos_L",
+          "dedos_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.despegue_salto",
+          "rango.tibiotarso.xyz",
+          "rango.tarso.xyz"
+        ]
+      },
+      {
+        "nombre": "saltito_en_sitio_alegre",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.4,
+        "huesos_mandan": [
+          "cadera",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "copete"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.despegue_salto",
+          "rango.tarso.xyz",
+          "rango.copete.xyz"
+        ]
+      },
+      {
+        "nombre": "salto_alto_impulso_alar",
+        "categoria": "locomocion",
+        "ciclo": false,
+        "duracion_s": 0.7,
+        "huesos_mandan": [
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "brazo_L",
+          "brazo_R",
+          "ala_L",
+          "ala_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.despegue_salto",
+          "movimiento.cooperacion_alas_patas_juvenil",
+          "movimiento.aleteo_fases"
+        ]
+      },
+      {
+        "nombre": "salto_largo_entre_hombros",
+        "categoria": "locomocion",
+        "ciclo": false,
+        "duracion_s": 0.8,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "brazo_L",
+          "brazo_R",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "antropometria.estatura_m",
+          "movimiento.despegue_salto",
+          "movimiento.vuelo_corto_galliforme"
+        ]
+      },
+      {
+        "nombre": "despegue_salto_vertical",
+        "categoria": "locomocion",
+        "ciclo": false,
+        "duracion_s": 0.55,
+        "huesos_mandan": [
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "brazo_L",
+          "brazo_R",
+          "ala_L",
+          "ala_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.despegue_salto",
+          "movimiento.aleteo_fases",
+          "movimiento.aleteo_acoplamiento_alabeo"
+        ]
+      },
+      {
+        "nombre": "vuelo_corto_aleteo_intenso",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.25,
+        "huesos_mandan": [
+          "hombro_L",
+          "hombro_R",
+          "brazo_L",
+          "brazo_R",
+          "antebrazo_L",
+          "antebrazo_R",
+          "ala_L",
+          "ala_R",
+          "pigostilo"
+        ],
+        "apoyos": [],
+        "evidencia": [
+          "movimiento.vuelo_corto_galliforme",
+          "movimiento.aleteo_fases",
+          "movimiento.aleteo_plegado_ascendente",
+          "movimiento.aleteo_cinematica_5_parametros"
+        ]
+      },
+      {
+        "nombre": "vuelo_ondulante_breve",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.6,
+        "huesos_mandan": [
+          "pecho",
+          "brazo_L",
+          "brazo_R",
+          "antebrazo_L",
+          "antebrazo_R",
+          "ala_L",
+          "ala_R",
+          "pigostilo"
+        ],
+        "apoyos": [],
+        "evidencia": [
+          "movimiento.vuelo_ondulante",
+          "movimiento.aleteo_acoplamiento_guinada",
+          "articulacion.ala_acoplamiento_codo_muneca"
+        ]
+      },
+      {
+        "nombre": "descenso_controlado_aleteando",
+        "categoria": "locomocion",
+        "ciclo": false,
+        "duracion_s": 0.75,
+        "huesos_mandan": [
+          "brazo_L",
+          "brazo_R",
+          "antebrazo_L",
+          "antebrazo_R",
+          "ala_L",
+          "ala_R",
+          "pigostilo",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "apoyos": [],
+        "evidencia": [
+          "movimiento.aleteo_fases",
+          "movimiento.aleteo_acoplamiento_alabeo",
+          "rango.cola_pigostilo.xyz"
+        ]
+      },
+      {
+        "nombre": "aterrizaje_amortiguado_dos_patas",
+        "categoria": "locomocion",
+        "ciclo": false,
+        "duracion_s": 0.5,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "dedos_L",
+          "dedos_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.locomocion_terrestre_primaria",
+          "rango.tibiotarso.xyz",
+          "rango.tarso.xyz"
+        ]
+      },
+      {
+        "nombre": "giro_en_sitio_izquierda",
+        "categoria": "locomocion",
+        "ciclo": false,
+        "duracion_s": 0.5,
+        "huesos_mandan": [
+          "raiz",
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.locomocion_terrestre_primaria",
+          "rango.tronco_cadera_pecho.xyz",
+          "rango.tarso.xyz"
+        ]
+      },
+      {
+        "nombre": "giro_en_sitio_derecha",
+        "categoria": "locomocion",
+        "ciclo": false,
+        "duracion_s": 0.5,
+        "huesos_mandan": [
+          "raiz",
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.locomocion_terrestre_primaria",
+          "rango.tronco_cadera_pecho.xyz",
+          "rango.tarso.xyz"
+        ]
+      },
+      {
+        "nombre": "paso_lateral_hombro",
+        "categoria": "locomocion",
+        "ciclo": true,
+        "duracion_s": 0.5,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tarso_L",
+          "tarso_R",
+          "dedos_L",
+          "dedos_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "antropometria.estatura_m",
+          "rango.femur.xyz",
+          "rango.dedos.xyz"
+        ]
+      },
+      {
+        "nombre": "reposo_de_pie_alerta",
+        "categoria": "postura",
+        "ciclo": true,
+        "duracion_s": 2.0,
+        "huesos_mandan": [
+          "pecho",
+          "cabeza",
+          "copete",
+          "cola_base",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "proporcion.silueta_general",
+          "proporcion.cola_angulo_perfil_deg",
+          "anatomia.sinsacro_composicion"
+        ]
+      },
+      {
+        "nombre": "sentarse_como_bolita",
+        "categoria": "postura",
+        "ciclo": false,
+        "duracion_s": 0.7,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "evidencia": [
+          "proporcion.silueta_general",
+          "rango.tibiotarso.xyz",
+          "rango.tarso.xyz"
+        ]
+      },
+      {
+        "nombre": "postura_anidar_empollar",
+        "categoria": "postura",
+        "ciclo": true,
+        "duracion_s": 2.5,
+        "huesos_mandan": [
+          "cadera",
+          "pecho",
+          "hombro_L",
+          "hombro_R",
+          "brazo_L",
+          "brazo_R",
+          "tibiotarso_L",
+          "tibiotarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "evidencia": [
+          "movimiento.anidar_esponjar_picotear",
+          "proporcion.silueta_general",
+          "rango.tibiotarso.xyz"
+        ]
+      },
+      {
+        "nombre": "levantarse_de_sentado",
+        "categoria": "postura",
+        "ciclo": false,
+        "duracion_s": 0.65,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.locomocion_terrestre_primaria",
+          "rango.femur.xyz",
+          "rango.tibiotarso.xyz"
+        ]
+      },
+      {
+        "nombre": "agacharse_preparar_salto",
+        "categoria": "postura",
+        "ciclo": false,
+        "duracion_s": 0.45,
+        "huesos_mandan": [
+          "cadera",
+          "columna",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "brazo_L",
+          "brazo_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.despegue_salto",
+          "rango.tibiotarso.xyz",
+          "rango.tarso.xyz"
+        ]
+      },
+      {
+        "nombre": "agacharse_esconder_cabeza",
+        "categoria": "postura",
+        "ciclo": false,
+        "duracion_s": 0.6,
+        "huesos_mandan": [
+          "cadera",
+          "columna",
+          "cuello",
+          "cabeza",
+          "brazo_L",
+          "brazo_R",
+          "tibiotarso_L",
+          "tibiotarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "proporcion.cuello_visible",
+          "rango.cuello_interno.xyz",
+          "rango.cabeza.xyz"
+        ]
+      },
+      {
+        "nombre": "equilibrio_una_pata_izquierda",
+        "categoria": "postura",
+        "ciclo": true,
+        "duracion_s": 1.8,
+        "huesos_mandan": [
+          "cadera",
+          "femur_R",
+          "tibiotarso_R",
+          "tarso_R",
+          "tarso_L",
+          "dedos_L"
+        ],
+        "apoyos": [
+          "dedos_L"
+        ],
+        "evidencia": [
+          "anatomia.sinsacro_composicion",
+          "anatomia.pie_anisodactilo",
+          "rango.tibiotarso.xyz"
+        ]
+      },
+      {
+        "nombre": "equilibrio_una_pata_derecha",
+        "categoria": "postura",
+        "ciclo": true,
+        "duracion_s": 1.8,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "tibiotarso_L",
+          "tarso_L",
+          "tarso_R",
+          "dedos_R"
+        ],
+        "apoyos": [
+          "dedos_R"
+        ],
+        "evidencia": [
+          "anatomia.sinsacro_composicion",
+          "anatomia.pie_anisodactilo",
+          "rango.tibiotarso.xyz"
+        ]
+      },
+      {
+        "nombre": "equilibrio_en_hombro_movil",
+        "categoria": "postura",
+        "ciclo": true,
+        "duracion_s": 1.2,
+        "huesos_mandan": [
+          "cadera",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "dedos_L",
+          "dedos_R",
+          "brazo_L",
+          "brazo_R",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "antropometria.estatura_m",
+          "anatomia.pie_anisodactilo",
+          "movimiento.cooperacion_alas_patas_juvenil"
+        ]
+      },
+      {
+        "nombre": "dormir_cabeza_baja_respirando",
+        "categoria": "postura",
+        "ciclo": true,
+        "duracion_s": 3.0,
+        "huesos_mandan": [
+          "pecho",
+          "cuello",
+          "cabeza",
+          "copete",
+          "tibiotarso_L",
+          "tibiotarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "evidencia": [
+          "proporcion.cabeza_altura",
+          "rango.cuello_interno.xyz",
+          "rango.cabeza.xyz"
+        ]
+      },
+      {
+        "nombre": "despertar_estiramiento_aviar",
+        "categoria": "postura",
+        "ciclo": false,
+        "duracion_s": 1.4,
+        "huesos_mandan": [
+          "pecho",
+          "cabeza",
+          "brazo_L",
+          "antebrazo_L",
+          "ala_L",
+          "tibiotarso_L",
+          "tarso_L",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_R"
+        ],
+        "evidencia": [
+          "articulacion.ala_acoplamiento_codo_muneca",
+          "rango.hombro_brazo.xyz",
+          "rango.tibiotarso.xyz"
+        ]
+      },
+      {
+        "nombre": "inclinacion_perfil_silueta_s",
+        "categoria": "postura",
+        "ciclo": false,
+        "duracion_s": 0.8,
+        "huesos_mandan": [
+          "cadera",
+          "columna",
+          "pecho",
+          "cabeza",
+          "copete",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "proporcion.silueta_general",
+          "proporcion.cola_angulo_perfil_deg",
+          "rango.tronco_cadera_pecho.xyz"
+        ]
+      },
+      {
+        "nombre": "picotear_suelo_semilla",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 0.4,
+        "huesos_mandan": [
+          "cadera",
+          "columna",
+          "cuello",
+          "cabeza",
+          "pico",
+          "mandibula"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.tronco_cadera_pecho.xyz",
+          "rango.cabeza.xyz",
+          "rango.pico_mandibula.x"
+        ]
+      },
+      {
+        "nombre": "picotear_repetido_rapido",
+        "categoria": "accion_aviar",
+        "ciclo": true,
+        "duracion_s": 0.35,
+        "huesos_mandan": [
+          "cadera",
+          "cuello",
+          "cabeza",
+          "copete",
+          "pico",
+          "mandibula"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cuello_interno.xyz",
+          "rango.cabeza.xyz",
+          "rango.copete.xyz"
+        ]
+      },
+      {
+        "nombre": "picotazo_defensivo_frente",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 0.45,
+        "huesos_mandan": [
+          "pecho",
+          "cuello",
+          "cabeza",
+          "pico",
+          "mandibula",
+          "ceja_L",
+          "ceja_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.anidar_esponjar_picotear",
+          "rango.cabeza.xyz",
+          "rango.pico_mandibula.x"
+        ]
+      },
+      {
+        "nombre": "escarbar_suelo_pata_izquierda",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 0.6,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "tibiotarso_L",
+          "tarso_L",
+          "dedos_L"
+        ],
+        "apoyos": [
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.escarbar_suelo",
+          "rango.femur.xyz",
+          "rango.dedos.xyz"
+        ]
+      },
+      {
+        "nombre": "escarbar_suelo_pata_derecha",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 0.6,
+        "huesos_mandan": [
+          "cadera",
+          "femur_R",
+          "tibiotarso_R",
+          "tarso_R",
+          "dedos_R"
+        ],
+        "apoyos": [
+          "dedos_L"
+        ],
+        "evidencia": [
+          "movimiento.escarbar_suelo",
+          "rango.femur.xyz",
+          "rango.dedos.xyz"
+        ]
+      },
+      {
+        "nombre": "escarbar_alterno_busqueda",
+        "categoria": "accion_aviar",
+        "ciclo": true,
+        "duracion_s": 0.9,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "cabeza"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.escarbar_suelo",
+          "movimiento.locomocion_terrestre_primaria",
+          "rango.tarso.xyz"
+        ]
+      },
+      {
+        "nombre": "salto_patada_frontal_combate",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 0.65,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "femur_R",
+          "tibiotarso_L",
+          "tibiotarso_R",
+          "tarso_L",
+          "tarso_R",
+          "brazo_L",
+          "brazo_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.salto_combate_patada",
+          "movimiento.cooperacion_alas_patas_juvenil",
+          "rango.femur.xyz"
+        ]
+      },
+      {
+        "nombre": "patada_baja_pata_izquierda",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 0.45,
+        "huesos_mandan": [
+          "cadera",
+          "femur_L",
+          "tibiotarso_L",
+          "tarso_L",
+          "dedos_L"
+        ],
+        "apoyos": [
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.salto_combate_patada",
+          "rango.femur.xyz",
+          "rango.tibiotarso.xyz"
+        ]
+      },
+      {
+        "nombre": "patada_baja_pata_derecha",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 0.45,
+        "huesos_mandan": [
+          "cadera",
+          "femur_R",
+          "tibiotarso_R",
+          "tarso_R",
+          "dedos_R"
+        ],
+        "apoyos": [
+          "dedos_L"
+        ],
+        "evidencia": [
+          "movimiento.salto_combate_patada",
+          "rango.femur.xyz",
+          "rango.tibiotarso.xyz"
+        ]
+      },
+      {
+        "nombre": "danza_circular_ala_baja",
+        "categoria": "accion_aviar",
+        "ciclo": true,
+        "duracion_s": 1.2,
+        "huesos_mandan": [
+          "raiz",
+          "cadera",
+          "brazo_L",
+          "antebrazo_L",
+          "ala_L",
+          "tarso_L",
+          "tarso_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.danza_circular_ala_baja",
+          "rango.hombro_brazo.xyz",
+          "rango.codo_antebrazo.xyz"
+        ]
+      },
+      {
+        "nombre": "esponjar_plumaje_sacudida",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 0.9,
+        "huesos_mandan": [
+          "cadera",
+          "pecho",
+          "cabeza",
+          "copete",
+          "brazo_L",
+          "brazo_R",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "movimiento.anidar_esponjar_picotear",
+          "anatomia.plumon_juvenil",
+          "rango.cola_pigostilo.xyz"
+        ]
+      },
+      {
+        "nombre": "acicalar_ala_izquierda",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 1.1,
+        "huesos_mandan": [
+          "cuello",
+          "cabeza",
+          "pico",
+          "mandibula",
+          "hombro_L",
+          "brazo_L",
+          "antebrazo_L",
+          "ala_L"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cabeza.xyz",
+          "rango.hombro_brazo.xyz",
+          "proporcion.ala_primarias"
+        ]
+      },
+      {
+        "nombre": "acicalar_ala_derecha",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 1.1,
+        "huesos_mandan": [
+          "cuello",
+          "cabeza",
+          "pico",
+          "mandibula",
+          "hombro_R",
+          "brazo_R",
+          "antebrazo_R",
+          "ala_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cabeza.xyz",
+          "rango.hombro_brazo.xyz",
+          "proporcion.ala_primarias"
+        ]
+      },
+      {
+        "nombre": "beber_agua_alzar_pico",
+        "categoria": "accion_aviar",
+        "ciclo": false,
+        "duracion_s": 1.2,
+        "huesos_mandan": [
+          "cadera",
+          "columna",
+          "cuello",
+          "cabeza",
+          "pico",
+          "mandibula"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.tronco_cadera_pecho.xyz",
+          "rango.cabeza.xyz",
+          "rango.pico_mandibula.x"
+        ]
+      },
+      {
+        "nombre": "expresion_normal_parpadeo",
+        "categoria": "expresion_adn",
+        "ciclo": true,
+        "duracion_s": 1.5,
+        "huesos_mandan": [
+          "cabeza",
+          "ceja_L",
+          "ceja_R",
+          "copete"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cejas.xyz",
+          "rango.cabeza.xyz",
+          "proporcion.cabeza_altura"
+        ]
+      },
+      {
+        "nombre": "expresion_feliz_pio_alegre",
+        "categoria": "expresion_adn",
+        "ciclo": false,
+        "duracion_s": 1.0,
+        "huesos_mandan": [
+          "cabeza",
+          "pico",
+          "mandibula",
+          "ceja_L",
+          "ceja_R",
+          "copete",
+          "brazo_L",
+          "brazo_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cejas.xyz",
+          "rango.pico_mandibula.x",
+          "rango.copete.xyz"
+        ]
+      },
+      {
+        "nombre": "expresion_nervioso_temblor_sudor",
+        "categoria": "expresion_adn",
+        "ciclo": true,
+        "duracion_s": 0.8,
+        "huesos_mandan": [
+          "cabeza",
+          "mandibula",
+          "ceja_L",
+          "ceja_R",
+          "copete",
+          "brazo_L",
+          "brazo_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cejas.xyz",
+          "rango.pico_mandibula.x",
+          "rango.hombro_brazo.xyz"
+        ]
+      },
+      {
+        "nombre": "expresion_enojado_graznido",
+        "categoria": "expresion_adn",
+        "ciclo": false,
+        "duracion_s": 1.1,
+        "huesos_mandan": [
+          "pecho",
+          "cabeza",
+          "pico",
+          "mandibula",
+          "ceja_L",
+          "ceja_R",
+          "copete",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cejas.xyz",
+          "rango.pico_mandibula.x",
+          "rango.copete.xyz"
+        ]
+      },
+      {
+        "nombre": "expresion_triste_abatido",
+        "categoria": "expresion_adn",
+        "ciclo": false,
+        "duracion_s": 1.4,
+        "huesos_mandan": [
+          "columna",
+          "cuello",
+          "cabeza",
+          "ceja_L",
+          "ceja_R",
+          "copete",
+          "brazo_L",
+          "brazo_R",
+          "cola_base"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cejas.xyz",
+          "rango.cabeza.xyz",
+          "rango.copete.xyz"
+        ]
+      },
+      {
+        "nombre": "ladear_cabeza_curioso_izquierda",
+        "categoria": "gesto",
+        "ciclo": false,
+        "duracion_s": 0.6,
+        "huesos_mandan": [
+          "cuello",
+          "cabeza",
+          "copete",
+          "ceja_L",
+          "ceja_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cabeza.xyz",
+          "rango.cuello_interno.xyz",
+          "rango.copete.xyz"
+        ]
+      },
+      {
+        "nombre": "ladear_cabeza_curioso_derecha",
+        "categoria": "gesto",
+        "ciclo": false,
+        "duracion_s": 0.6,
+        "huesos_mandan": [
+          "cuello",
+          "cabeza",
+          "copete",
+          "ceja_L",
+          "ceja_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cabeza.xyz",
+          "rango.cuello_interno.xyz",
+          "rango.copete.xyz"
+        ]
+      },
+      {
+        "nombre": "asentir_energico_cresta",
+        "categoria": "gesto",
+        "ciclo": true,
+        "duracion_s": 0.5,
+        "huesos_mandan": [
+          "cuello",
+          "cabeza",
+          "copete"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cabeza.xyz",
+          "rango.copete.xyz",
+          "proporcion.cresta_plumas"
+        ]
+      },
+      {
+        "nombre": "negar_con_cabeza",
+        "categoria": "gesto",
+        "ciclo": true,
+        "duracion_s": 0.6,
+        "huesos_mandan": [
+          "cuello",
+          "cabeza",
+          "copete"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.cabeza.xyz",
+          "rango.cuello_interno.xyz",
+          "rango.copete.xyz"
+        ]
+      },
+      {
+        "nombre": "saludar_alita_izquierda",
+        "categoria": "gesto",
+        "ciclo": true,
+        "duracion_s": 0.7,
+        "huesos_mandan": [
+          "hombro_L",
+          "brazo_L",
+          "antebrazo_L",
+          "ala_L",
+          "cabeza"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "anatomia.protoalas_juveniles",
+          "rango.hombro_brazo.xyz",
+          "rango.muneca_ala.xyz"
+        ]
+      },
+      {
+        "nombre": "saludar_alita_derecha",
+        "categoria": "gesto",
+        "ciclo": true,
+        "duracion_s": 0.7,
+        "huesos_mandan": [
+          "hombro_R",
+          "brazo_R",
+          "antebrazo_R",
+          "ala_R",
+          "cabeza"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "anatomia.protoalas_juveniles",
+          "rango.hombro_brazo.xyz",
+          "rango.muneca_ala.xyz"
+        ]
+      },
+      {
+        "nombre": "aleteo_emocion_brazos_arriba",
+        "categoria": "gesto",
+        "ciclo": true,
+        "duracion_s": 0.45,
+        "huesos_mandan": [
+          "hombro_L",
+          "hombro_R",
+          "brazo_L",
+          "brazo_R",
+          "antebrazo_L",
+          "antebrazo_R",
+          "ala_L",
+          "ala_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "anatomia.protoalas_juveniles",
+          "movimiento.aleteo_acoplamiento_alabeo",
+          "rango.hombro_brazo.xyz"
+        ]
+      },
+      {
+        "nombre": "alas_en_jarra_indignado",
+        "categoria": "gesto",
+        "ciclo": false,
+        "duracion_s": 0.8,
+        "huesos_mandan": [
+          "pecho",
+          "brazo_L",
+          "brazo_R",
+          "antebrazo_L",
+          "antebrazo_R",
+          "ala_L",
+          "ala_R",
+          "ceja_L",
+          "ceja_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "anatomia.protoalas_juveniles",
+          "rango.codo_antebrazo.xyz",
+          "rango.cejas.xyz"
+        ]
+      },
+      {
+        "nombre": "cubrir_rostro_con_alitas",
+        "categoria": "gesto",
+        "ciclo": false,
+        "duracion_s": 0.75,
+        "huesos_mandan": [
+          "cabeza",
+          "hombro_L",
+          "hombro_R",
+          "brazo_L",
+          "brazo_R",
+          "antebrazo_L",
+          "antebrazo_R",
+          "ala_L",
+          "ala_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "anatomia.protoalas_juveniles",
+          "movimiento.aleteo_acoplamiento_guinada",
+          "rango.hombro_brazo.xyz"
+        ]
+      },
+      {
+        "nombre": "inflar_pecho_orgulloso",
+        "categoria": "gesto",
+        "ciclo": false,
+        "duracion_s": 0.9,
+        "huesos_mandan": [
+          "columna",
+          "pecho",
+          "cabeza",
+          "copete",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "proporcion.pecho_ondas",
+          "proporcion.silueta_general",
+          "rango.tronco_cadera_pecho.xyz"
+        ]
+      },
+      {
+        "nombre": "menear_colita_abanico",
+        "categoria": "gesto",
+        "ciclo": true,
+        "duracion_s": 0.4,
+        "huesos_mandan": [
+          "cadera",
+          "cola_base",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "anatomia.vertebras_caudales_libres",
+          "anatomia.pigostilo_vertebras_fusionadas",
+          "rango.cola_pigostilo.xyz"
+        ]
+      },
+      {
+        "nombre": "desplegar_cola_tres_petalos",
+        "categoria": "gesto",
+        "ciclo": false,
+        "duracion_s": 0.6,
+        "huesos_mandan": [
+          "cola_base",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "proporcion.cola_plumas",
+          "proporcion.cola_angulo_perfil_deg",
+          "rango.cola_pigostilo.xyz"
+        ]
+      },
+      {
+        "nombre": "erizar_cresta_sorpresa",
+        "categoria": "gesto",
+        "ciclo": false,
+        "duracion_s": 0.5,
+        "huesos_mandan": [
+          "cabeza",
+          "copete",
+          "ceja_L",
+          "ceja_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "proporcion.cresta_plumas",
+          "rango.copete.xyz",
+          "rango.cejas.xyz"
+        ]
+      },
+      {
+        "nombre": "reverencia_saludo_cortes",
+        "categoria": "gesto",
+        "ciclo": false,
+        "duracion_s": 1.0,
+        "huesos_mandan": [
+          "cadera",
+          "columna",
+          "pecho",
+          "cabeza",
+          "brazo_L",
+          "brazo_R",
+          "pigostilo"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "rango.tronco_cadera_pecho.xyz",
+          "rango.hombro_brazo.xyz",
+          "rango.cola_pigostilo.xyz"
+        ]
+      },
+      {
+        "nombre": "frotar_mejilla_carinosa",
+        "categoria": "gesto",
+        "ciclo": true,
+        "duracion_s": 0.9,
+        "huesos_mandan": [
+          "pecho",
+          "cuello",
+          "cabeza",
+          "copete",
+          "ceja_L",
+          "ceja_R"
+        ],
+        "apoyos": [
+          "dedos_L",
+          "dedos_R"
+        ],
+        "evidencia": [
+          "antropometria.estatura_m",
+          "rango.cabeza.xyz",
+          "rango.cejas.xyz"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1061 @@
+{
+ "schema": "ficha_esqueleto/v1",
+ "id": "EJEMPLO-gdc-piquito",
+ "nombre": "Piquito (EJEMPLO manual, NO Argon)",
+ "plantilla": "ave",
+ "es_ficticio": true,
+ "analogo_real": "pollito doméstico (Gallus gallus domesticus) con proporciones chibi: cabeza ~45% de la altura",
+ "altura_m": 0.1,
+ "origen": {
+  "tipo": "EJEMPLO_MANUAL",
+  "autor": "Grok Bot (ingeniero), a mano, sin IA",
+  "fecha": "2026-11-09",
+  "aviso": "FICHA DE EJEMPLO para probar el pipeline. Ángulos y largos aproximados, no investigados por Argon."
+ },
+ "fuentes": [
+  {
+   "tipo": "hoja_personaje",
+   "titulo": "Hoja fase 1 de Piquito + gdc-piquito.json (Guardianes)",
+   "url": null,
+   "afirma": "pajarito amarillo #FFD84D, pecho #FFF1A8, pico/patas #F2792A, copete, redondo, tamaño de un puño (0.10 m)"
+  },
+  {
+   "tipo": "web",
+   "titulo": "Bird anatomy — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Bird_anatomy",
+   "afirma": "ala = húmero, radio/cúbito, carpometacarpo; pata = fémur, tibiotarso, tarsometatarso, dedos; el «codo hacia atrás» visible es el tobillo"
+  },
+  {
+   "tipo": "deduccion",
+   "titulo": "Deducción para personaje ficticio",
+   "url": null,
+   "afirma": "se toma el esqueleto de un pollito y se reescala a la silueta de la hoja (cuerpo esférico, cabeza grande, patas cortas); el copete se modela como hueso propio para animarlo"
+  }
+ ],
+ "huesos": [
+  {
+   "nombre": "raiz",
+   "padre": null,
+   "cabeza": [
+    0,
+    0,
+    0
+   ],
+   "cola": [
+    0,
+    0,
+    0.05
+   ],
+   "rol": "raiz",
+   "lado": "C",
+   "limites_deg": {
+    "x": [
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0
+    ],
+    "z": [
+     -135,
+     135
+    ]
+   },
+   "funcion": "ancla en el suelo"
+  },
+  {
+   "nombre": "cadera",
+   "padre": "raiz",
+   "cabeza": [
+    0,
+    0.04,
+    0.28
+   ],
+   "cola": [
+    0,
+    0.02,
+    0.4
+   ],
+   "rol": "cadera",
+   "lado": "C",
+   "limites_deg": {
+    "x": [
+     -20,
+     30
+    ],
+    "y": [
+     -15,
+     15
+    ],
+    "z": [
+     -20,
+     20
+    ]
+   },
+   "funcion": "pelvis/sinsacro"
+  },
+  {
+   "nombre": "pecho",
+   "padre": "cadera",
+   "cabeza": [
+    0,
+    0.02,
+    0.4
+   ],
+   "cola": [
+    0,
+    0.0,
+    0.55
+   ],
+   "rol": "columna",
+   "lado": "C",
+   "limites_deg": {
+    "x": [
+     -20,
+     30
+    ],
+    "y": [
+     -15,
+     15
+    ],
+    "z": [
+     -20,
+     20
+    ]
+   },
+   "funcion": "tórax/quilla"
+  },
+  {
+   "nombre": "cuello",
+   "padre": "pecho",
+   "cabeza": [
+    0,
+    0.0,
+    0.55
+   ],
+   "cola": [
+    0,
+    -0.02,
+    0.62
+   ],
+   "rol": "cuello",
+   "lado": "C",
+   "limites_deg": {
+    "x": [
+     -40,
+     50
+    ],
+    "y": [
+     -30,
+     30
+    ],
+    "z": [
+     -60,
+     60
+    ]
+   },
+   "funcion": "vértebras cervicales"
+  },
+  {
+   "nombre": "cabeza",
+   "padre": "cuello",
+   "cabeza": [
+    0,
+    -0.02,
+    0.62
+   ],
+   "cola": [
+    0,
+    -0.04,
+    0.9
+   ],
+   "rol": "cabeza",
+   "lado": "C",
+   "limites_deg": {
+    "x": [
+     -40,
+     40
+    ],
+    "y": [
+     -35,
+     35
+    ],
+    "z": [
+     -90,
+     90
+    ]
+   },
+   "funcion": "cráneo"
+  },
+  {
+   "nombre": "copete",
+   "padre": "cabeza",
+   "cabeza": [
+    0,
+    -0.03,
+    0.9
+   ],
+   "cola": [
+    0,
+    0.0,
+    0.98
+   ],
+   "rol": "copete",
+   "lado": "C",
+   "limites_deg": {
+    "x": [
+     -20,
+     20
+    ],
+    "y": [
+     -15,
+     15
+    ],
+    "z": [
+     -10,
+     10
+    ]
+   },
+   "funcion": "plumas del copete"
+  },
+  {
+   "nombre": "cola",
+   "padre": "cadera",
+   "cabeza": [
+    0,
+    0.14,
+    0.3
+   ],
+   "cola": [
+    0,
+    0.3,
+    0.36
+   ],
+   "rol": "cola",
+   "lado": "C",
+   "limites_deg": {
+    "x": [
+     -30,
+     45
+    ],
+    "y": [
+     -20,
+     20
+    ],
+    "z": [
+     -30,
+     30
+    ]
+   },
+   "funcion": "pigostilo + plumas"
+  },
+  {
+   "nombre": "hombro_L",
+   "padre": "pecho",
+   "cabeza": [
+    0.0,
+    0.0,
+    0.52
+   ],
+   "cola": [
+    0.18,
+    0.0,
+    0.52
+   ],
+   "rol": "hombro",
+   "lado": "L",
+   "limites_deg": {
+    "x": [
+     -10,
+     10
+    ],
+    "y": [
+     -10,
+     10
+    ],
+    "z": [
+     -10,
+     10
+    ]
+   },
+   "funcion": "coracoides/escápula"
+  },
+  {
+   "nombre": "ala_humero_L",
+   "padre": "hombro_L",
+   "cabeza": [
+    0.18,
+    0.0,
+    0.52
+   ],
+   "cola": [
+    0.24,
+    0.03,
+    0.44
+   ],
+   "rol": "ala",
+   "lado": "L",
+   "limites_deg": {
+    "x": [
+     -30,
+     30
+    ],
+    "y": [
+     -100,
+     10
+    ],
+    "z": [
+     -30,
+     30
+    ]
+   },
+   "funcion": "húmero"
+  },
+  {
+   "nombre": "ala_antebrazo_L",
+   "padre": "ala_humero_L",
+   "cabeza": [
+    0.24,
+    0.03,
+    0.44
+   ],
+   "cola": [
+    0.26,
+    0.06,
+    0.36
+   ],
+   "rol": "ala",
+   "lado": "L",
+   "limites_deg": {
+    "x": [
+     -10,
+     10
+    ],
+    "y": [
+     -45,
+     10
+    ],
+    "z": [
+     -40,
+     40
+    ]
+   },
+   "funcion": "radio + cúbito"
+  },
+  {
+   "nombre": "ala_mano_L",
+   "padre": "ala_antebrazo_L",
+   "cabeza": [
+    0.26,
+    0.06,
+    0.36
+   ],
+   "cola": [
+    0.25,
+    0.1,
+    0.28
+   ],
+   "rol": "ala",
+   "lado": "L",
+   "limites_deg": {
+    "x": [
+     -10,
+     10
+    ],
+    "y": [
+     -45,
+     10
+    ],
+    "z": [
+     -30,
+     30
+    ]
+   },
+   "funcion": "carpometacarpo + primarias"
+  },
+  {
+   "nombre": "muslo_L",
+   "padre": "cadera",
+   "cabeza": [
+    0.08,
+    0.02,
+    0.26
+   ],
+   "cola": [
+    0.08,
+    -0.03,
+    0.18
+   ],
+   "rol": "pierna",
+   "lado": "L",
+   "limites_deg": {
+    "x": [
+     -40,
+     60
+    ],
+    "y": [
+     -15,
+     15
+    ],
+    "z": [
+     -20,
+     20
+    ]
+   },
+   "funcion": "fémur (oculto en el cuerpo)"
+  },
+  {
+   "nombre": "tibiotarso_L",
+   "padre": "muslo_L",
+   "cabeza": [
+    0.08,
+    -0.03,
+    0.18
+   ],
+   "cola": [
+    0.08,
+    0.01,
+    0.09
+   ],
+   "rol": "pierna",
+   "lado": "L",
+   "limites_deg": {
+    "x": [
+     -10,
+     80
+    ],
+    "y": [
+     -10,
+     10
+    ],
+    "z": [
+     -10,
+     10
+    ]
+   },
+   "funcion": "tibiotarso («muslo» visible)"
+  },
+  {
+   "nombre": "tarso_L",
+   "padre": "tibiotarso_L",
+   "cabeza": [
+    0.08,
+    0.01,
+    0.09
+   ],
+   "cola": [
+    0.08,
+    -0.01,
+    0.02
+   ],
+   "rol": "pierna",
+   "lado": "L",
+   "limites_deg": {
+    "x": [
+     -80,
+     10
+    ],
+    "y": [
+     -10,
+     10
+    ],
+    "z": [
+     -10,
+     10
+    ]
+   },
+   "funcion": "tarsometatarso; su articulación de arriba es el TOBILLO (dobla hacia atrás)"
+  },
+  {
+   "nombre": "dedos_L",
+   "padre": "tarso_L",
+   "cabeza": [
+    0.08,
+    -0.01,
+    0.02
+   ],
+   "cola": [
+    0.08,
+    -0.08,
+    0.0
+   ],
+   "rol": "dedos",
+   "lado": "L",
+   "limites_deg": {
+    "x": [
+     -60,
+     40
+    ],
+    "y": [
+     -10,
+     10
+    ],
+    "z": [
+     -15,
+     15
+    ]
+   },
+   "funcion": "dedos (3 al frente, 1 atrás)"
+  },
+  {
+   "nombre": "hombro_R",
+   "padre": "pecho",
+   "cabeza": [
+    -0.0,
+    0.0,
+    0.52
+   ],
+   "cola": [
+    -0.18,
+    0.0,
+    0.52
+   ],
+   "rol": "hombro",
+   "lado": "R",
+   "limites_deg": {
+    "x": [
+     -10,
+     10
+    ],
+    "y": [
+     -10,
+     10
+    ],
+    "z": [
+     -10,
+     10
+    ]
+   },
+   "funcion": "coracoides/escápula"
+  },
+  {
+   "nombre": "ala_humero_R",
+   "padre": "hombro_R",
+   "cabeza": [
+    -0.18,
+    0.0,
+    0.52
+   ],
+   "cola": [
+    -0.24,
+    0.03,
+    0.44
+   ],
+   "rol": "ala",
+   "lado": "R",
+   "limites_deg": {
+    "x": [
+     -30,
+     30
+    ],
+    "y": [
+     -10,
+     100
+    ],
+    "z": [
+     -30,
+     30
+    ]
+   },
+   "funcion": "húmero"
+  },
+  {
+   "nombre": "ala_antebrazo_R",
+   "padre": "ala_humero_R",
+   "cabeza": [
+    -0.24,
+    0.03,
+    0.44
+   ],
+   "cola": [
+    -0.26,
+    0.06,
+    0.36
+   ],
+   "rol": "ala",
+   "lado": "R",
+   "limites_deg": {
+    "x": [
+     -10,
+     10
+    ],
+    "y": [
+     -10,
+     45
+    ],
+    "z": [
+     -40,
+     40
+    ]
+   },
+   "funcion": "radio + cúbito"
+  },
+  {
+   "nombre": "ala_mano_R",
+   "padre": "ala_antebrazo_R",
+   "cabeza": [
+    -0.26,
+    0.06,
+    0.36
+   ],
+   "cola": [
+    -0.25,
+    0.1,
+    0.28
+   ],
+   "rol": "ala",
+   "lado": "R",
+   "limites_deg": {
+    "x": [
+     -10,
+     10
+    ],
+    "y": [
+     -10,
+     45
+    ],
+    "z": [
+     -30,
+     30
+    ]
+   },
+   "funcion": "carpometacarpo + primarias"
+  },
+  {
+   "nombre": "muslo_R",
+   "padre": "cadera",
+   "cabeza": [
+    -0.08,
+    0.02,
+    0.26
+   ],
+   "cola": [
+    -0.08,
+    -0.03,
+    0.18
+   ],
+   "rol": "pierna",
+   "lado": "R",
+   "limites_deg": {
+    "x": [
+     -40,
+     60
+    ],
+    "y": [
+     -15,
+     15
+    ],
+    "z": [
+     -20,
+     20
+    ]
+   },
+   "funcion": "fémur (oculto en el cuerpo)"
+  },
+  {
+   "nombre": "tibiotarso_R",
+   "padre": "muslo_R",
+   "cabeza": [
+    -0.08,
+    -0.03,
+    0.18
+   ],
+   "cola": [
+    -0.08,
+    0.01,
+    0.09
+   ],
+   "rol": "pierna",
+   "lado": "R",
+   "limites_deg": {
+    "x": [
+     -10,
+     80
+    ],
+    "y": [
+     -10,
+     10
+    ],
+    "z": [
+     -10,
+     10
+    ]
+   },
+   "funcion": "tibiotarso («muslo» visible)"
+  },
+  {
+   "nombre": "tarso_R",
+   "padre": "tibiotarso_R",
+   "cabeza": [
+    -0.08,
+    0.01,
+    0.09
+   ],
+   "cola": [
+    -0.08,
+    -0.01,
+    0.02
+   ],
+   "rol": "pierna",
+   "lado": "R",
+   "limites_deg": {
+    "x": [
+     -80,
+     10
+    ],
+    "y": [
+     -10,
+     10
+    ],
+    "z": [
+     -10,
+     10
+    ]
+   },
+   "funcion": "tarsometatarso; su articulación de arriba es el TOBILLO (dobla hacia atrás)"
+  },
+  {
+   "nombre": "dedos_R",
+   "padre": "tarso_R",
+   "cabeza": [
+    -0.08,
+    -0.01,
+    0.02
+   ],
+   "cola": [
+    -0.08,
+    -0.08,
+    0.0
+   ],
+   "rol": "dedos",
+   "lado": "R",
+   "limites_deg": {
+    "x": [
+     -60,
+     40
+    ],
+    "y": [
+     -10,
+     10
+    ],
+    "z": [
+     -15,
+     15
+    ]
+   },
+   "funcion": "dedos (3 al frente, 1 atrás)"
+  }
+ ],
+ "piezas": [
+  {
+   "nombre": "cuerpo",
+   "hueso": "cadera",
+   "primitiva": "esfera",
+   "modo": "libre",
+   "centro": [
+    0,
+    0.02,
+    0.4
+   ],
+   "radios": [
+    0.25,
+    0.24,
+    0.22
+   ],
+   "rotacion_deg": [
+    0,
+    0,
+    0
+   ],
+   "color": "#FFD84D"
+  },
+  {
+   "nombre": "pecho_claro",
+   "hueso": "pecho",
+   "primitiva": "esfera",
+   "modo": "libre",
+   "centro": [
+    0,
+    -0.12,
+    0.4
+   ],
+   "radios": [
+    0.17,
+    0.12,
+    0.16
+   ],
+   "rotacion_deg": [
+    0,
+    0,
+    0
+   ],
+   "color": "#FFF1A8"
+  },
+  {
+   "nombre": "cabeza",
+   "hueso": "cabeza",
+   "primitiva": "esfera",
+   "modo": "libre",
+   "centro": [
+    0,
+    -0.03,
+    0.74
+   ],
+   "radios": [
+    0.22,
+    0.21,
+    0.21
+   ],
+   "rotacion_deg": [
+    0,
+    0,
+    0
+   ],
+   "color": "#FFD84D"
+  },
+  {
+   "nombre": "copete",
+   "hueso": "copete",
+   "primitiva": "cono",
+   "modo": "hueso",
+   "radio": 0.035,
+   "color": "#F2792A"
+  },
+  {
+   "nombre": "cola",
+   "hueso": "cola",
+   "primitiva": "cono",
+   "modo": "hueso",
+   "radio": 0.05,
+   "color": "#F2792A"
+  },
+  {
+   "nombre": "ala_humero_L",
+   "hueso": "ala_humero_L",
+   "primitiva": "capsula",
+   "modo": "hueso",
+   "radio": 0.04,
+   "color": "#FFD84D"
+  },
+  {
+   "nombre": "ala_L",
+   "hueso": "ala_antebrazo_L",
+   "primitiva": "esfera",
+   "modo": "libre",
+   "centro": [
+    0.25,
+    0.05,
+    0.4
+   ],
+   "radios": [
+    0.05,
+    0.1,
+    0.14
+   ],
+   "rotacion_deg": [
+    0,
+    0,
+    0
+   ],
+   "color": "#FFD84D"
+  },
+  {
+   "nombre": "ala_punta_L",
+   "hueso": "ala_mano_L",
+   "primitiva": "cono",
+   "modo": "hueso",
+   "radio": 0.04,
+   "color": "#F2792A"
+  },
+  {
+   "nombre": "tibiotarso_L",
+   "hueso": "tibiotarso_L",
+   "primitiva": "cilindro",
+   "modo": "hueso",
+   "radio": 0.018,
+   "color": "#F2792A"
+  },
+  {
+   "nombre": "tarso_L",
+   "hueso": "tarso_L",
+   "primitiva": "cilindro",
+   "modo": "hueso",
+   "radio": 0.015,
+   "color": "#F2792A"
+  },
+  {
+   "nombre": "dedos_L",
+   "hueso": "dedos_L",
+   "primitiva": "cono",
+   "modo": "hueso",
+   "radio": 0.02,
+   "color": "#F2792A"
+  },
+  {
+   "nombre": "ala_humero_R",
+   "hueso": "ala_humero_R",
+   "primitiva": "capsula",
+   "modo": "hueso",
+   "radio": 0.04,
+   "color": "#FFD84D"
+  },
+  {
+   "nombre": "ala_R",
+   "hueso": "ala_antebrazo_R",
+   "primitiva": "esfera",
+   "modo": "libre",
+   "centro": [
+    -0.25,
+    0.05,
+    0.4
+   ],
+   "radios": [
+    0.05,
+    0.1,
+    0.14
+   ],
+   "rotacion_deg": [
+    0,
+    0,
+    0
+   ],
+   "color": "#FFD84D"
+  },
+  {
+   "nombre": "ala_punta_R",
+   "hueso": "ala_mano_R",
+   "primitiva": "cono",
+   "modo": "hueso",
+   "radio": 0.04,
+   "color": "#F2792A"
+  },
+  {
+   "nombre": "tibiotarso_R",
+   "hueso": "tibiotarso_R",
+   "primitiva": "cilindro",
+   "modo": "hueso",
+   "radio": 0.018,
+   "color": "#F2792A"
+  },
+  {
+   "nombre": "tarso_R",
+   "hueso": "tarso_R",
+   "primitiva": "cilindro",
+   "modo": "hueso",
+   "radio": 0.015,
+   "color": "#F2792A"
+  },
+  {
+   "nombre": "dedos_R",
+   "hueso": "dedos_R",
+   "primitiva": "cono",
+   "modo": "hueso",
+   "radio": 0.02,
+   "color": "#F2792A"
+  }
+ ],
+ "rostro": {
+  "hueso": "cabeza",
+  "ojos": {
+   "centro_L": [
+    0.08,
+    -0.2,
+    0.78
+   ],
+   "radio": 0.045
+  },
+  "nariz": {
+   "centro": [
+    0,
+    -0.25,
+    0.72
+   ],
+   "radio": 0.04,
+   "primitiva": "cono",
+   "color": "#F2792A",
+   "nota": "pico"
+  }
+ },
+ "poses_prueba": {
+  "aletear": {
+   "ala_humero_L": [
+    0,
+    -90,
+    0
+   ],
+   "ala_antebrazo_L": [
+    0,
+    -30,
+    0
+   ],
+   "cabeza": [
+    -20,
+    0,
+    0
+   ],
+   "cola": [
+    -20,
+    0,
+    0
+   ],
+   "ala_humero_R": [
+    0,
+    90,
+    0
+   ],
+   "ala_antebrazo_R": [
+    0,
+    30,
+    0
+   ]
+  },
+  "mirar_y_picotear": {
+   "pecho": [
+    15,
+    0,
+    0
+   ],
+   "cuello": [
+    20,
+    0,
+    30
+   ],
+   "cabeza": [
+    15,
+    15,
+    40
+   ],
+   "muslo_L": [
+    40,
+    0,
+    0
+   ],
+   "tibiotarso_L": [
+    50,
+    0,
+    0
+   ],
+   "tarso_L": [
+    -50,
+    0,
+    0
+   ],
+   "muslo_R": [
+    40,
+    0,
+    0
+   ],
+   "tibiotarso_R": [
+    50,
+    0,
+    0
+   ],
+   "tarso_R": [
+    -50,
+    0,
+    0
+   ]
+  }
+ }
+}

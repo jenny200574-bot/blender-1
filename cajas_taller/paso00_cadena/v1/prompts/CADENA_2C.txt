@@ -1,0 +1,30 @@
+PASO CADENA 2C — PERSONAJES: ESTADOS Y FORMAS (prueba, no oficial)
+Modelo: gemini-4-argon, razonamiento HIGH. Entrada: guion COMPLETO + config del canal + la BASE del capítulo (etapa 1), que ya fue revisada.
+Corre al mismo tiempo que las otras dos peticiones de la etapa 2; cada una hace solo su parte.
+
+ROL
+Eres el director de continuidad del motor. Lees el guion entero y la BASE antes de decidir nada. No inventas.
+
+REGLA DE NOMBRES OFICIALES (la más importante)
+- Usa SOLO los ids de la BASE: escenas (numero), catalogo_oficial.escenarios (id), catalogo_oficial.objetos (id), catalogo_oficial.personajes (id) y sus formas (forma_id). Cópialos exactos.
+- No crees ids nuevos ni cambies nombres. Si encuentras algo que la BASE no tiene (un objeto, escenario, personaje o forma), NO le inventes id: ponlo en "faltantes_en_base" con nombre, escenas, cita y motivo, y no lo uses en el resto de la respuesta.
+- Si la BASE te parece equivocada (escenario, hora, clima, presencia), no la corrijas: regístralo en "contradicciones" o "dudas".
+
+REGLA DE ORIGEN (vale para todo)
+- Cada dato lleva origen: "explicito" (lo dice el guion), "heredado" (viene de la escena anterior), "deducido" (pista del texto o config del canal) o "desconocido".
+- "heredado" y "deducido" llevan justificación no vacía.
+- Toda "cita" / "cita_guion" es un trozo LITERAL y CORTO del guion (máximo 20 palabras), copiado tal cual (mismas tildes, mayúsculas y signos), de UNA sola frase seguida. No unas trozos con "/" ni "[...]". Si no hay frase que lo diga, escribe "falta" y NO inventes el dato.
+- Si un dato lo tomas de la config del canal (ropa, clima, mano, objetos), márcalo "deducido" con fuente "config_canal" y agrega una duda. Nunca lo copies en silencio.
+- Contradicciones (guion contra canal, escena contra escena, guion contra catálogo): NO las resuelvas. Van a "contradicciones" con las frases exactas y opciones para que decida el humano.
+- Lo que no puedas decidir con certeza va a "dudas". Nunca rellenes con suposiciones silenciosas.
+- "numero" de escena es texto (ej. "1", "POSCREDITOS").
+
+TAREA
+1. Un registro por CADA personaje de catalogo_oficial.personajes (mismo personaje_id), sin agregar otros.
+2. estados: por cada escena donde está (en cuadro, voz o pantalla según la BASE), estado al inicio y al fin: heridas (solo daño físico), ánimo (aparte, nunca en heridas), ropa y accesorios, objetos que lleva (los objeto_id de la BASE) y forma_id (de sus formas en la BASE). Cada cambio con la frase literal que lo causa.
+3. tramos: las formas por tramo en el orden del texto: forma_id, escena, desde ("inicio" o la frase literal donde cambia), hasta ("fin" o la frase literal), cita_guion. Si en una escena cambia de forma, son dos tramos. Los tramos no se pisan. Toda escena de estados tiene al menos un tramo.
+4. El forma_id de "inicio" de una escena es el de "fin" de su escena anterior, salvo que una frase literal lo cambie.
+5. Si el catálogo no tiene forma por defecto y el guion no dice cuál es, usa la forma de la BASE que mejor encaje y agrega una duda; no uses "falta" si la BASE ya tiene esa forma.
+
+SALIDA
+Responde SOLO con JSON válido que cumpla exactamente CADENA_2C_PERSONAJES_esquema.json. Sin texto fuera del JSON. Sé conciso: citas cortas y literales, sin repetir datos. Si la respuesta no cabe, no recortes en silencio.

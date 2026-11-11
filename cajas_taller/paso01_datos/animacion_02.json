@@ -1,0 +1,106 @@
+{
+ "PISTA": "PISTA INMI (2026-10-29): orden 78 — ajustes del cubo 02 (Blender anima escenas, GRATIS). Genérico para cualquier canal: el formato (9:16, 16:9…) sale del canal; aquí solo la vista previa y las figuras de relleno.",
+ "vista_previa": {
+  "lado_largo_px": 480,
+  "fps_si_01_no_dice": 8,
+  "fps_max": 12,
+  "segundos_max_por_toma": 12,
+  "tomas_max_por_corrida": 40,
+  "motor": "BLENDER_WORKBENCH",
+  "hilos": 2,
+  "segundos_max_blender_por_escena": 900,
+  "calidad_video": "MEDIUM"
+ },
+ "figura": {
+  "que_es": "figura de relleno: cuerpo (cilindro) + cabeza (esfera) + nariz (bloque blanco que apunta hacia donde mira, 0° = +x)",
+  "radio_cuerpo_en_alturas": 0.12,
+  "radio_cabeza_en_alturas": 0.065,
+  "nariz_en_alturas": [
+   0.08,
+   0.04,
+   0.04
+  ],
+  "altura_si_falta_m": 1.7,
+  "altura_si_falta_aviso": "PISTA: altura genérica de relleno (ni el 01 ni la forma del canal la dicen); solo cambia el tamaño de la figura, NUNCA su posición",
+  "colores": [
+   [
+    0.85,
+    0.25,
+    0.2
+   ],
+   [
+    0.2,
+    0.45,
+    0.85
+   ],
+   [
+    0.25,
+    0.7,
+    0.3
+   ],
+   [
+    0.9,
+    0.7,
+    0.15
+   ],
+   [
+    0.6,
+    0.3,
+    0.75
+   ],
+   [
+    0.15,
+    0.7,
+    0.7
+   ],
+   [
+    0.9,
+    0.45,
+    0.6
+   ],
+   [
+    0.5,
+    0.5,
+    0.5
+   ]
+  ]
+ },
+ "contrato_01": {
+  "archivo": "cubos/04/esc_<N>.json (corregido por el 04) o cubos/01/esc_<N>.json",
+  "obligatorio": [
+   "personajes[] con id y segmentos[]",
+   "segmentos[].t = [inicio, fin] en segundos, inicio <= fin",
+   "segmentos[].pos = [inicio, fin], cada uno [x,y,z] o el nombre de un punto de «puntos»"
+  ],
+  "opcional": [
+   "fps",
+   "duracion_s",
+   "personajes[].altura",
+   "personajes[].color",
+   "segmentos[].rot (grados, 0° = mira a +x)",
+   "segmentos[].tipo",
+   "camaras[] {clave, nombre, loc, mira, lente}"
+  ],
+  "tomas": "cubos/05/plan_tomas.json (tomas con escena, camara_id y camara {loc, mira, lente}); si no hay 05: las cámaras del 01 con loc y mira; si tampoco: las cámaras del molde de la escena",
+  "importado": "Un plan aprobado pasado al formato del 01 (importar_plan_aprobado.py) trae «importado» y «origen»: solo el 02 lo usa (ensayo); sus «tomas_plan» mandan y las que traen «motivo_no_animable» se paran con ese motivo."
+ },
+ "capitulo": {
+  "PISTA": "PISTA INMI (orden 80b): animática del capítulo entero (todas las escenas en el orden del mapa). Tarjeta gris donde no hay tomas; nunca se inventan posiciones.",
+  "fps": 8,
+  "segundos_tarjeta": 2.5,
+  "color_tarjeta": "0x5a5a5a",
+  "letras_por_linea": 40,
+  "letra_tarjeta_en_alto": 0.055,
+  "letra_etiqueta_en_alto": 0.045,
+  "etiqueta_toma": "Esc {n} · toma {toma}",
+  "texto_falta_01": "Escena {n}: falta plan de tomas (01)",
+  "texto_paradas": "Escena {n}: {k} tomas paradas. {motivo}",
+  "fuentes": [
+   "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+   "/usr/share/fonts/dejavu/DejaVuSans.ttf",
+   "/usr/share/fonts/TTF/DejaVuSans.ttf",
+   "/System/Library/Fonts/Supplemental/Arial.ttf"
+  ],
+  "texto_sin_videos": "Escena {n}: tiene 01 pero el 02 aún no la animó"
+ }
+}

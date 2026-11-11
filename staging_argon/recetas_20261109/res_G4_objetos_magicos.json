@@ -1,0 +1,11 @@
+{
+  "caso": "G4_objetos_magicos",
+  "enviado": true,
+  "id": "receta-G4_objetos_magicos-20261109-192934",
+  "est": 0.6877,
+  "usd_real": 0.3077,
+  "fin": "FinishReason.STOP",
+  "tokens_entrada": "[REDACTED]",
+  "tokens_salida": "[REDACTED]",
+  "salida": "/opt/myia-staging-arreglos-20261026/recetas_20261109/respuestas/G4_objetos_magicos.json"
+}

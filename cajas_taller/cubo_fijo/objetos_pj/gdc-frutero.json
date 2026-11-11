@@ -1,0 +1,34 @@
+{
+  "id": "gdc-frutero",
+  "nombre": "frutero",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "escenario",
+  "sellado": true,
+  "version": 2,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-frutero.png",
+  "imagen_sha256": "5f4b2db9f0ebafda65159ec52d7a11f35e31fa6b75387522ac2981dd2a0c2767",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 32.0,
+    "fondo_cm": 32.0,
+    "alto_cm": 14.0
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-lapiz__e3f27b.json",
+  "ids_capitulo": [
+    "obj-frutero"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-frutero"
+  ],
+  "frase_sello": "Cuenco de cerámica artesanal estilizado en 3D, de silueta semiesférica ancha con base anular y borde grueso redondeado. Cuerpo esmaltado en color crema cálido con textura exterior suavemente irregular, interior muy brillante y una franja pintada en verde azulado recorriendo el labio superior. Puede presentarse vacío, lleno de manzanas rojas carmesí brillantes con tallos marrones, o parcialmente lleno con una muesca rota en el borde frontal que expone la arcilla mate interna con pequeñas migas.",
+  "actualizado": "2026-11-06T04:03:14+01:00",
+  "origen": "sellar"
+}

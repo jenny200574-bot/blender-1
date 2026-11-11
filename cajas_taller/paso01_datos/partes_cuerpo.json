@@ -1,0 +1,21 @@
+{
+ "PISTA": "PISTA INMI (2026-10-29): orden 74 — proporciones GENÉRICAS del cuerpo humano (fracción de la altura, de pie, brazos abajo), para ubicar en Blender puntos de muñeca, hombro, cabeza, etc. Fuente: tablas antropométricas clásicas (Drillis & Contini), redondeadas. Si un personaje no es humano o el canal da otras, se cambian aquí o vienen del cubo 01 (personajes[].partes).",
+ "fuente": "proporciones antropométricas genéricas (Drillis & Contini), redondeadas",
+ "partes": {
+  "pies":    {"alto": 0.00, "lado": 0.00},
+  "cadera":  {"alto": 0.53, "lado": 0.10},
+  "muneca":  {"alto": 0.48, "lado": 0.18},
+  "mano":    {"alto": 0.42, "lado": 0.18},
+  "codo":    {"alto": 0.63, "lado": 0.17},
+  "brazo":   {"alto": 0.72, "lado": 0.16},
+  "hombro":  {"alto": 0.82, "lado": 0.13},
+  "cabeza":  {"alto": 0.93, "lado": 0.00},
+  "ojo":     {"alto": 0.94, "lado": 0.03},
+  "ceja":    {"alto": 0.95, "lado": 0.03},
+  "mejilla": {"alto": 0.91, "lado": 0.04},
+  "pierna":  {"alto": 0.30, "lado": 0.06},
+  "rodilla": {"alto": 0.28, "lado": 0.06},
+  "tope":    {"alto": 1.00, "lado": 0.00}
+ },
+ "palabras": {"muneca": ["muñeca", "muneca", "pulsera", "brazalete", "reloj"], "mano": ["mano", "guante", "anillo"], "codo": ["codo"], "brazo": ["brazo", "antebrazo"], "hombro": ["hombro", "hombrera"], "ojo": ["ojo", "párpado", "parpado"], "ceja": ["ceja"], "mejilla": ["mejilla", "pómulo", "pomulo", "cara", "rostro"], "cadera": ["cadera", "cintura", "funda"], "pierna": ["pierna", "muslo"], "rodilla": ["rodilla"]}
+}

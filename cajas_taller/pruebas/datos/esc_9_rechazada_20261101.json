@@ -1,0 +1,608 @@
+{
+ "errores": [
+  "tomas[3] toma_04.ch-protagonista-c71a: Argon dice que se ve, pero la cámara cam_04_esc10 no lo ve en su posición",
+  "tomas[3] toma_04.ch-el-aliengena-73a9: Argon dice que se ve, pero la cámara cam_04_esc10 no lo ve en su posición"
+ ],
+ "respuesta": {
+  "escena": "9",
+  "fps": 8,
+  "duracion_s": 34.0,
+  "personajes": [
+   {
+    "id": "ch-el-aliengena-73a9",
+    "segmentos": [
+     {
+      "t": [
+       0.0,
+       34.0
+      ],
+      "pos": [
+       "p_alien_centro",
+       "p_alien_centro"
+      ],
+      "rot": 270,
+      "tipo": "estatico",
+      "porque": "Ergido en el centro de la azotea abre la prision suspendida y amenaza al protagonista."
+     }
+    ],
+    "parametros_3d": {
+     "controles": {
+      "gordura": {
+       "torso": 1.08,
+       "cadera": 0.88,
+       "piernas": 0.98,
+       "brazos": 1.05,
+       "cara": 0.92
+      },
+      "colores.pelo": [
+       0.88,
+       0.91,
+       0.96
+      ],
+      "colores.piel": [
+       0.76,
+       0.75,
+       0.82
+      ],
+      "colores.cara": [
+       0.76,
+       0.75,
+       0.82
+      ],
+      "colores.ropa_superior": [
+       0.04,
+       0.05,
+       0.08
+      ],
+      "colores.ropa_inferior": [
+       0.04,
+       0.05,
+       0.08
+      ],
+      "colores.zapatos": [
+       0.05,
+       0.06,
+       0.09
+      ],
+      "colores.ojos": [
+       0.35,
+       0.85,
+       1.0
+      ],
+      "orejas_puntiagudas": {
+       "largo_m": 0.18
+      },
+      "pelo_largo": {
+       "largo_m": 1.05,
+       "color": [
+        0.88,
+        0.91,
+        0.96
+       ]
+      },
+      "armadura": {
+       "color": [
+        0.04,
+        0.05,
+        0.08
+       ],
+       "venas_color": [
+        0.08,
+        0.75,
+        1.0
+       ],
+       "venas_por_pieza": 8
+      },
+      "nucleo_pecho": {
+       "color": [
+        0.1,
+        0.75,
+        1.0
+       ],
+       "radio_m": 0.045
+      },
+      "expresion": "Angry",
+      "expresion_valor": 0.6
+     },
+     "palabras": []
+    },
+    "altura": null,
+    "estado": {}
+   },
+   {
+    "id": "ch-protagonista-c71a",
+    "segmentos": [
+     {
+      "t": [
+       0.0,
+       8.0
+      ],
+      "pos": [
+       "p_prota_inicio",
+       "p_prota_inicio"
+      ],
+      "rot": 87,
+      "tipo": "estatico",
+      "porque": "En el suelo tras el impacto previo intenta incorporarse al ver a su novia cautiva."
+     },
+     {
+      "t": [
+       8.0,
+       11.5
+      ],
+      "pos": [
+       "p_prota_inicio",
+       "p_prota_caida"
+      ],
+      "rot": 115,
+      "tipo": "desplazamiento",
+      "porque": "Intenta avanzar hacia la prision pero vuelve a caer sin fuerzas."
+     },
+     {
+      "t": [
+       11.5,
+       24.0
+      ],
+      "pos": [
+       "p_prota_caida",
+       "p_prota_caida"
+      ],
+      "rot": 87,
+      "tipo": "estatico",
+      "porque": "Aprieta los dientes y observa su muneca izquierda mientras dialoga con Imi."
+     },
+     {
+      "t": [
+       24.0,
+       34.0
+      ],
+      "pos": [
+       "p_prota_caida",
+       "p_prota_caida"
+      ],
+      "rot": 92,
+      "tipo": "estatico",
+      "porque": "Mira hacia la prision y asimila el riesgo de perder su identidad en la integracion."
+     }
+    ],
+    "parametros_3d": {
+     "controles": {
+      "gordura": {
+       "torso": 1.38,
+       "cadera": 1.3,
+       "piernas": 1.22,
+       "brazos": 1.18,
+       "cara": 1.08
+      },
+      "colores.pelo": [
+       0.02,
+       0.02,
+       0.025
+      ],
+      "colores.piel": [
+       0.96,
+       0.78,
+       0.65
+      ],
+      "colores.cara": [
+       0.96,
+       0.78,
+       0.65
+      ],
+      "colores.ropa_superior": [
+       0.42,
+       0.43,
+       0.45
+      ],
+      "colores.ropa_inferior": [
+       0.08,
+       0.09,
+       0.13
+      ],
+      "colores.zapatos": [
+       0.55,
+       0.56,
+       0.58
+      ],
+      "gafas": true,
+      "gafas_color": [
+       0.02,
+       0.02,
+       0.02
+      ],
+      "pulsera": {
+       "muneca": "izquierda",
+       "color": [
+        0.05,
+        0.95,
+        1.0
+       ]
+      }
+     },
+     "palabras": []
+    },
+    "altura": null,
+    "estado": {}
+   },
+   {
+    "id": "ch-la-novia-5cdf",
+    "segmentos": [
+     {
+      "t": [
+       0.0,
+       34.0
+      ],
+      "pos": [
+       "p_novia_prision",
+       "p_novia_prision"
+      ],
+      "rot": 270,
+      "tipo": "estatico",
+      "porque": "Encerrada en la prision transparente suspendida golpea las paredes y advierte al protagonista."
+     }
+    ],
+    "parametros_3d": {
+     "controles": {
+      "pelo_largo": {
+       "ocultar_pelo_base": true,
+       "largo_m": 0.65,
+       "color": [
+        0.05,
+        0.04,
+        0.05
+       ]
+      },
+      "colores.ropa_superior": [
+       0.92,
+       0.89,
+       0.82
+      ],
+      "colores.ropa_inferior": [
+       0.18,
+       0.28,
+       0.42
+      ],
+      "colores.zapatos": [
+       0.92,
+       0.92,
+       0.94
+      ]
+     },
+     "palabras": [
+      "complexion_delgada_esbelta",
+      "piel_humana_clara"
+     ]
+    },
+    "altura": null,
+    "estado": {}
+   },
+   {
+    "id": "ch-imi-69f6",
+    "segmentos": [
+     {
+      "t": [
+       0.0,
+       8.0
+      ],
+      "pos": [
+       "p_prota_inicio",
+       "p_prota_inicio"
+      ],
+      "rot": 87,
+      "tipo": "estatico",
+      "porque": "Ajustada a la muneca izquierda del protagonista."
+     },
+     {
+      "t": [
+       8.0,
+       11.5
+      ],
+      "pos": [
+       "p_prota_inicio",
+       "p_prota_caida"
+      ],
+      "rot": 115,
+      "tipo": "desplazamiento",
+      "porque": "Se desplaza con la muneca del protagonista."
+     },
+     {
+      "t": [
+       11.5,
+       24.0
+      ],
+      "pos": [
+       "p_prota_caida",
+       "p_prota_caida"
+      ],
+      "rot": 87,
+      "tipo": "estatico",
+      "porque": "Propone al protagonista la integracion completa de sus sistemas."
+     },
+     {
+      "t": [
+       24.0,
+       34.0
+      ],
+      "pos": [
+       "p_prota_caida",
+       "p_prota_caida"
+      ],
+      "rot": 92,
+      "tipo": "estatico",
+      "porque": "Advierte al protagonista sobre el riesgo mutuo de la sincronizacion."
+     }
+    ],
+    "parametros_3d": {
+     "controles": {},
+     "palabras": []
+    },
+    "altura": 0.08,
+    "estado": {}
+   }
+  ],
+  "tomas": [
+   {
+    "id": "toma_01",
+    "t": [
+     0.0,
+     8.0
+    ],
+    "plano": "PG",
+    "camara_molde": "cam_03_esc9",
+    "palabras": {
+     "composicion": "En primer termino a la izquierda se ve al protagonista de espaldas en el suelo, en el centro al alienigena de frente con la mano alzada y al fondo a la derecha en lo alto a la novia dentro de una prision transparente suspendida.",
+     "en_cuadro": [
+      "ch-protagonista-c71a",
+      "ch-el-aliengena-73a9",
+      "ch-la-novia-5cdf"
+     ],
+     "personas": 3,
+     "manos_visibles": 6,
+     "por_personaje": [
+      {
+       "id": "ch-protagonista-c71a",
+       "cuerpo": "espalda",
+       "cabeza": "espalda",
+       "mirada": "hacia la novia en la prision suspendida",
+       "lado_pantalla": "izquierda",
+       "emocion": "angustia e impotencia",
+       "mano_accesorio": "izquierda"
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "cuerpo": "frente",
+       "cabeza": "frente",
+       "mirada": "hacia el protagonista",
+       "lado_pantalla": "centro",
+       "emocion": "desprecio frio y arrogancia",
+       "mano_accesorio": "no_aplica"
+      },
+      {
+       "id": "ch-la-novia-5cdf",
+       "cuerpo": "frente",
+       "cabeza": "frente",
+       "mirada": "hacia el protagonista",
+       "lado_pantalla": "derecha",
+       "emocion": "desesperacion y alarma",
+       "mano_accesorio": "no_aplica"
+      }
+     ],
+     "fondo": "Azotea nocturna bajo cielo estrellado con la estructura metalica y los tanques de agua a la izquierda, el pretil norte al centro y la caseta de maquinas con antena a la derecha."
+    },
+    "porque": "Revela la aparicion de la novia en la prision suspendida detras del alienigena y la reaccion del protagonista."
+   },
+   {
+    "id": "toma_02",
+    "t": [
+     8.0,
+     15.0
+    ],
+    "plano": "PA",
+    "camara_molde": "cam_05_esc11",
+    "palabras": {
+     "composicion": "Desde un angulo lateral derecho pero manteniendo el eje, el protagonista a la izquierda intenta avanzar y cae de nuevo, el alienigena domina el centro de frente y la novia permanece suspendida arriba a la derecha dentro de la prision que se comprime.",
+     "en_cuadro": [
+      "ch-protagonista-c71a",
+      "ch-el-aliengena-73a9",
+      "ch-la-novia-5cdf"
+     ],
+     "personas": 3,
+     "manos_visibles": 6,
+     "por_personaje": [
+      {
+       "id": "ch-protagonista-c71a",
+       "cuerpo": "espalda",
+       "cabeza": "espalda",
+       "mirada": "hacia la novia en la prision",
+       "lado_pantalla": "izquierda",
+       "emocion": "dolor fisico y frustracion desesperada",
+       "mano_accesorio": "izquierda"
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "cuerpo": "frente",
+       "cabeza": "frente",
+       "mirada": "hacia el protagonista",
+       "lado_pantalla": "centro",
+       "emocion": "crueldad calculadora",
+       "mano_accesorio": "no_aplica"
+      },
+      {
+       "id": "ch-la-novia-5cdf",
+       "cuerpo": "frente",
+       "cabeza": "frente",
+       "mirada": "hacia el protagonista",
+       "lado_pantalla": "derecha",
+       "emocion": "angustia suplicante pidiendole que no se acerque",
+       "mano_accesorio": "no_aplica"
+      }
+     ],
+     "fondo": "Estructura metalica de la azotea, cables tensores y tanques elevados de agua bajo el cielo nocturno despejado."
+    },
+    "porque": "Muestra el intento fallido del protagonista por correr hacia la prision mientras la novia le grita que no haga ninguna locura."
+   },
+   {
+    "id": "toma_03",
+    "t": [
+     15.0,
+     24.0
+    ],
+    "plano": "PM",
+    "camara_molde": "cam_03_esc9",
+    "palabras": {
+     "composicion": "El protagonista a la izquierda de espaldas mira la pulsera luminosa en su muneca izquierda mientras el alienigena aguarda en el centro de frente y la novia sigue cautiva arriba a la derecha.",
+     "en_cuadro": [
+      "ch-protagonista-c71a",
+      "ch-el-aliengena-73a9",
+      "ch-la-novia-5cdf"
+     ],
+     "personas": 3,
+     "manos_visibles": 6,
+     "por_personaje": [
+      {
+       "id": "ch-protagonista-c71a",
+       "cuerpo": "espalda",
+       "cabeza": "espalda",
+       "mirada": "hacia la pulsera en su muneca izquierda",
+       "lado_pantalla": "izquierda",
+       "emocion": "asombro tenso y atencion",
+       "mano_accesorio": "izquierda"
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "cuerpo": "frente",
+       "cabeza": "frente",
+       "mirada": "hacia el protagonista",
+       "lado_pantalla": "centro",
+       "emocion": "impaciencia amenazante",
+       "mano_accesorio": "no_aplica"
+      },
+      {
+       "id": "ch-la-novia-5cdf",
+       "cuerpo": "frente",
+       "cabeza": "frente",
+       "mirada": "hacia el protagonista",
+       "lado_pantalla": "derecha",
+       "emocion": "temor y preocupacion",
+       "mano_accesorio": "no_aplica"
+      }
+     ],
+     "fondo": "Azotea de noche con el pretil norte al fondo, estructura metalica a la izquierda y caseta de acceso a la derecha."
+    },
+    "porque": "Enfoca el dialogo entre el protagonista e Imi cuando ella propone reconstruir su estructura biologica."
+   },
+   {
+    "id": "toma_04",
+    "t": [
+     24.0,
+     34.0
+    ],
+    "plano": "PM",
+    "camara_molde": "cam_04_esc10",
+    "palabras": {
+     "composicion": "Encuadre mas cerrado donde el protagonista a la izquierda de espaldas levanta la vista hacia la prision suspendida a la derecha mientras el alienigena permanece en el centro de frente.",
+     "en_cuadro": [
+      "ch-protagonista-c71a",
+      "ch-el-aliengena-73a9",
+      "ch-la-novia-5cdf"
+     ],
+     "personas": 3,
+     "manos_visibles": 6,
+     "por_personaje": [
+      {
+       "id": "ch-protagonista-c71a",
+       "cuerpo": "espalda",
+       "cabeza": "espalda",
+       "mirada": "hacia la prision donde esta la novia",
+       "lado_pantalla": "izquierda",
+       "emocion": "temor profundo y dilema interior",
+       "mano_accesorio": "izquierda"
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "cuerpo": "frente",
+       "cabeza": "frente",
+       "mirada": "hacia el protagonista",
+       "lado_pantalla": "centro",
+       "emocion": "soberbia implacable",
+       "mano_accesorio": "no_aplica"
+      },
+      {
+       "id": "ch-la-novia-5cdf",
+       "cuerpo": "frente",
+       "cabeza": "frente",
+       "mirada": "hacia el protagonista",
+       "lado_pantalla": "derecha",
+       "emocion": "angustia contenida",
+       "mano_accesorio": "no_aplica"
+      }
+     ],
+     "fondo": "Pretil norte de la azotea, tuberias y caseta de maquinas recortados contra el cielo nocturno estrellado."
+    },
+    "porque": "Acerca el encuadre con lente mas cerrado en el momento en que Imi revela que ambos podrian perder su identidad."
+   }
+  ],
+  "revision": [
+   {
+    "chequeo": "contradicciones",
+    "resultado": "ok",
+    "detalle": "La accion sigue fielmente el guion: aparicion de la novia en la prision, intento de avance del protagonista y propuesta de integracion de Imi."
+   },
+   {
+    "chequeo": "alineacion_molde",
+    "resultado": "ok",
+    "detalle": "Todos los puntos estan dentro del area libre de la azotea sin colisionar con objetos y se usan exclusivamente camaras del molde."
+   },
+   {
+    "chequeo": "congruencia_posiciones",
+    "resultado": "ok",
+    "detalle": "Se mantiene el eje en todas las tomas: protagonista a la izquierda, alienigena al centro y novia a la derecha."
+   },
+   {
+    "chequeo": "emociones",
+    "resultado": "ok",
+    "detalle": "Emociones coherentes con la tension dramatica y el dilema de identidad."
+   },
+   {
+    "chequeo": "fondos",
+    "resultado": "ok",
+    "detalle": "Fondos consistentes con la orientacion norte de las camaras sobre la azotea nocturna."
+   },
+   {
+    "chequeo": "mano_accesorio",
+    "resultado": "ok",
+    "detalle": "El protagonista lleva la pulsera siempre en la mano izquierda y no aplica a los demas."
+   },
+   {
+    "chequeo": "personas_y_manos",
+    "resultado": "ok",
+    "detalle": "Tres personas visibles y seis manos visibles en cada toma; Imi sigue al portador sin contar como segunda persona."
+   }
+  ],
+  "puntos": {
+   "p_prota_inicio": [
+    7.45,
+    9.7,
+    0.0
+   ],
+   "p_prota_caida": [
+    7.65,
+    10.3,
+    0.0
+   ],
+   "p_alien_centro": [
+    8.6,
+    12.0,
+    0.0
+   ],
+   "p_novia_prision": [
+    9.6,
+    13.6,
+    1.5
+   ]
+  },
+  "avisos": [],
+  "ejes": []
+ },
+ "ledger": "taller-01-esc9-20261101-215858"
+}

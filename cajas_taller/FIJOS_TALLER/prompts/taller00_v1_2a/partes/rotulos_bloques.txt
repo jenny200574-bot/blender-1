@@ -1,0 +1,13 @@
+
+
+=== CONFIG_CANAL_JSON ===
+
+=== FIN CONFIG ===
+
+=== BASE_DEL_CAPITULO_JSON ===
+
+=== FIN BASE ===
+
+=== GUION_COMPLETO ===
+
+=== FIN GUION ===

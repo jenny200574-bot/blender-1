@@ -1,0 +1,11 @@
+{
+  "caso": "G1_juguetes_textiles",
+  "enviado": true,
+  "id": "receta-G1_juguetes_textiles-20261109-191202",
+  "est": 0.6805,
+  "usd_real": 0.3208,
+  "fin": "FinishReason.STOP",
+  "tokens_entrada": "[REDACTED]",
+  "tokens_salida": "[REDACTED]",
+  "salida": "/opt/myia-staging-arreglos-20261026/recetas_20261109/respuestas/G1_juguetes_textiles.json"
+}

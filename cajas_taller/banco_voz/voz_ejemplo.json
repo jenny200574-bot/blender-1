@@ -1,0 +1,13 @@
+{
+  "schema": "voz_pj/v1",
+  "pj": "ejemplo",
+  "motor_primario": "veo3_audio_nativo",
+  "lip_sync": "veo3_nativo",
+  "idioma": "es-CO",
+  "descriptor_veo_en": "young adult female voice, warm and soft timbre, medium-high pitch, gentle Colombian Spanish accent, calm unhurried pace, slight breathiness, clear diction",
+  "plantilla_dialogo_veo": "{pj_visual} says in Spanish, lips synced: \"{dialogo}\" — voice: {descriptor_veo_en}",
+  "continuidad": {"mismo_descriptor_en_todas_las_tomas": true, "clip_referencia": null, "notas": "no cambiar adjetivos entre tomas"},
+  "prohibido": ["music", "subtitles", "voice-over narrator"],
+  "fallback_elevenlabs": {"habilitado": false, "voice_id": null, "usar_solo_si": "Veo 3 no logra voz consistente tras OK de Ricardo"},
+  "sello": {"sellado": false, "hash": null, "fecha": null, "por": null}
+}

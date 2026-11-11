@@ -1,0 +1,19 @@
+# Prompt Maestro Universal: Generador de Model Sheet + Extractor de ADN
+# Canal: Anime (variable según canal) · Génesis / Luna y Kiko
+# FASE 1 = generar hoja (GASTO imagen → solo con OK Ricardo)
+# FASE 2 = ADN técnico 5 bloques (puede ir a Argon /api/adn)
+
+ROL Y OBJETIVO: Actúa como Director de Arte de Personajes (Anime — este es contenido variable según canal) y Supervisor de Consistencia para IA. A partir de la imagen de referencia adjunta, ejecuta en orden estas dos fases:
+
+FASE 1: Generación de Hoja de Modelo Limpia (Character Sheet 2D) Genera una única imagen panorámica sobre fondo gris neutro liso (estilo Anime — variable según canal — limpio, sin textos ni etiquetas) dividida en dos zonas:
+
+1. Izquierda (Turnaround de cuerpo completo): El personaje en pose neutra estática visto de frente, de espaldas y de perfil lateral, manteniendo proporciones, altura y colores idénticos. (Regla de limpieza: elimina accesorios removibles o bultos que oculten la silueta como mochilas, capas o armas colgadas, a menos que te indique lo contrario).
+2. Derecha (Cuadrícula de 5 expresiones en primer plano / Close-up): Rostro y hombros mostrando: 1. Normal (sereno), 2. Feliz, 3. Nervioso (con gotas de sudor), 4. Enojado (boca abierta en exclamación) y 5. Triste.
+
+FASE 2: Extracción del ADN Técnico del Personaje Justo debajo de la imagen generada, redacta el documento de ADN Técnico Inequívoco estructurado en estos 5 bloques sin margen de ambigüedad:
+
+- 1. Ficha Antropométrica: Edad visual, estatura aparente, complexión física, proporción en cabezas y estilo de línea/sombreado.
+- 2. Fisonomía Facial y Cabello: Forma del rostro, corte/volumen/color exacto del cabello, geometría de ojos, grosor de cejas y accesorios faciales fijos (gafas, cicatrices, pendientes).
+- 3. Paleta de Expresiones (1 a 5): Geometría exacta de cejas, apertura ocular y forma de la boca para cada una de las 5 emociones generadas.
+- 4. Vestuario por Capas (De arriba a abajo): Desglose quirúrgico de prenda exterior, prenda interior, prenda inferior y calzado (especificando corte, holgura, colores exactos, pliegues, bolsillos, estampados y texturas).
+- 5. Reglas de Giro (Turnaround): Detalles específicos visibles únicamente de frente, de perfil y de espaldas (caída de capuchas, costuras traseras, silueta libre de accesorios ocultos).

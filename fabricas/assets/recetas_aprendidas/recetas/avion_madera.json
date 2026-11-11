@@ -1,0 +1,386 @@
+{
+ "id": "avion_madera",
+ "nombre_generico": "Avioncito de juguete de madera con hélice redondeada",
+ "nombre_en": "wooden toy plane",
+ "categoria": "juguetes",
+ "medidas_tipicas": {
+  "ancho_m": 0.22,
+  "fondo_m": 0.18,
+  "alto_m": 0.12
+ },
+ "medidas_fuente": "receta Argon vía B G1_juguetes_textiles (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.22,
+  0.18,
+  0.12
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": null,
+ "apoyo": "sobre_otro",
+ "conjunto": false,
+ "piezas": 15,
+ "tipos_de_pieza": [
+  "caja",
+  "esfera"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "fuselaje_central",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.055
+   ],
+   "tam_m": [
+    0.044,
+    0.13,
+    0.045
+   ]
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "morro_frontal",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.0,
+    -0.058,
+    0.055
+   ],
+   "radio_m": 0.022
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "eje_helice",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.0,
+    -0.08,
+    0.055
+   ],
+   "radio_m": 0.01
+  },
+  {
+   "tipo": "caja",
+   "nombre": "pala_helice_izq",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    -0.022,
+    -0.081,
+    0.055
+   ],
+   "tam_m": [
+    0.036,
+    0.008,
+    0.014
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "pala_helice_der",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.022,
+    -0.081,
+    0.055
+   ],
+   "tam_m": [
+    0.036,
+    0.008,
+    0.014
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "ala_principal",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "centro_m": [
+    0.0,
+    -0.015,
+    0.06
+   ],
+   "tam_m": [
+    0.22,
+    0.05,
+    0.012
+   ]
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "cabina",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.0,
+    -0.005,
+    0.082
+   ],
+   "radio_m": 0.02
+  },
+  {
+   "tipo": "caja",
+   "nombre": "cono_cola",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.0,
+    0.072,
+    0.058
+   ],
+   "tam_m": [
+    0.028,
+    0.036,
+    0.032
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "estabilizador_horizontal",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "centro_m": [
+    0.0,
+    0.075,
+    0.062
+   ],
+   "tam_m": [
+    0.09,
+    0.03,
+    0.008
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "timon_vertical",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "centro_m": [
+    0.0,
+    0.075,
+    0.095
+   ],
+   "tam_m": [
+    0.01,
+    0.03,
+    0.05
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "soporte_tren_izq",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    -0.022,
+    -0.02,
+    0.026
+   ],
+   "tam_m": [
+    0.01,
+    0.016,
+    0.024
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "soporte_tren_der",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.022,
+    -0.02,
+    0.026
+   ],
+   "tam_m": [
+    0.01,
+    0.016,
+    0.024
+   ]
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "rueda_izq",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    -0.028,
+    -0.02,
+    0.016
+   ],
+   "radio_m": 0.016
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "rueda_der",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.028,
+    -0.02,
+    0.016
+   ],
+   "radio_m": 0.016
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "rueda_cola",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.0,
+    0.062,
+    0.023
+   ],
+   "radio_m": 0.023
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.22,
+  "fondo": 0.18,
+  "alto": 0.12
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.12
+  ],
+  "frente": [
+   0.0,
+   -0.09,
+   0.06
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G1_juguetes_textiles",
+  "objeto_id_origen": "amb-esc-habitacion-avion-madera",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "7fb5865b26c0ee1db57ccefbd182cf644d9631c740c89e15f656dab0fbbe39ef",
+  "costo_usd_grupo": 0.3208,
+  "costo_usd_repartido": 0.06416,
+  "citas": [
+   {
+    "fuente_id": "F05",
+    "clave": "morfologia.juguete_madera",
+    "cita": "A wooden toy is a toy constructed primarily from wood and wood products. Additional components made from other materials are also sometimes used."
+   },
+   {
+    "fuente_id": "F06",
+    "clave": "morfologia.helice_radial",
+    "cita": "A typical propeller engine comprises the motor driving a rotating shaft (driveshaft), to which several radial airfoil-section blades are attached, so that the whole blade assembly (i.e. the propeller) rotates around an axis of rotation longitudinal to the direction of travel."
+   },
+   {
+    "fuente_id": "F06",
+    "clave": "morfologia.material_palas",
+    "cita": "The propeller blades, which can be made from wood, metal or composite materials, attaches to the driveshaft either directly or through reduction gearing"
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "El corpus no proporciona planos dimensionales de un avioncito de madera de 22 cm; las proporciones de fuselaje, tren y cola se deducen de caja_m."
+  ],
+  "info": {
+   "partes": 15,
+   "piezas": 15,
+   "bbox_m": [
+    0.22,
+    0.18,
+    0.12
+   ],
+   "grupos": 1,
+   "datos": 10,
+   "con_fuente": 3
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-avion-madera"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

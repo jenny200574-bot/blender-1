@@ -1,0 +1,34 @@
+{
+  "id": "gdc-mesa-cocina",
+  "nombre": "mesa cocina",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "escenario",
+  "sellado": true,
+  "version": 2,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-mesa-cocina.png",
+  "imagen_sha256": "43f5bd40b3ce4567466610658a41fe85b0df0563e1603f795bf474b47aaff214",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 130.0,
+    "fondo_cm": 90.0,
+    "alto_cm": 76.0
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-lapiz__e3f27b.json",
+  "ids_capitulo": [
+    "obj-mesa-cocina"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-mesa-cocina"
+  ],
+  "frase_sello": "Mesa rectangular de estilo clásico en madera pulida color marrón miel con faldón recto y cuatro patas cilíndricas torneadas con remates bulbosos, cubierta por un mantel largo de tela gruesa mate color beige crema que cae hasta el suelo formando pliegues verticales profundos en las esquinas; superficies totalmente lisas sin patrones ni texturas complejas, presentable totalmente cubierta o con un lateral del mantel doblado sobre el tablero mostrando la estructura de madera.",
+  "actualizado": "2026-11-06T04:03:14+01:00",
+  "origen": "sellar"
+}

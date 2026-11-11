@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-caneca-reciclaje",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Contenedor de reciclaje cilíndrico estilizado de una sola pieza sólida, sin tapa ni articulaciones. Presenta una silueta troncocónica invertida (ligeramente más estrecha en la base) con proporciones robustas, paredes gruesas y biseles sumamente redondeados de estilo *cartoon*.\n- Reposa directamente sobre el suelo mediante una base plana de bordes suavizados y cuenta con dos pequeñas asas macizas laterales bajo el borde superior para sujeción manual."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Chasis principal e interior de plástico rígido moldeado con acabado satinado suave, en color verde vibrante uniforme.\n- Detalle frontal secundario en plástico color blanco hueso con acabado mate.\n- Sin emisión lumínica ni componentes energéticos."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- En el centro de la cara frontal sobresale en relieve tridimensional el símbolo clásico de reciclaje (bucle triangular de tres flechas) con bordes redondeados.\n- Borde superior engrosado formando un anillo toroidal continuo.\n- Dos asas rectangulares cortas y redondeadas integradas en los laterales superiores; la cara trasera es completamente lisa."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Objeto estático pasivo; interactúa con el entorno únicamente mediante reflejos especulares suaves en su superficie plástica y oclusión ambiental interna.\n- En planos lejanos, se simplifica a un vaso cilíndrico verde con reborde superior y una marca triangular blanca plana en el centro, omitiendo el volumen de las asas y la separación entre las flechas."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Contenedor de reciclaje 3D estilizado de una sola pieza, con geometría cilíndrica ligeramente cónica, bordes gruesos redondeados y abertura superior sin tapa. Fabricado en plástico satinado color verde vibrante, posee un anillo superior prominente, dos pequeñas asas laterales macizas bajo el borde y la cara trasera completamente lisa. En el centro frontal destaca el símbolo de reciclaje de tres flechas extruido en relieve tridimensional en color blanco hueso mate."
+    }
+  ],
+  "inyeccion": "Contenedor de reciclaje 3D estilizado de una sola pieza, con geometría cilíndrica ligeramente cónica, bordes gruesos redondeados y abertura superior sin tapa. Fabricado en plástico satinado color verde vibrante, posee un anillo superior prominente, dos pequeñas asas laterales macizas bajo el borde y la cara trasera completamente lisa. En el centro frontal destaca el símbolo de reciclaje de tres flechas extruido en relieve tridimensional en color blanco hueso mate.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Contenedor de reciclaje cilíndrico estilizado de una sola pieza sólida, sin tapa ni articulaciones. Presenta una silueta troncocónica invertida (ligeramente más estrecha en la base) con proporciones robustas, paredes gruesas y biseles sumamente redondeados de estilo *cartoon*.\n- Reposa directamente sobre el suelo mediante una base plana de bordes suavizados y cuenta con dos pequeñas asas macizas laterales bajo el borde superior para sujeción manual.\n\n2. Materiales y Paleta de Color:\n\n- Chasis principal e interior de plástico rígido moldeado con acabado satinado suave, en color verde vibrante uniforme.\n- Detalle frontal secundario en plástico color blanco hueso con acabado mate.\n- Sin emisión lumínica ni componentes energéticos.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- En el centro de la cara frontal sobresale en relieve tridimensional el símbolo clásico de reciclaje (bucle triangular de tres flechas) con bordes redondeados.\n- Borde superior engrosado formando un anillo toroidal continuo.\n- Dos asas rectangulares cortas y redondeadas integradas en los laterales superiores; la cara trasera es completamente lisa.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Objeto estático pasivo; interactúa con el entorno únicamente mediante reflejos especulares suaves en su superficie plástica y oclusión ambiental interna.\n- En planos lejanos, se simplifica a un vaso cilíndrico verde con reborde superior y una marca triangular blanca plana en el centro, omitiendo el volumen de las asas y la separación entre las flechas.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nContenedor de reciclaje 3D estilizado de una sola pieza, con geometría cilíndrica ligeramente cónica, bordes gruesos redondeados y abertura superior sin tapa. Fabricado en plástico satinado color verde vibrante, posee un anillo superior prominente, dos pequeñas asas laterales macizas bajo el borde y la cara trasera completamente lisa. En el centro frontal destaca el símbolo de reciclaje de tres flechas extruido en relieve tridimensional en color blanco hueso mate.",
+  "creado": "2026-11-06T04:03:14+01:00"
+}

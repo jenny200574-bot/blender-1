@@ -1,0 +1,216 @@
+"""PISTA INMI (2026-11-01) VALIDADOR GRATIS del storyboard (ADAPTIVE CINEMATIC DIRECTOR). Nada aquí paga.
+Errores (se devuelven a Argon para reparar, máx. 2) — iguales en TODOS los géneros: la continuidad nunca se sacrifica por el género:
+  esquema · tiempos contiguos 0→duración del 01 · cada beat del 01 cubierto · personajes válidos (solo-voz nunca en cuadro) ·
+  DSL de cámara válido (copia fija) y coherente con plano/ángulo/lente · eje de 180° y dirección de pantalla · regla de 30° ·
+  audio dentro de su viñeta, legible a tiempo y todo el diálogo del guion · memoria de continuidad (vestuario, daños, objetos, eje) ·
+  niveles copiados tal cual (no se confunden) · reglamento del nivel 3 (si existe) · narrativa (etapa 3) enlazada.
+Avisos (no reparan): preferencias del perfil de género del segmento (lente, duración, movimientos a evitar)."""
+import sb_comun as S
+
+LADO = {'L': 0, 'C': 1, 'R': 2}
+
+
+def _par(t):
+    try: return [float(t[0]), float(t[1])] if isinstance(t, list) and len(t) == 2 else None
+    except Exception: return None
+
+
+def _q(i, v): return f"vinetas[{i}] {v.get('id')}"
+
+
+def _escalon(tam): return (S.registro().size_ladder or {}).get(tam)
+
+
+def validar(obj, P, esquema=None):
+    """P = contexto (ver cubo_sb.contexto). Devuelve (C, errores, avisos). C = obj normalizado si no hay errores, si no None."""
+    import llamada_segura as LS
+    aj = S.ajustes(); tol = float(aj['tolerancia_s']); err, av = [], []
+    if not isinstance(obj, dict): return None, ['la respuesta no es un objeto JSON'], av
+    if esquema: err += [f'esquema: {e}' for e in LS.validar_esquema(obj, esquema)]
+    if err: return None, err[:40], av
+    import copy; obj = copy.deepcopy(obj)   # se normaliza una copia (nunca la respuesta guardada)
+    V = sorted(obj['vinetas'], key=lambda v: (_par(v.get('t')) or [1e9])[0])
+    dur = float(P['duracion_s']); fich = {f['id']: f for f in P['fichas']}
+    voz = {k for k, f in fich.items() if f.get('voice_only')}
+    ids = [v['id'] for v in V]
+    for d in {x for x in ids if ids.count(x) > 1}: err.append(f'id de viñeta repetido: {d}')
+    if abs(float(obj.get('duracion_s') or 0) - dur) > tol: err.append(f"duracion_s {obj.get('duracion_s')} ≠ duración del 01 ({dur} s)")
+
+    # ---- niveles (los 3, separados) ----
+    rn = P['resumen_niveles']; na = obj.get('niveles_aplicados') or {}
+    if sorted(na.get('nivel_1_generos') or []) != rn['nivel_1_generos']: err.append(f"niveles_aplicados.nivel_1_generos {na.get('nivel_1_generos')} ≠ config del canal {rn['nivel_1_generos']}")
+    if na.get('nivel_2_estilo') != rn['nivel_2_estilo']: err.append(f"niveles_aplicados.nivel_2_estilo «{na.get('nivel_2_estilo')}» ≠ config «{rn['nivel_2_estilo']}» (no confundir estilo con género ni con reglamento)")
+    if na.get('nivel_3_reglamento') != rn['nivel_3_reglamento']: err.append(f"niveles_aplicados.nivel_3_reglamento «{na.get('nivel_3_reglamento')}» ≠ config «{rn['nivel_3_reglamento']}»")
+
+    # ---- etapa 3: narrativa ----
+    nb = {b['id']: b for b in (obj['narrativa'].get('beats_narrativos') or [])}
+    usados = set()
+    for b in nb.values():
+        for x in b.get('beats_01') or []:
+            if x not in P['beats']: err.append(f"narrativa.{b['id']}: beat del 01 «{x}» no existe")
+
+    # ---- tiempos ----
+    prev_fin = 0.0
+    for i, v in enumerate(V):
+        q = _q(i, v); t = _par(v.get('t'))
+        if not t or t[1] <= t[0]: err.append(f'{q}: t debe ser [inicio, fin] con fin > inicio'); continue
+        if abs(t[0] - prev_fin) > tol: err.append(f'{q}: empieza en {t[0]} s pero la anterior termina en {prev_fin} s (sin huecos ni solapes)')
+        prev_fin = t[1]
+        d = t[1] - t[0]
+        if abs(float(v['ritmo'].get('duracion_s') or 0) - d) > tol: err.append(f"{q}: ritmo.duracion_s {v['ritmo'].get('duracion_s')} ≠ fin−inicio ({round(d, 3)})")
+        if d < float(aj['vineta_min_s']) - tol or d > float(aj['vineta_max_s']) + tol: err.append(f"{q}: dura {round(d, 2)} s (permitido {aj['vineta_min_s']}–{aj['vineta_max_s']} s)")
+        for p in v['ritmo'].get('pausas') or []:
+            pt = _par(p.get('t'))
+            if not pt or pt[0] < t[0] - tol or pt[1] > t[1] + tol: err.append(f"{q}: pausa {p.get('t')} fuera de la viñeta {t}")
+    if V and abs(prev_fin - dur) > tol: err.append(f'la última viñeta termina en {prev_fin} s; la escena (01) dura {dur} s')
+
+    # ---- beats del 01 ----
+    for i, v in enumerate(V):
+        q = _q(i, v); t = _par(v.get('t')) or [0, 0]
+        if v.get('beat_narrativo') not in nb: err.append(f"{q}: beat_narrativo «{v.get('beat_narrativo')}» no está en narrativa.beats_narrativos")
+        else: usados.add(v['beat_narrativo'])
+        if not 0 <= int(v.get('segmento_genero', -1)) < max(1, len(P['segmentos'])): err.append(f"{q}: segmento_genero {v.get('segmento_genero')} no existe (hay {len(P['segmentos'])})")
+        for b in v.get('beats_01') or []:
+            if b not in P['beats']: err.append(f'{q}: beat del 01 «{b}» no existe'); continue
+    for bid, bt in P['beats'].items():
+        ok = any(bid in (v.get('beats_01') or []) and (_par(v.get('t')) or [0, 0])[0] < bt[1] + tol and (_par(v.get('t')) or [0, 0])[1] > bt[0] - tol for v in V)
+        if not ok: err.append(f'beat del 01 «{bid}» ({bt[0]}–{bt[1]} s) no está en ninguna viñeta que se cruce con su tiempo')
+    for b in nb:
+        if b not in usados: av.append(f'narrativa.{b}: ninguna viñeta lo usa')
+
+    # ---- personajes, DSL, nivel 3, perfiles ----
+    regl = P.get('reglamento') or {}; lc = regl.get('lenguaje_camara') or {}
+    for i, v in enumerate(V):
+        q = _q(i, v); di = v['director_imagen']; dc = v['director_camara']; t = _par(v.get('t')) or [0, 0]; d = t[1] - t[0]
+        for c in di.get('en_cuadro') or []:
+            if c['id'] not in fich: err.append(f"{q}: «{c['id']}» no es un personaje de la escena")
+            elif c['id'] in voz: err.append(f"{q}: «{c['id']}» es solo voz: nunca va en cuadro")
+        enc = {c['id'] for c in di.get('en_cuadro') or []}
+        for a in v.get('actuacion') or []:
+            if a['id'] not in enc: err.append(f"{q}: actuación de «{a['id']}» pero no está en cuadro")
+        if not str(di.get('dsl_encuadre') or '').strip() and di.get('plano'):
+            # 1-nov-2026: el encuadre estático se deduce SIN modelo de los campos estructurados (plano + ángulo + lente). Solo si vino vacío.
+            di['dsl_encuadre'] = ' '.join(x for x in (f"/{di['plano']}", f"/{di['angulo']}" if di.get('angulo') else '', f"/LENS{int(round(float(di['lente_mm'])))}" if di.get('lente_mm') else '') if x)
+            av.append(f"{q}: dsl_encuadre vino vacío; lo armó el código con plano/ángulo/lente: «{di['dsl_encuadre']}»")
+        r = S.analizar(di.get('dsl_encuadre'))
+        for m in S.errores_dsl(r): err.append(f'{q}: dsl_encuadre «{di.get("dsl_encuadre")}»: {m}')
+        cmds = S.comandos(r)
+        tam = [c for _, _, c, _ in cmds if S.categoria(c) == 'SHOT_SIZE']; angs = [c for _, _, c, _ in cmds if S.categoria(c) == 'CAMERA_ANGLE']
+        lens = [a.get('mm') for _, _, c, a in cmds if c == 'LENS' and a.get('mm')]
+        if tam[:1] != [di['plano']]: err.append(f"{q}: dsl_encuadre dice tamaño {tam[:1] or 'ninguno'} pero plano = {di['plano']}")
+        if angs and angs[0] != di['angulo']: err.append(f"{q}: dsl_encuadre dice ángulo {angs[0]} pero angulo = {di['angulo']}")
+        if lens and abs(float(lens[0]) - float(di['lente_mm'])) > 1: err.append(f"{q}: dsl_encuadre dice lente {lens[0]} mm pero lente_mm = {di['lente_mm']}")
+        if any(S.categoria(c) not in ('SHOT_SIZE', 'CAMERA_ANGLE', 'LENS', 'SUBJECT_FRAMING', 'COMPOSITION', 'FOCUS', 'CONTINUITY', None) for _, _, c, _ in cmds):
+            err.append(f'{q}: dsl_encuadre debe ser ESTÁTICO (tamaño, ángulo, lente, encuadre); el movimiento va en director_camara.dsl_movimiento')
+        rm = S.analizar(dc.get('dsl_movimiento'))
+        for m in S.errores_dsl(rm): err.append(f'{q}: dsl_movimiento «{dc.get("dsl_movimiento")}»: {m}')
+        mv = S.comandos(rm); fin = di['plano']
+        for t0, t1, c, a in mv:
+            if t1 is not None and (float(t0) < -tol or float(t1) > d + tol): err.append(f'{q}: el movimiento {c} va de {t0} a {t1} s pero la viñeta dura {round(d, 2)} s (tiempos relativos a la viñeta)')
+            sr = a.get('size_range')
+            if sr:
+                if sr[0] != fin: err.append(f'{q}: {c}:{sr[0]}>{sr[1]} empieza en {sr[0]} pero el cuadro en ese momento es {fin}')
+                fin = sr[1]
+            if c in (lc.get('movimientos_prohibidos') or []): err.append(f"{q}: {c} está prohibido por el reglamento {regl.get('nombre')} (nivel 3)")
+        if dc['encuadre_inicio'] != di['plano']: err.append(f"{q}: encuadre_inicio {dc['encuadre_inicio']} ≠ plano {di['plano']}")
+        if dc['encuadre_fin'] != fin: err.append(f"{q}: encuadre_fin {dc['encuadre_fin']} ≠ tamaño al terminar el movimiento ({fin})")
+        if lc.get('lente_mm_min') is not None and float(di['lente_mm']) < float(lc['lente_mm_min']) - 1e-9: err.append(f"{q}: lente {di['lente_mm']} mm < mínimo del reglamento {regl.get('nombre')} ({lc['lente_mm_min']})")
+        if lc.get('lente_mm_max') is not None and float(di['lente_mm']) > float(lc['lente_mm_max']) + 1e-9: err.append(f"{q}: lente {di['lente_mm']} mm > máximo del reglamento {regl.get('nombre')} ({lc['lente_mm_max']})")
+        if di['angulo'] in (lc.get('angulos_prohibidos') or []): err.append(f"{q}: ángulo {di['angulo']} prohibido por el reglamento (nivel 3)")
+        if di['plano'] in (lc.get('planos_prohibidos') or []): err.append(f"{q}: plano {di['plano']} prohibido por el reglamento (nivel 3)")
+        # avisos de género (preferencias, nunca errores)
+        k = int(v.get('segmento_genero', 0))
+        pf = (P['perfiles'][k]['preferencias'] if 0 <= k < len(P['perfiles']) else {}) or {}
+        if pf.get('lente_mm') and not pf['lente_mm'][0] <= float(di['lente_mm']) <= pf['lente_mm'][1]: av.append(f"{q}: lente {di['lente_mm']} mm fuera de lo preferido por el género del segmento {pf['lente_mm']} (solo aviso)")
+        if pf.get('duracion_vineta_s') and not pf['duracion_vineta_s'][0] - tol <= d <= pf['duracion_vineta_s'][1] + tol: av.append(f"{q}: dura {round(d, 2)} s; el género del segmento prefiere {pf['duracion_vineta_s']} (solo aviso)")
+        evit = set(pf.get('movimientos_evitar') or [])
+        for _, _, c, a in mv:
+            if c in evit or a.get('speed') in evit: av.append(f'{q}: ' + ' '.join(x for x in (c, a.get('speed')) if x) + ' va contra el perfil del segmento (solo aviso)')
+
+    # ---- 180° / dirección de pantalla / 30° ----
+    cortes = set(aj['cortes'])
+    for i in range(1, len(V)):
+        A, B = V[i - 1], V[i]; q = _q(i, B)
+        if A['transicion_salida']['tipo'] not in cortes: continue
+        la = {c['id']: c['lado'] for c in A['director_imagen']['en_cuadro']}; lb = {c['id']: c['lado'] for c in B['director_imagen']['en_cuadro']}
+        decl = {x['que'] for x in B['continuidad'].get('cambios_declarados') or []}
+        cruza = any((c == 'ORBIT' and float(a.get('degrees') or 0) >= 90) or c == 'CROSSAXIS' for _, _, c, a in S.comandos(S.analizar(A['director_camara']['dsl_movimiento'])))
+        com = [x for x in la if x in lb and la[x] != 'C' and lb[x] != 'C']
+        for x in range(len(com)):
+            for y in range(x + 1, len(com)):
+                p, r = com[x], com[y]
+                if LADO[la[p]] != LADO[la[r]] and LADO[lb[p]] != LADO[lb[r]] and (LADO[la[p]] < LADO[la[r]]) != (LADO[lb[p]] < LADO[lb[r]]) and not cruza and 'eje' not in decl:
+                    err.append(f'{q}: salto de eje (180°): {p} y {r} cambian de lado en el corte desde {A["id"]} sin cruzar en pantalla ni declararlo')
+        da, db = A['continuidad']['direccion_pantalla'], B['continuidad']['direccion_pantalla']
+        if {da, db} == {'L2R', 'R2L'} and not cruza and 'direccion_pantalla' not in decl:
+            err.append(f'{q}: dirección de pantalla se invierte ({da}→{db}) en el corte sin cruzar ni declararlo (regla C04 del DSL)')
+        if set(la) == set(lb) and la:
+            fa, pb = A['director_camara']['encuadre_fin'], B['director_imagen']   # el corte va del ÚLTIMO cuadro de A al primero de B
+            if A['director_imagen']['angulo'] == pb['angulo'] and (fa == pb['plano'] or _escalon(fa) == _escalon(pb['plano'])):
+                err.append(f"{q}: regla de 30°: corte con los mismos personajes, mismo ángulo y mismo escalón de tamaño ({fa}→{pb['plano']}) que el final de {A['id']}")
+
+    # ---- audio ----
+    mx = float(aj['max_palabras_por_s']); narr = aj['narrador_id']; hablas = {}
+    for i, v in enumerate(V):
+        q = _q(i, v); t = _par(v.get('t')) or [0, 0]
+        for k, au in enumerate(v.get('audio') or []):
+            at = _par(au.get('t'))
+            if not at or at[1] < at[0] or at[0] < t[0] - tol or at[1] > t[1] + tol: err.append(f"{q}: audio[{k}] t={au.get('t')} fuera de la viñeta {t}"); continue
+            if au['tipo'] in ('dialogo', 'narracion', 'voz_off'):
+                if au['quien'] == narr:
+                    if not P['narrador_permitido']: err.append(f'{q}: audio[{k}] usa {narr} pero el canal no tiene narrador')
+                elif au['quien'] not in fich: err.append(f"{q}: audio[{k}] quien «{au['quien']}» no es personaje de la escena")
+                if not S.cita_en(au['texto'], P['trozo']): err.append(f"{q}: audio[{k}] «{au['texto'][:50]}» no está en el guion de la escena (se copia literal)")
+                nw = len(S.palabras(au['texto'])); ds = max(at[1] - at[0], 1e-6)
+                if nw / ds > mx + 1e-9: err.append(f'{q}: audio[{k}] {nw} palabras en {round(ds, 2)} s (máx. {mx} palabras/s): no alcanza a decirse')
+                hablas.setdefault(au['quien'], []).append((at[0], at[1], q, au['texto']))
+    for qn, L in hablas.items():
+        L.sort()
+        for a, b in zip(L, L[1:]):
+            if b[0] < a[1] - tol: err.append(f'{b[2]}: {qn} habla encima de sí mismo ({a[0]}–{a[1]} y {b[0]}–{b[1]})')
+    todas = [(au, v) for v in V for au in v.get('audio') or [] if au['tipo'] in ('dialogo', 'narracion', 'voz_off')]
+    for dl in P['dialogos']:
+        hit = [au for au, _ in todas if S.cita_en(dl['texto'], au['texto']) or S.cita_en(au['texto'], dl['texto']) and len(S.palabras(au['texto'])) >= len(S.palabras(dl['texto'])) * .6]
+        if not hit:
+            m = f"diálogo del guion sin viñeta: {dl['quien_guion']}: «{dl['texto'][:60]}»"
+            (err if aj['exigir_todo_el_dialogo'] else av).append(m)
+        elif dl.get('ids') and not dl.get('id') and any(h['quien'] not in dl['ids'] for h in hit): err.append(f"diálogo colectivo «{dl['texto'][:40]}» ({dl['quien_guion']} = {dl['ids']}) pero el storyboard se lo da a {sorted({h['quien'] for h in hit} - set(dl['ids']))}")
+        elif dl.get('id') and not any(h['quien'] == dl['id'] for h in hit): err.append(f"diálogo «{dl['texto'][:40]}» lo dice {dl['quien_guion']} ({dl['id']}) pero el storyboard se lo da a {hit[0]['quien']}")
+
+    # ---- memoria de continuidad ----
+    me = P.get('memoria_entrada') or {}; ms = obj['memoria_salida']; sal = {p['id']: p for p in ms.get('personajes') or []}
+    cambios = [(c['que'], c.get('personaje'), c) for v in V for c in v['continuidad'].get('cambios_declarados') or []]
+    mantener = ' | '.join(S.norm(x) for v in V for x in v['continuidad'].get('debe_mantenerse') or [])
+    for b in {c['beat_01'] for _, _, c in cambios}:
+        if b and b not in P['beats']: err.append(f'cambio declarado con beat_01 «{b}» que no existe en el 01')
+    for pid in P['en_escena']:
+        if pid not in voz and pid not in sal: err.append(f'memoria_salida: falta el personaje {pid}')
+    for pid, st in (me.get('personajes') or {}).items():
+        if pid not in P['en_escena']: continue
+        s = sal.get(pid) or {}
+        for k in ('danos', 'vestuario', 'objetos'):
+            for x in st.get(k) or []:
+                decl = any(q == k and (p in (pid, '', None)) for q, p, _ in cambios)
+                if not decl and not any(S.cita_en(x, y, .5) or S.cita_en(y, x, .5) for y in s.get(k) or []):
+                    err.append(f'memoria: {pid} entra con {k} «{x}» y sale sin eso, sin cambio declarado (la continuidad no se pierde)')
+                if k == 'danos' and not decl and not S.cita_en(x, mantener, .5):
+                    err.append(f'continuidad: el daño «{x}» de {pid} debe estar en debe_mantenerse de alguna viñeta')
+        for k in ('danos', 'vestuario'):
+            for y in s.get(k) or []:
+                if not any(q == k and p in (pid, '', None) for q, p, _ in cambios) and not any(S.cita_en(x, y, .5) or S.cita_en(y, x, .5) for x in st.get(k) or []):
+                    err.append(f'memoria: {pid} sale con {k} «{y}» que no traía y no hay cambio declarado')
+    pe = {p: (st.get('posicion') or {}).get('lado') for p, st in (me.get('personajes') or {}).items()}
+    if P.get('continua') and V:
+        v0 = V[0]; l0 = {c['id']: c['lado'] for c in v0['director_imagen']['en_cuadro']}
+        decl = {x['que'] for x in v0['continuidad'].get('cambios_declarados') or []}
+        com = [x for x in l0 if pe.get(x) in ('L', 'R') and l0[x] in ('L', 'R')]
+        for x in range(len(com)):
+            for y in range(x + 1, len(com)):
+                p, r = com[x], com[y]
+                if pe[p] != pe[r] and (LADO[pe[p]] < LADO[pe[r]]) != (LADO[l0[p]] < LADO[l0[r]]) and 'eje' not in decl:
+                    err.append(f'{_q(0, v0)}: la escena es continuación y {p}/{r} empiezan con los lados al revés que al final de la anterior (eje)')
+        if me.get('direccion_pantalla') in ('L2R', 'R2L') and {me['direccion_pantalla'], v0['continuidad']['direccion_pantalla']} == {'L2R', 'R2L'} and 'direccion_pantalla' not in decl:
+            err.append(f"{_q(0, v0)}: continuación con dirección de pantalla invertida respecto a la escena anterior ({me['direccion_pantalla']}→{v0['continuidad']['direccion_pantalla']})")
+    if err: return None, err, av
+    C = dict(obj); C['vinetas'] = V
+    return C, [], av

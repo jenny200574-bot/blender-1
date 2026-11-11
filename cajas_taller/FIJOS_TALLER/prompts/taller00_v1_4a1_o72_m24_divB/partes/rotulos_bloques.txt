@@ -1,0 +1,25 @@
+
+
+=== CONFIG_CANAL_JSON ===
+
+=== FIN CONFIG ===
+
+=== BASE_DEL_CAPITULO_JSON ===
+
+=== FIN BASE ===
+
+=== PROFUNDIZACION_4P_JSON ===
+
+=== FIN 4P ===
+
+=== GRUPO_A_INVESTIGAR ===
+
+=== FIN GRUPO ===
+
+=== GUION_COMPLETO ===
+
+=== FIN GUION ===
+
+=== CONTEXTO_FIJO_PARTE_A_JSON (ya decidido en la parte A: NO lo cambies; todo lo que devuelvas debe ser coherente con estas medidas, planta, aberturas, muebles y objetos) ===
+
+=== FIN CONTEXTO FIJO ===

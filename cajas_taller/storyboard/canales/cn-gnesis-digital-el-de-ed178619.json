@@ -1,0 +1,36 @@
+{
+ "canal": "cn-gnesis-digital-el-de-ed178619",
+ "nombre": null,
+ "version": "sb_v1",
+ "generado": "2026-11-02T01:56:22+0100",
+ "PISTA": "Tres niveles SEPARADOS (Ricardo t330u). Se pisan por capítulo (por_capitulo[\"1\"]) y por escena (por_escena[\"1/9\"]), cada nivel solo consigo mismo.",
+ "nivel_1_genero_tono": {
+  "estado": "definido (Ricardo t331u: ciencia ficción, acción, fantasía oscura, romance, drama emocional)",
+  "generos": [
+   "ciencia_ficcion",
+   "accion",
+   "fantasia",
+   "romance",
+   "drama"
+  ],
+  "tono_general": "por definir",
+  "pistas_del_canal": {
+   "x23_story_type": "viaje_heroe",
+   "narration_tone": "comico"
+  },
+  "nota": "Los géneros del canal son la MEZCLA permitida; la etapa 1 detecta cuál domina en cada tramo de cada escena."
+ },
+ "nivel_2_estilo_visual": {
+  "estado": "del canal (style_fijo); categoría del catálogo por confirmar",
+  "estilo_catalogo": "por definir",
+  "estilo_fijo_del_canal": "Ghibli / Cozy Fantasy + Anime Cinemático de Alta Gama",
+  "style_del_canal": "anime"
+ },
+ "nivel_3_direccion_artistica": {
+  "estado": "por definir",
+  "reglamento": null,
+  "nombre_propuesto": "GD-CINEMATIC-ANIME-V1"
+ },
+ "por_capitulo": {},
+ "por_escena": {}
+}

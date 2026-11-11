@@ -1,0 +1,663 @@
+{
+ "id": "guirnalda_banderines",
+ "nombre_generico": "Guirnalda festiva de banderines triangulares de tela",
+ "nombre_en": "bunting garland",
+ "categoria": "decoracion",
+ "medidas_tipicas": {
+  "ancho_m": 2.4,
+  "fondo_m": 0.05,
+  "alto_m": 0.18
+ },
+ "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  2.4,
+  0.05,
+  0.18
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": "cuelga / pared",
+ "base_m": null,
+ "apoyo": "pared",
+ "conjunto": false,
+ "piezas": 15,
+ "tipos_de_pieza": [
+  "caja",
+  "esfera",
+  "poliedro"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "cordon_superior",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "centro_m": [
+    0.0,
+    0.005,
+    0.17
+   ],
+   "tam_m": [
+    2.4,
+    0.04,
+    0.02
+   ]
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "nudo_extremo_izq",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "centro_m": [
+    -1.175,
+    0.0,
+    0.155
+   ],
+   "radio_m": 0.025
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "nudo_extremo_der",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "centro_m": [
+    1.175,
+    0.0,
+    0.155
+   ],
+   "radio_m": 0.025
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_01_amarillo",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "vertices_m": [
+    [
+     -1.125,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.965,
+     -0.015,
+     0.165
+    ],
+    [
+     -1.045,
+     -0.015,
+     0.0
+    ],
+    [
+     -1.125,
+     0.025,
+     0.165
+    ],
+    [
+     -0.965,
+     0.025,
+     0.165
+    ],
+    [
+     -1.045,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_02_azul",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "vertices_m": [
+    [
+     -0.935,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.775,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.855,
+     -0.015,
+     0.0
+    ],
+    [
+     -0.935,
+     0.025,
+     0.165
+    ],
+    [
+     -0.775,
+     0.025,
+     0.165
+    ],
+    [
+     -0.855,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_03_verde",
+   "color_guia_rgb": [
+    0.231,
+    0.667,
+    0.29
+   ],
+   "vertices_m": [
+    [
+     -0.745,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.585,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.665,
+     -0.015,
+     0.0
+    ],
+    [
+     -0.745,
+     0.025,
+     0.165
+    ],
+    [
+     -0.585,
+     0.025,
+     0.165
+    ],
+    [
+     -0.665,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_04_magenta",
+   "color_guia_rgb": [
+    0.839,
+    0.2,
+    0.541
+   ],
+   "vertices_m": [
+    [
+     -0.555,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.395,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.475,
+     -0.015,
+     0.0
+    ],
+    [
+     -0.555,
+     0.025,
+     0.165
+    ],
+    [
+     -0.395,
+     0.025,
+     0.165
+    ],
+    [
+     -0.475,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_05_amarillo",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "vertices_m": [
+    [
+     -0.365,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.205,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.285,
+     -0.015,
+     0.0
+    ],
+    [
+     -0.365,
+     0.025,
+     0.165
+    ],
+    [
+     -0.205,
+     0.025,
+     0.165
+    ],
+    [
+     -0.285,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_06_azul",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "vertices_m": [
+    [
+     -0.175,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.015,
+     -0.015,
+     0.165
+    ],
+    [
+     -0.095,
+     -0.015,
+     0.0
+    ],
+    [
+     -0.175,
+     0.025,
+     0.165
+    ],
+    [
+     -0.015,
+     0.025,
+     0.165
+    ],
+    [
+     -0.095,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_07_verde",
+   "color_guia_rgb": [
+    0.231,
+    0.667,
+    0.29
+   ],
+   "vertices_m": [
+    [
+     0.015,
+     -0.015,
+     0.165
+    ],
+    [
+     0.175,
+     -0.015,
+     0.165
+    ],
+    [
+     0.095,
+     -0.015,
+     0.0
+    ],
+    [
+     0.015,
+     0.025,
+     0.165
+    ],
+    [
+     0.175,
+     0.025,
+     0.165
+    ],
+    [
+     0.095,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_08_magenta",
+   "color_guia_rgb": [
+    0.839,
+    0.2,
+    0.541
+   ],
+   "vertices_m": [
+    [
+     0.205,
+     -0.015,
+     0.165
+    ],
+    [
+     0.365,
+     -0.015,
+     0.165
+    ],
+    [
+     0.285,
+     -0.015,
+     0.0
+    ],
+    [
+     0.205,
+     0.025,
+     0.165
+    ],
+    [
+     0.365,
+     0.025,
+     0.165
+    ],
+    [
+     0.285,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_09_amarillo",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "vertices_m": [
+    [
+     0.395,
+     -0.015,
+     0.165
+    ],
+    [
+     0.555,
+     -0.015,
+     0.165
+    ],
+    [
+     0.475,
+     -0.015,
+     0.0
+    ],
+    [
+     0.395,
+     0.025,
+     0.165
+    ],
+    [
+     0.555,
+     0.025,
+     0.165
+    ],
+    [
+     0.475,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_10_azul",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "vertices_m": [
+    [
+     0.585,
+     -0.015,
+     0.165
+    ],
+    [
+     0.745,
+     -0.015,
+     0.165
+    ],
+    [
+     0.665,
+     -0.015,
+     0.0
+    ],
+    [
+     0.585,
+     0.025,
+     0.165
+    ],
+    [
+     0.745,
+     0.025,
+     0.165
+    ],
+    [
+     0.665,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_11_verde",
+   "color_guia_rgb": [
+    0.231,
+    0.667,
+    0.29
+   ],
+   "vertices_m": [
+    [
+     0.775,
+     -0.015,
+     0.165
+    ],
+    [
+     0.935,
+     -0.015,
+     0.165
+    ],
+    [
+     0.855,
+     -0.015,
+     0.0
+    ],
+    [
+     0.775,
+     0.025,
+     0.165
+    ],
+    [
+     0.935,
+     0.025,
+     0.165
+    ],
+    [
+     0.855,
+     0.025,
+     0.0
+    ]
+   ]
+  },
+  {
+   "tipo": "poliedro",
+   "nombre": "banderin_12_magenta",
+   "color_guia_rgb": [
+    0.839,
+    0.2,
+    0.541
+   ],
+   "vertices_m": [
+    [
+     0.965,
+     -0.015,
+     0.165
+    ],
+    [
+     1.125,
+     -0.015,
+     0.165
+    ],
+    [
+     1.045,
+     -0.015,
+     0.0
+    ],
+    [
+     0.965,
+     0.025,
+     0.165
+    ],
+    [
+     1.125,
+     0.025,
+     0.165
+    ],
+    [
+     1.045,
+     0.025,
+     0.0
+    ]
+   ]
+  }
+ ],
+ "caja_m": {
+  "ancho": 2.4,
+  "fondo": 0.05,
+  "alto": 0.18
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.18
+  ],
+  "frente": [
+   0.0,
+   -0.025,
+   0.09
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G2_pared_ventana_luz",
+  "objeto_id_origen": "amb-esc-habitacion-guirnalda-banderines",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+  "costo_usd_grupo": 0.4131,
+  "costo_usd_repartido": 0.059014,
+  "citas": [
+   {
+    "fuente_id": "F03",
+    "clave": "tipologia.guirnalda_banderines",
+    "cita": "Typical forms of bunting are strings of colorful triangular flags"
+   },
+   {
+    "fuente_id": "F03",
+    "clave": "tipologia.material_tela",
+    "cita": "Bunting are festive or patriotic decorations made of fabric, or of plastic, paper or cardboard in imitation of fabric."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "La ficha no especifica un código hexadecimal propio para el hilo trenzado superior; se emplea el color principal #FFC928.",
+   "El corpus F03 no detalla la cantidad ni el paso en metros entre banderines; se deducen 12 banderines uniformemente espaciados en los 2.4 m de ancho."
+  ],
+  "info": {
+   "partes": 15,
+   "piezas": 15,
+   "bbox_m": [
+    2.4,
+    0.05,
+    0.18
+   ],
+   "grupos": 1,
+   "datos": 8,
+   "con_fuente": 2
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-guirnalda-banderines"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

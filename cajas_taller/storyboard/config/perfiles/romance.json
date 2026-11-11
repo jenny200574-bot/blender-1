@@ -1,0 +1,57 @@
+{
+ "id": "romance",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Romance",
+ "tonos": [
+  "ternura",
+  "calidez",
+  "anhelo"
+ ],
+ "reglas": {
+  "intencion": "conexión, ternura, anhelo",
+  "beats": "mostrar miradas y pequeños gestos; esconder lo que distrae de la pareja",
+  "secuencia": "plano y contraplano que se van cerrando",
+  "direccion": "primeros planos, plano sobre el hombro, lentes 50-85 mm, movimientos suaves",
+  "actuacion": "intensidad baja-media, miradas sostenidas, sonrisas contenidas",
+  "composicion": "dos personajes compartiendo el cuadro, simetría suave, fondo desenfocado",
+  "ritmo": "pausas largas en las miradas",
+  "transiciones": "cortes suaves, encadenados",
+  "continuidad": "líneas de mirada coherentes (eje entre los dos)",
+  "justificacion": "hacer sentir la cercanía emocional"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   2.5,
+   10.0
+  ],
+  "lente_mm": [
+   50,
+   100
+  ],
+  "planos_preferidos": [
+   "MCU",
+   "CU",
+   "TWOSHOT",
+   "OTS"
+  ],
+  "angulos_preferidos": [
+   "EYELEVEL"
+  ],
+  "movimientos_preferidos": [
+   "DOLLYIN",
+   "ORBIT",
+   "STATIC"
+  ],
+  "movimientos_evitar": [
+   "WHIPPAN",
+   "CRASHZOOM",
+   "HANDHELD"
+  ],
+  "transiciones_preferidas": [
+   "CORTE",
+   "ENCADENADO"
+  ],
+  "pausas": "muchas"
+ },
+ "ejemplo_puerta": "Primer plano de quien abre, contraplano de quien espera, una pausa de miradas antes de la primera palabra."
+}

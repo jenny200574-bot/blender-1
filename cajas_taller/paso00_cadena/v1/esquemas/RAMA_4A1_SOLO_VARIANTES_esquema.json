@@ -1,0 +1,324 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "RAMA_4A1_SOLO_VARIANTES",
+ "type": "object",
+ "required": [
+  "escenarios",
+  "faltantes_en_base",
+  "contradicciones",
+  "dudas"
+ ],
+ "properties": {
+  "escenarios": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "escenario_id",
+     "variantes_por_escena",
+     "luz_por_escena",
+     "ambiente_por_escena",
+     "camaras_sugeridas",
+     "cambios_sobre_guardado"
+    ],
+    "properties": {
+     "escenario_id": {
+      "type": "string"
+     },
+     "variantes_por_escena": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "escena",
+        "variante",
+        "cambios_visibles",
+        "origen",
+        "cita"
+       ],
+       "properties": {
+        "escena": {
+         "type": "string"
+        },
+        "variante": {
+         "type": "string"
+        },
+        "cambios_visibles": {
+         "type": "string"
+        },
+        "origen": {
+         "enum": [
+          "explicito",
+          "heredado",
+          "deducido",
+          "desconocido"
+         ]
+        },
+        "cita": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "luz_por_escena": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "escena",
+        "hora",
+        "clima",
+        "fuentes",
+        "ambiente",
+        "sombras",
+        "origen",
+        "justificacion",
+        "cita"
+       ],
+       "properties": {
+        "escena": {
+         "type": "string"
+        },
+        "hora": {
+         "type": "string"
+        },
+        "clima": {
+         "type": "string"
+        },
+        "fuentes": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "required": [
+           "tipo",
+           "posicion",
+           "color",
+           "intensidad",
+           "encendida"
+          ],
+          "properties": {
+           "tipo": {
+            "type": "string"
+           },
+           "posicion": {
+            "type": "string"
+           },
+           "color": {
+            "type": "string"
+           },
+           "intensidad": {
+            "enum": [
+             "baja",
+             "media",
+             "alta"
+            ]
+           },
+           "encendida": {
+            "type": "boolean"
+           }
+          }
+         }
+        },
+        "ambiente": {
+         "type": "string"
+        },
+        "sombras": {
+         "type": "string"
+        },
+        "origen": {
+         "enum": [
+          "explicito",
+          "heredado",
+          "deducido",
+          "desconocido"
+         ]
+        },
+        "justificacion": {
+         "type": "string"
+        },
+        "cita": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "ambiente_por_escena": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "escena",
+        "hora",
+        "clima",
+        "atmosfera",
+        "sonido_ambiente"
+       ],
+       "properties": {
+        "escena": {
+         "type": "string"
+        },
+        "hora": {
+         "type": "string"
+        },
+        "clima": {
+         "type": "string"
+        },
+        "atmosfera": {
+         "type": "string"
+        },
+        "sonido_ambiente": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "camaras_sugeridas": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "escena",
+        "posicion",
+        "mira_hacia",
+        "lente_mm"
+       ],
+       "properties": {
+        "escena": {
+         "type": "string"
+        },
+        "posicion": {
+         "type": "string"
+        },
+        "mira_hacia": {
+         "type": "string"
+        },
+        "lente_mm": {
+         "type": [
+          "number",
+          "null"
+         ]
+        }
+       }
+      }
+     },
+     "cambios_sobre_guardado": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "que_cambia",
+        "toca_geometria",
+        "escenas",
+        "cita",
+        "motivo"
+       ],
+       "properties": {
+        "que_cambia": {
+         "type": "string"
+        },
+        "toca_geometria": {
+         "type": "boolean"
+        },
+        "escenas": {
+         "type": "array",
+         "items": {
+          "type": "string"
+         }
+        },
+        "cita": {
+         "type": "string"
+        },
+        "motivo": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "faltantes_en_base": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "tipo",
+     "nombre",
+     "escenas",
+     "cita",
+     "motivo"
+    ],
+    "properties": {
+     "tipo": {
+      "enum": [
+       "escenario",
+       "objeto",
+       "personaje",
+       "forma"
+      ]
+     },
+     "nombre": {
+      "type": "string"
+     },
+     "escenas": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "cita": {
+      "type": "string"
+     },
+     "motivo": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "contradicciones": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "escenas",
+     "tipo",
+     "citas",
+     "regla_afectada",
+     "opciones"
+    ],
+    "properties": {
+     "escenas": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "tipo": {
+      "type": "string"
+     },
+     "citas": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "regla_afectada": {
+      "type": "string"
+     },
+     "opciones": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "dudas": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

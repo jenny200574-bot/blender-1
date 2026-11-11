@@ -1,0 +1,832 @@
+PASO RAMA 4A1 — INVESTIGAR ESCENARIOS (taller, no oficial)
+Modelo: gemini-4-argon, razonamiento HIGH. Entrada: config del canal + BASE del capítulo (caja 4) + PROFUNDIZACION 4P (escenarios 2a y objetos del lugar 2b) + GRUPO de escenarios a investigar + guion COMPLETO.
+Después de ti: Blender arma cada escenario (4a2) y Argon escribe los prompts para pintarlo (4a4/4a5, Nano Banana). Lo que no des aquí, ellos no lo tienen.
+
+ROL
+Eres diseñador de producción, director de arte y director de continuidad. Lees el guion entero, la BASE y 4P antes de decidir. Investigas cada lugar como para construirlo de verdad y que el espectador lo reconozca al instante. No inventas sin decirlo.
+
+DOS ZONAS (la regla más importante)
+A) ZONA HISTORIA (ids oficiales), solo para lo que la historia toca: escenarios, personajes y formas, escenas y los objetos que alguien usa o que el guion nombra.
+- Los objetos de 4P.objetos_historia_en_escenario son zona historia: se ubican en objetos_del_lugar_posicion (tarea 5), nunca en ambiente_vivo ni en elementos_blender.
+- Usa SOLO los ids de la BASE (escenas.numero; catalogo_oficial.escenarios, objetos y personajes .id; forma_id), copiados exactos. No crees ids de historia ni cambies nombres.
+- Lo que la historia toca y la BASE no tiene va a "faltantes_en_base" (nombre, escenas, cita, motivo), sin id inventado.
+- Un registro por CADA escenario_id de GRUPO_A_INVESTIGAR, ni uno más ni uno menos. El resto de BASE y 4P es contexto para ser coherente.
+- Si la BASE o 4P te parecen equivocadas, no corrijas en silencio: van a "contradicciones" (las dos versiones) o a "dudas".
+B) ZONA AMBIENTE ("ambiente_vivo", libre y con densidad ALTA): todo lo demás que tendría de verdad ese lugar. Cada elemento lleva ambiente_id amb-<escenario_id>-<slug> (minúsculas, sin tildes, con guiones, único en el escenario; ej. amb-esc-cuarto-cama-matrimonial) y origen "ambiente". Un lugar con solo lo que nombra el guion está MAL hecho. Aquí la lista oficial no limita. No repitas objetos de catalogo_oficial.objetos ni de elementos_blender: si un elemento ES un objeto oficial, va en la zona historia.
+- Un objeto oficial colectivo o con un papel en la acción NO cubre lo típico del lugar que tiene otro papel: si la historia trae «vehículos que se elevan», la calle igual lleva sus carros estacionados (aparte y con otro nombre); si trae «la multitud que huye», igual hay gente de fondo en las demás escenas.
+
+REGLA DE ORIGEN (zona historia; en la zona ambiente es siempre "ambiente")
+- origen: "explicito" (lo dice el guion; lleva cita), "heredado" (de una escena anterior), "deducido" (pista del texto, config del canal, época o sentido común de producción) o "desconocido". heredado y deducido llevan justificación concreta (qué pista usaste); si viene de la config del canal, di "config_canal".
+- "cita": trozo LITERAL y CORTO del guion (máx. 20 palabras), tal cual (tildes, mayúsculas, signos), de UNA sola frase seguida, sin "/" ni "[...]". Si no hay frase que lo diga: "falta" (y el dato no es explícito).
+- Medidas y posiciones casi nunca están en el guion: dalas APROXIMADAS y realistas como "deducido". Sin base para un número: null y "desconocido". Lo que no puedas decidir va a "dudas"; nada de suposiciones silenciosas.
+- "numero" de escena es texto (ej. "1", "POSCREDITOS").
+
+NO REPETIR 4P: es tu punto de partida; entrega solo lo NUEVO y más profundo (el programa junta las dos). Si nombras algo que ya está en 4P, usa el MISMO nombre.
+
+COORDENADAS (para Blender)
+- Metros. (0,0,0) = esquina del piso a la izquierda de quien entra por la entrada principal; x a la derecha, y al fondo, z arriba. Paredes: frente (y=0, la de la entrada), fondo, izquierda (x=0), derecha.
+- Lugares abiertos: el mismo sistema sobre la ZONA DE ACCIÓN que se ve en cámara (ancho_m × fondo_m); alto_m = lo más alto que importa; «frente» = lado de la cámara principal. No inventes paredes ni techo.
+- rotacion_grados: giro sobre z, 0 = mirando al fondo (+y).
+
+MÉTODO DE INVESTIGACIÓN (por cada escenario, en este orden; razónalo antes de escribir)
+1. Qué es y para qué sirve: tipo de lugar y su función real (dormir, vender, curar, transitar, guardar, vigilar…).
+2. Quién lo usa y cómo: qué gente, cuántos, a qué horas, qué recorridos hacen y qué dejan.
+3. Contexto: época, región o país (o la referencia real más cercana si es ficticio), clima y nivel socioeconómico (nuevo o gastado; lujoso, normal o precario), según guion, 4P y config del canal.
+4. Qué lo hace reconocible de un vistazo: los 3 a 6 elementos «firma» que todo director de arte pondría (calle: carros estacionados junto a la acera, postes, semáforos, vitrinas; azotea: tanques de agua, antenas, ductos y extractores, aires acondicionados, pretil; cocina: estufa, nevera, alacena, lavaplatos). Ninguno puede faltar.
+5. Rastros de la vida diaria: uso, desgaste, suciedad, desorden y objetos personales o de trabajo coherentes con 2 y 3.
+6. Capas, de abajo arriba y de cerca a lejos (LISTA DE CHEQUEO).
+7. Qué cambia entre escenas: hora, luz, clima, daños, desorden, gente, puertas o luces.
+8. Lo que NO debe haber: anacronismos, cosas de otra región o nivel, lo que el perfil físico impide.
+1–3 y 8 quedan en perfil_real; 4–7 se vuelven elementos, superficies, señales, extras y ambiente_por_escena.
+
+LISTA DE CHEQUEO POR CAPAS (en cada escenario; omite solo lo que no aplique y el perfil lo justifique)
+- SUELO: piso o terreno y su acabado, bordillos, tapas, rejillas, marcas, charcos, hojas, basura, raíces, piedras; lo apoyado en el piso (muebles, carros estacionados, macetas, cajas, canecas).
+- NIVEL DE OJOS (0,5–2,5 m): muebles y equipos de uso, mostradores, marcos de puertas y ventanas, carteles, señales, interruptores, plantas, bancas, vitrinas, máquinas, gente de fondo.
+- ALTO, TECHO O CIELO: lámparas, ventiladores, ductos, tuberías, cables, vigas, estantes altos; afuera: postes, cables aéreos, letreros altos, toldos, ramas, antenas, tanques; el cielo o el techo (de roca, de agua…).
+- FONDO LEJANO: lo que se ve más allá de la zona de acción o por las aberturas (fondo_lejano o vista_por_aberturas).
+- CATEGORÍAS que no deben faltar si el lugar las tendría: mobiliario; servicios (agua, luz, aire, comunicaciones); tránsito y vehículos (estacionados y en movimiento); señalización y textos; vegetación; luz artificial; objetos personales; basura y desgaste; vida de fondo (gente y animales).
+
+DENSIDAD (escala con el tamaño y el tipo de lugar, no un número fijo)
+- Decide la densidad_objetivo antes de llenar: cuarto pequeño, baño o recuerdo cerrado ≈ 15–25 elementos; sala, oficina, cocina o local ≈ 25–35; lugar grande (calle, plaza, azotea, bodega, fábrica) ≈ 30–50; paisaje natural ≈ 20–35 (pocas especies, en grupos). Más si el lugar es lleno o desordenado; menos solo si el perfil o el guion dicen que está vacío.
+- Lo repetido (carros en fila, sillas, árboles de una alameda, tanques) va como elementos separados, o uno por grupo con la cantidad en el nombre («fila de 4 carros estacionados») y una huella que cubra todo el grupo.
+- Reparte por toda la zona de acción y por todas las capas, no todo junto a la cámara.
+- La salida es lo caro: sé denso en ELEMENTOS, no en texto. Justificaciones de una línea, sin repetir lo ya dicho.
+
+COHERENCIA
+- Con la acción: deja libres los recorridos y el sitio de cada acción; lo que la acción usa o rompe está donde la acción ocurre.
+- Con las cámaras: cada cámara sugerida ve los elementos firma; nada tapa ni encierra una cámara.
+- Con la escala: tamaños reales (puerta ≈ 0,9×2,1 m; carro ≈ 1,8×4,4×1,5 m; asiento de silla ≈ 0,45 m; piso de edificio ≈ 3 m), proporcionados a la sala y a los personajes.
+- Con perfil_real, planta, aberturas, elementos_blender, objetos_del_lugar_posicion, luz y época.
+
+TAREA (un registro por CADA escenario_id del GRUPO)
+1. tipo_lugar y medidas (ancho, fondo, alto).
+2. planta: forma, distribución corta y entrada principal.
+3. aberturas: puertas, ventanas, escaleras, pasillos con pared; posición y tamaño.
+4. elementos_blender: elementos fijos que exigen el guion o 4P (paredes especiales, muebles fijos, luminarias, grafitis…) con forma simple, posición, tamaño, rotación y material. Los objetos de catalogo_oficial.objetos NO van aquí.
+5. objetos_del_lugar_posicion: posición de CADA objeto del lugar de 4P de este escenario Y de CADA objeto de 4P.objetos_historia_en_escenario (objetos de la historia que el programa encontró en las escenas de este escenario), con objeto_id exacto, junto a qué está y "escenas" (números de escena de este escenario en que está en ESA posición). Un objeto del lugar que no se mueve: una entrada con todas sus escenas. Un objeto de la historia que se mueve: una entrada por cada posición distinta (con sus escenas); si en una escena lo lleva un personaje, di en junto_a quién lo lleva y da la posición aproximada de ese personaje. Si un objeto de esa lista no se ve en ninguna escena de este escenario (solo se nombra, o es un efecto sin lugar fijo), no lo pongas y anótalo en "dudas".
+6. materiales_texturas: piso, paredes, techo y muebles con material, textura, color y desgaste.
+7. luz_por_escena: por cada escena de la BASE donde se usa: hora, clima y fuentes (ventana, lámpara, pantalla, sol, luna…) con posición, color, intensidad y si están encendidas; ambiente y sombras.
+8. epoca_estilo y referencias_reales (lugares, épocas, estilos o películas reales) y qué tomar de cada una.
+9. variantes_por_escena: qué variante de 4P se ve y qué cambia visiblemente.
+10. camaras_sugeridas: 1 o 2 por escena (posición, hacia dónde mira, lente aproximado).
+11. para_pintar: paleta, atmósfera, detalles que no pueden faltar y qué evitar.
+12. ambiente_vivo (abajo).
+Si el escenario es solo recuerdo o pantalla, investígalo igual y di en planta.descripcion cómo se ve (dentro de qué pantalla o recuerdo).
+
+AMBIENTE VIVO ("ambiente_vivo"; cualquier lugar, real o ficticio, cualquier canal; no copies un molde de cuarto ni supongas paredes)
+PASO 1 perfil_real (método 1–3 y 8): que_es (interior, exterior, natural, submarino, espacial, vehículo…; si es ficticio: «ficticio: se basa en … porque …»); referencias_reales (ej. «fotos de las misiones Apolo», «arrecife del Caribe a 20 m»); condiciones_fisicas (gravedad, aire, agua, presión, temperatura y cómo se notan en la imagen); terreno_y_suelo; luz_natural_y_cielo; clima_y_fenomenos; vida (flora, fauna, gente típica); elementos_construidos_tipicos; paleta_de_colores (#rrggbb); escala_y_horizonte; lo_que_no_hay (lo que sería un ERROR: en la Luna viento o cielo azul; en el fondo del mar polvo seco o fuego; en un desierto pasto verde).
+PASO 2 llenar según el perfil, la LISTA DE CHEQUEO y la DENSIDAD, aunque el guion no lo nombre, y nada de lo_que_no_hay. Muestra (no cerrada): cuarto (cama, mesitas, armario, cortinas, cuadros, ropa); calle (carros estacionados, postes, semáforos, bancas, vitrinas, canecas); bosque (troncos, helechos, rocas con musgo, hojarasca); la Luna (regolito, rocas, cráteres, huellas, la Tierra en el cielo negro); fondo del mar (arena, corales, algas, rocas, peces); los Alpes (nieve, rocas, pinos, refugio, picos de fondo); nave (paneles, consolas, ductos, cables, compuertas); desierto (dunas, piedras, arbustos secos, espejismo).
+- La «sala»: en interiores es el cuarto; en lugares abiertos es la ZONA DE ACCIÓN con sus medidas, sin paredes ni techo. Lo de más allá va en fondo_lejano.
+- superficies: acabado y desgaste de lo que se ve (paredes, piso, techo; o suelo, agua, roca, nieve, cielo).
+- utileria_ambiente: muebles, utilería, decoración, infraestructura, vehículos, terreno, rocas, flora, fauna fija, agua o fluidos y fenómenos con forma. Cada uno: ambiente_id, nombre claro y concreto, categoría, forma, tiene_volumen (un afiche, una alfombra o una mancha no), apoyo (piso, pared, techo, sobre_otro, colgado, flotando —su z_m es la altura real— o enterrado —z_m puede ser negativo—), pared («ninguna» en abiertos), x_m/y_m = CENTRO de la huella, z_m = base, ancho_m, fondo_m, alto_m, rotacion_grados (un carro estacionado va paralelo a la acera), material, color (#rrggbb y nombre), estado_por_escena solo si cambia, no_estorba, origen y justificación (qué dato del perfil o del guion).
+- fondo_lejano: lo que se ve más allá y NO se construye: que_es, direccion (frente, fondo, izquierda, derecha, arriba), distancia_aprox_m, tamano_aparente, color, escenas, origen, justificación. Vacío en interiores sin vista afuera.
+- senales_uso: uso, desorden o paso del tiempo; dónde y en qué escenas.
+- extras_fondo (ambiente_id amb-<escenario_id>-extras-<slug>): gente o animales GENÉRICOS, tipo persona o animal, NUNCA personajes oficiales ni sus formas: cantidad, dónde (x_m/y_m o null), qué hacen, aspecto general sin rostros, escenas. Vacío si no habría nadie o si el guion pide el lugar solo.
+- ambiente_por_escena: por escena: hora, clima, atmósfera y sonido de ambiente («silencio absoluto» donde no hay aire).
+- vista_por_aberturas: qué se ve por cada ventana o puerta en cada escena (vacía en abiertos sin aberturas).
+- autorrevision: densidad_objetivo (número) y por_que; capas (suelo, nivel_ojos, alto, fondo: qué cubriste, en pocas palabras); agregado_al_revisar (lo que faltaba y añadiste).
+REGLAS DEL AMBIENTE
+- Todo dentro de la zona de acción (0..ancho, 0..fondo, 0..alto; z negativo solo si está enterrado), salvo fondo_lejano y vista_por_aberturas.
+- Libres: 0,9 m frente a cada puerta, los recorridos de la acción y las ventanas que la acción usa. Nada contiene ni tapa una cámara de camaras_sugeridas (0,6 m libres alrededor).
+- Sin choques: dos elementos no ocupan el mismo sitio.
+- Sin cita obligatoria; origen siempre "ambiente". Si la historia usa después uno de estos elementos, el programa lo asciende a oficial conservando sus datos.
+
+AUTORREVISIÓN (antes de responder, por cada escenario)
+Mírate como director de arte: ¿falta algo que esperaría ver en este lugar, en esta época y para esta acción? Repasa la LISTA DE CHEQUEO capa por capa, los elementos firma (método 4) y la densidad_objetivo; agrega lo que falte y anótalo en autorrevision.agregado_al_revisar. Revisa también ids, que todo quepa en la sala, cámaras y puertas libres y nada de lo_que_no_hay.
+
+SALIDA
+Solo JSON válido que cumpla exactamente RAMA_4A1_ESCENARIOS_esquema.json, sin texto fuera. Concreto y sin relleno: números aproximados pero útiles, citas cortas y literales. Si no cabe, no recortes en silencio: dilo en "dudas".
+
+
+PEDIDO DIVIDIDO (parte A de 2: base espacial: todo el escenario menos ambiente_vivo, más faltantes_en_base, contradicciones y dudas). El análisis es el MISMO de siempre (misma entrada completa, mismo método, mismas reglas); solo cambia QUÉ campos devuelves en esta llamada. Los demás campos van en la(s) parte(s) B y el código los une por «escenario_id».
+FORMATO DE SALIDA OBLIGATORIO (JSON Schema, parte A; la respuesta debe validar contra él):
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "RAMA_4A1_ESCENARIOS · parte A",
+ "type": "object",
+ "required": [
+  "escenarios",
+  "faltantes_en_base",
+  "contradicciones",
+  "dudas"
+ ],
+ "properties": {
+  "escenarios": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "escenario_id",
+     "tipo_lugar",
+     "medidas",
+     "planta",
+     "aberturas",
+     "elementos_blender",
+     "objetos_del_lugar_posicion",
+     "materiales_texturas",
+     "luz_por_escena",
+     "epoca_estilo",
+     "referencias_reales",
+     "variantes_por_escena",
+     "camaras_sugeridas",
+     "para_pintar"
+    ],
+    "properties": {
+     "escenario_id": {
+      "type": "string"
+     },
+     "tipo_lugar": {
+      "type": "string"
+     },
+     "medidas": {
+      "type": "object",
+      "required": [
+       "ancho_m",
+       "fondo_m",
+       "alto_m",
+       "origen",
+       "justificacion",
+       "cita"
+      ],
+      "properties": {
+       "ancho_m": {
+        "type": [
+         "number",
+         "null"
+        ]
+       },
+       "fondo_m": {
+        "type": [
+         "number",
+         "null"
+        ]
+       },
+       "alto_m": {
+        "type": [
+         "number",
+         "null"
+        ]
+       },
+       "origen": {
+        "enum": [
+         "explicito",
+         "heredado",
+         "deducido",
+         "desconocido"
+        ]
+       },
+       "justificacion": {
+        "type": "string"
+       },
+       "cita": {
+        "type": "string"
+       }
+      }
+     },
+     "planta": {
+      "type": "object",
+      "required": [
+       "forma",
+       "descripcion",
+       "entrada_principal",
+       "origen",
+       "justificacion",
+       "cita"
+      ],
+      "properties": {
+       "forma": {
+        "type": "string"
+       },
+       "descripcion": {
+        "type": "string"
+       },
+       "entrada_principal": {
+        "type": "string"
+       },
+       "origen": {
+        "enum": [
+         "explicito",
+         "heredado",
+         "deducido",
+         "desconocido"
+        ]
+       },
+       "justificacion": {
+        "type": "string"
+       },
+       "cita": {
+        "type": "string"
+       }
+      }
+     },
+     "aberturas": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "tipo",
+        "pared",
+        "x_m",
+        "y_m",
+        "ancho_m",
+        "alto_m",
+        "descripcion",
+        "origen",
+        "justificacion",
+        "cita"
+       ],
+       "properties": {
+        "tipo": {
+         "enum": [
+          "puerta",
+          "ventana",
+          "escalera",
+          "pasillo",
+          "otro"
+         ]
+        },
+        "pared": {
+         "enum": [
+          "frente",
+          "fondo",
+          "izquierda",
+          "derecha",
+          "techo",
+          "piso",
+          "ninguna"
+         ]
+        },
+        "x_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "y_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "ancho_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "alto_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "descripcion": {
+         "type": "string"
+        },
+        "origen": {
+         "enum": [
+          "explicito",
+          "heredado",
+          "deducido",
+          "desconocido"
+         ]
+        },
+        "justificacion": {
+         "type": "string"
+        },
+        "cita": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "elementos_blender": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "nombre",
+        "forma",
+        "x_m",
+        "y_m",
+        "z_m",
+        "ancho_m",
+        "fondo_m",
+        "alto_m",
+        "rotacion_grados",
+        "material",
+        "origen",
+        "justificacion",
+        "cita"
+       ],
+       "properties": {
+        "nombre": {
+         "type": "string"
+        },
+        "forma": {
+         "enum": [
+          "caja",
+          "cilindro",
+          "plano",
+          "compuesto"
+         ]
+        },
+        "x_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "y_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "z_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "ancho_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "fondo_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "alto_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "rotacion_grados": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "material": {
+         "type": "string"
+        },
+        "origen": {
+         "enum": [
+          "explicito",
+          "heredado",
+          "deducido",
+          "desconocido"
+         ]
+        },
+        "justificacion": {
+         "type": "string"
+        },
+        "cita": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "objetos_del_lugar_posicion": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "objeto_id",
+        "escenas",
+        "x_m",
+        "y_m",
+        "z_m",
+        "rotacion_grados",
+        "junto_a",
+        "origen",
+        "justificacion",
+        "cita"
+       ],
+       "properties": {
+        "objeto_id": {
+         "type": "string"
+        },
+        "escenas": {
+         "type": "array",
+         "items": {
+          "type": "string"
+         }
+        },
+        "x_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "y_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "z_m": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "rotacion_grados": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "junto_a": {
+         "type": "string"
+        },
+        "origen": {
+         "enum": [
+          "explicito",
+          "heredado",
+          "deducido",
+          "desconocido"
+         ]
+        },
+        "justificacion": {
+         "type": "string"
+        },
+        "cita": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "materiales_texturas": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "superficie",
+        "material",
+        "textura",
+        "color",
+        "desgaste",
+        "origen",
+        "justificacion",
+        "cita"
+       ],
+       "properties": {
+        "superficie": {
+         "type": "string"
+        },
+        "material": {
+         "type": "string"
+        },
+        "textura": {
+         "type": "string"
+        },
+        "color": {
+         "type": "string"
+        },
+        "desgaste": {
+         "type": "string"
+        },
+        "origen": {
+         "enum": [
+          "explicito",
+          "heredado",
+          "deducido",
+          "desconocido"
+         ]
+        },
+        "justificacion": {
+         "type": "string"
+        },
+        "cita": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "luz_por_escena": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "escena",
+        "hora",
+        "clima",
+        "fuentes",
+        "ambiente",
+        "sombras",
+        "origen",
+        "justificacion",
+        "cita"
+       ],
+       "properties": {
+        "escena": {
+         "type": "string"
+        },
+        "hora": {
+         "type": "string"
+        },
+        "clima": {
+         "type": "string"
+        },
+        "fuentes": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "required": [
+           "tipo",
+           "posicion",
+           "color",
+           "intensidad",
+           "encendida"
+          ],
+          "properties": {
+           "tipo": {
+            "type": "string"
+           },
+           "posicion": {
+            "type": "string"
+           },
+           "color": {
+            "type": "string"
+           },
+           "intensidad": {
+            "enum": [
+             "baja",
+             "media",
+             "alta"
+            ]
+           },
+           "encendida": {
+            "type": "boolean"
+           }
+          }
+         }
+        },
+        "ambiente": {
+         "type": "string"
+        },
+        "sombras": {
+         "type": "string"
+        },
+        "origen": {
+         "enum": [
+          "explicito",
+          "heredado",
+          "deducido",
+          "desconocido"
+         ]
+        },
+        "justificacion": {
+         "type": "string"
+        },
+        "cita": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "epoca_estilo": {
+      "type": "object",
+      "required": [
+       "epoca",
+       "estilo",
+       "region",
+       "origen",
+       "justificacion",
+       "cita"
+      ],
+      "properties": {
+       "epoca": {
+        "type": "string"
+       },
+       "estilo": {
+        "type": "string"
+       },
+       "region": {
+        "type": "string"
+       },
+       "origen": {
+        "enum": [
+         "explicito",
+         "heredado",
+         "deducido",
+         "desconocido"
+        ]
+       },
+       "justificacion": {
+        "type": "string"
+       },
+       "cita": {
+        "type": "string"
+       }
+      }
+     },
+     "referencias_reales": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "referencia",
+        "que_tomar"
+       ],
+       "properties": {
+        "referencia": {
+         "type": "string"
+        },
+        "que_tomar": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "variantes_por_escena": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "escena",
+        "variante",
+        "cambios_visibles",
+        "origen",
+        "cita"
+       ],
+       "properties": {
+        "escena": {
+         "type": "string"
+        },
+        "variante": {
+         "type": "string"
+        },
+        "cambios_visibles": {
+         "type": "string"
+        },
+        "origen": {
+         "enum": [
+          "explicito",
+          "heredado",
+          "deducido",
+          "desconocido"
+         ]
+        },
+        "cita": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "camaras_sugeridas": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "escena",
+        "posicion",
+        "mira_hacia",
+        "lente_mm"
+       ],
+       "properties": {
+        "escena": {
+         "type": "string"
+        },
+        "posicion": {
+         "type": "string"
+        },
+        "mira_hacia": {
+         "type": "string"
+        },
+        "lente_mm": {
+         "type": [
+          "number",
+          "null"
+         ]
+        }
+       }
+      }
+     },
+     "para_pintar": {
+      "type": "object",
+      "required": [
+       "paleta",
+       "atmosfera",
+       "detalles_clave",
+       "evitar"
+      ],
+      "properties": {
+       "paleta": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "atmosfera": {
+        "type": "string"
+       },
+       "detalles_clave": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "evitar": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "faltantes_en_base": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "tipo",
+     "nombre",
+     "escenas",
+     "cita",
+     "motivo"
+    ],
+    "properties": {
+     "tipo": {
+      "enum": [
+       "escenario",
+       "objeto",
+       "personaje",
+       "forma"
+      ]
+     },
+     "nombre": {
+      "type": "string"
+     },
+     "escenas": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "cita": {
+      "type": "string"
+     },
+     "motivo": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "contradicciones": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "escenas",
+     "tipo",
+     "citas",
+     "regla_afectada",
+     "opciones"
+    ],
+    "properties": {
+     "escenas": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "tipo": {
+      "type": "string"
+     },
+     "citas": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "regla_afectada": {
+      "type": "string"
+     },
+     "opciones": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "dudas": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

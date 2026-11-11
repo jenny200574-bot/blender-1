@@ -1,0 +1,388 @@
+{
+  "rules_version": "1.0.0",
+  "contract_version": "2.1.0",
+  "status": "SPECIFICATION_ONLY_NOT_CONNECTED",
+  "scope": "universal_canal_capitulo",
+  "responsibilities": {
+    "Argon": "Director principal: historia, emocion, sujeto, planos, lentes, angulos, movimientos y montaje",
+    "program": "Alimenta contexto; empaqueta/valida; calcula cuadros, hashes y geometria; no reemplaza decisiones creativas",
+    "01": "Verdad de accion, IDs, tiempos y posiciones",
+    "ADN": "Identidad y apariencia inmutables",
+    "Blender": "Medidas, anatomia, transformaciones y comprobacion fisica"
+  },
+  "shot_sizes": {
+    "GPG": {
+      "legacy_aliases": [
+        "EWS"
+      ],
+      "r_head": {
+        "min": 0.05,
+        "max": 0.12,
+        "min_exclusive": false
+      },
+      "anatomical_cut": "Escenario completo, figura integra pequena",
+      "use": "Apertura, cambio de locacion, aislamiento",
+      "forbid": "Dialogo intimo; mas de uno cada6 vinetas"
+    },
+    "PG": {
+      "legacy_aliases": [
+        "WS",
+        "FS"
+      ],
+      "r_head": {
+        "min": 0.15,
+        "max": 0.22,
+        "min_exclusive": false
+      },
+      "anatomical_cut": "Pies a coronilla",
+      "use": "Geografia, comedia fisica",
+      "forbid": "Microexpresion"
+    },
+    "PA": {
+      "legacy_aliases": [
+        "MFS",
+        "COWBOY"
+      ],
+      "r_head": {
+        "min": 0.25,
+        "max": 0.35,
+        "min_exclusive": false
+      },
+      "anatomical_cut": "Muslo/rodilla a cabeza",
+      "use": "Manos y rostro, accion a cintura",
+      "forbid": "Brazos inactivos sin desplazamiento"
+    },
+    "PM": {
+      "legacy_aliases": [
+        "MS"
+      ],
+      "r_head": {
+        "min": 0.38,
+        "max": 0.48,
+        "min_exclusive": false
+      },
+      "anatomical_cut": "Cintura a cabeza",
+      "use": "Dialogo expositivo",
+      "forbid": "Climax de confesion"
+    },
+    "PMC": {
+      "legacy_aliases": [
+        "MCU"
+      ],
+      "r_head": {
+        "min": 0.52,
+        "max": 0.62,
+        "min_exclusive": false
+      },
+      "anatomical_cut": "Esternon/axilas a cabeza",
+      "use": "Tension, ojos y respiracion",
+      "forbid": "Accion en piernas o entorno"
+    },
+    "PP": {
+      "legacy_aliases": [
+        "CU"
+      ],
+      "r_head": {
+        "min": 0.68,
+        "max": 0.82,
+        "min_exclusive": false
+      },
+      "anatomical_cut": "Clavicula a cabeza",
+      "use": "Revelacion y reaccion decisiva",
+      "forbid": "Saludos triviales"
+    },
+    "GPP": {
+      "legacy_aliases": [
+        "ECU"
+      ],
+      "r_head": {
+        "min": 0.9,
+        "max": null,
+        "min_exclusive": true
+      },
+      "anatomical_cut": "Menton/labio a cejas",
+      "use": "Punto de giro unico",
+      "forbid": "Mas de uno por escena"
+    },
+    "PD": {
+      "legacy_aliases": [
+        "INS"
+      ],
+      "r_head": null,
+      "anatomical_cut": "Objeto o mano critica; objeto50–80% del cuadro",
+      "use": "Catalizador que requiere lectura visual",
+      "forbid": "Objeto casual o PD consecutivos"
+    }
+  },
+  "view_angles": {
+    "CEN": {
+      "not_shot_size": true,
+      "meaning": "Cenital90grados",
+      "use": "Patrones, aislamiento",
+      "forbid": "Dialogo normal"
+    },
+    "PIC": {
+      "not_shot_size": true,
+      "meaning": "Picado20–45grados",
+      "use": "Vulnerabilidad o asimetria",
+      "forbid": "Estatus/cota iguales sin motivo"
+    },
+    "CPIC": {
+      "not_shot_size": true,
+      "meaning": "Contrapicado20–45grados",
+      "use": "Poder/amenaza",
+      "forbid": "Estatus/cota iguales sin motivo"
+    },
+    "POV": {
+      "not_shot_size": true,
+      "meaning": "Subjetiva",
+      "require": "Plano previo mostrando mirada del sujeto"
+    }
+  },
+  "quotas": {
+    "wide_sizes": [
+      "GPG",
+      "PG"
+    ],
+    "wide_scene_max_ratio": 0.2,
+    "exception": {
+      "genres": [
+        "ACCION",
+        "COMEDIA"
+      ],
+      "requires_measured_displacement_m_gt": 2.0,
+      "scene_max_ratio": 0.35,
+      "does_not_relax_window": true
+    },
+    "rolling_window": {
+      "size": 5,
+      "max_wide": 1
+    },
+    "gpg_min_index_distance": 6,
+    "gpp_scene_max": 1,
+    "pd_consecutive_max": 1,
+    "pd_requires_all": [
+      "is_narrative_catalyst==true",
+      "requires_visual_readability==true",
+      "consecutive_prop_shots==0"
+    ],
+    "short_scene_rule": "Razon real sin redondear cupo al alza; sin evidencia de excepcion rige20%"
+  },
+  "camera": {
+    "default_movement": "LOCK",
+    "movement_requires_dramatic_motive": true,
+    "dolly_in_min_delta_arousal": 0.15,
+    "reveal_alone_exempts_dolly_threshold": false,
+    "ai_video_max_rotation_deg": 15,
+    "ai_video_max_translation_m_s": 0.4,
+    "geometric_repairs_max": 3
+  },
+  "continuity": {
+    "axis_deg": 180,
+    "same_subject_cut_min_angle_delta_deg": 30,
+    "alternative_min_relative_head_scale_change": 0.35,
+    "eyeline_max_relative_head_size_difference": 0.08,
+    "pose_join_max_distance_m": 0.02,
+    "axis_violation_allowed": false,
+    "reestablishment_requires_cause": [
+      "visible_camera_crossing",
+      "neutral_axis_shot",
+      "character_reestablishes_axis"
+    ]
+  },
+  "audio": {
+    "pre_roll_s": [
+      0.8,
+      1.5
+    ],
+    "scope": "Cada intervencion con dialogo en este contrato estricto; puede anticiparse en la vineta anterior",
+    "silent_hold_min_s": 0,
+    "cuts": [
+      "HARD_CUT",
+      "J_CUT",
+      "L_CUT"
+    ],
+    "never_trim_audio_to_panel": true,
+    "measured_voice_overrides_estimates": true
+  },
+  "dna": {
+    "override_allowed": false,
+    "identity": "dna_ref_id y checksum; refs ordenadas; sin reescribir rasgos/colores/ropa/texturas/proporciones",
+    "allowed_state": [
+      "expresion facial",
+      "mirada",
+      "postura",
+      "manos",
+      "estado transitorio autorizado"
+    ],
+    "anthropometric_fallback_default": "DISABLED",
+    "eye_height_universal_minimum": null,
+    "missing_asset": "BLOCK"
+  },
+  "clock": {
+    "fps": 24,
+    "frame_origin": 1,
+    "frame_end_inclusive": true,
+    "start_frame": "round_half_up(start_seconds*24)+1",
+    "end_frame": "round_half_up(end_seconds*24)",
+    "duration_frames": "end_frame-start_frame+1",
+    "visual_quantization": "nearest1/24 half-up; error<=0.5/24s, registrar ajuste",
+    "audio": "Conservar segundos/muestras medidos; derivar marcadores de cuadro, no cortar voz"
+  },
+  "formula": {
+    "camera_distance": "D=(head_height_m*focal_length_mm)/(r_head*sensor_height_mm)",
+    "sensor_height": "sensor_width_mm/(aspect_width/aspect_height)"
+  },
+  "cross_checks": [
+    {
+      "id": "SB_ID_COVERAGE",
+      "description": "IDs/ADN validos, hechos cubiertos sin duplicar ni alterar causalidad; simultaneidad declarada",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_EMOTION_SOURCE",
+      "description": "Emocion trazable; interpolacion solo con vecinos validos compatibles, no inventar extremos",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_UTILITY",
+      "description": "Pesos suman1; comprobar U y prioridad facial en dialogo/escucha/emocion, sin sustituir a Argon",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_PD",
+      "description": "Catalizador y lectura indispensable verdaderos, contador previo0 y cita del guion",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_QUOTAS",
+      "description": "20% amplios, excepcion35% medida, ventana5 max1, GPP max1, GPG separados>=6",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_DOLLY",
+      "description": "Delta arousal>=0.15 contra estado anterior; REVEAL no exime",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_LOCK",
+      "description": "LOCK sin trayectoria, cambio focal o sacudida; movimiento con motivo verificable",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_AXIS",
+      "description": "Semiplano 180; reestablecer solo por cruce visible/plano neutro/accion, causa declarada",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_30",
+      "description": "Mismo sujeto al corte: >=30grados o cambio relativo de escala>=35%",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_EYELINE",
+      "description": "Reciprocidad de mirada/altura; escala relativa de cabeza entre planos comparables difiere<=8%",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_AUDIO",
+      "description": "Voz/texto fieles, pre-roll0.8–1.5s, tono/reaccion/hold, pista independiente para L/J",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_CLOCK",
+      "description": "24fps, base1, frames inclusivos coherentes, sin huecos ni solapes",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_DNA_LOCK",
+      "description": "Ref+hash aprobados, slots ordenados, sin aspecto nuevo ni override; no confiar solo en regex",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_SPATIAL",
+      "description": "Medidas/huesos/transforms del manifiesto; no adivinar ojos ni imponer altura humana",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_OPTICS",
+      "description": "XYZ/foco derivado de elecciones de Argon y anatomia; comprobar r_head/aire de mirada",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_GATE1",
+      "description": "Raycast y proyeccion durante recorrido, paredes/muebles>=0.25m, personajes>=0.45m, max3 rondas sin cambiar intencion",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_GATE2",
+      "description": "Vision solo con advertencias y aprobacion; nunca aceptar por schema sin contexto/Gate1",
+      "beyond_json_schema": true
+    },
+    {
+      "id": "SB_PATCH",
+      "description": "Solo fallidas; hashes de aprobadas intactos; revalidar continuidad de vecinas",
+      "beyond_json_schema": true
+    }
+  ],
+  "acceptance": {
+    "schema_pass_is_not_operational_acceptance": true,
+    "require": [
+      "schema",
+      "context_complete",
+      "scene_continuity",
+      "dna_checksum",
+      "blender_gate1"
+    ],
+    "block_text_is_never_eval_code": true,
+    "missing_data": "BLOCK; responsable identificado; no fabricar",
+    "artistic_failure": "Argon repara solo fallidas con presupuesto autorizado"
+  },
+  "contradictions_resolved": [
+    {
+      "issue": "Dolly In: REVEAL sin delta",
+      "resolution": "Orden aprobada mas estricta: delta>=0.15 siempre"
+    },
+    {
+      "issue": "35% vs ventana20%",
+      "resolution": "35% solo global con accion/comedia y traslado>2m; ventana5 sigue max1"
+    },
+    {
+      "issue": "GPG cada6 vs ventana5",
+      "resolution": "Cumplir ambas, distancia indices>=6 y ventana5 max1"
+    },
+    {
+      "issue": "Ejemplo inicia voz0.60s y no trae pre-roll",
+      "resolution": "Original incompatible; fixture solo de prueba usa0.8s, no modifica un capitulo"
+    },
+    {
+      "issue": "Payload2.0.0 usa $schema sin ser esquema",
+      "resolution": "Crear esquema real draft2020-12; payload nuevo2.1.0, sin fingir compatibilidad"
+    },
+    {
+      "issue": "CEN/PIC/CPIC/POV mezclados con tamanos",
+      "resolution": "Son angulos/punto de vista separados de GPG..PD"
+    },
+    {
+      "issue": "Alturas humanas asumidas",
+      "resolution": "Medidas ADN/manifiesto; fallback antropometrico deshabilitado y sin minimo0.50m universal"
+    },
+    {
+      "issue": "Formula invertida en tipografia del texto",
+      "resolution": "D=h_head*f/(r_head*sensor_h), consistente con unidades y tabla"
+    },
+    {
+      "issue": "Programa vs direccion de IA",
+      "resolution": "Argon decide; correcciones fisicas solo dentro de tolerancias sin cambiar intencion"
+    },
+    {
+      "issue": "Bloque13 culpa a01 por emocion faltante que SB puede inferir",
+      "resolution": "En contrato2.1, emocion/beat cinematografico faltante se asigna a SB_ARGON; falta de accion de entrada se distingue como MISSING_UPSTREAM_ACTION del01. Son etiquetas normativas nuevas, no codigo integrado."
+    }
+  ],
+  "provenance": [
+    "reporte_t883/r.txt 1.4–1.8 y contrato2.0.0",
+    "reporte_t883/tablas.txt tablas0,1,4,6",
+    "Ricardo t892u/t893u/t894u: IA principal, programa necesario, paso1 aprobado"
+  ]
+}

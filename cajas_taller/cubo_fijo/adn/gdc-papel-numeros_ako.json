@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-papel-numeros",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Lámina o tarjeta rectangular vertical de una sola pieza flexible, con esquinas redondeadas y grosor mínimo pero perceptible (estilo cartulina 3D estilizada). Presenta dos pliegues centrales marcados en cruz (vertical y horizontal) que curvan ligeramente su perfil.\n- Modo de sujeción: Objeto de mano (sujeción con los dedos) o en reposo sobre superficies (plano, alabeado o plegado)."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Material principal: Papel grueso o cartulina ligeramente envejecida, acabado mate suave con bordes suavizados. Color crema / beige cálido.\n- Materiales secundarios: Trazos de crayón o lápiz de color de textura granulada y seca en la cara frontal. Color púrpura medio para los elementos principales y lila claro para detalles secundarios. Reverso del mismo material base sin pigmentos adicionales.\n- Emisión lumínica: Ninguna."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Centro frontal: Dibujo infantil en crayón púrpura de una pistola espacial retro-futurista apuntando en diagonal hacia arriba a la derecha (incluye aleta trasera, empuñadura con gatillo, tres anillos en el cañón y punta esférica).\n- Periferia frontal (arriba y abajo del arma): Nueve símbolos de rayos o chispas eléctricas dibujados a mano en tono lila claro.\n- Zona inferior frontal: Secuencia numérica \"6 7 8 9 10\" escrita a mano en crayón púrpura.\n- Reverso: Completamente liso y vacío, mostrando únicamente la hendidura de los pliegues en cruz."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado activo/inactivo: Prop pasivo y maleable. Puede presentarse abierto (con ligera ondulación natural por el uso) o completamente doblado por sus líneas de pliegue, mostrando mayor acumulación de arrugas superficiales.\n- Regla de distancia (Plano general): A larga distancia se simplifica como una tarjeta crema con una silueta púrpura diagonal en el centro, omitiendo la textura granulada del crayón, los rayos pequeños y los números inferiores."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Lámina rectangular vertical de cartulina color crema en estilo 3D estilizado, con esquinas redondeadas, grosor sutil y pliegues marcados en cruz al centro. En la cara frontal muestra un dibujo infantil hecho con crayón púrpura de una pistola láser retro apuntando hacia la esquina superior derecha, rodeada de pequeños rayos color lila y con los números \"6 7 8 9 10\" escritos a mano en el borde inferior; el reverso es completamente liso y sin dibujos. Acabado mate suave con textura de papel ligeramente arrugado."
+    }
+  ],
+  "inyeccion": "Lámina rectangular vertical de cartulina color crema en estilo 3D estilizado, con esquinas redondeadas, grosor sutil y pliegues marcados en cruz al centro. En la cara frontal muestra un dibujo infantil hecho con crayón púrpura de una pistola láser retro apuntando hacia la esquina superior derecha, rodeada de pequeños rayos color lila y con los números \"6 7 8 9 10\" escritos a mano en el borde inferior; el reverso es completamente liso y sin dibujos. Acabado mate suave con textura de papel ligeramente arrugado.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Lámina o tarjeta rectangular vertical de una sola pieza flexible, con esquinas redondeadas y grosor mínimo pero perceptible (estilo cartulina 3D estilizada). Presenta dos pliegues centrales marcados en cruz (vertical y horizontal) que curvan ligeramente su perfil.\n- Modo de sujeción: Objeto de mano (sujeción con los dedos) o en reposo sobre superficies (plano, alabeado o plegado).\n\n2. Materiales y Paleta de Color:\n\n- Material principal: Papel grueso o cartulina ligeramente envejecida, acabado mate suave con bordes suavizados. Color crema / beige cálido.\n- Materiales secundarios: Trazos de crayón o lápiz de color de textura granulada y seca en la cara frontal. Color púrpura medio para los elementos principales y lila claro para detalles secundarios. Reverso del mismo material base sin pigmentos adicionales.\n- Emisión lumínica: Ninguna.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Centro frontal: Dibujo infantil en crayón púrpura de una pistola espacial retro-futurista apuntando en diagonal hacia arriba a la derecha (incluye aleta trasera, empuñadura con gatillo, tres anillos en el cañón y punta esférica).\n- Periferia frontal (arriba y abajo del arma): Nueve símbolos de rayos o chispas eléctricas dibujados a mano en tono lila claro.\n- Zona inferior frontal: Secuencia numérica \"6 7 8 9 10\" escrita a mano en crayón púrpura.\n- Reverso: Completamente liso y vacío, mostrando únicamente la hendidura de los pliegues en cruz.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado activo/inactivo: Prop pasivo y maleable. Puede presentarse abierto (con ligera ondulación natural por el uso) o completamente doblado por sus líneas de pliegue, mostrando mayor acumulación de arrugas superficiales.\n- Regla de distancia (Plano general): A larga distancia se simplifica como una tarjeta crema con una silueta púrpura diagonal en el centro, omitiendo la textura granulada del crayón, los rayos pequeños y los números inferiores.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nLámina rectangular vertical de cartulina color crema en estilo 3D estilizado, con esquinas redondeadas, grosor sutil y pliegues marcados en cruz al centro. En la cara frontal muestra un dibujo infantil hecho con crayón púrpura de una pistola láser retro apuntando hacia la esquina superior derecha, rodeada de pequeños rayos color lila y con los números \"6 7 8 9 10\" escritos a mano en el borde inferior; el reverso es completamente liso y sin dibujos. Acabado mate suave con textura de papel ligeramente arrugado.",
+  "creado": "2026-11-06T04:03:13+01:00"
+}

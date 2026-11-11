@@ -1,0 +1,57 @@
+{
+ "id": "misterio",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Misterio",
+ "tonos": [
+  "curiosidad",
+  "intriga"
+ ],
+ "reglas": {
+  "intencion": "curiosidad e intriga: pistas",
+  "beats": "mostrar pistas en insertos; esconder la respuesta",
+  "secuencia": "revelación por partes, de detalle a conjunto",
+  "direccion": "planos de observación, insertos, cambios de foco, lentes 35-85 mm",
+  "actuacion": "observación, cejas, manos que exploran",
+  "composicion": "marcos dentro del marco, objetos clave en tercios",
+  "ritmo": "medido, con pausas para observar",
+  "transiciones": "match cut entre pistas, cortes",
+  "continuidad": "cada pista queda donde estaba",
+  "justificacion": "hacer que el público junte las piezas"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   2.0,
+   9.0
+  ],
+  "lente_mm": [
+   35,
+   100
+  ],
+  "planos_preferidos": [
+   "MS",
+   "CU",
+   "ECU",
+   "INSERT"
+  ],
+  "angulos_preferidos": [
+   "EYELEVEL",
+   "HIGHANGLE",
+   "TOPDOWN"
+  ],
+  "movimientos_preferidos": [
+   "RACKFOCUS",
+   "DOLLYIN",
+   "PAN",
+   "STATIC"
+  ],
+  "movimientos_evitar": [
+   "CRASHZOOM"
+  ],
+  "transiciones_preferidas": [
+   "CORTE",
+   "MATCH_CUT"
+  ],
+  "pausas": "algunas"
+ },
+ "ejemplo_puerta": "Inserto de una marca extraña en la puerta, cambio de foco al personaje que la examina, plano general a medias del interior."
+}

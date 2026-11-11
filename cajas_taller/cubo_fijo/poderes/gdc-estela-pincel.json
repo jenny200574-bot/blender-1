@@ -1,0 +1,17 @@
+{
+  "id": "gdc-estela-pincel",
+  "nombre": "Estela del Pincel Mágico",
+  "clase": "poder",
+  "subclase": "efecto",
+  "dueno": "gdc-pintor",
+  "sale_de": "gdc-pincel-pintor",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/pintor/referencia-cliente/refs/93763250e250ad55.jpg",
+  "nunca_cambia": "Estela de colores iridiscentes que deja el pincel al dibujar en el aire; los dibujos cobran vida.",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "sellado": false,
+  "version": 1,
+  "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar"
+}

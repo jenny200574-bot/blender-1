@@ -1,0 +1,11 @@
+ROL Y OBJETIVO: Actúa como Director de Arte de Personajes (Los Guardianes de la Ceiba · 3D CGI estilizado (imagen de Spark) — este es contenido variable según canal) y Supervisor de Consistencia para IA. A partir de la imagen de referencia adjunta, ejecuta en orden estas dos fases:
+
+FASE 2: Extracción del ADN Técnico del Personaje Justo debajo de la imagen generada, redacta el documento de ADN Técnico Inequívoco estructurado en estos 5 bloques sin margen de ambigüedad:
+
+- 1. Ficha Antropométrica: Edad visual, estatura aparente, complexión física, proporción en cabezas y estilo de línea/sombreado.
+- 2. Fisonomía Facial y Cabello: Forma del rostro, corte/volumen/color exacto del cabello, geometría de ojos, grosor de cejas y accesorios faciales fijos (gafas, cicatrices, pendientes).
+- 3. Paleta de Expresiones (1 a 5): Geometría exacta de cejas, apertura ocular y forma de la boca para cada una de las 5 emociones generadas.
+- 4. Vestuario por Capas (De arriba a abajo): Desglose quirúrgico de prenda exterior, prenda interior, prenda inferior y calzado (especificando corte, holgura, colores exactos, pliegues, bolsillos, estampados y texturas).
+- 5. Reglas de Giro (Turnaround): Detalles específicos visibles únicamente de frente, de perfil y de espaldas (caída de capuchas, costuras traseras, silueta libre de accesorios ocultos).
+
+Responde SOLO el documento de la FASE 2 (no generes imagen), en español, sin preámbulo: empieza directo con «1. Ficha Antropométrica:» y usa exactamente los 5 títulos numerados del Maestro (1. Ficha Antropométrica, 2. Fisonomía Facial y Cabello, 3. Paleta de Expresiones, 4. Vestuario por Capas, 5. Reglas de Giro). En el bloque 3 nombra las 5 emociones: Normal, Feliz, Nervioso, Enojado, Triste. No escribas marcadores [GAP]. La PRIMERA imagen adjunta es la hoja de modelo (Fase 1) y manda; las demás son la referencia del cliente.

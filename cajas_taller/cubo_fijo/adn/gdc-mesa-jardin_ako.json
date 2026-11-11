@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-mesa-jardin",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- **Tipo y Silueta:** Mesa baja o banco de madera estilizado en 3D (estética *cartoon*), de silueta rectangular, robusta y compacta. Es un objeto rígido de una sola pieza, sin articulaciones.\n- **Proporciones y Biseles:** Tablero superior grueso con bordes y esquinas ampliamente redondeados. Cuatro patas cilíndricas gruesas, ligeramente inclinadas hacia afuera (espatarradas), unidas a media altura por una estructura de travesaños cilíndricos en forma de \"H\" y dos listones planos de soporte directamente bajo el tablero.\n- **Punto de Anclaje:** Apoyo fijo en el suelo mediante la base redondeada de sus cuatro patas."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- **Material Principal:** Madera tratada con acabado mate sedoso completamente liso (aspecto de resina o plástico suave sin textura ni vetas). El tablero superior es de color crema claro o madera blanqueada.\n- **Materiales Secundarios:** La estructura inferior (listones bajo el tablero, patas y travesaños en \"H\") comparte el mismo acabado liso mate, pero en un tono madera miel u ocre cálido.\n- **Emisión Lumínica:** Ninguna; objeto totalmente inerte y opaco."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- **Ranuras Superiores:** El tablero presenta dos hendiduras longitudinales profundas y redondeadas que dividen visualmente la superficie en tres tablones paralelos idénticos.\n- **Componentes y Uniones:** Ensamblaje limpio por intersección geométrica directa, totalmente libre de clavos, tornillos, costuras o herrajes metálicos visibles."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- **Estado Activo/Inactivo:** Prop de entorno pasivo e inmutable. Interactúa únicamente recibiendo iluminación ambiental y proyectando sombras suaves de oclusión en el suelo y entre sus uniones inferiores.\n- **Regla de Distancia (Plano general):** A larga distancia desaparecen las dos ranuras del tablero y los listones inferiores, simplificándose en un bloque rectangular crema liso sobre cuatro patas marrones conectadas."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Mesa baja o banco de madera estilizado en 3D con estética cartoon, proporciones robustas, bordes muy redondeados y acabado mate totalmente liso sin vetas. Cuenta con un tablero superior rectangular de color crema claro dividido longitudinalmente por dos ranuras en tres tablones gruesos paralelos. La estructura inferior es de color madera miel cálida, compuesta por dos listones de soporte bajo la mesa y cuatro patas cilíndricas ligeramente inclinadas hacia afuera, reforzadas a media altura por travesaños cilíndricos en forma de H, sin tornillos ni herrajes visibles."
+    }
+  ],
+  "inyeccion": "Mesa baja o banco de madera estilizado en 3D con estética cartoon, proporciones robustas, bordes muy redondeados y acabado mate totalmente liso sin vetas. Cuenta con un tablero superior rectangular de color crema claro dividido longitudinalmente por dos ranuras en tres tablones gruesos paralelos. La estructura inferior es de color madera miel cálida, compuesta por dos listones de soporte bajo la mesa y cuatro patas cilíndricas ligeramente inclinadas hacia afuera, reforzadas a media altura por travesaños cilíndricos en forma de H, sin tornillos ni herrajes visibles.",
+  "texto": "1. Identificación y Geometría Base:\n\n- **Tipo y Silueta:** Mesa baja o banco de madera estilizado en 3D (estética *cartoon*), de silueta rectangular, robusta y compacta. Es un objeto rígido de una sola pieza, sin articulaciones.\n- **Proporciones y Biseles:** Tablero superior grueso con bordes y esquinas ampliamente redondeados. Cuatro patas cilíndricas gruesas, ligeramente inclinadas hacia afuera (espatarradas), unidas a media altura por una estructura de travesaños cilíndricos en forma de \"H\" y dos listones planos de soporte directamente bajo el tablero.\n- **Punto de Anclaje:** Apoyo fijo en el suelo mediante la base redondeada de sus cuatro patas.\n\n2. Materiales y Paleta de Color:\n\n- **Material Principal:** Madera tratada con acabado mate sedoso completamente liso (aspecto de resina o plástico suave sin textura ni vetas). El tablero superior es de color crema claro o madera blanqueada.\n- **Materiales Secundarios:** La estructura inferior (listones bajo el tablero, patas y travesaños en \"H\") comparte el mismo acabado liso mate, pero en un tono madera miel u ocre cálido.\n- **Emisión Lumínica:** Ninguna; objeto totalmente inerte y opaco.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- **Ranuras Superiores:** El tablero presenta dos hendiduras longitudinales profundas y redondeadas que dividen visualmente la superficie en tres tablones paralelos idénticos.\n- **Componentes y Uniones:** Ensamblaje limpio por intersección geométrica directa, totalmente libre de clavos, tornillos, costuras o herrajes metálicos visibles.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- **Estado Activo/Inactivo:** Prop de entorno pasivo e inmutable. Interactúa únicamente recibiendo iluminación ambiental y proyectando sombras suaves de oclusión en el suelo y entre sus uniones inferiores.\n- **Regla de Distancia (Plano general):** A larga distancia desaparecen las dos ranuras del tablero y los listones inferiores, simplificándose en un bloque rectangular crema liso sobre cuatro patas marrones conectadas.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nMesa baja o banco de madera estilizado en 3D con estética cartoon, proporciones robustas, bordes muy redondeados y acabado mate totalmente liso sin vetas. Cuenta con un tablero superior rectangular de color crema claro dividido longitudinalmente por dos ranuras en tres tablones gruesos paralelos. La estructura inferior es de color madera miel cálida, compuesta por dos listones de soporte bajo la mesa y cuatro patas cilíndricas ligeramente inclinadas hacia afuera, reforzadas a media altura por travesaños cilíndricos en forma de H, sin tornillos ni herrajes visibles.",
+  "creado": "2026-11-06T04:03:15+01:00"
+}

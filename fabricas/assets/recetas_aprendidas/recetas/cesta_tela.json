@@ -1,0 +1,304 @@
+{
+ "id": "cesta_tela",
+ "nombre_generico": "Cesta cilíndrica de tela tejida con asas de cuerda",
+ "nombre_en": "fabric basket",
+ "categoria": "contenedores",
+ "medidas_tipicas": {
+  "ancho_m": 0.36,
+  "fondo_m": 0.36,
+  "alto_m": 0.4
+ },
+ "medidas_fuente": "receta Argon vía B G1_juguetes_textiles (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.36,
+  0.36,
+  0.4
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": 0.0,
+ "apoyo": "piso",
+ "conjunto": false,
+ "piezas": 10,
+ "tipos_de_pieza": [
+  "caja",
+  "cilindro",
+  "tubo"
+ ],
+ "partes": [
+  {
+   "tipo": "cilindro",
+   "nombre": "base_cesta",
+   "color_guia_rgb": [
+    0.91,
+    0.827,
+    0.725
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.015
+   ],
+   "radio_m": 0.175,
+   "alto_m": 0.03
+  },
+  {
+   "tipo": "tubo",
+   "nombre": "cuerpo_inferior",
+   "color_guia_rgb": [
+    0.91,
+    0.827,
+    0.725
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.11
+   ],
+   "radio_ext_m": 0.18,
+   "radio_int_m": 0.16,
+   "alto_m": 0.17,
+   "segmentos": 24,
+   "ancla": "centro",
+   "ancla_añadida_por": "programa ancla_tubos.py (Argon no escribió ancla)"
+  },
+  {
+   "tipo": "tubo",
+   "nombre": "franja_verde",
+   "color_guia_rgb": [
+    0.231,
+    0.667,
+    0.29
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.235
+   ],
+   "radio_ext_m": 0.18,
+   "radio_int_m": 0.16,
+   "alto_m": 0.09,
+   "segmentos": 24,
+   "ancla": "centro",
+   "ancla_añadida_por": "programa ancla_tubos.py (Argon no escribió ancla)"
+  },
+  {
+   "tipo": "tubo",
+   "nombre": "borde_superior",
+   "color_guia_rgb": [
+    0.91,
+    0.827,
+    0.725
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.315
+   ],
+   "radio_ext_m": 0.18,
+   "radio_int_m": 0.16,
+   "alto_m": 0.08,
+   "segmentos": 24,
+   "ancla": "centro",
+   "ancla_añadida_por": "programa ancla_tubos.py (Argon no escribió ancla)"
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "asa_izq_poste_frontal",
+   "color_guia_rgb": [
+    0.91,
+    0.827,
+    0.725
+   ],
+   "centro_m": [
+    -0.162,
+    -0.045,
+    0.37
+   ],
+   "radio_m": 0.012,
+   "alto_m": 0.05
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "asa_izq_poste_trasero",
+   "color_guia_rgb": [
+    0.91,
+    0.827,
+    0.725
+   ],
+   "centro_m": [
+    -0.162,
+    0.045,
+    0.37
+   ],
+   "radio_m": 0.012,
+   "alto_m": 0.05
+  },
+  {
+   "tipo": "caja",
+   "nombre": "asa_izq_travesano",
+   "color_guia_rgb": [
+    0.91,
+    0.827,
+    0.725
+   ],
+   "centro_m": [
+    -0.162,
+    0.0,
+    0.39
+   ],
+   "tam_m": [
+    0.024,
+    0.11,
+    0.02
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "asa_der_poste_frontal",
+   "color_guia_rgb": [
+    0.91,
+    0.827,
+    0.725
+   ],
+   "centro_m": [
+    0.162,
+    -0.045,
+    0.37
+   ],
+   "radio_m": 0.012,
+   "alto_m": 0.05
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "asa_der_poste_trasero",
+   "color_guia_rgb": [
+    0.91,
+    0.827,
+    0.725
+   ],
+   "centro_m": [
+    0.162,
+    0.045,
+    0.37
+   ],
+   "radio_m": 0.012,
+   "alto_m": 0.05
+  },
+  {
+   "tipo": "caja",
+   "nombre": "asa_der_travesano",
+   "color_guia_rgb": [
+    0.91,
+    0.827,
+    0.725
+   ],
+   "centro_m": [
+    0.162,
+    0.0,
+    0.39
+   ],
+   "tam_m": [
+    0.024,
+    0.11,
+    0.02
+   ]
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.36,
+  "fondo": 0.36,
+  "alto": 0.4
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.4
+  ],
+  "frente": [
+   0.0,
+   -0.18,
+   0.2
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G1_juguetes_textiles",
+  "objeto_id_origen": "amb-esc-habitacion-cesta-tela",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "7fb5865b26c0ee1db57ccefbd182cf644d9631c740c89e15f656dab0fbbe39ef",
+  "costo_usd_grupo": 0.3208,
+  "costo_usd_repartido": 0.06416,
+  "citas": [
+   {
+    "fuente_id": "F04",
+    "clave": "morfologia.contenedor_tejido",
+    "cita": "A basket is a container that is traditionally constructed from stiff fibers, and can be made from a range of materials, including wood splints, runners, and cane."
+   },
+   {
+    "fuente_id": "F04",
+    "clave": "morfologia.abierta_arriba",
+    "cita": "Some baskets are fitted with a lid, while others are left open on top."
+   },
+   {
+    "fuente_id": "F04",
+    "clave": "morfologia.uso_almacenaje",
+    "cita": "Baskets were originally designed as multi-purpose vessels to carry and store materials and to keep stray items about the home."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "El corpus no especifica el grosor de pared ni la altura exacta de las asas de cuerda; se deducen de caja_m y nombre."
+  ],
+  "info": {
+   "partes": 10,
+   "piezas": 79,
+   "bbox_m": [
+    0.36,
+    0.36,
+    0.4
+   ],
+   "grupos": 1,
+   "datos": 9,
+   "con_fuente": 3
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-cesta-tela"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

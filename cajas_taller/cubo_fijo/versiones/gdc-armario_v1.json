@@ -1,0 +1,31 @@
+{
+  "id": "gdc-armario",
+  "nombre": "armario",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "escenario",
+  "sellado": false,
+  "version": 1,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-armario.png",
+  "imagen_sha256": "86373f4f7c515dd5e63cc8cefd8816aeda5a47027d76caec4b38c40cfd60c856",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 110.0,
+    "fondo_cm": 58.0,
+    "alto_cm": 175.0
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-lapiz__e3f27b.json",
+  "ids_capitulo": [
+    "obj-armario"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-armario"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+ "paso": "taller01_dirigir_escena_46338d9fca",
+ "sha256": "46338d9fcab81b46db55f2394fcd0715a561f6e025f141ce334c73c8f7f0dc43",
+ "partes": {
+  "esquema": "bbfba03ae9a133649bece779b496b52ff4753bc8900f8e44d96707c615590a41",
+  "json_out": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+  "max_out": "4948963369b682612d22b081bdc92c13d23fb921cdd44e50f45d7e86b4b52022",
+  "max_rondas": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+  "modelo": "fedcf0678c6ce4486fc33bd750a8ed628d0728711e97469ef5ff9b021a0c54aa",
+  "nivel": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+  "texto": "83c5452805dc07a3c7f2e35ab258272063eaa50a2bcb8216cf74a44be88b7dd2"
+ },
+ "aprobado_por": "inmi (equipo técnico) — taller n8n",
+ "fecha": "2026-11-02T02:02:42",
+ "nota": "Taller n8n, cadena paso 00 v1 = prompts de la prueba del 28-oct (t372u), programados por orden de Ricardo t376u. Registro del taller, no el oficial."
+}

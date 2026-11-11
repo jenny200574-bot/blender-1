@@ -1,0 +1,23 @@
+{
+  "id": "estilo",
+  "clase": "estilo",
+  "schema": "myia.adn.v3",
+  "programa": "PROGRAMA_OFICIAL_EXTRACCION_ADN.md",
+  "altura_cm": null,
+  "altura_fuente": null,
+  "vistas": {
+    "frente": {
+      "U": {
+        "kind": "json",
+        "data": {
+          "adn": "```json\n{\n  \"linea\": {\n    \"grosor\": \"variable (fino a medio)\",\n    \"color\": \"#1A202A\",\n    \"variacion\": \"si\"\n  },\n  \"sombreado\": \"cel N tonos, degradado\",\n  \"paleta_global_temperatura\": \"fria\",\n  \"tratamiento_ojos_generico\": {\n    \"tamaño_relativo\": \"grande\",\n    \"numero_de_brillos\": \"multiple\"\n  },\n  \"proporciones_genericas\": \"7-8\",\n  \"render\": \"2D anime, pintado\",\n  \"glow_tratamiento\": \"prominente, suave\",\n  \"nivel_detalle\": \"alto\",\n  \"prohibidos_estilo\": [\n    \"fotorrealismo\",\n    \"3D low-poly\",\n    \"acuarela\"\n  ]\n}\n```",
+          "instruccion": "Eres un perito forense de identidad visual. Describes SOLO lo que es INVARIANTE del sujeto: lo que seguiría igual si cambiara la pose, la emoción, la cámara, la luz o el fondo.\nPROHIBIDO incluir en el sello: pose, gesto, emoción o expresión de esta foto, ángulo o encuadre de cámara, fondo, iluminación de la toma, acción, efectos de otra escena, porcentaje del cuadro, edad o años.\nSi no puedes verlo con certeza, escribe null. No inventes medidas en cm ni kg.\nLos lados (IZQ/DER) son SIEMPRE del sujeto, no de quien mira. Si dudas, escribe \"lado_incierto\".\nColores en HEX #RRGGBB muestreados de la zona iluminada media, no de los brillos ni de las sombras.\nResponde SOLO JSON válido con las claves pedidas.\nCLASE = estilo. La imagen trae un personaje de ejemplo: IGNORA su identidad (pelo, ojos, ropa, colores del personaje). Describe SOLO cómo está dibujado.\n\n{linea:{grosor, color, variacion}, sombreado (cel N tonos, degradado), paleta_global_temperatura, tratamiento_ojos_generico (tamaño relativo, número de brillos), proporciones_genericas (cabezas de alto típicas), render (2D anime, plano/pintado), glow_tratamiento, nivel_detalle, prohibidos_estilo[] (fotorrealismo, 3D low-poly, acuarela)}"
+        }
+      }
+    }
+  },
+  "gaps": [],
+  "ver_fails": [],
+  "sellado": true,
+  "status": "PASS_SELLABLE"
+}

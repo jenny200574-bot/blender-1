@@ -1,0 +1,147 @@
+# -*- coding: utf-8 -*-
+"""Servicio async fábricas MYIA — puerto 18750. Argon OFF. Vía B ON."""
+from __future__ import annotations
+import json, threading, traceback, uuid
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+from urllib.parse import urlparse
+
+ROOT = Path(__file__).resolve().parents[1]
+CFG = json.loads((ROOT / "config" / "config.json").read_text(encoding="utf-8"))
+# allow env override of roots when testing locally
+import os
+if os.environ.get("MYIA_BIB_ROOT"):
+    CFG["biblioteca_root"] = os.environ["MYIA_BIB_ROOT"]
+if os.environ.get("MYIA_JOBS_ROOT"):
+    CFG["jobs_root"] = os.environ["MYIA_JOBS_ROOT"]
+
+from biblioteca import Biblioteca
+from workers_v2_3d import run_job  # v2 3D 9-nov-2026 (OK Ricardo pt993u); v1 = workers.py, sigue importado dentro de v2
+from via_b_corpus import armar_corpus  # noqa
+
+BIB = Biblioteca(Path(CFG["biblioteca_root"]))
+JOBS = Path(CFG["jobs_root"])
+JOBS.mkdir(parents=True, exist_ok=True)
+# import comun recipes once
+try:
+    n = BIB.importar_recetas_comun(Path(CFG.get("recetas_aprendidas") or ""))
+except Exception:
+    n = 0
+
+def save_job(job):
+    p = JOBS / f"{job['id']}.json"
+    tmp = p.with_suffix(".parcial")
+    tmp.write_text(json.dumps(job, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(p)
+
+def load_job(jid):
+    p = JOBS / f"{jid}.json"
+    if not p.exists():
+        return None
+    return json.loads(p.read_text(encoding="utf-8"))
+
+def enqueue(kind, payload):
+    jid = uuid.uuid4().hex[:16]
+    job = {
+        "id": jid, "kind": kind, "payload": payload,
+        "estado": "en_cola", "gasto_usd": 0,
+        "argon_enabled": bool(CFG.get("argon_enabled")),
+        "via_b": bool(CFG.get("via_b_enabled", True)),
+        "log": [],
+    }
+    save_job(job)
+    def _run():
+        try:
+            job2 = load_job(jid)
+            job2["estado"] = "corriendo"
+            save_job(job2)
+            job2 = run_job(job2, CFG, BIB)
+            save_job(job2)
+        except Exception as e:
+            job2 = load_job(jid) or job
+            job2["estado"] = "error"
+            job2["error"] = str(e)
+            job2["trace"] = traceback.format_exc()[-2000:]
+            save_job(job2)
+    threading.Thread(target=_run, daemon=True).start()
+    return job
+
+class H(BaseHTTPRequestHandler):
+    def _json(self, code, obj):
+        b = json.dumps(obj, ensure_ascii=False).encode()
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(b)))
+        self.end_headers()
+        self.wfile.write(b)
+
+    def log_message(self, fmt, *args):
+        pass
+
+    def do_GET(self):
+        u = urlparse(self.path)
+        if u.path == "/v1/health":
+            return self._json(200, {
+                "ok": True, "argon_enabled": CFG.get("argon_enabled"),
+                "via_b_enabled": CFG.get("via_b_enabled", True),
+                "tope_usd_argon": CFG.get("tope_usd_argon"),
+                "biblioteca": CFG["biblioteca_root"],
+            })
+        if u.path.startswith("/v1/jobs/"):
+            jid = u.path.split("/")[-1]
+            job = load_job(jid)
+            if not job:
+                return self._json(404, {"ok": False, "error": "job no encontrado"})
+            return self._json(200, job)
+        if u.path.startswith("/v1/biblioteca/"):
+            parts = [p for p in u.path.split("/") if p]
+            # v1 biblioteca canal tipo id
+            if len(parts) >= 5:
+                _, _, canal, tipo, pid = parts[:5]
+                try:
+                    meta = BIB.leer_meta(canal, tipo, pid)
+                    return self._json(200, {"ok": True, "meta": meta})
+                except Exception as e:
+                    return self._json(400, {"ok": False, "error": str(e)})
+        return self._json(404, {"ok": False, "error": "ruta"})
+
+    def do_POST(self):
+        u = urlparse(self.path)
+        ln = int(self.headers.get("Content-Length") or 0)
+        raw = self.rfile.read(ln) if ln else b"{}"
+        try:
+            payload = json.loads(raw.decode() or "{}")
+        except Exception:
+            return self._json(400, {"ok": False, "error": "JSON inválido"})
+        mapping = {
+            "/v1/jobs/personaje": "personaje",
+            "/v1/jobs/escenario": "escenario",
+            "/v1/jobs/objeto": "objeto",
+            "/v1/jobs/objeto_usuario": "objeto_usuario",
+        }
+        if u.path not in mapping:
+            return self._json(404, {"ok": False, "error": "ruta"})
+        if not payload.get("canal") or not payload.get("id"):
+            return self._json(400, {"ok": False, "error": "faltan canal o id"})
+        # nunca gastar aquí
+        if CFG.get("argon_enabled") and float(CFG.get("tope_usd_argon") or 0) > 0:
+            if not payload.get("ok_ricardo") or float(payload.get("tope_usd") or 0) <= 0:
+                # todavía encolamos pero worker no llama Argon sin flags en cfg
+                pass
+        job = enqueue(mapping[u.path], payload)
+        return self._json(202, {"ok": True, "job_id": job["id"], "estado": "en_cola", "gasto_usd": 0,
+                                "via_b": True, "argon_enabled": CFG.get("argon_enabled")})
+
+def main():
+    host = CFG.get("host", "127.0.0.1")
+    port = int(CFG.get("port", 18750))
+    # seed comun
+    try:
+        BIB.importar_recetas_comun(Path(CFG.get("recetas_aprendidas") or ""))
+    except Exception:
+        pass
+    print(f"MYIA_FABRICAS listening {host}:{port} argon={CFG.get('argon_enabled')} via_b={CFG.get('via_b_enabled')}", flush=True)
+    ThreadingHTTPServer((host, port), H).serve_forever()
+
+if __name__ == "__main__":
+    main()

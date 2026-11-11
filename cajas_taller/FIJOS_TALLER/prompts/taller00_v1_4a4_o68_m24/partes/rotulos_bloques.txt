@@ -1,0 +1,43 @@
+
+
+=== ESTILO_FIJO_DEL_CANAL_JSON (LEY: todas las imágenes en este estilo) ===
+
+=== FIN ESTILO FIJO ===
+
+=== CONFIG_CANAL_JSON ===
+
+=== FIN CONFIG ===
+
+=== BASE_DEL_CAPITULO_JSON ===
+
+=== FIN BASE ===
+
+=== PROFUNDIZACION_4P_JSON ===
+
+=== FIN 4P ===
+
+=== INVESTIGACION_4A1_JSON ===
+
+=== FIN 4A1 ===
+
+=== INVESTIGACION_4B1_JSON (objetos de la historia en estas escenas) ===
+
+=== FIN 4B1 ===
+
+=== INVESTIGACION_4C1_JSON (objetos del lugar de estos escenarios) ===
+
+=== FIN 4C1 ===
+
+=== MOLDES_BLENDER_JSON (imagenes_adjuntas = renders que van ANTES de este texto, en este orden) ===
+
+=== FIN MOLDES ===
+
+=== GRUPO_A_INVESTIGAR ===
+
+=== FIN GRUPO ===
+
+=== GUION_COMPLETO ===
+
+=== FIN GUION ===
+
+RECORDATORIO FINAL: primero el análisis (guion, ZONAS del guion, mapa, renders y cámaras del molde, investigaciones, estilo); luego base, VISTAS (otra cámara del molde por cada zona del guion que la base no muestra) y variantes con en_vistas. El molde manda en posiciones y cámaras. El estilo fijo es TÉCNICA completa adaptada a lo que hay en el lugar; no lo copies en los prompts (lo pega el código entero). Ninguna persona ni descripción de personaje; solo JSON.

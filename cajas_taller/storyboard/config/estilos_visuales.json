@@ -1,0 +1,10 @@
+{
+ "PISTA": "Nivel 2 (estilo visual): CÓMO SE VE la imagen. Catálogo editable. NO decide cómo se cuenta (eso es el nivel 1) ni la regla de cámara del canal (nivel 3). Al planeador solo le sirve para saber qué lentes/ángulos/encuadres se ven naturales en ese estilo.",
+ "estilos": {
+  "anime_cinematografico_semirrealista": {"nombre": "Anime cinematográfico semirrealista", "pista_en": "cinematic semi-realistic anime: real-lens logic (24-85 mm), depth of field, motivated light; avoid manga-style speed lines"},
+  "anime_2d": {"nombre": "Anime 2D", "pista_en": "2D anime: flatter staging, clear silhouettes, limited camera moves (pans/slides on layered backgrounds), held poses"},
+  "manga": {"nombre": "Manga", "pista_en": "manga paneling logic: strong angles, extreme close-ups and graphic compositions are natural; high contrast"},
+  "3d_estilizada": {"nombre": "3D estilizada", "pista_en": "stylized 3D: full camera freedom (orbit, crane, flythrough) is natural; keep readable silhouettes"},
+  "ilustracion_pictorica": {"nombre": "Ilustración pictórica", "pista_en": "painterly illustration: composed tableau frames, slow moves, wide establishing shots carry the mood"}
+ }
+}

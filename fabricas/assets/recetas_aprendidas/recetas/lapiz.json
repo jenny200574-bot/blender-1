@@ -1,0 +1,227 @@
+{
+ "id": "lapiz",
+ "nombre_generico": "obj-lapiz",
+ "nombre_en": "pencil",
+ "categoria": "utiles",
+ "medidas_tipicas": {
+  "ancho_m": 0.025,
+  "fondo_m": 0.18,
+  "alto_m": 0.025
+ },
+ "medidas_fuente": "receta Argon vía B G3_utiles_dibujo (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.025,
+  0.18,
+  0.025
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": null,
+ "apoyo": "sobre_otro",
+ "conjunto": false,
+ "piezas": 5,
+ "tipos_de_pieza": [
+  "cono",
+  "tramo"
+ ],
+ "partes": [
+  {
+   "tipo": "cono",
+   "nombre": "mina_punta",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "a_m": [
+    0.0,
+    -0.078,
+    0.0125
+   ],
+   "b_m": [
+    0.0,
+    -0.09,
+    0.0125
+   ],
+   "radio_a_m": 0.004,
+   "radio_b_m": 0.0
+  },
+  {
+   "tipo": "cono",
+   "nombre": "cono_madera",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "a_m": [
+    0.0,
+    -0.055,
+    0.0125
+   ],
+   "b_m": [
+    0.0,
+    -0.078,
+    0.0125
+   ],
+   "radio_a_m": 0.0125,
+   "radio_b_m": 0.004
+  },
+  {
+   "tipo": "tramo",
+   "nombre": "cuerpo_madera",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "a_m": [
+    0.0,
+    -0.055,
+    0.0125
+   ],
+   "b_m": [
+    0.0,
+    0.06,
+    0.0125
+   ],
+   "radio_m": 0.0125
+  },
+  {
+   "tipo": "tramo",
+   "nombre": "virola_trasera",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "a_m": [
+    0.0,
+    0.06,
+    0.0125
+   ],
+   "b_m": [
+    0.0,
+    0.075,
+    0.0125
+   ],
+   "radio_m": 0.0125
+  },
+  {
+   "tipo": "tramo",
+   "nombre": "goma_trasera",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "a_m": [
+    0.0,
+    0.075,
+    0.0125
+   ],
+   "b_m": [
+    0.0,
+    0.09,
+    0.0125
+   ],
+   "radio_m": 0.012
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.025,
+  "fondo": 0.18,
+  "alto": 0.025
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.025
+  ],
+  "frente": [
+   0.0,
+   -0.09,
+   0.0125
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G3_utiles_dibujo",
+  "objeto_id_origen": "obj-lapiz",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "b9f6c66b911e58656e00b37eeff7d12a3b4d5bc1c7512a43a0c0a1e446a9a47d",
+  "costo_usd_grupo": 0.1985,
+  "costo_usd_repartido": 0.049625,
+  "citas": [
+   {
+    "fuente_id": "F01",
+    "clave": "anatomia.nucleo_y_cubierta",
+    "cita": "A pencil ( ) is a writing or drawing implement with a solid pigment core in a protective casing"
+   },
+   {
+    "fuente_id": "F01",
+    "clave": "anatomia.seccion_cilindrica",
+    "cita": "The most common pencil casing is thin wood, usually hexagonal in section, but sometimes cylindrical or triangular, permanently bonded to the core."
+   },
+   {
+    "fuente_id": "F01",
+    "clave": "anatomia.punta_tallada",
+    "cita": "To use the pencil, the casing must be carved or peeled off to expose the working end of the core, which serves as a sharp point."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "La ficha solo especifica el color #FFC928 en colores_usados.*; se aplica como color guia a todas las partes por protocolo."
+  ],
+  "info": {
+   "partes": 5,
+   "piezas": 5,
+   "bbox_m": [
+    0.025,
+    0.18,
+    0.025
+   ],
+   "grupos": 1,
+   "datos": 10,
+   "con_fuente": 3
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "obj-lapiz"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

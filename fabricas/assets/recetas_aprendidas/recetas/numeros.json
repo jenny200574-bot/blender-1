@@ -1,0 +1,499 @@
+{
+ "id": "numeros",
+ "nombre_generico": "Números del 1 al 5",
+ "nombre_en": "number blocks",
+ "categoria": "objetos_magicos",
+ "medidas_tipicas": {
+  "ancho_m": 0.14,
+  "fondo_m": 0.06,
+  "alto_m": 0.2
+ },
+ "medidas_fuente": "receta Argon vía B G4_objetos_magicos (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.14,
+  0.06,
+  0.2
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": null,
+ "apoyo": "en_mano",
+ "conjunto": true,
+ "piezas": 20,
+ "tipos_de_pieza": [
+  "caja"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "num_1_base",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.061,
+    0.0,
+    0.012
+   ],
+   "tam_m": [
+    0.018,
+    0.06,
+    0.024
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_1_poste",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.057,
+    0.0,
+    0.1
+   ],
+   "tam_m": [
+    0.01,
+    0.06,
+    0.2
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_1_pico",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.061,
+    0.0,
+    0.185
+   ],
+   "tam_m": [
+    0.018,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_2_base",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.033,
+    0.0,
+    0.015
+   ],
+   "tam_m": [
+    0.026,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_2_tramo_inf_izq",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.042,
+    0.0,
+    0.055
+   ],
+   "tam_m": [
+    0.008,
+    0.06,
+    0.11
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_2_barra_med",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.033,
+    0.0,
+    0.1
+   ],
+   "tam_m": [
+    0.026,
+    0.06,
+    0.028
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_2_tramo_sup_der",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.024,
+    0.0,
+    0.145
+   ],
+   "tam_m": [
+    0.008,
+    0.06,
+    0.11
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_2_tope",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.033,
+    0.0,
+    0.185
+   ],
+   "tam_m": [
+    0.026,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_3_columna_der",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.008,
+    0.0,
+    0.1
+   ],
+   "tam_m": [
+    0.008,
+    0.06,
+    0.2
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_3_barra_inf",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.001,
+    0.0,
+    0.015
+   ],
+   "tam_m": [
+    0.026,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_3_barra_med",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.001,
+    0.0,
+    0.1
+   ],
+   "tam_m": [
+    0.022,
+    0.06,
+    0.028
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_3_barra_sup",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    -0.001,
+    0.0,
+    0.185
+   ],
+   "tam_m": [
+    0.026,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_4_poste_der",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.038,
+    0.0,
+    0.1
+   ],
+   "tam_m": [
+    0.008,
+    0.06,
+    0.2
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_4_brazo_izq",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.022,
+    0.0,
+    0.145
+   ],
+   "tam_m": [
+    0.008,
+    0.06,
+    0.11
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_4_travesano",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.03,
+    0.0,
+    0.1
+   ],
+   "tam_m": [
+    0.024,
+    0.06,
+    0.028
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_5_barra_inf",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.058,
+    0.0,
+    0.015
+   ],
+   "tam_m": [
+    0.024,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_5_tramo_inf_der",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.066,
+    0.0,
+    0.055
+   ],
+   "tam_m": [
+    0.008,
+    0.06,
+    0.11
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_5_barra_med",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.058,
+    0.0,
+    0.1
+   ],
+   "tam_m": [
+    0.024,
+    0.06,
+    0.028
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_5_tramo_sup_izq",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.05,
+    0.0,
+    0.145
+   ],
+   "tam_m": [
+    0.008,
+    0.06,
+    0.11
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "num_5_tope",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.058,
+    0.0,
+    0.185
+   ],
+   "tam_m": [
+    0.024,
+    0.06,
+    0.03
+   ]
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.14,
+  "fondo": 0.06,
+  "alto": 0.2
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.2
+  ],
+  "frente": [
+   0.0,
+   -0.03,
+   0.1
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G4_objetos_magicos",
+  "objeto_id_origen": "obj-numeros-1-al-5",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "1ecee35a671618c7e5760031927df07cb8f1c35a38ee40b4a62afc2f16c7313e",
+  "costo_usd_grupo": 0.3077,
+  "costo_usd_repartido": 0.076925,
+  "citas": [
+   {
+    "fuente_id": "F04",
+    "clave": "digito.definicion",
+    "cita": "A numerical digit (often shortened to just digit) is a single symbol used to represent numbers in positional notation, such as 0, 1, ..., 9 in the common base 10."
+   },
+   {
+    "fuente_id": "F05",
+    "clave": "tipografia.diseno_numeros",
+    "cita": "A typeface is a design of letters, numbers and other symbols, to be used in printing or for electronic display."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "La ficha no incluye adn_texto ni colores individuales por digito; se aplica el color principal #B0B0B0 de colores_usados a todas las partes."
+  ],
+  "info": {
+   "partes": 20,
+   "piezas": 20,
+   "bbox_m": [
+    0.14,
+    0.06,
+    0.2
+   ],
+   "grupos": 5,
+   "datos": 10,
+   "con_fuente": 2
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "obj-numeros-1-al-5"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

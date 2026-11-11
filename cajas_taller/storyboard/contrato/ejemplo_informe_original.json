@@ -1,0 +1,345 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ArgonCinePanelContract",
+  "version": "2.0.0",
+  "panel_id": "EP04_SC02_SH003",
+  "sequence_index": 3,
+  "1_narrative_and_emotion": {
+    "beat_id": "BEAT_003",
+    "atomic_fact": "Renato descubre que la llave sobre el escritorio está partida, pero finge calma frente a Elena.",
+    "narrative_purpose": "REVEAL_INTERNAL_CONFLICT",
+    "genre_profile": "INTRIGA",
+    "target_emotion": {
+      "primary": "CONTAINED_ALARM",
+      "secondary": "DECEPTION",
+      "arousal_level": 0.78,
+      "valence": -0.65
+    },
+    "emotion_derivation_source": "EXPLICIT_FROM_SCRIPT_MODULE",
+    "justification": "El conflicto radica en ocultar el impacto emocional; exige un Plano Medio Corto sobre el triángulo ocular de Renato con el hombro de Elena desenfocado en primer término (Dirty OTS) para transmitir vigilancia."
+  },
+  "2_visible_action_dialogue_reaction": {
+    "visible_action": "Renato detiene su mano derecha a 10 cm de la taza, parpadea una vez y eleva las pupilas hacia Elena.",
+    "dialogue": {
+      "speaker_id": "CHAR_RENATO",
+      "text": "Seguro que nadie entró al estudio anoche.",
+      "delivery_tone": "calm_forced",
+      "timing_sec": {
+        "start_offset": 0.6,
+        "end_offset": 3.1
+      },
+      "cut_type": "J_CUT_AUDIO_LEAD_0.3S"
+    },
+    "reaction": {
+      "reactor_id": "CHAR_ELENA",
+      "visible_micro_action": "Elena sostiene la postura con los brazos cruzados en el borde izquierdo del cuadro sin responder.",
+      "silent_hold_after_dialogue_sec": 0.9
+    }
+  },
+  "3_subjects_and_hierarchy": {
+    "utility_scores": {
+      "CHAR_RENATO_FACE": 0.84,
+      "CHAR_ELENA_BODY": 0.11,
+      "PROP_BROKEN_KEY": 0.04,
+      "ENV_STUDY_ROOM": 0.01
+    },
+    "primary_subject": {
+      "entity_id": "CHAR_RENATO",
+      "entity_type": "CHARACTER",
+      "target_bone": "eye_target",
+      "anatomical_region": "HEAD_AND_UPPER_CHEST"
+    },
+    "secondary_subject": {
+      "entity_id": "CHAR_ELENA",
+      "entity_type": "CHARACTER",
+      "target_bone": "shoulder.R",
+      "role_in_frame": "FOREGROUND_OTS_ANCHOR"
+    }
+  },
+  "4_characters_dna_and_state": [
+    {
+      "character_id": "CHAR_RENATO",
+      "dna_ref_id": "DNA_CHAR_RENATO_IMMUTABLE_V4",
+      "dna_checksum_sha256": "8f9d2a1b4c5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a",
+      "dna_override_allowed": false,
+      "height_m": 1.82,
+      "eye_height_standing_m": 1.7,
+      "transient_state": {
+        "posture": "SEATED_UPRIGHT",
+        "current_eye_height_z_m": 1.22,
+        "facial_rig_preset": "BROW_TENSE_SMILE_SUPPRESSED",
+        "gaze_target_entity": "CHAR_ELENA",
+        "gaze_target_bone": "eye_target",
+        "hands_state": {
+          "left": "RESTING_ON_LAP",
+          "right": "HOVERING_NEAR_PROP_CUP"
+        }
+      }
+    },
+    {
+      "character_id": "CHAR_ELENA",
+      "dna_ref_id": "DNA_CHAR_ELENA_IMMUTABLE_V2",
+      "dna_checksum_sha256": "3a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+      "dna_override_allowed": false,
+      "height_m": 1.68,
+      "eye_height_standing_m": 1.57,
+      "transient_state": {
+        "posture": "STANDING_LEANING",
+        "current_eye_height_z_m": 1.54,
+        "facial_rig_preset": "COLD_WATCHFUL",
+        "gaze_target_entity": "CHAR_RENATO",
+        "gaze_target_bone": "eye_target",
+        "hands_state": {
+          "left": "CROSSED_ARMS",
+          "right": "CROSSED_ARMS"
+        }
+      }
+    }
+  ],
+  "5_spatial_position_and_orientation": {
+    "coordinate_system": "BLENDER_WORLD_METERS_Z_UP",
+    "entities_transform": {
+      "CHAR_RENATO": {
+        "root_location_xyz": [
+          1.2,
+          -0.8,
+          0.0
+        ],
+        "eye_world_xyz": [
+          1.2,
+          -0.75,
+          1.22
+        ],
+        "forward_vector_xyz": [
+          -0.707,
+          0.707,
+          0.0
+        ],
+        "rotation_euler_deg": [
+          0.0,
+          0.0,
+          45.0
+        ]
+      },
+      "CHAR_ELENA": {
+        "root_location_xyz": [
+          -0.4,
+          0.8,
+          0.0
+        ],
+        "eye_world_xyz": [
+          -0.4,
+          0.8,
+          1.54
+        ],
+        "forward_vector_xyz": [
+          0.707,
+          -0.707,
+          0.0
+        ],
+        "rotation_euler_deg": [
+          0.0,
+          0.0,
+          -135.0
+        ]
+      },
+      "PROP_BROKEN_KEY": {
+        "location_xyz": [
+          0.55,
+          -0.1,
+          0.76
+        ],
+        "parent_surface": "FURNITURE_DESK_01"
+      }
+    }
+  },
+  "6_set_and_time": {
+    "set_id": "SET_VICTORIAN_STUDY_01",
+    "blend_file_path": "//assets/sets/victorian_study_v03.blend",
+    "room_bounds_min_max_m": [
+      [
+        -4.5,
+        -4.0,
+        0.0
+      ],
+      [
+        4.5,
+        4.0,
+        3.2
+      ]
+    ],
+    "time_of_day": "NIGHT_INTERIOR",
+    "lighting_key_preset": "LOW_KEY_CHIAROSCURO_WARM_LAMP",
+    "scene_timecode_sec": {
+      "start": 7.5,
+      "end": 11.5,
+      "duration": 4.0
+    },
+    "frame_range_24fps": {
+      "frame_start": 181,
+      "frame_end": 276
+    }
+  },
+  "7_shot_size_and_framing": {
+    "shot_size_code": "PMC",
+    "shot_size_label": "Medium Close-Up (Dirty OTS)",
+    "anatomical_cut_bottom": "sternum_mid (spine.002)",
+    "anatomical_cut_top": "above_head_top (+0.08 m headroom)",
+    "target_screen_coordinates_ndc": {
+      "primary_eyes_xy": [
+        0.64,
+        0.67
+      ],
+      "secondary_shoulder_xy": [
+        0.18,
+        0.35
+      ]
+    },
+    "expected_head_height_ratio": 0.56,
+    "look_room_direction": "LEFT",
+    "look_room_ratio": 0.64
+  },
+  "8_camera_optics_and_geometry": {
+    "camera_source": "PROCEDURAL_NEW",
+    "camera_name_in_blender": "CAM_EP04_SC02_SH003_PMC_RENATO",
+    "rig_type": "DOLLY_AIM_RIG",
+    "sensor_width_mm": 36.0,
+    "resolution_px": [
+      1920,
+      1080
+    ],
+    "focal_length_mm": {
+      "start": 65.0,
+      "end": 65.0
+    },
+    "depth_of_field": {
+      "enabled": true,
+      "f_stop": 2.8,
+      "focus_target_entity": "CHAR_RENATO",
+      "focus_target_bone": "eye_target"
+    },
+    "toric_manifold_params": {
+      "alpha_rad": 0.52,
+      "theta_rad": 0.38,
+      "phi_rad": -0.06
+    },
+    "keyframe_start": {
+      "frame": 181,
+      "camera_location_xyz": [
+        -0.72,
+        0.55,
+        1.38
+      ],
+      "aim_target_xyz": [
+        1.15,
+        -0.7,
+        1.2
+      ],
+      "camera_height_above_floor_m": 1.38,
+      "camera_height_relative_to_primary_eyes_m": 0.16,
+      "roll_deg": 0.0
+    },
+    "keyframe_end": {
+      "frame": 276,
+      "camera_location_xyz": [
+        -0.54,
+        0.41,
+        1.35
+      ],
+      "aim_target_xyz": [
+        1.18,
+        -0.73,
+        1.21
+      ],
+      "camera_height_above_floor_m": 1.35,
+      "camera_height_relative_to_primary_eyes_m": 0.13,
+      "roll_deg": 0.0
+    },
+    "path_length_m": 0.23,
+    "interpolation_mode": "STEPPED_FOR_LAYOUT_BEZIER_FOR_RENDER"
+  },
+  "9_camera_movement_and_motive": {
+    "movement_type": "SLOW_DOLLY_IN",
+    "speed_m_per_sec": 0.057,
+    "handheld_shake": {
+      "enabled": true,
+      "shakify_preset": "INVESTIGATION_SUBTLE_BREATHING",
+      "intensity": 0.08
+    },
+    "dramatic_motive": "El avance lento de 0.23 m en 4.0 s comprime el espacio entre el hombro de Elena y los ojos de Renato mientras él miente, incrementando la presión psicológica."
+  },
+  "10_continuity_and_transition": {
+    "action_line_vector_xy": [
+      -1.6,
+      1.6
+    ],
+    "camera_side_of_axis": 1,
+    "previous_panel_side_of_axis": 1,
+    "axis_violation_allowed": false,
+    "angle_delta_from_prev_cam_deg": 142.5,
+    "eyeline_screen_vector_xy": [
+      -0.88,
+      0.22
+    ],
+    "expected_prev_eyeline_vector_xy": [
+      0.88,
+      -0.22
+    ],
+    "transition_in": "HARD_CUT_ON_GAZE_SHIFT",
+    "transition_out": "HARD_CUT_ON_REACTION"
+  },
+  "11_ordered_dna_image_references": [
+    {
+      "slot": 1,
+      "role": "GLOBAL_STYLE_DNA",
+      "asset_id": "STYLE_MAIN_3D_PAINTERLY",
+      "uri": "s3://dna-vault/style/master_style_01.png"
+    },
+    {
+      "slot": 2,
+      "role": "SET_LIGHTING_DNA",
+      "asset_id": "SET_VICTORIAN_STUDY_01",
+      "uri": "s3://dna-vault/sets/study_night_key.png"
+    },
+    {
+      "slot": 3,
+      "role": "PRIMARY_CHAR_DNA_SHEET",
+      "asset_id": "DNA_CHAR_RENATO_IMMUTABLE_V4",
+      "uri": "s3://dna-vault/chars/renato_turnaround_approved.png"
+    },
+    {
+      "slot": 4,
+      "role": "SECONDARY_CHAR_DNA_SHEET",
+      "asset_id": "DNA_CHAR_ELENA_IMMUTABLE_V2",
+      "uri": "s3://dna-vault/chars/elena_turnaround_approved.png"
+    },
+    {
+      "slot": 5,
+      "role": "KEY_PROP_DNA",
+      "asset_id": "DNA_PROP_BROKEN_KEY_V1",
+      "uri": "s3://dna-vault/props/broken_key_ortho.png"
+    }
+  ],
+  "12_tolerances_and_validations": {
+    "head_height_ratio_tolerance": 0.08,
+    "ndc_eye_position_tolerance": 0.07,
+    "max_primary_face_occlusion_ratio": 0.0,
+    "max_primary_body_occlusion_ratio": 0.2,
+    "min_clearance_from_walls_and_furniture_m": 0.25,
+    "min_clearance_from_characters_m": 0.45,
+    "require_head_in_frame": true,
+    "require_feet_in_frame": false,
+    "require_both_eyes_visible": true
+  },
+  "13_acceptance_correction_rejection_rules": {
+    "ACCEPT_IF": "all_geometric_gates_pass == true AND (vlm_required == false OR vlm_score >= 0.85)",
+    "AUTO_CORRECT_IF": "ray_cast_occluded == true OR ndc_out_of_bounds == true (Max 3 Solver Iterations in Blender before rendering)",
+    "REJECT_AND_BLOCK_IF": "auto_correct_iterations > 3 OR missing_dna_asset == true OR set_bounds_violation == true",
+    "responsible_module_on_block": {
+      "MISSING_EMOTION_OR_BEAT": "MODULE_01_SCRIPT_ANALYZER",
+      "MISSING_SET_OR_RIG_BONES": "MODULE_02_BLENDER_SET_BUILDER",
+      "DNA_CHECKSUM_MISMATCH": "MODULE_DNA_VAULT",
+      "UNSOLVABLE_CAMERA_OCCLUSION": "ARGON_CINE_SOLVER"
+    }
+  }
+}

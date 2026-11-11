@@ -1,0 +1,404 @@
+{
+ "id": "peluche_oso",
+ "nombre_generico": "Muñeco de peluche suave con forma de osito redondo sentado",
+ "nombre_en": "teddy bear plush",
+ "categoria": "juguetes",
+ "medidas_tipicas": {
+  "ancho_m": 0.24,
+  "fondo_m": 0.22,
+  "alto_m": 0.28
+ },
+ "medidas_fuente": "receta Argon vía B G1_juguetes_textiles (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.24,
+  0.22,
+  0.28
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": null,
+ "apoyo": "sobre_otro",
+ "conjunto": false,
+ "piezas": 18,
+ "tipos_de_pieza": [
+  "caja",
+  "esfera"
+ ],
+ "partes": [
+  {
+   "tipo": "esfera",
+   "nombre": "torso",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.0,
+    0.01,
+    0.09
+   ],
+   "radio_m": 0.09
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "cola",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.0,
+    0.09,
+    0.04
+   ],
+   "radio_m": 0.02
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "pierna_izq",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    -0.065,
+    -0.04,
+    0.045
+   ],
+   "radio_m": 0.045
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "pierna_der",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.065,
+    -0.04,
+    0.045
+   ],
+   "radio_m": 0.045
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "pata_izq",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    -0.07,
+    -0.075,
+    0.035
+   ],
+   "radio_m": 0.035
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "pata_der",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.07,
+    -0.075,
+    0.035
+   ],
+   "radio_m": 0.035
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "brazo_izq",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    -0.085,
+    -0.01,
+    0.12
+   ],
+   "radio_m": 0.035
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "brazo_der",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.085,
+    -0.01,
+    0.12
+   ],
+   "radio_m": 0.035
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "cabeza",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.205
+   ],
+   "radio_m": 0.065
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "oreja_izq",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    -0.05,
+    0.01,
+    0.255
+   ],
+   "radio_m": 0.025
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "oreja_der",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.05,
+    0.01,
+    0.255
+   ],
+   "radio_m": 0.025
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "hocico",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.0,
+    -0.065,
+    0.195
+   ],
+   "radio_m": 0.025
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "nariz",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.0,
+    -0.088,
+    0.202
+   ],
+   "radio_m": 0.008
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "ojo_izq",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    -0.025,
+    -0.058,
+    0.22
+   ],
+   "radio_m": 0.007
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "ojo_der",
+   "color_guia_rgb": [
+    0.722,
+    0.482,
+    0.294
+   ],
+   "centro_m": [
+    0.025,
+    -0.058,
+    0.22
+   ],
+   "radio_m": 0.007
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "pajarita_centro",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "centro_m": [
+    0.0,
+    -0.065,
+    0.15
+   ],
+   "radio_m": 0.012
+  },
+  {
+   "tipo": "caja",
+   "nombre": "pajarita_ala_izq",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "centro_m": [
+    -0.022,
+    -0.065,
+    0.15
+   ],
+   "tam_m": [
+    0.028,
+    0.016,
+    0.024
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "pajarita_ala_der",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "centro_m": [
+    0.022,
+    -0.065,
+    0.15
+   ],
+   "tam_m": [
+    0.028,
+    0.016,
+    0.024
+   ]
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.24,
+  "fondo": 0.22,
+  "alto": 0.28
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.28
+  ],
+  "frente": [
+   0.0,
+   -0.11,
+   0.14
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G1_juguetes_textiles",
+  "objeto_id_origen": "amb-esc-habitacion-peluche-oso",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "7fb5865b26c0ee1db57ccefbd182cf644d9631c740c89e15f656dab0fbbe39ef",
+  "costo_usd_grupo": 0.3208,
+  "costo_usd_repartido": 0.06416,
+  "citas": [
+   {
+    "fuente_id": "F01",
+    "clave": "morfologia.tipo_peluche",
+    "cita": "A teddy bear, or simply a teddy, is a stuffed toy in the form of a bear."
+   },
+   {
+    "fuente_id": "F01",
+    "clave": "morfologia.extremidades_cabeza",
+    "cita": "These bears either have safety joints for attaching arms, legs, and heads, or else the joints are sewn and not articulated."
+   },
+   {
+    "fuente_id": "F01",
+    "clave": "morfologia.rasgos_faciales",
+    "cita": "Modern teddy bears are generally distinguished by larger eyes and foreheads and smaller noses, baby-like features intended to enhance the toy's cuteness."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "El corpus no especifica medidas métricas absolutas de cada extremidad del osito; se deducen proporcionalmente a partir de caja_m.",
+   "La ficha no especifica un color separado para ojos y nariz; se emplea el color principal #B87B4B de la ficha."
+  ],
+  "info": {
+   "partes": 18,
+   "piezas": 18,
+   "bbox_m": [
+    0.24,
+    0.22,
+    0.28
+   ],
+   "grupos": 1,
+   "datos": 10,
+   "con_fuente": 3
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-peluche-oso"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

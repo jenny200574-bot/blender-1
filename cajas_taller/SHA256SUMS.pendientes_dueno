@@ -1,0 +1,15 @@
+# SHA256SUMS.pendientes_dueno — inmi 2-nov-2026 13:5x CET (07:5x Bogotá). NO aplicado a SHA256SUMS.
+# Hash ACTUAL en disco de archivos que NO son de inmi y no coinciden con SHA256SUMS. El dueño (Ako/Jenny) confirma y entonces se reemplaza la línea.
+# formato: actual  archivo  | anterior_en_SHA256SUMS | mtime
+0570d8cc2b5a0bca4e88096a6c4d52b82c62d4c26fe6c142f7f04f9f5fbdd2ec  paso01_pago.py  | 51e59d320c0c92f748dcb9933bafba2562bca1e818536aad9c8c3e3049fa5de8 | 2026-11-02 02:22:39 CET
+1b321db0f4bbc96bbeabe4b57a421380da32cd5486fe06d00fc9bdd73a7a3fb5  paso01_revision.py  | 1ab185d2279742a421a79fc254645c89f064f6ff1c068ec8b9fa5c4b696360ee | 2026-11-01 23:43:59 CET
+7b1d06cd536c650009659d298a67994a30a12e6ba4ce4f781d9dad2498af1b80  paso01_dirigir.py  | 44c377f7833a1893735a6575aac3a253b25b16aa6f0f04890f239375d1b0b040 | 2026-11-02 01:02:35 CET
+7035d2a1308d79a5f80cbe14bf8aabcd423cfa22024e275a4fbb64c446fbdc3d  paso01_datos/argon_pago.json  | d4861faccbcdd8d712bf01d5f4d04192ac20eb4ac70d31c2bfdb4a4535fa7134 | 2026-11-02 02:22:39 CET
+7cbbfe83c3ff81764a54d0a61c57b395ac2bd7bee40e68986abcadf2cec24edd  cubo11_tira.py  | d39daafb79f3c16ea8bb20f4c4622019296846971846cc3909fd0afc04f29611 | 2026-11-01 00:46:48 CET
+c9ace1158b56c1507598a1508c1531d16bea38df64269636c490e4b53b0075dc  cubo11_tira_pedido.py  | b3d444326c50dcf25e4cc98f1b815fa1215f5543a8a96c2dd2b1187236f03490 | 2026-11-01 00:46:48 CET
+6a14853db08bb9622da4670114501ae98d81539494bbc5ccabeab66c2a5b80ad  paso01_cubos.py  | 18e967274ae43a7867f0c6d7037224a10686e68808ea47071e2c7dd7376d4550 | 2026-11-02 01:02:35 CET
+9feace1479c072bf296af237c4f7ad87b1a1da9961b628d44c21d9bbb8728c8b  fondo_cubemap/cubemap.py  | 6ec17c847b616fac78ace5667f4c28976da879050241b17feb415c43ca96c8be | 2026-11-02 18:23:29 CET
+3ec1a7b31443584252a01f57540a8a27aff76c3a961737112b5533890167f0b1  fondo_cubemap/cubemap_blender.py  | 18c3f5ef7e156ee7e4c8a92d2bddf7a6e5500e36c89296b48367b36961072ece | 2026-11-02 18:23:29 CET
+5219c81823e4eff2a5c901023570d56430fba7a4b7ef04cf08cb079636061372  fondo_cubemap/fc_coherencia.py  | nuevo | 2026-11-02 18:23:29 CET
+0b94658017bdd983b96ecaea2245e92a57364f0386801a24eaf89076cc06f89d  fondo_cubemap/fc_profundidad_blender.py  | nuevo | 2026-11-02 18:23:29 CET
+# 2-nov-2026 ~16:55 Bogotá: paso01_cubos.py RESUELTO → nueva versión cubo10 v2 aplicada a SHA256SUMS (ver SHA256SUMS.notas).

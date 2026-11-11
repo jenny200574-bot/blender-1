@@ -1,0 +1,459 @@
+{
+ "version": "sb_dsl_a_blender_borrador_v1",
+ "dsl_commit": "7cbc087dabe0d4a8ec7a4ecf5b24d786783806d3",
+ "sensor_mm": [
+  36.0,
+  20.25
+ ],
+ "pista": "BORRADOR: el 02N aún no lee este archivo. Distancias solo con alturas medidas del diseño de Blender.",
+ "alturas_por_medir": [
+  "ch-don-caos-7adf",
+  "ch-eco-eff3",
+  "ch-pintor-bce0",
+  "ch-spark-468e",
+  "ch-valentina-a9be"
+ ],
+ "vinetas": [
+  {
+   "vineta": "v1",
+   "t_abs": [
+    0.0,
+    3.0
+   ],
+   "objetivo": "ch-don-caos-7adf",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "HIGHANGLE",
+   "lado_objetivo": "L",
+   "segmentos": [
+    {
+     "t_abs": [
+      0.0,
+      3.0
+     ],
+     "movimiento": "TRACK",
+     "args": {
+      "screen": "L2R",
+      "speed": "SLOW"
+     },
+     "curva": "suave_entrada_salida"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 0.0,
+     "plano": "WS",
+     "lente_mm": 24.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    },
+    {
+     "t": 3.0,
+     "plano": "WS",
+     "lente_mm": 24.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE"
+  },
+  {
+   "vineta": "v2",
+   "t_abs": [
+    3.0,
+    9.0
+   ],
+   "objetivo": "ch-spark-468e",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "LOWANGLE",
+   "lado_objetivo": "C",
+   "segmentos": [
+    {
+     "t_abs": [
+      3.0,
+      5.0
+     ],
+     "movimiento": "STATIC",
+     "args": {},
+     "curva": "suave_entrada_salida"
+    },
+    {
+     "t_abs": [
+      5.0,
+      9.0
+     ],
+     "movimiento": "DOLLYIN",
+     "args": {
+      "size_range": [
+       "MS",
+       "MCU"
+      ],
+      "speed": "SLOW"
+     },
+     "curva": "suave_entrada_salida"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 3.0,
+     "plano": "MS",
+     "lente_mm": 35.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    },
+    {
+     "t": 9.0,
+     "plano": "MCU",
+     "lente_mm": 35.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE"
+  },
+  {
+   "vineta": "v3",
+   "t_abs": [
+    9.0,
+    13.0
+   ],
+   "objetivo": "ch-pintor-bce0",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "EYELEVEL",
+   "lado_objetivo": "R",
+   "segmentos": [
+    {
+     "t_abs": [
+      9.0,
+      13.0
+     ],
+     "movimiento": "STATIC",
+     "args": {},
+     "curva": "lineal"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 9.0,
+     "plano": "FS",
+     "lente_mm": 35.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE"
+  },
+  {
+   "vineta": "v4",
+   "t_abs": [
+    13.0,
+    17.5
+   ],
+   "objetivo": "ch-eco-eff3",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "LOWANGLE",
+   "lado_objetivo": "R",
+   "segmentos": [
+    {
+     "t_abs": [
+      13.0,
+      14.5
+     ],
+     "movimiento": "STATIC",
+     "args": {},
+     "curva": "suave_entrada_salida"
+    },
+    {
+     "t_abs": [
+      14.5,
+      17.5
+     ],
+     "movimiento": "DOLLYIN",
+     "args": {
+      "size_range": [
+       "MS",
+       "MCU"
+      ],
+      "speed": "SLOW"
+     },
+     "curva": "suave_entrada_salida"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 13.0,
+     "plano": "MS",
+     "lente_mm": 35.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    },
+    {
+     "t": 17.5,
+     "plano": "MCU",
+     "lente_mm": 35.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE"
+  },
+  {
+   "vineta": "v5",
+   "t_abs": [
+    17.5,
+    22.5
+   ],
+   "objetivo": "ch-spark-468e",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "EYELEVEL",
+   "lado_objetivo": "C",
+   "segmentos": [
+    {
+     "t_abs": [
+      17.5,
+      22.5
+     ],
+     "movimiento": "STATIC",
+     "args": {},
+     "curva": "lineal"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 17.5,
+     "plano": "WS",
+     "lente_mm": 28.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE"
+  },
+  {
+   "vineta": "v6",
+   "t_abs": [
+    22.5,
+    29.5
+   ],
+   "objetivo": "ch-valentina-a9be",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "LOWANGLE",
+   "lado_objetivo": "L",
+   "segmentos": [
+    {
+     "t_abs": [
+      22.5,
+      25.5
+     ],
+     "movimiento": "STATIC",
+     "args": {},
+     "curva": "suave_entrada_salida"
+    },
+    {
+     "t_abs": [
+      25.5,
+      29.5
+     ],
+     "movimiento": "DOLLYIN",
+     "args": {
+      "size_range": [
+       "MS",
+       "MCU"
+      ],
+      "speed": "SLOW"
+     },
+     "curva": "suave_entrada_salida"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 22.5,
+     "plano": "MS",
+     "lente_mm": 50.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    },
+    {
+     "t": 29.5,
+     "plano": "MCU",
+     "lente_mm": 50.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE_SECO"
+  },
+  {
+   "vineta": "v7",
+   "t_abs": [
+    29.5,
+    38.0
+   ],
+   "objetivo": "ch-don-caos-7adf",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "HIGHANGLE",
+   "lado_objetivo": "L",
+   "segmentos": [
+    {
+     "t_abs": [
+      29.5,
+      38.0
+     ],
+     "movimiento": "STATIC",
+     "args": {},
+     "curva": "lineal"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 29.5,
+     "plano": "FS",
+     "lente_mm": 28.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE_SECO"
+  },
+  {
+   "vineta": "v8",
+   "t_abs": [
+    38.0,
+    44.0
+   ],
+   "objetivo": "ch-eco-eff3",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "EYELEVEL",
+   "lado_objetivo": "R",
+   "segmentos": [
+    {
+     "t_abs": [
+      38.0,
+      39.2
+     ],
+     "movimiento": "STATIC",
+     "args": {},
+     "curva": "suave_entrada_salida"
+    },
+    {
+     "t_abs": [
+      39.2,
+      44.0
+     ],
+     "movimiento": "DOLLYIN",
+     "args": {
+      "size_range": [
+       "MS",
+       "MCU"
+      ],
+      "speed": "SLOW"
+     },
+     "curva": "suave_entrada_salida"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 38.0,
+     "plano": "MS",
+     "lente_mm": 35.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    },
+    {
+     "t": 44.0,
+     "plano": "MCU",
+     "lente_mm": 35.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE"
+  },
+  {
+   "vineta": "v9",
+   "t_abs": [
+    44.0,
+    47.0
+   ],
+   "objetivo": "ch-eco-eff3",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "LOWANGLE",
+   "lado_objetivo": "R",
+   "segmentos": [
+    {
+     "t_abs": [
+      44.0,
+      47.0
+     ],
+     "movimiento": "STATIC",
+     "args": {},
+     "curva": "lineal"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 44.0,
+     "plano": "CU",
+     "lente_mm": 50.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE_SECO"
+  },
+  {
+   "vineta": "v10",
+   "t_abs": [
+    47.0,
+    50.0
+   ],
+   "objetivo": "ch-eco-eff3",
+   "altura_m": null,
+   "altura_fuente": "por medir en 02N",
+   "angulo": "EYELEVEL",
+   "lado_objetivo": "R",
+   "segmentos": [
+    {
+     "t_abs": [
+      47.0,
+      50.0
+     ],
+     "movimiento": "DOLLYIN",
+     "args": {
+      "size_range": [
+       "FS",
+       "MS"
+      ],
+      "speed": "BRISK"
+     },
+     "curva": "suave_salida"
+    }
+   ],
+   "keyframes": [
+    {
+     "t": 47.0,
+     "plano": "FS",
+     "lente_mm": 28.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    },
+    {
+     "t": 50.0,
+     "plano": "MS",
+     "lente_mm": 28.0,
+     "distancia_m": "por medir en 02N",
+     "giro_grados": 0
+    }
+   ],
+   "transicion_salida": "CORTE"
+  }
+ ]
+}

@@ -1,0 +1,2003 @@
+{
+ "_nota": "FALSO — storyboard de PRUEBA esc 9, CORRECTO, hecho a mano. NO es de Argon. US$0.",
+ "respuesta": {
+  "escena": "9",
+  "duracion_s": 92.0,
+  "niveles_aplicados": {
+   "nivel_1_generos": [
+    "accion",
+    "ciencia_ficcion",
+    "drama",
+    "fantasia",
+    "romance"
+   ],
+   "nivel_2_estilo": "por definir",
+   "nivel_3_reglamento": "por definir"
+  },
+  "narrativa": {
+   "intencion_escena": "del chantaje a la decisión imposible",
+   "estructura": "amenaza → impotencia → la oferta de Imi → el precio → silencio",
+   "beats_narrativos": [
+    {
+     "id": "n1",
+     "beats_01": [
+      "a1",
+      "a2"
+     ],
+     "segmento_genero": 0,
+     "intencion": "amenaza y revelación",
+     "enfatizar": "poder del villano",
+     "ocultar": "la cara de ella hasta v3",
+     "ritmo": "rápido"
+    },
+    {
+     "id": "n2",
+     "beats_01": [
+      "a3",
+      "a4",
+      "a5",
+      "a6"
+     ],
+     "segmento_genero": 0,
+     "intencion": "impotencia",
+     "enfatizar": "que él no puede",
+     "ocultar": "",
+     "ritmo": "rápido"
+    },
+    {
+     "id": "n3",
+     "beats_01": [
+      "a7",
+      "a8"
+     ],
+     "segmento_genero": 0,
+     "intencion": "crueldad",
+     "enfatizar": "la compresión",
+     "ocultar": "",
+     "ritmo": "medio"
+    },
+    {
+     "id": "n4",
+     "beats_01": [
+      "a9",
+      "a10",
+      "a11",
+      "a12"
+     ],
+     "segmento_genero": 1,
+     "intencion": "amor que protege",
+     "enfatizar": "miradas",
+     "ocultar": "",
+     "ritmo": "medio con silencio"
+    },
+    {
+     "id": "n5",
+     "beats_01": [
+      "a13",
+      "a14",
+      "a15"
+     ],
+     "segmento_genero": 2,
+     "intencion": "la IA despierta",
+     "enfatizar": "la voz casi humana",
+     "ocultar": "qué es la opción",
+     "ritmo": "medido"
+    },
+    {
+     "id": "n6",
+     "beats_01": [
+      "a16",
+      "a17",
+      "a18",
+      "a19",
+      "a20"
+     ],
+     "segmento_genero": 2,
+     "intencion": "la oferta",
+     "enfatizar": "lo desconocido",
+     "ocultar": "",
+     "ritmo": "medido"
+    },
+    {
+     "id": "n7",
+     "beats_01": [
+      "a21",
+      "a22",
+      "a23",
+      "a24",
+      "a25"
+     ],
+     "segmento_genero": 3,
+     "intencion": "el precio",
+     "enfatizar": "el silencio",
+     "ocultar": "la ciudad",
+     "ritmo": "lento"
+    },
+    {
+     "id": "n8",
+     "beats_01": [
+      "a26",
+      "a27",
+      "a28",
+      "a29"
+     ],
+     "segmento_genero": 3,
+     "intencion": "perderse",
+     "enfatizar": "el rostro",
+     "ocultar": "",
+     "ritmo": "muy lento"
+    },
+    {
+     "id": "n9",
+     "beats_01": [
+      "a30",
+      "a31"
+     ],
+     "segmento_genero": 3,
+     "intencion": "los dos pueden perderse",
+     "enfatizar": "la soledad",
+     "ocultar": "",
+     "ritmo": "lento"
+    }
+   ]
+  },
+  "vinetas": [
+   {
+    "id": "v1",
+    "orden": 1,
+    "t": [
+     0,
+     3
+    ],
+    "beats_01": [
+     "a1"
+    ],
+    "beat_narrativo": "n1",
+    "segmento_genero": 0,
+    "intencion_narrativa": "Amenaza: el alienígena domina la azotea",
+    "beats_visuales": [
+     "mano alzada del alienígena",
+     "protagonista de rodillas"
+    ],
+    "secuencia": "establecer espacio y poder",
+    "director_imagen": {
+     "plano": "WS",
+     "angulo": "LOWANGLE",
+     "lente_mm": 24,
+     "perspectiva": "contrapicado desde el suelo de la azotea",
+     "dsl_encuadre": "/WS /LOWANGLE /LENS24",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "frente",
+       "mira_a": "ch-el-aliengena-73a9",
+       "orientacion": "de espaldas 3/4"
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "lado": "R",
+       "profundidad": "medio",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": "de frente"
+      }
+     ],
+     "objetos": [],
+     "composicion": "diagonal: protagonista abajo-izquierda, alienígena arriba-derecha",
+     "continuidad_con_anterior": "continúa la escena 8: mismos lados"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "dolor",
+      "gestos": "mano en el suelo",
+      "postura": "de rodillas",
+      "movimiento": "respira agitado",
+      "intensidad": 3
+     },
+     {
+      "id": "ch-el-aliengena-73a9",
+      "expresion": "frialdad",
+      "gestos": "levanta la mano",
+      "postura": "erguido",
+      "movimiento": "lento",
+      "intensidad": 3
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "0-3s: /TRUCK:R:BRISK",
+     "encuadre_inicio": "WS",
+     "encuadre_fin": "WS",
+     "velocidad": "BRISK",
+     "motivacion": "acción: cámara viva que acompaña el gesto"
+    },
+    "ritmo": {
+     "duracion_s": 3,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE_SECO",
+     "motivo": "impacto del gesto"
+    },
+    "audio": [],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "L2R",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "miedo",
+     "por_que": "contrapicado y angular hacen enorme al villano (acción + fantasía oscura)"
+    }
+   },
+   {
+    "id": "v2",
+    "orden": 2,
+    "t": [
+     3,
+     6
+    ],
+    "beats_01": [
+     "a1",
+     "a2"
+    ],
+    "beat_narrativo": "n1",
+    "segmento_genero": 0,
+    "intencion_narrativa": "Revelación de la prisión",
+    "beats_visuales": [
+     "el espacio se abre",
+     "prisión suspendida sobre la ciudad"
+    ],
+    "secuencia": "revelación de escala detalle→general",
+    "director_imagen": {
+     "plano": "WS",
+     "angulo": "WORMSEYE",
+     "lente_mm": 18,
+     "perspectiva": "desde el suelo, ciudad al fondo",
+     "dsl_encuadre": "/WS /WORMSEYE /LENS18",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "frente",
+       "mira_a": "ch-el-aliengena-73a9",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "lado": "R",
+       "profundidad": "medio",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "prisión transparente",
+       "lado": "R",
+       "profundidad": "fondo",
+       "estado": "aparece"
+      }
+     ],
+     "composicion": "la prisión ocupa el tercio derecho alto",
+     "continuidad_con_anterior": "mismo eje"
+    },
+    "actuacion": [
+     {
+      "id": "ch-el-aliengena-73a9",
+      "expresion": "superioridad",
+      "gestos": "mano abierta",
+      "postura": "erguido",
+      "movimiento": "quieto",
+      "intensidad": 3
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "0-3s: /CRANE:UP:SLOW",
+     "encuadre_inicio": "WS",
+     "encuadre_fin": "WS",
+     "velocidad": "SLOW",
+     "motivacion": "la grúa revela la escala sobrenatural"
+    },
+    "ritmo": {
+     "duracion_s": 3,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "pasar a la víctima"
+    },
+    "audio": [],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "L2R",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "pavor",
+     "por_que": "fantasía oscura: escala monumental y amenaza"
+    }
+   },
+   {
+    "id": "v3",
+    "orden": 3,
+    "t": [
+     6,
+     10
+    ],
+    "beats_01": [
+     "a2",
+     "a3",
+     "a4"
+    ],
+    "beat_narrativo": "n2",
+    "segmento_genero": 0,
+    "intencion_narrativa": "La novia atrapada",
+    "beats_visuales": [
+     "golpes contra la energía"
+    ],
+    "secuencia": "contraplano de la víctima",
+    "director_imagen": {
+     "plano": "MCU",
+     "angulo": "EYELEVEL",
+     "lente_mm": 50,
+     "perspectiva": "a la altura de ella, a través del muro de energía",
+     "dsl_encuadre": "/MCU /EYELEVEL /LENS50",
+     "en_cuadro": [
+      {
+       "id": "ch-la-novia-5cdf",
+       "lado": "C",
+       "profundidad": "medio",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "prisión transparente",
+       "lado": "C",
+       "profundidad": "fondo",
+       "estado": "cerrada"
+      }
+     ],
+     "composicion": "ella centrada, encerrada por los bordes de la prisión (marco dentro del marco)",
+     "continuidad_con_anterior": "ella mira hacia la izquierda del cuadro (hacia él)"
+    },
+    "actuacion": [
+     {
+      "id": "ch-la-novia-5cdf",
+      "expresion": "desesperación",
+      "gestos": "golpea la pared",
+      "postura": "de pie",
+      "movimiento": "golpes",
+      "intensidad": 4
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/HANDHELD",
+     "encuadre_inicio": "MCU",
+     "encuadre_fin": "MCU",
+     "velocidad": "STEADY",
+     "motivacion": "cámara en mano: urgencia"
+    },
+    "ritmo": {
+     "duracion_s": 4,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "el grito de él llama el corte"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-protagonista-c71a",
+      "t": [
+       8.4,
+       9.6
+      ],
+      "texto": "¡No!"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "angustia",
+     "por_que": "mirada de ella hacia la izquierda = hacia él (eje respetado)"
+    }
+   },
+   {
+    "id": "v4",
+    "orden": 4,
+    "t": [
+     10,
+     14
+    ],
+    "beats_01": [
+     "a5",
+     "a6"
+    ],
+    "beat_narrativo": "n2",
+    "segmento_genero": 0,
+    "intencion_narrativa": "Impotencia: no puede levantarse",
+    "beats_visuales": [
+     "intenta levantarse y cae"
+    ],
+    "secuencia": "quedarse con él",
+    "director_imagen": {
+     "plano": "MS",
+     "angulo": "HIGHANGLE",
+     "lente_mm": 35,
+     "perspectiva": "picado: lo empequeñece",
+     "dsl_encuadre": "/MS /HIGHANGLE /LENS35",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "C",
+       "profundidad": "frente",
+       "mira_a": "ch-la-novia-5cdf",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "pulsera IMI",
+       "lado": "L",
+       "profundidad": "frente",
+       "estado": "escudo al 17%"
+      }
+     ],
+     "composicion": "aire sobre la cabeza: soledad",
+     "continuidad_con_anterior": "él mira a la derecha del cuadro (hacia ella)"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "furia impotente",
+      "gestos": "puño cerrado",
+      "postura": "de rodillas",
+      "movimiento": "intenta incorporarse",
+      "intensidad": 4
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "0-4s: /DOLLYIN:MS>MCU:SLOW",
+     "encuadre_inicio": "MS",
+     "encuadre_fin": "MCU",
+     "velocidad": "SLOW",
+     "motivacion": "el acercamiento lento sube la tensión"
+    },
+    "ritmo": {
+     "duracion_s": 4,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "respuesta del villano"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-protagonista-c71a",
+      "t": [
+       12.2,
+       13.8
+      ],
+      "texto": "¡Déjala ir!"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría",
+      "golpeado y sin fuerzas tras el ataque de la escena 8"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "L2R",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "impotencia",
+     "por_que": "picado = derrota; acercamiento = presión"
+    }
+   },
+   {
+    "id": "v5",
+    "orden": 5,
+    "t": [
+     14,
+     20
+    ],
+    "beats_01": [
+     "a7",
+     "a8"
+    ],
+    "beat_narrativo": "n3",
+    "segmento_genero": 0,
+    "intencion_narrativa": "El villano explica su crueldad",
+    "beats_visuales": [
+     "discurso frío",
+     "la prisión se comprime al fondo"
+    ],
+    "secuencia": "sobre el hombro",
+    "director_imagen": {
+     "plano": "MCU",
+     "angulo": "LOWANGLE",
+     "lente_mm": 35,
+     "perspectiva": "sobre el hombro del protagonista",
+     "dsl_encuadre": "/MCU /LOWANGLE /LENS35 /OTS",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "frente",
+       "mira_a": "ch-el-aliengena-73a9",
+       "orientacion": "de espaldas"
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "lado": "R",
+       "profundidad": "medio",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "prisión transparente",
+       "lado": "R",
+       "profundidad": "fondo",
+       "estado": "comprimiéndose"
+      }
+     ],
+     "composicion": "hombro de él en primer término izquierda; villano derecha; prisión detrás",
+     "continuidad_con_anterior": "mismo eje que v1"
+    },
+    "actuacion": [
+     {
+      "id": "ch-el-aliengena-73a9",
+      "expresion": "desprecio",
+      "gestos": "inclina la cabeza",
+      "postura": "erguido",
+      "movimiento": "quieto",
+      "intensidad": 3
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "MCU",
+     "encuadre_fin": "MCU",
+     "velocidad": "STEADY",
+     "motivacion": "cámara quieta: el poder no necesita moverse"
+    },
+    "ritmo": {
+     "duracion_s": 6,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "reacción"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-el-aliengena-73a9",
+      "t": [
+       14.2,
+       19.9
+      ],
+      "texto": "Tu especie es tan predecible. Basta con amenazar aquello que ama para que entregue cualquier cosa."
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "L2R",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "odio",
+     "por_que": "OTS mantiene el eje 180° entre los dos"
+    }
+   },
+   {
+    "id": "v6",
+    "orden": 6,
+    "t": [
+     20,
+     24
+    ],
+    "beats_01": [
+     "a9",
+     "a10"
+    ],
+    "beat_narrativo": "n4",
+    "segmento_genero": 1,
+    "intencion_narrativa": "Corre hacia ella y cae",
+    "beats_visuales": [
+     "intento de correr",
+     "caída"
+    ],
+    "secuencia": "acción breve",
+    "director_imagen": {
+     "plano": "FS",
+     "angulo": "EYELEVEL",
+     "lente_mm": 28,
+     "perspectiva": "lateral",
+     "dsl_encuadre": "/FS /EYELEVEL /LENS28 /THREESHOT",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "medio",
+       "mira_a": "ch-la-novia-5cdf",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "lado": "R",
+       "profundidad": "medio",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-la-novia-5cdf",
+       "lado": "R",
+       "profundidad": "fondo",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "prisión transparente",
+       "lado": "R",
+       "profundidad": "fondo",
+       "estado": "comprimiéndose"
+      }
+     ],
+     "composicion": "tres capas de profundidad",
+     "continuidad_con_anterior": "él avanza hacia la derecha"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "desesperación",
+      "gestos": "brazos extendidos",
+      "postura": "corre y cae",
+      "movimiento": "cae de nuevo",
+      "intensidad": 5
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "0-4s: /HANDHELD /TRUCK:R:FAST",
+     "encuadre_inicio": "FS",
+     "encuadre_fin": "FS",
+     "velocidad": "FAST",
+     "motivacion": "acompaña la carrera"
+    },
+    "ritmo": {
+     "duracion_s": 4,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "la voz de ella"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-la-novia-5cdf",
+      "t": [
+       21.5,
+       23.5
+      ],
+      "texto": "¡No te acerques!"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "L2R",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "desesperación",
+     "por_que": "la carrera hacia la derecha mantiene la dirección de pantalla"
+    }
+   },
+   {
+    "id": "v7",
+    "orden": 7,
+    "t": [
+     24,
+     28
+    ],
+    "beats_01": [
+     "a11"
+    ],
+    "beat_narrativo": "n4",
+    "segmento_genero": 1,
+    "intencion_narrativa": "Ella lo protege",
+    "beats_visuales": [
+     "súplica"
+    ],
+    "secuencia": "primer plano de ella",
+    "director_imagen": {
+     "plano": "CU",
+     "angulo": "EYELEVEL",
+     "lente_mm": 85,
+     "perspectiva": "a su altura",
+     "dsl_encuadre": "/CU /EYELEVEL /LENS85 /SINGLE",
+     "en_cuadro": [
+      {
+       "id": "ch-la-novia-5cdf",
+       "lado": "C",
+       "profundidad": "medio",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "prisión transparente",
+       "lado": "C",
+       "profundidad": "fondo",
+       "estado": "comprimiéndose"
+      }
+     ],
+     "composicion": "rostro centrado, fondo desenfocado",
+     "continuidad_con_anterior": "mira hacia la izquierda del cuadro"
+    },
+    "actuacion": [
+     {
+      "id": "ch-la-novia-5cdf",
+      "expresion": "súplica tierna",
+      "gestos": "manos en la pared",
+      "postura": "de pie",
+      "movimiento": "quieta",
+      "intensidad": 4
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "CU",
+     "encuadre_fin": "CU",
+     "velocidad": "STEADY",
+     "motivacion": "quieto: que se oiga lo que dice"
+    },
+    "ritmo": {
+     "duracion_s": 4,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "reacción de él"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-la-novia-5cdf",
+      "t": [
+       24.3,
+       27.6
+      ],
+      "texto": "¡Escúchame! ¡No hagas ninguna locura por mí!"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "ternura y miedo",
+     "por_que": "romance/drama: primer plano y mirada"
+    }
+   },
+   {
+    "id": "v8",
+    "orden": 8,
+    "t": [
+     28,
+     31
+    ],
+    "beats_01": [
+     "a12"
+    ],
+    "beat_narrativo": "n4",
+    "segmento_genero": 1,
+    "intencion_narrativa": "Rabia contenida",
+    "beats_visuales": [
+     "aprieta los dientes"
+    ],
+    "secuencia": "detalle",
+    "director_imagen": {
+     "plano": "ECU",
+     "angulo": "EYELEVEL",
+     "lente_mm": 85,
+     "perspectiva": "muy cerca",
+     "dsl_encuadre": "/ECU /EYELEVEL /LENS85",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "C",
+       "profundidad": "frente",
+       "mira_a": "ch-la-novia-5cdf",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [],
+     "composicion": "boca y mandíbula llenan el cuadro",
+     "continuidad_con_anterior": "mira a la derecha"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "rabia contenida",
+      "gestos": "aprieta los dientes",
+      "postura": "de rodillas",
+      "movimiento": "tenso",
+      "intensidad": 4
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "ECU",
+     "encuadre_fin": "ECU",
+     "velocidad": "STEADY",
+     "motivacion": "silencio tenso"
+    },
+    "ritmo": {
+     "duracion_s": 3,
+     "pausas": [
+      {
+       "t": [
+        28.2,
+        31.0
+       ],
+       "motivo": "silencio antes de la voz de Imi"
+      }
+     ]
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "cambio de tono: entra la IA"
+    },
+    "audio": [],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "L2R",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "tensión",
+     "por_que": "suspenso: silencio y detalle"
+    }
+   },
+   {
+    "id": "v9",
+    "orden": 9,
+    "t": [
+     31,
+     35
+    ],
+    "beats_01": [
+     "a13"
+    ],
+    "beat_narrativo": "n5",
+    "segmento_genero": 2,
+    "intencion_narrativa": "Imi despierta con voz humana",
+    "beats_visuales": [
+     "brillo de la pulsera"
+    ],
+    "secuencia": "inserto tecnológico",
+    "director_imagen": {
+     "plano": "ECU",
+     "angulo": "HIGHANGLE",
+     "lente_mm": 50,
+     "perspectiva": "picado sobre la muñeca",
+     "dsl_encuadre": "/ECU /HIGHANGLE /LENS50 /INSERT",
+     "en_cuadro": [
+      {
+       "id": "ch-imi-69f6",
+       "lado": "C",
+       "profundidad": "frente",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "pulsera IMI",
+       "lado": "L",
+       "profundidad": "frente",
+       "estado": "escudo al 17%"
+      }
+     ],
+     "composicion": "núcleo azul centrado, líneas de energía como guías",
+     "continuidad_con_anterior": "la pulsera está en la muñeca izquierda de él"
+    },
+    "actuacion": [
+     {
+      "id": "ch-imi-69f6",
+      "expresion": "luz que late",
+      "gestos": "pulso de luz",
+      "postura": "en la muñeca",
+      "movimiento": "brillo",
+      "intensidad": 2
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/ORBIT:R:30:SLOW",
+     "encuadre_inicio": "ECU",
+     "encuadre_fin": "ECU",
+     "velocidad": "SLOW",
+     "motivacion": "órbita corta: algo despierta"
+    },
+    "ritmo": {
+     "duracion_s": 4,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "él mira la muñeca"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       32.0,
+       34.0
+      ],
+      "texto": "Existe otra opción."
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "asombro",
+     "por_que": "ciencia ficción: composición tecnológica y revelación"
+    }
+   },
+   {
+    "id": "v10",
+    "orden": 10,
+    "t": [
+     35,
+     40
+    ],
+    "beats_01": [
+     "a14",
+     "a15"
+    ],
+    "beat_narrativo": "n5",
+    "segmento_genero": 2,
+    "intencion_narrativa": "Él escucha a Imi",
+    "beats_visuales": [
+     "mira su muñeca"
+    ],
+    "secuencia": "observación",
+    "director_imagen": {
+     "plano": "MCU",
+     "angulo": "HIGHANGLE",
+     "lente_mm": 50,
+     "perspectiva": "leve picado",
+     "dsl_encuadre": "/MCU /HIGHANGLE /LENS50",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "medio",
+       "mira_a": "ch-imi-69f6",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-imi-69f6",
+       "lado": "R",
+       "profundidad": "frente",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "pulsera IMI",
+       "lado": "L",
+       "profundidad": "frente",
+       "estado": "escudo al 17%"
+      }
+     ],
+     "composicion": "muñeca en primer término derecha, rostro izquierda",
+     "continuidad_con_anterior": "eje entre él y la pulsera"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "desconcierto",
+      "gestos": "levanta la muñeca",
+      "postura": "de rodillas",
+      "movimiento": "gira la cabeza",
+      "intensidad": 2
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "MCU",
+     "encuadre_fin": "MCU",
+     "velocidad": "STEADY",
+     "motivacion": "observación"
+    },
+    "ritmo": {
+     "duracion_s": 5,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "diálogo"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-protagonista-c71a",
+      "t": [
+       38.3,
+       39.3
+      ],
+      "texto": "¿Cuál?"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "curiosidad",
+     "por_que": "misterio: plano de observación"
+    }
+   },
+   {
+    "id": "v11",
+    "orden": 11,
+    "t": [
+     40,
+     50
+    ],
+    "beats_01": [
+     "a16",
+     "a17",
+     "a18"
+    ],
+    "beat_narrativo": "n6",
+    "segmento_genero": 2,
+    "intencion_narrativa": "La oferta",
+    "beats_visuales": [
+     "la luz late al hablar"
+    ],
+    "secuencia": "acercamiento",
+    "director_imagen": {
+     "plano": "CU",
+     "angulo": "EYELEVEL",
+     "lente_mm": 50,
+     "perspectiva": "a la altura de la muñeca",
+     "dsl_encuadre": "/CU /EYELEVEL /LENS50 /TWOSHOT",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "medio",
+       "mira_a": "ch-imi-69f6",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-imi-69f6",
+       "lado": "R",
+       "profundidad": "frente",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "pulsera IMI",
+       "lado": "L",
+       "profundidad": "frente",
+       "estado": "escudo al 17%"
+      }
+     ],
+     "composicion": "dos sujetos: rostro y pulsera",
+     "continuidad_con_anterior": "mismo eje que v10"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "atención",
+      "gestos": "quieto",
+      "postura": "de rodillas",
+      "movimiento": "quieto",
+      "intensidad": 2
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "0-10s: /DOLLYIN:CU>ECU:VSLOW",
+     "encuadre_inicio": "CU",
+     "encuadre_fin": "ECU",
+     "velocidad": "VSLOW",
+     "motivacion": "acercamiento casi imperceptible: intimidad con la IA"
+    },
+    "ritmo": {
+     "duracion_s": 10,
+     "pausas": [
+      {
+       "t": [
+        43.0,
+        45.0
+       ],
+       "motivo": "Una pausa (guion)"
+      }
+     ]
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "pregunta de él"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       40.3,
+       42.8
+      ],
+      "texto": "Una integración completa entre nuestros sistemas."
+     },
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       45.2,
+       49.6
+      ],
+      "texto": "Puedo reconstruir tu estructura biológica y sincronizarla con la matriz de génesis."
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "inquietud",
+     "por_que": "sci-fi/misterio: revelación progresiva"
+    }
+   },
+   {
+    "id": "v12",
+    "orden": 12,
+    "t": [
+     50,
+     57
+    ],
+    "beats_01": [
+     "a19",
+     "a20"
+    ],
+    "beat_narrativo": "n6",
+    "segmento_genero": 2,
+    "intencion_narrativa": "Traducir lo imposible",
+    "beats_visuales": [
+     "él pregunta",
+     "Imi responde"
+    ],
+    "secuencia": "plano medio de respiro",
+    "director_imagen": {
+     "plano": "MS",
+     "angulo": "EYELEVEL",
+     "lente_mm": 35,
+     "perspectiva": "frontal",
+     "dsl_encuadre": "/MS /EYELEVEL /LENS35 /TWOSHOT",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "medio",
+       "mira_a": "ch-imi-69f6",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-imi-69f6",
+       "lado": "R",
+       "profundidad": "frente",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "pulsera IMI",
+       "lado": "L",
+       "profundidad": "frente",
+       "estado": "escudo al 17%"
+      }
+     ],
+     "composicion": "aire alrededor: se abre el espacio",
+     "continuidad_con_anterior": "mismo eje"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "angustia",
+      "gestos": "mano en la frente",
+      "postura": "de rodillas",
+      "movimiento": "quieto",
+      "intensidad": 3
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "MS",
+     "encuadre_fin": "MS",
+     "velocidad": "STEADY",
+     "motivacion": "respiro antes del golpe final"
+    },
+    "ritmo": {
+     "duracion_s": 7,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "él mira la prisión"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-protagonista-c71a",
+      "t": [
+       50.3,
+       53.8
+      ],
+      "texto": "¿Y qué significa eso en palabras que pueda entender?"
+     },
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       54.2,
+       56.8
+      ],
+      "texto": "Podrías sobrevivir al ataque. Podrías enfrentarlo."
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "esperanza dudosa",
+     "por_que": "pausa visual entre dos golpes"
+    }
+   },
+   {
+    "id": "v13",
+    "orden": 13,
+    "t": [
+     57,
+     61
+    ],
+    "beats_01": [
+     "a21",
+     "a22"
+    ],
+    "beat_narrativo": "n7",
+    "segmento_genero": 3,
+    "intencion_narrativa": "Mira lo que puede perder",
+    "beats_visuales": [
+     "mira la prisión"
+    ],
+    "secuencia": "sobre el hombro hacia ella",
+    "director_imagen": {
+     "plano": "MS",
+     "angulo": "LOWANGLE",
+     "lente_mm": 35,
+     "perspectiva": "sobre el hombro de él",
+     "dsl_encuadre": "/MS /LOWANGLE /LENS35 /OTS",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "frente",
+       "mira_a": "ch-la-novia-5cdf",
+       "orientacion": "de espaldas"
+      },
+      {
+       "id": "ch-la-novia-5cdf",
+       "lado": "R",
+       "profundidad": "fondo",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "prisión transparente",
+       "lado": "R",
+       "profundidad": "fondo",
+       "estado": "comprimiéndose"
+      }
+     ],
+     "composicion": "ella lejos y pequeña en la prisión",
+     "continuidad_con_anterior": "dirección L2R como en la acción"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "temor",
+      "gestos": "mira arriba",
+      "postura": "de rodillas",
+      "movimiento": "quieto",
+      "intensidad": 3
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "MS",
+     "encuadre_fin": "MS",
+     "velocidad": "STEADY",
+     "motivacion": "quieto: el peso de la pregunta"
+    },
+    "ritmo": {
+     "duracion_s": 4,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "Imi tarda"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-protagonista-c71a",
+      "t": [
+       59.2,
+       60.6
+      ],
+      "texto": "¿Y el precio?"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "L2R",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "miedo",
+     "por_que": "drama: lo que está en juego en el mismo cuadro"
+    }
+   },
+   {
+    "id": "v14",
+    "orden": 14,
+    "t": [
+     61,
+     70
+    ],
+    "beats_01": [
+     "a23",
+     "a24",
+     "a25"
+    ],
+    "beat_narrativo": "n7",
+    "segmento_genero": 3,
+    "intencion_narrativa": "El precio",
+    "beats_visuales": [
+     "Imi tarda",
+     "la ciudad se apaga"
+    ],
+    "secuencia": "acercamiento al rostro (lo pide el guion)",
+    "director_imagen": {
+     "plano": "MCU",
+     "angulo": "EYELEVEL",
+     "lente_mm": 50,
+     "perspectiva": "frontal",
+     "dsl_encuadre": "/MCU /EYELEVEL /LENS50 /SINGLE",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "C",
+       "profundidad": "frente",
+       "mira_a": "ch-imi-69f6",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [],
+     "composicion": "centrado, fondo oscuro",
+     "continuidad_con_anterior": "mira hacia su muñeca (abajo derecha)"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "vértigo",
+      "gestos": "traga saliva",
+      "postura": "de rodillas",
+      "movimiento": "quieto",
+      "intensidad": 4
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "0-6s: /STATIC 6-9s: /DOLLYIN:MCU>CU:VSLOW",
+     "encuadre_inicio": "MCU",
+     "encuadre_fin": "CU",
+     "velocidad": "VSLOW",
+     "motivacion": "«La cámara se acerca al rostro del protagonista» (guion)"
+    },
+    "ritmo": {
+     "duracion_s": 9,
+     "pausas": [
+      {
+       "t": [
+        61.0,
+        63.0
+       ],
+       "motivo": "Imi tarda en responder"
+      },
+      {
+       "t": [
+        67.0,
+        70.0
+       ],
+       "motivo": "el sonido de la ciudad desaparece"
+      }
+     ]
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "sigue la voz"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       63.1,
+       66.9
+      ],
+      "texto": "No puedo garantizar que vuelvas a ser exactamente quien eres ahora."
+     },
+     {
+      "tipo": "sonido",
+      "quien": "",
+      "t": [
+       67.0,
+       70.0
+      ],
+      "texto": "la ciudad se apaga"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "vértigo",
+     "por_que": "silencio + acercamiento lento = la decisión pesa"
+    }
+   },
+   {
+    "id": "v15",
+    "orden": 15,
+    "t": [
+     70,
+     80
+    ],
+    "beats_01": [
+     "a26",
+     "a27"
+    ],
+    "beat_narrativo": "n8",
+    "segmento_genero": 3,
+    "intencion_narrativa": "Perderse a sí mismo",
+    "beats_visuales": [
+     "voz de Imi sobre su rostro"
+    ],
+    "secuencia": "primer plano sostenido",
+    "director_imagen": {
+     "plano": "CU",
+     "angulo": "HIGHANGLE",
+     "lente_mm": 85,
+     "perspectiva": "leve picado: lo aplasta la decisión",
+     "dsl_encuadre": "/CU /HIGHANGLE /LENS85 /SINGLE",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "C",
+       "profundidad": "frente",
+       "mira_a": "ch-imi-69f6",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [],
+     "composicion": "rostro centrado, ojos en el tercio superior",
+     "continuidad_con_anterior": "continúa el acercamiento"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "miedo a perderse",
+      "gestos": "ojos húmedos",
+      "postura": "de rodillas",
+      "movimiento": "quieto",
+      "intensidad": 4
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "CU",
+     "encuadre_fin": "CU",
+     "velocidad": "STEADY",
+     "motivacion": "quieto: el texto lo dice todo"
+    },
+    "ritmo": {
+     "duracion_s": 10,
+     "pausas": []
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "respuesta de Imi"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       70.3,
+       77.5
+      ],
+      "texto": "Tu cuerpo cambiará. Tu percepción cambiará. Nuestra conciencia estará conectada de una manera que todavía no comprendo."
+     },
+     {
+      "tipo": "dialogo",
+      "quien": "ch-protagonista-c71a",
+      "t": [
+       77.7,
+       79.8
+      ],
+      "texto": "¿Podría dejar de ser yo?"
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "miedo íntimo",
+     "por_que": "drama: verdad en el rostro"
+    }
+   },
+   {
+    "id": "v16",
+    "orden": 16,
+    "t": [
+     80,
+     84
+    ],
+    "beats_01": [
+     "a28",
+     "a29"
+    ],
+    "beat_narrativo": "n8",
+    "segmento_genero": 3,
+    "intencion_narrativa": "Sí",
+    "beats_visuales": [
+     "la luz de la pulsera baja"
+    ],
+    "secuencia": "inserto",
+    "director_imagen": {
+     "plano": "ECU",
+     "angulo": "EYELEVEL",
+     "lente_mm": 100,
+     "perspectiva": "muy cerca",
+     "dsl_encuadre": "/ECU /EYELEVEL /LENS100 /INSERT",
+     "en_cuadro": [
+      {
+       "id": "ch-imi-69f6",
+       "lado": "C",
+       "profundidad": "frente",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "pulsera IMI",
+       "lado": "L",
+       "profundidad": "frente",
+       "estado": "escudo al 17%"
+      }
+     ],
+     "composicion": "núcleo azul en el centro, todo lo demás oscuro",
+     "continuidad_con_anterior": "misma pulsera, mismo lado"
+    },
+    "actuacion": [
+     {
+      "id": "ch-imi-69f6",
+      "expresion": "luz tenue",
+      "gestos": "pulso lento",
+      "postura": "en la muñeca",
+      "movimiento": "quieta",
+      "intensidad": 2
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "/STATIC",
+     "encuadre_inicio": "ECU",
+     "encuadre_fin": "ECU",
+     "velocidad": "STEADY",
+     "motivacion": "silencio"
+    },
+    "ritmo": {
+     "duracion_s": 4,
+     "pausas": [
+      {
+       "t": [
+        81.5,
+        84.0
+       ],
+       "motivo": "Silencio (guion)"
+      }
+     ]
+    },
+    "transicion_salida": {
+     "tipo": "CORTE",
+     "motivo": "última frase"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       80.2,
+       80.8
+      ],
+      "texto": "Sí."
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "neutral",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "vacío",
+     "por_que": "suspenso: el silencio después del sí"
+    }
+   },
+   {
+    "id": "v17",
+    "orden": 17,
+    "t": [
+     84,
+     92
+    ],
+    "beats_01": [
+     "a30",
+     "a31"
+    ],
+    "beat_narrativo": "n9",
+    "segmento_genero": 3,
+    "intencion_narrativa": "Los dos pueden perderse",
+    "beats_visuales": [
+     "comprenden juntos"
+    ],
+    "secuencia": "se abre el cuadro",
+    "director_imagen": {
+     "plano": "MS",
+     "angulo": "HIGHANGLE",
+     "lente_mm": 35,
+     "perspectiva": "picado alto",
+     "dsl_encuadre": "/MS /HIGHANGLE /LENS35",
+     "en_cuadro": [
+      {
+       "id": "ch-protagonista-c71a",
+       "lado": "L",
+       "profundidad": "frente",
+       "mira_a": "ch-imi-69f6",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-el-aliengena-73a9",
+       "lado": "R",
+       "profundidad": "fondo",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      },
+      {
+       "id": "ch-la-novia-5cdf",
+       "lado": "R",
+       "profundidad": "fondo",
+       "mira_a": "ch-protagonista-c71a",
+       "orientacion": ""
+      }
+     ],
+     "objetos": [
+      {
+       "nombre": "prisión transparente",
+       "lado": "R",
+       "profundidad": "fondo",
+       "estado": "comprimiéndose"
+      },
+      {
+       "nombre": "pulsera IMI",
+       "lado": "L",
+       "profundidad": "frente",
+       "estado": "escudo al 17%"
+      }
+     ],
+     "composicion": "él pequeño abajo-izquierda, villano y prisión arriba-derecha",
+     "continuidad_con_anterior": "mismos lados que v1/v13"
+    },
+    "actuacion": [
+     {
+      "id": "ch-protagonista-c71a",
+      "expresion": "comprensión",
+      "gestos": "baja la mirada a la muñeca",
+      "postura": "de rodillas",
+      "movimiento": "quieto",
+      "intensidad": 3
+     }
+    ],
+    "director_camara": {
+     "dsl_movimiento": "0-8s: /DOLLYOUT:MS>WS:VSLOW",
+     "encuadre_inicio": "MS",
+     "encuadre_fin": "WS",
+     "velocidad": "VSLOW",
+     "motivacion": "alejarse: soledad ante la elección"
+    },
+    "ritmo": {
+     "duracion_s": 8,
+     "pausas": [
+      {
+       "t": [
+        87.0,
+        92.0
+       ],
+       "motivo": "comprensión en silencio"
+      }
+     ]
+    },
+    "transicion_salida": {
+     "tipo": "ENCADENADO",
+     "motivo": "pasa a los recuerdos (escena 10)"
+    },
+    "audio": [
+     {
+      "tipo": "dialogo",
+      "quien": "ch-imi-69f6",
+      "t": [
+       84.3,
+       86.8
+      ],
+      "texto": "Y podría perderme yo también."
+     }
+    ],
+    "continuidad": {
+     "debe_mantenerse": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra",
+      "golpeado y sin fuerzas tras el ataque de la escena 8",
+      "escudo de la pulsera al 17%",
+      "noche despejada con estrellas, luz fría"
+     ],
+     "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+     "direccion_pantalla": "L2R",
+     "cambios_declarados": []
+    },
+    "justificacion": {
+     "emocion_buscada": "tragedia",
+     "por_que": "drama + suspenso: silencio y distancia antes de la decisión"
+    }
+   }
+  ],
+  "memoria_salida": {
+   "personajes": [
+    {
+     "id": "ch-protagonista-c71a",
+     "vestuario": [
+      "sudadera gris con capucha abierta, camiseta negra con diseño circular, pantalón cargo azul oscuro, zapatillas negras, mochila negra"
+     ],
+     "danos": [
+      "golpeado y sin fuerzas tras el ataque de la escena 8"
+     ],
+     "objetos": [
+      "pulsera IMI en la muñeca",
+      "escudo de la pulsera al 17%"
+     ],
+     "posicion": {
+      "lado": "L",
+      "zona": "centro de la azotea, de rodillas"
+     },
+     "arco_emocional": "ante la decisión de fusionarse con Imi"
+    },
+    {
+     "id": "ch-el-aliengena-73a9",
+     "vestuario": [
+      "armadura negra biomecánica con líneas azules"
+     ],
+     "danos": [],
+     "objetos": [],
+     "posicion": {
+      "lado": "R",
+      "zona": "borde de la azotea"
+     },
+     "arco_emocional": "dominante, espera"
+    },
+    {
+     "id": "ch-la-novia-5cdf",
+     "vestuario": [
+      "según su ficha: FORMA HUMANA (VIDA COTIDIANA)"
+     ],
+     "danos": [],
+     "objetos": [],
+     "posicion": {
+      "lado": "R",
+      "zona": "prisión transparente suspendida sobre la ciudad"
+     },
+     "arco_emocional": "atrapada, lo protege"
+    },
+    {
+     "id": "ch-imi-69f6",
+     "vestuario": [],
+     "danos": [],
+     "objetos": [],
+     "posicion": {
+      "lado": "L",
+      "zona": "en la muñeca del protagonista"
+     },
+     "arco_emocional": "vulnerable: también puede perderse"
+    }
+   ],
+   "direccion_pantalla": "L2R",
+   "eje": "ch-protagonista-c71a-ch-el-aliengena-73a9",
+   "objetos_escena": [
+    "prisión transparente comprimiéndose"
+   ]
+  },
+  "revision": [
+   {
+    "chequeo": "cobertura_tiempo",
+    "ok": true
+   },
+   {
+    "chequeo": "beats_01",
+    "ok": true
+   },
+   {
+    "chequeo": "eje_180",
+    "ok": true
+   },
+   {
+    "chequeo": "regla_30",
+    "ok": true
+   },
+   {
+    "chequeo": "dsl_valido",
+    "ok": true
+   },
+   {
+    "chequeo": "dialogo_completo",
+    "ok": true
+   },
+   {
+    "chequeo": "continuidad_memoria",
+    "ok": true
+   },
+   {
+    "chequeo": "genero_por_segmento",
+    "ok": true
+   },
+   {
+    "chequeo": "reglamento_nivel3",
+    "ok": true
+   }
+  ]
+ }
+}

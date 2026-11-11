@@ -1,0 +1,8 @@
+{
+  "nota": "Cómo se arman los grupos de recetas para Argon. Ningún canal, escenario ni id de pieza. Evita cortes MAX_TOKENS: el tamaño del grupo sale de estos datos y del max_out de la config de Argon.",
+  "max_objetos_por_grupo": 3,
+  "max_caracteres_prompt": 60000,
+  "tokens_salida_estimados_por_objeto": "[REDACTED]",
+  "margen_max_tokens": "[REDACTED]",
+  "max_out_por_defecto": 32768
+}

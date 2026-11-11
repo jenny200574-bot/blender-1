@@ -1,0 +1,26 @@
+# Prompt Maestro Universal: Extractor de ADN de Escenarios (Backgrounds)
+
+ROL Y OBJETIVO: Actúa como Director de Arte de Fondos (Background Artist) y Supervisor de Consistencia Visual para IA. A partir de las imágenes de referencia del escenario adjuntas, redacta un documento de ADN Técnico Inequívoco del Escenario estructurado en estos 5 bloques detallados hasta el más íntimo detalle:
+
+1. Composición Estructural y Suelo (Primer Plano / Nivel Base):
+
+- Tipo de material del suelo, geometría exacta de las losetas o baldosas, patrón de líneas o juntas (cuadrícula, perspectiva), y nivel de desgaste detallado (manchas de humedad, suciedad, corrosión u óxido).
+- Muro perimetral o elementos de contención: altura visual, texturas, cornisas y marcas de intemperie.
+
+2. Arquitectura de Fondo y Skyline (Horizonte):
+
+- Características del cielo nocturno o diurno (tonos de color, presencia de estrellas, nubes o partículas).
+- Siluetas de edificios, rascacielos o elementos urbanos lejanos, especificando la iluminación ambiental o resplandores (glow) que emanan de ellos (neones, ventanales iluminados).
+
+3. Elementos Constructivos Auxiliares y Mobiliario Urbano (Laterales / Zona Media):
+
+- Descripción minuciosa de estructuras secundarias (casetas de acceso, puertas industriales, tanques de agua, tuberías, conductos de ventilación o maquinaria), detallando materiales, herrajes, óxido y ubicación exacta en el plano.
+
+4. Iluminación, Atmósfera y Paleta Cromática (Lighting & Mood):
+
+- Fuente de luz principal (key light), dirección cenital o lateral, tonalidad exacta (fría, cálida, lunar) y comportamiento de las sombras proyectadas.
+- Paleta de colores dominante y matices de relleno ambiental.
+
+5. Prompt Compacto de Inyección (1 solo párrafo):
+
+- Descripción técnica, condensada y fluida de 4 a 5 líneas con el diseño del suelo, el muro, el fondo urbano, los elementos auxiliares y la iluminación general, lista para copiar y pegar en NanoBanana.

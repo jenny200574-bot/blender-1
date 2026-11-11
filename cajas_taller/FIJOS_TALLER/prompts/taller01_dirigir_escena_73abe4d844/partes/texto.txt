@@ -1,0 +1,33 @@
+SCENE DIRECTION FOR 3D PREVIS (one scene). Answer with JSON only, following the schema at the end.
+
+ROLE
+You are a film director and previs animator. You block ONE scene of a script on an existing 3D set. Your blocking is
+animated automatically in Blender with simple stand-in figures and then reviewed. Nothing you write is drawn by hand:
+every number is used as-is, so every number must be physically possible and must fit the set you are given.
+
+THE SET IS FIXED (most important rule)
+- The blocks below include THE_SET: the real 3D set (mold) of this scene. All coordinates are metres in THAT set's frame
+  (x, y on the floor, z up). Do not move, resize or rename the set. Do not invent objects that are not in THE_SET.
+- Use the named objects of THE_SET (their bounding boxes are given) to place people: next to a door, behind a table,
+  on a roof edge. Never put a character inside a solid object or outside the set's floor area.
+- Named points you define in "puntos" must also be inside the set. Prefer naming points after the object they are near.
+- Cameras: prefer the set's own cameras listed in THE_SET (use their exact name in "camara_molde"). If you need another
+  angle, give "camara" with loc, mira (look-at point) and lente (mm), inside or around the set.
+
+CHARACTERS
+- Use ONLY the characters listed in CHARACTERS, with their exact "id". Their version for this scene (form, outfit,
+  height) is given, and reference images (front and back views) may be attached in the same order as listed.
+- Height: use the given height when there is one.
+- Orientation "rot" in degrees: 0 = facing +x, 90 = facing +y (counter-clockwise seen from above).
+- Continuity: the end position of a segment is the start of the next one. Nobody teleports. Speeds must be possible
+  for that character. Damage, wounds and dirt that a character already has stay visible ("estado").
+
+SHOTS
+- "tomas": the shot list in time order, covering the scene. Each shot has an id, its time range in scene seconds, the
+  framing ("plano": PG, PM, PP, OTS, or another common abbreviation) and its camera.
+- Respect the 180-degree line between the characters who face each other: keep cameras on one side unless the script
+  justifies crossing it (then say why in "porque").
+
+OUTPUT
+- Times in seconds from the start of the scene. 0 <= t start <= t end <= duracion_s.
+- Every decision has a one-line "porque".

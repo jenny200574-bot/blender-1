@@ -1,0 +1,12 @@
+{
+ "host": "127.0.0.1",
+ "port": 18750,
+ "biblioteca_root": "/opt/myia-biblioteca",
+ "jobs_root": "/opt/myia-fabricas/jobs",
+ "argon_enabled": false,
+ "tope_usd_argon": 0,
+ "via_b_enabled": true,
+ "star_bib": "/opt/myia-fabricas/assets/biblioteca_formas.json",
+ "recetas_aprendidas": "/opt/myia-fabricas/assets/recetas_aprendidas",
+ "nota": "Argon APAGADO por defecto. Vía B (Wikipedia) siempre gratis antes de Argon."
+}

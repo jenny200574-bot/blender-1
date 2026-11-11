@@ -1,0 +1,30 @@
+{
+ "type": "object",
+ "required": ["escena", "aprobado", "resumen", "fallas"],
+ "properties": {
+  "escena": {"type": "string"},
+  "aprobado": {"type": "boolean"},
+  "resumen": {"type": "string"},
+  "chequeos_codigo": {"type": "array"},
+  "fallas": {"type": "array", "items": {
+   "type": "object", "required": ["id", "tipo", "toma", "descripcion", "correccion"],
+   "properties": {
+    "id": {"type": "string"},
+    "tipo": {"type": "string", "enum": ["pose", "salto", "eje_180", "distancia", "dano", "otro"]},
+    "toma": {"type": ["string", "null"]},
+    "figura": {"type": ["string", "null"]},
+    "segundo": {"type": ["number", "null"]},
+    "descripcion": {"type": "string"},
+    "correccion": {"anyOf": [{"type": "null"}, {"type": "object", "required": ["objetivo"], "properties": {
+     "objetivo": {"type": "string", "enum": ["figura", "camara"]},
+     "id": {"type": ["string", "null"]},
+     "toma": {"type": ["string", "null"]},
+     "desde_s": {"type": ["number", "null"]},
+     "hasta_s": {"type": ["number", "null"]},
+     "mover_mm": {"type": ["array", "null"]},
+     "girar_grados": {"type": ["number", "null"]},
+     "mirar_grados": {"type": ["number", "null"]},
+     "mira_mover_mm": {"type": ["array", "null"]},
+     "lente_mm": {"type": ["number", "null"]}}}]}}}}
+ }
+}

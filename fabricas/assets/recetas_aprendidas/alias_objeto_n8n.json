@@ -1,0 +1,22 @@
+{
+  "amb-esc-habitacion-peluche-oso": "peluche_oso",
+  "amb-esc-habitacion-pelota-colores": "pelota_colores",
+  "amb-esc-habitacion-bloques-geometricos": "bloques_geometricos",
+  "amb-esc-habitacion-cesta-tela": "cesta_tela",
+  "amb-esc-habitacion-avion-madera": "avion_madera",
+  "amb-esc-habitacion-cortinas-ventana": "cortinas_ventana",
+  "amb-esc-habitacion-barra-cortinero": "barra_cortinero",
+  "amb-esc-habitacion-guirnalda-banderines": "guirnalda_banderines",
+  "amb-esc-habitacion-repisa-pared-izquierda": "repisa_pared",
+  "amb-esc-habitacion-perchero-pared": "perchero_pared",
+  "amb-esc-habitacion-interruptor-luz": "interruptor_luz",
+  "amb-esc-habitacion-lamparita-noche": "lamparita_noche",
+  "obj-lapiz": "lapiz",
+  "amb-esc-habitacion-bote-crayones": "bote_crayones",
+  "obj-pincel-magico": "pincel_magico",
+  "obj-papel-numeros": "papel_numeros",
+  "obj-candados-cofre": "candados",
+  "obj-vocales": "vocales",
+  "obj-numeros-1-al-5": "numeros",
+  "obj-visor-spark": "visor"
+}

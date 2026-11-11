@@ -1,0 +1,11 @@
+{
+  "id": "nucleo_imi",
+  "dueno": "kael_despues",
+  "sellado": false,
+  "version": 1,
+  "origen": "semilla_ako_cubo_cargar_js",
+  "canal": "genesis",
+  "canal_id": "cn-gnesis-digital-el-de-ed178619",
+  "nombre": "Nucleo imi",
+  "nombre_origen": "derivado_del_id"
+}

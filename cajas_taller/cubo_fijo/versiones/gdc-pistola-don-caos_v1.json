@@ -1,0 +1,46 @@
+{
+  "id": "gdc-pistola-don-caos",
+  "nombre": "Pistola de rayos de Don Caos (Rayo Ordenador / Confundidor)",
+  "clase": "objeto",
+  "subclase": "portado",
+  "dueno": "gdc-don-caos",
+  "portador": "Don Caos",
+  "colores": {
+    "cuerpo": "morado/plateado #C9CED6",
+    "luz": "turquesa #2BD9C9"
+  },
+  "nunca_cambia": "Pistola de rayos de juguete, morada y plateada, con luz turquesa. SE QUEDA (orden de Ricardo 2-nov-2026), aunque la biblia diga «nada de armas»: es un juguete cómico que no hace daño.",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "sellado": false,
+  "version": 1,
+  "adn_estado": "sin ADN Ako: espera la imagen pintada del paso 00 (4b2) y SELLO OBJ; PAGO CERRADO",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+  "referencia_retirada": {
+    "ruta": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/don-caos/referencia-cliente/refs/d3ddaeb70fed28cb.jpg",
+    "motivo": "foto original del personaje: un objeto no la usa como referencia (orden Ricardo 2-nov-2026)",
+    "cuando": "2026-11-02T18:20:00-05:00"
+  },
+  "origen_imagen": "la crea el paso 00 del flujo (4b/4b2 → SELLO OBJ, imagen pintada); si necesita al personaje, usa la hoja aprobada de cubo_fijo/hojas/",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-rayo-confundidor.png",
+  "imagen_sha256": "fb7bc3c270380de5269e6d29e0cb16908933b00459fc906c417c7a1bf0ba1c5b",
+  "imagen_origen": "paso 00 4b2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 6,
+    "fondo_cm": 3,
+    "alto_cm": 4.5
+  },
+  "medidas_fuente": "4b1 inv_obj_historia__obj-pincel-magico__f40e27.json",
+  "ids_capitulo": [
+    "obj-rayo-confundidor"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-rayo-confundidor"
+  ],
+  "imagen_ref_anterior": null
+}

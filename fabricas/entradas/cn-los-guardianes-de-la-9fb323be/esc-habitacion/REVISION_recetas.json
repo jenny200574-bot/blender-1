@@ -1,0 +1,571 @@
+{
+ "G1_juguetes_textiles": {
+  "ancla_tubos": {
+   "amb-esc-habitacion-cesta-tela": {
+    "convertido": true,
+    "ancla": "centro",
+    "detalle": {
+     "dato": "receta.altura_cuerpo_y_asas_m",
+     "valor_declarado_m": 0.355,
+     "razon_argon": "El cuerpo cilíndrico con franja verde intermedia llega a z=0.355 m y las dos asas superiores de cuerda alcanzan la altura máxima de z=0.40 m.",
+     "tope_si_centro_m": 0.355,
+     "tope_si_base_m": 0.395
+    }
+   }
+  },
+  "apta_grupo": true,
+  "errores_grupo": [],
+  "avisos_grupo": [],
+  "esquema_global": [],
+  "por_objeto": {
+   "amb-esc-habitacion-peluche-oso": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 18,
+     "piezas": 18,
+     "bbox_m": [
+      0.24,
+      0.22,
+      0.28
+     ],
+     "grupos": 1,
+     "datos": 10,
+     "con_fuente": 3
+    },
+    "vacios": [
+     "El corpus no especifica medidas métricas absolutas de cada extremidad del osito; se deducen proporcionalmente a partir de caja_m.",
+     "La ficha no especifica un color separado para ojos y nariz; se emplea el color principal #B87B4B de la ficha."
+    ]
+   },
+   "amb-esc-habitacion-pelota-colores": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 7,
+     "piezas": 7,
+     "bbox_m": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 2
+    },
+    "vacios": [
+     "El corpus no detalla el radio exacto de los paneles circulares polares para una pelota de tela de 20 cm; se deduce a escala de caja_m."
+    ]
+   },
+   "amb-esc-habitacion-bloques-geometricos": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 10,
+     "piezas": 10,
+     "bbox_m": [
+      0.25,
+      0.18,
+      0.16
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 2
+    },
+    "vacios": [
+     "El corpus no fija las dimensiones individuales de cada bloque en una pirámide de 25x18x16 cm; se deducen de caja_m."
+    ]
+   },
+   "amb-esc-habitacion-cesta-tela": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 10,
+     "piezas": 79,
+     "bbox_m": [
+      0.36,
+      0.36,
+      0.4
+     ],
+     "grupos": 1,
+     "datos": 9,
+     "con_fuente": 3
+    },
+    "vacios": [
+     "El corpus no especifica el grosor de pared ni la altura exacta de las asas de cuerda; se deducen de caja_m y nombre."
+    ]
+   },
+   "amb-esc-habitacion-avion-madera": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 15,
+     "piezas": 15,
+     "bbox_m": [
+      0.22,
+      0.18,
+      0.12
+     ],
+     "grupos": 1,
+     "datos": 10,
+     "con_fuente": 3
+    },
+    "vacios": [
+     "El corpus no proporciona planos dimensionales de un avioncito de madera de 22 cm; las proporciones de fuselaje, tren y cola se deducen de caja_m."
+    ]
+   }
+  }
+ },
+ "G2_pared_ventana_luz": {
+  "ancla_tubos": {},
+  "apta_grupo": true,
+  "errores_grupo": [],
+  "avisos_grupo": [],
+  "esquema_global": [],
+  "por_objeto": {
+   "amb-esc-habitacion-cortinas-ventana": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 13,
+     "piezas": 13,
+     "bbox_m": [
+      1.9,
+      0.12,
+      1.65
+     ],
+     "grupos": 1,
+     "datos": 9,
+     "con_fuente": 2
+    },
+    "vacios": [
+     "El corpus F01 no especifica proporciones numéricas de ancho de caída ni altura exacta del lazo sujetador; se deducen de caja_m."
+    ]
+   },
+   "amb-esc-habitacion-barra-cortinero": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 9,
+     "piezas": 9,
+     "bbox_m": [
+      2.0,
+      0.08,
+      0.08
+     ],
+     "grupos": 1,
+     "datos": 9,
+     "con_fuente": 2
+    },
+    "vacios": [
+     "El corpus F02 no especifica diámetros numéricos de barra ni de remates esféricos; se deducen de las dimensiones de caja_m."
+    ]
+   },
+   "amb-esc-habitacion-guirnalda-banderines": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 15,
+     "piezas": 15,
+     "bbox_m": [
+      2.4,
+      0.05,
+      0.18
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 2
+    },
+    "vacios": [
+     "La ficha no especifica un código hexadecimal propio para el hilo trenzado superior; se emplea el color principal #FFC928.",
+     "El corpus F03 no detalla la cantidad ni el paso en metros entre banderines; se deducen 12 banderines uniformemente espaciados en los 2.4 m de ancho."
+    ]
+   },
+   "amb-esc-habitacion-repisa-pared-izquierda": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 7,
+     "piezas": 7,
+     "bbox_m": [
+      0.68,
+      0.2,
+      0.06
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 2
+    },
+    "vacios": [
+     "El corpus F04 no especifica el espesor exacto en milímetros del tablero ni el radio de curvatura de los soportes; se deducen de caja_m."
+    ]
+   },
+   "amb-esc-habitacion-perchero-pared": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 9,
+     "piezas": 9,
+     "bbox_m": [
+      0.42,
+      0.08,
+      0.12
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 1
+    },
+    "vacios": [
+     "La ficha menciona en color_4a1 pomos azul, amarillo y verde sin dar sus códigos hexadecimales en colores_usados; siguiendo la regla 5 se aplica el color principal #F2E2CE.",
+     "El corpus F05 trata principalmente percheros de pie (150 cm) y no detalla medidas de percheros murales infantiles; se deducen de caja_m."
+    ]
+   },
+   "amb-esc-habitacion-interruptor-luz": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 5,
+     "piezas": 5,
+     "bbox_m": [
+      0.08,
+      0.03,
+      0.12
+     ],
+     "grupos": 1,
+     "datos": 7,
+     "con_fuente": 1
+    },
+    "vacios": [
+     "El corpus F06 indica que las dimensiones de las placas varían según el país sin dar medidas en metros; se deducen de caja_m."
+    ]
+   },
+   "amb-esc-habitacion-lamparita-noche": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 10,
+     "piezas": 10,
+     "bbox_m": [
+      0.12,
+      0.16,
+      0.14
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 1
+    },
+    "vacios": [
+     "La ficha no asigna un color separado para los rasgos faciales de la sonrisa; se emplea el color único #FFF8EE.",
+     "El corpus F07 no incluye dimensiones geométricas de una lámpara con forma de nube; se deducen de caja_m y nombre."
+    ]
+   }
+  }
+ },
+ "G3_utiles_dibujo": {
+  "ancla_tubos": {
+   "amb-esc-habitacion-bote-crayones": {
+    "convertido": true,
+    "ancla": "centro",
+    "detalle": {
+     "dato": "receta.cubilete.alto_m",
+     "valor_declarado_m": 0.078,
+     "razon_argon": "El cubilete bajo mide 0.078 m de alto con fondo de 0.01 m para dejar sobresalir las puntas de los crayones de 0.089 a 0.10 m hasta alcanzar el alto total de 0.11 m.",
+     "tope_si_centro_m": 0.078,
+     "tope_si_base_m": 0.11
+    }
+   }
+  },
+  "apta_grupo": true,
+  "errores_grupo": [],
+  "avisos_grupo": [
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_rojo_cuerpo: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_rojo_punta: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_azul_cuerpo: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_azul_punta: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_verde_cuerpo: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_verde_punta: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_amarillo_cuerpo: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_amarillo_punta: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.base_semiesferica_azul: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.tapon_azul_cilindro: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.ranura_union: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.anillo_virola_inferior: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.virola_dorada: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.anillo_virola_superior: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.punta_bulbo_base: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.punta_gota_cono: color fuera de la paleta de la ficha",
+   "A_COLOR obj-pincel-magico.punta_gota_remate: color fuera de la paleta de la ficha",
+   "A_COLOR obj-papel-numeros.dibujo_canon_rayo: color fuera de la paleta de la ficha",
+   "A_COLOR obj-papel-numeros.dibujo_empunadura_rayo: color fuera de la paleta de la ficha",
+   "A_COLOR obj-papel-numeros.dibujo_punta_rayo: color fuera de la paleta de la ficha",
+   "A_COLOR obj-papel-numeros.dibujo_chispas_superiores: color fuera de la paleta de la ficha",
+   "A_COLOR obj-papel-numeros.dibujo_franja_numeros: color fuera de la paleta de la ficha"
+  ],
+  "esquema_global": [],
+  "por_objeto": {
+   "obj-lapiz": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 5,
+     "piezas": 5,
+     "bbox_m": [
+      0.025,
+      0.18,
+      0.025
+     ],
+     "grupos": 1,
+     "datos": 10,
+     "con_fuente": 3
+    },
+    "vacios": [
+     "La ficha solo especifica el color #FFC928 en colores_usados.*; se aplica como color guia a todas las partes por protocolo."
+    ]
+   },
+   "amb-esc-habitacion-bote-crayones": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_rojo_cuerpo: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_rojo_punta: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_azul_cuerpo: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_azul_punta: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_verde_cuerpo: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_verde_punta: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_amarillo_cuerpo: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_amarillo_punta: color fuera de la paleta de la ficha"
+    ],
+    "info": {
+     "partes": 11,
+     "piezas": 41,
+     "bbox_m": [
+      0.12,
+      0.12,
+      0.11
+     ],
+     "grupos": 1,
+     "datos": 11,
+     "con_fuente": 3
+    },
+    "vacios": [
+     "La ficha no da codigos hexadecimales exactos para los cuatro colores nombrados en color_4a1 (rojo, azul, verde y amarillo); se emplean sus tonos primarios equivalentes."
+    ]
+   },
+   "obj-pincel-magico": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR obj-pincel-magico.base_semiesferica_azul: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.tapon_azul_cilindro: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.ranura_union: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.anillo_virola_inferior: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.virola_dorada: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.anillo_virola_superior: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.punta_bulbo_base: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.punta_gota_cono: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.punta_gota_remate: color fuera de la paleta de la ficha"
+    ],
+    "info": {
+     "partes": 10,
+     "piezas": 10,
+     "bbox_m": [
+      0.025,
+      0.025,
+      0.18
+     ],
+     "grupos": 1,
+     "datos": 9,
+     "con_fuente": 2
+    },
+    "vacios": []
+   },
+   "obj-papel-numeros": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR obj-papel-numeros.dibujo_canon_rayo: color fuera de la paleta de la ficha",
+     "A_COLOR obj-papel-numeros.dibujo_empunadura_rayo: color fuera de la paleta de la ficha",
+     "A_COLOR obj-papel-numeros.dibujo_punta_rayo: color fuera de la paleta de la ficha",
+     "A_COLOR obj-papel-numeros.dibujo_chispas_superiores: color fuera de la paleta de la ficha",
+     "A_COLOR obj-papel-numeros.dibujo_franja_numeros: color fuera de la paleta de la ficha"
+    ],
+    "info": {
+     "partes": 8,
+     "piezas": 8,
+     "bbox_m": [
+      0.06,
+      0.002,
+      0.045
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 1
+    },
+    "vacios": []
+   }
+  }
+ },
+ "G4_objetos_magicos": {
+  "ancla_tubos": {},
+  "apta_grupo": true,
+  "errores_grupo": [],
+  "avisos_grupo": [
+   "A_COLOR obj-candados-cofre.arco_izq_1: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.arco_der_1: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.arco_sup_1: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.halo_1: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.gota_base_1: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.gota_punta_1: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.arco_izq_2: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.arco_der_2: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.arco_sup_2: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.halo_2: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.esfera_azul_1: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.esfera_azul_2: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.esfera_azul_3: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.arco_izq_3: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.arco_der_3: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.arco_sup_3: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.halo_3: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.pico_izq_3: color fuera de la paleta de la ficha",
+   "A_COLOR obj-candados-cofre.pico_der_3: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.lente_continua: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.nodo_central: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.placa_ceja_izq: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.placa_ceja_der: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.led_lateral_izq: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.led_lateral_der: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.bisagra_izq: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.bisagra_der: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.franja_patilla_izq: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.franja_patilla_der: color fuera de la paleta de la ficha"
+  ],
+  "esquema_global": [],
+  "por_objeto": {
+   "obj-candados-cofre": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR obj-candados-cofre.arco_izq_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_der_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_sup_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.halo_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.gota_base_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.gota_punta_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_izq_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_der_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_sup_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.halo_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.esfera_azul_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.esfera_azul_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.esfera_azul_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_izq_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_der_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_sup_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.halo_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.pico_izq_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.pico_der_3: color fuera de la paleta de la ficha"
+    ],
+    "info": {
+     "partes": 22,
+     "piezas": 22,
+     "bbox_m": [
+      0.36,
+      0.04,
+      0.14
+     ],
+     "grupos": 3,
+     "datos": 11,
+     "con_fuente": 2
+    },
+    "vacios": [
+     "Proporcion exacta de separacion horizontal entre los tres candados no especificada en el corpus; deducida uniformemente dentro de ancho=0.36 m."
+    ]
+   },
+   "obj-vocales": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 17,
+     "piezas": 17,
+     "bbox_m": [
+      0.16,
+      0.06,
+      0.22
+     ],
+     "grupos": 5,
+     "datos": 11,
+     "con_fuente": 3
+    },
+    "vacios": [
+     "Grosor exacto de trazo de cada vocal no especificado en el corpus; deducido en 0.010-0.030 m para encajar las 5 letras en 0.16 m de ancho."
+    ]
+   },
+   "obj-numeros-1-al-5": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "info": {
+     "partes": 20,
+     "piezas": 20,
+     "bbox_m": [
+      0.14,
+      0.06,
+      0.2
+     ],
+     "grupos": 5,
+     "datos": 10,
+     "con_fuente": 2
+    },
+    "vacios": [
+     "La ficha no incluye adn_texto ni colores individuales por digito; se aplica el color principal #B0B0B0 de colores_usados a todas las partes."
+    ]
+   },
+   "obj-visor-spark": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR obj-visor-spark.lente_continua: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.nodo_central: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.placa_ceja_izq: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.placa_ceja_der: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.led_lateral_izq: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.led_lateral_der: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.bisagra_izq: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.bisagra_der: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.franja_patilla_izq: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.franja_patilla_der: color fuera de la paleta de la ficha"
+    ],
+    "info": {
+     "partes": 20,
+     "piezas": 20,
+     "bbox_m": [
+      0.16,
+      0.12,
+      0.06
+     ],
+     "grupos": 1,
+     "datos": 11,
+     "con_fuente": 3
+    },
+    "vacios": [
+     "Dimensiones milimetricas de los LEDs laterales y del nodo central no figuran en el corpus; deducidas proporcionalmente al alto de 0.06 m del visor."
+    ]
+   }
+  }
+ }
+}

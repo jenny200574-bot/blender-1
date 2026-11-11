@@ -1,0 +1,31 @@
+{
+  "id": "gdc-visor",
+  "nombre": "visor",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "historia",
+  "sellado": false,
+  "version": 1,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-visor.png",
+  "imagen_sha256": "716eab0d3ea1fdf1c1bb8ec76e57be645ce8df6e7b5c0b15cfc869a70ca2e853",
+  "imagen_origen": "paso 00 4b2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 16,
+    "fondo_cm": 12,
+    "alto_cm": 6.5
+  },
+  "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+  "ids_capitulo": [
+    "obj-visor"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-visor"
+  ]
+}

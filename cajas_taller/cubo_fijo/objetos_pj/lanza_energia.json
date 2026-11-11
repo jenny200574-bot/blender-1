@@ -1,0 +1,12 @@
+{
+  "id": "lanza_energia",
+  "dueno": "alien",
+  "gap": "hoja>=512px",
+  "sellado": false,
+  "version": 1,
+  "origen": "semilla_ako_cubo_cargar_js",
+  "canal": "genesis",
+  "canal_id": "cn-gnesis-digital-el-de-ed178619",
+  "nombre": "Lanza energia",
+  "nombre_origen": "derivado_del_id"
+}

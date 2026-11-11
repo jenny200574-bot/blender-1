@@ -1,0 +1,42 @@
+{
+ "type": "object",
+ "required": ["personajes", "avisos"],
+ "properties": {
+  "idioma_hoja": {"type": "string"},
+  "personajes": {"type": "array", "items": {
+   "type": "object",
+   "required": ["nombre", "nombre_en_mapa", "rol", "edad", "descripcion", "nunca_cambia", "expresiones", "versiones", "etapas_transformacion"],
+   "properties": {
+    "nombre": {"type": "string"},
+    "nombre_en_mapa": {"type": "string"},
+    "rol": {"type": "string"},
+    "edad": {"type": "string"},
+    "descripcion": {"type": "string"},
+    "personalidad": {"type": "array", "items": {"type": "string"}},
+    "nunca_cambia": {"type": "array", "items": {"type": "string"}},
+    "expresiones": {"type": "array", "items": {"type": "object", "required": ["nombre"], "properties": {
+      "nombre": {"type": "string"}, "caja": {"type": "array", "items": {"type": "integer"}}}}},
+    "versiones": {"type": "array", "items": {
+     "type": "object",
+     "required": ["nombre", "nombre_en_mapa", "descripcion_visual", "altura", "mejor_vista", "calidad", "por_que_calidad", "falta_ver"],
+     "properties": {
+      "nombre": {"type": "string"},
+      "nombre_en_mapa": {"type": "string"},
+      "es_transformacion_de": {"type": "string"},
+      "descripcion_visual": {"type": "string"},
+      "texto_de_la_hoja": {"type": "string"},
+      "altura": {"type": "string"},
+      "mejor_vista": {"type": "object", "required": ["caja", "cuerpo_completo"], "properties": {
+        "caja": {"type": "array", "items": {"type": "integer"}}, "cuerpo_completo": {"type": "boolean"}, "de_frente": {"type": "boolean"}}},
+      "otras_vistas": {"type": "array", "items": {"type": "object", "required": ["caja"], "properties": {
+        "caja": {"type": "array", "items": {"type": "integer"}}, "que_muestra": {"type": "string"}}}},
+      "calidad": {"type": "string", "enum": ["clara", "pequena", "poco_clara", "parcial"]},
+      "por_que_calidad": {"type": "string"},
+      "falta_ver": {"type": "array", "items": {"type": "string"}}
+     }}},
+    "etapas_transformacion": {"type": "array", "items": {"type": "object", "required": ["nombre"], "properties": {
+      "nombre": {"type": "string"}, "caja": {"type": "array", "items": {"type": "integer"}}}}}
+   }}},
+  "avisos": {"type": "array", "items": {"type": "string"}}
+ }
+}

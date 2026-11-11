@@ -1,0 +1,13 @@
+{
+  "id": "manilla_imi",
+  "adn_id": "manilla",
+  "dueno": "kael_antes",
+  "nota": "manilla ≠ anillo",
+  "sellado": false,
+  "version": 1,
+  "origen": "semilla_ako_cubo_cargar_js",
+  "canal": "genesis",
+  "canal_id": "cn-gnesis-digital-el-de-ed178619",
+  "nombre": "Manilla imi",
+  "nombre_origen": "derivado_del_id"
+}

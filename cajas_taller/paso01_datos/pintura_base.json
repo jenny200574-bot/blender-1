@@ -1,0 +1,14 @@
+{
+ "PISTA": "PISTA INMI (2026-10-29): orden 87 — textos base del pedido «híbrido tira» del cubo 11 (método de Ako, universal).",
+ "_nota": "Textos GENÉRICOS del método híbrido (copiados de tira_motor1.pintar de Ako, sin nada de un canal). {campos} se llenan con la config del canal.",
+ "encabezado": "Trace strictly over the exact 3D mannequin positions, scale and camera perspective from the reference; DO NOT center characters on the edges; DO NOT turn a character to face the camera if the mannequin has its back turned; ignore the mannequin colours and blocky shapes, they only mark position; the mannequin shape is NOT the body; distant figures stay small and distant exactly where they stand.",
+ "estilo": "STYLE: {estilo}. {estilo_extra}",
+ "hoja": "STORYBOARD SHEET: ONE SCENE ({escena_corta}), TAKES {tomas}.",
+ "maqueta": "One image holding exactly {n} separate panels in {filas} rows of {cols} columns, same grid as Image {iM}. Every panel is an exact {aspecto_panel} frame. Thin uniform pure-white gutters and a visible pure-white outer margin. Borderless panels. Reading order left to right, top to bottom. Each panel is the frozen opening frame of its animated take. Pure artwork: no captions, balloons, numbers, titles or lettering.",
+ "consistencia": "2. CONSISTENCY: one identical look in all {n} panels{y_previa}: same place, light, {momento}, palette, outfits; damage persists.",
+ "solo": "Only these characters: {claves}; no other people. HEIGHT: {alturas}; sizes and positions in every panel are exactly those of the figures in Image {iM}. Do NOT recenter or enlarge.",
+ "set": "{descripcion} Camera, layout and orientation of every panel come from Image {iM}. Keep screen direction continuous; NEVER mirror or flip any panel.",
+ "previa": "PREVIOUS APPROVED STRIP of this same scene (continuity): this is the previous take; continue with exactly the same drawing style, same characters and same {set_corto} set; never copy its layout or poses.",
+ "leyenda": "layout mold sheet from Blender with the same page grid ({cols} columns x {filas} rows): grey blurred background = the set; {figuras}; skin-coloured patch = where the FACE points, black = BACK of head/hair{extras}; never copy the mold colors, blocky shapes or spheres.",
+ "exclude_metodo": "text, letters, captions, speech bubbles, subtitles, panel numbers, watermark, inner panel borders, extra panels, extra characters, chibi, extra limbs, deformed hands, mannequins, placeholder figures, copying the mold colors, 3d render look, mirrored panels"
+}

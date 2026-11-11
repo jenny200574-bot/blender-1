@@ -1,0 +1,35 @@
+{
+  "id": "gdc-libro-cuentos",
+  "nombre": "Libro de cuentos",
+  "clase": "objeto",
+  "subclase": "historia",
+  "dueno": null,
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-libro-de-cuentos.png",
+  "nunca_cambia": "Libro de cuentos abierto sobre la cama; sus letras salen volando como mariposas (guion T01E01, gancho).",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "sellado": false,
+  "version": 1,
+  "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO; falta imagen de referencia (no hay en material del cliente)",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+  "imagen_sha256": "46251855a6c0a9eaff7971ee6a8f3b02024a38306d6dedcdd950522a879f4dcf",
+  "imagen_origen": "paso 00 4b2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 36,
+    "fondo_cm": 4.5,
+    "alto_cm": 24
+  },
+  "medidas_fuente": "4b1 inv_obj_historia__obj-libro-de-cuentos__a526b9.json",
+  "ids_capitulo": [
+    "obj-libro-de-cuentos"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-libro-de-cuentos"
+  ],
+  "imagen_ref_anterior": null
+}

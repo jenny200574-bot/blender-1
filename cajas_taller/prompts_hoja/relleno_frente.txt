@@ -1,0 +1,9 @@
+Make ONE standard character reference image: the FULL-BODY FRONT view of a SECONDARY (filler) character of this chapter.
+Character: «{PERSONAJE}». It is NOT one of the main characters of the channel: design it generic and discreet, an ordinary person of its role, and do not make it look like any main character.
+If the name refers to a group of people, draw ONE typical member of that group.
+What the script and the scene plan say about it (Spanish; use it only for role, clothing and attitude, never write it in the image): {DESCRIPCION}
+View: seen from the front, facing the viewer, standing upright in a neutral relaxed pose, arms slightly away from the body, both feet flat on the ground, the whole body visible.
+Framing (always the same): {ENCUADRE}.
+Background: {FONDO}. No text, no labels, no logos, no panel borders, no other characters, no effects.
+Fixed channel style: apply its technique and its 'Characters' part exactly (line quality, painting, color palette, proportions). Style:
+{ESTILO}

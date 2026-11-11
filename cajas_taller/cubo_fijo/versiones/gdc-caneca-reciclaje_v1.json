@@ -1,0 +1,31 @@
+{
+  "id": "gdc-caneca-reciclaje",
+  "nombre": "caneca reciclaje",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "escenario",
+  "sellado": false,
+  "version": 1,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-caneca-reciclaje.png",
+  "imagen_sha256": "08b92e49defd8b6e544ad72d8f50f442e5cbea880ca42c69d725b3df605df4f3",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 38,
+    "fondo_cm": 38,
+    "alto_cm": 50
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-flores__c28cd6.json",
+  "ids_capitulo": [
+    "obj-caneca-reciclaje"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-caneca-reciclaje"
+  ]
+}

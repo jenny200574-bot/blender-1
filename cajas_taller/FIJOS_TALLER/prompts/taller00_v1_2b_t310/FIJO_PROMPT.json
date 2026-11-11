@@ -1,0 +1,17 @@
+{
+ "paso": "taller00_v1_2b_t310",
+ "sha256": "e20ba99f3c96842cb5a0845717d5bc255091323d7b8c68afee72c2dc401e58c0",
+ "partes": {
+  "esquema": "c9f7693861c71b64787f855f86323290a75620efdc709accd97a08718a487700",
+  "json_out": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+  "max_out": "0f255ec16482c343fd099ba9668863778be40dc166a6856b1d470e0bc97cc6fd",
+  "max_rondas": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+  "modelo": "fedcf0678c6ce4486fc33bd750a8ed628d0728711e97469ef5ff9b021a0c54aa",
+  "nivel": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+  "rotulos_bloques": "d2bfe59b032f6865cfee12d7bca3135d9ff8dfe5cb8f902d41724e59fea5fc30",
+  "texto": "18d683bacc522f0b0806f8e62940f309c036412a81d5cafe671f12084c5fbd94"
+ },
+ "aprobado_por": "inmi (equipo técnico) — taller n8n · t839u 3clases",
+ "fecha": "2026-11-05T06:58:33",
+ "nota": "Taller n8n, cadena paso 00 v1 = prompts de la prueba del 28-oct (t372u), programados por orden de Ricardo t376u. Registro del taller, no el oficial. | t839u: clase utileria/escenario/personaje. | t839u clase utileria/escenario/personaje"
+}

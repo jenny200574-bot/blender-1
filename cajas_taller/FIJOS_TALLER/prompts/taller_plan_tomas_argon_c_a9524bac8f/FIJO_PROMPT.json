@@ -1,0 +1,16 @@
+{
+ "paso": "taller_plan_tomas_argon_c_a9524bac8f",
+ "sha256": "a9524bac8fc297f91b5e6da94cd0082cd17287d581abe2fccfcebfb1ca1af336",
+ "partes": {
+  "esquema": "99a0bfec280ef0d1923cc1e7e5dfa967e44652d102c93d989dc8127ffccce85d",
+  "json_out": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+  "max_out": "4948963369b682612d22b081bdc92c13d23fb921cdd44e50f45d7e86b4b52022",
+  "max_rondas": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+  "modelo": "fedcf0678c6ce4486fc33bd750a8ed628d0728711e97469ef5ff9b021a0c54aa",
+  "nivel": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+  "texto": "7c10441a5e6dc7feaa8ee14bc813dfeaf9edef33683928f6f328f17f98c3b662"
+ },
+ "aprobado_por": "inmi (equipo técnico) — taller n8n",
+ "fecha": "2026-10-30T12:13:44",
+ "nota": "Taller n8n, cadena paso 00 v1 = prompts de la prueba del 28-oct (t372u), programados por orden de Ricardo t376u. Registro del taller, no el oficial."
+}

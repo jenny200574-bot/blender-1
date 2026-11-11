@@ -1,0 +1,23 @@
+[
+  {
+    "name": "walk_to_point",
+    "prompt": "A child walks forward to a point and stops",
+    "n30": 120,
+    "cmd": "TEXT_ENCODER_DEVICE=cpu python -m kimodo.scripts.generate \"A child walks forward to a point and stops\" --model soma --duration 3.97 --constraints /workspace/constraints/walk_to_point.json --num_samples 1 --seed 7 --bvh --output /workspace/out/walk_to_point --bvh_standard_tpose",
+    "path": "/workspace/estudio_animacion/lab/kimodo_prueba_20261109/constraints/walk_to_point.json"
+  },
+  {
+    "name": "walk_sit",
+    "prompt": "A child walks forward then sits down on the ground",
+    "n30": 150,
+    "cmd": "TEXT_ENCODER_DEVICE=cpu python -m kimodo.scripts.generate \"A child walks forward then sits down on the ground\" --model soma --duration 4.97 --constraints /workspace/constraints/walk_sit.json --num_samples 1 --seed 7 --bvh --output /workspace/out/walk_sit --bvh_standard_tpose",
+    "path": "/workspace/estudio_animacion/lab/kimodo_prueba_20261109/constraints/walk_sit.json"
+  },
+  {
+    "name": "turn90",
+    "prompt": "A child walks, turns ninety degrees to the right, then continues walking",
+    "n30": 135,
+    "cmd": "TEXT_ENCODER_DEVICE=cpu python -m kimodo.scripts.generate \"A child walks, turns ninety degrees to the right, then continues walking\" --model soma --duration 4.47 --constraints /workspace/constraints/turn90.json --num_samples 1 --seed 7 --bvh --output /workspace/out/turn90 --bvh_standard_tpose",
+    "path": "/workspace/estudio_animacion/lab/kimodo_prueba_20261109/constraints/turn90.json"
+  }
+]

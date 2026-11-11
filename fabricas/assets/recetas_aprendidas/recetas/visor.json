@@ -1,0 +1,512 @@
+{
+ "id": "visor",
+ "nombre_generico": "Visor de Spark",
+ "nombre_en": "visor",
+ "categoria": "objetos_magicos",
+ "medidas_tipicas": {
+  "ancho_m": 0.16,
+  "fondo_m": 0.12,
+  "alto_m": 0.06
+ },
+ "medidas_fuente": "receta Argon vía B G4_objetos_magicos (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.16,
+  0.12,
+  0.06
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": null,
+ "apoyo": "en_mano",
+ "conjunto": false,
+ "piezas": 20,
+ "tipos_de_pieza": [
+  "caja",
+  "esfera"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "lente_continua",
+   "color_guia_rgb": [
+    0.0,
+    0.85,
+    0.95
+   ],
+   "centro_m": [
+    0.0,
+    -0.048,
+    0.03
+   ],
+   "tam_m": [
+    0.144,
+    0.016,
+    0.048
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "montura_superior",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    0.0,
+    -0.046,
+    0.055
+   ],
+   "tam_m": [
+    0.152,
+    0.024,
+    0.01
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "montura_inferior_izq",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    -0.042,
+    -0.046,
+    0.005
+   ],
+   "tam_m": [
+    0.068,
+    0.022,
+    0.01
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "montura_inferior_der",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    0.042,
+    -0.046,
+    0.005
+   ],
+   "tam_m": [
+    0.068,
+    0.022,
+    0.01
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "puente_nasal",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    0.0,
+    -0.044,
+    0.018
+   ],
+   "tam_m": [
+    0.02,
+    0.022,
+    0.016
+   ]
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "nodo_central",
+   "color_guia_rgb": [
+    0.0,
+    0.85,
+    0.95
+   ],
+   "centro_m": [
+    0.0,
+    -0.052,
+    0.048
+   ],
+   "radio_m": 0.008
+  },
+  {
+   "tipo": "caja",
+   "nombre": "placa_ceja_izq",
+   "color_guia_rgb": [
+    0.9,
+    0.9,
+    0.88
+   ],
+   "centro_m": [
+    -0.035,
+    -0.049,
+    0.055
+   ],
+   "tam_m": [
+    0.04,
+    0.02,
+    0.01
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "placa_ceja_der",
+   "color_guia_rgb": [
+    0.9,
+    0.9,
+    0.88
+   ],
+   "centro_m": [
+    0.035,
+    -0.049,
+    0.055
+   ],
+   "tam_m": [
+    0.04,
+    0.02,
+    0.01
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "lateral_visor_izq",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    -0.073,
+    -0.032,
+    0.03
+   ],
+   "tam_m": [
+    0.014,
+    0.032,
+    0.052
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "lateral_visor_der",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    0.073,
+    -0.032,
+    0.03
+   ],
+   "tam_m": [
+    0.014,
+    0.032,
+    0.052
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "led_lateral_izq",
+   "color_guia_rgb": [
+    0.95,
+    0.6,
+    0.1
+   ],
+   "centro_m": [
+    -0.076,
+    -0.03,
+    0.032
+   ],
+   "tam_m": [
+    0.008,
+    0.016,
+    0.008
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "led_lateral_der",
+   "color_guia_rgb": [
+    0.95,
+    0.6,
+    0.1
+   ],
+   "centro_m": [
+    0.076,
+    -0.03,
+    0.032
+   ],
+   "tam_m": [
+    0.008,
+    0.016,
+    0.008
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "bisagra_izq",
+   "color_guia_rgb": [
+    0.9,
+    0.9,
+    0.88
+   ],
+   "centro_m": [
+    -0.074,
+    -0.012,
+    0.03
+   ],
+   "tam_m": [
+    0.012,
+    0.016,
+    0.024
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "bisagra_der",
+   "color_guia_rgb": [
+    0.9,
+    0.9,
+    0.88
+   ],
+   "centro_m": [
+    0.074,
+    -0.012,
+    0.03
+   ],
+   "tam_m": [
+    0.012,
+    0.016,
+    0.024
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "patilla_izq",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    -0.074,
+    0.026,
+    0.032
+   ],
+   "tam_m": [
+    0.01,
+    0.068,
+    0.016
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "patilla_der",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    0.074,
+    0.026,
+    0.032
+   ],
+   "tam_m": [
+    0.01,
+    0.068,
+    0.016
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "franja_patilla_izq",
+   "color_guia_rgb": [
+    0.9,
+    0.9,
+    0.88
+   ],
+   "centro_m": [
+    -0.074,
+    0.026,
+    0.021
+   ],
+   "tam_m": [
+    0.01,
+    0.068,
+    0.006
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "franja_patilla_der",
+   "color_guia_rgb": [
+    0.9,
+    0.9,
+    0.88
+   ],
+   "centro_m": [
+    0.074,
+    0.026,
+    0.021
+   ],
+   "tam_m": [
+    0.01,
+    0.068,
+    0.006
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "punta_patilla_izq",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    -0.074,
+    0.052,
+    0.012
+   ],
+   "tam_m": [
+    0.01,
+    0.016,
+    0.024
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "punta_patilla_der",
+   "color_guia_rgb": [
+    0.184,
+    0.373,
+    0.769
+   ],
+   "centro_m": [
+    0.074,
+    0.052,
+    0.012
+   ],
+   "tam_m": [
+    0.01,
+    0.016,
+    0.024
+   ]
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.16,
+  "fondo": 0.12,
+  "alto": 0.06
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.06
+  ],
+  "frente": [
+   0.0,
+   -0.06,
+   0.03
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G4_objetos_magicos",
+  "objeto_id_origen": "obj-visor-spark",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "1ecee35a671618c7e5760031927df07cb8f1c35a38ee40b4a62afc2f16c7313e",
+  "costo_usd_grupo": 0.3077,
+  "costo_usd_repartido": 0.076925,
+  "citas": [
+   {
+    "fuente_id": "F02",
+    "clave": "anatomia.gafas_envolventes",
+    "cita": "Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the area surrounding the eye"
+   },
+   {
+    "fuente_id": "F02",
+    "clave": "anatomia.puente_nasal",
+    "cita": "The goggles were curved to fit the user's face and had a large groove cut in the back to allow for the nose."
+   },
+   {
+    "fuente_id": "F02",
+    "clave": "anatomia.lente_policarbonato",
+    "cita": "They are typically fitted with polycarbonate lenses to ensure impact resistance."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [
+   "A_COLOR obj-visor-spark.lente_continua: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.nodo_central: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.placa_ceja_izq: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.placa_ceja_der: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.led_lateral_izq: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.led_lateral_der: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.bisagra_izq: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.bisagra_der: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.franja_patilla_izq: color fuera de la paleta de la ficha",
+   "A_COLOR obj-visor-spark.franja_patilla_der: color fuera de la paleta de la ficha"
+  ],
+  "vacios": [
+   "Dimensiones milimetricas de los LEDs laterales y del nodo central no figuran en el corpus; deducidas proporcionalmente al alto de 0.06 m del visor."
+  ],
+  "info": {
+   "partes": 20,
+   "piezas": 20,
+   "bbox_m": [
+    0.16,
+    0.12,
+    0.06
+   ],
+   "grupos": 1,
+   "datos": 11,
+   "con_fuente": 3
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "obj-visor-spark"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

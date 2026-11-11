@@ -1,0 +1,39 @@
+{
+  "id": "gdc-valentina",
+  "nombre": "Valentina",
+  "ids_canal": [
+    "ch-valentina-a9be",
+    "valentina"
+  ],
+  "tipo": "persona",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/valentina/referencia-cliente/refs/85876d21180a93bf.jpg",
+  "nunca_cambia": "Casco morado, traje magenta/morado con líneas brillantes, botas magenta. Niña de 6 años. Siempre con su escudo morado con corazón rojo.",
+  "voz_adn": {
+    "schema": "voz_adn/v1_universal",
+    "motor": null,
+    "fuente": "Biblia GDC_00_1 + guion T01E01 del cliente (acotaciones de tono); escrito una vez por el ingeniero el 2-nov-2026; sin IA, US$0",
+    "rasgos": {
+      "timbre": "cálido, redondo, de niña",
+      "tono": "medio-grave para su edad, tranquilo",
+      "ritmo": "pausado, con silencios dramáticos",
+      "acento": "español latinoamericano neutro (Colombia suave), sin regionalismos fuertes",
+      "idioma": "español",
+      "edad_aparente": "niña de 6 años",
+      "energia": "media-baja, serena",
+      "textura": "suave y aterciopelada",
+      "diccion": "clara y cuidadosa; es la voz de las llamadas a la acción"
+    },
+    "descriptor_universal_en": "Warm, rounded 6-year-old girl voice, calm lower pitch for her age, slow deliberate rhythm with dramatic pauses, soft velvety texture, careful clear diction, neutral Latin American Spanish.",
+    "notas": "valiente y cariñosa; habla suave mirando a cámara",
+    "regla": "perfil universal (no atado a Veo ni a ningún motor); el motor de voz se elige después"
+  },
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "personaje",
+  "sellado": false,
+  "version": 1,
+  "altura_fuente_nota": "alturas en la biblioteca personajes.json (altura_m, inventadas por orden de Ricardo 2-nov-2026, no medidas en Blender)",
+  "adn_estado": "sin ADN Ako: Fase 1 hoja + Fase 2 ADN cotizados, PAGO CERRADO",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; cambia solo con versión nueva (versiones/) y sello por cubo_fijo sellar"
+}

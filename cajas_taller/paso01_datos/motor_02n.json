@@ -1,0 +1,6 @@
+{
+ "PISTA": "2026-11-01 (Ricardo t304u): de dónde lee el 03 lo que dejó el motor de Ako (02N). Genérico: cualquier canal/capítulo. modos en orden de preferencia (real antes que seco). usar_si_hay=true: si hay corrida 02N de la escena, el 03 revisa eso en vez de los videos del 02 viejo.",
+ "raiz": "/opt/myia-argon-blender",
+ "modos": ["real", "seco"],
+ "usar_si_hay": true
+}

@@ -1,0 +1,19 @@
+{
+  "id": "estilo_los_guardianes_de_la",
+  "version": 1,
+  "clase": "estilo",
+  "clase_adn": "estilo",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "nombre": "Los Guardianes de la Ceiba · 3D CGI estilizado (imagen de Spark)",
+  "imagen_ref": "/opt/myia-taller-n8n/cajas/FIJOS_TALLER/estilo/cn-los-guardianes-de-la-9fb323be/ESTILO_CANAL_v2.png",
+  "hoja_ref": "/opt/myia-taller-n8n/cajas/FIJOS_TALLER/estilo/cn-los-guardianes-de-la-9fb323be/ESTILO_CANAL_v2.png",
+  "imagen_sha256": "b033ea81f7b713cbf5da7a4250b9b75b67dfad64102cb8ad89e241339f081280",
+  "descripcion_en": "High-end 3D stylized CGI animation render, lineless geometry with smooth beveled edges and soft ambient occlusion. Physically based rendering: warm subsurface scattering on skin, glossy translucent plastics, satin anodized metals, matte fabrics. Volumetric studio lighting with strong rim lights, neon emissive glow, soft bloom and shallow depth of field with subtle bokeh. Palette of metallic cyan, deep blue and glowing amber orange on a soft warm beige background.",
+  "negativo": "Avoid: photorealistic rendering, live-action photo style, anime style, flat 2D vector look, sharp teeth, claws, scary expressions, dark horror lighting, extra fingers, extra limbs, text, letters, numbers, captions, watermark, logos, busy background, extra characters that were not described, any change to the characters' faces, proportions, outfits or colors, cropped bodies, resemblance to famous cartoon characters.",
+  "sello_canal": "cn-los-guardianes-de-la-9fb323be",
+  "sello_archivo": "/opt/myia-taller-n8n/cajas/FIJOS_TALLER/estilo/cn-los-guardianes-de-la-9fb323be/sello.json",
+  "sello_version": 2,
+  "actualizado": "2026-11-02T23:15:22+01:00",
+  "origen": "estilo_oficial v2 (sello del canal)",
+  "sellado": false
+}

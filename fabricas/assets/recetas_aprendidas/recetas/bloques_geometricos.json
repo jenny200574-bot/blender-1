@@ -1,0 +1,297 @@
+{
+ "id": "bloques_geometricos",
+ "nombre_generico": "Pirámide de bloques geométricos de madera sin letras",
+ "nombre_en": "building blocks",
+ "categoria": "juguetes",
+ "medidas_tipicas": {
+  "ancho_m": 0.25,
+  "fondo_m": 0.18,
+  "alto_m": 0.16
+ },
+ "medidas_fuente": "receta Argon vía B G1_juguetes_textiles (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.25,
+  0.18,
+  0.16
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": null,
+ "apoyo": "sobre_otro",
+ "conjunto": false,
+ "piezas": 10,
+ "tipos_de_pieza": [
+  "caja",
+  "cilindro",
+  "esfera"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "bloque_base_izq",
+   "color_guia_rgb": [
+    0.91,
+    0.365,
+    0.337
+   ],
+   "centro_m": [
+    -0.08,
+    0.0,
+    0.0275
+   ],
+   "tam_m": [
+    0.09,
+    0.18,
+    0.055
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "bloque_base_centro",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.0275
+   ],
+   "tam_m": [
+    0.072,
+    0.16,
+    0.055
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "bloque_base_der",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "centro_m": [
+    0.08,
+    0.0,
+    0.0275
+   ],
+   "tam_m": [
+    0.09,
+    0.18,
+    0.055
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "cilindro_medio_izq",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "centro_m": [
+    -0.045,
+    -0.035,
+    0.0815
+   ],
+   "radio_m": 0.042,
+   "alto_m": 0.057
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "cilindro_medio_der",
+   "color_guia_rgb": [
+    0.91,
+    0.365,
+    0.337
+   ],
+   "centro_m": [
+    0.045,
+    -0.035,
+    0.0815
+   ],
+   "radio_m": 0.042,
+   "alto_m": 0.057
+  },
+  {
+   "tipo": "caja",
+   "nombre": "prisma_medio_trasero",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "centro_m": [
+    0.0,
+    0.035,
+    0.0815
+   ],
+   "tam_m": [
+    0.16,
+    0.08,
+    0.057
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "bloque_puente_superior",
+   "color_guia_rgb": [
+    0.91,
+    0.365,
+    0.337
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.12
+   ],
+   "tam_m": [
+    0.12,
+    0.1,
+    0.024
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "bloque_cumbre",
+   "color_guia_rgb": [
+    0.184,
+    0.49,
+    0.882
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.145
+   ],
+   "tam_m": [
+    0.06,
+    0.06,
+    0.03
+   ]
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "esfera_decorativa_izq",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "centro_m": [
+    -0.042,
+    0.0,
+    0.142
+   ],
+   "radio_m": 0.014
+  },
+  {
+   "tipo": "esfera",
+   "nombre": "esfera_decorativa_der",
+   "color_guia_rgb": [
+    1.0,
+    0.788,
+    0.157
+   ],
+   "centro_m": [
+    0.042,
+    0.0,
+    0.142
+   ],
+   "radio_m": 0.014
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.25,
+  "fondo": 0.18,
+  "alto": 0.16
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.16
+  ],
+  "frente": [
+   0.0,
+   -0.09,
+   0.08
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G1_juguetes_textiles",
+  "objeto_id_origen": "amb-esc-habitacion-bloques-geometricos",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "7fb5865b26c0ee1db57ccefbd182cf644d9631c740c89e15f656dab0fbbe39ef",
+  "costo_usd_grupo": 0.3208,
+  "costo_usd_repartido": 0.06416,
+  "citas": [
+   {
+    "fuente_id": "F03",
+    "clave": "morfologia.formas_geometricas",
+    "cita": "Toy blocks, also called building bricks, building blocks, or simply blocks, are wooden, plastic, or foam pieces of various shapes (cube, cylinder, arch etc.) and colors that are used as construction toys."
+   },
+   {
+    "fuente_id": "F03",
+    "clave": "morfologia.bloques_estandar",
+    "cita": "Unit block is a popular standardized wooden toy block."
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "El corpus no fija las dimensiones individuales de cada bloque en una pirámide de 25x18x16 cm; se deducen de caja_m."
+  ],
+  "info": {
+   "partes": 10,
+   "piezas": 10,
+   "bbox_m": [
+    0.25,
+    0.18,
+    0.16
+   ],
+   "grupos": 1,
+   "datos": 8,
+   "con_fuente": 2
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-bloques-geometricos"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

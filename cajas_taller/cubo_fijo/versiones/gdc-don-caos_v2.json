@@ -1,0 +1,44 @@
+{
+  "id": "gdc-don-caos",
+  "nombre": "Don Caos",
+  "ids_canal": [
+    "ch-don-caos-7adf",
+    "don-caos"
+  ],
+  "tipo": "persona",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/don-caos/referencia-cliente/refs/d3ddaeb70fed28cb.jpg",
+  "nunca_cambia": "Pelo gris despeinado, ropa morada y verde con parches, tenis rojos. CHIQUITO: del tamaño de una mano, 0,18 m (orden de Ricardo 2-nov-2026, inventada, no medida en Blender). Siempre con su pistola de rayos de juguete morada/plateada (Rayo Ordenador): SE QUEDA.",
+  "voz_adn": {
+    "schema": "voz_adn/v1_universal",
+    "motor": null,
+    "fuente": "Biblia GDC_00_1 + guion T01E01 del cliente (acotaciones de tono); escrito una vez por el ingeniero el 2-nov-2026; sin IA, US$0",
+    "rasgos": {
+      "timbre": "nasal, teatral, de adulto",
+      "tono": "medio, exagerado de villano",
+      "ritmo": "juguetón, con risas «¡Jajajá!» y bostezos",
+      "acento": "español latinoamericano neutro (Colombia suave), sin regionalismos fuertes",
+      "idioma": "español",
+      "edad_aparente": "adulto",
+      "energia": "alta y burlona",
+      "textura": "algo rasposa y cómica",
+      "diccion": "exagerada, teatral; «voz de malo que no da miedo»; muletilla «¡Caos, caos, caos!»"
+    },
+    "descriptor_universal_en": "Theatrical nasal adult male villain voice that is funny not scary, exaggerated mid pitch, playful rhythm with cackles and yawns, slightly raspy comic texture, over-the-top diction, neutral Latin American Spanish.",
+    "notas": "travieso, orgulloso, competitivo",
+    "regla": "perfil universal (no atado a Veo ni a ningún motor); el motor de voz se elige después"
+  },
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "personaje",
+  "sellado": true,
+  "version": 2,
+  "altura_fuente_nota": "alturas en la biblioteca personajes.json (altura_m, inventadas por orden de Ricardo 2-nov-2026, no medidas en Blender)",
+  "adn_estado": "sin ADN Ako: Fase 1 hoja + Fase 2 ADN cotizados, PAGO CERRADO",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; cambia solo con versión nueva (versiones/) y sello por cubo_fijo sellar",
+  "altura_m": 0.18,
+  "altura_fuente": "inventada por orden de Ricardo 2-nov-2026, no medida en Blender",
+  "frase_sello": "1. Ficha Antropométrica:\n- Edad visual: 55-65 años.\n- Estatura aparente: 0,18 m (diminuto, tamaño de una mano).\n- Complexión física: Delgada, ectomorfa y estilizada.\n- Proporción: 3,5 cabezas de alto.\n- Estilo de línea/sombreado: 3D CGI estilizado sin línea de contorno 2D. Sombreado volumétrico suave con dispersión subsuperficial en piel y texturas PBR definidas (satén, tela bordada y fieltro).\n\n2. Fisonomía Facial y Cabello:\n- Rostro: Piel clara, forma triangular invertida, pómulos marcados con rubor rosado y nariz grande, bulbosa y rojiza.\n- Cabello: Gris plateado, muy voluminoso, esculpido en mechones gruesos y puntiagudos abiertos en abanico.\n- Ojos: Grandes y redondos, iris marrón. Ojeras moradas profundas con una pequeña marca vertical azulada tipo lágrima de payaso bajo el centro de cada ojo.\n- Cejas: Gruesas, pobladas y de color gris oscuro.\n- Accesorios faciales fijos: Sin gafas, cicatrices ni pendientes (solo el maquillaje fijo de lágrima bajo los ojos).\n\n3. Paleta de Expresiones:\n- Normal: Cejas arqueadas relajadas, ojos muy abiertos y boca cerrada en media sonrisa asimétrica.\n- Feliz: Cejas elevadas en arco alto, ojos muy abiertos y boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n- Nervioso: Cejas arqueadas y juntas en el centro, ojos abiertos en tensión y boca entreabierta en mueca ondulada mostrando dientes; incluye dos gotas de sudor celestes en el lado izquierdo del rostro.\n- Enojado: Cejas fruncidas en ángulo agudo hacia abajo, párpados inferiores tensos y boca muy abierta gritando con dientes y lengua visibles.\n- Triste: Cejas caídas hacia los extremos exteriores, párpados superiores entrecerrados a la mitad y boca cerrada con las comisuras fuertemente arqueadas hacia abajo.\n\n4. Vestuario por Capas:\n- Prenda exterior: Capa trasera morada con agujeros, borde inferior dentado y dos parches cosidos (naranja y verde). Esclavina de bufón en los hombros rematada en picos con cascabeles dorados (mitad derecha morada, mitad izquierda verde con patrón damasco). Cuello alto rígido morado con reborde verde.\n- Prenda interior: Casaca entallada de bajo dentado dividida verticalmente: lado derecho verde lima con relieve damasco y bolsillo tipo bolsa morada con solapa marrón; lado izquierdo en satén morado liso con bolsillo plano turquesa. Mangas verdes con parches morados y puños vueltos en verde oscuro. Cierre central de tres botones (uno verde arriba, dos marrones abajo) y dos parches cuadrados en el pecho (azul a la derecha, verde a la izquierda).\n- Prenda inferior: Pantalón recto de satén morado cubierto de parches rectangulares con costuras visibles (amarillo, marrón y azul en pierna derecha; rojo, verde y ocre en pierna izquierda).\n- Calzado: Zapatillas deportivas de lona roja con puntera de goma blanca, suela blanca y cordones blancos.\n- Accesorio fijo: Pistola de rayos de juguete retrofuturista en la mano derecha, de cuerpo morado metálico, aletas rojas, anillos cobrizos en el cañón y esfera verde en la punta.\n\n5. Reglas de Giro:\n- Frente: Visibilidad total de la partición bicolor de la casaca, los tres botones centrales, bolsillos asimétricos y la pistola de rayos empuñada en la mano derecha.\n- Perfil: Nariz prominente proyectada hacia adelante, mechones de cabello dirigidos hacia atrás, caída diagonal de la capa hasta media pierna y bolsillo con solapa marrón visible en la cadera derecha.\n- Espaldas: La capa morada cubre todo el torso mostrando el borde dentado, agujeros y dos parches traseros (naranja a la izquierda, verde a la derecha). Esclavina dividida (verde a la izquierda, morada a la derecha) con cuatro cascabeles dorados visibles. Silueta limpia de accesorios ocultos.",
+  "actualizado": "2026-11-02T23:28:17+01:00",
+  "origen": "sellar"
+}

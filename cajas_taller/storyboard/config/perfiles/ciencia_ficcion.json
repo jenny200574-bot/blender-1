@@ -1,0 +1,56 @@
+{
+ "id": "ciencia_ficcion",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Ciencia ficción",
+ "tonos": [
+  "curiosidad",
+  "asombro",
+  "frialdad tecnológica"
+ ],
+ "reglas": {
+  "intencion": "asombro tecnológico, curiosidad, a veces amenaza",
+  "beats": "mostrar interfaces y reacciones humanas a la tecnología",
+  "secuencia": "revelación progresiva de la tecnología",
+  "direccion": "composición tecnológica, simetría, travellings suaves, lentes 24-50 mm, a veces bajos para la amenaza",
+  "actuacion": "observación, asombro contenido",
+  "composicion": "simetría, líneas guía, luz de pantallas como fuente",
+  "ritmo": "medido; se acelera en la acción",
+  "transiciones": "match cut, cortes limpios",
+  "continuidad": "estado de los dispositivos y la energía se mantiene",
+  "justificacion": "que la tecnología se sienta real y nueva"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   1.5,
+   9.0
+  ],
+  "lente_mm": [
+   18,
+   85
+  ],
+  "planos_preferidos": [
+   "WS",
+   "MS",
+   "CU",
+   "INSERT"
+  ],
+  "angulos_preferidos": [
+   "EYELEVEL",
+   "LOWANGLE",
+   "TOPDOWN"
+  ],
+  "movimientos_preferidos": [
+   "DOLLYIN",
+   "TRUCK",
+   "SLIDER",
+   "ORBIT"
+  ],
+  "movimientos_evitar": [],
+  "transiciones_preferidas": [
+   "CORTE",
+   "MATCH_CUT"
+  ],
+  "pausas": "algunas"
+ },
+ "ejemplo_puerta": "Puerta automática: inserto del panel, simetría del pasillo, travelling suave hacia lo que se revela."
+}

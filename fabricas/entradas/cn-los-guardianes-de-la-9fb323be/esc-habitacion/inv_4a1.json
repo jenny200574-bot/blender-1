@@ -1,0 +1,1737 @@
+{
+ "escenario_id": "esc-habitacion",
+ "tipo_lugar": "Dormitorio infantil doméstico cálido de clase media",
+ "medidas": {
+  "ancho_m": 4.5,
+  "fondo_m": 4.0,
+  "alto_m": 2.8,
+  "origen": "deducido",
+  "justificacion": "Dimensiones realistas de habitación infantil doméstica con espacio central amplio para cinco personajes, cama, armario y cofre.",
+  "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo."
+ },
+ "planta": {
+  "forma": "rectangular",
+  "descripcion": "Dormitorio infantil acogedor de 4,5 m de ancho por 4,0 m de fondo. Entrada principal en la pared de frente a la izquierda; cama infantil adosada a la pared izquierda con mesa de noche al fondo; ventana amplia con vista al arcoíris en el centro de la pared del fondo; armario de madera en la pared derecha; zona central despejada con alfombra redonda donde aparece el cofre dorado y cuelga la lámpara de techo.",
+  "entrada_principal": "Puerta batiente de madera en la pared frente (y=0 m), a x=0,8 m de la esquina izquierda.",
+  "origen": "deducido",
+  "justificacion": "Distribución deducida para dejar libre el centro donde aparece el cofre y permitir ver cama, ventana, lámpara y armario.",
+  "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes:"
+ },
+ "aberturas": [
+  {
+   "tipo": "puerta",
+   "pared": "frente",
+   "x_m": 0.8,
+   "y_m": 0.0,
+   "ancho_m": 0.9,
+   "alto_m": 2.1,
+   "descripcion": "Puerta principal de acceso a la habitación desde el pasillo interior de la casa, de madera pintada en tono crema cálido con bordes redondeados.",
+   "origen": "deducido",
+   "justificacion": "Todo dormitorio interior requiere puerta de acceso; por ahí entran corriendo Pintor y Eco en la escena 3.",
+   "cita": "falta"
+  },
+  {
+   "tipo": "ventana",
+   "pared": "fondo",
+   "x_m": 2.25,
+   "y_m": 4.0,
+   "ancho_m": 1.6,
+   "alto_m": 1.3,
+   "descripcion": "Ventana rectangular de doble hoja con marco de madera redondeado a 0,9 m del suelo, a través de la cual se ve el cielo y el arcoíris exterior.",
+   "origen": "explicito",
+   "justificacion": "El guion nombra explícitamente la ventana por donde se ve el arcoíris que Don Caos vuelve gris.",
+   "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+  }
+ ],
+ "elementos_blender": [
+  {
+   "nombre": "Ventana con vista al arcoíris",
+   "forma": "compuesto",
+   "x_m": 2.25,
+   "y_m": 3.95,
+   "z_m": 0.9,
+   "ancho_m": 1.6,
+   "fondo_m": 0.15,
+   "alto_m": 1.3,
+   "rotacion_grados": 180,
+   "material": "Madera lacada blanco cálido y vidrio translúcido",
+   "origen": "explicito",
+   "justificacion": "Elemento de 4P requerido en la pared del fondo para mostrar el arcoíris que pasa de color a gris.",
+   "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+  },
+  {
+   "nombre": "Piso de la habitación",
+   "forma": "plano",
+   "x_m": 2.25,
+   "y_m": 2.0,
+   "z_m": 0.0,
+   "ancho_m": 4.5,
+   "fondo_m": 4.0,
+   "alto_m": 0.05,
+   "rotacion_grados": 0,
+   "material": "Listones de madera clara cálida con acabado satinado suave",
+   "origen": "explicito",
+   "justificacion": "Superficie base de la habitación nombrada en 4P por donde rueda la vocal O y caen objetos.",
+   "cita": "La O rueda por el piso como una pelota"
+  },
+  {
+   "nombre": "Centro de la habitación",
+   "forma": "cilindro",
+   "x_m": 2.25,
+   "y_m": 2.0,
+   "z_m": 0.01,
+   "ancho_m": 2.2,
+   "fondo_m": 2.2,
+   "alto_m": 0.02,
+   "rotacion_grados": 0,
+   "material": "Tejido de algodón mate suave tipo tapete circular beige cálido",
+   "origen": "explicito",
+   "justificacion": "Zona central delimitada en 4P donde aterrizan las luces, aparece el cofre dorado y hacen fila las vocales.",
+   "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes:"
+  },
+  {
+   "nombre": "Puerta de entrada de la habitación",
+   "forma": "caja",
+   "x_m": 0.8,
+   "y_m": 0.05,
+   "z_m": 0.0,
+   "ancho_m": 0.9,
+   "fondo_m": 0.08,
+   "alto_m": 2.1,
+   "rotacion_grados": 0,
+   "material": "Madera pintada en beige cálido satinado con pomo redondeado dorado",
+   "origen": "deducido",
+   "justificacion": "Carpintería fija correspondiente a la abertura de entrada principal en la pared de frente.",
+   "cita": "falta"
+  },
+  {
+   "nombre": "Mesa de noche junto a la cama",
+   "forma": "caja",
+   "x_m": 0.4,
+   "y_m": 3.45,
+   "z_m": 0.0,
+   "ancho_m": 0.5,
+   "fondo_m": 0.45,
+   "alto_m": 0.55,
+   "rotacion_grados": 90,
+   "material": "Madera clara con bordes biselados suaves",
+   "origen": "deducido",
+   "justificacion": "Mueble de apoyo junto a la cabecera de la cama para sostener el lápiz donde se esconde la vocal I.",
+   "cita": "falta"
+  }
+ ],
+ "objetos_del_lugar_posicion": [
+  {
+   "objeto_id": "obj-cama",
+   "escenas": [
+    "1",
+    "2",
+    "3",
+    "8",
+    "9"
+   ],
+   "x_m": 1.05,
+   "y_m": 2.6,
+   "z_m": 0.0,
+   "rotacion_grados": 90,
+   "junto_a": "Adosada por su cabecera a la pared izquierda, con patas altas que dejan hueco debajo",
+   "origen": "explicito",
+   "justificacion": "Cama infantil donde reposa el libro en la escena 1 y bajo la cual se asoma Don Caos en la escena 2; permanece en la habitación todo el episodio.",
+   "cita": "un libro de cuentos abierto sobre una cama."
+  },
+  {
+   "objeto_id": "obj-almohada",
+   "escenas": [
+    "1",
+    "2",
+    "3",
+    "8",
+    "9"
+   ],
+   "x_m": 0.35,
+   "y_m": 2.6,
+   "z_m": 0.55,
+   "rotacion_grados": 90,
+   "junto_a": "Sobre la cabecera de obj-cama junto a la pared izquierda",
+   "origen": "explicito",
+   "justificacion": "Descansa sobre la cama infantil y oculta detrás a la vocal A en la escena 3.",
+   "cita": "La A aparece detrás de la almohada"
+  },
+  {
+   "objeto_id": "obj-lampara",
+   "escenas": [
+    "1",
+    "2",
+    "3",
+    "8",
+    "9"
+   ],
+   "x_m": 2.25,
+   "y_m": 2.0,
+   "z_m": 2.2,
+   "rotacion_grados": 0,
+   "junto_a": "Suspendida del techo sobre el centro de la habitación",
+   "origen": "explicito",
+   "justificacion": "Lámpara infantil de techo situada sobre el centro del cuarto, de donde cuelga la vocal E en la escena 3.",
+   "cita": "La E está colgada de la lámpara"
+  },
+  {
+   "objeto_id": "obj-lapiz",
+   "escenas": [
+    "1",
+    "2",
+    "3",
+    "8",
+    "9"
+   ],
+   "x_m": 0.4,
+   "y_m": 3.45,
+   "z_m": 0.55,
+   "rotacion_grados": 35,
+   "junto_a": "Sobre la mesa de noche junto a obj-cama",
+   "origen": "explicito",
+   "justificacion": "Ubicado a la vista sobre la mesita junto a la cama para que en la escena 3 salga de él la vocal I.",
+   "cita": "La I es flaquita y estaba escondida dentro de un lápiz"
+  },
+  {
+   "objeto_id": "obj-armario",
+   "escenas": [
+    "1",
+    "2",
+    "3",
+    "8",
+    "9"
+   ],
+   "x_m": 4.15,
+   "y_m": 2.6,
+   "z_m": 0.0,
+   "rotacion_grados": 270,
+   "junto_a": "Adosado a la pared derecha mirando hacia el centro de la habitación",
+   "origen": "explicito",
+   "justificacion": "Mueble de almacenamiento en la pared derecha desde cuyo interior sale la vocal U en la escena 3.",
+   "cita": "Se oye un \"uuuu\" de fantasma desde el armario"
+  },
+  {
+   "objeto_id": "obj-libro-cuentos",
+   "escenas": [
+    "1",
+    "8"
+   ],
+   "x_m": 1.2,
+   "y_m": 2.6,
+   "z_m": 0.52,
+   "rotacion_grados": 15,
+   "junto_a": "Abierto encima del tendido de obj-cama",
+   "origen": "explicito",
+   "justificacion": "En la escena 1 está abierto sobre la cama cuando pierde las letras y en la escena 8 las recupera allí mismo.",
+   "cita": "un libro de cuentos abierto sobre una cama."
+  },
+  {
+   "objeto_id": "obj-libro-cuentos",
+   "escenas": [
+    "9"
+   ],
+   "x_m": 2.0,
+   "y_m": 1.7,
+   "z_m": 0.2,
+   "rotacion_grados": 180,
+   "junto_a": "Sostenido por ch-don-caos-7adf en el centro de la habitación",
+   "origen": "explicito",
+   "justificacion": "En la escena 9 Don Caos lo sostiene y lo lee feliz durante la celebración frente al cofre.",
+   "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+  },
+  {
+   "objeto_id": "obj-visor-spark",
+   "escenas": [
+    "1",
+    "2"
+   ],
+   "x_m": 1.65,
+   "y_m": 1.85,
+   "z_m": 0.95,
+   "rotacion_grados": 180,
+   "junto_a": "Llevado sobre los ojos por ch-spark-468e en el centro de la habitación",
+   "origen": "explicito",
+   "justificacion": "Spark lo lleva puesto al aterrizar en la escena 1 y proyecta desde él el mapa de estrellas en la escena 2.",
+   "cita": "Spark activa su visor."
+  },
+  {
+   "objeto_id": "obj-cofre-dorado",
+   "escenas": [
+    "1",
+    "2",
+    "3",
+    "8",
+    "9"
+   ],
+   "x_m": 2.25,
+   "y_m": 2.0,
+   "z_m": 0.02,
+   "rotacion_grados": 180,
+   "junto_a": "En el centro de la habitación sobre la alfombra central",
+   "origen": "explicito",
+   "justificacion": "Aparece en el centro de la habitación en la escena 1 y permanece allí hasta abrirse en la escena 8 y durante el cierre en la 9.",
+   "cita": "en el centro de la habitación aparece un cofre dorado con tres candados brillantes:"
+  },
+  {
+   "objeto_id": "obj-candados-cofre",
+   "escenas": [
+    "1",
+    "2",
+    "3",
+    "8"
+   ],
+   "x_m": 2.25,
+   "y_m": 1.78,
+   "z_m": 0.28,
+   "rotacion_grados": 180,
+   "junto_a": "Colocados en el frente de obj-cofre-dorado",
+   "origen": "explicito",
+   "justificacion": "Aseguran la tapa frontal del cofre dorado desde la escena 1 hasta destrabarse en la escena 8.",
+   "cita": "tres candados brillantes: uno con un color, uno con un número y uno con una letra."
+  },
+  {
+   "objeto_id": "obj-pincel-magico",
+   "escenas": [
+    "3",
+    "8"
+   ],
+   "x_m": 2.65,
+   "y_m": 1.8,
+   "z_m": 0.7,
+   "rotacion_grados": 180,
+   "junto_a": "Sostenido en la mano por ch-pintor-bce0 en la zona central",
+   "origen": "explicito",
+   "justificacion": "Pintor lo lleva y dibuja con él en el aire durante la búsqueda de vocales en la escena 3 y frente al cofre en la escena 8.",
+   "cita": "Pintor dibuja en el aire con su Pincel Mágico."
+  },
+  {
+   "objeto_id": "obj-vocales",
+   "escenas": [
+    "3"
+   ],
+   "x_m": 2.25,
+   "y_m": 1.4,
+   "z_m": 0.02,
+   "rotacion_grados": 180,
+   "junto_a": "Reunidas en fila sobre el piso frente a obj-cofre-dorado tras salir de obj-almohada, obj-lampara, obj-lapiz, el piso y obj-armario",
+   "origen": "explicito",
+   "justificacion": "En la escena 3 salen una a una de sus cinco escondites y terminan formando una fila en el centro donde saltan.",
+   "cita": "Las 5 vocales hacen fila y saltan una por una como en un trampolín."
+  },
+  {
+   "objeto_id": "obj-vocales",
+   "escenas": [
+    "8"
+   ],
+   "x_m": 1.75,
+   "y_m": 2.3,
+   "z_m": 0.65,
+   "rotacion_grados": 135,
+   "junto_a": "Volando en el aire entre obj-cofre-dorado abierto y obj-libro-cuentos sobre obj-cama",
+   "origen": "explicito",
+   "justificacion": "En la escena 8 salen volando del interior del cofre abierto y regresan a las páginas del libro en la cama.",
+   "cita": "Del cofre salen volando todas las letras, los colores y los números."
+  },
+  {
+   "objeto_id": "obj-rayo-confundidor",
+   "escenas": [
+    "1"
+   ],
+   "x_m": 1.65,
+   "y_m": 3.0,
+   "z_m": 0.2,
+   "rotacion_grados": 225,
+   "junto_a": "Llevado en la mano por ch-don-caos-7adf entre obj-cama y la ventana",
+   "origen": "explicito",
+   "justificacion": "Don Caos dispara desde esta zona contra el libro en la cama y contra el arcoíris de la ventana.",
+   "cita": "Un rayo morado cruza la pantalla."
+  },
+  {
+   "objeto_id": "obj-rayo-confundidor",
+   "escenas": [
+    "3"
+   ],
+   "x_m": 3.3,
+   "y_m": 2.3,
+   "z_m": 0.2,
+   "rotacion_grados": 90,
+   "junto_a": "Llevado en la mano por ch-don-caos-7adf cerca de obj-armario apuntando a la vocal U",
+   "origen": "explicito",
+   "justificacion": "Don Caos lo dispara en la escena 3 para voltear la vocal U recién salida del armario.",
+   "cita": "Don Caos dispara su Rayo Confundidor."
+  },
+  {
+   "objeto_id": "obj-rayo-confundidor",
+   "escenas": [
+    "8"
+   ],
+   "x_m": 2.0,
+   "y_m": 1.65,
+   "z_m": 0.18,
+   "rotacion_grados": 0,
+   "junto_a": "Levantado y luego guardado en el bolsillo por ch-don-caos-7adf frente a obj-cofre-dorado",
+   "origen": "explicito",
+   "justificacion": "En la escena 8 Don Caos lo levanta frente al cofre pero decide bajarlo y guardarlo en su bolsillo.",
+   "cita": "Don Caos levanta su Rayo Confundidor."
+  },
+  {
+   "objeto_id": "obj-numeros-1-al-5",
+   "escenas": [
+    "8"
+   ],
+   "x_m": 1.85,
+   "y_m": 2.25,
+   "z_m": 0.7,
+   "rotacion_grados": 135,
+   "junto_a": "Volando en el aire desde obj-cofre-dorado hacia obj-libro-cuentos sobre obj-cama",
+   "origen": "explicito",
+   "justificacion": "Al abrirse el cofre en la escena 8 salen volando junto con las letras y colores hacia el libro.",
+   "cita": "Del cofre salen volando todas las letras, los colores y los números."
+  },
+  {
+   "objeto_id": "obj-papel-numeros",
+   "escenas": [
+    "9"
+   ],
+   "x_m": 2.05,
+   "y_m": 1.55,
+   "z_m": 0.02,
+   "rotacion_grados": 25,
+   "junto_a": "Sobre el piso a los pies de ch-don-caos-7adf en el centro de la habitación",
+   "origen": "explicito",
+   "justificacion": "En la escena 9 se cae del bolsillo de Don Caos al suelo mientras él lee el libro.",
+   "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+  }
+ ],
+ "materiales_texturas": [
+  {
+   "superficie": "Piso",
+   "material": "Madera clara ensamblada en listones",
+   "textura": "Satinada suave sin veta fotorrealista, con bordes biselados limpios estilo 3D CGI",
+   "color": "Roble miel cálido #D9A773",
+   "desgaste": "Casi nuevo, limpio y cálido para ambiente infantil",
+   "origen": "deducido",
+   "justificacion": "Acabado doméstico cálido coherente con config_canal (3D CGI estilizado con fondo beige cálido).",
+   "cita": "falta"
+  },
+  {
+   "superficie": "Paredes",
+   "material": "Mampostería estucada y pintada con zócalo inferior de madera",
+   "textura": "Mate lisa y suave con oclusión ambiental blanda en las esquinas",
+   "color": "Crema beige suave #F5E6D3 con zócalo blanco cálido #FFF8EE",
+   "desgaste": "Intacto, limpio y acogedor",
+   "origen": "deducido",
+   "justificacion": "La config_canal pide fondo beige cálido suave y espacios domésticos cálidos.",
+   "cita": "falta"
+  },
+  {
+   "superficie": "Techo",
+   "material": "Estuco liso con moldura perimetral redondeada",
+   "textura": "Mate uniforme sin grano",
+   "color": "Blanco marfil cálido #FAF3E8",
+   "desgaste": "Sin desgaste",
+   "origen": "deducido",
+   "justificacion": "Techo doméstico interior necesario para colgar la lámpara de la escena 3.",
+   "cita": "falta"
+  },
+  {
+   "superficie": "Muebles de madera (cama, armario, mesa de noche, marcos de puerta y ventana, zócalos y estanterías)}{\"",
+   "material": "Madera pintada y barnizada estilo juguete 3D",
+   "textura": "Satinada lisa con cantos muy redondeados y biselados suaves",
+   "color": "Madera tibia #C88A55 combinada con acentos crema #F2E2CE y azul celeste suave #7EB6E6",
+   "desgaste": "Ligero brillo suave de uso cotidiano, sin astillas ni deterioro",
+   "origen": "deducido",
+   "justificacion": "Estilo 3D CGI preescolar con geometría sin líneas, bordes biselados suaves y materiales satinados.",
+   "cita": "falta"
+  },
+  {
+   "superficie": "Textiles (tendido de cama, almohada, cortinas y alfombra central)}{\"",
+   "material": "Algodón acolchado y tejido grueso",
+   "textura": "Tejido mate esponjoso de volumen redondeado",
+   "color": "Amarillo mantequilla #FFE28A, azul suave #5B9BD5 y beige cálido #E8D3B9 (se desaturan parcialmente en escenas 1 a 8 tras el rayo gris y recuperan saturación plena en escena 8 y 9)}{\"",
+   "desgaste": "Esponjoso y bien cuidado",
+   "origen": "deducido",
+   "justificacion": "Materiales textiles mate indicados en config_canal (matte fabrics) y cambio cromático del guion.",
+   "cita": "falta"
+  }
+ ],
+ "luz_por_escena": [
+  {
+   "escena": "1",
+   "hora": "Día",
+   "clima": "Despejado con arcoíris que se vuelve gris tras el rayo de Don Caos",
+   "fuentes": [
+    {
+     "tipo": "Luz natural diurna por ventana",
+     "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m) entrando hacia el centro",
+     "color": "Blanco cálido #FFF4D6 al inicio que pasa a gris frío #B0B7BC tras el segundo ZAP",
+     "intensidad": "alta",
+     "encendida": true
+    },
+    {
+     "tipo": "Lámpara colgante de techo",
+     "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+     "color": "Ámbar cálido suave #FFC978",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Resplandor mágico de aterrizaje y cofre dorado",
+     "posicion": "Centro de la habitación (x=2,25 m, y=2,0 m, z=0,4 m)}{\"",
+     "color": "Destellos azul #2F7DE1, magenta #D6338A, verde #3BAA4A, amarillo #FFC928 y dorado #F5C542",
+     "intensidad": "alta",
+     "encendida": true
+    }
+   ],
+   "ambiente": "Comienza cálido y luminoso, pierde calidez cuando el rayo morado vuelve gris el arcoíris y recupera un foco mágico dorado con la aparición del cofre y los cuatro héroes.",
+   "sombras": "Suaves y difusas con oclusión ambiental blanda y luz de recorte (rim light) sobre los personajes.",
+   "origen": "deducido",
+   "justificacion": "Deducido del arcoíris en la ventana, el aterrizaje de las cuatro luces de colores y el estilo de iluminación de config_canal.",
+   "cita": "Las cuatro luces de colores aterrizan en la habitación: azul, magenta, verde y amarillo."
+  },
+  {
+   "escena": "2",
+   "hora": "Día",
+   "clima": "Exterior gris sin color",
+   "fuentes": [
+    {
+     "tipo": "Luz diurna gris por ventana",
+     "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m)}{\"",
+     "color": "Gris azulado neutro #B0B7BC",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Lámpara colgante de techo",
+     "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+     "color": "Ámbar tenue #FFD89B",
+     "intensidad": "baja",
+     "encendida": true
+    },
+    {
+     "tipo": "Holograma del visor de Spark",
+     "posicion": "Frente a Spark en el centro de la habitación (x=1,65 m, y=1,6 m, z=0,95 m)}{\"",
+     "color": "Celeste holograma #8FD3FF con destellos amarillo, verde, azul y magenta en las estrellas",
+     "intensidad": "alta",
+     "encendida": true
+    }
+   ],
+   "ambiente": "Interior ligeramente apagado en saturación ambiental para que resalte el brillo neón celeste del holograma de las 5 estrellas y los colores de los héroes.",
+   "sombras": "Suaves proyectadas hacia el frente con reflejo celeste en los rostros de los personajes.",
+   "origen": "explicito",
+   "justificacion": "El guion describe la proyección del holograma azul con las cinco estrellas que se iluminan una a una.",
+   "cita": "Un holograma azul muestra un mapa con 5 estrellas apagadas en fila."
+  },
+  {
+   "escena": "3",
+   "hora": "Día",
+   "clima": "Exterior gris sin color",
+   "fuentes": [
+    {
+     "tipo": "Luz diurna tamizada por ventana",
+     "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m)}{\"",
+     "color": "Blanco neutro grisáceo #C5CCD1",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Lámpara colgante de techo",
+     "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+     "color": "Blanco cálido suave #FFE0A3",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Estela luminosa del Pincel Mágico y Rayo Confundidor",
+     "posicion": "Zona central de acción (x=2,25 m, y=1,8 m, z=0,8 m)}{\"",
+     "color": "Amarillo brillante #FFC928 en los trazos de Pintor y chispazo morado #6B2FA0 en el disparo de Don Caos",
+     "intensidad": "alta",
+     "encendida": true
+    }
+   ],
+   "ambiente": "Dinámico y juguetón; iluminación uniforme en toda la habitación para ver con claridad los cinco escondites (almohada, lámpara, lápiz, piso y armario).",
+   "sombras": "Blandas y limpias bajo los muebles y las vocales 3D al saltar.",
+   "origen": "deducido",
+   "justificacion": "Continúa el estado sin color exterior de la escena anterior sumando los trazos mágicos de Pintor y el rayo de Don Caos.",
+   "cita": "Pintor dibuja en el aire con su Pincel Mágico."
+  },
+  {
+   "escena": "8",
+   "hora": "Día",
+   "clima": "Pasa de gris a soleado radiante al abrirse el cofre",
+   "fuentes": [
+    {
+     "tipo": "Luz solar por ventana",
+     "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m)}{\"",
+     "color": "Pasa de neutro #C5CCD1 a dorado cálido #FFE39E al abrirse el cofre",
+     "intensidad": "alta",
+     "encendida": true
+    },
+    {
+     "tipo": "Lámpara colgante de techo",
+     "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+     "color": "Ámbar cálido #FFC978",
+     "intensidad": "media",
+     "encendida": true
+    },
+    {
+     "tipo": "Resplandor mágico del Cofre del Abecedario, Pincel y Visor",
+     "posicion": "Centro de la habitación (x=2,25 m, y=2,0 m, z=0,5 m)}{\"",
+     "color": "Celeste #8FD3FF, magenta #D6338A y dorado #F5C542",
+     "intensidad": "alta",
+     "encendida": true
+    }
+   ],
+   "ambiente": "Comienza expectante frente al cofre y estalla en una iluminación festiva, cálida y multicolor cuando se abren los candados y salen volando las letras, números y colores.",
+   "sombras": "Suaves con fuerte luz de contorno dorada y bloom luminoso alrededor del cofre abierto.",
+   "origen": "explicito",
+   "justificacion": "Al leer MAMÁ se enciende la quinta estrella, se abren los tres candados y salen volando letras, colores y números.",
+   "cita": "Del cofre salen volando todas las letras, los colores y los números."
+  },
+  {
+   "escena": "9",
+   "hora": "Día",
+   "clima": "Soleado y despejado con el arcoíris restaurado",
+   "fuentes": [
+    {
+     "tipo": "Luz solar cálida por ventana",
+     "posicion": "Pared del fondo (x=2,25 m, y=4,0 m, z=1,5 m)}{\"",
+     "color": "Dorado cálido #FFE6A8",
+     "intensidad": "alta",
+     "encendida": true
+    },
+    {
+     "tipo": "Lámpara colgante de techo",
+     "posicion": "Centro del techo (x=2,25 m, y=2,0 m, z=2,2 m)}{\"",
+     "color": "Ámbar cálido #FFC978",
+     "intensidad": "media",
+     "encendida": true
+    }
+   ],
+   "ambiente": "Luminoso, cálido y alegre de celebración doméstica tras haber recuperado el abecedario, los colores y los números.",
+   "sombras": "Suaves, cálidas y redondeadas en el piso alrededor del papel caído.",
+   "origen": "heredado",
+   "justificacion": "Mantiene la iluminación cálida restaurada al final de la escena 8 inmediatamente antes del corte a pantalla final.",
+   "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+  }
+ ],
+ "epoca_estilo": {
+  "epoca": "Contemporánea actual (años 2020)}{\"",
+  "estilo": "Animación 3D CGI estilizada preescolar de alto nivel (tipo Pixar/Disney Junior), geometría sin líneas con bordes biselados suaves, plásticos translúcidos, metales anodizados satinados y telas mate.",
+  "region": "Latinoamérica / Colombia (espacio doméstico cálido con guiños culturales sutiles y vocabulario local)}{\"",
+  "origen": "deducido",
+  "justificacion": "Definido en config_canal (language es-CO, style_fijo 3D CGI estilizado aprobado y decisiones_vigentes_del_canal).",
+  "cita": "falta"
+ },
+ "referencias_reales": [
+  {
+   "referencia": "Cuarto de Andy y habitación de Boo en Toy Story / Monsters, Inc. (Pixar)}{\"",
+   "que_tomar": "Proporciones amables para niños, bordes redondeados sin aristas peligrosas, calidez de la madera y lectura inmediata de cama, armario y ventana."
+  },
+  {
+   "referencia": "Hogares familiares contemporáneos de clase media en Bogotá y Medellín (Colombia)}{\"",
+   "que_tomar": "Piso de listones de madera cálida, paredes color crema suave, tejidos artesanales coloridos y cesto de mimbre para juguetes."
+  },
+  {
+   "referencia": "Bluey / Daniel Tiger's Neighborhood llevados a 3D CGI",
+   "que_tomar": "Orden visual preescolar donde el centro de la habitación queda despejado como escenario de juego y aprendizaje sin saturar el fondo tras los personajes."
+  }
+ ],
+ "variantes_por_escena": [
+  {
+   "escena": "1",
+   "variante": "Inicial con color (libro con letras en la cama y arcoíris en la ventana) que pasa a Sin letras ni colores",
+   "cambios_visibles": "Inicia con el libro con letras sobre la cama y el arcoíris multicolor en la ventana; tras los dos rayos morados de Don Caos la página queda en blanco, el arcoíris queda gris, aterrizan las cuatro luces de los héroes y aparece el cofre dorado cerrado con tres candados en el centro.",
+   "origen": "explicito",
+   "cita": "Ahora el arcoíris de la ventana se vuelve gris."
+  },
+  {
+   "escena": "2",
+   "variante": "Sin letras ni colores (página en blanco, arcoíris gris en la ventana y cofre cerrado)}{\"",
+   "cambios_visibles": "El arcoíris sigue gris en la ventana, el cofre sigue cerrado en el centro, Spark proyecta el holograma azul de 5 estrellas apagadas y Don Caos asoma la cabeza por debajo de la cama.",
+   "origen": "explicito",
+   "cita": "Un holograma azul muestra un mapa con 5 estrellas apagadas en fila."
+  },
+  {
+   "escena": "3",
+   "variante": "Sin letras ni colores (página en blanco, arcoíris gris en la ventana y cofre cerrado)}{\"",
+   "cambios_visibles": "Las 5 vocales salen de la almohada, la lámpara, el lápiz, el piso y el armario acompañadas por los dibujos mágicos de Pintor; al final las 5 vocales hacen fila en el centro pero se ven todas de color gris.",
+   "origen": "explicito",
+   "cita": "Las 5 vocales hacen fila y saltan una por una como en un trampolín."
+  },
+  {
+   "escena": "8",
+   "variante": "Sin letras ni colores que pasa a Restaurada en celebración (confeti de colores, cofre abierto y libro lleno de nuevo)}{\"",
+   "cambios_visibles": "Comienza con el cofre cerrado mostrando dos montañitas en el tercer candado; al leer MAMÁ estalla confeti de colores, los tres candados se abren, el cofre se abre y salen volando letras, colores y números hacia el libro en la cama, devolviendo el color al arcoíris de la ventana.",
+   "origen": "explicito",
+   "cita": "Del cofre salen volando todas las letras, los colores y los números."
+  },
+  {
+   "escena": "9",
+   "variante": "Restaurada en celebración (confeti de colores, cofre abierto y libro lleno de nuevo)}{\"",
+   "cambios_visibles": "Confeti de colores en el piso y el aire, cofre abierto en el centro, Don Caos sosteniendo el libro lleno de letras y el papel con los números 6, 7, 8, 9, 10 caído en el piso junto a él antes del corte al marco de pantalla final.",
+   "origen": "explicito",
+   "cita": "Mientras todos celebran, Don Caos lee feliz el libro… y de su bolsillo se cae un papel."
+  }
+ ],
+ "camaras_sugeridas": [
+  {
+   "escena": "1",
+   "posicion": "Cerca del costado derecho de la cama en x=1,8 m, y=2,2 m, z=0,85 m",
+   "mira_hacia": "El libro de cuentos abierto sobre la cama (x=1,2 m, y=2,6 m, z=0,55 m) y luego panea a la ventana del fondo",
+   "lente_mm": 50
+  },
+  {
+   "escena": "1",
+   "posicion": "Frente al centro de la habitación en x=2,25 m, y=0,6 m, z=1,0 m",
+   "mira_hacia": "El centro de la habitación (x=2,25 m, y=2,2 m, z=0,7 m) abarcando el cofre dorado, los cuatro héroes y la ventana al fondo",
+   "lente_mm": 35
+  },
+  {
+   "escena": "2",
+   "posicion": "Centro-frente en x=2,25 m, y=0,7 m, z=1,0 m",
+   "mira_hacia": "Spark proyectando el holograma de 5 estrellas junto al cofre en x=2,1 m, y=2,0 m, z=0,9 m",
+   "lente_mm": 35
+  },
+  {
+   "escena": "2",
+   "posicion": "Plano bajo en x=1,9 m, y=2,1 m, z=0,25 m",
+   "mira_hacia": "El hueco debajo de la cama en x=1,2 m, y=2,6 m, z=0,15 m donde Don Caos asoma la cabeza",
+   "lente_mm": 50
+  },
+  {
+   "escena": "3",
+   "posicion": "Frente amplio en x=2,25 m, y=0,55 m, z=1,05 m",
+   "mira_hacia": "El centro de la habitación en x=2,25 m, y=2,3 m, z=0,9 m viendo cama con almohada, lámpara de techo, mesa con lápiz, piso y armario",
+   "lente_mm": 28
+  },
+  {
+   "escena": "3",
+   "posicion": "Diagonal baja en x=2,8 m, y=0,8 m, z=0,65 m",
+   "mira_hacia": "La fila de las 5 vocales y Pintor en el centro del piso en x=2,25 m, y=1,5 m, z=0,4 m",
+   "lente_mm": 35
+  },
+  {
+   "escena": "8",
+   "posicion": "Frente al grupo en x=2,25 m, y=0,65 m, z=0,95 m",
+   "mira_hacia": "Todos los personajes reunidos frente al cofre dorado en x=2,25 m, y=2,0 m, z=0,6 m",
+   "lente_mm": 35
+  },
+  {
+   "escena": "8",
+   "posicion": "Detalle cercano en x=2,25 m, y=1,35 m, z=0,45 m",
+   "mira_hacia": "Los tres candados brillantes del cofre abriéndose y la salida de letras hacia la cama en x=2,0 m, y=2,1 m, z=0,4 m",
+   "lente_mm": 50
+  },
+  {
+   "escena": "9",
+   "posicion": "Plano medio frontal en x=2,15 m, y=0,9 m, z=0,85 m",
+   "mira_hacia": "Don Caos leyendo feliz el libro rodeado por los héroes en x=2,1 m, y=1,8 m, z=0,5 m",
+   "lente_mm": 35
+  },
+  {
+   "escena": "9",
+   "posicion": "Primer plano picado en x=2,05 m, y=1,25 m, z=0,45 m",
+   "mira_hacia": "El papel con los números 6, 7, 8, 9, 10 caído en el piso en x=2,05 m, y=1,55 m, z=0,02 m",
+   "lente_mm": 50
+  }
+ ],
+ "para_pintar": {
+  "paleta": [
+   "Beige cálido crema #F5E6D3",
+   "Madera miel #D9A773",
+   "Dorado mágico #F5C542",
+   "Celeste holograma #8FD3FF",
+   "Azul Spark #2F7DE1",
+   "Magenta Valentina #D6338A",
+   "Verde Eco #3BAA4A",
+   "Amarillo Pintor #FFC928",
+   "Morado Caos #6B2FA0",
+   "Gris niebla #9AA3A8"
+  ],
+  "atmosfera": "Dormitorio infantil 3D CGI cálido, luminoso y acogedor, con iluminación de estudio volumétrica, bordes redondeados suaves, luz de recorte brillante y profundidad de campo sutil.",
+  "detalles_clave": [
+   "Ventana al fondo que muestra el arcoíris a color al inicio y al final, y gris en el desarrollo",
+   "Cama infantil a la izquierda con hueco libre debajo para que se asome Don Caos",
+   "Lámpara colgante en el centro del techo y armario de madera a la derecha",
+   "Centro de la habitación despejado con alfombra circular para el Cofre del Abecedario y sus tres candados"
+  ],
+  "evitar": [
+   "Texturas fotorrealistas o sucias",
+   "Estilo 2D plano o vectorial",
+   "Bordes filosos, astillas o iluminación oscura de terror",
+   "Letras, números o textos escritos en carteles o libros del fondo que compitan con las vocales y números de la historia",
+   "Saturar el centro de la habitación impidiendo el paso de los cinco personajes"
+  ]
+ },
+ "ambiente_vivo": {
+  "perfil_real": {
+   "que_es": "Interior doméstico: dormitorio infantil acogedor de una casa familiar latinoamericana contemporánea, estilizado en animación 3D CGI preescolar de bordes redondeados y cálidos.",
+   "referencias_reales": [
+    {
+     "referencia": "Dormitorios infantiles de películas 3D CGI tipo Pixar (Toy Story / Boo's Room en Monsters, Inc.)",
+     "que_tomar": "Proporciones amigables para niños pequeños, cantos redondeados sin esquinas peligrosas, textiles acolchados mate, maderas cálidas satinadas y orden acogedor."
+    },
+    {
+     "referencia": "Habitación infantil de clase media en Colombia / Latinoamérica",
+     "que_tomar": "Piso de listones de madera cálida, muros en estuco crema suave con zócalo de madera, ventana amplia con vista al jardín y juguetes de madera y tela."
+    }
+   ],
+   "condiciones_fisicas": {
+    "gravedad": "Terrestre normal (9,8 m/s²), salvo efectos mágicos puntuales de letras y cofres flotando.",
+    "aire": "Aire interior limpio, templado y sin polvo en suspensión; sin corrientes fuertes.",
+    "agua": "No hay cuerpos de agua; humedad interior confortable.",
+    "presion": "Atmosférica terrestre normal (1 atm).",
+    "temperatura": "Cálida y agradable de interior doméstico (aprox. 21 °C), reflejada en la luz suave y textiles acogedores."
+   },
+   "terreno_y_suelo": "Piso interior plano de listones de madera color roble miel con acabado satinado suave, cubierto en el centro por una alfombra circular de algodón tejido beige.",
+   "luz_natural_y_cielo": "Luz diurna que entra por la ventana de la pared del fondo; al inicio muestra cielo azul con un arcoíris brillante, se torna grisácea y desaturada tras el rayo de Don Caos, y vuelve a ser dorada y colorida al abrirse el cofre en la escena 8.",
+   "clima_y_fenomenos": "Interior resguardado; en el exterior visible por la ventana hay día despejado con arcoíris que sufre el fenómeno mágico de desaturación a gris y posterior explosión de color y confeti interior en las escenas 8 y 9.",
+   "vida": {
+    "flora": "Pequeña planta suculenta decorativa en maceta redondeada sobre la estantería infantil; copas de árboles visibles a lo lejos por la ventana.",
+    "fauna": "No hay fauna propia de fondo en la habitación (solo Piquito como personaje oficial acompañante de Eco).",
+    "gente": "Espacio privado infantil; no hay transeúntes ni personas de fondo ajenas a los personajes de la historia."
+   },
+   "elementos_construidos_tipicos": [
+    "Zócalo perimetral de madera redondeada",
+    "Cortinero de madera y cortinas de tela suave en la ventana",
+    "Estantería baja para cuentos y bloques de madera",
+    "Baúl y cesta de tela para guardar juguetes",
+    "Mesita infantil redonda de actividades con banquito",
+    "Repisa flotante con juguetes de madera y cuadros sin texto",
+    "Interruptor de luz y perchero infantil a altura de niño"
+   ],
+   "paleta_de_colores": [
+    "Crema beige cálido #F5E6D3",
+    "Roble miel cálido #D9A773",
+    "Madera tibia #C88A55",
+    "Amarillo mantequilla #FFE28A",
+    "Azul celeste suave #7EB6E6",
+    "Gris niebla #9AA3A8",
+    "Dorado mágico #F5C542"
+   ],
+   "escala_y_horizonte": "Escala interior doméstica adaptada a niños de 5 a 6 años (habitación de 4,5 m × 4,0 m y 2,8 m de altura); horizonte exterior visible únicamente a través de la ventana del fondo.",
+   "lo_que_no_hay": [
+    "Textos, letras, números o logotipos impresos en carteles, ropa de cama o juguetes de fondo (prohibido por el estilo del canal y porque Don Caos borró el abecedario y los números){\"",
+    "Objetos cortopunzantes, bordes afilados, armas reales o decoración de terror",
+    "Televisores, cables sueltos peligrosos o desorden sucio",
+    "Personas o mascotas genéricas de fondo"
+   ]
+  },
+  "superficies": [
+   {
+    "superficie": "Piso de listones de madera y alfombra central",
+    "acabado": "Listones de madera clara con barniz satinado suave y bordes biselados limpios; tapete central de tejido de algodón mate.",
+    "desgaste": "Casi nuevo, limpio y bien cuidado, apto para que los niños jueguen en el suelo.",
+    "detalles": "Juntas suaves entre listones sin textura fotorrealista; tejido esponjoso redondeado en la alfombra.",
+    "origen": "ambiente",
+    "justificacion": "El estilo 3D CGI del canal exige geometría limpia sin líneas duras, maderas cálidas y telas mate."
+   },
+   {
+    "superficie": "Paredes interiores con zócalo inferior",
+    "acabado": "Pintura mate lisa color crema beige cálido #F5E6D3 con zócalo inferior de madera lacada en blanco marfil #FFF8EE.",
+    "desgaste": "Intacto, sin manchas de humedad ni grietas.",
+    "detalles": "Esquinas suavemente redondeadas con oclusión ambiental blanda y cálida.",
+    "origen": "ambiente",
+    "justificacion": "La configuración del canal pide fondos beige cálidos suaves que hagan resaltar las siluetas y colores de los héroes."
+   },
+   {
+    "superficie": "Techo interior",
+    "acabado": "Estuco mate uniforme color blanco marfil #FAF3E8 con moldura perimetral redondeada.",
+    "desgaste": "Sin desgaste.",
+    "detalles": "Superficie limpia que refleja suavemente la luz cálida de la lámpara colgante y los destellos mágicos.",
+    "origen": "ambiente",
+    "justificacion": "Cierra el volumen interior del dormitorio y sostiene la lámpara central de la escena 3."
+   },
+   {
+    "superficie": "Carpintería y mobiliario infantil",
+    "acabado": "Madera barnizada satinada #C88A55 combinada con paneles pintados en crema #F2E2CE y acentos celestes y amarillos.",
+    "desgaste": "Uso doméstico suave y limpio, con brillo cálido en los cantos redondeados.",
+    "detalles": "Tiradores redondos de madera y patas cónicas suaves sin aristas vivas.",
+    "origen": "ambiente",
+    "justificacion": "Coherente con un entorno preescolar seguro (3 a 6 años) y estética 3D tipo Pixar."
+   }
+  ],
+  "utileria_ambiente": [
+   {
+    "ambiente_id": "amb-esc-habitacion-cortinas-ventana",
+    "nombre": "Par de cortinas de tela suave recogidas a los lados de la ventana",
+    "categoria": "decoracion",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "fondo",
+    "x_m": 2.25,
+    "y_m": 3.88,
+    "z_m": 0.7,
+    "ancho_m": 1.9,
+    "fondo_m": 0.12,
+    "alto_m": 1.65,
+    "rotacion_grados": 180,
+    "material": "Algodón tejido mate de caída suave",
+    "color": "Amarillo mantequilla #FFE28A con lazos crema #F5E6D3",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "Abiertas a los lados dejando ver el arcoíris; pierden saturación tras el rayo de Don Caos"
+     },
+     {
+      "escena": "2",
+      "estado": "Abiertas y desaturadas en tono grisáceo"
+     },
+     {
+      "escena": "3",
+      "estado": "Abiertas y desaturadas en tono grisáceo"
+     },
+     {
+      "escena": "8",
+      "estado": "Abiertas; recuperan su color amarillo cálido al abrirse el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Abiertas con su color amarillo cálido restaurado"
+     }
+    ],
+    "no_estorba": "Recogidas a ambos lados del marco de la ventana sin tapar la vista del arcoíris.",
+    "origen": "ambiente",
+    "justificacion": "Visten la ventana principal de la habitación y refuerzan el cambio visual entre el mundo con color y sin color."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-barra-cortinero",
+    "nombre": "Barra de cortinero de madera con remates esféricos",
+    "categoria": "infraestructura",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "fondo",
+    "x_m": 2.25,
+    "y_m": 3.9,
+    "z_m": 2.32,
+    "ancho_m": 2.0,
+    "fondo_m": 0.08,
+    "alto_m": 0.08,
+    "rotacion_grados": 180,
+    "material": "Madera torneada satinada",
+    "color": "Madera miel #C88A55",
+    "estado_por_escena": [],
+    "no_estorba": "Fijada en la parte alta de la pared del fondo a 2,32 m de altura.",
+    "origen": "ambiente",
+    "justificacion": "Soporte físico necesario para las cortinas sobre la ventana del fondo."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-edredon-acolchado",
+    "nombre": "Edredón acolchado esponjoso doblado a los pies de la cama",
+    "categoria": "utileria",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "izquierda",
+    "x_m": 1.75,
+    "y_m": 2.6,
+    "z_m": 0.52,
+    "ancho_m": 0.45,
+    "fondo_m": 1.05,
+    "alto_m": 0.14,
+    "rotacion_grados": 90,
+    "material": "Tela de algodón acolchado mate",
+    "color": "Azul celeste suave #7EB6E6 con reverso crema #F5E6D3",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "Doblado a los pies de la cama; se desatura parcialmente tras el rayo morado"
+     },
+     {
+      "escena": "2",
+      "estado": "Doblado sobre la cama en tono apagado"
+     },
+     {
+      "escena": "3",
+      "estado": "Doblado sobre la cama en tono apagado"
+     },
+     {
+      "escena": "8",
+      "estado": "Recupera su tono azul celeste cálido al abrirse el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Doblado sobre la cama con color pleno"
+     }
+    ],
+    "no_estorba": "Ubicado en el extremo de los pies de la cama, dejando libre el centro del colchón para obj-libro-cuentos y la cabecera para obj-almohada.",
+    "origen": "ambiente",
+    "justificacion": "Aporta volumen textil cálido a la cama infantil sin tapar el libro ni el hueco inferior."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-cojin-estrella",
+    "nombre": "Cojín decorativo con forma de estrella redondeada",
+    "categoria": "decoracion",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "izquierda",
+    "x_m": 0.55,
+    "y_m": 3.0,
+    "z_m": 0.54,
+    "ancho_m": 0.32,
+    "fondo_m": 0.32,
+    "alto_m": 0.14,
+    "rotacion_grados": 45,
+    "material": "Felpa suave mate",
+    "color": "Amarillo cálido #FFD84D",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "Apoyado en la esquina de la cama; pierde color tras el rayo"
+     },
+     {
+      "escena": "2",
+      "estado": "En tono grisáceo junto a la almohada"
+     },
+     {
+      "escena": "3",
+      "estado": "En tono grisáceo a un lado de la almohada"
+     },
+     {
+      "escena": "8",
+      "estado": "Recupera su color amarillo brillante al abrirse el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Con color amarillo brillante sobre la cama"
+     }
+    ],
+    "no_estorba": "Colocado a un costado de obj-almohada sin tapar la aparición de la vocal A en la escena 3.",
+    "origen": "ambiente",
+    "justificacion": "Detalle infantil tierno en la cama que conecta con la temática de estrellas del episodio."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-porta-lapices",
+    "nombre": "Vaso portalápices cilíndrico de madera",
+    "categoria": "utileria",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "izquierda",
+    "x_m": 0.28,
+    "y_m": 3.58,
+    "z_m": 0.55,
+    "ancho_m": 0.1,
+    "fondo_m": 0.1,
+    "alto_m": 0.13,
+    "rotacion_grados": 0,
+    "material": "Madera clara torneada satinada",
+    "color": "Roble claro #D9A773",
+    "estado_por_escena": [],
+    "no_estorba": "Situado en la esquina trasera de la mesa de noche, dejando despejado en primer plano a obj-lapiz.",
+    "origen": "ambiente",
+    "justificacion": "Da contexto natural a que haya un lápiz (obj-lapiz) sobre la mesa de noche."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-lamparita-noche",
+    "nombre": "Luz quitamiedos con forma de nubecita sonriente",
+    "categoria": "utileria",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "izquierda",
+    "x_m": 0.26,
+    "y_m": 3.3,
+    "z_m": 0.55,
+    "ancho_m": 0.16,
+    "fondo_m": 0.12,
+    "alto_m": 0.14,
+    "rotacion_grados": 90,
+    "material": "Plástico translúcido satinado",
+    "color": "Blanco cálido #FFF8EE",
+    "estado_por_escena": [],
+    "no_estorba": "Sobre la mesa de noche junto a la pared izquierda, lejos del borde donde reposa obj-lapiz.",
+    "origen": "ambiente",
+    "justificacion": "Elemento firma de dormitorio preescolar que utiliza el material de plástico translúcido definido en el estilo del canal."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-estanteria-baja",
+    "nombre": "Estantería infantil baja de dos niveles",
+    "categoria": "mueble",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "fondo",
+    "x_m": 0.95,
+    "y_m": 3.78,
+    "z_m": 0.0,
+    "ancho_m": 0.75,
+    "fondo_m": 0.34,
+    "alto_m": 0.78,
+    "rotacion_grados": 180,
+    "material": "Madera pintada satinada con bordes biselados",
+    "color": "Madera tibia #C88A55 con interior crema #F5E6D3",
+    "estado_por_escena": [],
+    "no_estorba": "Adosada a la pared del fondo a la izquierda de la ventana, fuera del centro de acción.",
+    "origen": "ambiente",
+    "justificacion": "Mueble de apoyo a escala infantil para organizar juguetes y cuentos en el fondo del cuadro."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-libros-apilados",
+    "nombre": "Grupo de libros infantiles cerrados de lomos lisos sin texto",
+    "categoria": "utileria",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 0.82,
+    "y_m": 3.78,
+    "z_m": 0.42,
+    "ancho_m": 0.24,
+    "fondo_m": 0.22,
+    "alto_m": 0.2,
+    "rotacion_grados": 180,
+    "material": "Cartón empastado mate",
+    "color": "Azul #5B9BD5, verde #68B872 y naranja #F2792A (sin letras ni números en los lomos){\"",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "Apilados en el estante medio; pierden color con el rayo de Don Caos"
+     },
+     {
+      "escena": "2",
+      "estado": "En tonos grises en la estantería"
+     },
+     {
+      "escena": "3",
+      "estado": "En tonos grises en la estantería"
+     },
+     {
+      "escena": "8",
+      "estado": "Recuperan sus colores vivos al abrirse el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Con colores vivos en la estantería"
+     }
+    ],
+    "no_estorba": "Dentro de la repisa media de la estantería baja del fondo.",
+    "origen": "ambiente",
+    "justificacion": "Refuerza el hábito de lectura del cuarto infantil respetando la regla de no incluir texto en el fondo."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-bloques-geometricos",
+    "nombre": "Pirámide de bloques geométricos de madera sin letras",
+    "categoria": "utileria",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 0.8,
+    "y_m": 3.78,
+    "z_m": 0.78,
+    "ancho_m": 0.25,
+    "fondo_m": 0.18,
+    "alto_m": 0.16,
+    "rotacion_grados": 180,
+    "material": "Madera pintada satinada",
+    "color": "Rojo coral #E85D56, amarillo #FFC928 y azul #2F7DE1",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "Sobre la estantería; se vuelven grises tras el segundo rayo"
+     },
+     {
+      "escena": "2",
+      "estado": "Desaturados en gris"
+     },
+     {
+      "escena": "3",
+      "estado": "Desaturados en gris"
+     },
+     {
+      "escena": "8",
+      "estado": "Recuperan sus colores primarios al abrirse el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Con colores primarios brillantes"
+     }
+    ],
+    "no_estorba": "Sobre la cubierta superior de la estantería baja en y=3,78 m.",
+    "origen": "ambiente",
+    "justificacion": "Juguete clásico de edad preescolar que apoya visualmente la pérdida y recuperación de los colores."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-maceta-suculenta",
+    "nombre": "Maceta redondeada de cerámica con plantita verde de hojas redondas",
+    "categoria": "vegetacion",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 1.15,
+    "y_m": 3.78,
+    "z_m": 0.78,
+    "ancho_m": 0.18,
+    "fondo_m": 0.18,
+    "alto_m": 0.22,
+    "rotacion_grados": 0,
+    "material": "Cerámica satinada y hojas suaves mate",
+    "color": "Maceta terracota suave #E08A63 y hojas verdes #3BAA4A",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "Con color natural al inicio y grisácea tras el rayo"
+     },
+     {
+      "escena": "2",
+      "estado": "Desaturada en gris"
+     },
+     {
+      "escena": "3",
+      "estado": "Desaturada en gris"
+     },
+     {
+      "escena": "8",
+      "estado": "Recupera su verde vivo al abrirse el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Verde y radiante"
+     }
+    ],
+    "no_estorba": "En el extremo derecho de la estantería baja junto a la ventana.",
+    "origen": "ambiente",
+    "justificacion": "Aporta un toque de naturaleza viva dentro del dormitorio coherente con el mundo de Los Guardianes de la Ceiba."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-baul-juguetes",
+    "nombre": "Baúl juguetero de madera con tapa cerrada y bordes redondeados",
+    "categoria": "mueble",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "fondo",
+    "x_m": 3.45,
+    "y_m": 3.72,
+    "z_m": 0.0,
+    "ancho_m": 0.72,
+    "fondo_m": 0.42,
+    "alto_m": 0.48,
+    "rotacion_grados": 180,
+    "material": "Madera barnizada satinada con frente color crema",
+    "color": "Madera miel #C88A55 y crema #F2E2CE",
+    "estado_por_escena": [],
+    "no_estorba": "Pegado a la pared del fondo a la derecha de la ventana, dejando libre el paso hacia obj-armario.",
+    "origen": "ambiente",
+    "justificacion": "Mobiliario firma de cuarto infantil que equilibra el peso visual al lado derecho de la ventana."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-peluche-oso",
+    "nombre": "Muñeco de peluche suave con forma de osito redondo sentado",
+    "categoria": "utileria",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 3.35,
+    "y_m": 3.72,
+    "z_m": 0.48,
+    "ancho_m": 0.24,
+    "fondo_m": 0.22,
+    "alto_m": 0.28,
+    "rotacion_grados": 200,
+    "material": "Felpa textil mate de bordes redondeados",
+    "color": "Marrón caramelo cálido #B87B4B con pajarita azul #2F7DE1",
+    "estado_por_escena": [],
+    "no_estorba": "Sentado encima del baúl de juguetes contra la pared del fondo.",
+    "origen": "ambiente",
+    "justificacion": "Da calidez y ternura infantil al rincón derecho del fondo."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-pelota-colores",
+    "nombre": "Pelota blanda de gajos de colores",
+    "categoria": "utileria",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "fondo",
+    "x_m": 3.65,
+    "y_m": 3.72,
+    "z_m": 0.48,
+    "ancho_m": 0.2,
+    "fondo_m": 0.2,
+    "alto_m": 0.2,
+    "rotacion_grados": 0,
+    "material": "Tela acolchada mate",
+    "color": "Gajos amarillo #FFC928, azul #2F7DE1 y magenta #D6338A",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "Sobre el baúl; pierde sus colores tras el rayo de Don Caos"
+     },
+     {
+      "escena": "2",
+      "estado": "En tonos grises"
+     },
+     {
+      "escena": "3",
+      "estado": "En tonos grises"
+     },
+     {
+      "escena": "8",
+      "estado": "Recupera sus colores vivos al abrirse el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Con colores vivos sobre el baúl"
+     }
+    ],
+    "no_estorba": "Reposa sobre el baúl de juguetes junto al peluche, sin rodar al piso.",
+    "origen": "ambiente",
+    "justificacion": "Juguete reconocible al instante que hace evidente el estado con o sin color de la habitación."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-cesta-tela",
+    "nombre": "Cesta cilíndrica de tela tejida con asas de cuerda",
+    "categoria": "utileria",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "derecha",
+    "x_m": 4.15,
+    "y_m": 3.62,
+    "z_m": 0.0,
+    "ancho_m": 0.36,
+    "fondo_m": 0.36,
+    "alto_m": 0.4,
+    "rotacion_grados": 270,
+    "material": "Algodón trenzado grueso mate",
+    "color": "Beige cálido #E8D3B9 con franja verde #3BAA4A",
+    "estado_por_escena": [],
+    "no_estorba": "En la esquina trasera derecha entre el baúl y obj-armario.",
+    "origen": "ambiente",
+    "justificacion": "Complementa el almacenamiento textil del dormitorio en la esquina del fondo."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-mesa-dibujo",
+    "nombre": "Mesita infantil redonda de actividades",
+    "categoria": "mueble",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "derecha",
+    "x_m": 3.95,
+    "y_m": 1.15,
+    "z_m": 0.0,
+    "ancho_m": 0.62,
+    "fondo_m": 0.62,
+    "alto_m": 0.5,
+    "rotacion_grados": 270,
+    "material": "Madera clara satinada con cubierta blanca cálida",
+    "color": "Madera #D9A773 y blanco marfil #FAF3E8",
+    "estado_por_escena": [],
+    "no_estorba": "Cerca de la pared derecha hacia el frente, dejando libre la alfombra central y el frente de obj-armario.",
+    "origen": "ambiente",
+    "justificacion": "Rincón creativo propio de un cuarto preescolar donde el niño dibuja y pinta."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-banquito-madera",
+    "nombre": "Banquito infantil redondo de cuatro patas",
+    "categoria": "mueble",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "piso",
+    "pared": "derecha",
+    "x_m": 3.95,
+    "y_m": 0.68,
+    "z_m": 0.0,
+    "ancho_m": 0.3,
+    "fondo_m": 0.3,
+    "alto_m": 0.28,
+    "rotacion_grados": 0,
+    "material": "Madera torneada satinada",
+    "color": "Madera tibia #C88A55 con asiento amarillo #FFE28A",
+    "estado_por_escena": [],
+    "no_estorba": "Junto a la mesita de actividades en la esquina delantera derecha, lejos de las cámaras centrales.",
+    "origen": "ambiente",
+    "justificacion": "Asiento a escala de niño de 5 años que acompaña la mesita de dibujo."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-bote-crayones",
+    "nombre": "Cubilete bajo con crayones gruesos de cera",
+    "categoria": "utileria",
+    "forma": "cilindro",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "derecha",
+    "x_m": 3.95,
+    "y_m": 1.15,
+    "z_m": 0.5,
+    "ancho_m": 0.12,
+    "fondo_m": 0.12,
+    "alto_m": 0.11,
+    "rotacion_grados": 0,
+    "material": "Madera y cera mate de colores",
+    "color": "Crayones rojo, azul, verde y amarillo",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "Con colores vivos al inicio; pasan a gris tras el rayo"
+     },
+     {
+      "escena": "2",
+      "estado": "En tonos grises sobre la mesita"
+     },
+     {
+      "escena": "3",
+      "estado": "En tonos grises sobre la mesita"
+     },
+     {
+      "escena": "8",
+      "estado": "Recuperan sus colores al abrirse el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Con colores vivos sobre la mesita"
+     }
+    ],
+    "no_estorba": "En el centro de la mesita infantil redonda.",
+    "origen": "ambiente",
+    "justificacion": "Utilería cotidiana de preescolar que no se confunde con obj-lapiz (que está en la mesa de noche)."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-repisa-pared-izquierda",
+    "nombre": "Repisa flotante de madera con soportes redondeados",
+    "categoria": "mueble",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "izquierda",
+    "x_m": 0.12,
+    "y_m": 1.25,
+    "z_m": 1.45,
+    "ancho_m": 0.2,
+    "fondo_m": 0.68,
+    "alto_m": 0.06,
+    "rotacion_grados": 90,
+    "material": "Madera clara barnizada satinada",
+    "color": "Roble miel #D9A773",
+    "estado_por_escena": [],
+    "no_estorba": "Anclada a 1,45 m de altura en la pared izquierda, entre la puerta y la cama.",
+    "origen": "ambiente",
+    "justificacion": "Viste el nivel de ojos en el tramo delantero de la pared izquierda sin ocupar suelo."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-avion-madera",
+    "nombre": "Avioncito de juguete de madera con hélice redondeada",
+    "categoria": "decoracion",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "sobre_otro",
+    "pared": "izquierda",
+    "x_m": 0.12,
+    "y_m": 1.25,
+    "z_m": 1.51,
+    "ancho_m": 0.18,
+    "fondo_m": 0.22,
+    "alto_m": 0.12,
+    "rotacion_grados": 90,
+    "material": "Madera pintada satinada",
+    "color": "Madera natural #D9A773 con alas azules #2F7DE1",
+    "estado_por_escena": [],
+    "no_estorba": "Descansa sobre la repisa flotante izquierda a 1,51 m de altura.",
+    "origen": "ambiente",
+    "justificacion": "Juguete artesanal cálido que enriquece el fondo en planos cruzados hacia la cama."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-cuadros-infantiles",
+    "nombre": "Par de cuadros enmarcados con dibujos infantiles de un árbol y un sol sin texto",
+    "categoria": "decoracion",
+    "forma": "plano",
+    "tiene_volumen": false,
+    "apoyo": "pared",
+    "pared": "izquierda",
+    "x_m": 0.02,
+    "y_m": 2.6,
+    "z_m": 1.55,
+    "ancho_m": 0.03,
+    "fondo_m": 0.85,
+    "alto_m": 0.42,
+    "rotacion_grados": 90,
+    "material": "Marco de madera redondeada y lámina de papel mate",
+    "color": "Marcos madera #C88A55 con ilustraciones en verde #3BAA4A, amarillo #FFC928 y cielo #8FD3FF",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "En color al inicio; pasan a blanco y negro tras el rayo de Don Caos"
+     },
+     {
+      "escena": "2",
+      "estado": "Ilustraciones en escala de grises"
+     },
+     {
+      "escena": "3",
+      "estado": "Ilustraciones en escala de grises"
+     },
+     {
+      "escena": "8",
+      "estado": "Recuperan sus colores vivos al abrirse el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Con colores vivos en la pared"
+     }
+    ],
+    "no_estorba": "Colgados en la pared izquierda a 1,55 m de altura por encima de la cama.",
+    "origen": "ambiente",
+    "justificacion": "Cubre el nivel de ojos sobre la cama y refleja visualmente la pérdida y retorno del color sin usar letras."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-perchero-pared",
+    "nombre": "Perchero infantil de madera con tres pomos redondos",
+    "categoria": "utileria",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "frente",
+    "x_m": 1.55,
+    "y_m": 0.04,
+    "z_m": 1.15,
+    "ancho_m": 0.42,
+    "fondo_m": 0.08,
+    "alto_m": 0.12,
+    "rotacion_grados": 0,
+    "material": "Madera torneada pintada",
+    "color": "Base crema #F2E2CE con pomos azul, amarillo y verde",
+    "estado_por_escena": [],
+    "no_estorba": "Fijado en la pared frente a la derecha de la puerta de entrada.",
+    "origen": "ambiente",
+    "justificacion": "Elemento funcional típico junto a la puerta de entrada de un dormitorio infantil."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-interruptor-luz",
+    "nombre": "Interruptor de luz de placa redondeada",
+    "categoria": "infraestructura",
+    "forma": "caja",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "frente",
+    "x_m": 1.36,
+    "y_m": 0.02,
+    "z_m": 1.05,
+    "ancho_m": 0.08,
+    "fondo_m": 0.03,
+    "alto_m": 0.12,
+    "rotacion_grados": 0,
+    "material": "Plástico satinado suave",
+    "color": "Blanco marfil #FFF8EE",
+    "estado_por_escena": [],
+    "no_estorba": "Adosado a la pared frente a 11 cm del marco de la puerta.",
+    "origen": "ambiente",
+    "justificacion": "Servicio eléctrico básico indispensable junto a la puerta de acceso del cuarto."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-zocalo-perimetral",
+    "nombre": "Zócalo guardapolvo perimetral de madera de canto redondeado",
+    "categoria": "infraestructura",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "fondo",
+    "x_m": 2.25,
+    "y_m": 3.98,
+    "z_m": 0.0,
+    "ancho_m": 4.5,
+    "fondo_m": 0.03,
+    "alto_m": 0.1,
+    "rotacion_grados": 180,
+    "material": "Madera lacada satinada",
+    "color": "Blanco cálido #FFF8EE",
+    "estado_por_escena": [],
+    "no_estorba": "Recorre la unión inferior de las paredes con el piso sin restar espacio útil.",
+    "origen": "ambiente",
+    "justificacion": "Remate arquitectónico doméstico que da acabado limpio al encuentro entre piso de madera y muros crema."
+   },
+   {
+    "ambiente_id": "amb-esc-habitacion-guirnalda-banderines",
+    "nombre": "Guirnalda festiva de banderines triangulares de tela",
+    "categoria": "decoracion",
+    "forma": "compuesto",
+    "tiene_volumen": true,
+    "apoyo": "pared",
+    "pared": "fondo",
+    "x_m": 2.25,
+    "y_m": 3.92,
+    "z_m": 2.48,
+    "ancho_m": 2.4,
+    "fondo_m": 0.05,
+    "alto_m": 0.18,
+    "rotacion_grados": 180,
+    "material": "Tela de algodón mate e hilo trenzado",
+    "color": "Banderines alternados en amarillo #FFC928, azul #2F7DE1, verde #3BAA4A y magenta #D6338A",
+    "estado_por_escena": [
+     {
+      "escena": "1",
+      "estado": "Colgada sobre la ventana con los colores del equipo; se vuelve gris tras el rayo"
+     },
+     {
+      "escena": "2",
+      "estado": "En tonos grises sobre la ventana"
+     },
+     {
+      "escena": "3",
+      "estado": "En tonos grises sobre la ventana"
+     },
+     {
+      "escena": "8",
+      "estado": "Vuelve a lucir sus colores vivos cuando se abre el cofre"
+     },
+     {
+      "escena": "9",
+      "estado": "Con todos sus colores vivos acompañando la celebración"
+     }
+    ],
+    "no_estorba": "Colgada en la franja alta de la pared del fondo (z=2,48 m), por encima del cortinero.",
+    "origen": "ambiente",
+    "justificacion": "Viste la capa alta del escenario y refuerza el arco dramático de pérdida y recuperación del color."
+   }
+  ],
+  "senales_uso": [
+   {
+    "descripcion": "Ligera huella cóncava y pliegues suaves en el tendido de la cama donde descansaba el libro de cuentos abierto.",
+    "donde": "Sobre el centro del colchón de obj-cama (x=1,2 m, y=2,6 m, z=0,5 m)}{\"",
+    "escenas": [
+     "1",
+     "2",
+     "3",
+     "8",
+     "9"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Muestra que la cama estaba lista para la hora de lectura antes del disparo de Don Caos."
+   },
+   {
+    "descripcion": "Crayones de cera con las puntas ligeramente redondeadas por el uso infantil y una hoja blanca sin letras sobre la mesita de dibujo.",
+    "donde": "Sobre la cubierta de amb-esc-habitacion-mesa-dibujo (x=3,95 m, y=1,15 m, z=0,5 m)}{\"",
+    "escenas": [
+     "1",
+     "2",
+     "3",
+     "8",
+     "9"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Rastro de vida cotidiana de un niño preescolar que usa su rincón de arte."
+   },
+   {
+    "descripcion": "Confeti de papel de colores esparcido alegremente sobre la alfombra central y el piso de madera tras la explosión mágica del cofre.",
+    "donde": "Alrededor de obj-cofre-dorado sobre la alfombra central y el piso (x=2,25 m, y=2,0 m, z=0,02 m)}{\"",
+    "escenas": [
+     "8",
+     "9"
+    ],
+    "origen": "ambiente",
+    "justificacion": "El guion indica explícitamente en la escena 8 una explosión de confeti de colores al leer MAMÁ que continúa en la celebración de la escena 9."
+   }
+  ],
+  "extras_fondo": [],
+  "ambiente_por_escena": [
+   {
+    "escena": "1",
+    "hora": "Día",
+    "clima": "Exterior despejado con arcoíris que se vuelve gris tras el segundo disparo de Don Caos",
+    "atmosfera": "Comienza apacible y cálida de lectura infantil; tras los dos rayos morados se vuelve desaturada y sorprendida, y luego cobra energía heroica con el aterrizaje de las cuatro luces de colores y la aparición del cofre dorado.",
+    "sonido_ambiente": "Silencio inicial, zumbido eléctrico y dos chispazos cómicos (¡ZAP!), aleteo suave de letras volando, destello mágico de aterrizaje de los héroes y resonancia dorada al aparecer el cofre."
+   },
+   {
+    "escena": "2",
+    "hora": "Día",
+    "clima": "Exterior gris sin color",
+    "atmosfera": "Expectante y de misión en equipo; el entorno grisáceo hace resaltar el brillo celeste neón del holograma de las 5 estrellas frente a los héroes.",
+    "sonido_ambiente": "Zumbido tecnológico suave del visor de Spark, destellos cristalinos al iluminarse cada estrella del mapa y música suave de pausa interactiva."
+   },
+   {
+    "escena": "3",
+    "hora": "Día",
+    "clima": "Exterior gris sin color",
+    "atmosfera": "Dinámica, lúdica y musical durante la búsqueda de las cinco vocales por los escondites del cuarto, cerrando con intriga al notar que las vocales recuperadas están grises.",
+    "sonido_ambiente": "Música alegre y rápida, trazos mágicos del pincel, zumbido de abeja, barrito de elefantito, eco cómico de 'uuuu' desde el armario, ¡ZAP! del rayo, palmas rítmicas de la canción de las vocales y campanita de la primera estrella."
+   },
+   {
+    "escena": "8",
+    "hora": "Día",
+    "clima": "Pasa de gris a soleado radiante con arcoíris al abrirse el cofre",
+    "atmosfera": "Comienza concentrada y emotiva durante el trazo de la M y la lectura de MAMÁ, y estalla en una fiesta luminosa, cálida y llena de color cuando el cofre se abre y devuelve las letras, números y colores al libro.",
+    "sonido_ambiente": "Brillo mágico de los trazos en el aire, silencio expectante en la pausa interactiva, grito alegre de celebración, tres clics metálicos de los candados, estallido de confeti y torbellino mágico de letras y colores volando."
+   },
+   {
+    "escena": "9",
+    "hora": "Día",
+    "clima": "Soleado y despejado con el arcoíris restaurado",
+    "atmosfera": "Alegre y triunfal en los primeros segundos con confeti en el suelo, pasando a un instante cómico de sorpresa cuando cae el papel con los números del 6 al 10 antes del corte a pantalla final.",
+    "sonido_ambiente": "Murmullo festivo de celebración, roce suave de papel al caer al piso de madera, silencio cómico con silbido nervioso de Don Caos y música enérgica de cierre."
+   }
+  ],
+  "vista_por_aberturas": [
+   {
+    "abertura": "Ventana con vista al arcoíris",
+    "pared": "fondo",
+    "que_se_ve": "Al inicio de la escena 1 se ve el cielo diurno azul claro, nubes blancas esponjosas, copas verdes de árboles del jardín y un arcoíris brillante de colores; tras el segundo ZAP de Don Caos en la escena 1 y durante las escenas 2 y 3, tanto el arcoíris como el cielo y las nubes se ven completamente grises; al abrirse el cofre en la escena 8 y durante la escena 9, el cielo azul y el arcoíris multicolor vuelven a brillar con intensidad.",
+    "escenas": [
+     "1",
+     "2",
+     "3",
+     "8",
+     "9"
+    ],
+    "origen": "ambiente",
+    "justificacion": "El guion indica explícitamente en la escena 1 que el arcoíris de la ventana se vuelve gris y en la escena 8 que todos los colores vuelven a la normalidad al abrirse el cofre."
+   },
+   {
+    "abertura": "Puerta de entrada de la habitación",
+    "pared": "frente",
+    "que_se_ve": "Puerta de madera cerrada en las escenas 1, 2, 8 y 9; en la escena 3 deja entrever brevemente el pasillo interior cálido de pared beige de la casa cuando entran corriendo Pintor y Eco.",
+    "escenas": [
+     "1",
+     "2",
+     "3",
+     "8",
+     "9"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Conecta de forma coherente el dormitorio con el resto de la casa (pasillo hacia la cocina y salida al jardín)."
+   }
+  ],
+  "fondo_lejano": [
+   {
+    "que_es": "Cielo diurno despejado con nubes redondeadas y un gran arcoíris que cruza el horizonte sobre las copas de los árboles del jardín",
+    "direccion": "fondo",
+    "distancia_aprox_m": 80,
+    "tamano_aparente": "Grande, enmarcado de lado a lado a través de la ventana de 1,6 m de ancho de la pared del fondo",
+    "color": "Azul cielo #7EC8E3, blanco #FFFFFF y arcoíris multicolor al inicio de la escena 1 y en las escenas 8 y 9; gris niebla #9AA3A8 tras el rayo de Don Caos en las escenas 1, 2 y 3",
+    "escenas": [
+     "1",
+     "2",
+     "3",
+     "8",
+     "9"
+    ],
+    "origen": "ambiente",
+    "justificacion": "Exigido por el guion para mostrar el efecto del Rayo Confundidor sobre el arcoíris exterior y la posterior restauración del mundo."
+   }
+  ],
+  "autorrevision": {
+   "densidad_objetivo": 22,
+   "por_que": "Al ser un dormitorio infantil cerrado de tamaño medio (4,5 m × 4,0 m), corresponde una densidad de 15 a 25 elementos de ambiente (se fijaron 22 elementos más 4 superficies y 3 señales de uso) para que se sienta habitado, cálido y reconocible al instante sin invadir la alfombra central donde actúan los 5 héroes y aparece el cofre.",
+   "capas": {
+    "suelo": "Listones de madera miel, zócalo perimetral blanco cálido, estantería baja, baúl de juguetes, cesta de tela, mesita infantil redonda, banquito de madera y confeti de celebración en escenas 8 y 9.",
+    "nivel_ojos": "Cortinas suaves en la ventana, edredón doblado y cojín de estrella en la cama, portalápices y luz quitamiedos de nube en la mesa de noche, libros sin texto, bloques geométricos, maceta con suculenta, osito de peluche, pelota de tela, bote de crayones, repisa flotante con avioncito de madera, cuadros infantiles sin texto, perchero e interruptor de luz.",
+    "alto": "Barra de cortinero de madera con remates esféricos y guirnalda festiva de banderines de tela sobre la ventana a 2,48 m de altura, acompañando la lámpara colgante central.",
+    "fondo": "Cielo diurno, nubes esponjosas, copas de árboles y el arcoíris exterior visible a través de la ventana de la pared del fondo."
+   },
+   "agregado_al_revisar": [
+    "amb-esc-habitacion-interruptor-luz y amb-esc-habitacion-perchero-pared junto a la puerta para cubrir servicios y mobiliario de entrada",
+    "amb-esc-habitacion-guirnalda-banderines y amb-esc-habitacion-barra-cortinero para vestir la capa alta de la pared del fondo",
+    "amb-esc-habitacion-maceta-suculenta para incluir vegetación interior coherente con la temática del canal",
+    "Estado por escena en textiles, juguetes y cuadros para reflejar la pérdida de color en la escena 1 y su recuperación en la escena 8"
+   ]
+  }
+ }
+}

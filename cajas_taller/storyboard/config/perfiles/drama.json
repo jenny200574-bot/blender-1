@@ -1,0 +1,58 @@
+{
+ "id": "drama",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Drama emocional",
+ "tonos": [
+  "dolor",
+  "íntimo",
+  "esperanza",
+  "decisión"
+ ],
+ "reglas": {
+  "intencion": "emoción interior, decisión, pérdida o esperanza",
+  "beats": "mostrar la reacción y el silencio; esconder lo espectacular",
+  "secuencia": "tomas que se quedan con el personaje",
+  "direccion": "planos medios a primeros planos, cámara estable o acercamiento lento, lentes 50-85 mm",
+  "actuacion": "intensidad media, verdad en el rostro, gestos pequeños",
+  "composicion": "aislamiento, aire sobre la cabeza, espacio negativo para la soledad",
+  "ritmo": "pausas y silencios que dejan respirar",
+  "transiciones": "cortes retenidos, L-cut del diálogo sobre la reacción",
+  "continuidad": "estado emocional y heridas visibles se mantienen",
+  "justificacion": "que el público sienta lo que el personaje siente"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   2.5,
+   12.0
+  ],
+  "lente_mm": [
+   35,
+   100
+  ],
+  "planos_preferidos": [
+   "MS",
+   "MCU",
+   "CU"
+  ],
+  "angulos_preferidos": [
+   "EYELEVEL",
+   "HIGHANGLE"
+  ],
+  "movimientos_preferidos": [
+   "STATIC",
+   "DOLLYIN",
+   "PEDESTAL"
+  ],
+  "movimientos_evitar": [
+   "WHIPPAN",
+   "CRASHZOOM"
+  ],
+  "transiciones_preferidas": [
+   "CORTE",
+   "L_CUT",
+   "FUNDIDO_NEGRO"
+  ],
+  "pausas": "muchas"
+ },
+ "ejemplo_puerta": "Plano medio estable: abre, se queda quieto, la cámara se acerca despacio a su rostro mientras entiende."
+}

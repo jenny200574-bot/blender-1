@@ -1,0 +1,10 @@
+{"grupo": "sueltos-gdc", "objetos": [
+ {"gdc": "gdc-rio", "objeto_id": "obj-rio", "nombre": "Río con agua (tramo modular)", "caja_m": {"ancho": 2.0, "fondo": 5.5, "alto": 0.15}, "apoyo": "piso",
+  "fuente_caja": "dato: plan esc-jardin v002, objeto «Río con agua» 2,0 × 5,5 × 0,15 m"},
+ {"gdc": "gdc-mantel", "objeto_id": "obj-mantel", "nombre": "Mantel de la mesa del jardín", "caja_m": {"ancho": 1.3, "fondo": 0.85, "alto": 0.2}, "apoyo": "piso",
+  "fuente_caja": "deducción: tablero de obj-mesa-jardin 1,2 × 0,75 m (plan esc-jardin v002) + 5 cm por lado; faldón 0,20 m declarado, NO medido; la base del molde es el borde inferior del faldón"},
+ {"gdc": "gdc-pijama-pintor", "objeto_id": "obj-pijama-pintor", "nombre": "Pijama enterizo de Pintor", "caja_m": {"ancho": 0.42, "fondo": 0.24, "alto": 0.82}, "apoyo": "piso",
+  "fuente_caja": "deducción: Pintor mide 1,06 m y 6,5 cabezas (ADN); mono de cuello a tobillo ≈ 1,06 − cabeza 0,16 − pies 0,08 = 0,82 m; ancho y fondo del torso de su ficha; molde de pie, sin cuerpo"},
+ {"gdc": "gdc-tableta-spark", "objeto_id": "obj-tableta-spark", "nombre": "Tableta holográfica de Spark", "caja_m": {"ancho": 0.22, "fondo": 0.015, "alto": 0.15}, "apoyo": "en_mano",
+  "fuente_caja": "deducción: sin ADN; el sello dice «Tableta/visor tecnológico azul que proyecta hologramas azules»; tamaño de tableta infantil sostenida por Spark (1,16 m), NO medido"}
+]}

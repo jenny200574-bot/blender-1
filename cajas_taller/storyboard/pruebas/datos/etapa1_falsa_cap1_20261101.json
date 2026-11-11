@@ -1,0 +1,113 @@
+{
+ "_nota": "FALSO — respuesta de PRUEBA de la etapa 1 (géneros), hecha a mano, solo escena 9. NO es de Argon. US$0.",
+ "respuesta": {
+  "escenas": [
+   {
+    "escena": "9",
+    "segmentos": [
+     {
+      "desde_cita": "El alienígena levanta la mano.",
+      "hasta_cita": "para que entregue cualquier cosa.",
+      "generos": [
+       {
+        "genero": "accion",
+        "peso": 0.55
+       },
+       {
+        "genero": "fantasia",
+        "peso": 0.45
+       }
+      ],
+      "subgenero": "fantasia_oscura",
+      "tono": "amenaza implacable",
+      "emociones": [
+       "miedo",
+       "impotencia",
+       "rabia"
+      ],
+      "intensidad": 4,
+      "por_que": "el villano revela a la novia como rehén; poder sobrenatural"
+     },
+     {
+      "desde_cita": "La prisión comienza a comprimirse.",
+      "hasta_cita": "No hagas ninguna locura por mí",
+      "generos": [
+       {
+        "genero": "drama",
+        "peso": 0.5
+       },
+       {
+        "genero": "suspenso",
+        "peso": 0.3
+       },
+       {
+        "genero": "romance",
+        "peso": 0.2
+       }
+      ],
+      "subgenero": "drama intimo",
+      "tono": "desesperación y amor",
+      "emociones": [
+       "angustia",
+       "ternura"
+      ],
+      "intensidad": 4,
+      "por_que": "ella lo protege aunque está atrapada"
+     },
+     {
+      "desde_cita": "La pulsera emite una voz diferente.",
+      "hasta_cita": "Podrías enfrentarlo.",
+      "generos": [
+       {
+        "genero": "ciencia_ficcion",
+        "peso": 0.6
+       },
+       {
+        "genero": "misterio",
+        "peso": 0.4
+       }
+      ],
+      "subgenero": "despertar de la IA",
+      "tono": "revelación íntima",
+      "emociones": [
+       "asombro",
+       "curiosidad",
+       "inquietud"
+      ],
+      "intensidad": 3,
+      "por_que": "Imi suena casi humana y ofrece una salida desconocida"
+     },
+     {
+      "desde_cita": "El protagonista mira la prisión.",
+      "hasta_cita": "puede destruirlos a los dos.",
+      "generos": [
+       {
+        "genero": "drama",
+        "peso": 0.6
+       },
+       {
+        "genero": "suspenso",
+        "peso": 0.4
+       }
+      ],
+      "subgenero": "decisión trágica",
+      "tono": "silencio y peso",
+      "emociones": [
+       "miedo a perderse",
+       "vértigo"
+      ],
+      "intensidad": 5,
+      "por_que": "el precio de fusionarse: dejar de ser uno mismo"
+     }
+    ]
+   }
+  ],
+  "arco_capitulo": "FALSO (solo esc 9): de la derrota a la decisión imposible.",
+  "revision": [
+   {
+    "chequeo": "citas_literales",
+    "ok": true
+   }
+  ]
+ }
+}

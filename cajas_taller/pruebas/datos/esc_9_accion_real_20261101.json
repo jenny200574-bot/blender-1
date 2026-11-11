@@ -1,0 +1,869 @@
+{
+ "escena": "9",
+ "fps": 8,
+ "duracion_s": 62.0,
+ "puntos": {
+  "p_protagonista_inicio": [
+   7.5,
+   11.5,
+   0.0
+  ],
+  "p_protagonista_caida": [
+   8.3,
+   11.5,
+   0.0
+  ],
+  "p_alienigena": [
+   10.8,
+   11.5,
+   0.0
+  ],
+  "p_novia_prision": [
+   12.8,
+   11.5,
+   1.2
+  ]
+ },
+ "personajes": [
+  {
+   "id": "ch-el-aliengena-73a9",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      62.0
+     ],
+     "pos": [
+      "p_alienigena",
+      "p_alienigena"
+     ],
+     "rot": 180,
+     "tipo": "quieto",
+     "porque": "Permanece de pie frente al protagonista mientras abre el espacio detras de el y comprime la prision de la novia"
+    }
+   ],
+   "version_personaje": {
+    "name": "FORMA COMPLETA",
+    "form": "fm-50a3aa4478e4",
+    "description": "Humanoide de complexión esbelta y atlética, piel pálida, cabello largo liso blanco plateado, ojos azules luminosos y orejas largas y puntiagudas. Viste una armadura ceñida de placas negras metálicas con detalles y líneas luminosas azules, hombreras estilizadas y un núcleo de energía azul brillante incrustado en el centro del pecho.",
+    "never_changes": "Cabello largo liso de color blanco plateado; Ojos azules brillantes; Orejas largas y puntiagudas; Piel pálida; Armadura negra biomecánica con líneas de energía azules y núcleo luminoso en el pecho"
+   }
+  },
+  {
+   "id": "ch-protagonista-c71a",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      17.5
+     ],
+     "pos": [
+      "p_protagonista_inicio",
+      "p_protagonista_inicio"
+     ],
+     "rot": 0,
+     "tipo": "quieto",
+     "porque": "De rodillas tras el ataque de la escena anterior, intenta levantarse sin lograrlo al ver a su novia"
+    },
+    {
+     "t": [
+      17.5,
+      18.8
+     ],
+     "pos": [
+      "p_protagonista_inicio",
+      "p_protagonista_caida"
+     ],
+     "rot": 0,
+     "tipo": "correr",
+     "porque": "Intenta correr hacia la prision transparente para socorrer a su novia"
+    },
+    {
+     "t": [
+      18.8,
+      20.0
+     ],
+     "pos": [
+      "p_protagonista_caida",
+      "p_protagonista_caida"
+     ],
+     "rot": 0,
+     "tipo": "caer",
+     "porque": "Las fuerzas le fallan y cae de nuevo sobre la azotea"
+    },
+    {
+     "t": [
+      20.0,
+      62.0
+     ],
+     "pos": [
+      "p_protagonista_caida",
+      "p_protagonista_caida"
+     ],
+     "rot": 0,
+     "tipo": "quieto",
+     "porque": "Permanece de rodillas hablando con Imi sobre la integracion completa y su precio"
+    }
+   ],
+   "version_personaje": {
+    "name": "ANTES",
+    "form": "fm-ce5c321a280b",
+    "description": "Joven de complexión robusta y rostro redondeado, piel clara, cabello negro corto y despeinado con flequillo, ojos azul oscuro y gafas de montura negra rectangular. Viste una sudadera gris con capucha y cremallera abierta, camiseta interior negra con un diseño circular dorado y azul en el pecho, pantalones holgados azul oscuro con bolsillos laterales tipo cargo, zapatillas deportivas negras con suela y detalles blancos, y una mochila negra colgada sobre el hombro derecho.",
+    "never_changes": "Cabello negro corto y despeinado con flequillo sobre la frente; Ojos de color azul oscuro; Esencia de los rasgos faciales base"
+   }
+  },
+  {
+   "id": "ch-la-novia-5cdf",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      1.5
+     ],
+     "pos": [
+      "p_novia_prision",
+      "p_novia_prision"
+     ],
+     "rot": 180,
+     "tipo": "quieto",
+     "porque": "Oculta en la distorsion espacial antes de que el alienigena abra el espacio"
+    },
+    {
+     "t": [
+      1.5,
+      62.0
+     ],
+     "pos": [
+      "p_novia_prision",
+      "p_novia_prision"
+     ],
+     "rot": 180,
+     "tipo": "levitar",
+     "porque": "Suspendida dentro de la prision transparente detras del alienigena mientras golpea las paredes y grita al protagonista"
+    }
+   ],
+   "version_personaje": {
+    "name": "FORMA HUMANA (VIDA COTIDIANA)",
+    "form": "fm-226362c091d9",
+    "description": "Mujer joven de piel clara, cabello largo y liso de color castaño muy oscuro/negro con flequillo y mechones sueltos a los lados del rostro, y ojos oscuros con reflejos grisáceos y violáceos. Viste un suéter o prenda de punto holgada de color blanco/crema que deja parte de un hombro descubierto. En la vista nocturna de espaldas lleva una prenda exterior oscura de manga larga.",
+    "never_changes": "Rostro de mujer joven de facciones suaves; Cabello largo con flequillo sobre la frente"
+   }
+  },
+  {
+   "id": "ch-imi-69f6",
+   "altura": null,
+   "estado": {},
+   "segmentos": [
+    {
+     "t": [
+      0.0,
+      17.5
+     ],
+     "pos": [
+      "p_protagonista_inicio",
+      "p_protagonista_inicio"
+     ],
+     "rot": 0,
+     "tipo": "quieto",
+     "porque": "Brazalete acoplado a la muneca izquierda del protagonista"
+    },
+    {
+     "t": [
+      17.5,
+      18.8
+     ],
+     "pos": [
+      "p_protagonista_inicio",
+      "p_protagonista_caida"
+     ],
+     "rot": 0,
+     "tipo": "correr",
+     "porque": "Se mueve junto con el protagonista cuando este intenta correr"
+    },
+    {
+     "t": [
+      18.8,
+      20.0
+     ],
+     "pos": [
+      "p_protagonista_caida",
+      "p_protagonista_caida"
+     ],
+     "rot": 0,
+     "tipo": "caer",
+     "porque": "Acompana la caida del protagonista"
+    },
+    {
+     "t": [
+      20.0,
+      62.0
+     ],
+     "pos": [
+      "p_protagonista_caida",
+      "p_protagonista_caida"
+     ],
+     "rot": 0,
+     "tipo": "quieto",
+     "porque": "Permanece en la muneca del protagonista mientras dialoga con el"
+    }
+   ],
+   "version_personaje": {
+    "name": "NÚCLEO DE COMBATE",
+    "form": "fm-40c9ed5b09a5",
+    "description": "Brazalete tecnológico de metal oscuro de aspecto líquido ajustado a una muñeca humana, con un núcleo circular central que brilla intensamente en color azul eléctrico/cian y líneas de energía luminosas que recorren las correas.",
+    "never_changes": "Esquema de colores azul eléctrico / cian y azul medianoche / negro; En todas sus formas con apariencia humana: cabello de tonos azulados/plateados con filamentos de luz y ojos azules con brillo digital"
+   }
+  }
+ ],
+ "tomas_plan": [],
+ "ejes": [],
+ "avisos_argon": [],
+ "escenario_id": "esc-azotea",
+ "escenario_elegido_por": "base.json (el mismo molde que usa el 02)",
+ "origen": "corrida del 01 (Argon)",
+ "parametros_3d": {
+  "ch-el-aliengena-73a9": {
+   "controles": {
+    "gordura": {
+     "torso": 1.08,
+     "cadera": 0.88,
+     "piernas": 0.98,
+     "brazos": 1.05,
+     "cara": 0.92
+    },
+    "colores.pelo": [
+     0.88,
+     0.91,
+     0.96
+    ],
+    "colores.piel": [
+     0.76,
+     0.75,
+     0.82
+    ],
+    "colores.cara": [
+     0.76,
+     0.75,
+     0.82
+    ],
+    "colores.ropa_superior": [
+     0.04,
+     0.05,
+     0.08
+    ],
+    "colores.ropa_inferior": [
+     0.04,
+     0.05,
+     0.08
+    ],
+    "colores.zapatos": [
+     0.05,
+     0.06,
+     0.09
+    ],
+    "colores.ojos": [
+     0.35,
+     0.85,
+     1.0
+    ],
+    "orejas_puntiagudas": {
+     "largo_m": 0.18
+    },
+    "pelo_largo": {
+     "largo_m": 1.05,
+     "color": [
+      0.88,
+      0.91,
+      0.96
+     ]
+    },
+    "armadura": {
+     "color": [
+      0.04,
+      0.05,
+      0.08
+     ],
+     "venas_color": [
+      0.08,
+      0.75,
+      1.0
+     ],
+     "venas_por_pieza": 8
+    },
+    "nucleo_pecho": {
+     "color": [
+      0.1,
+      0.75,
+      1.0
+     ],
+     "radio_m": 0.045
+    },
+    "expresion": "Angry",
+    "expresion_valor": 0.6
+   },
+   "origen": "biblioteca (aprobados)"
+  },
+  "ch-protagonista-c71a": {
+   "controles": {
+    "gordura": {
+     "torso": 1.38,
+     "cadera": 1.3,
+     "piernas": 1.22,
+     "brazos": 1.18,
+     "cara": 1.08
+    },
+    "colores.pelo": [
+     0.02,
+     0.02,
+     0.025
+    ],
+    "colores.piel": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.cara": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.ropa_superior": [
+     0.42,
+     0.43,
+     0.45
+    ],
+    "colores.ropa_inferior": [
+     0.08,
+     0.09,
+     0.13
+    ],
+    "colores.zapatos": [
+     0.55,
+     0.56,
+     0.58
+    ],
+    "gafas": true,
+    "gafas_color": [
+     0.02,
+     0.02,
+     0.02
+    ],
+    "pulsera": {
+     "muneca": "izquierda",
+     "color": [
+      0.05,
+      0.95,
+      1.0
+     ]
+    }
+   },
+   "origen": "biblioteca (aprobados)"
+  },
+  "ch-la-novia-5cdf": {
+   "controles": {
+    "gordura": {
+     "torso": 0.88,
+     "cadera": 0.82,
+     "piernas": 0.86,
+     "brazos": 0.88,
+     "cara": 0.85
+    },
+    "colores.piel": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "colores.cara": [
+     0.96,
+     0.78,
+     0.65
+    ],
+    "pelo_largo": {
+     "ocultar_pelo_base": true,
+     "largo_m": 0.65,
+     "color": [
+      0.08,
+      0.07,
+      0.09
+     ]
+    },
+    "colores.ropa_superior": [
+     0.92,
+     0.9,
+     0.85
+    ],
+    "colores.ropa_inferior": [
+     0.18,
+     0.28,
+     0.42
+    ],
+    "colores.zapatos": [
+     0.92,
+     0.92,
+     0.94
+    ],
+    "colores.ojos": [
+     0.25,
+     0.24,
+     0.32
+    ]
+   },
+   "origen": "Argon (diccionario)"
+  },
+  "ch-imi-69f6": {
+   "controles": {},
+   "origen": "Argon (diccionario)"
+  }
+ },
+ "revision_argon": [
+  {
+   "chequeo": "contradicciones",
+   "resultado": "ok",
+   "detalle": "El bloqueo respeta fielmente el guion de la escena 9 sin anadir ni omitir dialogos o acciones."
+  },
+  {
+   "chequeo": "alineacion_set",
+   "resultado": "ok",
+   "detalle": "Todos los puntos estan dentro de scene_area_xy [1.95, 17.45, 5.95, 21.45] en la zona despejada entre la estructura metalica y el ducto de ventilacion, sin colisionar con objetos."
+  },
+  {
+   "chequeo": "continuidad_posiciones",
+   "resultado": "ok",
+   "detalle": "Los segmentos cubren de 0 a 62 segundos sin saltos; el intento de correr recorre 0.8 metros en 1.3 segundos y Imi sigue exactamente la posicion de su portador."
+  },
+  {
+   "chequeo": "tiempos",
+   "resultado": "ok",
+   "detalle": "Duracion total de 62 segundos acorde al conteo de palabras de dialogo a 2.5 palabras por segundo mas las pausas dramaticas y acciones fisicas."
+  },
+  {
+   "chequeo": "poses",
+   "resultado": "ok",
+   "detalle": "Todas las poses pertenecen a POSE_LIBRARY y reflejan el estado herido del protagonista de rodillas y la posicion erguida del alienigena y la novia."
+  },
+  {
+   "chequeo": "miradas_y_emociones",
+   "resultado": "ok",
+   "detalle": "Las miradas alternan coherentemente entre el alienigena, la novia en la prision y la pulsera en la muneca del protagonista."
+  },
+  {
+   "chequeo": "objetos_y_cambios",
+   "resultado": "ok",
+   "detalle": "Se registra el cambio comprimir sobre la prision de la novia usando el vocabulario permitido."
+  },
+  {
+   "chequeo": "hechos",
+   "resultado": "ok",
+   "detalle": "Se registran los hechos primarios y secundarios requeridos para la continuidad con las escenas 10 y 11."
+  }
+ ],
+ "avisos_codigo": [
+  "ch-imi-69f6: se mueve entre 17.5 y 18.8 s sin un beat que lo explique"
+ ],
+ "version_01": "accion_v1",
+ "aspecto": [
+  1920,
+  1080
+ ],
+ "solo_accion": true,
+ "acciones": [
+  {
+   "id": "a1",
+   "t": [
+    0.0,
+    2.0
+   ],
+   "actor": "ch-el-aliengena-73a9",
+   "accion": "poder",
+   "pose": "senalando",
+   "mirada": "al protagonista",
+   "emocion": "arrogancia fria",
+   "objeto": "",
+   "cambio": "",
+   "cita": "El alienígena levanta la mano. El espacio se abre detrás de él, revelando una prisión transparente suspendida sobre la ciudad."
+  },
+  {
+   "id": "a2",
+   "t": [
+    1.5,
+    4.0
+   ],
+   "actor": "ch-la-novia-5cdf",
+   "accion": "aparecer",
+   "pose": "de_pie",
+   "mirada": "al protagonista",
+   "emocion": "angustia y desesperacion",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Dentro está la novia del protagonista. Golpea las paredes de energía, intentando liberarse."
+  },
+  {
+   "id": "a3",
+   "t": [
+    4.0,
+    6.5
+   ],
+   "actor": "ch-protagonista-c71a",
+   "accion": "gritar",
+   "pose": "de_rodillas",
+   "mirada": "a la novia en la prision",
+   "emocion": "horror e impotencia",
+   "objeto": "",
+   "cambio": "",
+   "cita": "PROTAGONISTA: —¡No! Intenta levantarse. No puede."
+  },
+  {
+   "id": "a4",
+   "t": [
+    6.5,
+    8.0
+   ],
+   "actor": "ch-protagonista-c71a",
+   "accion": "gritar",
+   "pose": "de_rodillas",
+   "mirada": "al alienigena",
+   "emocion": "furia desesperada",
+   "objeto": "",
+   "cambio": "",
+   "cita": "PROTAGONISTA: —¡Déjala ir!"
+  },
+  {
+   "id": "a5",
+   "t": [
+    8.0,
+    14.0
+   ],
+   "actor": "ch-el-aliengena-73a9",
+   "accion": "hablar",
+   "pose": "de_pie",
+   "mirada": "al protagonista",
+   "emocion": "desprecio calculador",
+   "objeto": "",
+   "cambio": "",
+   "cita": "ALIENÍGENA: —Tu especie es tan predecible. Basta con amenazar aquello que ama para que entregue cualquier cosa."
+  },
+  {
+   "id": "a6",
+   "t": [
+    14.0,
+    15.5
+   ],
+   "actor": "ch-el-aliengena-73a9",
+   "accion": "poder",
+   "pose": "de_pie",
+   "mirada": "al protagonista",
+   "emocion": "crueldad",
+   "objeto": "ch-la-novia-5cdf",
+   "cambio": "comprimir",
+   "cita": "La prisión comienza a comprimirse."
+  },
+  {
+   "id": "a7",
+   "t": [
+    15.5,
+    17.5
+   ],
+   "actor": "ch-la-novia-5cdf",
+   "accion": "gritar",
+   "pose": "de_pie",
+   "mirada": "al protagonista",
+   "emocion": "alarma por el protagonista",
+   "objeto": "",
+   "cambio": "",
+   "cita": "La novia ve al protagonista a través de la abertura. NOVIA: —¡No te acerques!"
+  },
+  {
+   "id": "a8",
+   "t": [
+    17.5,
+    18.8
+   ],
+   "actor": "ch-protagonista-c71a",
+   "accion": "correr",
+   "pose": "caminando",
+   "mirada": "a la novia en la prision",
+   "emocion": "desesperacion",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Él intenta correr, pero cae de nuevo."
+  },
+  {
+   "id": "a9",
+   "t": [
+    18.8,
+    20.0
+   ],
+   "actor": "ch-protagonista-c71a",
+   "accion": "caer",
+   "pose": "de_rodillas",
+   "mirada": "a la novia en la prision",
+   "emocion": "dolor e impotencia",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Él intenta correr, pero cae de nuevo."
+  },
+  {
+   "id": "a10",
+   "t": [
+    20.0,
+    23.0
+   ],
+   "actor": "ch-la-novia-5cdf",
+   "accion": "gritar",
+   "pose": "de_pie",
+   "mirada": "al protagonista",
+   "emocion": "suplica desesperada",
+   "objeto": "",
+   "cambio": "",
+   "cita": "NOVIA: —¡Escúchame! ¡No hagas ninguna locura por mí!"
+  },
+  {
+   "id": "a11",
+   "t": [
+    23.0,
+    25.5
+   ],
+   "actor": "ch-imi-69f6",
+   "accion": "hablar",
+   "pose": "",
+   "mirada": "al protagonista",
+   "emocion": "cercania casi humana",
+   "objeto": "",
+   "cambio": "",
+   "cita": "El protagonista aprieta los dientes. La pulsera emite una voz diferente. Ya no suena como una interfaz. Suena cercana. Casi humana. IMI: —Existe otra opción."
+  },
+  {
+   "id": "a12",
+   "t": [
+    25.5,
+    27.0
+   ],
+   "actor": "ch-protagonista-c71a",
+   "accion": "hablar",
+   "pose": "de_rodillas",
+   "mirada": "a la pulsera en su muneca izquierda",
+   "emocion": "sorpresa y urgencia",
+   "objeto": "ch-imi-69f6",
+   "cambio": "",
+   "cita": "El protagonista mira su muñeca. PROTAGONISTA: —¿Cuál?"
+  },
+  {
+   "id": "a13",
+   "t": [
+    27.0,
+    33.5
+   ],
+   "actor": "ch-imi-69f6",
+   "accion": "hablar",
+   "pose": "",
+   "mirada": "al protagonista",
+   "emocion": "determinacion solemne",
+   "objeto": "",
+   "cambio": "",
+   "cita": "IMI: —Una integración completa entre nuestros sistemas. Una pausa. IMI: —Puedo reconstruir tu estructura biológica y sincronizarla con la matriz de génesis."
+  },
+  {
+   "id": "a14",
+   "t": [
+    33.5,
+    37.0
+   ],
+   "actor": "ch-protagonista-c71a",
+   "accion": "hablar",
+   "pose": "de_rodillas",
+   "mirada": "a la pulsera en su muneca izquierda",
+   "emocion": "confusion y tension",
+   "objeto": "",
+   "cambio": "",
+   "cita": "PROTAGONISTA: —¿Y qué significa eso en palabras que pueda entender?"
+  },
+  {
+   "id": "a15",
+   "t": [
+    37.0,
+    40.0
+   ],
+   "actor": "ch-imi-69f6",
+   "accion": "hablar",
+   "pose": "",
+   "mirada": "al protagonista",
+   "emocion": "firmeza",
+   "objeto": "",
+   "cambio": "",
+   "cita": "IMI: —Podrías sobrevivir al ataque. Podrías enfrentarlo."
+  },
+  {
+   "id": "a16",
+   "t": [
+    40.0,
+    42.5
+   ],
+   "actor": "ch-protagonista-c71a",
+   "accion": "hablar",
+   "pose": "de_rodillas",
+   "mirada": "a la novia en la prision",
+   "emocion": "temor y gravedad",
+   "objeto": "",
+   "cambio": "",
+   "cita": "El protagonista mira la prisión. PROTAGONISTA: —¿Y el precio?"
+  },
+  {
+   "id": "a17",
+   "t": [
+    42.5,
+    47.0
+   ],
+   "actor": "ch-imi-69f6",
+   "accion": "hablar",
+   "pose": "",
+   "mirada": "al protagonista",
+   "emocion": "pesar y honestidad",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Imi tarda en responder. IMI: —No puedo garantizar que vuelvas a ser exactamente quien eres ahora."
+  },
+  {
+   "id": "a18",
+   "t": [
+    47.0,
+    53.0
+   ],
+   "actor": "ch-imi-69f6",
+   "accion": "hablar",
+   "pose": "",
+   "mirada": "al protagonista",
+   "emocion": "incertidumbre y vulnerabilidad",
+   "objeto": "",
+   "cambio": "",
+   "cita": "El sonido de la ciudad desaparece. La cámara se acerca al rostro del protagonista. IMI: —Tu cuerpo cambiará. Tu percepción cambiará. Nuestra conciencia estará conectada de una manera que todavía no comprendo."
+  },
+  {
+   "id": "a19",
+   "t": [
+    53.0,
+    55.5
+   ],
+   "actor": "ch-protagonista-c71a",
+   "accion": "hablar",
+   "pose": "de_rodillas",
+   "mirada": "a la pulsera en su muneca izquierda",
+   "emocion": "miedo profundo",
+   "objeto": "",
+   "cambio": "",
+   "cita": "PROTAGONISTA: —¿Podría dejar de ser yo?"
+  },
+  {
+   "id": "a20",
+   "t": [
+    55.5,
+    60.0
+   ],
+   "actor": "ch-imi-69f6",
+   "accion": "hablar",
+   "pose": "",
+   "mirada": "al protagonista",
+   "emocion": "temor compartido y empatia",
+   "objeto": "",
+   "cambio": "",
+   "cita": "IMI: —Sí. Silencio. IMI: —Y podría perderme yo también."
+  },
+  {
+   "id": "a21",
+   "t": [
+    60.0,
+    62.0
+   ],
+   "actor": "ch-protagonista-c71a",
+   "accion": "mirar",
+   "pose": "de_rodillas",
+   "mirada": "a la pulsera y a la prision",
+   "emocion": "comprension tragica",
+   "objeto": "",
+   "cambio": "",
+   "cita": "Por primera vez, ambos comprenden que la elección puede destruirlos a los dos."
+  }
+ ],
+ "hechos": [
+  {
+   "hecho": "El alienigena revela a la novia encerrada en una prision transparente suspendida sobre la azotea",
+   "personaje": "ch-la-novia-5cdf",
+   "t": 1.5
+  },
+  {
+   "hecho": "La prision transparente que encierra a la novia comienza a comprimirse",
+   "personaje": "ch-la-novia-5cdf",
+   "t": 14.0
+  },
+  {
+   "hecho": "El protagonista intenta correr hacia la prision pero cae de nuevo debilitado",
+   "personaje": "ch-protagonista-c71a",
+   "t": 18.8
+  },
+  {
+   "hecho": "Imi propone reconstruir la estructura biologica del protagonista y sincronizarla con la matriz de genesis",
+   "personaje": "ch-imi-69f6",
+   "t": 27.0
+  },
+  {
+   "hecho": "El protagonista e Imi comprenden que la integracion conlleva el riesgo de que ambos pierdan su identidad",
+   "personaje": "ch-protagonista-c71a",
+   "t": 60.0
+  }
+ ],
+ "zona_escena_xy": [
+  1.95,
+  17.45,
+  5.95,
+  21.45
+ ],
+ "camaras": "las elige el 06 sobre la animación (el 01 solo dirige la acción)",
+ "de": "argon",
+ "ledger": "taller-01-esc9-20261102-022307",
+ "usd": 0.1805,
+ "aprobado_por": "Ricardo t339u 2026-11-01 20:22 COT: sube la espera a 30 min y reintenta el 01 real esc9 por máx US$0,46",
+ "fecha": "2026-11-02T02:25:35+0100",
+ "refs_personajes": {
+  "ch-el-aliengena-73a9": [
+   {
+    "n": 4,
+    "view": "frente"
+   },
+   {
+    "n": 7,
+    "view": "espalda"
+   }
+  ],
+  "ch-protagonista-c71a": [
+   {
+    "n": 2,
+    "view": "frente"
+   },
+   {
+    "n": 5,
+    "view": "espalda"
+   }
+  ],
+  "ch-la-novia-5cdf": [
+   {
+    "n": 3,
+    "view": "frente"
+   },
+   {
+    "n": 6,
+    "view": "espalda"
+   }
+  ],
+  "ch-imi-69f6": [
+   {
+    "n": 1,
+    "view": "frente"
+   }
+  ]
+ }
+}

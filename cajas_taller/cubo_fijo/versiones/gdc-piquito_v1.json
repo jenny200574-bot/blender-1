@@ -1,0 +1,48 @@
+{
+  "id": "gdc-piquito",
+  "nombre": "Piquito",
+  "ids_canal": [
+    "ch-piquito-030a",
+    "piquito"
+  ],
+  "tipo": "acompañante",
+  "portador": "gdc-eco",
+  "posicion": "hombro izquierdo de Eco",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/eco/referencia-cliente/refs/2bf0919933769c21.jpg",
+  "imagen_ref_nota": "sin imagen propia: aparece en ref1 sobre el hombro de Eco (allí sale NARANJA; el sello manda AMARILLO #FFD84D)",
+  "colores": {
+    "cuerpo": "#FFD84D",
+    "pecho": "#FFF1A8",
+    "pico_patas": "#F2792A",
+    "copete": "amarillo con punta naranja"
+  },
+  "nunca_cambia": "Pajarito AMARILLO (cuerpo #FFD84D, pecho #FFF1A8), pico y patas naranja #F2792A, copete amarillo con punta naranja, redondo como una pelotita, del tamaño de un puño; siempre en el hombro izquierdo de Eco. Nunca naranja de cuerpo. No habla.",
+  "voz_adn": {
+    "schema": "voz_adn/v1_universal",
+    "motor": null,
+    "fuente": "Biblia GDC_00_1 + guion T01E01 del cliente (acotaciones de tono); escrito una vez por el ingeniero el 2-nov-2026; sin IA, US$0",
+    "rasgos": {
+      "timbre": "pío de pajarito, muy agudo",
+      "tono": "muy agudo, cambia la entonación según la emoción",
+      "ritmo": "golpes cortos («¡pío!»)",
+      "acento": "no aplica (no habla)",
+      "idioma": "sin palabras (solo «¡pío!»)",
+      "edad_aparente": "pajarito pequeño",
+      "energia": "variable",
+      "textura": "chirrido limpio",
+      "diccion": "no habla: solo «¡pío!» con distintas entonaciones"
+    },
+    "descriptor_universal_en": "Tiny bird chirp, very high pitch, short \"pío!\" bursts with changing intonation to show emotion, clean chirpy texture, no words.",
+    "notas": "se expresa con gestos (se tapa los ojos, aplaude con las alas, se esponja)",
+    "regla": "perfil universal (no atado a Veo ni a ningún motor); el motor de voz se elige después"
+  },
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "personaje",
+  "sellado": false,
+  "version": 1,
+  "altura_fuente_nota": "alturas en la biblioteca personajes.json (altura_m, inventadas por orden de Ricardo 2-nov-2026, no medidas en Blender)",
+  "adn_estado": "sin ADN Ako: Fase 1 hoja + Fase 2 ADN cotizados, PAGO CERRADO",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; cambia solo con versión nueva (versiones/) y sello por cubo_fijo sellar"
+}

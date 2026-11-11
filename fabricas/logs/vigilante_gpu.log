@@ -1,0 +1,201 @@
+----- cron habilitado 2026-11-10 20:10:16 America/Bogota -----
+2026-11-10 20:10:18 America/Bogota | CHECK | modo=DRY-RUN pods=5 motor=1 star=1 otros=3 candado=ocupado(pid=210386) procesos_motor=2 gracia_min=20
+2026-11-10 20:10:18 America/Bogota | PROC | pid=210384 motor=/opt/myia-motor-unificado/argon_v2u_20261110 cmd=bash -c cd /opt/myia-motor-unificado/argon_v2u_20261110/motor && nohup setsid python3 correr_escena.py --cadena /opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9
+2026-11-10 20:10:18 America/Bogota | PROC | pid=210386 motor=/opt/myia-motor-unificado/argon_v2u_20261110 cmd=python3 correr_escena.py --cadena /opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad --escena 2 --id v2u_real_esc2 --tope_usd 0.20
+2026-11-10 20:10:18 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-10 20:10:18 America/Bogota | LEDGER | n=28 estado=en_curso pod=avc4ctrctxira4 etiqueta=motor-v2u_real_esc2 archivo=/opt/myia-motor-unificado/argon_v2u_20261110/ledger_gpu_motor.json con_proceso
+2026-11-10 20:10:18 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-10 20:10:18 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 20:10:18 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 20:10:18 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 20:10:18 America/Bogota | POD | id=avc4ctrctxira4 nombre=myia-fabricas-motor-v2u_real_esc2-015115 estado=RUNNING tarifa_usd_h=0.5700 ACTIVO razon=ledger en_curso /opt/myia-motor-unificado/argon_v2u_20261110/ledger_gpu_motor.json (proceso vivo en /opt/myia-motor-unificado/argon_v2u_20261110)
+2026-11-10 20:10:18 America/Bogota | FIN | modo=DRY-RUN terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-10 20:30:05 America/Bogota | CHECK | modo=REAL pods=5 motor=1 star=1 otros=3 candado=ocupado(pid=215674) procesos_motor=1 gracia_min=20
+2026-11-10 20:30:05 America/Bogota | PROC | pid=215674 motor=/opt/myia-motor-unificado/argon_v2u_20261110 cmd=python3 motor/render_solo.py --corrida corridas/v2u_real_esc2 --tope_usd 0.20 --muestras 16 --res 1280x720 --tramos 4 --tope_dia_usd 0.80 --gastado_dia_usd 0.512 --autorizacion Ric
+2026-11-10 20:30:05 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-10 20:30:05 America/Bogota | LEDGER | n=29 estado=en_curso pod=s4hgli1l5vatk6 etiqueta=motor-render-v2u_real_esc2 archivo=/opt/myia-motor-unificado/argon_v2u_20261110/ledger_gpu_motor.json con_proceso
+2026-11-10 20:30:05 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-10 20:30:05 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 20:30:05 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 20:30:05 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 20:30:05 America/Bogota | POD | id=s4hgli1l5vatk6 nombre=myia-fabricas-motor-render-v2u_real_esc2-022646 estado=RUNNING tarifa_usd_h=0.5700 ACTIVO razon=ledger en_curso /opt/myia-motor-unificado/argon_v2u_20261110/ledger_gpu_motor.json (proceso vivo en /opt/myia-motor-unificado/argon_v2u_20261110)
+2026-11-10 20:30:05 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-10 21:00:04 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-10 21:00:04 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-10 21:00:04 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-10 21:00:04 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 21:00:04 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 21:00:04 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 21:00:04 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-10 21:30:03 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-10 21:30:03 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-10 21:30:03 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-10 21:30:03 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 21:30:03 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 21:30:03 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 21:30:03 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-10 22:00:03 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-10 22:00:03 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-10 22:00:03 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-10 22:00:03 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 22:00:03 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 22:00:03 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 22:00:03 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-10 22:30:05 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=1 gracia_min=20
+2026-11-10 22:30:05 America/Bogota | DUDA | proceso del motor vivo sin pod identificado (posible hueco entre fases): no se termina ningún pod en esta pasada
+2026-11-10 22:30:05 America/Bogota | PROC | pid=226045 motor=/opt/myia-motor-unificado/v1_20261110 cmd=/usr/bin/python3 /opt/myia-motor-unificado/v1_20261110/motor/correr_escena.py --cadena /opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118
+2026-11-10 22:30:05 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-10 22:30:05 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-10 22:30:05 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 22:30:05 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 22:30:05 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 22:30:05 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-10 23:00:02 America/Bogota | ERROR | no se pudo listar pods en RunPod (HTTPError). No se termina nada.
+2026-11-10 23:30:05 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-10 23:30:05 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-10 23:30:05 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-10 23:30:05 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 23:30:05 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 23:30:05 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-10 23:30:05 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 00:00:09 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 00:00:09 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 00:00:09 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 00:00:09 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 00:00:09 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 00:00:09 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 00:00:09 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 00:30:06 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 00:30:06 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 00:30:07 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 00:30:07 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 00:30:07 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 00:30:07 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 00:30:07 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 01:00:02 America/Bogota | ERROR | no se pudo listar pods en RunPod (HTTPError). No se termina nada.
+2026-11-11 01:30:02 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 01:30:02 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 01:30:02 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 01:30:02 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 01:30:02 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 01:30:02 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 01:30:02 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 02:00:02 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 02:00:02 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 02:00:02 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 02:00:02 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 02:00:02 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 02:00:02 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 02:00:02 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 02:30:05 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 02:30:05 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 02:30:05 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 02:30:05 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 02:30:05 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 02:30:05 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 02:30:05 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 03:00:04 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 03:00:04 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 03:00:04 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 03:00:04 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 03:00:04 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 03:00:04 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 03:00:04 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 03:30:03 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 03:30:03 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 03:30:04 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 03:30:04 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 03:30:04 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 03:30:04 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 03:30:04 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 04:00:04 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 04:00:04 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 04:00:04 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 04:00:04 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 04:00:04 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 04:00:04 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 04:00:04 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 04:30:05 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 04:30:05 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 04:30:05 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 04:30:05 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 04:30:05 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 04:30:05 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 04:30:05 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 05:00:05 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 05:00:05 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 05:00:05 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 05:00:05 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 05:00:05 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 05:00:05 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 05:00:05 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 05:30:06 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 05:30:06 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 05:30:06 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 05:30:06 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 05:30:06 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 05:30:06 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 05:30:06 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 06:00:03 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 06:00:03 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 06:00:03 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 06:00:03 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 06:00:03 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 06:00:03 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 06:00:03 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 06:30:05 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 06:30:05 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 06:30:05 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 06:30:05 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 06:30:05 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 06:30:05 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 06:30:05 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 07:00:03 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 07:00:03 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 07:00:03 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 07:00:03 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 07:00:03 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 07:00:03 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 07:00:03 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 07:30:06 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 07:30:06 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 07:30:06 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 07:30:06 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 07:30:06 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 07:30:06 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 07:30:06 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 08:00:04 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 08:00:04 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 08:00:04 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 08:00:04 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 08:00:04 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 08:00:04 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 08:00:04 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 08:30:07 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 08:30:07 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 08:30:07 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 08:30:07 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 08:30:07 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 08:30:07 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 08:30:07 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 09:00:05 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 09:00:05 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 09:00:05 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 09:00:05 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 09:00:05 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 09:00:05 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 09:00:05 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 09:30:05 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 09:30:05 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 09:30:05 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 09:30:05 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 09:30:05 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 09:30:05 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 09:30:05 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no
+2026-11-11 10:00:03 America/Bogota | CHECK | modo=REAL pods=4 motor=0 star=1 otros=3 candado=libre procesos_motor=0 gracia_min=20
+2026-11-11 10:00:03 America/Bogota | LEDGER | n=23 estado=en_curso pod=jlcq7iaoe75v3m etiqueta=motor-t528_t518_esc2-c archivo=/opt/myia-motor-unificado/argon_v2_20261110/ledger_gpu_motor.json sin_proceso (no protege por sí solo)
+2026-11-11 10:00:03 America/Bogota | STAR | id=32soe7oh2f1gtf nombre=star-comfy-esc6-v2 estado=EXITED EXCLUIDO (lista negra, no se toca)
+2026-11-11 10:00:03 America/Bogota | OTRO | id=pul0wcedwdkwm7 nombre=motor-universal-t329-montaje estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 10:00:03 America/Bogota | OTRO | id=t39u2pxhc5wy8f nombre=motor-universal-prueba409020261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 10:00:03 America/Bogota | OTRO | id=ui7lra46ucnih1 nombre=motor-universal-prueba-a40-ca-20261108 estado=EXITED IGNORADO (fuera de lista blanca myia-fabricas-motor-)
+2026-11-11 10:00:03 America/Bogota | FIN | modo=REAL terminados=0 ahorro_estimado_usd=0.0000 star_tocado=no

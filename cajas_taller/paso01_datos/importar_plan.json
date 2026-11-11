@@ -1,0 +1,169 @@
+{
+ "PISTA": "PISTA INMI (2026-10-29): orden 79 — reglas del conversor «importar plan aprobado → formato 01» (importar_plan_aprobado.py). Genérico: cualquier canal, capítulo y escena. Aquí SOLO catálogos y tolerancias; ningún nombre de un canal o episodio.",
+ "respuesta": {
+  "listas_de_tomas": [
+   "laminas",
+   "tomas",
+   "shots"
+  ],
+  "id": [
+   "id"
+  ],
+  "t_ini": [
+   "t_ini",
+   "t",
+   "inicio"
+  ],
+  "t_fin": [
+   "t_fin",
+   "fin"
+  ],
+  "camara_loc": [
+   "camara_m",
+   "camara",
+   "loc"
+  ],
+  "camara_mira": [
+   "mira_a_m",
+   "mira"
+  ],
+  "lente": [
+   "lente_mm",
+   "lente"
+  ],
+  "plano": [
+   "plano",
+   "tipo"
+  ],
+  "total_s": [
+   "total_s",
+   "duracion_s"
+  ]
+ },
+ "prompt": {
+  "bloque_posiciones": "^\\s*POSICIONES\\b",
+  "bloque_anclas": "^\\s*ANCLAS\\b",
+  "log": "log",
+  "fps": "fps",
+  "sufijo_posicion": "_xyz",
+  "sufijo_pose": "_pose",
+  "anclas_lugares": "entorno_fijo",
+  "posicion_en_texto": "\\bat \\((-?\\d+(?:\\.\\d+)?),\\s*(-?\\d+(?:\\.\\d+)?)\\)(?:\\s*and\\s*\\((-?\\d+(?:\\.\\d+)?),\\s*(-?\\d+(?:\\.\\d+)?)\\))?",
+  "declara_rol": "\\b([A-Za-zÁÉÍÓÚÑáéíóúñ]{4,20})\\s*=\\s*([A-Za-zÁÉÍÓÚÑáéíóúñ][\\wÁÉÍÓÚÑáéíóúñ .-]{1,40}?)\\s*[);,.\\n]"
+ },
+ "personajes": {
+  "prefijo_minimo_letras": 5,
+  "que_es": "Cruce nombre del plan → id del canal (solo lectura): 1) id, nombre o alias iguales; 2) rol que el plan declara («<rol> = <NOMBRE>») igual a un alias/rol del canal; 3) el nombre del plan es el comienzo de una palabra de un alias. Solo entre los personajes que base.json pone en la escena. Si hay 0 o 2+ candidatos: NO se cruza y se dice."
+ },
+ "lugares": {
+  "que_es": "Tipos de lugar con nombre: palabras con que el PLAN los nombra y palabras con que el MOLDE nombra sus objetos. Sirven para ver si las posiciones del plan caben en el molde (ajuste rígido en planta). Agregar tipos aquí, nunca en el código.",
+  "tipos": {
+   "aire_acondicionado": {
+    "plan": [
+     "estructura ac",
+     "aire acondicionado",
+     "air conditioning",
+     "ac"
+    ],
+    "molde": [
+     "condensadora ac",
+     "aire acondicionado",
+     "unidad ac"
+    ]
+   },
+   "tanques_agua": {
+    "plan": [
+     "tanques",
+     "tanque",
+     "water tank"
+    ],
+    "molde": [
+     "tanque agua",
+     "tanque"
+    ]
+   },
+   "caseta": {
+    "plan": [
+     "caseta",
+     "stairwell"
+    ],
+    "molde": [
+     "caseta"
+    ]
+   },
+   "antenas": {
+    "plan": [
+     "antenas",
+     "antena",
+     "antenna"
+    ],
+    "molde": [
+     "mastil antena",
+     "antena parabolica",
+     "antena"
+    ]
+   },
+   "puerta": {
+    "plan": [
+     "puerta",
+     "door"
+    ],
+    "molde": [
+     "puerta"
+    ]
+   },
+   "ventana": {
+    "plan": [
+     "ventana",
+     "window"
+    ],
+    "molde": [
+     "ventana"
+    ]
+   },
+   "mesa": {
+    "plan": [
+     "mesa",
+     "escritorio",
+     "desk",
+     "table"
+    ],
+    "molde": [
+     "mesa",
+     "escritorio"
+    ]
+   },
+   "cama": {
+    "plan": [
+     "cama",
+     "bed"
+    ],
+    "molde": [
+     "cama"
+    ]
+   }
+  },
+  "suelo_molde": [
+   "piso",
+   "suelo",
+   "floor"
+  ],
+  "pares_minimos": 3,
+  "tolerancia_rms_m": 1.0,
+  "margen_fuera_m": 1.0
+ },
+ "escenario": {
+  "que_es": "Molde de la escena: el que se pida; si no, entre el escenario de base.json y los moldes cuyos nombres salen en los «sets» de la escena, el que más nombra el plan. Empate → se para y se dice.",
+  "palabras_ignoradas": [
+   "esc",
+   "de",
+   "la",
+   "el",
+   "los",
+   "las",
+   "del",
+   "y"
+  ]
+ },
+ "segundos_por_muestra_max": 2.0
+}

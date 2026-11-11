@@ -1,0 +1,17 @@
+{
+  "id": "gdc-tableta-spark",
+  "nombre": "Tableta holográfica de Spark",
+  "clase": "objeto",
+  "subclase": "portado",
+  "dueno": "gdc-spark",
+  "portador": "Spark",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/spark/referencia-cliente/refs/76f2c9cad7c45e6a.jpg",
+  "nunca_cambia": "Tableta/visor tecnológico azul que proyecta hologramas azules.",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "sellado": false,
+  "version": 1,
+  "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar"
+}

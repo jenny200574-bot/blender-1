@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-mesa-cocina",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Tipo de objeto: Mesa rectangular de madera cubierta por un mantel textil largo (objeto compuesto de dos piezas: chasis rígido y cubierta flexible).\n- Silueta y proporciones: Prisma rectangular de bordes suavizados por la caída de la tela. Estructura interna con tablero plano, faldón recto y cuatro patas cilíndricas torneadas que se estrechan hacia la base con remates bulbosos.\n- Punto de anclaje: Apoyo directo sobre el suelo mediante las cuatro patas de madera y los bordes inferiores del mantel que descansan en la superficie."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Material principal (Mantel): Tela gruesa y opaca de caída pesada (tipo lino o algodón denso), acabado totalmente mate y liso, en color beige cálido / crema claro.\n- Material secundario (Estructura interna): Madera maciza pulida sin vetas pronunciadas, acabado satinado suave, en color marrón miel / ocre cálido.\n- Emisión lumínica: Ninguna."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Superficie textil: Completamente lisa, sin estampados, bordados ni costuras centrales; presenta pliegues tubulares profundos y simétricos en las cuatro esquinas por efecto de la gravedad y un borde inferior de corte limpio.\n- Estructura de madera: Ensamblaje liso en el faldón superior; las patas incluyen anillos decorativos torneados en la unión superior (debajo del faldón) y en el remate inferior junto al suelo."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado cerrado/abierto: En estado cubierto, el mantel oculta casi por completo la madera dejando ver solo la base de las patas; en estado descubierto, un lateral del mantel se pliega hacia arriba sobre el tablero, exponiendo el faldón y las patas de madera.\n- Regla de distancia (Plano general): Se simplifica como un bloque trapezoidal beige mate con cuatro líneas de sombra verticales en las esquinas, omitiendo micro-arrugas y los anillos torneados de las patas."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Mesa rectangular de estilo clásico en madera pulida color marrón miel con faldón recto y cuatro patas cilíndricas torneadas con remates bulbosos, cubierta por un mantel largo de tela gruesa mate color beige crema que cae hasta el suelo formando pliegues verticales profundos en las esquinas; superficies totalmente lisas sin patrones ni texturas complejas, presentable totalmente cubierta o con un lateral del mantel doblado sobre el tablero mostrando la estructura de madera."
+    }
+  ],
+  "inyeccion": "Mesa rectangular de estilo clásico en madera pulida color marrón miel con faldón recto y cuatro patas cilíndricas torneadas con remates bulbosos, cubierta por un mantel largo de tela gruesa mate color beige crema que cae hasta el suelo formando pliegues verticales profundos en las esquinas; superficies totalmente lisas sin patrones ni texturas complejas, presentable totalmente cubierta o con un lateral del mantel doblado sobre el tablero mostrando la estructura de madera.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Tipo de objeto: Mesa rectangular de madera cubierta por un mantel textil largo (objeto compuesto de dos piezas: chasis rígido y cubierta flexible).\n- Silueta y proporciones: Prisma rectangular de bordes suavizados por la caída de la tela. Estructura interna con tablero plano, faldón recto y cuatro patas cilíndricas torneadas que se estrechan hacia la base con remates bulbosos.\n- Punto de anclaje: Apoyo directo sobre el suelo mediante las cuatro patas de madera y los bordes inferiores del mantel que descansan en la superficie.\n\n2. Materiales y Paleta de Color:\n\n- Material principal (Mantel): Tela gruesa y opaca de caída pesada (tipo lino o algodón denso), acabado totalmente mate y liso, en color beige cálido / crema claro.\n- Material secundario (Estructura interna): Madera maciza pulida sin vetas pronunciadas, acabado satinado suave, en color marrón miel / ocre cálido.\n- Emisión lumínica: Ninguna.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Superficie textil: Completamente lisa, sin estampados, bordados ni costuras centrales; presenta pliegues tubulares profundos y simétricos en las cuatro esquinas por efecto de la gravedad y un borde inferior de corte limpio.\n- Estructura de madera: Ensamblaje liso en el faldón superior; las patas incluyen anillos decorativos torneados en la unión superior (debajo del faldón) y en el remate inferior junto al suelo.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado cerrado/abierto: En estado cubierto, el mantel oculta casi por completo la madera dejando ver solo la base de las patas; en estado descubierto, un lateral del mantel se pliega hacia arriba sobre el tablero, exponiendo el faldón y las patas de madera.\n- Regla de distancia (Plano general): Se simplifica como un bloque trapezoidal beige mate con cuatro líneas de sombra verticales en las esquinas, omitiendo micro-arrugas y los anillos torneados de las patas.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nMesa rectangular de estilo clásico en madera pulida color marrón miel con faldón recto y cuatro patas cilíndricas torneadas con remates bulbosos, cubierta por un mantel largo de tela gruesa mate color beige crema que cae hasta el suelo formando pliegues verticales profundos en las esquinas; superficies totalmente lisas sin patrones ni texturas complejas, presentable totalmente cubierta o con un lateral del mantel doblado sobre el tablero mostrando la estructura de madera.",
+  "creado": "2026-11-06T04:03:14+01:00"
+}

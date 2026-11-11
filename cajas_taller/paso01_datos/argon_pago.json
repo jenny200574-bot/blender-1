@@ -1,0 +1,83 @@
+{
+  "PISTA": "PISTA INMI (2026-10-29): orden 82/83 — caminos PAGOS de los cubos 01 (Argon dirige cada escena) y 03 (Argon revisa coherencia). Por defecto solo COTIZAN. Pagar pide: guarda cajas/HABILITAR_<cubo> con el monto, --ok USD, --aprobado QUIEN, cotización fresca <= --ok, línea de ledger ANTES de cada intento, intentos acotados (429 = no_cobrado), tope por llamada y parar al llegar al monto. Genérico (regla 6): ningún canal, capítulo ni personaje.",
+  "tope_por_llamada_usd": 0.75,
+  "max_intentos": 4,
+  "01": {
+    "guarda": "HABILITAR_PAGO_01",
+    "prompt": "prompts_01/dirigir_escena_o109.txt",
+    "esquema": "prompts_01/dirigir_escena_esquema_o109.json",
+    "paso_fijo": "taller01_dirigir_escena",
+    "margen_fuera_m": 0.5,
+    "lados_refs": [
+      "frente",
+      "espalda"
+    ],
+    "si_falta_ref": "avisar",
+    "max_imagenes": 12,
+    "fps_por_defecto": 8,
+    "prompt_reparar": "prompts_01/reparar_tomas_o120.txt",
+    "reparaciones_max": 2,
+    "camaras": {
+      "politica": "escena_y_set",
+      "min_suelo_visible_pct": 3.0,
+      "paso_muestreo_m": 0.5,
+      "altura_centro_m": 0.95,
+      "_nota": "2026-11-01 autocorrección: solo_escena = solo cámaras de ESTA escena que ven el suelo libre (si no hay, las del mismo set que lo ven, con aviso); escena_y_set (Ricardo t299u) = las de ESTA escena primero + las del MISMO set que la geometría comprueba que ven >= min_zona_escena_pct de la zona de esta escena; el validador después comprueba en cada toma que la cámara vea a cada personaje",
+      "min_zona_escena_pct": 40.0
+    },
+    "reparar_max_salida_tokens": "[REDACTED]",
+    "version": "accion",
+    "accion": {
+      "_nota": "2026-11-01 reorganización (Ricardo [pt325u]): 01 SOLO acción. Volver al o109 = poner version \"o109\".",
+      "prompt": "prompts_01/dirigir_escena_accion.txt",
+      "esquema": "prompts_01/dirigir_escena_esquema_accion.json",
+      "prompt_reparar": "prompts_01/reparar_accion.txt",
+      "velocidad_max_mps": 9.0,
+      "salto_max_m": 0.3,
+      "hueco_max_s": 2.0
+    },
+    "timeout_texto_s": 1800,
+    "nota_timeout": "Ricardo t339u 2026-11-01 20:22 COT: espera de la llamada de texto del 01 = 1800 s (los demás siguen con llamadas_config.json)."
+  },
+  "03": {
+    "guarda": "HABILITAR_PAGO_03",
+    "prompt": "prompts_03/revisar_coherencia.txt",
+    "esquema": "prompts_03/revisar_coherencia_esquema.json",
+    "paso_fijo": "taller03_revisar_coherencia",
+    "fotogramas_por_toma": 3,
+    "max_imagenes": 24,
+    "importados": "solo si el 02 los animó (tomas ok de esa versión); si el 02 los paró, no hay nada que revisar",
+    "chequeos": {
+      "paso_s": 0.25,
+      "salto_max_m": 0.05,
+      "velocidad_max_mps": 9.0,
+      "giro_max_grados_por_s": 360,
+      "distancia_min_m": 0.45
+    },
+    "limites": {
+      "mover_max_mm": 20000,
+      "giro_max_grados": 360,
+      "lente_mm": [
+        8,
+        300
+      ]
+    },
+    "claves_dano": [
+      "danos",
+      "daños",
+      "heridas",
+      "lesiones",
+      "damage",
+      "injuries",
+      "dano",
+      "daño"
+    ],
+    "distancia_mira_m": 10
+  },
+  "SB": {
+    "timeout_texto_s": 1800,
+    "nota_timeout": "Ricardo (resp. t261s798) 2026-11-06 21:04 COT: espera SB = 1800 s; pensamientos_stream=true pide avances del razonamiento en streaming (llamada_segura._transporte_pensando; interruptor cajas/argon_pensamientos.off); «stream bloqueado» solo si pasan silencio_max_s sin ningún avance. Solo SB. Respaldo: argon_pago.json.bak_*_fase4_pensamientos.",
+    "pensamientos_stream": true,
+    "silencio_max_s": 900
+  }
+}

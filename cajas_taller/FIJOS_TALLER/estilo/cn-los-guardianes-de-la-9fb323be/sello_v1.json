@@ -1,0 +1,19 @@
+{
+ "schema": "myia.sello_estilo/v1",
+ "canal": "cn-los-guardianes-de-la-9fb323be",
+ "canal_nombre": "Los Guardianes de la Ceiba",
+ "version": 1,
+ "nombre": "Los Guardianes de la Ceiba · 2D plano preescolar (guía del cliente)",
+ "descripcion_en": "2D flat vector children's cartoon for ages 3 to 8, thick clean uniform dark outlines, soft cel shading with two tones only, no texture, oversized head, small rounded body, huge glossy eyes with a single white highlight, simple rounded shapes, mitten-like simple hands, no teeth, minimal nose, preschool animation style, warm, friendly and huggable, bright clear colors, high contrast silhouette.",
+ "negativo": "Avoid: realistic or 3D rendering, photo style, anime style, fur, feather or fabric texture, gradients, sharp teeth, claws, weapons, scary or angry expressions, dark horror lighting, extra fingers, extra limbs, text, letters, numbers, captions, watermark, logos, busy background, extra characters that were not described, any change to the characters' faces, proportions, outfits or colors, cropped bodies, resemblance to famous cartoon characters or studios.",
+ "paleta_en": "Morado Caos #6B2FA0 Familia Caos, títulos; Azul Spark #2F7DE1 Spark; Magenta Valentina #D6338A Valentina; Verde Eco #3BAA4A Eco; Amarillo Pintor #FFC928 Pintor; Dorado #F5C542 Semillas, escudo, magia, sellos; Naranja #F2792A Acentos; Azul noche #1B2240 Cielos de noche y espacio; Gris niebla #9AA3A8 Tic, cosas cansadas o viejas; Celeste holograma #8FD3FF Visor, pantallas, luz mágica fría",
+ "nota_imagen": "quitada: el flujo apuntó la muestra global de Génesis (ESTILO_OFICIAL_CANAL.png); falta muestra propia del canal",
+ "texto_sha256": "0b7ddcc39629499dc0e1086ec54e54765e6f398a1a1c855433ee817e7650882c",
+ "imagen": null,
+ "imagen_sha256": null,
+ "imagen_origen": null,
+ "estado": "solo_texto (falta imagen de estilo aprobada)",
+ "fijado": "2026-11-02T22:44:22+01:00",
+ "programa": "estilo_oficial v2 (sello por canal, 2-nov-2026)",
+ "regla": "FIJO: los pasos lo consultan; no se edita a mano. Cambia solo si cambia el style_fijo aprobado en la app."
+}

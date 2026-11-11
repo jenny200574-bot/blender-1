@@ -1,0 +1,55 @@
+{
+ "id": "comedia",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Comedia",
+ "tonos": [
+  "humor",
+  "ligero",
+  "absurdo"
+ ],
+ "reglas": {
+  "intencion": "humor: sorpresa y reacción",
+  "beats": "mostrar la preparación del chiste y, sobre todo, la reacción",
+  "secuencia": "preparación → pausa → remate → reacción",
+  "direccion": "planos abiertos estables que dejan ver el gag, lentes 24-50 mm, poca cámara en movimiento",
+  "actuacion": "intensidad alta y clara, timing",
+  "composicion": "encuadre de preparación limpio, simetría para el absurdo",
+  "ritmo": "pausas medidas antes del remate, cortes abruptos",
+  "transiciones": "cortes secos de remate, corte a la reacción",
+  "continuidad": "el gag se entiende solo si el espacio es claro",
+  "justificacion": "cada elección prepara y entrega la risa"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   1.0,
+   6.0
+  ],
+  "lente_mm": [
+   18,
+   50
+  ],
+  "planos_preferidos": [
+   "WS",
+   "FS",
+   "MS",
+   "REACTION"
+  ],
+  "angulos_preferidos": [
+   "EYELEVEL"
+  ],
+  "movimientos_preferidos": [
+   "STATIC",
+   "CRASHZOOM",
+   "WHIPPAN"
+  ],
+  "movimientos_evitar": [
+   "IMPERCEPTIBLE"
+  ],
+  "transiciones_preferidas": [
+   "CORTE_SECO",
+   "CORTE"
+  ],
+  "pausas": "algunas"
+ },
+ "ejemplo_puerta": "Plano general estable, abre la puerta, pausa, corte seco a su cara de sorpresa exagerada."
+}

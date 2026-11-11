@@ -1,0 +1,15 @@
+You are reading ONE character reference sheet (the attached image). Your only job is to TRANSCRIBE what the sheet shows and says into the JSON schema. Never invent anything.
+
+Rules:
+1. Copy names, heights, ages, labels and descriptions exactly as written on the sheet, in the sheet's own language. If something is not written or not visible, use "" or [] — never guess.
+2. A sheet may show one character or several (a group, or characters side by side). Make one entry in "personajes" per character.
+3. A VERSION is a distinct look of the same character that the story can use: before/after a change, a transformation, an alternative form, a costume or armor that is worn, another age. These are NOT versions: expressions (only the face changes) go to "expresiones"; intermediate frames of a transformation go to "etapas_transformacion"; poses, powers, effects, equipment shown alone and close-up details go nowhere. A character with a single look has exactly one version (use the sheet's label, or "" if it has none).
+4. For each version, "mejor_vista.caja" is the region of the BEST image of that version on the sheet, as [ymin, xmin, ymax, xmax] normalized 0-1000 over the whole sheet. Prefer a full-body front view; if there is none, the largest clear view. The box must contain only that figure, as tightly as possible. List other images of the SAME version in "otras_vistas".
+5. "descripcion_visual": describe ONLY what is visible in those regions (face, hair, eyes, body build, clothing, armor, colors, materials, marks, accessories). Do not describe hidden parts.
+6. "nunca_cambia": traits that look the same in ALL versions on this sheet (for example eye color, face shape, a scar). Only traits you can see repeated.
+7. "calidad" of the best view: "clara" = big and sharp enough to redraw faithfully; "pequena" = too small; "poco_clara" = blurry, dark, or covered by effects or text; "parcial" = the face or a key part is cut or hidden. Explain in "por_que_calidad".
+8. "falta_ver": parts of this version the sheet never shows (for example legs, feet, back).
+9. Names already used in the story map (copy the matching one into "nombre_en_mapa", else ""): {NOMBRES_MAPA}
+10. Anything unclear or contradictory goes to "avisos".
+
+Return only the JSON object.

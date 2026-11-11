@@ -1,0 +1,339 @@
+{
+ "id": "bote_crayones",
+ "nombre_generico": "Cubilete bajo con crayones gruesos de cera",
+ "nombre_en": "crayon cup",
+ "categoria": "utiles",
+ "medidas_tipicas": {
+  "ancho_m": 0.12,
+  "fondo_m": 0.12,
+  "alto_m": 0.11
+ },
+ "medidas_fuente": "receta Argon vía B G3_utiles_dibujo (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.12,
+  0.12,
+  0.11
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": null,
+ "base_m": null,
+ "apoyo": "sobre_otro",
+ "conjunto": false,
+ "piezas": 11,
+ "tipos_de_pieza": [
+  "cilindro",
+  "cono",
+  "tubo"
+ ],
+ "partes": [
+  {
+   "tipo": "cilindro",
+   "nombre": "base_cubilete",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.005
+   ],
+   "radio_m": 0.06,
+   "alto_m": 0.01
+  },
+  {
+   "tipo": "tubo",
+   "nombre": "pared_cubilete",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.04
+   ],
+   "radio_ext_m": 0.06,
+   "radio_int_m": 0.052,
+   "alto_m": 0.07,
+   "segmentos": 16,
+   "ancla": "centro",
+   "ancla_añadida_por": "programa ancla_tubos.py (Argon no escribió ancla)"
+  },
+  {
+   "tipo": "tubo",
+   "nombre": "aro_borde_cubilete",
+   "color_guia_rgb": [
+    0.69,
+    0.69,
+    0.69
+   ],
+   "centro_m": [
+    0.0,
+    0.0,
+    0.075
+   ],
+   "radio_ext_m": 0.06,
+   "radio_int_m": 0.05,
+   "alto_m": 0.006,
+   "segmentos": 16,
+   "ancla": "centro",
+   "ancla_añadida_por": "programa ancla_tubos.py (Argon no escribió ancla)"
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "crayon_rojo_cuerpo",
+   "color_guia_rgb": [
+    0.85,
+    0.15,
+    0.15
+   ],
+   "centro_m": [
+    -0.022,
+    -0.022,
+    0.051
+   ],
+   "radio_m": 0.011,
+   "alto_m": 0.082
+  },
+  {
+   "tipo": "cono",
+   "nombre": "crayon_rojo_punta",
+   "color_guia_rgb": [
+    0.85,
+    0.15,
+    0.15
+   ],
+   "a_m": [
+    -0.022,
+    -0.022,
+    0.092
+   ],
+   "b_m": [
+    -0.022,
+    -0.022,
+    0.11
+   ],
+   "radio_a_m": 0.011,
+   "radio_b_m": 0.003
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "crayon_azul_cuerpo",
+   "color_guia_rgb": [
+    0.15,
+    0.35,
+    0.85
+   ],
+   "centro_m": [
+    0.022,
+    -0.022,
+    0.049
+   ],
+   "radio_m": 0.011,
+   "alto_m": 0.078
+  },
+  {
+   "tipo": "cono",
+   "nombre": "crayon_azul_punta",
+   "color_guia_rgb": [
+    0.15,
+    0.35,
+    0.85
+   ],
+   "a_m": [
+    0.022,
+    -0.022,
+    0.088
+   ],
+   "b_m": [
+    0.022,
+    -0.022,
+    0.106
+   ],
+   "radio_a_m": 0.011,
+   "radio_b_m": 0.003
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "crayon_verde_cuerpo",
+   "color_guia_rgb": [
+    0.2,
+    0.7,
+    0.25
+   ],
+   "centro_m": [
+    -0.022,
+    0.022,
+    0.048
+   ],
+   "radio_m": 0.011,
+   "alto_m": 0.076
+  },
+  {
+   "tipo": "cono",
+   "nombre": "crayon_verde_punta",
+   "color_guia_rgb": [
+    0.2,
+    0.7,
+    0.25
+   ],
+   "a_m": [
+    -0.022,
+    0.022,
+    0.086
+   ],
+   "b_m": [
+    -0.022,
+    0.022,
+    0.104
+   ],
+   "radio_a_m": 0.011,
+   "radio_b_m": 0.003
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "crayon_amarillo_cuerpo",
+   "color_guia_rgb": [
+    0.95,
+    0.8,
+    0.15
+   ],
+   "centro_m": [
+    0.022,
+    0.022,
+    0.0455
+   ],
+   "radio_m": 0.011,
+   "alto_m": 0.071
+  },
+  {
+   "tipo": "cono",
+   "nombre": "crayon_amarillo_punta",
+   "color_guia_rgb": [
+    0.95,
+    0.8,
+    0.15
+   ],
+   "a_m": [
+    0.022,
+    0.022,
+    0.081
+   ],
+   "b_m": [
+    0.022,
+    0.022,
+    0.099
+   ],
+   "radio_a_m": 0.011,
+   "radio_b_m": 0.003
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.12,
+  "fondo": 0.12,
+  "alto": 0.11
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.11
+  ],
+  "frente": [
+   0.0,
+   -0.06,
+   0.055
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G3_utiles_dibujo",
+  "objeto_id_origen": "amb-esc-habitacion-bote-crayones",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "b9f6c66b911e58656e00b37eeff7d12a3b4d5bc1c7512a43a0c0a1e446a9a47d",
+  "costo_usd_grupo": 0.1985,
+  "costo_usd_repartido": 0.049625,
+  "citas": [
+   {
+    "fuente_id": "F02",
+    "clave": "crayon.forma_cilindrica",
+    "cita": "formed the wax crayons into more manageable cylinder shapes similar to that of a pencil."
+   },
+   {
+    "fuente_id": "F02",
+    "clave": "crayon.largo_estandar_m",
+    "cita": "Such crayons are usually approximately 3.5 inches (89 mm) in length and made mostly of paraffin wax."
+   },
+   {
+    "fuente_id": "F02",
+    "clave": "crayon.punta_roma",
+    "cita": "They are less messy than most paints and markers, blunt (removing the risk of sharp points present when using a pencil or pen)"
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_rojo_cuerpo: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_rojo_punta: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_azul_cuerpo: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_azul_punta: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_verde_cuerpo: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_verde_punta: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_amarillo_cuerpo: color fuera de la paleta de la ficha",
+   "A_COLOR amb-esc-habitacion-bote-crayones.crayon_amarillo_punta: color fuera de la paleta de la ficha"
+  ],
+  "vacios": [
+   "La ficha no da codigos hexadecimales exactos para los cuatro colores nombrados en color_4a1 (rojo, azul, verde y amarillo); se emplean sus tonos primarios equivalentes."
+  ],
+  "info": {
+   "partes": 11,
+   "piezas": 41,
+   "bbox_m": [
+    0.12,
+    0.12,
+    0.11
+   ],
+   "grupos": 1,
+   "datos": 11,
+   "con_fuente": 3
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-bote-crayones"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

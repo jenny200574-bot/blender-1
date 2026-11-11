@@ -1,0 +1,32 @@
+{
+ "canal": "cn-los-guardianes-de-la-9fb323be",
+ "nombre": null,
+ "version": "sb_v1",
+ "generado": "2026-11-07T02:20:45+0100",
+ "PISTA": "Tres niveles SEPARADOS (Ricardo t330u). Se pisan por capítulo (por_capitulo[\"1\"]) y por escena (por_escena[\"1/9\"]), cada nivel solo consigo mismo.",
+ "nivel_1_genero_tono": {
+  "estado": "definido (Ricardo t251u (por escrito))",
+  "generos": [
+   "aventura"
+  ],
+  "tono_general": "por definir",
+  "pistas_del_canal": {
+   "x23_story_type": "infantil",
+   "narration_tone": null
+  },
+  "nota": "Los géneros del canal son la MEZCLA permitida; la etapa 1 detecta cuál domina en cada tramo de cada escena."
+ },
+ "nivel_2_estilo_visual": {
+  "estado": "del canal (style_fijo); categoría del catálogo por confirmar",
+  "estilo_catalogo": "por definir",
+  "estilo_fijo_del_canal": "Los Guardianes de la Ceiba · 3D CGI estilizado (imagen de Spark)",
+  "style_del_canal": "realista"
+ },
+ "nivel_3_direccion_artistica": {
+  "estado": "por definir",
+  "reglamento": null,
+  "nombre_propuesto": null
+ },
+ "por_capitulo": {},
+ "por_escena": {}
+}

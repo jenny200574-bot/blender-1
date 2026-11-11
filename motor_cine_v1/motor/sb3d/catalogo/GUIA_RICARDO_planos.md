@@ -1,0 +1,12 @@
+Guía de planos, ángulos y movimiento de cámara que entregó Ricardo el 23-oct-2026. Resumen fiel (puntos clave):
+- PLANOS, según la información: GPG (ubicar, soledad); PG (acción en contexto); PE (cuerpo completo, postura); PA, de rodillas arriba (interacción, a punto de actuar); PM, de cintura arriba (conversación); PP, rostro (cambio emocional); PPP o detalle (tensión, pista).
+- ÁNGULOS, según la emoción: normal (neutral); picado (débil, asustado); cenital (mapa, tono trágico); contrapicado (poder, amenaza, héroe); nadir (drama extremo); holandés (caos, peligro).
+- MOVIMIENTO: paneo (viñeta horizontal), tilt (vertical), zoom por sucesión de planos (GPG->PM->PP para subir la tensión), POV (misterio, terror). En cine: dolly in (se da cuenta de algo), paneo de revelación, traveling de seguimiento (inmersión), cámara en mano (caos, pelea), plano secuencia (tensión).
+- REGLA DE ORO, tres preguntas: 1) qué necesita saber el lector (dónde -> PG; qué siente -> PP); 2) quién tiene el control (fuerte -> contrapicado; derrotado -> picado); 3) ritmo (planos variados -> acción; planos estables -> conversación). No repetir el mismo plano y ángulo 3 veces seguidas.
+- La historia debe entenderse sin diálogos (Hitchcock, efecto Kuleshov).
+- CINE: el máster se hace primero para mostrar la geografía; luego plano/contraplano en conflicto (el plano más cerrado domina); POV emocional (la cámara se acerca al personaje que carga la emoción); blocking primero y cámara después; regla de tercios (centro = poder, borde = vulnerable); planta de cámara.
+- CONTINUIDAD: 180°, raccord de mirada y de movimiento (sale por la derecha, entra por la izquierda), objetos en la misma mano, dirección izquierda->derecha, anclajes visuales.
+- TRANSICIONES: corte directo, disolvencia, fundido a negro, match cut; según McCloud: momento a momento, acción a acción, tema a tema, escena a escena.
+- PROFUNDIDAD 2D: multiplano con 3 capas (primer término desenfocado/oscuro, medio enfocado, fondo), oclusión, tamaño, perspectiva atmosférica (lo lejano más azul/pálido), enfoque selectivo, líneas de fuga.
+- BLENDER: DOF con F-stop y foco en un objeto; focal 18 mm (gran angular), 50 mm, 85-135 mm (retrato); Principled Volume (niebla); EEVEE con Shader to RGB y Color Ramp constante (toon); Line Art; Mist y Render Layers para el multiplano.
+- IA: Blender (muñecos) -> IA pinta encima siguiendo la estructura; guion -> JSON por LLM; Meshy/Tripo image-to-3D en T-pose; retopología; Mixamo/auto-rig; DeepMotion/MotionGPT para el movimiento por texto.

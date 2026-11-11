@@ -1,0 +1,83 @@
+{
+ "PISTA": "Perfiles cinematográficos MODULARES (Ricardo t331u). La etapa 2 (selector, CÓDIGO gratis) elige y COMBINA perfiles por segmento según los pesos de género que da la etapa 1. Editables. Agregar un género = agregar un archivo + una línea aquí. Nunca fijan cuántas viñetas hay.",
+ "regla_de_oro": "La continuidad (espacial, temporal, visual y narrativa) NUNCA se sacrifica por el género: el validador la exige igual en todos los géneros. Las preferencias de género solo dan avisos.",
+ "perfiles": {
+  "accion": "accion.json",
+  "aventura": "aventura.json",
+  "terror": "terror.json",
+  "suspenso": "suspenso.json",
+  "romance": "romance.json",
+  "drama": "drama.json",
+  "misterio": "misterio.json",
+  "comedia": "comedia.json",
+  "fantasia": "fantasia.json",
+  "ciencia_ficcion": "ciencia_ficcion.json"
+ },
+ "alias": {
+  "ciencia ficcion": "ciencia_ficcion",
+  "sci-fi": "ciencia_ficcion",
+  "scifi": "ciencia_ficcion",
+  "fantasia oscura": "fantasia",
+  "fantasia epica": "fantasia",
+  "drama emocional": "drama",
+  "drama intimo": "drama",
+  "suspense": "suspenso",
+  "thriller": "suspenso",
+  "action": "accion",
+  "horror": "terror",
+  "romantico": "romance"
+ },
+ "ejemplo_de_ricardo_genesis": {
+  "_aviso": "EJEMPLO de Ricardo (t331u) para enseñar el sistema. NO es la verdad de cada escena: la etapa 1 detecta los géneros leyendo el guion. Ojo nombres: su ejemplo dice Elian / Lía / INMI; el guion y el canal dicen PROTAGONISTA / LA NOVIA / IMI, y el motor de Ako usa Gael / Sofía / Zarek. No se renombra nada: Ricardo decide.",
+  "ejemplos": [
+   {
+    "momento": "Elian programa a INMI",
+    "generos": [
+     "ciencia_ficcion",
+     "misterio"
+    ],
+    "tratamiento": "intimidad, curiosidad, planos de observación"
+   },
+   {
+    "momento": "Encuentro con Lía",
+    "generos": [
+     "romance",
+     "drama"
+    ],
+    "tratamiento": "primeros planos, miradas, calidez"
+   },
+   {
+    "momento": "Despertar de INMI",
+    "generos": [
+     "ciencia_ficcion",
+     "misterio"
+    ],
+    "tratamiento": "revelación progresiva, composición tecnológica"
+   },
+   {
+    "momento": "Ataque del alienígena",
+    "generos": [
+     "accion",
+     "fantasia_oscura"
+    ],
+    "tratamiento": "perspectivas agresivas, ritmo creciente"
+   },
+   {
+    "momento": "Decisión de fusionarse",
+    "generos": [
+     "drama",
+     "suspenso"
+    ],
+    "tratamiento": "silencios, primeros planos, tensión"
+   },
+   {
+    "momento": "Protocolo Génesis",
+    "generos": [
+     "accion",
+     "fantasia_epica"
+    ],
+    "tratamiento": "escala monumental, energía, revelación heroica"
+   }
+  ]
+ }
+}

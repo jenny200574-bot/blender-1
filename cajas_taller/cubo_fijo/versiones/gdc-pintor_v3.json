@@ -1,0 +1,51 @@
+{
+  "id": "gdc-pintor",
+  "nombre": "Pintor",
+  "ids_canal": [
+    "ch-pintor-bce0",
+    "pintor"
+  ],
+  "tipo": "persona",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/pintor/referencia-cliente/refs/93763250e250ad55.jpg",
+  "nunca_cambia": "Traje azul con «ABC» en la solapa, camisa amarilla, salpicaduras de pintura. Niño de 5 años, redondito y bajito. Siempre con su pincel mágico iridiscente.",
+  "voz_adn": {
+    "schema": "voz_adn/v1_universal",
+    "motor": null,
+    "fuente": "Biblia GDC_00_1 + guion T01E01 del cliente (acotaciones de tono); escrito una vez por el ingeniero el 2-nov-2026; sin IA, US$0",
+    "rasgos": {
+      "timbre": "alegre, chispeante, de niño",
+      "tono": "medio-agudo, muy variable",
+      "ritmo": "rapidísimo, atropellado cuando se emociona",
+      "acento": "español latinoamericano neutro (Colombia suave), sin regionalismos fuertes",
+      "idioma": "español",
+      "edad_aparente": "niño de 5 años",
+      "energia": "muy alta",
+      "textura": "brillante, con risitas",
+      "diccion": "rápida pero entendible; muletilla «¡Le falta color!»"
+    },
+    "descriptor_universal_en": "Cheerful sparkly 5-year-old boy voice, mid-high very expressive pitch, extremely fast tumbling rhythm when excited, bright texture with giggles, fast but intelligible diction, neutral Latin American Spanish.",
+    "notas": "creativo e impulsivo",
+    "regla": "perfil universal (no atado a Veo ni a ningún motor); el motor de voz se elige después"
+  },
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "personaje",
+  "sellado": true,
+  "version": 3,
+  "altura_fuente_nota": "alturas en la biblioteca personajes.json (altura_m, inventadas por orden de Ricardo 2-nov-2026, no medidas en Blender)",
+  "adn_estado": "ADN Ako sellado (Fase 1 hoja + Fase 2 ADN, sello_pago 2-nov-2026)",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; cambia solo con versión nueva (versiones/) y sello por cubo_fijo sellar",
+  "frase_sello": "1. Ficha Antropométrica:\n- Edad visual: 25 a 30 años.\n- Estatura y complexión: 1.80 m aparentes, complexión delgada estilizada (ectomorfo).\n- Proporción: 6.5 cabezas de altura.\n- Estilo visual: 3D CGI estilizado, volúmenes suaves, sin línea de contorno, sombreado realista con dispersión subsuperficial (SSS) en la piel y materiales con microtextura.\n\n2. Fisonomía Facial y Cabello:\n- Rostro: Ovalado de mandíbula suave y mentón redondeado; piel clara de subtono cálido.\n- Cabello: Castaño claro, modelado en bloques suaves; corto en laterales y nuca, con tupé frontal voluminoso peinado hacia arriba y atrás.\n- Ojos: Grandes y almendrados, iris marrón cálido con brillos especulares definidos.\n- Cejas: Gruesas, color castaño, de geometría curva y bordes suavizados.\n- Accesorios faciales: Ninguno (rostro limpio sin gafas, cicatrices, vello facial ni pendientes).\n\n3. Paleta de Expresiones:\n- Normal: Cejas relajadas horizontales, apertura ocular media, boca cerrada con leve sonrisa simétrica.\n- Feliz: Cejas elevadas en arco, apertura ocular máxima, boca abierta en sonrisa amplia mostrando dientes superiores y lengua.\n- Nervioso: Cejas arqueadas con extremos internos elevados, ojos muy abiertos, boca entreabierta asimétrica mostrando dientes apretados, gotas de sudor translúcidas en las sienes.\n- Enojado: Cejas bajas fruncidas hacia el centro, párpados superiores tensos cubriendo parte del iris, boca abierta rectangular en gesto de grito mostrando dientes y lengua.\n- Triste: Cejas inclinadas con el interior elevado, párpados superiores caídos a media altura, boca cerrada con comisuras arqueadas hacia abajo.\n\n4. Vestuario por Capas:\n- Prenda exterior: Saco formal corte slim en tela azul marino mate, solapa de muesca, cierre de un botón y dos bolsillos laterales con tapeta. Textura salpicada con manchas de pintura neón (verde, amarillo, fucsia, cian y naranja).\n- Prenda interior: Camisa de vestir color amarillo mostaza, corte ajustado, cuello desabotonado sin corbata, puños asomando 1 cm bajo las mangas del saco.\n- Prenda inferior: Pantalón de vestir azul marino a juego con el saco, corte recto entallado, pliegue frontal suave y salpicaduras de pintura multicolor.\n- Calzado y accesorios: Zapatos Oxford de cuero marrón oscuro con suela baja y cordones finos. Reloj metálico dorado en la muñeca izquierda.\n\n5. Reglas de Giro:\n- Frente: Apertura en \"V\" de la camisa amarilla, solapas del saco, pliegue de los bolsillos frontales y esfera del reloj visible en la muñeca izquierda.\n- Perfil: Silueta pronunciada del tupé frontal y puente nasal recto; curva entallada de la espalda del saco; hilera de botones pequeños en el puño de la manga.\n- Espaldas: Costura vertical central que divide el saco, caída limpia sin aberturas ni bolsillos traseros visibles, capas de cabello escalonadas en la nuca y manchas de pintura distribuidas en hombros y pantorrillas.",
+  "actualizado": "2026-11-02T23:34:55+01:00",
+  "origen": "sellar",
+  "hoja_aprobada": {
+    "ruta": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-pintor_fbdd0e2c29cf906f.png",
+    "aprobado_por": "Ricardo",
+    "cuando": "2026-11-02T17:32:00-05:00",
+    "origen": "chat Ricardo «si apruebo» (pt510u)",
+    "sha256": "fbdd0e2c29cf906fd35868152bc265220d03a4c8a1c3e6129befb51a84c2cbea",
+    "origen_ruta": "/opt/myia-taller-n8n/trabajo/sello_pago/cn-los-guardianes-de-la-9fb323be/gdc-pintor/hoja_fase1_20261102-232453_i1.png"
+  },
+  "hoja_ref": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-pintor_fbdd0e2c29cf906f.png"
+}

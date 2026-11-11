@@ -1,0 +1,29 @@
+o117 POSES HUMANAS NATURALES. Las poses humanas armadas solo con metas+IK se ven raras. Hay una biblioteca de 24 poses humanas naturales (Star):
+ako.de_pie [de_pie] De pie, brazos caídos a los lados.
+ako.caido_espalda [en_suelo] Tirado de espaldas en el suelo, cara hacia arriba, piernas hacia atrás.
+ako.levantandose [transicion] Levantándose del suelo: una rodilla abajo, apoyándose para subir.
+ako.aterriza_pie1 [aterrizaje] Aterrizando sobre un pie, brazos abiertos para el equilibrio.
+ako.aterriza_agachado [aterrizaje] Aterrizaje agachado, una mano hacia el suelo.
+ako.con_lanza [accion_con_objeto] De pie con una mano en alto sosteniendo un objeto largo. Qué mano y qué objeto: lo dicen la toma (guion) o la ficha.
+ako.onda_palma [accion] De pie, un brazo estirado al frente con la palma (gesto de onda).
+ako.despedido [en_el_aire] Despedido hacia atrás por el aire, piernas arriba y brazos abiertos.
+ako.de_rodillas [agachado_arrodillado] De rodillas, torso un poco inclinado, manos juntas al frente.
+ako.boca_abajo [en_suelo] Boca abajo: pecho al suelo, un brazo extendido al frente y el otro doblado.
+lk.de_pie [de_pie] De pie, brazos casi rectos a los lados.
+lk.mirando [de_pie] De pie mirando (mismo cuerpo que de_pie).
+lk.agachado_cavando [agachado_arrodillado] Agachado/en cuclillas, torso adelante, un brazo hacia abajo cavando.
+lk.brazo_extendido [gesto] De pie con un brazo extendido al frente.
+lk.caminando [locomocion] Caminando: una pierna adelante, brazos en contrapaso.
+lk.caminando_hablando [locomocion] Caminando mientras habla, una mano levantada en gesto, cabeza girada.
+lk.semilla_en_mano [accion_con_objeto] Caminando/de pie con una mano delante sosteniendo algo pequeño. Qué mano y qué objeto: lo dicen la toma (guion) o la ficha.
+lk.hablando_gesto [gesto] De pie hablando, una mano levantada en gesto.
+lk.arrodillandose [transicion] Bajando a arrodillarse: una rodilla adelante, la otra baja.
+lk.arrodillado [agachado_arrodillado] Arrodillado, torso casi recto, brazos un poco adelante.
+lk.quitando_tierra [agachado_arrodillado] De rodillas inclinado adelante, las dos manos hacia el suelo.
+lk.cavando [agachado_arrodillado] De rodillas muy inclinado, un brazo cavando y el otro apoyado.
+lk.poniendo_semilla [accion_con_objeto] De rodillas inclinado, una mano baja dejando algo pequeño en el suelo. Qué mano y qué objeto: lo dicen la toma (guion) o la ficha.
+lk.alegre_brazos [gesto] De pie con los dos brazos arriba, contento.
+
+Programa (Blender 4.2, ya hecho): base 'star:<id>' lleva la pose por ROL a cualquier bípedo (columna, cabeza, brazo_*, pierna_*); luego ajustes por metas: {"base":"star:<id>","agachar":0..1,"inclinar":[adelante°,lado°],"metas":[{"rol":"mano_der|mano_izq|pie_der|pie_izq|cabeza","a":"piso|arriba|abajo|adelante|atras|afuera|adentro|punto:[f,l,u]","alcance":0..1}],"mirada":{"a":"adelante|izq|der|arriba|abajo"}}; IK con límites humanos (rodilla solo adelante, codo algo doblado, sin rodillas abiertas). Si ninguna pose Star sirve (o el cuerpo es cuadrúpedo), se usa base 'de_pie' + metas.
+Momentos de guion a resolver (8): 1 agacharse_a_recoger algo del piso con la mano derecha mirando abajo; 2 brazos_arriba; 3 mano_al_piso (derecha toca el piso); 4 mirar_a_un_lado (izq); 5 abrir_brazos; 6 agacharse (cuclillas); 7 saludar_mirando (mano der arriba saludando, mira der); 8 sentado_en_el_piso mirando a la izquierda con la mano der apoyada en el piso.
+Pide: en formato_plan pon un JSON {"momento":{"base":...,ajustes...}} para los 8, eligiendo la pose Star más cercana y ajustes PEQUEÑOS. En pasos_programa: reglas para elegir pose Star genéricamente (cualquier guion) y valores de límites humanos (grados) para el chequeo de naturalidad. En riesgos: qué se puede ver raro. Responde en el esquema.

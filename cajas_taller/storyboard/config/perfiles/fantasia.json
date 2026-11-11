@@ -1,0 +1,61 @@
+{
+ "id": "fantasia",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Fantasía",
+ "tonos": [
+  "épico",
+  "oscuro",
+  "maravilla"
+ ],
+ "subgeneros": {
+  "fantasia_oscura": "sombras densas, contrapicados amenazantes, energía que amenaza, ritmo creciente",
+  "fantasia_epica": "escala monumental, grúas y planos generales, energía y luz heroica, revelación del héroe"
+ },
+ "reglas": {
+  "intencion": "maravilla o amenaza sobrenatural; escala",
+  "beats": "mostrar el poder y su efecto en el mundo; esconder su origen hasta el momento justo",
+  "secuencia": "revelación de escala: detalle → general",
+  "direccion": "grúas, planos generales, contrapicados, lentes 18-35 mm para escala",
+  "actuacion": "gestos amplios en la épica; contención en la oscura",
+  "composicion": "escala monumental, luz como protagonista, profundidad",
+  "ritmo": "crece hacia la revelación",
+  "transiciones": "encadenados, cortes en la energía, match cut de luz",
+  "continuidad": "los efectos y daños de magia/energía permanecen",
+  "justificacion": "que el público sienta lo enorme o lo amenazante del poder"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   1.5,
+   10.0
+  ],
+  "lente_mm": [
+   14,
+   50
+  ],
+  "planos_preferidos": [
+   "EWS",
+   "WS",
+   "FS",
+   "CU"
+  ],
+  "angulos_preferidos": [
+   "LOWANGLE",
+   "WORMSEYE",
+   "HIGHANGLE"
+  ],
+  "movimientos_preferidos": [
+   "CRANE",
+   "ORBIT",
+   "DOLLYOUT",
+   "DRONEREVEAL"
+  ],
+  "movimientos_evitar": [],
+  "transiciones_preferidas": [
+   "ENCADENADO",
+   "MATCH_CUT",
+   "CORTE"
+  ],
+  "pausas": "algunas"
+ },
+ "ejemplo_puerta": "La puerta se abre y la luz sale; contrapicado del personaje, la cámara retrocede y sube para mostrar la escala de lo que hay detrás."
+}

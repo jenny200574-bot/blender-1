@@ -1,0 +1,13 @@
+{
+ "PISTA": "PISTA INMI (2026-10-29): orden 74 — regla GENÉRICA del cubo 14: ¿la toma siguiente se ENCADENA (sale del último cuadro de la anterior) o va con CORTE? Se evalúan en orden; gana la primera que cumple. Sale de §3.4 del catálogo de Star («continuación del mismo plano → T12; transformación → T1 con primer y último cuadro del mismo encuadre; …») y de la prohibición de T1 (ángulos distintos = fundido). Cambiar aquí, no en el código.",
+ "fuente": "06_trucos_camara_star_T1_T12.txt §1 (T1 «Cuándo NO usar», T5, T12) y §3.4",
+ "reglas": [
+  {"id": "otra_escena", "si": {"misma_escena": false}, "decision": "corte", "truco": "T5", "por_que": "Cambia la escena: corte; el clip nuevo parte de su cuadro aprobado (T5)."},
+  {"id": "cruza_eje", "si": {"cruza_eje": true}, "decision": "corte", "truco": "T5", "aviso": "la toma cruza el eje de 180° (lo marca el cubo 09)", "por_que": "Salto de eje: nunca se encadena; corte y revisar el plan."},
+  {"id": "otro_angulo", "si": {"misma_camara": false}, "decision": "corte", "truco": "T5", "por_que": "Ángulo distinto: primer y último cuadro con ángulos distintos hace fundido (prohibido en T1); corte y T5."},
+  {"id": "mismo_plano_sigue", "si": {"misma_camara": true, "mismo_tipo": true, "tiempo_seguido": true}, "decision": "encadenado", "truco": "T12", "por_que": "Continuación del mismo plano: cadena limpia T12 (aprobada)."},
+  {"id": "acercamiento", "si": {"misma_camara": true, "mas_cerrado": true, "tiempo_seguido": true}, "decision": "encadenado", "truco": "T1", "por_que": "Mismo ángulo y se acerca a un detalle: push-in T1 (aprobado) con el último cuadro del MISMO encuadre."},
+  {"id": "mismo_angulo_no_seguido", "si": {"misma_camara": true}, "decision": "corte", "truco": "T5", "por_que": "Mismo ángulo pero no es continuación (salto de tiempo o se abre el plano): corte y T5."}
+ ],
+ "orden_cerrado": ["PG", "OTS", "PM", "PP"]
+}

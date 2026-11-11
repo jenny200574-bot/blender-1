@@ -1,0 +1,2279 @@
+{
+ "schema": "recetas_objetos/v1",
+ "grupo": "G2_pared_ventana_luz",
+ "fecha": "2026-11-09",
+ "recetas": [
+  {
+   "objeto_id": "amb-esc-habitacion-cortinas-ventana",
+   "nombre": "Par de cortinas de tela suave recogidas a los lados de la ventana",
+   "caja_m": {
+    "ancho": 1.9,
+    "fondo": 0.12,
+    "alto": 1.65
+   },
+   "apoyo": "pared",
+   "conjunto": false,
+   "partes": [
+    {
+     "tipo": "caja",
+     "nombre": "cenefa_superior",
+     "color_guia_rgb": [
+      1.0,
+      0.886,
+      0.541
+     ],
+     "centro_m": [
+      0.0,
+      0.01,
+      1.59
+     ],
+     "tam_m": [
+      1.9,
+      0.1,
+      0.12
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "cortina_izq_superior",
+     "color_guia_rgb": [
+      1.0,
+      0.886,
+      0.541
+     ],
+     "centro_m": [
+      -0.73,
+      0.01,
+      1.075
+     ],
+     "tam_m": [
+      0.44,
+      0.1,
+      0.95
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "cortina_izq_inferior",
+     "color_guia_rgb": [
+      1.0,
+      0.886,
+      0.541
+     ],
+     "centro_m": [
+      -0.76,
+      0.01,
+      0.31
+     ],
+     "tam_m": [
+      0.38,
+      0.1,
+      0.62
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "pliegue_izq_ext",
+     "color_guia_rgb": [
+      1.0,
+      0.886,
+      0.541
+     ],
+     "centro_m": [
+      -0.86,
+      0.0,
+      0.825
+     ],
+     "radio_m": 0.06,
+     "alto_m": 1.65
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "pliegue_izq_int",
+     "color_guia_rgb": [
+      1.0,
+      0.886,
+      0.541
+     ],
+     "centro_m": [
+      -0.68,
+      0.0,
+      0.825
+     ],
+     "radio_m": 0.055,
+     "alto_m": 1.65
+    },
+    {
+     "tipo": "caja",
+     "nombre": "lazo_izq",
+     "color_guia_rgb": [
+      0.961,
+      0.902,
+      0.827
+     ],
+     "centro_m": [
+      -0.75,
+      0.0,
+      0.61
+     ],
+     "tam_m": [
+      0.38,
+      0.12,
+      0.07
+     ]
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "nudo_lazo_izq",
+     "color_guia_rgb": [
+      0.961,
+      0.902,
+      0.827
+     ],
+     "centro_m": [
+      -0.56,
+      -0.02,
+      0.61
+     ],
+     "radio_m": 0.04
+    },
+    {
+     "tipo": "caja",
+     "nombre": "cortina_der_superior",
+     "color_guia_rgb": [
+      1.0,
+      0.886,
+      0.541
+     ],
+     "centro_m": [
+      0.73,
+      0.01,
+      1.075
+     ],
+     "tam_m": [
+      0.44,
+      0.1,
+      0.95
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "cortina_der_inferior",
+     "color_guia_rgb": [
+      1.0,
+      0.886,
+      0.541
+     ],
+     "centro_m": [
+      0.76,
+      0.01,
+      0.31
+     ],
+     "tam_m": [
+      0.38,
+      0.1,
+      0.62
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "pliegue_der_ext",
+     "color_guia_rgb": [
+      1.0,
+      0.886,
+      0.541
+     ],
+     "centro_m": [
+      0.86,
+      0.0,
+      0.825
+     ],
+     "radio_m": 0.06,
+     "alto_m": 1.65
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "pliegue_der_int",
+     "color_guia_rgb": [
+      1.0,
+      0.886,
+      0.541
+     ],
+     "centro_m": [
+      0.68,
+      0.0,
+      0.825
+     ],
+     "radio_m": 0.055,
+     "alto_m": 1.65
+    },
+    {
+     "tipo": "caja",
+     "nombre": "lazo_der",
+     "color_guia_rgb": [
+      0.961,
+      0.902,
+      0.827
+     ],
+     "centro_m": [
+      0.75,
+      0.0,
+      0.61
+     ],
+     "tam_m": [
+      0.38,
+      0.12,
+      0.07
+     ]
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "nudo_lazo_der",
+     "color_guia_rgb": [
+      0.961,
+      0.902,
+      0.827
+     ],
+     "centro_m": [
+      0.56,
+      -0.02,
+      0.61
+     ],
+     "radio_m": 0.04
+    }
+   ],
+   "datos": [
+    {
+     "clave": "caja.ancho",
+     "valor": 1.9,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.ancho"
+    },
+    {
+     "clave": "caja.fondo",
+     "valor": 0.12,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.fondo"
+    },
+    {
+     "clave": "caja.alto",
+     "valor": 1.65,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.alto"
+    },
+    {
+     "clave": "color.principal_ Y_lazos",
+     "valor": "Amarillo mantequilla #FFE28A con lazos crema #F5E6D3",
+     "unidad": null,
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "color_4a1"
+    },
+    {
+     "clave": "tipologia.cortina_ventana",
+     "valor": "paneles de tela colgados en el interior de la ventana",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F01",
+     "cita": "Curtains are often hung on the inside of a building's windows to block the passage of light.",
+     "campo_hoja": null
+    },
+    {
+     "clave": "tipologia.lazos_recogidos",
+     "valor": "cortinas recogidas hacia los lados mediante lazos sujetadores",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F01",
+     "cita": "They are held out of the way of the window by means of curtain tie-backs.",
+     "campo_hoja": null
+    },
+    {
+     "clave": "receta.cenefa_superior.tam_m",
+     "valor": [
+      1.9,
+      0.1,
+      0.12
+     ],
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.fondo",
+      "caja.alto",
+      "tipologia.cortina_ventana"
+     ],
+     "razon": "La cenefa superior une ambos paneles de cortina a lo largo del ancho total de 1.9 m y apoya su cara trasera en y = +0.06 m."
+    },
+    {
+     "clave": "receta.paneles_laterales.ancho_m",
+     "valor": 0.44,
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.alto",
+      "tipologia.lazos_recogidos"
+     ],
+     "razon": "Cada cortina lateral ocupa 0.44 m en los extremos de la ventana dejando despejado el vano central de 1.02 m."
+    },
+    {
+     "clave": "receta.lazos.altura_m",
+     "valor": 0.61,
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.alto",
+      "caja.fondo",
+      "tipologia.lazos_recogidos"
+     ],
+     "razon": "Los lazos crema se ubican a 0.61 m de altura (~37% del alto total de 1.65 m) abrazando el espesor completo de 0.12 m."
+    }
+   ],
+   "vacios": [
+    "El corpus F01 no especifica proporciones numéricas de ancho de caída ni altura exacta del lazo sujetador; se deducen de caja_m."
+   ]
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-barra-cortinero",
+   "nombre": "Barra de cortinero de madera con remates esféricos",
+   "caja_m": {
+    "ancho": 2.0,
+    "fondo": 0.08,
+    "alto": 0.08
+   },
+   "apoyo": "pared",
+   "conjunto": false,
+   "partes": [
+    {
+     "tipo": "cilindro",
+     "nombre": "barra_central",
+     "color_guia_rgb": [
+      0.784,
+      0.541,
+      0.333
+     ],
+     "centro_m": [
+      0.0,
+      0.0,
+      0.04
+     ],
+     "radio_m": 0.016,
+     "alto_m": 1.88,
+     "rot_grados": [
+      0.0,
+      90.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "remate_esferico_izq",
+     "color_guia_rgb": [
+      0.784,
+      0.541,
+      0.333
+     ],
+     "centro_m": [
+      -0.96,
+      0.0,
+      0.04
+     ],
+     "radio_m": 0.04
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "remate_esferico_der",
+     "color_guia_rgb": [
+      0.784,
+      0.541,
+      0.333
+     ],
+     "centro_m": [
+      0.96,
+      0.0,
+      0.04
+     ],
+     "radio_m": 0.04
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "collarin_izq",
+     "color_guia_rgb": [
+      0.784,
+      0.541,
+      0.333
+     ],
+     "centro_m": [
+      -0.915,
+      0.0,
+      0.04
+     ],
+     "radio_m": 0.024,
+     "alto_m": 0.02,
+     "rot_grados": [
+      0.0,
+      90.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "collarin_der",
+     "color_guia_rgb": [
+      0.784,
+      0.541,
+      0.333
+     ],
+     "centro_m": [
+      0.915,
+      0.0,
+      0.04
+     ],
+     "radio_m": 0.024,
+     "alto_m": 0.02,
+     "rot_grados": [
+      0.0,
+      90.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "soporte_pared_izq",
+     "color_guia_rgb": [
+      0.784,
+      0.541,
+      0.333
+     ],
+     "centro_m": [
+      -0.75,
+      0.015,
+      0.04
+     ],
+     "tam_m": [
+      0.03,
+      0.05,
+      0.04
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "placa_pared_izq",
+     "color_guia_rgb": [
+      0.784,
+      0.541,
+      0.333
+     ],
+     "centro_m": [
+      -0.75,
+      0.035,
+      0.04
+     ],
+     "tam_m": [
+      0.05,
+      0.01,
+      0.07
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "soporte_pared_der",
+     "color_guia_rgb": [
+      0.784,
+      0.541,
+      0.333
+     ],
+     "centro_m": [
+      0.75,
+      0.015,
+      0.04
+     ],
+     "tam_m": [
+      0.03,
+      0.05,
+      0.04
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "placa_pared_der",
+     "color_guia_rgb": [
+      0.784,
+      0.541,
+      0.333
+     ],
+     "centro_m": [
+      0.75,
+      0.035,
+      0.04
+     ],
+     "tam_m": [
+      0.05,
+      0.01,
+      0.07
+     ]
+    }
+   ],
+   "datos": [
+    {
+     "clave": "caja.ancho",
+     "valor": 2.0,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.ancho"
+    },
+    {
+     "clave": "caja.fondo",
+     "valor": 0.08,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.fondo"
+    },
+    {
+     "clave": "caja.alto",
+     "valor": 0.08,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.alto"
+    },
+    {
+     "clave": "color.madera_miel",
+     "valor": "Madera miel #C88A55",
+     "unidad": null,
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "color_4a1"
+    },
+    {
+     "clave": "tipologia.barra_cortinero",
+     "valor": "barra recta sobre ventana con soportes y remates decorativos",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F02",
+     "cita": "while curtain rods in other areas of the home are often affixed with decorative brackets or finial.",
+     "campo_hoja": null
+    },
+    {
+     "clave": "tipologia.material_madera",
+     "valor": "barra de cortinero fabricada en madera",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F02",
+     "cita": "Curtain rods can be made of many materials including wood, metal and plastic.",
+     "campo_hoja": null
+    },
+    {
+     "clave": "receta.remates_esfericos.radio_m",
+     "valor": 0.04,
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.alto",
+      "caja.fondo",
+      "tipologia.barra_cortinero"
+     ],
+     "razon": "Los remates esféricos en ambos extremos tienen diámetro 0.08 m (radio 0.04 m), llenando el alto y fondo de la caja."
+    },
+    {
+     "clave": "receta.barra_central.alto_m",
+     "valor": 1.88,
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "receta.remates_esfericos.radio_m"
+     ],
+     "razon": "La barra cilíndrica de 1.88 m de largo y radio 0.016 m penetra en ambos remates esféricos completando los 2.0 m de ancho."
+    },
+    {
+     "clave": "receta.soportes_pared.posicion_x_m",
+     "valor": 0.75,
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.fondo",
+      "tipologia.barra_cortinero"
+     ],
+     "razon": "Los dos soportes murales se sitúan en x = ±0.75 m y conectan el eje de la barra con el plano de pared en y = +0.04 m."
+    }
+   ],
+   "vacios": [
+    "El corpus F02 no especifica diámetros numéricos de barra ni de remates esféricos; se deducen de las dimensiones de caja_m."
+   ]
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-guirnalda-banderines",
+   "nombre": "Guirnalda festiva de banderines triangulares de tela",
+   "caja_m": {
+    "ancho": 2.4,
+    "fondo": 0.05,
+    "alto": 0.18
+   },
+   "apoyo": "pared",
+   "conjunto": false,
+   "partes": [
+    {
+     "tipo": "caja",
+     "nombre": "cordon_superior",
+     "color_guia_rgb": [
+      1.0,
+      0.788,
+      0.157
+     ],
+     "centro_m": [
+      0.0,
+      0.005,
+      0.17
+     ],
+     "tam_m": [
+      2.4,
+      0.04,
+      0.02
+     ]
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "nudo_extremo_izq",
+     "color_guia_rgb": [
+      1.0,
+      0.788,
+      0.157
+     ],
+     "centro_m": [
+      -1.175,
+      0.0,
+      0.155
+     ],
+     "radio_m": 0.025
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "nudo_extremo_der",
+     "color_guia_rgb": [
+      1.0,
+      0.788,
+      0.157
+     ],
+     "centro_m": [
+      1.175,
+      0.0,
+      0.155
+     ],
+     "radio_m": 0.025
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_01_amarillo",
+     "color_guia_rgb": [
+      1.0,
+      0.788,
+      0.157
+     ],
+     "vertices_m": [
+      [
+       -1.125,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.965,
+       -0.015,
+       0.165
+      ],
+      [
+       -1.045,
+       -0.015,
+       0.0
+      ],
+      [
+       -1.125,
+       0.025,
+       0.165
+      ],
+      [
+       -0.965,
+       0.025,
+       0.165
+      ],
+      [
+       -1.045,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_02_azul",
+     "color_guia_rgb": [
+      0.184,
+      0.49,
+      0.882
+     ],
+     "vertices_m": [
+      [
+       -0.935,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.775,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.855,
+       -0.015,
+       0.0
+      ],
+      [
+       -0.935,
+       0.025,
+       0.165
+      ],
+      [
+       -0.775,
+       0.025,
+       0.165
+      ],
+      [
+       -0.855,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_03_verde",
+     "color_guia_rgb": [
+      0.231,
+      0.667,
+      0.29
+     ],
+     "vertices_m": [
+      [
+       -0.745,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.585,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.665,
+       -0.015,
+       0.0
+      ],
+      [
+       -0.745,
+       0.025,
+       0.165
+      ],
+      [
+       -0.585,
+       0.025,
+       0.165
+      ],
+      [
+       -0.665,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_04_magenta",
+     "color_guia_rgb": [
+      0.839,
+      0.2,
+      0.541
+     ],
+     "vertices_m": [
+      [
+       -0.555,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.395,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.475,
+       -0.015,
+       0.0
+      ],
+      [
+       -0.555,
+       0.025,
+       0.165
+      ],
+      [
+       -0.395,
+       0.025,
+       0.165
+      ],
+      [
+       -0.475,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_05_amarillo",
+     "color_guia_rgb": [
+      1.0,
+      0.788,
+      0.157
+     ],
+     "vertices_m": [
+      [
+       -0.365,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.205,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.285,
+       -0.015,
+       0.0
+      ],
+      [
+       -0.365,
+       0.025,
+       0.165
+      ],
+      [
+       -0.205,
+       0.025,
+       0.165
+      ],
+      [
+       -0.285,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_06_azul",
+     "color_guia_rgb": [
+      0.184,
+      0.49,
+      0.882
+     ],
+     "vertices_m": [
+      [
+       -0.175,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.015,
+       -0.015,
+       0.165
+      ],
+      [
+       -0.095,
+       -0.015,
+       0.0
+      ],
+      [
+       -0.175,
+       0.025,
+       0.165
+      ],
+      [
+       -0.015,
+       0.025,
+       0.165
+      ],
+      [
+       -0.095,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_07_verde",
+     "color_guia_rgb": [
+      0.231,
+      0.667,
+      0.29
+     ],
+     "vertices_m": [
+      [
+       0.015,
+       -0.015,
+       0.165
+      ],
+      [
+       0.175,
+       -0.015,
+       0.165
+      ],
+      [
+       0.095,
+       -0.015,
+       0.0
+      ],
+      [
+       0.015,
+       0.025,
+       0.165
+      ],
+      [
+       0.175,
+       0.025,
+       0.165
+      ],
+      [
+       0.095,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_08_magenta",
+     "color_guia_rgb": [
+      0.839,
+      0.2,
+      0.541
+     ],
+     "vertices_m": [
+      [
+       0.205,
+       -0.015,
+       0.165
+      ],
+      [
+       0.365,
+       -0.015,
+       0.165
+      ],
+      [
+       0.285,
+       -0.015,
+       0.0
+      ],
+      [
+       0.205,
+       0.025,
+       0.165
+      ],
+      [
+       0.365,
+       0.025,
+       0.165
+      ],
+      [
+       0.285,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_09_amarillo",
+     "color_guia_rgb": [
+      1.0,
+      0.788,
+      0.157
+     ],
+     "vertices_m": [
+      [
+       0.395,
+       -0.015,
+       0.165
+      ],
+      [
+       0.555,
+       -0.015,
+       0.165
+      ],
+      [
+       0.475,
+       -0.015,
+       0.0
+      ],
+      [
+       0.395,
+       0.025,
+       0.165
+      ],
+      [
+       0.555,
+       0.025,
+       0.165
+      ],
+      [
+       0.475,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_10_azul",
+     "color_guia_rgb": [
+      0.184,
+      0.49,
+      0.882
+     ],
+     "vertices_m": [
+      [
+       0.585,
+       -0.015,
+       0.165
+      ],
+      [
+       0.745,
+       -0.015,
+       0.165
+      ],
+      [
+       0.665,
+       -0.015,
+       0.0
+      ],
+      [
+       0.585,
+       0.025,
+       0.165
+      ],
+      [
+       0.745,
+       0.025,
+       0.165
+      ],
+      [
+       0.665,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_11_verde",
+     "color_guia_rgb": [
+      0.231,
+      0.667,
+      0.29
+     ],
+     "vertices_m": [
+      [
+       0.775,
+       -0.015,
+       0.165
+      ],
+      [
+       0.935,
+       -0.015,
+       0.165
+      ],
+      [
+       0.855,
+       -0.015,
+       0.0
+      ],
+      [
+       0.775,
+       0.025,
+       0.165
+      ],
+      [
+       0.935,
+       0.025,
+       0.165
+      ],
+      [
+       0.855,
+       0.025,
+       0.0
+      ]
+     ]
+    },
+    {
+     "tipo": "poliedro",
+     "nombre": "banderin_12_magenta",
+     "color_guia_rgb": [
+      0.839,
+      0.2,
+      0.541
+     ],
+     "vertices_m": [
+      [
+       0.965,
+       -0.015,
+       0.165
+      ],
+      [
+       1.125,
+       -0.015,
+       0.165
+      ],
+      [
+       1.045,
+       -0.015,
+       0.0
+      ],
+      [
+       0.965,
+       0.025,
+       0.165
+      ],
+      [
+       1.125,
+       0.025,
+       0.165
+      ],
+      [
+       1.045,
+       0.025,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "datos": [
+    {
+     "clave": "caja.ancho",
+     "valor": 2.4,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.ancho"
+    },
+    {
+     "clave": "caja.fondo",
+     "valor": 0.05,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.fondo"
+    },
+    {
+     "clave": "caja.alto",
+     "valor": 0.18,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.alto"
+    },
+    {
+     "clave": "color.banderines_alternados",
+     "valor": "Banderines alternados en amarillo #FFC928, azul #2F7DE1, verde #3BAA4A y magenta #D6338A",
+     "unidad": null,
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "color_4a1"
+    },
+    {
+     "clave": "tipologia.guirnalda_banderines",
+     "valor": "cuerda con banderines triangulares de colores",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F03",
+     "cita": "Typical forms of bunting are strings of colorful triangular flags",
+     "campo_hoja": null
+    },
+    {
+     "clave": "tipologia.material_tela",
+     "valor": "decoración festiva hecha de tela",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F03",
+     "cita": "Bunting are festive or patriotic decorations made of fabric, or of plastic, paper or cardboard in imitation of fabric.",
+     "campo_hoja": null
+    },
+    {
+     "clave": "receta.cordon_superior.tam_m",
+     "valor": [
+      2.4,
+      0.04,
+      0.02
+     ],
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.fondo",
+      "caja.alto",
+      "tipologia.guirnalda_banderines"
+     ],
+     "razon": "El cordón superior recorre el ancho completo de 2.4 m en la franja z = 0.16..0.18 m y apoya en la pared en y = +0.025 m."
+    },
+    {
+     "clave": "receta.banderines.distribucion",
+     "valor": 12,
+     "unidad": "unidades",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.alto",
+      "color.banderines_alternados",
+      "tipologia.guirnalda_banderines"
+     ],
+     "razon": "Se disponen 12 banderines triangulares (3 ciclos de los 4 colores de la ficha) de 0.16 m de base y 0.165 m de alto."
+    }
+   ],
+   "vacios": [
+    "La ficha no especifica un código hexadecimal propio para el hilo trenzado superior; se emplea el color principal #FFC928.",
+    "El corpus F03 no detalla la cantidad ni el paso en metros entre banderines; se deducen 12 banderines uniformemente espaciados en los 2.4 m de ancho."
+   ]
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-repisa-pared-izquierda",
+   "nombre": "Repisa flotante de madera con soportes redondeados",
+   "caja_m": {
+    "ancho": 0.68,
+    "fondo": 0.2,
+    "alto": 0.06
+   },
+   "apoyo": "pared",
+   "conjunto": false,
+   "partes": [
+    {
+     "tipo": "caja",
+     "nombre": "tablero_repisa",
+     "color_guia_rgb": [
+      0.851,
+      0.655,
+      0.451
+     ],
+     "centro_m": [
+      0.0,
+      0.0075,
+      0.045
+     ],
+     "tam_m": [
+      0.68,
+      0.185,
+      0.03
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "borde_frontal_redondeado",
+     "color_guia_rgb": [
+      0.851,
+      0.655,
+      0.451
+     ],
+     "centro_m": [
+      0.0,
+      -0.085,
+      0.045
+     ],
+     "radio_m": 0.015,
+     "alto_m": 0.68,
+     "rot_grados": [
+      0.0,
+      90.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "liston_trasero_pared",
+     "color_guia_rgb": [
+      0.851,
+      0.655,
+      0.451
+     ],
+     "centro_m": [
+      0.0,
+      0.085,
+      0.018
+     ],
+     "tam_m": [
+      0.6,
+      0.03,
+      0.036
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "soporte_base_izq",
+     "color_guia_rgb": [
+      0.851,
+      0.655,
+      0.451
+     ],
+     "centro_m": [
+      -0.22,
+      0.01,
+      0.018
+     ],
+     "tam_m": [
+      0.04,
+      0.14,
+      0.036
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "punta_redondeada_izq",
+     "color_guia_rgb": [
+      0.851,
+      0.655,
+      0.451
+     ],
+     "centro_m": [
+      -0.22,
+      -0.06,
+      0.018
+     ],
+     "radio_m": 0.02,
+     "alto_m": 0.036
+    },
+    {
+     "tipo": "caja",
+     "nombre": "soporte_base_der",
+     "color_guia_rgb": [
+      0.851,
+      0.655,
+      0.451
+     ],
+     "centro_m": [
+      0.22,
+      0.01,
+      0.018
+     ],
+     "tam_m": [
+      0.04,
+      0.14,
+      0.036
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "punta_redondeada_der",
+     "color_guia_rgb": [
+      0.851,
+      0.655,
+      0.451
+     ],
+     "centro_m": [
+      0.22,
+      -0.06,
+      0.018
+     ],
+     "radio_m": 0.02,
+     "alto_m": 0.036
+    }
+   ],
+   "datos": [
+    {
+     "clave": "caja.ancho",
+     "valor": 0.68,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.ancho"
+    },
+    {
+     "clave": "caja.fondo",
+     "valor": 0.2,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.fondo"
+    },
+    {
+     "clave": "caja.alto",
+     "valor": 0.06,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.alto"
+    },
+    {
+     "clave": "color.roble_miel",
+     "valor": "Roble miel #D9A773",
+     "unidad": null,
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "color_4a1"
+    },
+    {
+     "clave": "tipologia.repisa_plana",
+     "valor": "plano horizontal anclado a la pared con soportes",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F04",
+     "cita": "It is raised off the floor and often anchored to a wall, supported on its shorter length sides by brackets",
+     "campo_hoja": null
+    },
+    {
+     "clave": "tipologia.material_madera",
+     "valor": "repisa fabricada en madera",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F04",
+     "cita": "Shelves are normally made of strong materials such as wood, bamboo or steel",
+     "campo_hoja": null
+    },
+    {
+     "clave": "receta.tablero_repisa.espesor_m",
+     "valor": 0.03,
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.fondo",
+      "caja.alto",
+      "tipologia.repisa_plana"
+     ],
+     "razon": "El tablero superior ocupa la mitad superior de la caja (0.03 m de espesor) con canto frontal cilindrado de radio 0.015 m."
+    },
+    {
+     "clave": "receta.soportes_redondeados.tam_m",
+     "valor": [
+      0.04,
+      0.16,
+      0.036
+     ],
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.fondo",
+      "caja.alto",
+      "tipologia.repisa_plana"
+     ],
+     "razon": "Dos soportes inferiores en x = ±0.22 m con frente cilíndrico de radio 0.02 m ocupan desde z = 0 m hasta empotrarse en el tablero."
+    }
+   ],
+   "vacios": [
+    "El corpus F04 no especifica el espesor exacto en milímetros del tablero ni el radio de curvatura de los soportes; se deducen de caja_m."
+   ]
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-perchero-pared",
+   "nombre": "Perchero infantil de madera con tres pomos redondos",
+   "caja_m": {
+    "ancho": 0.42,
+    "fondo": 0.08,
+    "alto": 0.12
+   },
+   "apoyo": "pared",
+   "conjunto": false,
+   "partes": [
+    {
+     "tipo": "caja",
+     "nombre": "placa_base_central",
+     "color_guia_rgb": [
+      0.949,
+      0.886,
+      0.808
+     ],
+     "centro_m": [
+      0.0,
+      0.028,
+      0.06
+     ],
+     "tam_m": [
+      0.3,
+      0.024,
+      0.12
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "remate_placa_izq",
+     "color_guia_rgb": [
+      0.949,
+      0.886,
+      0.808
+     ],
+     "centro_m": [
+      -0.15,
+      0.028,
+      0.06
+     ],
+     "radio_m": 0.06,
+     "alto_m": 0.024,
+     "rot_grados": [
+      90.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "remate_placa_der",
+     "color_guia_rgb": [
+      0.949,
+      0.886,
+      0.808
+     ],
+     "centro_m": [
+      0.15,
+      0.028,
+      0.06
+     ],
+     "radio_m": 0.06,
+     "alto_m": 0.024,
+     "rot_grados": [
+      90.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "espiga_izq",
+     "color_guia_rgb": [
+      0.949,
+      0.886,
+      0.808
+     ],
+     "centro_m": [
+      -0.13,
+      0.002,
+      0.06
+     ],
+     "radio_m": 0.011,
+     "alto_m": 0.036,
+     "rot_grados": [
+      90.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "pomo_redondo_izq",
+     "color_guia_rgb": [
+      0.949,
+      0.886,
+      0.808
+     ],
+     "centro_m": [
+      -0.13,
+      -0.02,
+      0.06
+     ],
+     "radio_m": 0.02
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "espiga_central",
+     "color_guia_rgb": [
+      0.949,
+      0.886,
+      0.808
+     ],
+     "centro_m": [
+      0.0,
+      0.002,
+      0.06
+     ],
+     "radio_m": 0.011,
+     "alto_m": 0.036,
+     "rot_grados": [
+      90.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "pomo_redondo_central",
+     "color_guia_rgb": [
+      0.949,
+      0.886,
+      0.808
+     ],
+     "centro_m": [
+      0.0,
+      -0.02,
+      0.06
+     ],
+     "radio_m": 0.02
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "espiga_der",
+     "color_guia_rgb": [
+      0.949,
+      0.886,
+      0.808
+     ],
+     "centro_m": [
+      0.13,
+      0.002,
+      0.06
+     ],
+     "radio_m": 0.011,
+     "alto_m": 0.036,
+     "rot_grados": [
+      90.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "pomo_redondo_der",
+     "color_guia_rgb": [
+      0.949,
+      0.886,
+      0.808
+     ],
+     "centro_m": [
+      0.13,
+      -0.02,
+      0.06
+     ],
+     "radio_m": 0.02
+    }
+   ],
+   "datos": [
+    {
+     "clave": "caja.ancho",
+     "valor": 0.42,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.ancho"
+    },
+    {
+     "clave": "caja.fondo",
+     "valor": 0.08,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.fondo"
+    },
+    {
+     "clave": "caja.alto",
+     "valor": 0.12,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.alto"
+    },
+    {
+     "clave": "color.base_crema",
+     "valor": "#F2E2CE",
+     "unidad": null,
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "colores_usados.*"
+    },
+    {
+     "clave": "nombre.tres_pomos",
+     "valor": "Perchero infantil de madera con tres pomos redondos",
+     "unidad": null,
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "nombre"
+    },
+    {
+     "clave": "tipologia.perchero_pared",
+     "valor": "conjunto de colgadores fijados a la pared",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F05",
+     "cita": "A coat rack often refers to a set of hooks that are attached to a wall.",
+     "campo_hoja": null
+    },
+    {
+     "clave": "receta.placa_base.dimensiones_m",
+     "valor": [
+      0.42,
+      0.024,
+      0.12
+     ],
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.fondo",
+      "caja.alto",
+      "tipologia.perchero_pared"
+     ],
+     "razon": "La placa mural con extremos semicirculares de radio 0.06 m cubre el ancho de 0.42 m y el alto de 0.12 m apoyada en y = +0.04 m."
+    },
+    {
+     "clave": "receta.pomos_redondos.radio_m",
+     "valor": 0.02,
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.fondo",
+      "nombre.tres_pomos",
+      "receta.placa_base.dimensiones_m"
+     ],
+     "razon": "Los tres pomos esféricos de radio 0.02 m en x = -0.13, 0.0 y +0.13 m alcanzan el frente de la caja en y = -0.04 m."
+    }
+   ],
+   "vacios": [
+    "La ficha menciona en color_4a1 pomos azul, amarillo y verde sin dar sus códigos hexadecimales en colores_usados; siguiendo la regla 5 se aplica el color principal #F2E2CE.",
+    "El corpus F05 trata principalmente percheros de pie (150 cm) y no detalla medidas de percheros murales infantiles; se deducen de caja_m."
+   ]
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-interruptor-luz",
+   "nombre": "Interruptor de luz de placa redondeada",
+   "caja_m": {
+    "ancho": 0.08,
+    "fondo": 0.03,
+    "alto": 0.12
+   },
+   "apoyo": "pared",
+   "conjunto": false,
+   "partes": [
+    {
+     "tipo": "caja",
+     "nombre": "placa_pared_central",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      0.007,
+      0.06
+     ],
+     "tam_m": [
+      0.08,
+      0.016,
+      0.08
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "arco_placa_superior",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      0.007,
+      0.08
+     ],
+     "radio_m": 0.04,
+     "alto_m": 0.016,
+     "rot_grados": [
+      90.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "cilindro",
+     "nombre": "arco_placa_inferior",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      0.007,
+      0.04
+     ],
+     "radio_m": 0.04,
+     "alto_m": 0.016,
+     "rot_grados": [
+      90.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "marco_interior",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      -0.003,
+      0.06
+     ],
+     "tam_m": [
+      0.044,
+      0.01,
+      0.064
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "tecla_basculante",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      -0.011,
+      0.06
+     ],
+     "tam_m": [
+      0.032,
+      0.008,
+      0.048
+     ]
+    }
+   ],
+   "datos": [
+    {
+     "clave": "caja.ancho",
+     "valor": 0.08,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.ancho"
+    },
+    {
+     "clave": "caja.fondo",
+     "valor": 0.03,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.fondo"
+    },
+    {
+     "clave": "caja.alto",
+     "valor": 0.12,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.alto"
+    },
+    {
+     "clave": "color.blanco_marfil",
+     "valor": "Blanco marfil #FFF8EE",
+     "unidad": null,
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "color_4a1"
+    },
+    {
+     "clave": "tipologia.interruptor_pared",
+     "valor": "placa mural con interruptor basculante",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F06",
+     "cita": "even the newest construction the familiar toggle and rocker switch formats predominate.",
+     "campo_hoja": null
+    },
+    {
+     "clave": "receta.placa_redondeada.dimensiones_m",
+     "valor": [
+      0.08,
+      0.016,
+      0.12
+     ],
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.fondo",
+      "caja.alto",
+      "tipologia.interruptor_pared"
+     ],
+     "razon": "La placa mural combina un cuerpo central y dos remates semicirculares de radio 0.04 m que cubren 0.08 x 0.12 m contra y = +0.015 m."
+    },
+    {
+     "clave": "receta.tecla_basculante.tam_m",
+     "valor": [
+      0.032,
+      0.008,
+      0.048
+     ],
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.fondo",
+      "receta.placa_redondeada.dimensiones_m",
+      "tipologia.interruptor_pared"
+     ],
+     "razon": "El marco intermedio y la tecla basculante sobresalen hacia el frente hasta alcanzar y = -0.015 m completando los 0.03 m de fondo."
+    }
+   ],
+   "vacios": [
+    "El corpus F06 indica que las dimensiones de las placas varían según el país sin dar medidas en metros; se deducen de caja_m."
+   ]
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-lamparita-noche",
+   "nombre": "Luz quitamiedos con forma de nubecita sonriente",
+   "caja_m": {
+    "ancho": 0.12,
+    "fondo": 0.16,
+    "alto": 0.14
+   },
+   "apoyo": "sobre_otro",
+   "conjunto": false,
+   "partes": [
+    {
+     "tipo": "caja",
+     "nombre": "base_apoyo",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      0.0,
+      0.015
+     ],
+     "tam_m": [
+      0.1,
+      0.14,
+      0.03
+     ]
+    },
+    {
+     "tipo": "caja",
+     "nombre": "cuerpo_nube_central",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      0.0,
+      0.055
+     ],
+     "tam_m": [
+      0.1,
+      0.12,
+      0.07
+     ]
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "domo_superior_central",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      0.0,
+      0.085
+     ],
+     "radio_m": 0.055
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "lobulo_lateral_izq",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      -0.022,
+      0.0,
+      0.055
+     ],
+     "radio_m": 0.038
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "lobulo_lateral_der",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.022,
+      0.0,
+      0.055
+     ],
+     "radio_m": 0.038
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "lobulo_frontal",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      -0.04,
+      0.05
+     ],
+     "radio_m": 0.04
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "lobulo_trasero",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      0.04,
+      0.05
+     ],
+     "radio_m": 0.04
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "mejilla_izq",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      -0.025,
+      -0.062,
+      0.055
+     ],
+     "radio_m": 0.012
+    },
+    {
+     "tipo": "esfera",
+     "nombre": "mejilla_der",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.025,
+      -0.062,
+      0.055
+     ],
+     "radio_m": 0.012
+    },
+    {
+     "tipo": "caja",
+     "nombre": "sonrisa_central",
+     "color_guia_rgb": [
+      1.0,
+      0.973,
+      0.933
+     ],
+     "centro_m": [
+      0.0,
+      -0.068,
+      0.048
+     ],
+     "tam_m": [
+      0.028,
+      0.016,
+      0.008
+     ]
+    }
+   ],
+   "datos": [
+    {
+     "clave": "caja.ancho",
+     "valor": 0.12,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.ancho"
+    },
+    {
+     "clave": "caja.fondo",
+     "valor": 0.16,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.fondo"
+    },
+    {
+     "clave": "caja.alto",
+     "valor": 0.14,
+     "unidad": "m",
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "caja_m.alto"
+    },
+    {
+     "clave": "color.blanco_calido",
+     "valor": "Blanco cálido #FFF8EE",
+     "unidad": null,
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "color_4a1"
+    },
+    {
+     "clave": "nombre.nubecita_sonriente",
+     "valor": "Luz quitamiedos con forma de nubecita sonriente",
+     "unidad": null,
+     "origen": "hoja",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": "nombre"
+    },
+    {
+     "clave": "tipologia.lamparita_decorativa",
+     "valor": "luminaria nocturna pequeña con diseño decorativo infantil",
+     "unidad": null,
+     "origen": "fuente",
+     "fuente_id": "F07",
+     "cita": "The low cost of nightlights has enabled a proliferation of different decorative designs",
+     "campo_hoja": null
+    },
+    {
+     "clave": "receta.base_apoyo.tam_m",
+     "valor": [
+      0.1,
+      0.14,
+      0.03
+     ],
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.fondo",
+      "tipologia.lamparita_decorativa"
+     ],
+     "razon": "La base plana descansa en z = 0 m para cumplir apoyo sobre_otro y sustenta el cuerpo central de la nube."
+    },
+    {
+     "clave": "receta.lobulos_nube.dimensiones",
+     "valor": [
+      0.12,
+      0.16,
+      0.14
+     ],
+     "unidad": "m",
+     "origen": "deduccion",
+     "fuente_id": null,
+     "cita": null,
+     "campo_hoja": null,
+     "deriva_de": [
+      "caja.ancho",
+      "caja.fondo",
+      "caja.alto",
+      "nombre.nubecita_sonriente"
+     ],
+     "razon": "El domo superior (z hasta 0.14 m), los lóbulos laterales (x = ±0.06 m) y los lóbulos frontal/trasero (y = ±0.08 m) conforman la silueta de nube sonriente llenando la caja."
+    }
+   ],
+   "vacios": [
+    "La ficha no asigna un color separado para los rasgos faciales de la sonrisa; se emplea el color único #FFF8EE.",
+    "El corpus F07 no incluye dimensiones geométricas de una lámpara con forma de nube; se deducen de caja_m y nombre."
+   ]
+  }
+ ]
+}

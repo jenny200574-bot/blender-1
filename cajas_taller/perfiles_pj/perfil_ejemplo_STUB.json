@@ -1,0 +1,48 @@
+{
+ "schema": "perfil_pj/v2",
+ "pj_id": "ejemplo",
+ "nombre": "Ejemplo",
+ "adn_personaje": {
+  "descripcion_visual": "young woman, dark wavy hair",
+  "altura_m": null,
+  "vestuario": "white linen dress"
+ },
+ "voz_adn": {
+  "schema": "voz_adn/v1_universal",
+  "pj": "ejemplo",
+  "rasgos": {
+   "timbre": "warm soft",
+   "tono": "medium-high",
+   "ritmo": "calm unhurried",
+   "acento": "gentle Colombian Spanish",
+   "idioma": "es-CO",
+   "edad_aparente": "young adult female voice",
+   "energia": "low-medium",
+   "textura": "slight breathiness",
+   "diccion": "clear"
+  },
+  "muletillas": [],
+  "emocion_base": "neutral",
+  "prohibido": [
+   "cambiar acento entre tomas",
+   "narrador en off"
+  ],
+  "descriptor_universal_en": "young adult female voice, warm soft timbre, medium-high pitch, gentle Colombian Spanish accent, calm unhurried pace, slight breathiness, clear diction, low-medium energy",
+  "fuente": {
+   "modo": "descripcion",
+   "audio_ref": null
+  },
+  "motor": null,
+  "adaptadores": {}
+ },
+ "sello": {
+  "fijo": true,
+  "hash": "1ee5f6a9",
+  "fecha": "2026-11-02T14:23:52.555Z",
+  "por": "inmi (stub)",
+  "campos_fijos": [
+   "adn_personaje",
+   "voz_adn"
+  ]
+ }
+}

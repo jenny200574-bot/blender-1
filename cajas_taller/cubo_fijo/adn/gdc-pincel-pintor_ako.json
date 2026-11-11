@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-pincel-pintor",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Pincel estilizado 3D de proporciones gruesas (estilo cartoon) y construcción rígida de una sola pieza. Silueta compuesta por una punta bulbosa en forma de gota lisa, virola cilíndrica corta, mango tubular con ligera conicidad y base semiesférica redondeada.\n- Modo de sujeción: Agarre manual directo sobre el cilindro central del mango."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Chasis principal (Mango): Acabado plástico o madera satinada en color amarillo cálido, rematado en el extremo inferior por un tapón en azul real mate.\n- Materiales secundarios: Virola de metal dorado satinado con reflejos suaves; punta en estado inactivo de material sintético liso y mate en color crema/marfil.\n- Emisión lumínica: En estado activo, la punta emite luz propia con efecto *bloom* en dos variantes: degradado multicolor (naranja, cian y magenta) o amarillo neón sólido."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Superficie totalmente limpia, carente de grabados, botones o textura de cerdas individuales.\n- Componentes geométricos: Dos anillos toroidales en relieve situados en los bordes superior e inferior de la virola dorada, y una ranura de unión perimetral simple que divide el cuerpo amarillo del tapón azul inferior."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado inactivo/activo: Inactivo se mantiene vertical y opaco; al activarse se inclina diagonalmente y la punta irradia un aura luminosa suave que proyecta reflejos de color sobre el anillo superior de la virola dorada.\n- Regla de distancia (Plano general): Se eliminan los dos rebordes de la virola y los reflejos metálicos, simplificando la silueta a cuatro bloques básicos de color (gota superior, franja dorada, cilindro amarillo, base azul)."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Pincel 3D estilizado de proporciones gruesas y estética cartoon minimalista, formado por una punta bulbosa en forma de gota totalmente lisa sin cerdas, virola metálica dorada con dos anillos redondeados en relieve, mango cilíndrico amarillo cálido satinado y base semiesférica en azul marino mate. En reposo la punta es de color crema opaco; en estado activo, la punta se ilumina intensamente emitiendo un halo de energía mágica difusa en degradado arcoíris (naranja, cian, fucsia) o en amarillo neón brillante."
+    }
+  ],
+  "inyeccion": "Pincel 3D estilizado de proporciones gruesas y estética cartoon minimalista, formado por una punta bulbosa en forma de gota totalmente lisa sin cerdas, virola metálica dorada con dos anillos redondeados en relieve, mango cilíndrico amarillo cálido satinado y base semiesférica en azul marino mate. En reposo la punta es de color crema opaco; en estado activo, la punta se ilumina intensamente emitiendo un halo de energía mágica difusa en degradado arcoíris (naranja, cian, fucsia) o en amarillo neón brillante.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Pincel estilizado 3D de proporciones gruesas (estilo cartoon) y construcción rígida de una sola pieza. Silueta compuesta por una punta bulbosa en forma de gota lisa, virola cilíndrica corta, mango tubular con ligera conicidad y base semiesférica redondeada.\n- Modo de sujeción: Agarre manual directo sobre el cilindro central del mango.\n\n2. Materiales y Paleta de Color:\n\n- Chasis principal (Mango): Acabado plástico o madera satinada en color amarillo cálido, rematado en el extremo inferior por un tapón en azul real mate.\n- Materiales secundarios: Virola de metal dorado satinado con reflejos suaves; punta en estado inactivo de material sintético liso y mate en color crema/marfil.\n- Emisión lumínica: En estado activo, la punta emite luz propia con efecto *bloom* en dos variantes: degradado multicolor (naranja, cian y magenta) o amarillo neón sólido.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Superficie totalmente limpia, carente de grabados, botones o textura de cerdas individuales.\n- Componentes geométricos: Dos anillos toroidales en relieve situados en los bordes superior e inferior de la virola dorada, y una ranura de unión perimetral simple que divide el cuerpo amarillo del tapón azul inferior.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado inactivo/activo: Inactivo se mantiene vertical y opaco; al activarse se inclina diagonalmente y la punta irradia un aura luminosa suave que proyecta reflejos de color sobre el anillo superior de la virola dorada.\n- Regla de distancia (Plano general): Se eliminan los dos rebordes de la virola y los reflejos metálicos, simplificando la silueta a cuatro bloques básicos de color (gota superior, franja dorada, cilindro amarillo, base azul).\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nPincel 3D estilizado de proporciones gruesas y estética cartoon minimalista, formado por una punta bulbosa en forma de gota totalmente lisa sin cerdas, virola metálica dorada con dos anillos redondeados en relieve, mango cilíndrico amarillo cálido satinado y base semiesférica en azul marino mate. En reposo la punta es de color crema opaco; en estado activo, la punta se ilumina intensamente emitiendo un halo de energía mágica difusa en degradado arcoíris (naranja, cian, fucsia) o en amarillo neón brillante.",
+  "creado": "2026-11-06T04:03:13+01:00"
+}

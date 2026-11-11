@@ -1,0 +1,46 @@
+Eres ARGON C, revisor de calidad (cubo 12). Adjunto 1 = hoja de moldes Blender 2x4 (VERDAD de layout). Adjunto 2 = hoja pintada por Nano Banana Pro con el prompt de abajo. Compara viñeta por viñeta (8 viñetas, filas 1-2 lámina L02, filas 3-4 lámina L03).
+Para cada viñeta evalúa: orientación del cuerpo (espalda/frente/3-4/perfil/boca abajo/boca arriba) igual al molde; dirección de cabeza y mirada (¿mira a cámara cuando no debe?); escala y posición relativas al set; número de personas y de manos, brazos sueltos; pulsera (exactamente una, muñeca IZQUIERDA, derecha desnuda); identidad (Kael gordito, pelo corto negro, gafas; alien pelo plateado); colores de molde copiados.
+Luego investiga POR QUÉ se desvía (frases del prompt, ambigüedad del molde, orden de imágenes, aspecto) y propone cambios concretos al pedido/prompt/molde/orden de imágenes para el siguiente intento.
+PROMPT USADO:
+<<<
+Trace strictly over the exact 3D layout positions, lock exact position, silhouette scale and limb angles to Image 1, and match its camera perspective; DO NOT center or enlarge characters; DO NOT turn Kael's head to face the camera; ignore the mold colours and cylindrical shapes, which are position codes only—paint natural skin hands, grey hoodie sleeves and dark sneakers.
+
+STYLE: Anime Key Visual de Alta Gama estilo Light Novel / Gacha — soft cel-shading with gradients, fine lineart, cinematic lighting with cyan bloom. Midnight-blue night sky in the top corners when visible, cool bluish rooftop shadows, DRY concrete floor with grid lines, no rain, no puddles.
+
+STORYBOARD SHEET: ONE SCENE (rooftop of a skyscraper at night), TAKES L02_1, L02_2, L02_3, L02_4, L03_1, L03_2, L03_3, L03_4.
+
+1. PAGE LAYOUT
+One image holding 8 panels in 4 rows of 2 columns, same grid as Image 1. Every panel is a 16:9 frame with thin pure-white gutters and outer margin. Borderless panels, reading left to right, top to bottom. Pure artwork: no text, captions, balloons or numbers.
+
+2. CONSISTENCY
+Identical look across all 8 panels: same rooftop, night lighting, palette and outfit. Only ONE character (Kael) is in this sheet; the alien is off-screen. Every panel shows Kael's two attached arms, two natural skin hands, dark sneakers (never barefoot), and no disembodied or extra arms or hands.
+
+3. REFERENCE IMAGES
+Image 1: layout mold sheet from Blender (2 columns x 4 rows, same grid as the page) — PRIMARY structural reference; legend: grey = the set; magenta = Kael torso, orange = his legs, green = his LEFT arm, blue = his RIGHT arm, skin-coloured patch = where his FACE points, black = BACK of his head/hair, cyan ring = the bracelet on his LEFT wrist; small plain YELLOW figure = the alien (absent here). Never paint these code colours on Kael.
+Image 2: Kael approved BACK view: authority for hoodie hood, wide back and dark navy cargo pants.
+Image 3: Kael approved FRONT sheet: authority for chubby 98 kg build, round face, short messy black hair, rectangular glasses, grey zip hoodie over dark navy t-shirt, dark cargo pants and dark sneakers (no backpack).
+Image 4: approved strip T06 of this scene: painting style and character look ONLY, never its layout or poses.
+
+4. CHARACTERS
+Kael Cross = Images 2-3: chubby 98 kg build, wide belly, short messy black hair, rectangular glasses, grey zip hoodie, dark navy t-shirt and cargo pants, dark sneakers. Exactly ONE glowing cyan bracelet on his LEFT wrist (extended to screen-LEFT); his RIGHT wrist (extended to screen-RIGHT) is BARE.
+
+5. SET AND STORY STATE
+Dry grey concrete rooftop floor with grid lines in the foreground, two cylindrical blue-grey water tanks on a rectangular base on the back-left, a grey stairwell hut with a narrow door on the back-right, and a rear parapet wall. No AC unit or antennas in frame. Never mirror or flip any panel.
+
+6. STORY OF THE SCENE (context only)
+L02: Deposited on the rooftop, Kael lies immobile on his back looking up at the stars, muttering that this is an expensive dream. L03: His bracelet flashes; IMI reports his heart rate proves he is awake, and Kael jokes he will install a sense of humor in it.
+
+7. PANELS
+Panel 1 (row 1 left): Wide ground-level view showing the tiled concrete floor filling the lower half, two full water tanks on a base on the back-left, the stairwell hut with door on the back-right, and dark night sky only in the upper corners; Kael lies flat on his back in the distant center, smaller than the tank base, foreshortened with his da[REDACTED_VALUE] feet toward the camera (left knee bent upward, right leg angled forward), his head tucked behind his chubby torso looking straight up at the sky (never at camera), his left arm stretched out on the floor to screen-left with the glowing cyan bracelet on his left wrist, and his bare right arm and hand stretched out to screen-right.
+Panel 2 (row 1 right): Slightly closer ground-level push-in where the tops of the water tanks on the left and the hut roof on the right are cropped at the top edge with almost no sky visible; Kael lies immobile on his back in the center-back with his feet toward the camera and left knee raised, exhaling in disbelief while looking straight up behind his chest, his left arm extended to screen-left with the cyan bracelet on his left wrist and his bare right hand on screen-right.
+Panel 3 (row 2 left): Closer ground-level view cropping out the sky and showing only the lower half of the water tanks on the left, the lower door of the hut on the right, and the rear wall; Kael lies supine in mid-ground with his dark sneakers and raised left knee in front of his chubby torso, head tilted up behind his chest away from camera, left arm extended to screen-left wearing the single cyan bracelet, and bare right wrist extended to screen-right.
+Panel 4 (row 2 right): Medium-close ground-level view showing only the tank pedestal edge on the far left, the bottom of the hut door on the far right, and the rear wall behind the floor grid; Kael lies exhausted on his back in center-midground with his feet and raised left knee toward the camera, head hidden behind his chest looking up, left arm stretched to screen-left with the glowing cyan bracelet on his left wrist, and bare right arm stretched to screen-right.
+Panel 5 (row 3 left): Wide ground-level view matching Panel 1's framing with full water tanks on the back-left, stairwell hut on the back-right, and night sky corners; Kael lies small and motionless on his back in the center-back with his feet toward the camera and left knee raised, looking straight up as the single cyan bracelet on his outstretched left wrist on screen-left emits a bright cyan flash, while his outstretched right wrist on screen-right remains bare.
+Panel 6 (row 3 right): Slightly closer ground-level push-in cropping the tops of the water tanks on the left and hut on the right; Kael stays flat on his back in the center with his dark sneakers and bent left knee toward the camera, listening to IMI with his head behind his torso looking up, the cyan bracelet pulsing on his left wrist on screen-left and his bare right hand resting on screen-right.
+Panel 7 (row 4 left): Closer ground-level view showing only the lower half of the tanks on the left and lower hut door on the right with no sky; Kael remains sprawled on his back in mid-ground with his feet toward the camera and left knee up, replying with dry irony while his head stays behind his chest looking upward, his left wrist glowing cyan on screen-left and his right wrist bare on screen-right.
+Panel 8 (row 4 right): Medium-close ground-level view showing the concrete grid, tank base edge on the left, and lower hut door on the right; Kael lies flat on his back in center-midground with his da[REDACTED_VALUE] feet and raised left knee in front of his chubby torso, head behind his chest looking up at the sky, his left arm extended to screen-left with the glowing cyan bracelet and his bare right arm extended to screen-right.
+
+8. EXCLUDE (word list)
+Avoid: blocky 3D dummy shapes, cylindrical limbs, magenta torso, orange pants, green or blue hands or sleeves, yellow figures, barefoot, thin Kael, backpack, bracelet on right wrist, two bracelets, disembodied arms, extra hands, looking at the camera, sitting up, lying face down, AC unit, antennas, rain, wet floor, puddles, violet sky, text, subtitles, speech bubbles, panel numbers, borders, mirrored panels.
+>>>
+RESPONDE SOLO JSON: {"vinetas":[{"n":1,"orientacion_ok":true,"mirada_ok":true,"escala_ok":true,"manos_ok":true,"pulsera_ok":true,"identidad_ok":true,"nota":""}],"pasa_hoja":false,"causas":[""],"cambios_propuestos":{"prompt":[""],"molde":[""],"orden_imagenes":[""],"otros":[""]}}

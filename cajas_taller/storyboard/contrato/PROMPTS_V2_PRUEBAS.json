@@ -1,0 +1,530 @@
+{
+  "pasan": 130,
+  "fallan": 0,
+  "pruebas": [
+    {
+      "prueba": "Propuesta inactiva",
+      "ok": true
+    },
+    {
+      "prueba": "Diez géneros exactos",
+      "ok": true
+    },
+    {
+      "prueba": "Versiones aprobadas",
+      "ok": true
+    },
+    {
+      "prueba": "Placeholders dirección",
+      "ok": true
+    },
+    {
+      "prueba": "Placeholders reparación",
+      "ok": true
+    },
+    {
+      "prueba": "Base sin placeholders inesperados",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva director principal",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva ADN INMUTABLE",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva PROHIBIDO reescribir colores",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva dna_ref_id",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva dna_override_allowed=false",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva 24fps",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva delta arousal>=+0.15",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva REVEAL por sí solo no exime",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva pre-roll.8-1.5s",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva GPG+PG<=20%",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva hasta35% global",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva ventana de5",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva GPP máximo1",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva Nunca dos PD seguidos",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva reglas_sb_v1.json",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva round_half_up",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva Schema válido no equivale",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva U=w_emo",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva >=30",
+      "ok": true
+    },
+    {
+      "prueba": "Base conserva <=8%",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 1_narrative_and_emotion",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 2_visible_action_dialogue_reaction",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 3_subjects_and_hierarchy",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 4_characters_dna_and_state",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 5_spatial_position_and_orientation",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 6_set_and_time",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 7_shot_size_and_framing",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 8_camera_optics_and_geometry",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 9_camera_movement_and_motive",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 10_continuity_and_transition",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 11_ordered_dna_image_references",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 12_tolerances_and_validations",
+      "ok": true
+    },
+    {
+      "prueba": "Bloque contrato 13_acceptance_correction_rejection_rules",
+      "ok": true
+    },
+    {
+      "prueba": "Sin instrucción afirmativa de rediseño ADN base",
+      "ok": true
+    },
+    {
+      "prueba": "Sin instrucción afirmativa de rediseño ADN dirección",
+      "ok": true
+    },
+    {
+      "prueba": "Sin instrucción afirmativa de rediseño ADN reparación",
+      "ok": true
+    },
+    {
+      "prueba": "Reparación solo autorizadas",
+      "ok": true
+    },
+    {
+      "prueba": "Canales/capítulos no fijados",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 drama",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado drama",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum drama",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra drama",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN drama",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo drama",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género drama",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 emocion",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado emocion",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum emocion",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra emocion",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN emocion",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo emocion",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género emocion",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 intriga",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado intriga",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum intriga",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra intriga",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN intriga",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo intriga",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género intriga",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 suspenso",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado suspenso",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum suspenso",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra suspenso",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN suspenso",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo suspenso",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género suspenso",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 terror",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado terror",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum terror",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra terror",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN terror",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo terror",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género terror",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 comedia",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado comedia",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum comedia",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra comedia",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN comedia",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo comedia",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género comedia",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 accion",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado accion",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum accion",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra accion",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN accion",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo accion",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género accion",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 fantasia",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado fantasia",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum fantasia",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra fantasia",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN fantasia",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo fantasia",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género fantasia",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 ternura",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado ternura",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum ternura",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra ternura",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN ternura",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo ternura",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género ternura",
+      "ok": true
+    },
+    {
+      "prueba": "Tokens700..1000 misterio",
+      "ok": true
+    },
+    {
+      "prueba": "Conteo registrado misterio",
+      "ok": true
+    },
+    {
+      "prueba": "Género enum misterio",
+      "ok": true
+    },
+    {
+      "prueba": "Matriz íntegra misterio",
+      "ok": true
+    },
+    {
+      "prueba": "Reglas/contrato y ADN misterio",
+      "ok": true
+    },
+    {
+      "prueba": "Sin rediseño afirmativo misterio",
+      "ok": true
+    },
+    {
+      "prueba": "Sin placeholders género misterio",
+      "ok": true
+    },
+    {
+      "prueba": "Hash tablas fuente",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente DRAMA",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente EMOCION_CATARSIS",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente INTRIGA",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente SUSPENSO",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente TERROR",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente COMEDIA",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente ACCION",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente FANTASIA",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente TERNURA",
+      "ok": true
+    },
+    {
+      "prueba": "Fila matriz fuente MISTERIO",
+      "ok": true
+    },
+    {
+      "prueba": "Detecta pérdida de placeholder",
+      "ok": true
+    },
+    {
+      "prueba": "Detecta orden peligrosa de ADN",
+      "ok": true
+    },
+    {
+      "prueba": "Detecta pérdida de reloj",
+      "ok": true
+    },
+    {
+      "prueba": "Tamaño base registrado",
+      "ok": true
+    },
+    {
+      "prueba": "Hashes textos registrados",
+      "ok": true
+    }
+  ],
+  "offline": true,
+  "sin_IA_ni_gasto": true,
+  "tokenizer": "[REDACTED]",
+  "limite": "Check estático y auditoría textual, no prueba de obediencia de IA ni aceptación física"
+}

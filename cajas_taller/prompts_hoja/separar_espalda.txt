@@ -1,0 +1,10 @@
+Make ONE standard character reference image: the FULL-BODY BACK view of one character version.
+Character: «{PERSONAJE}» — version «{VERSION}».
+{REFERENCIAS}
+Draw the SAME character as reference image 1, turned 180 degrees: seen from directly behind, standing upright in the same neutral pose, both feet flat on the ground, the whole body visible. Same body proportions, same height in the frame, same outfit, same colors and materials, same hair (now seen from behind).
+{ESPALDA}
+Never add new items, logos, emblems, weapons, capes or accessories that the references do not show. Other parts the sheet does not show ({COMPLETAR}) must be completed consistently with the sheet.
+Framing (always the same, identical to reference image 1): {ENCUADRE}.
+Background: {FONDO}. No text, no labels, no logos, no panel borders, no other characters, no effects.
+What the sheet says about this version (only to check, never to add new things): {DESCRIPCION}
+Never changes across versions: {NUNCA_CAMBIA}

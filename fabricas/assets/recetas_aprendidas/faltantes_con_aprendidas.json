@@ -1,0 +1,358 @@
+{
+ "escenario": "esc-habitacion",
+ "consultar_aprendidas": false,
+ "n_star": 283,
+ "n_aprendidas": 0,
+ "cubiertos": [
+  {
+   "objeto_id": "Ventana con vista al arcoíris",
+   "capa": "star",
+   "fid": "ventana",
+   "aprox": false
+  },
+  {
+   "objeto_id": "Puerta de entrada de la habitación",
+   "capa": "star",
+   "fid": "puerta",
+   "aprox": false
+  },
+  {
+   "objeto_id": "Mesa de noche junto a la cama",
+   "capa": "star",
+   "fid": "mesa_noche",
+   "aprox": false
+  },
+  {
+   "objeto_id": "obj-cama",
+   "capa": "star",
+   "fid": "cama",
+   "aprox": false
+  },
+  {
+   "objeto_id": "obj-almohada",
+   "capa": "star",
+   "fid": "cojin",
+   "aprox": true
+  },
+  {
+   "objeto_id": "obj-lampara",
+   "capa": "star",
+   "fid": "lampara_colgante",
+   "aprox": false
+  },
+  {
+   "objeto_id": "obj-armario",
+   "capa": "star",
+   "fid": "armario",
+   "aprox": false
+  },
+  {
+   "objeto_id": "obj-libro-cuentos",
+   "capa": "star",
+   "fid": "libro",
+   "aprox": false
+  },
+  {
+   "objeto_id": "obj-cofre-dorado",
+   "capa": "star",
+   "fid": "baul",
+   "aprox": true
+  },
+  {
+   "objeto_id": "obj-rayo-confundidor",
+   "capa": "excluido",
+   "motivo": "es un EFECTO (rayo de la pistola de Don Caos), no un objeto con forma; va por efectos, no por receta"
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-edredon-acolchado",
+   "capa": "star",
+   "fid": "cojin",
+   "aprox": true
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-cojin-estrella",
+   "capa": "star",
+   "fid": "cojin",
+   "aprox": true
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-porta-lapices",
+   "capa": "star",
+   "fid": "vaso",
+   "aprox": true
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-estanteria-baja",
+   "capa": "star",
+   "fid": "estanteria",
+   "aprox": false
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-libros-apilados",
+   "capa": "star",
+   "fid": "libro",
+   "aprox": false
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-maceta-suculenta",
+   "capa": "star",
+   "fid": "maceta_planta",
+   "aprox": false
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-baul-juguetes",
+   "capa": "star",
+   "fid": "baul",
+   "aprox": false
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-mesa-dibujo",
+   "capa": "star",
+   "fid": "mesa_redonda",
+   "aprox": false
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-banquito-madera",
+   "capa": "star",
+   "fid": "taburete",
+   "aprox": false
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-cuadros-infantiles",
+   "capa": "star",
+   "fid": "cuadro",
+   "aprox": false
+  }
+ ],
+ "faltantes_para_argon": [
+  {
+   "objeto_id": "obj-lapiz",
+   "nombre": "obj-lapiz",
+   "caja_m": {
+    "ancho": 0.025,
+    "fondo": 0.18,
+    "alto": 0.025
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "obj-visor-spark",
+   "nombre": "obj-visor-spark",
+   "caja_m": {
+    "ancho": 0.16,
+    "fondo": 0.12,
+    "alto": 0.06
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "obj-candados-cofre",
+   "nombre": "obj-candados-cofre",
+   "caja_m": {
+    "ancho": 0.36,
+    "fondo": 0.04,
+    "alto": 0.14
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "obj-pincel-magico",
+   "nombre": "obj-pincel-magico",
+   "caja_m": {
+    "ancho": 0.025,
+    "fondo": 0.025,
+    "alto": 0.18
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "obj-vocales",
+   "nombre": "obj-vocales",
+   "caja_m": {
+    "ancho": 0.16,
+    "fondo": 0.06,
+    "alto": 0.22
+   },
+   "instancias": 2,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "obj-numeros-1-al-5",
+   "nombre": "obj-numeros-1-al-5",
+   "caja_m": {
+    "ancho": 0.14,
+    "fondo": 0.06,
+    "alto": 0.2
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "obj-papel-numeros",
+   "nombre": "obj-papel-numeros",
+   "caja_m": {
+    "ancho": 0.06,
+    "fondo": 0.002,
+    "alto": 0.045
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-cortinas-ventana",
+   "nombre": "Par de cortinas de tela suave recogidas a los lados de la ventana",
+   "caja_m": {
+    "ancho": 1.9,
+    "fondo": 0.12,
+    "alto": 1.65
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-barra-cortinero",
+   "nombre": "Barra de cortinero de madera con remates esféricos",
+   "caja_m": {
+    "ancho": 2.0,
+    "fondo": 0.08,
+    "alto": 0.08
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-lamparita-noche",
+   "nombre": "Luz quitamiedos con forma de nubecita sonriente",
+   "caja_m": {
+    "ancho": 0.12,
+    "fondo": 0.16,
+    "alto": 0.14
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-bloques-geometricos",
+   "nombre": "Pirámide de bloques geométricos de madera sin letras",
+   "caja_m": {
+    "ancho": 0.25,
+    "fondo": 0.18,
+    "alto": 0.16
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-peluche-oso",
+   "nombre": "Muñeco de peluche suave con forma de osito redondo sentado",
+   "caja_m": {
+    "ancho": 0.24,
+    "fondo": 0.22,
+    "alto": 0.28
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-pelota-colores",
+   "nombre": "Pelota blanda de gajos de colores",
+   "caja_m": {
+    "ancho": 0.2,
+    "fondo": 0.2,
+    "alto": 0.2
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-cesta-tela",
+   "nombre": "Cesta cilíndrica de tela tejida con asas de cuerda",
+   "caja_m": {
+    "ancho": 0.36,
+    "fondo": 0.36,
+    "alto": 0.4
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-bote-crayones",
+   "nombre": "Cubilete bajo con crayones gruesos de cera",
+   "caja_m": {
+    "ancho": 0.12,
+    "fondo": 0.12,
+    "alto": 0.11
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-repisa-pared-izquierda",
+   "nombre": "Repisa flotante de madera con soportes redondeados",
+   "caja_m": {
+    "ancho": 0.68,
+    "fondo": 0.2,
+    "alto": 0.06
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-avion-madera",
+   "nombre": "Avioncito de juguete de madera con hélice redondeada",
+   "caja_m": {
+    "ancho": 0.22,
+    "fondo": 0.18,
+    "alto": 0.12
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-perchero-pared",
+   "nombre": "Perchero infantil de madera con tres pomos redondos",
+   "caja_m": {
+    "ancho": 0.42,
+    "fondo": 0.08,
+    "alto": 0.12
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-interruptor-luz",
+   "nombre": "Interruptor de luz de placa redondeada",
+   "caja_m": {
+    "ancho": 0.08,
+    "fondo": 0.03,
+    "alto": 0.12
+   },
+   "instancias": 1,
+   "fid_plan": null
+  },
+  {
+   "objeto_id": "amb-esc-habitacion-guirnalda-banderines",
+   "nombre": "Guirnalda festiva de banderines triangulares de tela",
+   "caja_m": {
+    "ancho": 2.4,
+    "fondo": 0.05,
+    "alto": 0.18
+   },
+   "instancias": 1,
+   "fid_plan": null
+  }
+ ],
+ "excluidos": {
+  "obj-rayo-confundidor": "es un EFECTO (rayo de la pistola de Don Caos), no un objeto con forma; va por efectos, no por receta"
+ },
+ "resumen": {
+  "cubiertos_star": 19,
+  "cubiertos_aprendidas": 0,
+  "excluidos": 1,
+  "faltantes": 20
+ }
+}

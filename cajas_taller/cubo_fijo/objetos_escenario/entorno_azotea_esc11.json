@@ -1,0 +1,11 @@
+{
+  "id": "entorno_azotea_esc11",
+  "vistas": [
+    "image1_fondo_vacio"
+  ],
+  "nota": "skyline sí, auroras no",
+  "sellado": false,
+  "version": 1,
+  "origen": "semilla_ako_cubo_cargar_js",
+  "canal": "genesis"
+}

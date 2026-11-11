@@ -1,0 +1,62 @@
+{
+ "id": "accion",
+ "tipo": "perfil cinematográfico modular (reglas + preferencias + ejemplos). NO es plantilla: no fija número de viñetas.",
+ "nombre": "Acción",
+ "tonos": [
+  "tenso",
+  "enérgico",
+  "urgente"
+ ],
+ "reglas": {
+  "intencion": "adrenalina, urgencia, peligro físico; el público debe sentir el impacto",
+  "beats": "mostrar causa→impacto→consecuencia de cada golpe; ocultar lo que no aporta al choque",
+  "secuencia": "revelación rápida; acciones partidas en varias viñetas cortas",
+  "direccion": "ángulos bajos para poder, cámara en movimiento (seguimiento, travelling lateral), lentes 24-35 mm cerca de la acción",
+  "actuacion": "intensidad alta, cuerpos en tensión, poses de impulso",
+  "composicion": "diagonales, dinamismo, primer término con objetos que pasan; eje claro para entender quién va hacia dónde",
+  "ritmo": "viñetas cortas que se aceleran hacia el clímax; pausa breve solo antes del golpe decisivo",
+  "transiciones": "cortes secos, match cut de acción, cortes en el movimiento",
+  "continuidad": "dirección de pantalla estricta: quien huye y quien persigue no cambian de lado",
+  "justificacion": "cada elección busca energía e impacto sin perder claridad espacial"
+ },
+ "validable": {
+  "duracion_vineta_s": [
+   0.8,
+   4.0
+  ],
+  "lente_mm": [
+   18,
+   50
+  ],
+  "planos_preferidos": [
+   "WS",
+   "FS",
+   "MS",
+   "CU"
+  ],
+  "angulos_preferidos": [
+   "LOWANGLE",
+   "DUTCH",
+   "EYELEVEL"
+  ],
+  "movimientos_preferidos": [
+   "TRACK",
+   "FOLLOW",
+   "TRUCK",
+   "HANDHELD",
+   "WHIPPAN",
+   "CRASHZOOM",
+   "DOLLYIN"
+  ],
+  "movimientos_evitar": [
+   "IMPERCEPTIBLE"
+  ],
+  "transiciones_preferidas": [
+   "CORTE_SECO",
+   "MATCH_CUT",
+   "CORTE"
+  ],
+  "pausas": "pocas"
+ },
+ "ejemplo_puerta": "Patada a la puerta en plano bajo, corte seco al interior, travelling que sigue al personaje mientras entra."
+}

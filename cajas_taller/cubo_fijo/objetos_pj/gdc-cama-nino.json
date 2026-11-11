@@ -1,0 +1,39 @@
+{
+  "id": "gdc-cama-nino",
+  "nombre": "Cama del niño",
+  "clase": "objeto",
+  "subclase": "lugar",
+  "dueno": null,
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-cama.png",
+  "lugar": "gdc-habitacion-nino",
+  "nunca_cambia": "Cama del niño en la habitación (donde está el libro; Don Caos se asoma por debajo).",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "sellado": true,
+  "version": 2,
+  "adn_estado": "sin ADN Ako: ADN Maestro 03/04 cotizado, PAGO CERRADO; falta imagen de referencia (no hay en material del cliente)",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+  "imagen_sha256": "6f69123fcd9d87dbf489300b2724741d124077ebac8e282c0438925cf62d7c29",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 105,
+    "fondo_cm": 190,
+    "alto_cm": 85
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-cama__56219c.json",
+  "ids_capitulo": [
+    "obj-cama"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-cama"
+  ],
+  "imagen_ref_anterior": null,
+  "frase_sello": "Cama individual 3D estilizada de proporciones gruesas y bordes muy redondeados, con cabecero alto arqueado, piecero bajo y cuatro patas cortas integradas. Acabado mate liso tipo arcilla o plástico suave, con estructura en marrón ocre cálido y panel frontal del cabecero en color crema. Incluye un colchón blanco simple cubierto en tres cuartas partes por un edredón acolchado azul cielo con patrón de cuadrícula hundida, un doblez superior grueso y ribete perimetral color crema.",
+  "actualizado": "2026-11-06T04:05:10+01:00",
+  "origen": "sellar"
+}

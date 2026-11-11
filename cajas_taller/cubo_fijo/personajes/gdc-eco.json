@@ -1,0 +1,54 @@
+{
+  "id": "gdc-eco",
+  "nombre": "Eco",
+  "ids_canal": [
+    "ch-eco-eff3",
+    "eco"
+  ],
+  "tipo": "persona",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/eco/referencia-cliente/refs/2bf0919933769c21.jpg",
+  "nunca_cambia": "Traje verde de hojas, botas verdes, hojas en hombros y pecho, pelo verde largo. Niña de 5 años, la más bajita. Piquito (pajarito AMARILLO #FFD84D) en el hombro izquierdo.",
+  "voz_adn": {
+    "schema": "voz_adn/v1_universal",
+    "motor": null,
+    "fuente": "Biblia GDC_00_1 + guion T01E01 del cliente (acotaciones de tono); escrito una vez por el ingeniero el 2-nov-2026; sin IA, US$0",
+    "rasgos": {
+      "timbre": "dulce, pequeño, de niña",
+      "tono": "agudo suave",
+      "ritmo": "lento y paciente; acelera cuando anima al niño",
+      "acento": "español latinoamericano neutro (Colombia suave), sin regionalismos fuertes",
+      "idioma": "español",
+      "edad_aparente": "niña de 5 años",
+      "energia": "baja-media (sube en los «¡vamos!»)",
+      "textura": "suave, susurrada a ratos",
+      "diccion": "cuidada, a veces tímida; muletilla «Shhh… escuchen»"
+    },
+    "descriptor_universal_en": "Sweet small 5-year-old girl voice, soft high pitch, slow patient rhythm that speeds up when cheering, gentle whispery texture, careful slightly shy diction, neutral Latin American Spanish.",
+    "notas": "tímida en público; tranquila",
+    "regla": "perfil universal (no atado a Veo ni a ningún motor); el motor de voz se elige después"
+  },
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "personaje",
+  "sellado": true,
+  "version": 4,
+  "altura_fuente_nota": "alturas en la biblioteca personajes.json (altura_m, inventadas por orden de Ricardo 2-nov-2026, no medidas en Blender)",
+  "adn_estado": "ADN Ako sellado (Fase 1 hoja + Fase 2 ADN, sello_pago 2-nov-2026)",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; cambia solo con versión nueva (versiones/) y sello por cubo_fijo sellar",
+  "frase_sello": "1. Ficha Antropométrica:\n* **Edad visual:** 22-25 años.\n* **Estatura aparente:** 1.02 m (estatura oficial de la biblioteca del canal; manda hasta que Blender la mida).\n* **Complexión física:** Atlética, estilizada y esbelta.\n* **Proporción:** 6.5 cabezas de altura (canon estilizado).\n* **Estilo de línea y sombreado:** Renderizado 3D CGI estilizado sin líneas de contorno (sin *lineart*). Piel con *subsurface scattering* cálido, iluminación suave con oclusión ambiental definida y materiales con acabados satinados/metálicos en el traje.\n\n2. Fisonomía Facial y Cabello:\n* **Forma del rostro:** Ovalado con tendencia a corazón, mejillas redondeadas con rubor rosado cálido, nariz pequeña respingada y mentón suave.\n* **Cabello:** Largo hasta media espalda, ondulado y voluminoso con raya lateral izquierda. Color verde esmeralda vibrante con brillos especulares en verde claro.\n* **Ojos:** Grandes y almendrados, iris color verde hoja brillante, pupilas grandes y pestañas superiores negras, densas y curvas.\n* **Cejas:** Grosor medio, arqueadas y definidas, en tono verde oscuro/castaño.\n* **Accesorios fijos:** Ninguno facial (sin gafas, cicatrices ni pendientes). Mascota fija: pequeño pájaro amarillo (tipo canario) posado sobre su hombro derecho.\n\n3. Paleta de Expresiones:\n* **Normal:** Cejas suavemente arqueadas en reposo, apertura ocular estándar con mirada cálida y boca cerrada en sonrisa ligera y serena.\n* **Feliz:** Cejas elevadas en arco alto, ojos muy abiertos y brillantes, boca abierta en sonrisa amplia mostrando la fila superior de dientes y la lengua.\n* **Nervioso:** Cejas arqueadas con extremos internos elevados en gesto de preocupación, ojos muy abiertos y tensos, boca entreabierta formando una pequeña curva descendente (incluye gota de sudor azul en la sien izquierda).\n* **Enojado:** Cejas fruncidas en ángulo agudo hacia el centro, párpados tensos con ojos completamente abiertos y boca muy abierta en grito, mostrando dientes superiores y lengua.\n* **Triste:** Cejas inclinadas hacia arriba en el centro (forma de \"V\" invertida), párpados superiores caídos con mirada baja y boca cerrada en puchero con comisuras hacia abajo.\n\n4. Vestuario por Capas:\n* **Prenda exterior/interior (Enterizo):** Traje completo (*bodysuit*) ultra ceñido de textura metálica satinada color verde esmeralda oscuro, sin holgura ni bolsillos. Cuello alto abierto en \"V\". Estampado luminoso del símbolo de reciclaje en verde claro centrado en el pecho.\n* **Apliques orgánicos (Armadura de hojas):** Hombreras formadas por hojas superpuestas en verde mate; corsé abdominal en \"V\" compuesto por hojas nervadas que se extienden hacia las caderas como faldones laterales; brazaletes de hojas en los antebrazos integrados a guantes completos color verde oscuro.\n* **Prenda inferior:** Integrada al enterizo, con costuras verticales en relieve que recorren el centro de los muslos hasta las rodillas.\n* **Calzado:** Botas altas hasta la rodilla en verde metálico con tacón cuadrado bajo. Caña cubierta por una gran hoja verde mate con nervaduras que termina en dos puntas bajo la rodilla.\n\n5. Reglas de Giro:\n* **De frente:** Visibilidad total del emblema de reciclaje en el pecho, el panel de hojas abdominal en \"V\" y el pájaro amarillo de frente sobre el hombro derecho.\n* **De perfil:** El cabello cae detrás del hombro despejando el rostro y el cuello; se aprecia la silueta del busto, la curvatura lumbar, el tacón de la bota y el perfil del pájaro amarillo.\n* **De espaldas:** El cabello cubre la zona dorsal alta hasta los omóplatos; cintura definida por un cinturón en \"V\" liso sin hojas centrales; costuras verticales recorren el centro de los glúteos y piernas; sin capas ni mochilas; el pájaro amarillo es visible de espaldas en el hombro derecho.",
+  "actualizado": "2026-11-06T03:34:21+01:00",
+  "origen": "sellar",
+  "hoja_aprobada": {
+    "ruta": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-eco_0597114f24f97a5d.png",
+    "aprobado_por": "Ricardo",
+    "cuando": "2026-11-02T17:32:00-05:00",
+    "origen": "chat Ricardo «si apruebo» (pt510u)",
+    "sha256": "0597114f24f97a5d7986091673a33ee03e739bf278aa07b11ee2313e1eab854f",
+    "origen_ruta": "/opt/myia-taller-n8n/trabajo/sello_pago/cn-los-guardianes-de-la-9fb323be/gdc-eco/hoja_fase1_20261102-232140_i1.png"
+  },
+  "hoja_ref": "/opt/myia-taller-n8n/cajas/cubo_fijo/hojas/gdc-eco_0597114f24f97a5d.png",
+  "altura_m": 1.02,
+  "altura_fuente": "biblioteca del canal (personajes.json); Blender la reemplaza al medir",
+  "altura_regla": "t467u Ricardo: biblioteca gana hasta medición Blender"
+}

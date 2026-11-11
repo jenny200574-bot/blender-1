@@ -1,0 +1,51 @@
+{
+  "id": "gdc-piquito",
+  "nombre": "Piquito",
+  "ids_canal": [
+    "ch-piquito-030a",
+    "piquito"
+  ],
+  "tipo": "acompañante",
+  "portador": "gdc-eco",
+  "posicion": "hombro izquierdo de Eco",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/eco/referencia-cliente/refs/2bf0919933769c21.jpg",
+  "imagen_ref_nota": "sin imagen propia: aparece en ref1 sobre el hombro de Eco (allí sale NARANJA; el sello manda AMARILLO #FFD84D)",
+  "colores": {
+    "cuerpo": "#FFD84D",
+    "pecho": "#FFF1A8",
+    "pico_patas": "#F2792A",
+    "copete": "amarillo con punta naranja"
+  },
+  "nunca_cambia": "Pajarito AMARILLO (cuerpo #FFD84D, pecho #FFF1A8), pico y patas naranja #F2792A, copete amarillo con punta naranja, redondo como una pelotita, del tamaño de un puño; siempre en el hombro izquierdo de Eco. Nunca naranja de cuerpo. No habla.",
+  "voz_adn": {
+    "schema": "voz_adn/v1_universal",
+    "motor": null,
+    "fuente": "Biblia GDC_00_1 + guion T01E01 del cliente (acotaciones de tono); escrito una vez por el ingeniero el 2-nov-2026; sin IA, US$0",
+    "rasgos": {
+      "timbre": "pío de pajarito, muy agudo",
+      "tono": "muy agudo, cambia la entonación según la emoción",
+      "ritmo": "golpes cortos («¡pío!»)",
+      "acento": "no aplica (no habla)",
+      "idioma": "sin palabras (solo «¡pío!»)",
+      "edad_aparente": "pajarito pequeño",
+      "energia": "variable",
+      "textura": "chirrido limpio",
+      "diccion": "no habla: solo «¡pío!» con distintas entonaciones"
+    },
+    "descriptor_universal_en": "Tiny bird chirp, very high pitch, short \"pío!\" bursts with changing intonation to show emotion, clean chirpy texture, no words.",
+    "notas": "se expresa con gestos (se tapa los ojos, aplaude con las alas, se esponja)",
+    "regla": "perfil universal (no atado a Veo ni a ningún motor); el motor de voz se elige después"
+  },
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "personaje",
+  "sellado": true,
+  "version": 2,
+  "altura_fuente_nota": "alturas en la biblioteca personajes.json (altura_m, inventadas por orden de Ricardo 2-nov-2026, no medidas en Blender)",
+  "adn_estado": "sin ADN Ako: Fase 1 hoja + Fase 2 ADN cotizados, PAGO CERRADO",
+  "creado": "2026-11-02T16:50:00-05:00",
+  "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+  "regla": "SELLO FIJO del canal: se escribe una vez; cambia solo con versión nueva (versiones/) y sello por cubo_fijo sellar",
+  "frase_sello": "1. Ficha Antropométrica:\n* **Edad visual:** Polluelo / ave infantil.\n* **Estatura aparente:** 18 cm (escala mascota de hombro).\n* **Complexión física:** Rechoncha, compacta y redondeada, con silueta en forma de pera.\n* **Proporción en cabezas:** 2 cabezas de alto (la cabeza representa el 50% de la altura total).\n* **Estilo de línea/sombreado:** 3D CGI estilizado sin línea de contorno. Sombreado suave con dispersión subsuperficial cálida, volúmenes plásticos limpios y textura mate sedosa.\n\n2. Fisonomía Facial y Cabello:\n* **Forma del rostro:** Esférica, fusionada directamente con el torso sin cuello divisorio, con mejillas abultadas y rubor anaranjado difuso.\n* **Cabello (Cresta):** Penacho central rígido compuesto por 3 plumas curvas de puntas redondeadas en color naranja rojizo (#FF6B2B).\n* **Geometría de ojos:** Grandes y circulares; esclerótica blanca, iris marrón cálido, pupila negra concéntrica y un único brillo especular blanco arriba a la izquierda.\n* **Grosor de cejas:** Medias, flotantes sobre el plumaje, de color marrón oscuro y bordes redondeados.\n* **Accesorios faciales fijos:** Sin accesorios. Pico corto, cónico y pequeño en el centro del rostro, color naranja medio.\n\n3. Paleta de Expresiones:\n* **Normal:** Cejas en arco suave simétrico, ojos abiertos al 100% mirando al frente, pico cerrado dibujando una sonrisa curva sutil.\n* **Feliz:** Cejas altas arqueadas, ojos cerrados formando dos arcos invertidos oscuros, pico abierto mostrando el interior bucal y lengua rosada.\n* **Nervioso:** Cejas oblicuas elevadas en el centro, ojos muy abiertos con el iris contraído, pico entreabierto con comisuras bajas, acompañado de 4 gotas de sudor celestes flotando a los lados de la cabeza.\n* **Enojado:** Cejas fruncidas en ángulo \"V\" pronunciado hacia el entrecejo, párpados superiores rectos cubriendo un tercio del ojo, pico completamente abierto en forma trapezoidal mostrando lengua e interior oscuro.\n* **Triste:** Cejas caídas hacia los extremos exteriores, párpados superiores bajos a media asta con mirada descendente, pico cerrado con comisura arqueada hacia abajo.\n\n4. Vestuario por Capas:\n* **Prenda exterior (Plumaje corporal):** Cuerpo desnudo cubierto de plumaje liso amarillo brillante (#FFD84D) de aspecto suave y continuo.\n* **Prenda interior (Pecho):** Detalle escultórico de 4 puntas de plumas superpuestas en relieve sobre la parte superior del pecho, del mismo tono amarillo (#FFD84D).\n* **Prenda inferior (Alas y Cola):** Alas cortas integradas a los costados, amarillas en la base con 3 plumas primarias en color naranja rojizo (#FF6B2B) en los extremos. Cola corta trasera formada por 3 plumas naranjas rojizas.\n* **Calzado (Patas):** Patas aviares cortas y delgadas de textura lisa color naranja amarronado, con 3 dedos frontales redondeados y 1 espolón trasero corto sin uñas diferenciadas.\n\n5. Reglas de Giro:\n* **De frente:** Visibles las 4 ondas de plumas en el pecho; las alas se ven pegadas al cuerpo mostrando solo el borde de las puntas naranjas; la cola queda completamente oculta tras el cuerpo.\n* **De perfil:** Silueta en \"S\" compacta con pecho prominente; la cresta revela sus 3 plumas escalonadas apuntando hacia atrás; el ala muestra claramente su división bicolor (hombro amarillo, 3 plumas inferiores naranjas); la cola sobresale en ángulo de 45 grados.\n* **De espaldas:** Cabeza y espalda completamente lisas en amarillo (#FFD84D) sin costuras ni plumas detalladas; la cola se despliega como un abanico simétrico de 3 pétalos naranjas en la base de la espalda, flanqueada por las puntas naranjas de ambas alas.",
+  "actualizado": "2026-11-02T23:24:49+01:00",
+  "origen": "sellar"
+}

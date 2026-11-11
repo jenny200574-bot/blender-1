@@ -1,0 +1,2560 @@
+{
+ "version": 1,
+ "nombre": "recetas aprendidas (capa sobre Star; genérica, sin canal)",
+ "generado_por": "construir_catalogo.py",
+ "fecha": "2026-11-09",
+ "capa": "recetas_aprendidas",
+ "base_star": {
+  "ruta_original_no_tocada": "/workspace/pr17/comb/herramientas/escenario_detallado/biblioteca_formas/",
+  "sha256_biblioteca_formas_json": "1b98e28f0abe0618af81fe7b981ede9e9cde3bc0d2144bb8a31a05547dc6351c",
+  "sha256_formas_biblioteca_py": "ec0ea54b0fee76877427fa2293a6655ec8b87a1cb718db9a97df7a71e3ebb1ab"
+ },
+ "n_fichas": 20,
+ "costo_total_usd_origen": 1.2401,
+ "alias_n8n": {
+  "amb-esc-habitacion-peluche-oso": "peluche_oso",
+  "amb-esc-habitacion-pelota-colores": "pelota_colores",
+  "amb-esc-habitacion-bloques-geometricos": "bloques_geometricos",
+  "amb-esc-habitacion-cesta-tela": "cesta_tela",
+  "amb-esc-habitacion-avion-madera": "avion_madera",
+  "amb-esc-habitacion-cortinas-ventana": "cortinas_ventana",
+  "amb-esc-habitacion-barra-cortinero": "barra_cortinero",
+  "amb-esc-habitacion-guirnalda-banderines": "guirnalda_banderines",
+  "amb-esc-habitacion-repisa-pared-izquierda": "repisa_pared",
+  "amb-esc-habitacion-perchero-pared": "perchero_pared",
+  "amb-esc-habitacion-interruptor-luz": "interruptor_luz",
+  "amb-esc-habitacion-lamparita-noche": "lamparita_noche",
+  "obj-lapiz": "lapiz",
+  "amb-esc-habitacion-bote-crayones": "bote_crayones",
+  "obj-pincel-magico": "pincel_magico",
+  "obj-papel-numeros": "papel_numeros",
+  "obj-candados-cofre": "candados",
+  "obj-vocales": "vocales",
+  "obj-numeros-1-al-5": "numeros",
+  "obj-visor-spark": "visor"
+ },
+ "indice": {
+  "peluche_oso": "amb-esc-habitacion-peluche-oso",
+  "amb-esc-habitacion-peluche-oso": "peluche_oso",
+  "pelota_colores": "amb-esc-habitacion-pelota-colores",
+  "amb-esc-habitacion-pelota-colores": "pelota_colores",
+  "bloques_geometricos": "amb-esc-habitacion-bloques-geometricos",
+  "amb-esc-habitacion-bloques-geometricos": "bloques_geometricos",
+  "cesta_tela": "amb-esc-habitacion-cesta-tela",
+  "amb-esc-habitacion-cesta-tela": "cesta_tela",
+  "avion_madera": "amb-esc-habitacion-avion-madera",
+  "amb-esc-habitacion-avion-madera": "avion_madera",
+  "cortinas_ventana": "amb-esc-habitacion-cortinas-ventana",
+  "amb-esc-habitacion-cortinas-ventana": "cortinas_ventana",
+  "barra_cortinero": "amb-esc-habitacion-barra-cortinero",
+  "amb-esc-habitacion-barra-cortinero": "barra_cortinero",
+  "guirnalda_banderines": "amb-esc-habitacion-guirnalda-banderines",
+  "amb-esc-habitacion-guirnalda-banderines": "guirnalda_banderines",
+  "repisa_pared": "amb-esc-habitacion-repisa-pared-izquierda",
+  "amb-esc-habitacion-repisa-pared-izquierda": "repisa_pared",
+  "perchero_pared": "amb-esc-habitacion-perchero-pared",
+  "amb-esc-habitacion-perchero-pared": "perchero_pared",
+  "interruptor_luz": "amb-esc-habitacion-interruptor-luz",
+  "amb-esc-habitacion-interruptor-luz": "interruptor_luz",
+  "lamparita_noche": "amb-esc-habitacion-lamparita-noche",
+  "amb-esc-habitacion-lamparita-noche": "lamparita_noche",
+  "lapiz": "obj-lapiz",
+  "obj-lapiz": "lapiz",
+  "bote_crayones": "amb-esc-habitacion-bote-crayones",
+  "amb-esc-habitacion-bote-crayones": "bote_crayones",
+  "pincel_magico": "obj-pincel-magico",
+  "obj-pincel-magico": "pincel_magico",
+  "papel_numeros": "obj-papel-numeros",
+  "obj-papel-numeros": "papel_numeros",
+  "candados": "obj-candados-cofre",
+  "obj-candados-cofre": "candados",
+  "vocales": "obj-vocales",
+  "obj-vocales": "vocales",
+  "numeros": "obj-numeros-1-al-5",
+  "obj-numeros-1-al-5": "numeros",
+  "visor": "obj-visor-spark",
+  "obj-visor-spark": "visor"
+ },
+ "fichas": [
+  {
+   "id": "avion_madera",
+   "nombre_generico": "Avioncito de juguete de madera con hélice redondeada",
+   "nombre_en": "wooden toy plane",
+   "categoria": "juguetes",
+   "medidas_tipicas": {
+    "ancho_m": 0.22,
+    "fondo_m": 0.18,
+    "alto_m": 0.12
+   },
+   "medidas_fuente": "receta Argon vía B G1_juguetes_textiles (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.22,
+    0.18,
+    0.12
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "sobre_otro",
+   "conjunto": false,
+   "piezas": 15,
+   "tipos_de_pieza": [
+    "caja",
+    "esfera"
+   ],
+   "caja_m": {
+    "ancho": 0.22,
+    "fondo": 0.18,
+    "alto": 0.12
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.12
+    ],
+    "frente": [
+     0.0,
+     -0.09,
+     0.06
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G1_juguetes_textiles",
+    "objeto_id_origen": "amb-esc-habitacion-avion-madera",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "7fb5865b26c0ee1db57ccefbd182cf644d9631c740c89e15f656dab0fbbe39ef",
+    "costo_usd_grupo": 0.3208,
+    "costo_usd_repartido": 0.06416,
+    "citas": [
+     {
+      "fuente_id": "F05",
+      "clave": "morfologia.juguete_madera",
+      "cita": "A wooden toy is a toy constructed primarily from wood and wood products. Additional components made from other materials are also sometimes used."
+     },
+     {
+      "fuente_id": "F06",
+      "clave": "morfologia.helice_radial",
+      "cita": "A typical propeller engine comprises the motor driving a rotating shaft (driveshaft), to which several radial airfoil-section blades are attached, so that the whole blade assembly (i.e. the propeller) rotates around an axis of rotation longitudinal to the direction of travel."
+     },
+     {
+      "fuente_id": "F06",
+      "clave": "morfologia.material_palas",
+      "cita": "The propeller blades, which can be made from wood, metal or composite materials, attaches to the driveshaft either directly or through reduction gearing"
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "El corpus no proporciona planos dimensionales de un avioncito de madera de 22 cm; las proporciones de fuselaje, tren y cola se deducen de caja_m."
+    ],
+    "info": {
+     "partes": 15,
+     "piezas": 15,
+     "bbox_m": [
+      0.22,
+      0.18,
+      0.12
+     ],
+     "grupos": 1,
+     "datos": 10,
+     "con_fuente": 3
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-avion-madera"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/avion_madera.json",
+   "n_partes": 15
+  },
+  {
+   "id": "barra_cortinero",
+   "nombre_generico": "Barra de cortinero de madera con remates esféricos",
+   "nombre_en": "curtain rod",
+   "categoria": "fijaciones",
+   "medidas_tipicas": {
+    "ancho_m": 2.0,
+    "fondo_m": 0.08,
+    "alto_m": 0.08
+   },
+   "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    2.0,
+    0.08,
+    0.08
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": "cuelga / pared",
+   "base_m": null,
+   "apoyo": "pared",
+   "conjunto": false,
+   "piezas": 9,
+   "tipos_de_pieza": [
+    "caja",
+    "cilindro",
+    "esfera"
+   ],
+   "caja_m": {
+    "ancho": 2.0,
+    "fondo": 0.08,
+    "alto": 0.08
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.08
+    ],
+    "frente": [
+     0.0,
+     -0.04,
+     0.04
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G2_pared_ventana_luz",
+    "objeto_id_origen": "amb-esc-habitacion-barra-cortinero",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+    "costo_usd_grupo": 0.4131,
+    "costo_usd_repartido": 0.059014,
+    "citas": [
+     {
+      "fuente_id": "F02",
+      "clave": "tipologia.barra_cortinero",
+      "cita": "while curtain rods in other areas of the home are often affixed with decorative brackets or finial."
+     },
+     {
+      "fuente_id": "F02",
+      "clave": "tipologia.material_madera",
+      "cita": "Curtain rods can be made of many materials including wood, metal and plastic."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "El corpus F02 no especifica diámetros numéricos de barra ni de remates esféricos; se deducen de las dimensiones de caja_m."
+    ],
+    "info": {
+     "partes": 9,
+     "piezas": 9,
+     "bbox_m": [
+      2.0,
+      0.08,
+      0.08
+     ],
+     "grupos": 1,
+     "datos": 9,
+     "con_fuente": 2
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-barra-cortinero"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/barra_cortinero.json",
+   "n_partes": 9
+  },
+  {
+   "id": "bloques_geometricos",
+   "nombre_generico": "Pirámide de bloques geométricos de madera sin letras",
+   "nombre_en": "building blocks",
+   "categoria": "juguetes",
+   "medidas_tipicas": {
+    "ancho_m": 0.25,
+    "fondo_m": 0.18,
+    "alto_m": 0.16
+   },
+   "medidas_fuente": "receta Argon vía B G1_juguetes_textiles (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.25,
+    0.18,
+    0.16
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "sobre_otro",
+   "conjunto": false,
+   "piezas": 10,
+   "tipos_de_pieza": [
+    "caja",
+    "cilindro",
+    "esfera"
+   ],
+   "caja_m": {
+    "ancho": 0.25,
+    "fondo": 0.18,
+    "alto": 0.16
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.16
+    ],
+    "frente": [
+     0.0,
+     -0.09,
+     0.08
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G1_juguetes_textiles",
+    "objeto_id_origen": "amb-esc-habitacion-bloques-geometricos",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "7fb5865b26c0ee1db57ccefbd182cf644d9631c740c89e15f656dab0fbbe39ef",
+    "costo_usd_grupo": 0.3208,
+    "costo_usd_repartido": 0.06416,
+    "citas": [
+     {
+      "fuente_id": "F03",
+      "clave": "morfologia.formas_geometricas",
+      "cita": "Toy blocks, also called building bricks, building blocks, or simply blocks, are wooden, plastic, or foam pieces of various shapes (cube, cylinder, arch etc.) and colors that are used as construction toys."
+     },
+     {
+      "fuente_id": "F03",
+      "clave": "morfologia.bloques_estandar",
+      "cita": "Unit block is a popular standardized wooden toy block."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "El corpus no fija las dimensiones individuales de cada bloque en una pirámide de 25x18x16 cm; se deducen de caja_m."
+    ],
+    "info": {
+     "partes": 10,
+     "piezas": 10,
+     "bbox_m": [
+      0.25,
+      0.18,
+      0.16
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 2
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-bloques-geometricos"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/bloques_geometricos.json",
+   "n_partes": 10
+  },
+  {
+   "id": "bote_crayones",
+   "nombre_generico": "Cubilete bajo con crayones gruesos de cera",
+   "nombre_en": "crayon cup",
+   "categoria": "utiles",
+   "medidas_tipicas": {
+    "ancho_m": 0.12,
+    "fondo_m": 0.12,
+    "alto_m": 0.11
+   },
+   "medidas_fuente": "receta Argon vía B G3_utiles_dibujo (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.12,
+    0.12,
+    0.11
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "sobre_otro",
+   "conjunto": false,
+   "piezas": 11,
+   "tipos_de_pieza": [
+    "cilindro",
+    "cono",
+    "tubo"
+   ],
+   "caja_m": {
+    "ancho": 0.12,
+    "fondo": 0.12,
+    "alto": 0.11
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.11
+    ],
+    "frente": [
+     0.0,
+     -0.06,
+     0.055
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G3_utiles_dibujo",
+    "objeto_id_origen": "amb-esc-habitacion-bote-crayones",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "b9f6c66b911e58656e00b37eeff7d12a3b4d5bc1c7512a43a0c0a1e446a9a47d",
+    "costo_usd_grupo": 0.1985,
+    "costo_usd_repartido": 0.049625,
+    "citas": [
+     {
+      "fuente_id": "F02",
+      "clave": "crayon.forma_cilindrica",
+      "cita": "formed the wax crayons into more manageable cylinder shapes similar to that of a pencil."
+     },
+     {
+      "fuente_id": "F02",
+      "clave": "crayon.largo_estandar_m",
+      "cita": "Such crayons are usually approximately 3.5 inches (89 mm) in length and made mostly of paraffin wax."
+     },
+     {
+      "fuente_id": "F02",
+      "clave": "crayon.punta_roma",
+      "cita": "They are less messy than most paints and markers, blunt (removing the risk of sharp points present when using a pencil or pen)"
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_rojo_cuerpo: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_rojo_punta: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_azul_cuerpo: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_azul_punta: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_verde_cuerpo: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_verde_punta: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_amarillo_cuerpo: color fuera de la paleta de la ficha",
+     "A_COLOR amb-esc-habitacion-bote-crayones.crayon_amarillo_punta: color fuera de la paleta de la ficha"
+    ],
+    "vacios": [
+     "La ficha no da codigos hexadecimales exactos para los cuatro colores nombrados en color_4a1 (rojo, azul, verde y amarillo); se emplean sus tonos primarios equivalentes."
+    ],
+    "info": {
+     "partes": 11,
+     "piezas": 41,
+     "bbox_m": [
+      0.12,
+      0.12,
+      0.11
+     ],
+     "grupos": 1,
+     "datos": 11,
+     "con_fuente": 3
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-bote-crayones"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/bote_crayones.json",
+   "n_partes": 11
+  },
+  {
+   "id": "candados",
+   "nombre_generico": "Tres candados brillantes",
+   "nombre_en": "padlocks",
+   "categoria": "objetos_magicos",
+   "medidas_tipicas": {
+    "ancho_m": 0.36,
+    "fondo_m": 0.04,
+    "alto_m": 0.14
+   },
+   "medidas_fuente": "receta Argon vía B G4_objetos_magicos (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.36,
+    0.04,
+    0.14
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "montado_frente",
+   "conjunto": true,
+   "piezas": 22,
+   "tipos_de_pieza": [
+    "caja",
+    "cono",
+    "esfera",
+    "tramo"
+   ],
+   "caja_m": {
+    "ancho": 0.36,
+    "fondo": 0.04,
+    "alto": 0.14
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.14
+    ],
+    "frente": [
+     0.0,
+     -0.02,
+     0.07
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G4_objetos_magicos",
+    "objeto_id_origen": "obj-candados-cofre",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "1ecee35a671618c7e5760031927df07cb8f1c35a38ee40b4a62afc2f16c7313e",
+    "costo_usd_grupo": 0.3077,
+    "costo_usd_repartido": 0.076925,
+    "citas": [
+     {
+      "fuente_id": "F01",
+      "clave": "anatomia.candado_arco",
+      "cita": "Padlocks are portable locks with a shackle that may be passed through an opening"
+     },
+     {
+      "fuente_id": "F01",
+      "clave": "anatomia.bloque_metal",
+      "cita": "Some of the earliest padlocks (c. 1905) that were made from a machined block of cast or extruded metal resemble today's modern padlock."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR obj-candados-cofre.arco_izq_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_der_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_sup_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.halo_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.gota_base_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.gota_punta_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_izq_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_der_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_sup_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.halo_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.esfera_azul_1: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.esfera_azul_2: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.esfera_azul_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_izq_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_der_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.arco_sup_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.halo_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.pico_izq_3: color fuera de la paleta de la ficha",
+     "A_COLOR obj-candados-cofre.pico_der_3: color fuera de la paleta de la ficha"
+    ],
+    "vacios": [
+     "Proporcion exacta de separacion horizontal entre los tres candados no especificada en el corpus; deducida uniformemente dentro de ancho=0.36 m."
+    ],
+    "info": {
+     "partes": 22,
+     "piezas": 22,
+     "bbox_m": [
+      0.36,
+      0.04,
+      0.14
+     ],
+     "grupos": 3,
+     "datos": 11,
+     "con_fuente": 2
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "obj-candados-cofre"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/candados.json",
+   "n_partes": 22
+  },
+  {
+   "id": "cesta_tela",
+   "nombre_generico": "Cesta cilíndrica de tela tejida con asas de cuerda",
+   "nombre_en": "fabric basket",
+   "categoria": "contenedores",
+   "medidas_tipicas": {
+    "ancho_m": 0.36,
+    "fondo_m": 0.36,
+    "alto_m": 0.4
+   },
+   "medidas_fuente": "receta Argon vía B G1_juguetes_textiles (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.36,
+    0.36,
+    0.4
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": 0.0,
+   "apoyo": "piso",
+   "conjunto": false,
+   "piezas": 10,
+   "tipos_de_pieza": [
+    "caja",
+    "cilindro",
+    "tubo"
+   ],
+   "caja_m": {
+    "ancho": 0.36,
+    "fondo": 0.36,
+    "alto": 0.4
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.4
+    ],
+    "frente": [
+     0.0,
+     -0.18,
+     0.2
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G1_juguetes_textiles",
+    "objeto_id_origen": "amb-esc-habitacion-cesta-tela",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "7fb5865b26c0ee1db57ccefbd182cf644d9631c740c89e15f656dab0fbbe39ef",
+    "costo_usd_grupo": 0.3208,
+    "costo_usd_repartido": 0.06416,
+    "citas": [
+     {
+      "fuente_id": "F04",
+      "clave": "morfologia.contenedor_tejido",
+      "cita": "A basket is a container that is traditionally constructed from stiff fibers, and can be made from a range of materials, including wood splints, runners, and cane."
+     },
+     {
+      "fuente_id": "F04",
+      "clave": "morfologia.abierta_arriba",
+      "cita": "Some baskets are fitted with a lid, while others are left open on top."
+     },
+     {
+      "fuente_id": "F04",
+      "clave": "morfologia.uso_almacenaje",
+      "cita": "Baskets were originally designed as multi-purpose vessels to carry and store materials and to keep stray items about the home."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "El corpus no especifica el grosor de pared ni la altura exacta de las asas de cuerda; se deducen de caja_m y nombre."
+    ],
+    "info": {
+     "partes": 10,
+     "piezas": 79,
+     "bbox_m": [
+      0.36,
+      0.36,
+      0.4
+     ],
+     "grupos": 1,
+     "datos": 9,
+     "con_fuente": 3
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-cesta-tela"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/cesta_tela.json",
+   "n_partes": 10
+  },
+  {
+   "id": "cortinas_ventana",
+   "nombre_generico": "Par de cortinas de tela suave recogidas a los lados de la ventana",
+   "nombre_en": "curtains",
+   "categoria": "textiles",
+   "medidas_tipicas": {
+    "ancho_m": 1.9,
+    "fondo_m": 0.12,
+    "alto_m": 1.65
+   },
+   "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    1.9,
+    0.12,
+    1.65
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": "cuelga / pared",
+   "base_m": null,
+   "apoyo": "pared",
+   "conjunto": false,
+   "piezas": 13,
+   "tipos_de_pieza": [
+    "caja",
+    "cilindro",
+    "esfera"
+   ],
+   "caja_m": {
+    "ancho": 1.9,
+    "fondo": 0.12,
+    "alto": 1.65
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     1.65
+    ],
+    "frente": [
+     0.0,
+     -0.06,
+     0.825
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G2_pared_ventana_luz",
+    "objeto_id_origen": "amb-esc-habitacion-cortinas-ventana",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+    "costo_usd_grupo": 0.4131,
+    "costo_usd_repartido": 0.059014,
+    "citas": [
+     {
+      "fuente_id": "F01",
+      "clave": "tipologia.cortina_ventana",
+      "cita": "Curtains are often hung on the inside of a building's windows to block the passage of light."
+     },
+     {
+      "fuente_id": "F01",
+      "clave": "tipologia.lazos_recogidos",
+      "cita": "They are held out of the way of the window by means of curtain tie-backs."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "El corpus F01 no especifica proporciones numéricas de ancho de caída ni altura exacta del lazo sujetador; se deducen de caja_m."
+    ],
+    "info": {
+     "partes": 13,
+     "piezas": 13,
+     "bbox_m": [
+      1.9,
+      0.12,
+      1.65
+     ],
+     "grupos": 1,
+     "datos": 9,
+     "con_fuente": 2
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-cortinas-ventana"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/cortinas_ventana.json",
+   "n_partes": 13
+  },
+  {
+   "id": "guirnalda_banderines",
+   "nombre_generico": "Guirnalda festiva de banderines triangulares de tela",
+   "nombre_en": "bunting garland",
+   "categoria": "decoracion",
+   "medidas_tipicas": {
+    "ancho_m": 2.4,
+    "fondo_m": 0.05,
+    "alto_m": 0.18
+   },
+   "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    2.4,
+    0.05,
+    0.18
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": "cuelga / pared",
+   "base_m": null,
+   "apoyo": "pared",
+   "conjunto": false,
+   "piezas": 15,
+   "tipos_de_pieza": [
+    "caja",
+    "esfera",
+    "poliedro"
+   ],
+   "caja_m": {
+    "ancho": 2.4,
+    "fondo": 0.05,
+    "alto": 0.18
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.18
+    ],
+    "frente": [
+     0.0,
+     -0.025,
+     0.09
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G2_pared_ventana_luz",
+    "objeto_id_origen": "amb-esc-habitacion-guirnalda-banderines",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+    "costo_usd_grupo": 0.4131,
+    "costo_usd_repartido": 0.059014,
+    "citas": [
+     {
+      "fuente_id": "F03",
+      "clave": "tipologia.guirnalda_banderines",
+      "cita": "Typical forms of bunting are strings of colorful triangular flags"
+     },
+     {
+      "fuente_id": "F03",
+      "clave": "tipologia.material_tela",
+      "cita": "Bunting are festive or patriotic decorations made of fabric, or of plastic, paper or cardboard in imitation of fabric."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "La ficha no especifica un código hexadecimal propio para el hilo trenzado superior; se emplea el color principal #FFC928.",
+     "El corpus F03 no detalla la cantidad ni el paso en metros entre banderines; se deducen 12 banderines uniformemente espaciados en los 2.4 m de ancho."
+    ],
+    "info": {
+     "partes": 15,
+     "piezas": 15,
+     "bbox_m": [
+      2.4,
+      0.05,
+      0.18
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 2
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-guirnalda-banderines"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/guirnalda_banderines.json",
+   "n_partes": 15
+  },
+  {
+   "id": "interruptor_luz",
+   "nombre_generico": "Interruptor de luz de placa redondeada",
+   "nombre_en": "light switch",
+   "categoria": "instalaciones",
+   "medidas_tipicas": {
+    "ancho_m": 0.08,
+    "fondo_m": 0.03,
+    "alto_m": 0.12
+   },
+   "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.08,
+    0.03,
+    0.12
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": "cuelga / pared",
+   "base_m": null,
+   "apoyo": "pared",
+   "conjunto": false,
+   "piezas": 5,
+   "tipos_de_pieza": [
+    "caja",
+    "cilindro"
+   ],
+   "caja_m": {
+    "ancho": 0.08,
+    "fondo": 0.03,
+    "alto": 0.12
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.12
+    ],
+    "frente": [
+     0.0,
+     -0.015,
+     0.06
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G2_pared_ventana_luz",
+    "objeto_id_origen": "amb-esc-habitacion-interruptor-luz",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+    "costo_usd_grupo": 0.4131,
+    "costo_usd_repartido": 0.059014,
+    "citas": [
+     {
+      "fuente_id": "F06",
+      "clave": "tipologia.interruptor_pared",
+      "cita": "even the newest construction the familiar toggle and rocker switch formats predominate."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "El corpus F06 indica que las dimensiones de las placas varían según el país sin dar medidas en metros; se deducen de caja_m."
+    ],
+    "info": {
+     "partes": 5,
+     "piezas": 5,
+     "bbox_m": [
+      0.08,
+      0.03,
+      0.12
+     ],
+     "grupos": 1,
+     "datos": 7,
+     "con_fuente": 1
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-interruptor-luz"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/interruptor_luz.json",
+   "n_partes": 5
+  },
+  {
+   "id": "lamparita_noche",
+   "nombre_generico": "Luz quitamiedos con forma de nubecita sonriente",
+   "nombre_en": "night lamp",
+   "categoria": "iluminacion",
+   "medidas_tipicas": {
+    "ancho_m": 0.12,
+    "fondo_m": 0.16,
+    "alto_m": 0.14
+   },
+   "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.12,
+    0.16,
+    0.14
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "sobre_otro",
+   "conjunto": false,
+   "piezas": 10,
+   "tipos_de_pieza": [
+    "caja",
+    "esfera"
+   ],
+   "caja_m": {
+    "ancho": 0.12,
+    "fondo": 0.16,
+    "alto": 0.14
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.14
+    ],
+    "frente": [
+     0.0,
+     -0.08,
+     0.07
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G2_pared_ventana_luz",
+    "objeto_id_origen": "amb-esc-habitacion-lamparita-noche",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+    "costo_usd_grupo": 0.4131,
+    "costo_usd_repartido": 0.059014,
+    "citas": [
+     {
+      "fuente_id": "F07",
+      "clave": "tipologia.lamparita_decorativa",
+      "cita": "The low cost of nightlights has enabled a proliferation of different decorative designs"
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "La ficha no asigna un color separado para los rasgos faciales de la sonrisa; se emplea el color único #FFF8EE.",
+     "El corpus F07 no incluye dimensiones geométricas de una lámpara con forma de nube; se deducen de caja_m y nombre."
+    ],
+    "info": {
+     "partes": 10,
+     "piezas": 10,
+     "bbox_m": [
+      0.12,
+      0.16,
+      0.14
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 1
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-lamparita-noche"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/lamparita_noche.json",
+   "n_partes": 10
+  },
+  {
+   "id": "lapiz",
+   "nombre_generico": "obj-lapiz",
+   "nombre_en": "pencil",
+   "categoria": "utiles",
+   "medidas_tipicas": {
+    "ancho_m": 0.025,
+    "fondo_m": 0.18,
+    "alto_m": 0.025
+   },
+   "medidas_fuente": "receta Argon vía B G3_utiles_dibujo (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.025,
+    0.18,
+    0.025
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "sobre_otro",
+   "conjunto": false,
+   "piezas": 5,
+   "tipos_de_pieza": [
+    "cono",
+    "tramo"
+   ],
+   "caja_m": {
+    "ancho": 0.025,
+    "fondo": 0.18,
+    "alto": 0.025
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.025
+    ],
+    "frente": [
+     0.0,
+     -0.09,
+     0.0125
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G3_utiles_dibujo",
+    "objeto_id_origen": "obj-lapiz",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "b9f6c66b911e58656e00b37eeff7d12a3b4d5bc1c7512a43a0c0a1e446a9a47d",
+    "costo_usd_grupo": 0.1985,
+    "costo_usd_repartido": 0.049625,
+    "citas": [
+     {
+      "fuente_id": "F01",
+      "clave": "anatomia.nucleo_y_cubierta",
+      "cita": "A pencil ( ) is a writing or drawing implement with a solid pigment core in a protective casing"
+     },
+     {
+      "fuente_id": "F01",
+      "clave": "anatomia.seccion_cilindrica",
+      "cita": "The most common pencil casing is thin wood, usually hexagonal in section, but sometimes cylindrical or triangular, permanently bonded to the core."
+     },
+     {
+      "fuente_id": "F01",
+      "clave": "anatomia.punta_tallada",
+      "cita": "To use the pencil, the casing must be carved or peeled off to expose the working end of the core, which serves as a sharp point."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "La ficha solo especifica el color #FFC928 en colores_usados.*; se aplica como color guia a todas las partes por protocolo."
+    ],
+    "info": {
+     "partes": 5,
+     "piezas": 5,
+     "bbox_m": [
+      0.025,
+      0.18,
+      0.025
+     ],
+     "grupos": 1,
+     "datos": 10,
+     "con_fuente": 3
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "obj-lapiz"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/lapiz.json",
+   "n_partes": 5
+  },
+  {
+   "id": "numeros",
+   "nombre_generico": "Números del 1 al 5",
+   "nombre_en": "number blocks",
+   "categoria": "objetos_magicos",
+   "medidas_tipicas": {
+    "ancho_m": 0.14,
+    "fondo_m": 0.06,
+    "alto_m": 0.2
+   },
+   "medidas_fuente": "receta Argon vía B G4_objetos_magicos (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.14,
+    0.06,
+    0.2
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "en_mano",
+   "conjunto": true,
+   "piezas": 20,
+   "tipos_de_pieza": [
+    "caja"
+   ],
+   "caja_m": {
+    "ancho": 0.14,
+    "fondo": 0.06,
+    "alto": 0.2
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.2
+    ],
+    "frente": [
+     0.0,
+     -0.03,
+     0.1
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G4_objetos_magicos",
+    "objeto_id_origen": "obj-numeros-1-al-5",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "1ecee35a671618c7e5760031927df07cb8f1c35a38ee40b4a62afc2f16c7313e",
+    "costo_usd_grupo": 0.3077,
+    "costo_usd_repartido": 0.076925,
+    "citas": [
+     {
+      "fuente_id": "F04",
+      "clave": "digito.definicion",
+      "cita": "A numerical digit (often shortened to just digit) is a single symbol used to represent numbers in positional notation, such as 0, 1, ..., 9 in the common base 10."
+     },
+     {
+      "fuente_id": "F05",
+      "clave": "tipografia.diseno_numeros",
+      "cita": "A typeface is a design of letters, numbers and other symbols, to be used in printing or for electronic display."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "La ficha no incluye adn_texto ni colores individuales por digito; se aplica el color principal #B0B0B0 de colores_usados a todas las partes."
+    ],
+    "info": {
+     "partes": 20,
+     "piezas": 20,
+     "bbox_m": [
+      0.14,
+      0.06,
+      0.2
+     ],
+     "grupos": 5,
+     "datos": 10,
+     "con_fuente": 2
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "obj-numeros-1-al-5"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/numeros.json",
+   "n_partes": 20
+  },
+  {
+   "id": "papel_numeros",
+   "nombre_generico": "Papel con números del 6 al 10",
+   "nombre_en": "number paper",
+   "categoria": "utiles",
+   "medidas_tipicas": {
+    "ancho_m": 0.06,
+    "fondo_m": 0.002,
+    "alto_m": 0.045
+   },
+   "medidas_fuente": "receta Argon vía B G3_utiles_dibujo (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.06,
+    0.002,
+    0.045
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": 0.0,
+   "apoyo": "piso",
+   "conjunto": false,
+   "piezas": 8,
+   "tipos_de_pieza": [
+    "caja"
+   ],
+   "caja_m": {
+    "ancho": 0.06,
+    "fondo": 0.002,
+    "alto": 0.045
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.045
+    ],
+    "frente": [
+     0.0,
+     -0.001,
+     0.0225
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G3_utiles_dibujo",
+    "objeto_id_origen": "obj-papel-numeros",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "b9f6c66b911e58656e00b37eeff7d12a3b4d5bc1c7512a43a0c0a1e446a9a47d",
+    "costo_usd_grupo": 0.1985,
+    "costo_usd_repartido": 0.049625,
+    "citas": [
+     {
+      "fuente_id": "F04",
+      "clave": "material.cartulina",
+      "cita": "Card stock, also called cover stock and pasteboard, is paper that is thicker and more durable than normal writing and printing paper"
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR obj-papel-numeros.dibujo_canon_rayo: color fuera de la paleta de la ficha",
+     "A_COLOR obj-papel-numeros.dibujo_empunadura_rayo: color fuera de la paleta de la ficha",
+     "A_COLOR obj-papel-numeros.dibujo_punta_rayo: color fuera de la paleta de la ficha",
+     "A_COLOR obj-papel-numeros.dibujo_chispas_superiores: color fuera de la paleta de la ficha",
+     "A_COLOR obj-papel-numeros.dibujo_franja_numeros: color fuera de la paleta de la ficha"
+    ],
+    "vacios": [],
+    "info": {
+     "partes": 8,
+     "piezas": 8,
+     "bbox_m": [
+      0.06,
+      0.002,
+      0.045
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 1
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "obj-papel-numeros"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/papel_numeros.json",
+   "n_partes": 8
+  },
+  {
+   "id": "pelota_colores",
+   "nombre_generico": "Pelota blanda de gajos de colores",
+   "nombre_en": "color ball",
+   "categoria": "juguetes",
+   "medidas_tipicas": {
+    "ancho_m": 0.2,
+    "fondo_m": 0.2,
+    "alto_m": 0.2
+   },
+   "medidas_fuente": "receta Argon vía B G1_juguetes_textiles (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.2,
+    0.2,
+    0.2
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "sobre_otro",
+   "conjunto": false,
+   "piezas": 7,
+   "tipos_de_pieza": [
+    "esfera",
+    "placa"
+   ],
+   "caja_m": {
+    "ancho": 0.2,
+    "fondo": 0.2,
+    "alto": 0.2
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.2
+    ],
+    "frente": [
+     0.0,
+     -0.1,
+     0.1
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G1_juguetes_textiles",
+    "objeto_id_origen": "amb-esc-habitacion-pelota-colores",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "7fb5865b26c0ee1db57ccefbd182cf644d9631c740c89e15f656dab0fbbe39ef",
+    "costo_usd_grupo": 0.3208,
+    "costo_usd_repartido": 0.06416,
+    "citas": [
+     {
+      "fuente_id": "F02",
+      "clave": "morfologia.paneles_y_polos",
+      "cita": "They generally have a set of soft plastic panels, with two circular end panels, one with an oral inflation valve, intended to be inflated by lung power or pump."
+     },
+     {
+      "fuente_id": "F02",
+      "clave": "morfologia.franjas_verticales",
+      "cita": "A common design is vertical solid-colored stripes alternating with white stripes."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "El corpus no detalla el radio exacto de los paneles circulares polares para una pelota de tela de 20 cm; se deduce a escala de caja_m."
+    ],
+    "info": {
+     "partes": 7,
+     "piezas": 7,
+     "bbox_m": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 2
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-pelota-colores"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/pelota_colores.json",
+   "n_partes": 7
+  },
+  {
+   "id": "peluche_oso",
+   "nombre_generico": "Muñeco de peluche suave con forma de osito redondo sentado",
+   "nombre_en": "teddy bear plush",
+   "categoria": "juguetes",
+   "medidas_tipicas": {
+    "ancho_m": 0.24,
+    "fondo_m": 0.22,
+    "alto_m": 0.28
+   },
+   "medidas_fuente": "receta Argon vía B G1_juguetes_textiles (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.24,
+    0.22,
+    0.28
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "sobre_otro",
+   "conjunto": false,
+   "piezas": 18,
+   "tipos_de_pieza": [
+    "caja",
+    "esfera"
+   ],
+   "caja_m": {
+    "ancho": 0.24,
+    "fondo": 0.22,
+    "alto": 0.28
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.28
+    ],
+    "frente": [
+     0.0,
+     -0.11,
+     0.14
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G1_juguetes_textiles",
+    "objeto_id_origen": "amb-esc-habitacion-peluche-oso",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "7fb5865b26c0ee1db57ccefbd182cf644d9631c740c89e15f656dab0fbbe39ef",
+    "costo_usd_grupo": 0.3208,
+    "costo_usd_repartido": 0.06416,
+    "citas": [
+     {
+      "fuente_id": "F01",
+      "clave": "morfologia.tipo_peluche",
+      "cita": "A teddy bear, or simply a teddy, is a stuffed toy in the form of a bear."
+     },
+     {
+      "fuente_id": "F01",
+      "clave": "morfologia.extremidades_cabeza",
+      "cita": "These bears either have safety joints for attaching arms, legs, and heads, or else the joints are sewn and not articulated."
+     },
+     {
+      "fuente_id": "F01",
+      "clave": "morfologia.rasgos_faciales",
+      "cita": "Modern teddy bears are generally distinguished by larger eyes and foreheads and smaller noses, baby-like features intended to enhance the toy's cuteness."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "El corpus no especifica medidas métricas absolutas de cada extremidad del osito; se deducen proporcionalmente a partir de caja_m.",
+     "La ficha no especifica un color separado para ojos y nariz; se emplea el color principal #B87B4B de la ficha."
+    ],
+    "info": {
+     "partes": 18,
+     "piezas": 18,
+     "bbox_m": [
+      0.24,
+      0.22,
+      0.28
+     ],
+     "grupos": 1,
+     "datos": 10,
+     "con_fuente": 3
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-peluche-oso"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/peluche_oso.json",
+   "n_partes": 18
+  },
+  {
+   "id": "perchero_pared",
+   "nombre_generico": "Perchero infantil de madera con tres pomos redondos",
+   "nombre_en": "wall coat rack",
+   "categoria": "muebles",
+   "medidas_tipicas": {
+    "ancho_m": 0.42,
+    "fondo_m": 0.08,
+    "alto_m": 0.12
+   },
+   "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.42,
+    0.08,
+    0.12
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": "cuelga / pared",
+   "base_m": null,
+   "apoyo": "pared",
+   "conjunto": false,
+   "piezas": 9,
+   "tipos_de_pieza": [
+    "caja",
+    "cilindro",
+    "esfera"
+   ],
+   "caja_m": {
+    "ancho": 0.42,
+    "fondo": 0.08,
+    "alto": 0.12
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.12
+    ],
+    "frente": [
+     0.0,
+     -0.04,
+     0.06
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G2_pared_ventana_luz",
+    "objeto_id_origen": "amb-esc-habitacion-perchero-pared",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+    "costo_usd_grupo": 0.4131,
+    "costo_usd_repartido": 0.059014,
+    "citas": [
+     {
+      "fuente_id": "F05",
+      "clave": "tipologia.perchero_pared",
+      "cita": "A coat rack often refers to a set of hooks that are attached to a wall."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "La ficha menciona en color_4a1 pomos azul, amarillo y verde sin dar sus códigos hexadecimales en colores_usados; siguiendo la regla 5 se aplica el color principal #F2E2CE.",
+     "El corpus F05 trata principalmente percheros de pie (150 cm) y no detalla medidas de percheros murales infantiles; se deducen de caja_m."
+    ],
+    "info": {
+     "partes": 9,
+     "piezas": 9,
+     "bbox_m": [
+      0.42,
+      0.08,
+      0.12
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 1
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-perchero-pared"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/perchero_pared.json",
+   "n_partes": 9
+  },
+  {
+   "id": "pincel_magico",
+   "nombre_generico": "Pincel Mágico",
+   "nombre_en": "paintbrush",
+   "categoria": "utiles",
+   "medidas_tipicas": {
+    "ancho_m": 0.025,
+    "fondo_m": 0.025,
+    "alto_m": 0.18
+   },
+   "medidas_fuente": "receta Argon vía B G3_utiles_dibujo (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.025,
+    0.025,
+    0.18
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "en_mano",
+   "conjunto": false,
+   "piezas": 10,
+   "tipos_de_pieza": [
+    "cilindro",
+    "cono",
+    "esfera",
+    "toro"
+   ],
+   "caja_m": {
+    "ancho": 0.025,
+    "fondo": 0.025,
+    "alto": 0.18
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.18
+    ],
+    "frente": [
+     0.0,
+     -0.0125,
+     0.09
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G3_utiles_dibujo",
+    "objeto_id_origen": "obj-pincel-magico",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "b9f6c66b911e58656e00b37eeff7d12a3b4d5bc1c7512a43a0c0a1e446a9a47d",
+    "costo_usd_grupo": 0.1985,
+    "costo_usd_repartido": 0.049625,
+    "citas": [
+     {
+      "fuente_id": "F03",
+      "clave": "anatomia.tres_partes",
+      "cita": "A paintbrush consists of three main components: the bristles, the ferrule, and the handle."
+     },
+     {
+      "fuente_id": "F03",
+      "clave": "anatomia.virola_metalica",
+      "cita": "The ferrule is the metal band that holds the bristles in place and secures them to the handle."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR obj-pincel-magico.base_semiesferica_azul: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.tapon_azul_cilindro: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.ranura_union: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.anillo_virola_inferior: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.virola_dorada: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.anillo_virola_superior: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.punta_bulbo_base: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.punta_gota_cono: color fuera de la paleta de la ficha",
+     "A_COLOR obj-pincel-magico.punta_gota_remate: color fuera de la paleta de la ficha"
+    ],
+    "vacios": [],
+    "info": {
+     "partes": 10,
+     "piezas": 10,
+     "bbox_m": [
+      0.025,
+      0.025,
+      0.18
+     ],
+     "grupos": 1,
+     "datos": 9,
+     "con_fuente": 2
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "obj-pincel-magico"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/pincel_magico.json",
+   "n_partes": 10
+  },
+  {
+   "id": "repisa_pared",
+   "nombre_generico": "Repisa flotante de madera con soportes redondeados",
+   "nombre_en": "wall shelf",
+   "categoria": "muebles",
+   "medidas_tipicas": {
+    "ancho_m": 0.68,
+    "fondo_m": 0.2,
+    "alto_m": 0.06
+   },
+   "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.68,
+    0.2,
+    0.06
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": "cuelga / pared",
+   "base_m": null,
+   "apoyo": "pared",
+   "conjunto": false,
+   "piezas": 7,
+   "tipos_de_pieza": [
+    "caja",
+    "cilindro"
+   ],
+   "caja_m": {
+    "ancho": 0.68,
+    "fondo": 0.2,
+    "alto": 0.06
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.06
+    ],
+    "frente": [
+     0.0,
+     -0.1,
+     0.03
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G2_pared_ventana_luz",
+    "objeto_id_origen": "amb-esc-habitacion-repisa-pared-izquierda",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+    "costo_usd_grupo": 0.4131,
+    "costo_usd_repartido": 0.059014,
+    "citas": [
+     {
+      "fuente_id": "F04",
+      "clave": "tipologia.repisa_plana",
+      "cita": "It is raised off the floor and often anchored to a wall, supported on its shorter length sides by brackets"
+     },
+     {
+      "fuente_id": "F04",
+      "clave": "tipologia.material_madera",
+      "cita": "Shelves are normally made of strong materials such as wood, bamboo or steel"
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "El corpus F04 no especifica el espesor exacto en milímetros del tablero ni el radio de curvatura de los soportes; se deducen de caja_m."
+    ],
+    "info": {
+     "partes": 7,
+     "piezas": 7,
+     "bbox_m": [
+      0.68,
+      0.2,
+      0.06
+     ],
+     "grupos": 1,
+     "datos": 8,
+     "con_fuente": 2
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "amb-esc-habitacion-repisa-pared-izquierda"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/repisa_pared.json",
+   "n_partes": 7
+  },
+  {
+   "id": "visor",
+   "nombre_generico": "Visor de Spark",
+   "nombre_en": "visor",
+   "categoria": "objetos_magicos",
+   "medidas_tipicas": {
+    "ancho_m": 0.16,
+    "fondo_m": 0.12,
+    "alto_m": 0.06
+   },
+   "medidas_fuente": "receta Argon vía B G4_objetos_magicos (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.16,
+    0.12,
+    0.06
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": null,
+   "apoyo": "en_mano",
+   "conjunto": false,
+   "piezas": 20,
+   "tipos_de_pieza": [
+    "caja",
+    "esfera"
+   ],
+   "caja_m": {
+    "ancho": 0.16,
+    "fondo": 0.12,
+    "alto": 0.06
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.06
+    ],
+    "frente": [
+     0.0,
+     -0.06,
+     0.03
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G4_objetos_magicos",
+    "objeto_id_origen": "obj-visor-spark",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "1ecee35a671618c7e5760031927df07cb8f1c35a38ee40b4a62afc2f16c7313e",
+    "costo_usd_grupo": 0.3077,
+    "costo_usd_repartido": 0.076925,
+    "citas": [
+     {
+      "fuente_id": "F02",
+      "clave": "anatomia.gafas_envolventes",
+      "cita": "Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the area surrounding the eye"
+     },
+     {
+      "fuente_id": "F02",
+      "clave": "anatomia.puente_nasal",
+      "cita": "The goggles were curved to fit the user's face and had a large groove cut in the back to allow for the nose."
+     },
+     {
+      "fuente_id": "F02",
+      "clave": "anatomia.lente_policarbonato",
+      "cita": "They are typically fitted with polycarbonate lenses to ensure impact resistance."
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [
+     "A_COLOR obj-visor-spark.lente_continua: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.nodo_central: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.placa_ceja_izq: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.placa_ceja_der: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.led_lateral_izq: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.led_lateral_der: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.bisagra_izq: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.bisagra_der: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.franja_patilla_izq: color fuera de la paleta de la ficha",
+     "A_COLOR obj-visor-spark.franja_patilla_der: color fuera de la paleta de la ficha"
+    ],
+    "vacios": [
+     "Dimensiones milimetricas de los LEDs laterales y del nodo central no figuran en el corpus; deducidas proporcionalmente al alto de 0.06 m del visor."
+    ],
+    "info": {
+     "partes": 20,
+     "piezas": 20,
+     "bbox_m": [
+      0.16,
+      0.12,
+      0.06
+     ],
+     "grupos": 1,
+     "datos": 11,
+     "con_fuente": 3
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "obj-visor-spark"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/visor.json",
+   "n_partes": 20
+  },
+  {
+   "id": "vocales",
+   "nombre_generico": "Vocales (A",
+   "nombre_en": "vowel blocks",
+   "categoria": "objetos_magicos",
+   "medidas_tipicas": {
+    "ancho_m": 0.16,
+    "fondo_m": 0.06,
+    "alto_m": 0.22
+   },
+   "medidas_fuente": "receta Argon vía B G4_objetos_magicos (caja de n8n 4a1/4a2 del objeto origen)",
+   "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+   "parametros": {
+    "ancho_m": "cualquiera",
+    "fondo_m": "cualquiera",
+    "alto_m": "cualquiera",
+    "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+    "otros": [
+     "apoyo",
+     "conjunto"
+    ]
+   },
+   "bbox_generado_m": [
+    0.16,
+    0.06,
+    0.22
+   ],
+   "diferencia_vs_tipico_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ajusta_a_medidas": true,
+   "colgado": null,
+   "base_m": 0.0,
+   "apoyo": "piso",
+   "conjunto": true,
+   "piezas": 17,
+   "tipos_de_pieza": [
+    "caja",
+    "cilindro"
+   ],
+   "caja_m": {
+    "ancho": 0.16,
+    "fondo": 0.06,
+    "alto": 0.22
+   },
+   "anclajes_m": {
+    "base": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "encima": [
+     0.0,
+     0.0,
+     0.22
+    ],
+    "frente": [
+     0.0,
+     -0.03,
+     0.11
+    ]
+   },
+   "estados": {},
+   "color_guia": "solo para ver la forma; no es color de molde",
+   "color_molde": null,
+   "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+   "origen": {
+    "tipo": "argon",
+    "paso": "receta_objetos_faltantes_v1",
+    "grupo": "G4_objetos_magicos",
+    "objeto_id_origen": "obj-vocales",
+    "fecha": "2026-11-09",
+    "sha256_respuesta": "1ecee35a671618c7e5760031927df07cb8f1c35a38ee40b4a62afc2f16c7313e",
+    "costo_usd_grupo": 0.3077,
+    "costo_usd_repartido": 0.076925,
+    "citas": [
+     {
+      "fuente_id": "F03",
+      "clave": "tipografia.mayusculas_minusculas",
+      "cita": "Some writing systems have two major types of allographs for each letter: an uppercase form (also called capital or majuscule) and a lowercase form (also called minuscule)."
+     },
+     {
+      "fuente_id": "F03",
+      "clave": "tipografia.bloques_letras",
+      "cita": "Individual letter blocks were kept in specific compartments of drawers in a type case."
+     },
+     {
+      "fuente_id": "F05",
+      "clave": "tipografia.trazos",
+      "cita": "A stroke is a line or curve that is part of an LGC letter"
+     }
+    ],
+    "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+   },
+   "revisor": {
+    "apta": true,
+    "errores": [],
+    "avisos": [],
+    "vacios": [
+     "Grosor exacto de trazo de cada vocal no especificado en el corpus; deducido en 0.010-0.030 m para encajar las 5 letras en 0.16 m de ancho."
+    ],
+    "info": {
+     "partes": 17,
+     "piezas": 17,
+     "bbox_m": [
+      0.16,
+      0.06,
+      0.22
+     ],
+     "grupos": 5,
+     "datos": 11,
+     "con_fuente": 3
+    },
+    "fecha": "2026-11-09"
+   },
+   "alias_n8n": [
+    "obj-vocales"
+   ],
+   "equivale_a_biblioteca_objetos": null,
+   "capa": "recetas_aprendidas",
+   "archivo_partes": "recetas/vocales.json",
+   "n_partes": 17
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-papel-dulce",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Caramelo envuelto clásico de una sola pieza continua, con silueta compuesta por un núcleo esférico central y dos extremos laterales acampanados simétricos. Presenta base ligeramente aplanada y bordes gruesos redondeados en los extremos.\n- Prop de mano (sujeción con los dedos) o de reposo sobre superficies."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Envoltorio de papel grueso o polímero moldeado con acabado mate satinado suave. Color base gris pizarra frío con diseño a rayas en gris claro blanquecino.\n- Cara interna del envoltorio (visible en las cavidades de los extremos) del mismo material y color gris, oscurecida por oclusión ambiental.\n- Sin emisión lumínica."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Patrón de franjas horizontales paralelas que recorren el objeto de extremo a extremo, comprimiéndose en los dos cuellos de torsión. Pliegues profundos de tensión radial que nacen en las uniones retorcidas y se estiran sobre la esfera central. Extremos abiertos en pliegues de abanico con silueta interior hueca en forma de ocho."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Estado estático e inerte; interactúa únicamente mediante sombreado suave en las cavidades de los pliegues.\n- En plano general se simplifica a una silueta geométrica básica (círculo central con dos triángulos laterales en gris medio), fusionando las rayas y eliminando las arrugas menores."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Caramelo envuelto 3D de una sola pieza, con cuerpo central esférico, base ligeramente plana y dos extremos retorcidos acampanados en abanico con bordes gruesos ondulados. Textura de papel grueso mate satinado en color gris pizarra frío, decorado con franjas horizontales en gris claro que convergen y se deforman en los dos cuellos de torsión junto con pliegues profundos de tensión."
+    }
+  ],
+  "inyeccion": "Caramelo envuelto 3D de una sola pieza, con cuerpo central esférico, base ligeramente plana y dos extremos retorcidos acampanados en abanico con bordes gruesos ondulados. Textura de papel grueso mate satinado en color gris pizarra frío, decorado con franjas horizontales en gris claro que convergen y se deforman en los dos cuellos de torsión junto con pliegues profundos de tensión.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Caramelo envuelto clásico de una sola pieza continua, con silueta compuesta por un núcleo esférico central y dos extremos laterales acampanados simétricos. Presenta base ligeramente aplanada y bordes gruesos redondeados en los extremos.\n- Prop de mano (sujeción con los dedos) o de reposo sobre superficies.\n\n2. Materiales y Paleta de Color:\n\n- Envoltorio de papel grueso o polímero moldeado con acabado mate satinado suave. Color base gris pizarra frío con diseño a rayas en gris claro blanquecino.\n- Cara interna del envoltorio (visible en las cavidades de los extremos) del mismo material y color gris, oscurecida por oclusión ambiental.\n- Sin emisión lumínica.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Patrón de franjas horizontales paralelas que recorren el objeto de extremo a extremo, comprimiéndose en los dos cuellos de torsión. Pliegues profundos de tensión radial que nacen en las uniones retorcidas y se estiran sobre la esfera central. Extremos abiertos en pliegues de abanico con silueta interior hueca en forma de ocho.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Estado estático e inerte; interactúa únicamente mediante sombreado suave en las cavidades de los pliegues.\n- En plano general se simplifica a una silueta geométrica básica (círculo central con dos triángulos laterales en gris medio), fusionando las rayas y eliminando las arrugas menores.\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nCaramelo envuelto 3D de una sola pieza, con cuerpo central esférico, base ligeramente plana y dos extremos retorcidos acampanados en abanico con bordes gruesos ondulados. Textura de papel grueso mate satinado en color gris pizarra frío, decorado con franjas horizontales en gris claro que convergen y se deforman en los dos cuellos de torsión junto con pliegues profundos de tensión.",
+  "creado": "2026-11-06T04:03:13+01:00"
+}

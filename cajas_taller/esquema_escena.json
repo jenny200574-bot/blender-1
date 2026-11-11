@@ -1,0 +1,149 @@
+{
+  "titulo": "Esquema Nivel 2 — Escena (plantilla universal)",
+  "fecha": "2026-10-31",
+  "zona": "America/Bogota",
+  "nota": "Campos fijos por locación. Nada inventado: si 4a1 no lo da, fuente=FALTA y fallback aplica. Salida real 4a1 = escenario.json con fuente='4a1' (nodo 4a1 Investigar escenarios / investigar_escenarios).",
+  "salida_4a1_real": {
+    "archivo_ejemplo": [
+      "/workspace/STAR_MOTOR_UNIVERSAL_v6_20261031/lib/escenarios/esc-calle-ciudad/molde/v1/escenario.json",
+      "/workspace/STAR_MOTOR_4a2_REEMPLAZO_v3_20261031/entrada_real/esc-calle-ciudad/escenario.json"
+    ],
+    "clave_fuente": "fuente == '4a1'",
+    "campos_top_que_si_produce": [
+      "id",
+      "nombre",
+      "int_ext",
+      "horas",
+      "variantes",
+      "planta",
+      "medidas",
+      "aberturas",
+      "elementos",
+      "elementos_blender",
+      "objetos_del_lugar_posicion",
+      "objetos_tamano",
+      "materiales_texturas",
+      "luz_por_escena",
+      "ambiente_vivo",
+      "ambiente_ascensos",
+      "camaras_sugeridas",
+      "fuente"
+    ],
+    "campos_por_escena_numerica": {
+      "luz_por_escena[]": [
+        "escena",
+        "hora",
+        "clima",
+        "ambiente",
+        "fuentes[{tipo,color,intensidad,posicion,encendida}]",
+        "sombras",
+        "cita",
+        "origen"
+      ],
+      "ambiente_vivo.ambiente_por_escena[]": [
+        "escena",
+        "hora",
+        "clima",
+        "atmosfera",
+        "sonido_ambiente"
+      ]
+    },
+    "NO_produce": [
+      "ESTILO_FONDO_INGLES",
+      "ATMOSFERA_INGLES",
+      "PALETA_ESCENA_INGLES",
+      "ANCLA_ESCENA",
+      "PERSONAJES",
+      "DESC_ROPA",
+      "GLOSARIO_FORMAS (texto por forma de molde)",
+      "frase fija qué-copia de ancla"
+    ]
+  },
+  "campos": [
+    {
+      "nombre": "ID_ESCENA",
+      "significado": "Identificador de la locación/escena (número de guion + id de set).",
+      "tipo": "string|object",
+      "fuente": "4a1.id + número de escena pedido; opcional esc_N.json",
+      "ruta_4a1": "id (+ filtro luz_por_escena[].escena)",
+      "fallback": "FALTA — no empaquetar sin id"
+    },
+    {
+      "nombre": "TIPO_ENTORNO",
+      "significado": "Clase de entorno para filtrar estilo: urbano | parque | interior.",
+      "tipo": "enum",
+      "fuente": "4a1.int_ext (EXT→urbano salvo nombre parque; INT→interior) + nombre",
+      "ruta_4a1": "int_ext, nombre",
+      "fallback": "FALTA → tratar como interior (filtro estricto sin foliage)"
+    },
+    {
+      "nombre": "ESTILO_FONDO_INGLES",
+      "significado": "Frase EN del fondo dentro del bloque STRICT FIXED CHANNEL STYLE (sin moss/foliage/trees si urbano o interior).",
+      "tipo": "string_en",
+      "fuente": "script deriva de materiales_texturas + TIPO_ENTORNO (4a1 no lo da en inglés)",
+      "ruta_4a1": "materiales_texturas[] (material, superficie, textura, color) — solo insumos",
+      "fallback": "FALTA: 'hand-painted architectural surfaces' + filtro anti-moss"
+    },
+    {
+      "nombre": "ATMOSFERA_INGLES",
+      "significado": "Ánimo atmosférico EN del bloque de estilo.",
+      "tipo": "string_en",
+      "fuente": "FALTA en 4a1 EN. Insumo ES: ambiente_vivo.ambiente_por_escena[].atmosfera. Opcional glosario ESTILO.",
+      "ruta_4a1": "ambiente_vivo.ambiente_por_escena[].atmosfera (ES, no EN)",
+      "fallback": "FALTA — no inventar; dejar vacío marcado FALTA"
+    },
+    {
+      "nombre": "PALETA_ESCENA_INGLES",
+      "significado": "Paleta EN corta del bloque de estilo (no lista hex de objetos).",
+      "tipo": "string_en",
+      "fuente": "FALTA en 4a1. Insumo: colores de luz_por_escena / materiales (palabras). Glosario ESTILO si existe.",
+      "ruta_4a1": "ninguna directa",
+      "fallback": "FALTA"
+    },
+    {
+      "nombre": "CLIMA_Y_LUZ_ESCENA",
+      "significado": "Hora, clima, luz principal y reflejos. Si el molde no trae lámparas/ventanas, luz 'desde fuera de cuadro'. Hex de luz solo si ya vienen en 4a1, marcados.",
+      "tipo": "string",
+      "fuente": "4a1.luz_por_escena[escena] + ambiente_por_escena[escena]",
+      "ruta_4a1": "luz_por_escena[], ambiente_vivo.ambiente_por_escena[]",
+      "fallback": "FALTA clima/luz para esa escena numérica"
+    },
+    {
+      "nombre": "MATERIALES_ESCENA",
+      "significado": "Exactamente 2 líneas: (1) muros/fondo (2) suelo. Palabras; hex de objeto solo si fuente 4a1 ya lo trae (flag).",
+      "tipo": "string[2]",
+      "fuente": "4a1.materiales_texturas (superficie muro/pared/fachada + piso/calzada/acera)",
+      "ruta_4a1": "materiales_texturas[]",
+      "fallback": "FALTA línea muro / FALTA línea suelo"
+    },
+    {
+      "nombre": "GLOSARIO_FORMAS",
+      "significado": "Mapa id_forma → descripción fija de cada bloque del molde.",
+      "tipo": "object|markdown_path",
+      "fuente": "glosario GLOSARIO_ESCENARIO*.md / ESCENARIO_*_QUE_ES_CADA_FORMA.md — NO lo produce 4a1 como glosario de molde",
+      "ruta_4a1": "elementos / elementos_blender dan nombres gruesos, no el glosario por forma de molde",
+      "fallback": "FALTA glosario — archivo ausente"
+    },
+    {
+      "nombre": "ANCLA_ESCENA",
+      "significado": "Path de la pintura ancla de escena aprobada, o SIN_ANCLA. Más frase fija de qué copiar.",
+      "tipo": "object{path, frase_que_copia}",
+      "fuente": "aprobación humana (experimento: imagenes/145_…); 4a1/4a5 NO son ancla con personajes",
+      "ruta_4a1": "ninguna",
+      "fallback": "SIN_ANCLA",
+      "frase_fija_que_copia": "De la ancla de escena copia solo el acabado de pintura de los materiales del entorno, la iluminación y el clima de esta escena. El tamaño de los personajes, la forma del set y el ángulo de la cámara salen únicamente del molde (Imagen 1). No copies poses ni encuadre de esta ancla. El vestuario manda por las hojas + la descripción en palabras."
+    },
+    {
+      "nombre": "PERSONAJES",
+      "significado": "Lista de personajes de la escena: nombre, version, sheet_path, DESC_ROPA (palabras).",
+      "tipo": "array[{nombre, version, sheet_path, DESC_ROPA, sidecar_path}]",
+      "fuente": "sidecars hoja_ia (refs_n8n/*.json) + plan escena personajes; 4a1 no lista elenco",
+      "ruta_4a1": "ninguna",
+      "fallback": "FALTA personajes / FALTA DESC_ROPA si no hay sidecar"
+    }
+  ],
+  "filtro_estilo": {
+    "regla": "Si TIPO_ENTORNO es urbano o interior: prohibido foliage, moss, trees, lush vegetation en ESTILO_FONDO_INGLES / ATMOSFERA / PALETA derivadas.",
+    "origen": "PLANTILLA_UNIVERSAL_CORREGIDA + MAPA item filtro urbano"
+  }
+}

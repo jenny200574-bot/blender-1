@@ -1,0 +1,249 @@
+{
+ "id": "repisa_pared",
+ "nombre_generico": "Repisa flotante de madera con soportes redondeados",
+ "nombre_en": "wall shelf",
+ "categoria": "muebles",
+ "medidas_tipicas": {
+  "ancho_m": 0.68,
+  "fondo_m": 0.2,
+  "alto_m": 0.06
+ },
+ "medidas_fuente": "receta Argon vía B G2_pared_ventana_luz (caja de n8n 4a1/4a2 del objeto origen)",
+ "orientacion": "origen en el centro de la base; x = ancho, y = fondo, z = alto; frente hacia -y",
+ "parametros": {
+  "ancho_m": "cualquiera",
+  "fondo_m": "cualquiera",
+  "alto_m": "cualquiera",
+  "colores": "parámetro del canal (ADN/4a1); la receta trae color_guia por defecto",
+  "otros": [
+   "apoyo",
+   "conjunto"
+  ]
+ },
+ "bbox_generado_m": [
+  0.68,
+  0.2,
+  0.06
+ ],
+ "diferencia_vs_tipico_m": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "ajusta_a_medidas": true,
+ "colgado": "cuelga / pared",
+ "base_m": null,
+ "apoyo": "pared",
+ "conjunto": false,
+ "piezas": 7,
+ "tipos_de_pieza": [
+  "caja",
+  "cilindro"
+ ],
+ "partes": [
+  {
+   "tipo": "caja",
+   "nombre": "tablero_repisa",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.0,
+    0.0075,
+    0.045
+   ],
+   "tam_m": [
+    0.68,
+    0.185,
+    0.03
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "borde_frontal_redondeado",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.0,
+    -0.085,
+    0.045
+   ],
+   "radio_m": 0.015,
+   "alto_m": 0.68,
+   "rot_grados": [
+    0.0,
+    90.0,
+    0.0
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "liston_trasero_pared",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.0,
+    0.085,
+    0.018
+   ],
+   "tam_m": [
+    0.6,
+    0.03,
+    0.036
+   ]
+  },
+  {
+   "tipo": "caja",
+   "nombre": "soporte_base_izq",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    -0.22,
+    0.01,
+    0.018
+   ],
+   "tam_m": [
+    0.04,
+    0.14,
+    0.036
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "punta_redondeada_izq",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    -0.22,
+    -0.06,
+    0.018
+   ],
+   "radio_m": 0.02,
+   "alto_m": 0.036
+  },
+  {
+   "tipo": "caja",
+   "nombre": "soporte_base_der",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.22,
+    0.01,
+    0.018
+   ],
+   "tam_m": [
+    0.04,
+    0.14,
+    0.036
+   ]
+  },
+  {
+   "tipo": "cilindro",
+   "nombre": "punta_redondeada_der",
+   "color_guia_rgb": [
+    0.851,
+    0.655,
+    0.451
+   ],
+   "centro_m": [
+    0.22,
+    -0.06,
+    0.018
+   ],
+   "radio_m": 0.02,
+   "alto_m": 0.036
+  }
+ ],
+ "caja_m": {
+  "ancho": 0.68,
+  "fondo": 0.2,
+  "alto": 0.06
+ },
+ "anclajes_m": {
+  "base": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "encima": [
+   0.0,
+   0.0,
+   0.06
+  ],
+  "frente": [
+   0.0,
+   -0.1,
+   0.03
+  ]
+ },
+ "estados": {},
+ "color_guia": "solo para ver la forma; no es color de molde",
+ "color_molde": null,
+ "color_molde_regla": "lo pone la ficha del objeto en el canal (ADN/4a1); la biblioteca no fija colores de molde",
+ "origen": {
+  "tipo": "argon",
+  "paso": "receta_objetos_faltantes_v1",
+  "grupo": "G2_pared_ventana_luz",
+  "objeto_id_origen": "amb-esc-habitacion-repisa-pared-izquierda",
+  "fecha": "2026-11-09",
+  "sha256_respuesta": "957ac3bb8b50ea68e0a949cec6e7e21b90262f555a222d76a1c95d8a4e56ae9b",
+  "costo_usd_grupo": 0.4131,
+  "costo_usd_repartido": 0.059014,
+  "citas": [
+   {
+    "fuente_id": "F04",
+    "clave": "tipologia.repisa_plana",
+    "cita": "It is raised off the floor and often anchored to a wall, supported on its shorter length sides by brackets"
+   },
+   {
+    "fuente_id": "F04",
+    "clave": "tipologia.material_madera",
+    "cita": "Shelves are normally made of strong materials such as wood, bamboo or steel"
+   }
+  ],
+  "licencia": "receta generada para MYIA; geometría reusable como forma genérica"
+ },
+ "revisor": {
+  "apta": true,
+  "errores": [],
+  "avisos": [],
+  "vacios": [
+   "El corpus F04 no especifica el espesor exacto en milímetros del tablero ni el radio de curvatura de los soportes; se deducen de caja_m."
+  ],
+  "info": {
+   "partes": 7,
+   "piezas": 7,
+   "bbox_m": [
+    0.68,
+    0.2,
+    0.06
+   ],
+   "grupos": 1,
+   "datos": 8,
+   "con_fuente": 2
+  },
+  "fecha": "2026-11-09"
+ },
+ "alias_n8n": [
+  "amb-esc-habitacion-repisa-pared-izquierda"
+ ],
+ "equivale_a_biblioteca_objetos": null,
+ "capa": "recetas_aprendidas"
+}

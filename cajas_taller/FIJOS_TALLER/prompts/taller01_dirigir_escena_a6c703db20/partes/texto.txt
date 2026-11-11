@@ -1,0 +1,15 @@
+Eres revisor técnico. Responde en español, breve, SOLO el JSON del esquema.
+CONTEXTO: taller que convierte guiones en videos. Paso 2 genera automáticamente un video 3D gris (Blender 4.2, headless, VPS SIN GPU, Python) representando la escena: personajes, poses, movimiento, cambios de estructuras, poderes. Debe ser universal: cualquier historia/canal/personaje (humanos, animales, criaturas raras, sin patas, con aletas, multipatas, alados). Modelos de personajes suelen venir ya con esqueleto (p.ej. VRM/GLB) pero a veces no.
+NUESTRO SISTEMA (universal.py, o110/o114): lee el esqueleto por geometría y jerarquía (no por nombres), clasifica el cuerpo (bípedo, cuadrúpedo, sin patas, aletas, multipatas, alado), da rol a cada hueso, describe poses básicas por rol (de_pie, caminando, sentado, de_rodillas, acostado boca arriba/abajo, señalando con espejo), mide cada resultado en Blender y devuelve FALTA si algo es desconocido. Un plan de escena (de Argon) dice poses/acciones por tiempo. Fallo reciente: pose de rodillas rompía piernas porque el ajuste de complexión (escalado no uniforme de huesos) acumulaba error entre poses; se arregló con reset a pose base por pose y una guardia del cuerpo (tamaño, piernas, no flotar). Falta: IK de verdad, transiciones naturales entre poses, contacto con suelo.
+OPCIONES LIBRES ENCONTRADAS (hipótesis, sin probar):
+1 UniRig (MIT, SIGGRAPH 2025): auto-esqueleto + pesos para cualquier malla (humanos, animales, criaturas). Requiere GPU para inferir; checkpoint completo aún parcial.
+2 Rigify (GPL, incluido en Blender): metarigs humano/cuadrúpedo/ave/tiburón, controles IK/FK. Scriptable con bpy, headless.
+3 Restricciones IK nativas de Blender (Inverse Kinematics, Damped Track, Limit Rotation): sin addon, headless, CPU.
+4 Rokoko Studio Live addon (GPL, gratis): retargeting entre esqueletos, pensado humanoide; necesita mapeo de huesos.
+5 Expy Kit / Auto-Rig Pro (este último pago): retargeting.
+6 MDM y MoMask (código MIT, pero dependen de SMPL/HumanML3D con licencias de investigación o patente): texto a movimiento SOLO humano, GPU recomendada.
+7 AnyTop (2025, investigación): difusión de movimiento para esqueletos de cualquier topología, incluidos animales; GPU.
+8 NVIDIA Kimodo (2026): texto+restricciones a movimiento humano, licencia NO comercial.
+9 MoCapAnything V2 (pesos MIT, datos animales Truebones): movimiento para animales/objetos; GPU.
+10 Mixamo (gratis, cerrado, solo humanoides, web).
+PREGUNTA: ¿Alguno ya hace todo lo nuestro? ¿Conviene reemplazar, combinar o seguir con lo nuestro? Para cada opción di qué parte resuelve, si sirve, riesgo de licencia para uso comercial en YouTube, si corre sin GPU en el VPS, y una prueba gratis concreta medible en Blender. Recomienda UNA primera prueba gratis con criterio de éxito numérico. Lista lo que ninguno resuelve.

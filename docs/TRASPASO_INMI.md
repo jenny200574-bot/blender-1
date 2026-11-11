@@ -1,3 +1,17 @@
+# ACTUALIZACIÓN FASE 0 — 2026-11-11, 10:30 America/Bogota (UTC-5)
+
+Respaldo fechado en el 213 y corte de código de **cine_v1** añadido a este repo (sin borrar `motor/` ni el historial de avances). Esta nota prevalece sobre el corte del 8-nov en lo que contradiga.
+
+- **Motor de producción actual:** `/opt/myia-motor-unificado/v1_20261110` (en el repo: `motor_cine_v1/`). Ya no se programa sobre T317 ni sobre `v9_universal_calidad_20261106`.
+- **n8n:** se trabaja solo sobre `debwaH9svFMoTnOf` (activo). No crear copias. Fase 0 = exportar, no editar. COPIA FABRICAS `d2Bwmk2j4ijX28eK` es solo referencia (está inactiva).
+- **Respaldos 213:** `/opt/myia-respaldos/20261111_fase0/` (motor 1,9 G, fábricas 194 M, cajas 518 M, biblioteca 333 M con los 6 personajes). Cómo restaurar: `docs/ROLLBACK_FASE0.md`. Los tarballs del 213 incluyen `secretos/` y **no se suben**.
+- **Prohibido:** borrar personajes o versiones; tocar T317, `24_TRASPASO`, `v9_universal_calidad_20261106`, `217.76.52.53`, pod `32soe7oh2f1gtf`.
+- **Decisiones de Ricardo (11-nov-2026):** escena previa faltante → heredar y marcar `gap:true`. Él aprueba todo lo que cree Argon. Prueba B = otro guion de Guardianes. Webhook: pendiente, no cambiarlo.
+- **Plan aprobado:** fases 0 y 1 de `docs/PLAN_MOTOR_AUTONOMO.md`. La fase 0 es este corte. La fase 1 (cadena n8n + FAB + bucle) no se ejecutó aún.
+- Programación pesada: agentes Cursor en la rama `fase0-motor-cine-v1-20261111`, sin force-push a `main`.
+
+---
+
 # ACTUALIZACIÓN PRIORITARIA — 2026-11-08T06:52:21.459144-05:00 (Bogotá)
 
 Esta actualización prevalece sobre el corte histórico inferior. Sensor 36 mm aprobado por Ricardo; GPU autorizada y ejecución a cargo de otro agente. No duplicarla. Ledger Argon verificado: US$0.894963 bruto; GPU pendiente de conciliación, no se certifica gasto cero. PR #1 abierto, no unido ni activado. Oro previo 23/23, física completa y dinámica pendientes de evidencia. Ver GUIA_CONTINUAR.md para pasos, copias y límites. Este paquete agrega candidato BVH y snapshot reciente; no contiene renders/binarios pesados ni credenciales.

@@ -1,0 +1,49 @@
+{
+ "schema": "myia.overrides/v1",
+ "nota": "Reglas FIJAS por canal + escena que antes estaban escritas dentro de la plantilla director de Ako (08_PROHIBICIONES) y del 10b. El código NO trae ninguna: salen de aquí. Universales (van siempre, ya en la plantilla): Sin texto en imagen · NO low-poly del molde como material final · Emoción solo en VARIABLE.",
+ "canales": {
+  "cn-gnesis-digital-el-de-ed178619": {
+   "global": {
+    "prohibiciones": [],
+    "reglas": []
+   },
+   "escenas": {
+    "11": {
+     "fuente": "Ako 2-nov-2026, plantilla director 08_PROHIBICIONES + lección auditoría ledger #419",
+     "prohibiciones": [
+      "SIN mochila (Kael esc11)",
+      "NO anillo de dedo"
+     ],
+     "reglas": [
+      "MOLDE manda sobre texto",
+      "manilla = brazalete de muñeca, NUNCA anillo",
+      "lanza y prisión = según hoja sola",
+      "auroras/cielo fiel a Imagen 1"
+     ],
+     "desactivadas": [
+      {
+       "texto": "SIN auroras",
+       "motivo": "lección #419 de Ako: si el fondo pintado (Imagen 1) tiene auroras, NO se prohíben; sello = fiel a Imagen 1"
+      }
+     ]
+    }
+   }
+  },
+  "cn-los-guardianes-de-la-9fb323be": {
+   "global": {
+    "fuente": "orden de Ricardo 2-nov-2026 (sellos del canal) + biblia GDC_00_1 · 2-nov-2026 17:10 Bogotá: Don Caos chiquito, armas fuera del negativo, estilo 3D (orden Ricardo)",
+    "prohibiciones": [
+     "Piquito NUNCA naranja de cuerpo (siempre amarillo #FFD84D)",
+     "sin sangre, sin daño, sin miedo real (preescolar 3-6 años)"
+    ],
+    "reglas": [
+     "Piquito va en el hombro izquierdo de Eco",
+     "la pistola de rayos de juguete de Don Caos SE QUEDA (orden de Ricardo): es cómica, no hiere",
+     "niños de 5-6 años con proporciones infantiles; Don Caos CHIQUITO, del tamaño de una mano (0,18 m, orden de Ricardo 2-nov-2026)",
+     "estilo 3D infantil tipo Pixar del canal (sello de estilo del canal, imagen de Spark)"
+    ]
+   },
+   "escenas": {}
+  }
+ }
+}

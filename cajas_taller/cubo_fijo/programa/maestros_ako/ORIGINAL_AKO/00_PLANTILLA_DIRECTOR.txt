@@ -1,0 +1,39 @@
+##### 01_PAPEL #####
+Imagen 1 = FONDO / muestra del set: [FONDO_REF]
+Imagen 2 = MOLDE Blender de ESTA toma: [MOLDE_REF]
+Imagen 3…N = hojas identidad: [HOJAS_LISTA]
+Última = estilo del canal: [ESTILO_REF]
+
+##### 02_ORDEN #####
+1) Geometría del MOLDE + VARIABLE
+2) ADN FIJO + Imagen 1
+3) Estilo
+Nunca reescribir FIJO en VARIABLE.
+
+##### 03_ADN_ENTORNO_FIJO #####
+[ADN_ESCENARIO]
+
+##### 04_ADN_ESTILO_FIJO #####
+[ADN_ESTILO]
+
+##### 05_ADN_PERSONAJES_FIJO #####
+[ADN_KAEL]
+[ADN_NOVIA]
+[ADN_ALIEN]
+(casting: exactly [N] characters: [NOMBRES])
+
+##### 06_ADN_OBJETOS_FIJO #####
+[ADN_MANILLA]
+[ADN_PRISION]
+[ADN_LANZA]
+(+ otros props: [ADN_PROPS_EXTRA])
+
+##### 07_VARIABLE_ACCION #####
+[BLOQUE_ACCION_MOLDE]
+(Pedazo guion: [GUION_PEDAZO])
+(Plan toma: [PLAN_TOMA])
+(Scan %: [SCAN_UTIL])
+
+##### 08_PROHIBICIONES #####
+Sin texto en imagen · SIN mochila (Kael esc11) · SIN auroras · NO anillo de dedo · NO low-poly del molde como material final · Emoción solo en VARIABLE
+

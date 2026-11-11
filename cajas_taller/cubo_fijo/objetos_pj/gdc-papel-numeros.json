@@ -1,0 +1,34 @@
+{
+  "id": "gdc-papel-numeros",
+  "nombre": "papel numeros",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "historia",
+  "sellado": true,
+  "version": 2,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4b2/obj-papel-numeros.png",
+  "imagen_sha256": "17b245e57ed4a3637190547ab90a7f6cac177bd57944b8106c290e9b3cd96245",
+  "imagen_origen": "paso 00 4b2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 4.5,
+    "fondo_cm": 0.2,
+    "alto_cm": 6.0
+  },
+  "medidas_fuente": "4b1 inv_obj_historia__obj-manzanas__9287ca.json",
+  "ids_capitulo": [
+    "obj-papel-numeros"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-papel-numeros"
+  ],
+  "frase_sello": "Lámina rectangular vertical de cartulina color crema en estilo 3D estilizado, con esquinas redondeadas, grosor sutil y pliegues marcados en cruz al centro. En la cara frontal muestra un dibujo infantil hecho con crayón púrpura de una pistola láser retro apuntando hacia la esquina superior derecha, rodeada de pequeños rayos color lila y con los números \"6 7 8 9 10\" escritos a mano en el borde inferior; el reverso es completamente liso y sin dibujos. Acabado mate suave con textura de papel ligeramente arrugado.",
+  "actualizado": "2026-11-06T04:03:13+01:00",
+  "origen": "sellar"
+}

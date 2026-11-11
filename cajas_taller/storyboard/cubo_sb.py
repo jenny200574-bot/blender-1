@@ -1,0 +1,683 @@
+#!/usr/bin/env python3
+"""PISTA INMI (2026-11-01) ADAPTIVE CINEMATIC DIRECTOR — planeador de storyboard (solo texto/JSON; NO dibuja). Ricardo t326u–t331u.
+Entra: guion (GUION_COMPLETO) + biblia de producción (fichas de personajes del canal) + mapa 00 + acción del 01 (accion_v1, segundos)
+       + memoria de continuidad + los 3 niveles del canal (canales/<canal>.json, separados).
+Etapas:
+  1 GENRE & TONE ANALYZER ......... Argon, UNA llamada por CAPÍTULO (lee todo el guion; segmentos por escena anclados a citas).
+  2 CINEMATIC PROFILE SELECTOR .... CÓDIGO gratis (selector_perfiles.py): combina perfiles modulares por segmento; nivel 3 manda.
+  3 NARRATIVE DIRECTOR ............ ┐ Argon, UNA llamada por ESCENA (dos roles en orden dentro de la misma respuesta:
+  4 SHOT & STORYBOARD DIRECTOR .... ┘  narrativa → viñetas con director de imagen + director de cámara en DSL).
+  + validador gratis (validador_sb.py) · autocorrección pagada máx. 2 (solo viñetas fallidas) · memoria (memoria_sb.py) ·
+    traductor DSL→Blender borrador (traductor_dsl_blender.py).
+Pagar = guarda cajas/HABILITAR_PAGO_SB con el monto + --ok USD + --aprobado QUIEN + cotización fresca. Sin eso SOLO cotiza (US$0).
+Escribe SOLO en <capítulo>/cubos/SB/. No toca n8n, paso00_cadena.py, argon_pago.json ni otros cubos.
+Uso: python3 storyboard/cubo_sb.py <cotizar|seco-falso|revalidar|traducir|config-iniciar|correr> --canal C --capitulo N [--escena 9] …"""
+import argparse, copy, json, os, sys, time
+from pathlib import Path
+
+import sb_comun as S
+import esquemas_sb as E
+import selector_perfiles as SP
+import validador_sb as VA
+import memoria_sb as ME
+import traductor_dsl_blender as TR
+
+VERSION = 'sb_v1'
+FALSO = '*** FALSO — respuesta de prueba hecha a mano, NO es de Argon, US$0 ***'
+
+
+def _j(x): return json.dumps(x, ensure_ascii=False, indent=1)
+
+
+def _bloque(nom, x): return f'\n\n=== {nom} ===\n' + (x if isinstance(x, str) else _j(x)) + f'\n=== END {nom} ==='
+
+
+# ---------------- entradas ----------------
+def accion_01(K, D, n, archivo=None):
+    """Acción del 01 (accion_v1). Sin acciones con segundos el storyboard NO se pide (no se inventan tiempos)."""
+    if archivo:
+        x = S.leer(archivo) or {}; C = x.get('respuesta') if isinstance(x.get('respuesta'), dict) else x; origen = f'archivo {archivo}'
+    else:
+        C, origen = K.dirigida(D, n)
+    if not isinstance(C, dict) or not C.get('acciones'):
+        v = (C or {}).get('version_01') if isinstance(C, dict) else None
+        return None, origen, f"escena {n}: el 01 no trae «acciones» con segundos (versión {v or 'ninguna'}): falta correr el 01 accion_v1 de esta escena"
+    return C, origen, None
+
+
+def fichas_escena(K, D, a, e, PC, avisos):
+    import paso01_dirigir as DI
+    fichas, _imgs, _det = DI.personajes_escena(K, D, a, e, PC, avisos)
+    for f in fichas: f['images'] = []   # solo texto: las imágenes no se adjuntan (no hacen falta para decidir planos y suben el precio)
+    return fichas
+
+
+def prompt_etapa1(K, D, guion, escenas, nv1, objetivo=None):
+    """objetivo = lista de escenas a analizar (None = todas). El guion completo siempre va como contexto del arco."""
+    txt = S.texto(S.ajustes()['prompt_genero']); esq = E.etapa1()
+    mapa = [{'escena': e['numero'], 'titulo': e['titulo'], 'hechos': ((e['datos'].get('continuidad') or {}).get('hechos_primarios') or [])} for e in escenas]
+    obj = [str(x) for x in objetivo] if objetivo else [e['numero'] for e in escenas]
+    p = (txt + _bloque('GENRE_IDS', E.generos_ids()) + _bloque('CHANNEL_LEVEL_1', nv1) + _bloque('SCENES', mapa)
+         + _bloque('TARGET_SCENES', obj) + _bloque('SCRIPT', guion or '') + '\n\nSCHEMA\n' + json.dumps(esq, ensure_ascii=False))
+    return p, txt, esq
+
+
+def max_etapa1(n_objetivo):
+    """Tope de salida de la etapa 1: reserva para el razonamiento del modelo (HIGH) + salida por escena pedida.
+    (1-nov-2026: con 8000 fijos el razonamiento se comió la salida y la respuesta llegó truncada.)"""
+    aj = S.ajustes()
+    return int(aj['max_salida_etapa1_reserva_razonar']) + int(aj['max_salida_etapa1_por_escena']) * max(1, int(n_objetivo))
+
+
+def _segs_e1(e1, n):
+    return next((x.get('segmentos') for x in (e1 or {}).get('escenas') or [] if S.norm(x.get('escena')) == S.norm(n)), None)
+
+
+def _fusionar_e1(viejo, nuevo):
+    """Une respuestas de la etapa 1 por escena (la nueva manda). Guarda los arcos de cada llamada."""
+    v = copy.deepcopy(viejo or {'escenas': []}); idx = {S.norm(x.get('escena')): i for i, x in enumerate(v.get('escenas') or [])}
+    for x in (nuevo or {}).get('escenas') or []:
+        k = S.norm(x.get('escena'))
+        if k in idx: v['escenas'][idx[k]] = x
+        else: v.setdefault('escenas', []).append(x)
+    if (nuevo or {}).get('arco_capitulo'): v['arco_capitulo'] = nuevo['arco_capitulo']
+    v.setdefault('revisiones', []).append((nuevo or {}).get('revision'))
+    return v
+
+
+def _trozo_guion(D, guion, n):
+    """Fase 4 (6-nov-2026, Ricardo t248u): trozo del guion de la escena.
+    1) Igual que antes: cabecera «ESCENA N.» en el guion que ya se usaba (no cambia nada si ya funcionaba).
+    2) Si no aparece: lector universal entradas_sb_v2 (t896): lee pedidos/base.txt y acepta «ESCENA N» o los
+       títulos numerados que coinciden LITERALMENTE con respuestas/base.json → escenas[].titulo. No adivina.
+    Interruptor: storyboard/guion_v2.off → sólo el paso 1 (comportamiento anterior)."""
+    trozo = S.guion_escena(guion, n)
+    if trozo or (Path(__file__).resolve().parent / 'guion_v2.off').exists(): return trozo
+    try:
+        import entradas_sb_v2 as E2
+        r = E2.Reader(E2.DEFAULT_ROOT); base = S.leer(Path(D) / 'respuestas' / 'base.json') or {}
+        texto, _ = E2.source_script(r, Path(D))
+        return E2.script_scene(texto, str(n), base.get('escenas')) or None
+    except Exception:
+        return None
+
+
+def _dialogos_guion(trozo):
+    """Fase 4: diálogos del trozo. Igual que antes (NOMBRE: en su línea + texto con guion/comillas).
+    Si así no sale ninguno y el trozo existe, puente al lector universal entradas_sb_v2 (acepta «NOMBRE: texto» en la misma línea).
+    Interruptor: storyboard/guion_v2.off → sólo el lector anterior."""
+    dls = S.dialogos(trozo)
+    if dls or not trozo or (Path(__file__).resolve().parent / 'guion_v2.off').exists(): return dls
+    try:
+        import entradas_sb_v2 as E2
+        return [{'quien_guion': x['speaker_name_source'], 'texto': x['text_source_with_stage_directions'], 'orden': i}
+                for i, x in enumerate(E2.script_dialogues(trozo, []))]
+    except Exception:
+        return dls
+
+
+# ---------------- Fase 4 (Ricardo t251u): puente genérico de hablantes colectivos ----------------
+COLECTIVOS = {'todos', 'todas', 'ambos', 'ambas', 'all', 'both', 'coro', 'chorus', 'everyone', 'everybody', 'juntos', 'juntas', 'unisono', 'al'}
+NUMEROS = {'dos': 2, 'ambos': 2, 'ambas': 2, 'tres': 3, 'cuatro': 4, 'cinco': 5, 'seis': 6, 'siete': 7, 'ocho': 8, 'nueve': 9, 'diez': 10,
+           'two': 2, 'both': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10,
+           '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10}
+_MARCA_FUERA = ('antagon', 'villan')
+_CAMPOS_ROL = ('rol', 'role', 'tipo_personaje', 'bando', 'arquetipo', 'archetype', 'faccion', 'team', 'equipo')
+
+
+def _es_colectivo(nombre):
+    p = S.palabras(nombre)
+    return bool(p) and all(w in COLECTIVOS for w in p) and any(w != 'al' for w in p)
+
+
+def _marcado_fuera(*fuentes):
+    """True solo si el 01/ADN/ficha lo MARCA en un campo de rol (no se adivina por la descripción)."""
+    for x in fuentes:
+        if not isinstance(x, dict): continue
+        for k in _CAMPOS_ROL:
+            v = x.get(k)
+            if v is not None and any(m in S.norm(str(v)) for m in _MARCA_FUERA): return k + '=' + str(v)
+            if k == 'antagonista' and v: return 'antagonista=true'
+        if x.get('antagonista') is True or x.get('antagonist') is True: return 'antagonista=true'
+    return None
+
+
+def _eventos_trozo(trozo):
+    import re
+    ev = []
+    for i, l in enumerate((trozo or '').splitlines()):
+        s = l.strip()
+        if not s: continue
+        h = re.fullmatch(r"([A-ZÁÉÍÓÚÑÜ][A-ZÁÉÍÓÚÑÜ0-9 .'()-]{0,60}):\s*(.*)", s)
+        if h: ev.append(('habla', h.group(1).strip(), i + 1, s)); continue
+        if s.startswith('[') and s.endswith(']'): ev.append(('acot', s, i + 1, s)); continue
+        ev.append(('otro', s, i + 1, s))
+    return ev
+
+
+def _numero_grupo(acot, nombre):
+    ns = {NUMEROS[w] for w in S.palabras(acot or '') if w in NUMEROS}
+    ns |= {NUMEROS[w] for w in S.palabras(nombre) if w in NUMEROS}
+    v = sorted(ns)
+    return (v[0] if len(v) == 1 else None), v
+
+
+def resolver_colectivos(trozo, dls, fichas, C01, narrador='NARRADOR'):
+    """Hablante que no es personaje y es palabra colectiva → ids de personajes. No edita el guion; deja la procedencia.
+    (a) acotación anterior inmediata con número de grupo N → los N últimos hablantes distintos antes de la línea que estén
+        en la escena según el 01 y no estén marcados fuera del grupo (rol antagonista en 01/ADN/ficha).
+    (b) si N no es seguro o no alcanzan → todos los presentes en la escena según el 01 (menos los marcados).
+    Interruptor: storyboard/hablante_colectivo.off → no hace nada (comportamiento anterior)."""
+    if (Path(__file__).resolve().parent / 'hablante_colectivo.off').exists(): return []
+    fich = {f['id']: f for f in fichas}
+    p01 = {p.get('id'): p for p in (C01 or {}).get('personajes') or [] if isinstance(p, dict) and p.get('id')}
+    act01 = [x.get('actor') for x in (C01 or {}).get('acciones') or [] if x.get('actor')]
+    presentes = [i for i in dict.fromkeys(list(p01) + act01) if i in fich] or list(fich)
+    fuera = {i: m for i in presentes for m in [_marcado_fuera(p01.get(i), fich.get(i), (fich.get(i) or {}).get('version'))] if m}
+    ev = _eventos_trozo(trozo); vistos = {}; out = []
+    for d in dls:
+        if d.get('id') or not _es_colectivo(d['quien_guion']): continue
+        k = vistos.get(S.norm(d['quien_guion']), 0); vistos[S.norm(d['quien_guion'])] = k + 1
+        pos = [j for j, e in enumerate(ev) if e[0] == 'habla' and S.norm(e[1]) == S.norm(d['quien_guion'])]
+        if k >= len(pos): continue
+        j = pos[k]; acot = ev[j - 1] if j > 0 and ev[j - 1][0] == 'acot' else None
+        N, nums = _numero_grupo(acot[1] if acot else '', d['quien_guion'])
+        previos = []
+        for e in reversed(ev[:j]):
+            if e[0] != 'habla': continue
+            pid = S.quien_a_id(e[1], fichas, narrador)
+            if pid and pid != narrador and pid in presentes and pid not in fuera and pid not in previos: previos.append(pid)
+        reg = {'quien_guion': d['quien_guion'], 'linea_trozo': ev[j][2], 'texto_linea': ev[j][3],
+               'acotacion_anterior': acot and {'linea_trozo': acot[2], 'texto': acot[1]}, 'numero_grupo': N, 'numeros_vistos': nums,
+               'presentes_01': presentes, 'excluidos_marcados': fuera, 'hablantes_previos_recientes': previos}
+        if N and len(previos) >= N:
+            ids = previos[:N]; reg.update({'modo': 'a', 'por_que': f'la acotación anterior nombra un grupo de {N}; se toman los {N} hablantes distintos más recientes antes de la línea, presentes en el 01 y no marcados fuera del grupo'})
+        else:
+            ids = [i for i in presentes if i not in fuera]
+            reg.update({'modo': 'b', 'por_que': ('sin acotación anterior con número de grupo' if not N else f'grupo de {N} pero solo {len(previos)} hablantes previos válidos') + ': todos los presentes en la escena según el 01'})
+        reg['ids'] = ids; d['ids'] = ids; d['colectivo'] = reg; out.append(reg)
+    return out
+
+
+def contexto(K, D, a, e, cd, fichas, guion, etapa1, C01, memoria_entrada, nv):
+    """Todo lo que la llamada 3+4 y el validador necesitan. Devuelve (P, faltan)."""
+    n = e['numero']; faltan = []; aj = S.ajustes()
+    trozo = _trozo_guion(D, guion, n)
+    if not trozo: faltan.append(f'escena {n}: no encuentro su trozo en el guion (cabecera «ESCENA {n}.»)'); trozo = ''
+    dls = _dialogos_guion(trozo)
+    for d in dls: d['id'] = S.quien_a_id(d['quien_guion'], fichas, aj['narrador_id'])
+    colectivos = resolver_colectivos(trozo, dls, fichas, C01, aj['narrador_id'])
+    sin = sorted({d['quien_guion'] for d in dls if not d['id'] and not d.get('ids')})
+    if sin: faltan.append(f'escena {n}: hablan {sin} y no son personajes del canal en esta escena (no se renombra; decide Ricardo)')
+    seg_e1 = next((x.get('segmentos') for x in (etapa1 or {}).get('escenas') or [] if S.norm(x.get('escena')) == S.norm(n)), None)
+    if not seg_e1: faltan.append(f'escena {n}: la etapa 1 (géneros) no trae segmentos para esta escena')
+    dur = float(C01['duracion_s'])
+    segs, av = SP.a_segundos(seg_e1 or [], C01['acciones'], trozo, dur)
+    regl = S.reglamento(nv['nivel_3_direccion_artistica'])
+    perf, av2 = SP.seleccionar(segs, regl)
+    narr = str((cd or {}).get('narration') or 'none').lower() not in ('none', '', 'null', 'no')
+    P = {'escena': n, 'duracion_s': dur, 'beats': {x['id']: [float(x['t'][0]), float(x['t'][1])] for x in C01['acciones']},
+         'acciones': C01['acciones'], 'fichas': fichas, 'trozo': trozo, 'dialogos': dls, 'segmentos': segs, 'perfiles': perf,
+         'niveles': nv, 'resumen_niveles': S.resumen_niveles(nv), 'reglamento': regl, 'narrador_permitido': narr,
+         'memoria_entrada': memoria_entrada, 'continua': str((e['datos'] or {}).get('tipo')) == 'continuacion' or ((e['datos'].get('continuidad') or {}).get('con_anterior') == 'continuacion'),
+         'en_escena': [f['id'] for f in fichas], 'avisos': av + av2}
+    if colectivos: P['hablantes_colectivos'] = colectivos
+    return P, faltan
+
+
+def prompt_escena(P, e, C01):
+    aj = S.ajustes(); txt = S.texto(aj['prompt_escena']); esq = E.etapa3y4()
+    est = (S.leer(S.AQUI / 'config' / 'estilos_visuales.json') or {}).get('estilos') or {}
+    n2 = dict(P['niveles']['nivel_2_estilo_visual']); n2['pista_en'] = (est.get(n2.get('estilo_catalogo')) or {}).get('pista_en')
+    niveles = {'LEVEL_1_genre_tone': P['niveles']['nivel_1_genero_tono'], 'LEVEL_2_visual_style': n2,
+               'LEVEL_3_art_and_camera_rulebook': P['reglamento'] or P['niveles']['nivel_3_direccion_artistica'],
+               'COPY_EXACTLY_INTO_niveles_aplicados': P['resumen_niveles']}
+    beats = [{k: x.get(k) for k in ('id', 't', 'actor', 'accion', 'pose', 'mirada', 'emocion', 'objeto', 'cambio', 'cita')} for x in C01['acciones']]
+    fmt = {'duration_s': P['duracion_s'], 'narrator_allowed': P['narrador_permitido'], 'narrator_id': aj['narrador_id'], 'max_words_per_s': aj['max_palabras_por_s'],
+           'panel_min_s': aj['vineta_min_s'], 'panel_max_s': (min(float(aj['vineta_max_s']), float(aj['toma_max_s'])) if aj.get('toma_max_s') is not None and not (Path(__file__).resolve().parent / 'max_10s_toma.off').exists() else aj['vineta_max_s']), 'cuts': aj['cortes'], 'aspect': '16:9'}
+    gram = {'shot_sizes_wide_to_tight': S.registro().size_ladder, 'angles': S.tokens_de('CAMERA_ANGLE'),
+            'moves': {c: S.tokens_de(c) for c in ('CAMERA_ROTATION', 'CAMERA_TRANSLATION', 'CAMERA_TRACKING', 'COMPLEX_MOVEMENT', 'ZOOM', 'CAMERA_RIG')},
+            'speeds': list(S.registro().speed_scale), 'subject_framing': S.tokens_de('SUBJECT_FRAMING'),
+            'examples': ['/MS /LOWANGLE /LENS35 /TWOSHOT', '0-2s: /STATIC 2-6s: /DOLLYIN:MS>MCU:SLOW', '/PAN:L:SLOW', '/ORBIT:R:90:SLOW', '/CRANE:UP:WS>EWS:VSLOW', '/HANDHELD /TRACK:L:BRISK']}
+    seg = [{'segmento': s['indice'], 't': s['t'], 'generos': s.get('generos'), 'subgenero': s.get('subgenero'), 'tono': s.get('tono'),
+            'emociones': s.get('emociones'), 'intensidad': s.get('intensidad')} for s in P['segmentos']]
+    p = (txt + _bloque('SCENE', e['datos']) + _bloque('SCRIPT_OF_SCENE', P['trozo']) + _bloque('ACTION_BEATS_01', {'duration_s': P['duracion_s'], 'beats': beats})
+         + _bloque('CHARACTERS', P['fichas']) + _bloque('DIALOGUE_SPEAKERS', [{'script_name': d['quien_guion'], 'id': d['id'], 'line': d['texto']}
+                                         | ({'group_ids': d['ids'], 'group_note': 'collective line: give it ONLY to these ids (one audio per id, same text and time)'} if d.get('ids') else {})
+                                         for d in P['dialogos']])
+         + _bloque('CONTINUITY_MEMORY_IN', P['memoria_entrada']) + _bloque('GENRE_SEGMENTS', seg) + _bloque('CINEMATIC_PROFILE', P['perfiles'])
+         + _bloque('LEVELS', niveles) + _bloque('CAMERA_DSL_GRAMMAR', gram) + _bloque('FORMAT', fmt) + '\n\nSCHEMA\n' + json.dumps(esq, ensure_ascii=False))
+    return p, txt, esq
+
+
+def prompt_reparar(texto_fijo_orig, P, obj, errores, k):
+    aj = S.ajustes(); txt = S.texto(aj['prompt_reparar']); esq = E.reparar()   # el texto fijo va SIN cambios (lo exige el registro de prompts fijos)
+    mal = sorted({x.split(' ')[1].rstrip(':') for x in errores if x.startswith('vinetas[')})
+    gen = [x for x in errores if not x.startswith('vinetas[')]
+    ok = [{'id': v['id'], 't': v['t'], 'plano': v['director_imagen']['plano'], 'angulo': v['director_imagen']['angulo'],
+           'en_cuadro': v['director_imagen']['en_cuadro'], 'direccion_pantalla': v['continuidad']['direccion_pantalla'],
+           'transicion_salida': v['transicion_salida']['tipo']} for v in obj['vinetas'] if v['id'] not in mal]
+    p = (txt + _bloque('ATTEMPT', str(k)) + _bloque('ORIGINAL_REQUEST_RULES', texto_fijo_orig) + _bloque('EXACT_ERRORS', errores) + _bloque('GENERAL_ERRORS', gen)
+         + _bloque('FAILED_PANELS', [v for v in obj['vinetas'] if v['id'] in mal]) + _bloque('ACCEPTED_PANELS', ok)
+         + _bloque('ACTION_BEATS_01', {'duration_s': P['duracion_s'], 'beats': P['acciones']}) + _bloque('CHARACTERS', P['fichas'])
+         + _bloque('SCRIPT_OF_SCENE', P['trozo']) + _bloque('CONTINUITY_MEMORY_IN', P['memoria_entrada'])
+         + _bloque('MEMORY_OUT_NOW', obj.get('memoria_salida')) + _bloque('NARRATIVE_NOW', obj.get('narrativa'))
+         + _bloque('COPY_EXACTLY_INTO_niveles_aplicados', P['resumen_niveles']) + '\n\nSCHEMA\n' + json.dumps(esq, ensure_ascii=False))
+    return p, esq
+
+
+def fusionar(obj, rep):
+    """Une la reparación por id de viñeta: reemplaza las que vuelven, agrega nuevas, quita las de «eliminar». Lo demás queda igual."""
+    o = copy.deepcopy(obj); nuevas = {v['id']: v for v in rep.get('vinetas') or []}; fuera = set(rep.get('eliminar') or [])
+    o['vinetas'] = [nuevas.pop(v['id'], v) for v in o['vinetas'] if v['id'] not in fuera] + list(nuevas.values())
+    o['vinetas'].sort(key=lambda v: float((v.get('t') or [0])[0]))
+    for i, v in enumerate(o['vinetas'], 1): v['orden'] = i
+    for k in ('memoria_salida', 'narrativa'):
+        if isinstance(rep.get(k), dict): o[k] = rep[k]
+    return o
+
+
+def bucle(validar, obj, err, llamar, armar, max_rep):
+    """Autocorrección: máx. max_rep vueltas; cada una pide SOLO lo que falló. llamar(prompt, k) -> (dict|None, info)."""
+    hist, cur = [], obj
+    for k in range(1, int(max_rep) + 1):
+        prompt = armar(cur, err, k); rep, info = llamar(prompt, k)
+        h = {'intento': k, 'errores_antes': len(err), **(info or {})}
+        if not isinstance(rep, dict):
+            h['resultado'] = 'sin respuesta usable'; hist.append(h)
+            if (info or {}).get('parar'): break
+            continue
+        nuevo = fusionar(cur, rep); C, e2, _ = validar(nuevo)
+        h.update({'errores_despues': len(e2), 'resultado': 'ok' if not e2 else 'sigue con errores'}); hist.append(h); cur, err = nuevo, e2
+        if not e2: return {'ok': True, 'C': C, 'obj': cur, 'intentos': hist}
+    return {'ok': False, 'C': None, 'obj': cur, 'errores': err, 'intentos': hist,
+            'explicacion': f'Tras {len(hist)} reparación(es) siguen {len(err)} error(es); primeros: ' + ' | '.join(err[:5])}
+
+
+# ---------------- cotización ----------------
+def _cd_salida(cd, mx):
+    c = copy.deepcopy(cd or {}); p = c.setdefault('paso01', {})
+    if mx: p['max_output_tokens'] = min(int(mx), int(p.get('max_output_tokens') or mx))
+    return c
+
+
+def cotizacion(K, cd, chars_e1, chars_escenas, n_escenas_cap, chars_e1_objetivo=None, n_objetivo=None):
+    """Precio PEOR CASO (nunca llama). Diseño elegido: etapa 1 una vez por capítulo + etapas 3+4 una vez por escena + máx. 2 reparaciones.
+    También cotiza las alternativas (4 llamadas por escena; 1 sola llamada por escena) para comparar."""
+    aj = S.ajustes()
+    c1 = K.cotizar(chars_e1, 0, _cd_salida(cd, max_etapa1(n_escenas_cap)), 'SB')   # capítulo completo
+    c1o = K.cotizar(chars_e1_objetivo, 0, _cd_salida(cd, max_etapa1(n_objetivo)), 'SB') if chars_e1_objetivo else None   # solo las escenas pedidas
+    esc = {n: K.cotizar(ch, 0, _cd_salida(cd, aj.get('max_salida_escena')), 'SB') for n, ch in chars_escenas.items()}
+    ch_rep = {n: int(ch * aj.get('reparar_fraccion_prompt', .85)) for n, ch in chars_escenas.items()}
+    rep = {n: K.cotizar(ch, 0, _cd_salida(cd, aj.get('max_salida_reparar')), 'SB') for n, ch in ch_rep.items()}
+    if not c1.get('ok') or not all(x.get('ok') for x in esc.values()): return {'ok': False, 'motivo': c1.get('motivo') or next((x.get('motivo') for x in esc.values() if not x.get('ok')), '')}
+    nr = int(aj['reparaciones_max'])
+    por_esc = {n: {'etapa3y4_usd': esc[n]['usd'], 'reparaciones_peor_usd': round(nr * rep[n]['usd'], 4), 'total_peor_usd': round(esc[n]['usd'] + nr * rep[n]['usd'], 4),
+                   'sin_reparar_usd': esc[n]['usd'], 'chars_prompt': chars_escenas[n]} for n in esc}
+    prom = sum(x['etapa3y4_usd'] for x in por_esc.values()) / len(por_esc); prom_r = sum(x['reparaciones_peor_usd'] for x in por_esc.values()) / len(por_esc)
+    cap = {'escenas_capitulo': n_escenas_cap, 'etapa1_usd': c1['usd'], 'escenas_sin_reparar_usd': round(prom * n_escenas_cap, 4),
+           'escenas_peor_con_2_reparaciones_usd': round((prom + prom_r) * n_escenas_cap, 4)}
+    cap['total_sin_reparar_usd'] = round(c1['usd'] + cap['escenas_sin_reparar_usd'], 4); cap['total_peor_usd'] = round(c1['usd'] + cap['escenas_peor_con_2_reparaciones_usd'], 4)
+    ch = sum(chars_escenas.values()) / len(chars_escenas)
+    alt4 = round(4 * K.cotizar(int(ch), 0, _cd_salida(cd, aj.get('max_salida_escena')), 'SB')['usd'], 4)
+    alt1 = K.cotizar(int(ch + chars_e1), 0, _cd_salida(cd, aj.get('max_salida_escena')), 'SB')['usd']
+    return {'ok': True, 'modelo': esc[next(iter(esc))]['modelo'], 'nivel': esc[next(iter(esc))]['nivel'],
+            'max_salida': {'etapa1': c1['max_salida_tokens'], 'etapa3y4': esc[next(iter(esc))]['max_salida_tokens'], 'reparar': rep[next(iter(rep))]['max_salida_tokens']},
+            'etapa1_capitulo': c1, 'etapa1_solo_escenas_pedidas': c1o, 'por_escena': por_esc, 'capitulo_estimado': cap,
+            'alternativas_por_escena_sin_reparar': {'elegida_1_llamada_3y4 (+ etapa1 repartida)': round(prom + c1['usd'] / n_escenas_cap, 4),
+                                                    '4_llamadas_separadas (peor caso, cada una con todo el contexto)': alt4,
+                                                    '1_sola_llamada_por_escena_con_guion_completo': alt1},
+            'pista': c1.get('pista')}
+
+
+# ---------------- pago (cerrado por defecto) ----------------
+def revisar_guarda(ok, aprobado):
+    import paso01_pago as PG
+    G = PG.GUARDA_DIR / S.ajustes()['guarda']
+    if not G.is_file(): return f'pago del storyboard cerrado: falta cajas/{G.name} (pago no aprobado). No se llamó a nada.'
+    if ok is None or not aprobado: return 'falta --ok USD y --aprobado QUIEN'
+    tope = guarda_tope(G)
+    if tope is None: return f'{G.name} no trae el monto aprobado: no se llama'
+    if float(ok) > tope + 1e-9: return f'--ok {ok} pasa el monto habilitado en {G.name}'
+    return None
+
+
+def guarda_tope(G):
+    import re
+    t = G.read_text(errors='replace')
+    try:
+        j = json.loads(t)
+        if isinstance(j, dict): return float(j['tope_usd'])
+    except Exception: pass
+    mm = re.search(r'\d+(?:[.,]\d+)?', t)
+    return float(mm.group().replace(',', '.')) if mm else None
+
+
+def guarda_leer():
+    """(ruta, dict|None) del archivo de habilitación HABILITAR_PAGO_SB."""
+    import paso01_pago as PG
+    G = PG.GUARDA_DIR / S.ajustes()['guarda']
+    if not G.is_file(): return G, None
+    try: j = json.loads(G.read_text(errors='replace'))
+    except Exception: j = {}
+    return G, (j if isinstance(j, dict) else {})
+
+
+def fijo(nombre, texto_fijo, esq, cd, FP=None):
+    if FP is None: import myia_fijo_prompt as FP
+    import paso01_cubos as K
+    modelo, nivel, mo = K.modelo_canal(cd)
+    partes = {'texto': texto_fijo, 'esquema': json.dumps(esq, ensure_ascii=False, sort_keys=True), 'modelo': modelo, 'nivel': nivel, 'max_out': int(mo), 'max_rondas': 1, 'json_out': True}
+    return {'paso': f"{S.ajustes()[nombre]}_{FP.sha_total(partes)[:10]}", 'partes': partes, 'fragmentos': [texto_fijo]}
+
+
+def llamar_pagando(K, a, cd, prompt, esq, texto_fijo, paso, clave, salida, nota, usado):
+    """UNA llamada paga por el camino existente (paso01_pago.correr). Revisa guarda + cotización fresca + lo que queda del --ok."""
+    import paso01_pago as PG
+    msg = revisar_guarda(a.ok, a.aprobado)
+    if msg: return None, {'parar': True, 'por_que': msg}
+    cot = K.cotizar(len(prompt), 0, cd, 'SB'); resto = round(float(a.ok) - usado['usd'], 6)
+    if not cot.get('ok'): return None, {'parar': True, 'por_que': 'sin cotización'}
+    if float(cot['usd']) > resto + 1e-9: return None, {'parar': True, 'cotizacion_usd': cot['usd'], 'por_que': f"cotizado US${cot['usd']} > lo que queda del --ok (US${resto})"}
+    if not getattr(a, 'X', None): a.X = PG.app()
+    modelo, nivel, mo = K.modelo_canal(cd)
+    q = {'clave': clave, 'prompt': prompt, 'salida': salida, 'est': cot['usd'], 'adjuntos': None, 'esquema': esq, 'modelo': modelo, 'nivel': nivel,
+         'max_out': mo, 'fijo': fijo(paso, texto_fijo, esq, cd, a.X.get('FP')), 'nota': nota}
+    a2 = copy.copy(a); a2.ok = resto
+    res, bolsa = PG.correr([q], a2, a.X, cd, 'SB'); r = res[0]; usado['usd'] += float(bolsa['gastado'])
+    info = {'cotizacion_usd': cot['usd'], 'usd': round(float(bolsa['gastado']), 6), 'ledger': r.get('ledger'), 'error': r.get('error')}
+    if not r.get('ok'): info['parar'] = True; return None, info
+    rv = PG.LS.revisar_respuesta(r['texto'], esq, r.get('fin'))
+    if rv['obj'] is None: info['error'] = f"respuesta no válida ({rv['estado']})"; return None, info
+    return rv['obj'], info
+
+
+# ---------------- Fase 4 (Ricardo resp. t261s804): puente de gramática de cámara ----------------
+_DIR_PANTALLA = {'R': 'L2R', 'RIGHT': 'L2R', 'DER': 'L2R', 'L': 'R2L', 'LEFT': 'R2L', 'IZQ': 'R2L'}
+
+
+def normalizar_dsl(obj):
+    """Si un movimiento trae un argumento NO aceptado y el comando espera «screen» (L2R|R2L|TOWARD|AWAY), traduce la dirección
+    relativa a cámara (R/L; convención del registro: todo L/R es relativo a cámara) a L2R/R2L sin tocar la velocidad ni lo demás.
+    Solo se acepta si el texto resultante ya no tiene errores de DSL; si no, se deja como estaba (el validador lo marca).
+    Devuelve la procedencia de cada cambio. Interruptor: storyboard/dsl_puente.off."""
+    import re
+    if (Path(__file__).resolve().parent / 'dsl_puente.off').exists(): return []
+    hechos = []
+    for i, v in enumerate((obj or {}).get('vinetas') or []):
+        for bloque, campo in (('director_camara', 'dsl_movimiento'), ('director_imagen', 'dsl_encuadre')):
+            d = v.get(bloque) or {}; txt = d.get(campo)
+            if not isinstance(txt, str) or not txt.strip(): continue
+            nuevo = txt
+            for m in S.errores_dsl(S.analizar(txt)):
+                e = re.search(r"'([A-Za-z]+)' is not a valid argument for /([A-Z0-9_]+) \(expects ([^)]*)\)", str(m))
+                if not e or 'screen' not in e.group(3) or e.group(1).upper() not in _DIR_PANTALLA: continue
+                arg, cmd = e.group(1), e.group(2)
+                nuevo = re.sub(rf'(/{cmd}(?::[A-Za-z0-9_>.-]+)*?):{arg}(?=[:\s]|$)', lambda x: f'{x.group(1)}:{_DIR_PANTALLA[arg.upper()]}', nuevo, count=1)
+            if nuevo != txt and not S.errores_dsl(S.analizar(nuevo)):
+                d[campo] = nuevo
+                hechos.append({'vineta': v.get('id') or i, 'campo': f'{bloque}.{campo}', 'antes': txt, 'despues': nuevo,
+                               'regla': 'argumento de dirección relativo a cámara (R/L) → screen L2R/R2L del registro; velocidad y tiempos sin cambio',
+                               'fuente': 'cubo_sb.normalizar_dsl (código, sin Argon)'})
+    return hechos
+
+
+# ---------------- tubería de una escena (paga o falsa) ----------------
+def dirigir_escena(K, D, a, cd, e, P, prompt, texto_fijo, esq, llamar, carpeta, de, max_rep=None, previo=None):
+    """llamar(prompt, esquema, clave) -> (obj|None, info). Valida, repara (máx. 2), guarda storyboard + memoria + traducción.
+    previo = respuesta ya pagada (rechazadas/esc_N.json) para REANUDAR: no se vuelve a llamar la etapa 3+4, solo validar/reparar."""
+    n = e['numero']; aj = S.ajustes(); max_rep = int(aj['reparaciones_max'] if max_rep is None else max_rep)
+    if isinstance(previo, dict): obj, info = previo, {'reanudada': True, 'usd': 0}
+    else: obj, info = llamar(prompt, esq, f'esc{n}')
+    out = {'escena': n, 'llamada': info, 'carpeta': str(carpeta)}
+    if not isinstance(obj, dict): out.update({'ok': False, 'por_que': (info or {}).get('por_que') or (info or {}).get('error') or 'sin respuesta'}); return out
+    norm_dsl = []
+    def _validar(o):
+        norm_dsl.extend(normalizar_dsl(o)); return VA.validar(o, P, esq)
+    C, err, av = _validar(obj)
+    rep = None
+    if err and max_rep > 0:
+        S.guardar(carpeta / 'rechazadas' / f'esc_{n}.json', {'errores': err, 'respuesta': obj})
+        if C is None and any(x.startswith('esquema:') for x in err) and not isinstance(obj.get('vinetas'), list):
+            rep = {'ok': False, 'intentos': [], 'explicacion': 'la respuesta no trae viñetas: no hay qué reparar por partes'}
+        else:
+            rep = bucle(_validar, obj, err, lambda pr, k: llamar(pr, E.reparar(), f'esc{n}-rep{k}'),
+                        lambda o, er, k: prompt_reparar(texto_fijo, P, o, er, k)[0], max_rep)
+            if rep['ok']: C, err = rep['C'], []
+            else: err = rep.get('errores') or err
+    out['avisos'] = av; out['reparaciones'] = rep and {k: rep[k] for k in ('ok', 'intentos') if k in rep}
+    if err:
+        out.update({'ok': False, 'errores': err[:40], 'explicacion': (rep or {}).get('explicacion')}); return out
+    sb = {'version': VERSION, 'de': de, 'escena': n, 'duracion_s': P['duracion_s'], 'niveles': P['niveles'], 'niveles_aplicados': C['niveles_aplicados'],
+          'etapa1_segmentos_genero': P['segmentos'], 'etapa2_perfiles_por_segmento': P['perfiles'], 'etapa3_narrativa': C['narrativa'],
+          'vinetas': C['vinetas'], 'memoria_entrada': P['memoria_entrada'], 'memoria_salida': C['memoria_salida'], 'revision': C.get('revision'),
+          'dsl_commit': S.DSL_COMMIT, 'avisos': sorted(set(P['avisos'] + av)), 'fecha': time.strftime('%Y-%m-%dT%H:%M:%S%z')}
+    if P.get('hablantes_colectivos'): sb['hablantes_colectivos'] = P['hablantes_colectivos']
+    if norm_dsl: sb['normalizaciones_dsl'] = norm_dsl
+    if de.startswith('FALSO'): sb['_FALSO'] = FALSO
+    out['archivo'] = S.guardar(carpeta / f'esc_{n}.json', sb)
+    out['memoria'] = ME.registrar(carpeta, n, P['memoria_entrada'], C['memoria_salida'], de)
+    try:
+        import alturas_blender as AB
+        alt = lambda pid: AB.altura(a.canal, a.capitulo, n, pid)
+    except Exception:
+        alt = lambda pid: (None, None)
+    out['blender'] = S.guardar(carpeta / 'blender' / f'esc_{n}_camara.json', TR.traducir(sb, alt))
+    out.update({'ok': True, 'vinetas': len(C['vinetas'])}); return out
+
+
+# ---------------- comandos ----------------
+def preparar(a):
+    import paso01_cubos as K
+    D = K.carpeta(a.canal, a.capitulo)
+    if not D: raise SystemExit(json.dumps({'ok': False, 'error': 'no encuentro el capítulo'}, ensure_ascii=False))
+    cd = K.canal(a.canal); PC = K.personajes_canal(a.canal); guion = K._guion(D); esc = K.escenas(D)
+    return K, D, cd, PC, guion, esc
+
+
+def niveles_escena(a, n):
+    return S.niveles(a.canal, a.capitulo, n)
+
+
+def cmd_cotizar(a, falso_01=None, etapa1=None):
+    K, D, cd, PC, guion, esc = preparar(a); SB = D / 'cubos' / 'SB'; avisos, faltan, filas = [], [], []
+    nv_cap, avn = S.niveles(a.canal, a.capitulo, '*'); avisos += avn
+    p1, _, _ = prompt_etapa1(K, D, guion, esc, nv_cap['nivel_1_genero_tono'])
+    solo0 = [x.strip() for x in (a.escena or '').split(',') if x.strip()]
+    p1o = prompt_etapa1(K, D, guion, esc, nv_cap['nivel_1_genero_tono'], solo0)[0] if solo0 else None
+    PD = SB / '_prueba_falsa' / 'pedidos' if falso_01 else SB / 'pedidos'   # con 01 falso nada cae en la carpeta real
+    PD.mkdir(parents=True, exist_ok=True); (PD / 'etapa1_capitulo.txt').write_text(p1, encoding='utf-8')
+    e1 = S.leer(etapa1) if etapa1 else S.leer(SB / 'etapa1_generos.json')
+    if isinstance(e1, dict) and 'respuesta' in e1: e1 = e1['respuesta']
+    chars = {}; solo = [x.strip() for x in (a.escena or '').split(',') if x.strip()]
+    for e in esc:
+        n = e['numero']
+        if solo and n not in solo: continue
+        C01, origen, falta = accion_01(K, D, n, falso_01 if (falso_01 and str(n) in solo) else None)
+        if falta: faltan.append(falta); filas.append({'escena': n, 'cotizable': False, 'por_que': falta}); continue
+        fichas = fichas_escena(K, D, a, e, PC, avisos); nv, avn = niveles_escena(a, n); avisos += avn
+        orden = [x['numero'] for x in esc]; prev = orden[orden.index(n) - 1] if orden.index(n) else None
+        hechos = ((next((x for x in esc if x['numero'] == prev), {}).get('datos') or {}).get('continuidad') or {}).get('hechos_primarios') if prev else None
+        mem, avm = ME.entrada(SB, orden, n, hechos); avisos += avm
+        P, f2 = contexto(K, D, a, e, cd, fichas, guion, e1 or {'escenas': []}, C01, mem, nv); faltan += f2
+        pr, _, _ = prompt_escena(P, e, C01)
+        (PD / f'esc_{n}.txt').write_text(pr, encoding='utf-8'); chars[n] = len(pr)
+        filas.append({'escena': n, 'cotizable': True, 'origen_01': origen, 'chars_prompt': len(pr), 'segmentos_genero': len(P['segmentos']),
+                      'dialogos_guion': len(P['dialogos']), 'palabras_dialogo': sum(len(S.palabras(d['texto'])) for d in P['dialogos']),
+                      'duracion_01_s': P['duracion_s'], 'pedido': str(PD / f'esc_{n}.txt')})
+    cot = cotizacion(K, cd, len(p1), chars, len(esc), len(p1o) if p1o else None, len(solo0) or None) if chars else {'ok': False, 'motivo': 'ninguna escena cotizable (falta el 01 accion_v1)'}
+    out = K.r_base('SB', D, {'version': VERSION, 'escenas': filas, 'cotizacion': cot, 'faltan': sorted(set(faltan)), 'avisos': sorted(set(avisos))[:40],
+                             'chars_etapa1': len(p1), 'niveles_capitulo': nv_cap,
+                             'diseno': 'etapa 1 = 1 llamada por capítulo · etapa 2 = código · etapas 3+4 = 1 llamada por escena · reparación máx. 2 (solo viñetas fallidas)'})
+    if falso_01: out['_FALSO_01'] = f'la acción 01 de la escena {a.escena} es un archivo FALSO de prueba: {falso_01}'
+    out['archivo'] = K.guardar(SB / ('_prueba_falsa/cotizacion.json' if falso_01 else 'cotizacion.json'), out)
+    return out
+
+
+def cmd_seco_falso(a):
+    """Tubería completa SIN pagar: 01 falso + etapa 1 falsa + respuesta 3+4 falsa (+ reparaciones falsas opcionales). Escribe en cubos/SB/_prueba_falsa/."""
+    K, D, cd, PC, guion, esc = preparar(a); n = a.escena; SB = D / 'cubos' / 'SB'; PF = SB / '_prueba_falsa'
+    e = next(x for x in esc if x['numero'] == n); avisos = []
+    C01, origen, falta = accion_01(K, D, n, a.falso_01)
+    if falta: return {'ok': False, 'por_que': falta}
+    fichas = fichas_escena(K, D, a, e, PC, avisos); nv, avn = niveles_escena(a, n)
+    e1 = S.leer(a.etapa1_falsa); e1 = e1.get('respuesta', e1)
+    orden = [x['numero'] for x in esc]; prev = orden[orden.index(n) - 1] if orden.index(n) else None
+    hechos = ((next((x for x in esc if x['numero'] == prev), {}).get('datos') or {}).get('continuidad') or {}).get('hechos_primarios') if prev else None
+    mem, avm = ME.entrada(PF, orden, n, hechos)
+    if a.memoria_falsa: mem.update(S.leer(a.memoria_falsa).get('memoria', {})); mem['fuente'] = f'FALSO: {a.memoria_falsa}'
+    P, faltan = contexto(K, D, a, e, cd, fichas, guion, e1, C01, mem, nv)
+    pr, txt, esq = prompt_escena(P, e, C01)
+    PF.mkdir(parents=True, exist_ok=True); (PF / f'pedido_esc_{n}.txt').write_text(pr, encoding='utf-8')
+    S.guardar(PF / 'etapa1_generos.json', {'_FALSO': FALSO, 'respuesta': e1})
+    resp = [S.leer(a.respuesta_falsa)] + [S.leer(x) for x in (a.reparacion_falsa or [])]
+    def llamar(prompt, esq_, clave, cola=resp):
+        if not cola: return None, {'parar': True, 'por_que': 'no hay más respuestas falsas'}
+        x = cola.pop(0); x = x.get('respuesta', x); return copy.deepcopy(x), {'usd': 0, 'ledger': None, 'FALSO': True, 'clave': clave}
+    r = dirigir_escena(K, D, a, cd, e, P, pr, txt, esq, llamar, PF, 'FALSO (prueba seca, sin Argon)')
+    r.update({'_FALSO': FALSO, 'origen_01': origen, 'faltan': faltan, 'avisos_entrada': avisos + avn + avm, 'chars_prompt': len(pr), 'usd_gastado': 0, 'llamadas_pagas': 0})
+    S.guardar(PF / f'informe_esc_{n}.json', r); return r
+
+
+def cmd_revalidar(a):
+    """Vuelve a validar un storyboard guardado (gratis)."""
+    K, D, cd, PC, guion, esc = preparar(a); n = a.escena; sb = S.leer(a.archivo)
+    e = next(x for x in esc if x['numero'] == n); C01, _, falta = accion_01(K, D, n, a.falso_01)
+    if falta: return {'ok': False, 'por_que': falta}
+    fichas = fichas_escena(K, D, a, e, PC, []); nv, _ = niveles_escena(a, n)
+    P, _ = contexto(K, D, a, e, cd, fichas, guion, {'escenas': [{'escena': n, 'segmentos': sb['etapa1_segmentos_genero']}]}, C01, sb['memoria_entrada'], nv)
+    obj = {'escena': n, 'duracion_s': sb['duracion_s'], 'niveles_aplicados': sb['niveles_aplicados'], 'narrativa': sb['etapa3_narrativa'], 'vinetas': sb['vinetas'],
+           'memoria_salida': sb['memoria_salida'], 'revision': sb.get('revision') or []}
+    nd = normalizar_dsl(obj); C, err, av = VA.validar(obj, P, E.etapa3y4()); return {'ok': not err, 'errores': err, 'avisos': av, 'normalizaciones_dsl': nd}
+
+
+def cmd_config_iniciar(a):
+    """Crea canales/<canal>.json con los 3 niveles desde los datos del canal. Lo que no está = «por definir» (nunca se inventa)."""
+    import paso01_cubos as K
+    f = S.AQUI / 'canales' / f'{a.canal}.json'
+    if f.is_file() and not a.forzar: return {'ok': False, 'por_que': f'ya existe {f} (usar --forzar para rehacerlo; se respalda)'}
+    cd = K.canal(a.canal) or {}; sf = cd.get('style_fijo') or {}
+    gen = [g.strip() for g in (a.generos or '').split(',') if g.strip()]
+    malos = [g for g in gen if SP.perfil(g)[1] is None]
+    if malos: return {'ok': False, 'por_que': f'géneros sin perfil: {malos}'}
+    x = {'canal': a.canal, 'nombre': cd.get('name') or cd.get('nombre'), 'version': VERSION, 'generado': time.strftime('%Y-%m-%dT%H:%M:%S%z'),
+         'PISTA': 'Tres niveles SEPARADOS (Ricardo t330u). Se pisan por capítulo (por_capitulo["1"]) y por escena (por_escena["1/9"]), cada nivel solo consigo mismo.',
+         'nivel_1_genero_tono': {'estado': f'definido ({a.fuente})' if gen else S.POR_DEFINIR, 'generos': [SP.perfil(g)[0] for g in gen],
+                                 'tono_general': S.POR_DEFINIR, 'pistas_del_canal': {'x23_story_type': cd.get('x23_story_type'), 'narration_tone': cd.get('narration_tone')},
+                                 'nota': 'Los géneros del canal son la MEZCLA permitida; la etapa 1 detecta cuál domina en cada tramo de cada escena.'},
+         'nivel_2_estilo_visual': {'estado': 'del canal (style_fijo); categoría del catálogo por confirmar' if sf else S.POR_DEFINIR,
+                                   'estilo_catalogo': a.estilo or S.POR_DEFINIR, 'estilo_fijo_del_canal': sf.get('name') or sf.get('nombre') or cd.get('style'),
+                                   'style_del_canal': cd.get('style')},
+         'nivel_3_direccion_artistica': {'estado': S.POR_DEFINIR, 'reglamento': None, 'nombre_propuesto': a.reglamento_nombre},
+         'por_capitulo': {}, 'por_escena': {}}
+    if f.is_file():
+        b = f.with_name(f.stem + f".{time.strftime('%Y%m%d-%H%M%S')}.json"); b.write_bytes(f.read_bytes())
+    return {'ok': True, 'archivo': S.guardar(f, x), 'config': x}
+
+
+def cmd_traducir(a):
+    sb = S.leer(a.archivo)
+    try:
+        import alturas_blender as AB; alt = lambda pid: AB.altura(a.canal, a.capitulo, a.escena, pid)
+    except Exception: alt = lambda pid: (None, None)
+    return TR.traducir(sb, alt)
+
+
+def cmd_correr(a):
+    """Camino PAGO (cerrado por defecto). No se usó en esta entrega. Revisa guarda, niveles y cotización antes de cada llamada."""
+    msg = revisar_guarda(a.ok, a.aprobado)
+    if msg: return {'ok': False, 'llamadas_pagas': 0, 'usd_gastado': 0, 'por_que': msg}
+    K, D, cd, PC, guion, esc = preparar(a)
+    nv_cap, _ = S.niveles(a.canal, a.capitulo, '*')
+    for k in S.ajustes()['pagar_exige_niveles']:
+        if str(nv_cap[k].get('estado', '')).startswith(S.POR_DEFINIR): return {'ok': False, 'llamadas_pagas': 0, 'por_que': f'{k} «por definir»: no se paga'}
+    SB = D / 'cubos' / 'SB'; usado = {'usd': 0.0}; out = {'escenas': []}
+    e1 = S.leer(SB / 'etapa1_generos.json')
+    solo = [x.strip() for x in (a.escena or '').split(',') if x.strip()]
+    pedir = [n for n in (solo or [x['numero'] for x in esc]) if not _segs_e1(e1, n)]
+    if pedir:
+        p1, t1, q1 = prompt_etapa1(K, D, guion, esc, nv_cap['nivel_1_genero_tono'], pedir)
+        nuevo, info = llamar_pagando(K, a, _cd_salida(cd, max_etapa1(len(pedir))), p1, q1, t1, 'paso_fijo_genero', 'etapa1-' + '-'.join(pedir)[:40],
+                                     SB / 'respuestas' / f"etapa1_{'-'.join(pedir)[:40]}.txt", f'storyboard etapa 1 (géneros; escenas {pedir})', usado)
+        out['etapa1'] = info
+        if not nuevo: out.update({'ok': False, 'usd_gastado': round(usado['usd'], 6)}); return out
+        e1 = _fusionar_e1(e1, nuevo); S.guardar(SB / 'etapa1_generos.json', e1)
+    for e in esc:
+        n = e['numero']
+        if solo and n not in solo: continue
+        C01, _, falta = accion_01(K, D, n)
+        if falta: out['escenas'].append({'escena': n, 'ok': False, 'por_que': falta}); continue
+        fichas = fichas_escena(K, D, a, e, PC, []); nv, _ = niveles_escena(a, n); orden = [x['numero'] for x in esc]
+        prev = orden[orden.index(n) - 1] if orden.index(n) else None
+        hechos = ((next((x for x in esc if x['numero'] == prev), {}).get('datos') or {}).get('continuidad') or {}).get('hechos_primarios') if prev else None
+        mem, _ = ME.entrada(SB, orden, n, hechos); P, faltan = contexto(K, D, a, e, cd, fichas, guion, e1, C01, mem, nv)
+        if faltan: out['escenas'].append({'escena': n, 'ok': False, 'por_que': faltan}); continue
+        pr, txt, esq = prompt_escena(P, e, C01)
+        def llamar(prompt, esq_, clave, n=n, txt=txt):
+            rep = '-rep' in clave; cdx = _cd_salida(cd, S.ajustes().get('max_salida_reparar')) if rep else _cd_salida(cd, S.ajustes().get('max_salida_escena'))
+            return llamar_pagando(K, a, cdx, prompt, esq_, S.texto(S.ajustes()['prompt_reparar']) if rep else txt, 'paso_fijo_reparar' if rep else 'paso_fijo_escena', clave,
+                                  SB / 'respuestas' / f'{clave}.txt', f'storyboard {clave}', usado)
+        prev_obj = (S.leer(SB / 'rechazadas' / f'esc_{n}.json') or {}).get('respuesta') if getattr(a, 'reanudar', False) else None
+        out['escenas'].append(dirigir_escena(K, D, a, cd, e, P, pr, txt, esq, llamar, SB, f'argon (aprobado: {a.aprobado})', previo=prev_obj))
+    out.update({'ok': all(x.get('ok') for x in out['escenas']), 'usd_gastado': round(usado['usd'], 6)}); return out
+
+
+def _resumen_correr(r):
+    esc = [{k: x.get(k) for k in ('escena', 'ok', 'vinetas', 'archivo', 'blender', 'por_que', 'explicacion', 'reparaciones') if x.get(k) is not None}
+           | ({'errores': x['errores'][:8]} if x.get('errores') else {}) for x in r.get('escenas', [])]
+    return {k: r.get(k) for k in ('ok', 'usd_gastado', 'llamadas_pagas', 'por_que', 'etapa1') if k in r} | {'escenas': esc}
+
+
+def n8n(argv):
+    """Entrada desde n8n por la entrada restringida: «paso00_cadena storyboard <cotizar|correr|validar|traducir> --canal C --capitulo N --escena E».
+    cotizar/validar/traducir: GRATIS. correr: SOLO si existe cajas/HABILITAR_PAGO_SB (JSON {"tope_usd": x, "aprobado": "…"}); monto y aprobación salen de ese archivo."""
+    ap = argparse.ArgumentParser(prog='storyboard')
+    ap.add_argument('accion', choices=['cotizar', 'correr', 'validar', 'traducir'])
+    ap.add_argument('--canal', required=True); ap.add_argument('--capitulo', default='1'); ap.add_argument('--escena', required=True)
+    a = ap.parse_args(argv)
+    for k in ('falso_01', 'etapa1_falsa', 'archivo', 'ok', 'aprobado', 'max_intentos'): setattr(a, k, None)
+    a.capitulo = str(int(float(a.capitulo)))
+    if a.accion == 'cotizar':
+        r = cmd_cotizar(a); c = r.get('cotizacion') or {}
+        return {'ok': bool(c.get('ok')), 'caja': 'SB', 'accion': 'cotizar', 'llamadas_pagas': 0, 'usd_gastado': 0, 'escenas': r.get('escenas'), 'faltan': r.get('faltan'),
+                'avisos': r.get('avisos'), 'etapa1_usd': (c.get('etapa1_capitulo') or {}).get('usd'), 'etapa1_solo_pedidas_usd': (c.get('etapa1_solo_escenas_pedidas') or {}).get('usd'), 'por_escena': c.get('por_escena'),
+                'capitulo_estimado': c.get('capitulo_estimado'), 'diseno': r.get('diseno'), 'error': None if c.get('ok') else c.get('motivo')}
+    import paso01_cubos as K
+    D = K.carpeta(a.canal, a.capitulo); SB = D / 'cubos' / 'SB' if D else None
+    f = SB / f'esc_{a.escena}.json' if SB else None
+    if a.accion == 'correr':
+        G, g = guarda_leer()
+        if g is None: return {'ok': True, 'caja': 'SB', 'accion': 'correr', 'cerrado': True, 'llamadas_pagas': 0, 'usd_gastado': 0,
+                              'nota': f'pago del storyboard cerrado (falta cajas/{G.name}); no se llamó a nada'}
+        a.ok = guarda_tope(G); a.aprobado = g.get('aprobado'); a.reanudar = bool(g.get('reanudar'))
+        if not a.aprobado: return {'ok': False, 'error': f'{G.name} sin «aprobado»: no se paga', 'llamadas_pagas': 0}
+        r = _resumen_correr(cmd_correr(a)); r.update(caja='SB', accion='correr'); return r
+    if not f or not f.is_file():
+        return {'ok': True, 'caja': 'SB', 'accion': a.accion, 'nada_todavia': True, 'llamadas_pagas': 0, 'usd_gastado': 0,
+                'nota': f'aún no hay storyboard de la escena {a.escena} (cubos/SB/esc_{a.escena}.json)'}
+    a.archivo = str(f)
+    if a.accion == 'validar':
+        r = cmd_revalidar(a)
+        return {'ok': r.get('ok'), 'caja': 'SB', 'accion': 'validar', 'archivo': str(f), 'errores': (r.get('errores') or [])[:20], 'n_errores': len(r.get('errores') or []),
+                'avisos': (r.get('avisos') or [])[:20], 'llamadas_pagas': 0, 'usd_gastado': 0, 'error': r.get('por_que') or (None if r.get('ok') else 'el storyboard guardado no pasa el validador')}
+    T = cmd_traducir(a); out = SB / 'blender' / f'esc_{a.escena}_camara.json'; S.guardar(out, T)
+    return {'ok': True, 'caja': 'SB', 'accion': 'traducir', 'archivo': str(out), 'vinetas': len(T.get('vinetas') or []), 'alturas_por_medir': T.get('alturas_por_medir'),
+            'pista': T.get('pista'), 'llamadas_pagas': 0, 'usd_gastado': 0}
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument('accion', choices=['cotizar', 'seco-falso', 'revalidar', 'traducir', 'config-iniciar', 'correr'])
+    ap.add_argument('--canal', required=True); ap.add_argument('--capitulo', default='1'); ap.add_argument('--escena')
+    ap.add_argument('--falso-01'); ap.add_argument('--etapa1-falsa'); ap.add_argument('--respuesta-falsa'); ap.add_argument('--reparacion-falsa', action='append')
+    ap.add_argument('--memoria-falsa'); ap.add_argument('--archivo')
+    ap.add_argument('--generos'); ap.add_argument('--fuente', default='Ricardo'); ap.add_argument('--estilo'); ap.add_argument('--reglamento-nombre'); ap.add_argument('--forzar', action='store_true')
+    ap.add_argument('--ok', type=float); ap.add_argument('--aprobado'); ap.add_argument('--max-intentos', type=int)
+    a = ap.parse_args(argv)
+    f = {'cotizar': lambda: cmd_cotizar(a, a.falso_01, a.etapa1_falsa), 'seco-falso': lambda: cmd_seco_falso(a), 'revalidar': lambda: cmd_revalidar(a),
+         'traducir': lambda: cmd_traducir(a), 'config-iniciar': lambda: cmd_config_iniciar(a), 'correr': lambda: cmd_correr(a)}[a.accion]
+    print(json.dumps(f(), ensure_ascii=False, indent=1))
+
+
+if __name__ == '__main__':
+    main()

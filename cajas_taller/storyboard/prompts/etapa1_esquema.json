@@ -1,0 +1,120 @@
+{
+ "properties": {
+  "arco_capitulo": {
+   "type": "string"
+  },
+  "escenas": {
+   "items": {
+    "properties": {
+     "escena": {
+      "type": "string"
+     },
+     "segmentos": {
+      "items": {
+       "properties": {
+        "desde_cita": {
+         "type": "string"
+        },
+        "emociones": {
+         "items": {
+          "type": "string"
+         },
+         "type": "array"
+        },
+        "generos": {
+         "items": {
+          "properties": {
+           "genero": {
+            "enum": [
+             "accion",
+             "aventura",
+             "ciencia_ficcion",
+             "comedia",
+             "drama",
+             "fantasia",
+             "misterio",
+             "romance",
+             "suspenso",
+             "terror"
+            ],
+            "type": "string"
+           },
+           "peso": {
+            "type": "number"
+           }
+          },
+          "required": [
+           "genero",
+           "peso"
+          ],
+          "type": "object"
+         },
+         "type": "array"
+        },
+        "hasta_cita": {
+         "type": "string"
+        },
+        "intensidad": {
+         "type": "integer"
+        },
+        "por_que": {
+         "type": "string"
+        },
+        "subgenero": {
+         "type": "string"
+        },
+        "tono": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "desde_cita",
+        "hasta_cita",
+        "generos",
+        "tono",
+        "emociones",
+        "intensidad",
+        "por_que"
+       ],
+       "type": "object"
+      },
+      "type": "array"
+     }
+    },
+    "required": [
+     "escena",
+     "segmentos"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "revision": {
+   "items": {
+    "properties": {
+     "chequeo": {
+      "type": "string"
+     },
+     "nota": {
+      "type": "string"
+     },
+     "ok": {
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "chequeo",
+     "ok"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  }
+ },
+ "required": [
+  "escenas",
+  "arco_capitulo",
+  "revision"
+ ],
+ "type": "object"
+}

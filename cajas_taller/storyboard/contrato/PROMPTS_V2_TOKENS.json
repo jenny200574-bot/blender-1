@@ -1,0 +1,153 @@
+{
+  "tokenizer": {
+    "implementation": "google.genai.local_tokenizer.LocalTokenizer",
+    "sdk_version": "2.28.0",
+    "model_name_for_tokenizer": "[REDACTED]",
+    "vocabulary": "Gemma3",
+    "kind": "conteo REAL local de texto, experimental; no estimación por caracteres",
+    "observed_ledger_model": "gemini-4-argon HIGH",
+    "caveat": "No hay equivalencia certificada con el alias privado Argon. No se hizo countTokens remoto ni generación. No incluye imágenes/audio, envoltura del proveedor, salida ni razonamiento.",
+    "source": "https://github.com/googleapis/python-genai/blob/main/google/genai/_local_tokenizer_loader.py"
+  },
+  "fixed_components": {
+    "base_tokens": "[REDACTED]",
+    "direction_template_unexpanded_tokens": "[REDACTED]",
+    "repair_template_unexpanded_tokens": "[REDACTED]",
+    "rules_compact_tokens": "[REDACTED]",
+    "schema_compact_tokens": "[REDACTED]"
+  },
+  "scene_context_estimate": {
+    "min_tokens": "[REDACTED]",
+    "max_tokens": "[REDACTED]",
+    "type": "PRESUPUESTO DE ENTRADA, NO MEDICIÓN DE CONTEXTO COMPLETO",
+    "measured_raw_01_samples": {
+      "esc_1.json": 8327,
+      "esc_2.json": 6069,
+      "esc_4.json": 10776,
+      "esc_5.json": 5423,
+      "esc_6.json": 5663,
+      "esc_7.json": 6015,
+      "esc_8.json": 8076,
+      "esc_9.json": 7905
+    },
+    "basis": "01 compacto medido5423..10776 tokens; se reserva aproximadamente otros3500..8200 para guion, memoria, ADN por referencias, manifiesto y niveles. Aún falta construir el adaptador del paso3. Un manifiesto mayor supera este rango. El 01 real deberá excluir apariencia redundante sin perder acción.",
+    "not_a_limit": "No truncar acción/ADN/geometría para encajar esta previsión. Medir cada contexto real antes de cotizar."
+  },
+  "genres": {
+    "drama": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21471,
+        31471
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    },
+    "emocion": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21463,
+        31463
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    },
+    "intriga": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21495,
+        31495
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    },
+    "suspenso": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21469,
+        31469
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    },
+    "terror": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21525,
+        31525
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    },
+    "comedia": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21504,
+        31504
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    },
+    "accion": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21515,
+        31515
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    },
+    "fantasia": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21533,
+        31533
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    },
+    "ternura": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21506,
+        31506
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    },
+    "misterio": {
+      "tokens": "[REDACTED]",
+      "direction_static_with_empty_context_tokens": "[REDACTED]",
+      "direction_with_estimated_context_tokens": [
+        21515,
+        31515
+      ],
+      "repair_static_with_empty_context_tokens": "[REDACTED]",
+      "repair_note": "Sumar contexto real, fallidas/vecinas y errores/hashes; no se presupone costo fijo ni se reenvía escena completa por defecto."
+    }
+  },
+  "file_sha256": {
+    "prompts/base_argon_cine_v2.txt": "bfead86f16637bc4f7dadc5a82e1ef73362b26375045b469254557c4df2a9604",
+    "prompts/etapa3y4_dirigir_storyboard_v2.txt": "fe87f01c880d20337ab7f2fd55c449c63775f4981350dfd86488673e0cbce175",
+    "prompts/generos_v2/accion_v2.txt": "04d384d5f794ee970d8143fabcf328b5d725dc388de9e50cf84192a98466f025",
+    "prompts/generos_v2/comedia_v2.txt": "3ecb6dd426a5d475021a1ce357fe78789789d74c8d94368b1a25eac282ac959e",
+    "prompts/generos_v2/drama_v2.txt": "920ec656577aa54bc0093ab518705b7a3b8996142ff7d7b26415243ef5405076",
+    "prompts/generos_v2/emocion_v2.txt": "4513aa10dcc71a6ff9e6fad5bf99255d7e33cbca0c2bffd0ee9f14472de33104",
+    "prompts/generos_v2/fantasia_v2.txt": "dac201bed64e403e1ae1df0d42f631722e755ebd060b9920232c749672e1d525",
+    "prompts/generos_v2/intriga_v2.txt": "2faa15b3810f00e03091f84992e475e99e48ebb023611c5a48e13fab98a644d8",
+    "prompts/generos_v2/misterio_v2.txt": "0cdc99708e76587924f1cb648495ddc079fa2dc6b3f5f78aff5a294e5c50abed",
+    "prompts/generos_v2/suspenso_v2.txt": "6fdf3b757fe860797a8a4802df4ade9649791a0d5443f12d5ec262eb9df26855",
+    "prompts/generos_v2/ternura_v2.txt": "1cf2e5edb1aa5bf919982634c5843dd9aaf93b4943f1ea279c269ca66e54f4bd",
+    "prompts/generos_v2/terror_v2.txt": "62b750ba80179f23c03daf8eabf881c453141cfd1dcaa1e027cb36d99a0d1232",
+    "prompts/reparar_storyboard_v2.txt": "4250cf3ed68237600205b4dc61bda5e8a3f9618e39580179083b324c54897de7"
+  }
+}

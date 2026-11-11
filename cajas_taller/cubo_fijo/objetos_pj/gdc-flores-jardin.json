@@ -1,0 +1,34 @@
+{
+  "id": "gdc-flores-jardin",
+  "nombre": "flores jardin",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "clase": "objeto",
+  "subclase": "escenario",
+  "sellado": true,
+  "version": 2,
+  "creado": "2026-11-06T03:35:43+01:00",
+  "por": "t467u programa 00→SELLO OBJ",
+  "adn_estado": "sin ADN Ako: pendiente extracción (pago aparte)",
+  "imagen_ref": "/opt/myia-taller-n8n/trabajo/paso00_cadena/cn-los-guardianes-de-la-9fb323be/cap01_ep-89b93118ad/ramas/imagenes/4c2/obj-flores-jardin.png",
+  "imagen_sha256": "5dd72234ffce5ee9118e39de0a138ca5c5d8482f5d574fd133a2005c07492c14",
+  "imagen_origen": "paso 00 4c2 (hoja pintada)",
+  "medidas_cm": {
+    "ancho_cm": 120,
+    "fondo_cm": 60,
+    "alto_cm": 60
+  },
+  "medidas_fuente": "4c1 inv_obj_lugar__obj-flores-jardin__aafda1.json",
+  "ids_capitulo": [
+    "obj-flores-jardin"
+  ],
+  "conectado": {
+    "por": "t467u Ricardo (programa automático 00→SELLO OBJ)",
+    "cuando": "2026-11-06T03:35:43+01:00"
+  },
+  "ids_canal": [
+    "obj-flores-jardin"
+  ],
+  "frase_sello": "Prop 3D estilizado de un macizo de cinco flores cartoon sobre una base ovalada de tierra marrón con brotes de césped, con geometría rechoncha, bordes redondeados y acabado plástico satinado mate completamente liso. Compuesto por flores de ocho pétalos gruesos en colores rosa magenta, naranja y amarillo, con centros semiesféricos amarillos que emiten un suave brillo cálido, sostenidas por tallos cilíndricos con hojas ovaladas y cálices traseros en color verde vibrante, diseñado como activo decorativo estático de suelo.",
+  "actualizado": "2026-11-06T04:03:14+01:00",
+  "origen": "sellar"
+}

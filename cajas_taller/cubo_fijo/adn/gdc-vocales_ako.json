@@ -1,0 +1,40 @@
+{
+  "schema": "myia.adn.ako/v1",
+  "id": "gdc-vocales",
+  "clase": "objeto",
+  "canal": "cn-los-guardianes-de-la-9fb323be",
+  "maestro": "03_MAESTRO_OBJETOS.txt",
+  "maestro_sha256": "35bc73f163b0280c",
+  "status": "PASS_SELLABLE",
+  "fails": [],
+  "bloques": [
+    {
+      "n": 1,
+      "titulo": "1. Identificación y Geometría Base:",
+      "texto": "- Conjunto de cinco letras volumétricas 3D independientes que forman la secuencia \"AEiou\". Geometría gruesa extruida con biseles amplios y bordes muy redondeados. Piezas sólidas de una sola pieza, excepto la \"i\" que consta de un tallo y un punto cilíndrico flotante.\n- Apoyo directo sobre el suelo. La pieza \"u\" es reversible, pudiendo apoyarse sobre su base curva inferior o invertirse boca abajo sobre sus dos extremos planos."
+    },
+    {
+      "n": 2,
+      "titulo": "2. Materiales y Paleta de Color:",
+      "texto": "- Polímero rígido o plástico moldeado con acabado satinado suave, liso y sin costuras visibles. Color gris neutro medio totalmente uniforme en todas las piezas.\n- Sin materiales secundarios, texturas de agarre ni revestimientos internos.\n- Sin emisión lumínica ni efectos de energía."
+    },
+    {
+      "n": 3,
+      "titulo": "3. Detalles Superficiales, Grabados o Componentes:",
+      "texto": "- Superficies completamente lisas, carentes de grabados, símbolos o componentes mecánicos.\n- La \"A\" presenta un hueco triangular central; la \"o\" tiene una perforación circular pasante en el centro; la \"u\" cuenta con dos cavidades rectangulares profundas en los extremos superiores de sus brazos; la \"i\" mantiene un cilindro corto levitando sobre su eje vertical."
+    },
+    {
+      "n": 4,
+      "titulo": "4. Comportamiento en Escena y Escala (LOD):",
+      "texto": "- Objetos estáticos dispuestos en fila. El punto de la \"i\" permanece suspendido en el aire de forma fija, y la letra \"u\" cambia de estado al rotarse 180 grados verticalmente (derecha o boca abajo). Proyectan sombras suaves de oclusión en la base.\n- En planos generales se simplifican como bloques tipográficos grises de silueta redondeada, perdiendo visibilidad las cavidades internas de los extremos de la \"u\"."
+    },
+    {
+      "n": 5,
+      "titulo": "5. Prompt Compacto de Inyección (1 solo párrafo):",
+      "texto": "Conjunto de cinco letras 3D volumétricas independientes formando las vocales \"AEiou\" alineadas sobre el suelo. Geometría gruesa extruida con bordes muy redondeados y biselados suaves, fabricadas en plástico liso de color gris neutro con acabado satinado uniforme. La \"A\" y \"E\" son mayúsculas, la \"i\" minúscula tiene un punto cilíndrico flotante, la \"o\" es un anillo grueso y la \"u\" posee dos huecos rectangulares en sus extremos superiores, pudiendo posicionarse derecha o invertida boca abajo como un arco."
+    }
+  ],
+  "inyeccion": "Conjunto de cinco letras 3D volumétricas independientes formando las vocales \"AEiou\" alineadas sobre el suelo. Geometría gruesa extruida con bordes muy redondeados y biselados suaves, fabricadas en plástico liso de color gris neutro con acabado satinado uniforme. La \"A\" y \"E\" son mayúsculas, la \"i\" minúscula tiene un punto cilíndrico flotante, la \"o\" es un anillo grueso y la \"u\" posee dos huecos rectangulares en sus extremos superiores, pudiendo posicionarse derecha o invertida boca abajo como un arco.",
+  "texto": "1. Identificación y Geometría Base:\n\n- Conjunto de cinco letras volumétricas 3D independientes que forman la secuencia \"AEiou\". Geometría gruesa extruida con biseles amplios y bordes muy redondeados. Piezas sólidas de una sola pieza, excepto la \"i\" que consta de un tallo y un punto cilíndrico flotante.\n- Apoyo directo sobre el suelo. La pieza \"u\" es reversible, pudiendo apoyarse sobre su base curva inferior o invertirse boca abajo sobre sus dos extremos planos.\n\n2. Materiales y Paleta de Color:\n\n- Polímero rígido o plástico moldeado con acabado satinado suave, liso y sin costuras visibles. Color gris neutro medio totalmente uniforme en todas las piezas.\n- Sin materiales secundarios, texturas de agarre ni revestimientos internos.\n- Sin emisión lumínica ni efectos de energía.\n\n3. Detalles Superficiales, Grabados o Componentes:\n\n- Superficies completamente lisas, carentes de grabados, símbolos o componentes mecánicos.\n- La \"A\" presenta un hueco triangular central; la \"o\" tiene una perforación circular pasante en el centro; la \"u\" cuenta con dos cavidades rectangulares profundas en los extremos superiores de sus brazos; la \"i\" mantiene un cilindro corto levitando sobre su eje vertical.\n\n4. Comportamiento en Escena y Escala (LOD):\n\n- Objetos estáticos dispuestos en fila. El punto de la \"i\" permanece suspendido en el aire de forma fija, y la letra \"u\" cambia de estado al rotarse 180 grados verticalmente (derecha o boca abajo). Proyectan sombras suaves de oclusión en la base.\n- En planos generales se simplifican como bloques tipográficos grises de silueta redondeada, perdiendo visibilidad las cavidades internas de los extremos de la \"u\".\n\n5. Prompt Compacto de Inyección (1 solo párrafo):\n\nConjunto de cinco letras 3D volumétricas independientes formando las vocales \"AEiou\" alineadas sobre el suelo. Geometría gruesa extruida con bordes muy redondeados y biselados suaves, fabricadas en plástico liso de color gris neutro con acabado satinado uniforme. La \"A\" y \"E\" son mayúsculas, la \"i\" minúscula tiene un punto cilíndrico flotante, la \"o\" es un anillo grueso y la \"u\" posee dos huecos rectangulares en sus extremos superiores, pudiendo posicionarse derecha o invertida boca abajo como un arco.",
+  "creado": "2026-11-06T04:03:15+01:00"
+}

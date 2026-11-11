@@ -1,0 +1,5 @@
+{
+  "nota": "Qué no va a receta Argon, por tipo o por marca del plan, no por id de un canal o una pieza. El plan puede poner estructura, efecto o no_receta en true.",
+  "flags_plan": ["estructura", "efecto", "no_receta"],
+  "nombres_estructura": ["Techo", "Pared", "Piso", "Suelo", "Centro", "Cielo", "Zócalo"]
+}

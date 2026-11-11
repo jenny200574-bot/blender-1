@@ -1,0 +1,152 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "myia/ARGON_C_plan_tomas.schema.json",
+ "title": "ARGON C (BORRADOR o92, NO FIJO) — plan de tomas cinematográfico por láminas",
+ "description": "PISTA INMI (2026-10-29): orden 92. Salida de Argon para el cubo 05. Argon decide la INTENCIÓN de cada toma; el código (validador_argon_c.py + compilador en Blender) comprueba eje, lados de pantalla, encuadre y oclusión, y ajusta la posición exacta. Universal: no lleva datos de ningún canal. Las reglas que no caben en JSON Schema están en x-reglas_codigo y las revisa validador_argon_c.py.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["resumen_es", "validacion_blender", "contradicciones_entrada", "total_s", "ejes", "laminas"],
+ "properties": {
+  "resumen_es": {"type": "string", "minLength": 1, "maxLength": 1200},
+  "validacion_blender": {"type": "string", "minLength": 1},
+  "contradicciones_entrada": {
+   "type": "array",
+   "description": "Datos de la entrada que se contradicen y cuál se usó (manda ESTADO DE LA ESCENA, luego POSICIONES). Vacío si no hay.",
+   "items": {"type": "object", "additionalProperties": false, "required": ["que", "valores", "se_uso"],
+    "properties": {"que": {"type": "string"}, "valores": {"type": "array", "items": {"type": "string"}}, "se_uso": {"type": "string"}}}
+  },
+  "total_s": {"type": "number", "exclusiveMinimum": 0},
+  "ejes": {
+   "type": "array", "minItems": 1,
+   "description": "Líneas de acción (eje de 180°) de la escena. Una por tramo. lado_camara = lado de la línea donde va la cámara, mirando de 'desde' hacia 'hacia' en planta.",
+   "items": {"type": "object", "additionalProperties": false,
+    "required": ["id", "t", "desde", "hacia", "lado_camara", "motivo"],
+    "properties": {
+     "id": {"type": "string", "pattern": "^E[0-9]+$"},
+     "t": {"type": "array", "prefixItems": [{"type": "number"}, {"type": "number"}], "minItems": 2, "maxItems": 2},
+     "desde": {"type": "string", "description": "id de personaje u objeto"},
+     "hacia": {"type": "string"},
+     "lado_camara": {"enum": ["izquierda", "derecha"]},
+     "motivo": {"type": "string"}
+    }}
+  },
+  "laminas": {
+   "type": "array", "minItems": 1,
+   "items": {"$ref": "#/$defs/lamina"}
+  }
+ },
+ "$defs": {
+  "xyz": {"type": "array", "prefixItems": [{"type": "number"}, {"type": "number"}, {"type": "number"}], "minItems": 3, "maxItems": 3, "items": false},
+  "pose_camara": {
+   "type": "object", "additionalProperties": false,
+   "required": ["pos_m", "mira_a_m", "lente_mm"],
+   "properties": {
+    "pos_m": {"$ref": "#/$defs/xyz"},
+    "mira_a_m": {"$ref": "#/$defs/xyz"},
+    "lente_mm": {"type": "number", "minimum": 12, "maximum": 200}
+   }
+  },
+  "personaje_en_cuadro": {
+   "type": "object", "additionalProperties": false,
+   "required": ["id", "pose", "lado_pantalla", "alto_pct", "mira_hacia"],
+   "properties": {
+    "id": {"type": "string"},
+    "pose": {"type": "string", "description": "Solo de la lista de poses permitidas; 'fuera_de_campo' si no se ve."},
+    "lado_pantalla": {"enum": ["izquierda", "centro_izquierda", "centro", "centro_derecha", "derecha", "fuera"]},
+    "alto_pct": {"type": "number", "minimum": 0, "maximum": 100},
+    "mira_hacia": {"enum": ["izquierda_pantalla", "derecha_pantalla", "camara", "abajo", "arriba", "fuera"]},
+    "se_mueve_hacia": {"enum": ["izquierda_pantalla", "derecha_pantalla", "hacia_camara", "alejandose", "quieto"]}
+   }
+  },
+  "cuadro": {
+   "type": "object", "additionalProperties": false,
+   "required": ["n", "t", "accion", "cambio_pct", "personajes"],
+   "properties": {
+    "n": {"type": "integer", "minimum": 1},
+    "t": {"type": "number", "minimum": 0},
+    "accion": {"type": "string", "minLength": 1},
+    "cambio_pct": {"type": "number", "minimum": 0, "maximum": 100, "description": "Cuánto cambia respecto al cuadro anterior (regla 90/10). Cuadro 1 = 0."},
+    "personajes": {"type": "array", "items": {"$ref": "#/$defs/personaje_en_cuadro"}}
+   }
+  },
+  "lamina": {
+   "type": "object", "additionalProperties": false,
+   "required": ["id", "beats", "t_ini", "t_fin", "duracion_s", "proposito_emocional", "funcion_cobertura",
+                "tamano_plano", "angulo_vertical", "angulo_vertical_grados", "holandes_grados", "camara",
+                "eje", "direccion_pantalla", "transicion", "oclusion_ok", "tecnica_anti_oclusion",
+                "cuadros", "dialogo_referencia", "nota_encadenamiento", "prompt"],
+   "properties": {
+    "id": {"type": "string", "pattern": "^L[0-9]{2,3}$"},
+    "beats": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "t_ini": {"type": "number", "minimum": 0},
+    "t_fin": {"type": "number", "exclusiveMinimum": 0},
+    "duracion_s": {"type": "number", "description": "Una de las duraciones de clip del canal (p. ej. 4, 6 u 8)."},
+    "proposito_emocional": {"type": "string", "minLength": 1, "description": "Qué debe sentir el espectador y por qué este plano lo logra (1 línea)."},
+    "funcion_cobertura": {"enum": ["establecimiento", "master", "plano_conjunto", "sobre_hombro", "contraplano", "individual", "reaccion", "subjetivo_pov", "inserto", "detalle"]},
+    "tamano_plano": {"enum": ["GPG", "PG", "PE", "PA", "PM", "PMC", "PP", "PPP", "PD"],
+                      "description": "GPG gran plano general, PG general, PE entero, PA americano, PM medio, PMC medio corto, PP primer plano, PPP primerísimo, PD detalle."},
+    "angulo_vertical": {"enum": ["cenital", "picado", "normal", "contrapicado", "nadir"]},
+    "angulo_vertical_grados": {"type": "number", "minimum": -90, "maximum": 90, "description": "Positivo = cámara mira hacia arriba (contrapicado)."},
+    "holandes_grados": {"type": "number", "minimum": -30, "maximum": 30},
+    "camara": {
+     "type": "object", "additionalProperties": false,
+     "required": ["inicio", "fin", "altura_ref", "movimiento", "velocidad", "foco"],
+     "properties": {
+      "inicio": {"$ref": "#/$defs/pose_camara"},
+      "fin": {"$ref": "#/$defs/pose_camara"},
+      "altura_ref": {"enum": ["suelo", "rodilla", "cadera", "pecho", "ojos", "sobre_cabeza", "aerea"]},
+      "movimiento": {"enum": ["fija", "paneo", "tilt", "zoom_in", "zoom_out", "rack_focus", "dolly_in", "dolly_out", "travelling_lateral", "grua_sube", "grua_baja", "arco", "seguimiento", "camara_en_mano"]},
+      "velocidad": {"enum": ["ninguna", "lenta", "media", "rapida"]},
+      "sujeto_del_movimiento": {"type": ["string", "null"]},
+      "foco": {"type": "object", "additionalProperties": false, "required": ["inicio", "fin"],
+               "properties": {"inicio": {"type": "string"}, "fin": {"type": "string"}}}
+     }
+    },
+    "eje": {
+     "type": "object", "additionalProperties": false,
+     "required": ["linea_id", "lado_camara", "cruza", "como_cruza"],
+     "properties": {
+      "linea_id": {"type": "string"},
+      "lado_camara": {"enum": ["izquierda", "derecha", "sobre_la_linea"]},
+      "cruza": {"type": "boolean"},
+      "como_cruza": {"enum": ["no_cruza", "plano_neutro_sobre_el_eje", "camara_cruza_en_cuadro", "personaje_cruza_en_cuadro", "inserto_intermedio", "cambio_de_eje_por_nueva_linea"]}
+     }
+    },
+    "direccion_pantalla": {"enum": ["izquierda_a_derecha", "derecha_a_izquierda", "hacia_camara", "alejandose", "ninguna"]},
+    "transicion": {
+     "type": "object", "additionalProperties": false,
+     "required": ["tipo", "desde_lamina", "que_se_conserva", "cambio_tamano", "cambio_angulo_grados"],
+     "properties": {
+      "tipo": {"enum": ["primera", "encadenado_mismo_plano", "corte_directo", "corte_en_accion", "corte_en_mirada", "match_cut_forma", "inserto", "fundido"]},
+      "desde_lamina": {"type": ["string", "null"]},
+      "que_se_conserva": {"type": "string", "description": "Pose, mirada, dirección o forma que une esta lámina con la anterior."},
+      "cambio_tamano": {"enum": ["igual", "mas_cerrado", "mas_abierto", "no_aplica"]},
+      "cambio_angulo_grados": {"type": "number", "minimum": 0, "maximum": 180}
+     }
+    },
+    "oclusion_ok": {"type": "boolean"},
+    "tecnica_anti_oclusion": {"type": "string"},
+    "fondo_esperado": {"type": "array", "items": {"type": "string"}, "description": "Objetos del set que Argon espera ver. El código los recalcula con la cámara real y manda lo calculado."},
+    "danios_visibles": {"type": "array", "items": {"type": "string"}},
+    "cuadros": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/cuadro"}},
+    "dialogo_referencia": {"type": "string"},
+    "nota_encadenamiento": {"type": "string"},
+    "prompt": {"type": "string", "minLength": 1}
+   }
+  }
+ },
+ "x-reglas_codigo": [
+  "R01 duraciones: cada duracion_s está en {duraciones_clip_s}; t_fin - t_ini == duracion_s (±0.25 s); la suma == duracion_s de la escena (±0.5 s).",
+  "R02 tiempo seguido: t_ini de la lámina n+1 == t_fin de la lámina n; la primera empieza en 0; los beats cubren todos los de la escena.",
+  "R03 cuadros: exactamente {lamina_cuadros}; n = 1..N; t creciente y dentro de [t_ini, t_fin].",
+  "R04 regla 90/10: cuadro 1 cambio_pct = 0; desde el 2, cambio_pct entre 10 y 20.",
+  "R05 movimiento coherente: fija → inicio == fin; paneo/tilt → misma pos y lente, cambia mira; zoom → misma pos, cambia lente; rack_focus → todo igual y foco.inicio != foco.fin; dolly/travelling/grúa/arco/seguimiento → cambia pos. El movimiento debe estar en {movimientos_permitidos}.",
+  "R06 eje 180°: lado_camara de la lámina == lado_camara de su línea en ejes[]; si cambia respecto a la lámina anterior, cruza=true y como_cruza != no_cruza. Con POSICIONES el código recalcula el lado con la cámara real.",
+  "R07 lado de pantalla: el código proyecta a cada personaje con la cámara de inicio; debe caer en el tercio declarado (tolerancia 0.1).",
+  "R08 miradas: en un plano con dos personajes que se miran, el de la izquierda mira a la derecha y viceversa.",
+  "R09 regla de 30°: entre dos láminas con corte, si cambio_angulo < 30° y cambio_tamano == igual → aviso de salto (jump cut).",
+  "R10 nota_encadenamiento: desde la lámina 2, literal la frase fija del canal.",
+  "R11 prompt: contiene el estilo, la paleta y las fichas TAL CUAL, 'no text, no subtitles, no speech bubbles, no letters' y los marcadores [[UV:...]] de accesorios con lado anatómico; no dice 'left/right of the image' para esos accesorios.",
+  "R12 transición: la primera lámina lleva tipo 'primera' y desde_lamina null; las demás desde_lamina = id de la anterior."
+ ]
+}

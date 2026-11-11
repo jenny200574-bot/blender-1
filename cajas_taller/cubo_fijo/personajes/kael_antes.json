@@ -1,0 +1,16 @@
+{
+  "id": "kael_antes",
+  "adn_id": "kael",
+  "variante": "antes",
+  "voz_ref": "banco_voz/voz_kael.json",
+  "vistas": [
+    "frente",
+    "espalda",
+    "3_4",
+    "emociones"
+  ],
+  "sellado": false,
+  "version": 1,
+  "origen": "semilla_ako_cubo_cargar_js",
+  "canal": "genesis"
+}

@@ -1,0 +1,121 @@
+{
+  "pasan": 20,
+  "fallan": 0,
+  "pruebas": [
+    {
+      "prueba": "schema draft2020-12 valido",
+      "ok": true
+    },
+    {
+      "prueba": "original informe2.0.0 detectado incompatible sin migracion silenciosa",
+      "ok": true
+    },
+    {
+      "prueba": "fixture2.1.0 solo prueba cumple schema",
+      "ok": true
+    },
+    {
+      "prueba": "fixture cumple chequeos logicos disponibles con contexto ficticio rotulado",
+      "ok": true
+    },
+    {
+      "prueba": "sin contexto anterior Dolly queda bloqueado",
+      "ok": true
+    },
+    {
+      "prueba": "arousal fuera0..1",
+      "ok": true
+    },
+    {
+      "prueba": "ADN override prohibido",
+      "ok": true
+    },
+    {
+      "prueba": "apariencia nueva prohibida",
+      "ok": true
+    },
+    {
+      "prueba": "pre-roll0.6 rechazado",
+      "ok": true
+    },
+    {
+      "prueba": "Dolly REVEAL sin delta suficiente",
+      "ok": true
+    },
+    {
+      "prueba": "r_head PMC fuera rango",
+      "ok": true
+    },
+    {
+      "prueba": "flag lectura falso en PD",
+      "ok": true
+    },
+    {
+      "prueba": "cuadro final incoherente bloqueado",
+      "ok": true
+    },
+    {
+      "prueba": "pesos no normalizados bloqueados",
+      "ok": true
+    },
+    {
+      "prueba": "GPP duplicado bloqueado",
+      "ok": true
+    },
+    {
+      "prueba": "PD consecutivos bloqueados",
+      "ok": true
+    },
+    {
+      "prueba": "35% sin movimiento medido no se presume",
+      "ok": true
+    },
+    {
+      "prueba": "35% solo global con traslado medido",
+      "ok": true
+    },
+    {
+      "prueba": "excepcion no permite dos amplios en ventana5",
+      "ok": true
+    },
+    {
+      "prueba": "clock ejemplo181..276 =96cuadros",
+      "ok": true
+    }
+  ],
+  "original_informe_errores_schema": [
+    {
+      "ruta": "version",
+      "mensaje": "'2.1.0' was expected"
+    },
+    {
+      "ruta": "2_visible_action_dialogue_reaction/dialogue",
+      "mensaje": "{'speaker_id': 'CHAR_RENATO', 'text': 'Seguro que nadie entró al estudio anoche.', 'delivery_tone': 'calm_forced', 'timing_sec': {'start_offset': 0.6, 'end_offset': 3.1}, 'cut_type': 'J_CUT_AUDIO_LEAD_0.3S'} is not valid under any of the given schemas"
+    },
+    {
+      "ruta": "3_subjects_and_hierarchy",
+      "mensaje": "'utility_weights' is a required property"
+    },
+    {
+      "ruta": "13_acceptance_correction_rejection_rules/responsible_module_on_block",
+      "mensaje": "'MISSING_UPSTREAM_ACTION' is a required property"
+    },
+    {
+      "ruta": "13_acceptance_correction_rejection_rules/responsible_module_on_block/MISSING_EMOTION_OR_BEAT",
+      "mensaje": "'SB_ARGON' was expected"
+    },
+    {
+      "ruta": "1_narrative_and_emotion",
+      "mensaje": "'arousal_delta' is a required property"
+    }
+  ],
+  "fixture": "SOLO PRUEBA; sin aprobacion artistica ni datos de capitulo",
+  "pendiente_para_operar": [
+    "ADN/catalogo y checksums reales",
+    "continuidad de escena completa",
+    "manifest espacial y rig",
+    "Blender Gate1",
+    "voz medida si aplica"
+  ],
+  "sin_red_ia_gasto_y_sin_escribir_datos": true
+}

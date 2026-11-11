@@ -1,0 +1,22 @@
+{
+ "id": "gdc-rayo-don-caos",
+ "nombre": "Rayo de Don Caos (¡ZAP!)",
+ "clase": "poder",
+ "subclase": "efecto",
+ "dueno": "gdc-don-caos",
+ "sale_de": "gdc-pistola-don-caos",
+ "nunca_cambia": "Rayo morado que cruza la pantalla con «¡ZAP!»; borra letras, colores y números (no hiere a nadie).",
+ "canal": "cn-los-guardianes-de-la-9fb323be",
+ "sellado": false,
+ "version": 1,
+ "adn_estado": "sin ADN Ako: espera la imagen pintada del paso 00 (4b2) y SELLO OBJ; PAGO CERRADO",
+ "creado": "2026-11-02T16:50:00-05:00",
+ "por": "ingeniero MYIA (orden Ricardo 2-nov-2026)",
+ "regla": "SELLO FIJO del canal: se escribe una vez; versión nueva solo por cubo_fijo sellar",
+ "referencia_retirada": {
+  "ruta": "/opt/myia-taller-n8n/trabajo/biblioteca/cn-los-guardianes-de-la-9fb323be/personajes/don-caos/referencia-cliente/refs/d3ddaeb70fed28cb.jpg",
+  "motivo": "foto original del personaje: un objeto no la usa como referencia (orden Ricardo 2-nov-2026)",
+  "cuando": "2026-11-02T18:20:00-05:00"
+ },
+ "origen_imagen": "la crea el paso 00 del flujo (4b/4b2 → SELLO OBJ, imagen pintada); si necesita al personaje, usa la hoja aprobada de cubo_fijo/hojas/"
+}

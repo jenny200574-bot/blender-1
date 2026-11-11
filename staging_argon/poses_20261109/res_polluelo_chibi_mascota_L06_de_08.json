@@ -1,0 +1,12 @@
+{
+  "caso": "polluelo_chibi_mascota_L06_de_08",
+  "enviado": true,
+  "id": "poses-polluelo_chibi_mascota_L06_de_08-20261109-211454",
+  "est": 0.7416,
+  "usd_real": 0.3805,
+  "fin": "FinishReason.STOP",
+  "tokens_entrada": "[REDACTED]",
+  "tokens_salida": "[REDACTED]",
+  "salida": "/opt/myia-staging-arreglos-20261026/poses_20261109/respuestas/polluelo_chibi_mascota_L06_de_08.json",
+  "gastado_acumulado_usd": 2.833
+}

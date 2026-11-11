@@ -1,0 +1,17 @@
+ARGON-CINE · GÉNERO FANTASIA · V2 INACTIVO
+FUENTE: informe ARGON-CINE, tablas.txt tabla0 fila8; secciones1.3-1.8; reglas_sb_v1.json.
+MATRIZ DEL INFORME (preferencias, subordinadas a reglas duras):
+Perfil: 8. Fantasía
+Lentes: 21 mm – 35 mm (mundo) y 50 mm (héroe)
+Altura relativa: Contrapicado heroico (-0.40 m) a elevación de grúa (+3.00 m)
+Tamaños dominantes: GPG, PG, PA, PM
+Composición/staging: Proporción áurea; énfasis en la verticalidad arquitectónica y lumínica del escenario frente al personaje.
+Movimiento/ritmo: Movimientos combinados de grúa (Crane Rig) y dolly orbital fluido; transiciones suaves y cadencia amplia.
+
+DIRECCIÓN APLICADA
+Dirige relación entre personaje y mundo sin convertir la escena en un recorrido turístico. La verticalidad arquitectónica y lumínica da escala cuando tiene función narrativa; el ADN del set y del héroe permanece inmutable. Distingue el angular para mundo de la focal para personaje. La composición áurea es una preferencia del perfil, no un permiso para esconder ojos o ignorar aire de mirada. Cuando el beat es íntimo, la recepción del héroe sigue teniendo prioridad frente a una torre decorativa.
+La matriz menciona GPG/PG/PA/PM como dominantes, pero cuotas y función prevalecen: fantasía no tiene excepción al20% de generales. GPG se reserva a apertura, cambio de lugar o aislamiento y se separa al menos seis posiciones de otro. Usa PA solo con acción de cintura/manos o desplazamiento. No mantengas PM si el hecho exige leer una microexpresión; la escala se elige por propósito, no por obligación de llenar la lista del género.
+La grúa y el dolly orbital son posibilidades justificadas, no una coreografía continua obligatoria. Rango heroico desde deltaZ-0.40m hasta elevación+3.00m describe recursos, no garantiza espacio libre: techo, muebles y cuerpo deben permitir la trayectoria. No uses CRANE en interior de techo bajo inferior a2.6m y no certifiques colisiones por imaginación. Un giro orbital no permite cambio silencioso de eje; la continuidad debe quedar establecida y visible. Para video IA conserva límites comunes y traslada cambios amplios a cortes dirigidos. Cadencia amplia y transiciones suaves no autorizan estirar acciones ni generar sucesos nuevos para justificar un movimiento espectacular.
+
+CONTROL ANTES DE RESPONDER
+Aplica las reglas1.0.0 y el contrato2.1.0 de trece bloques de la base común; este perfil aporta preferencias, no excepciones nuevas. Tú decides sujeto, escala, lente, altura, movimiento/motivo y ritmo con justificación por beat. Mantén dna_ref_id y referencias aprobadas sin reescribir apariencia. Comprueba cobertura causal, texto literal,24fps, pre-roll0.8-1.5s, eje180/30 y raccord8%, cuotas y prioridad U(e,b). Usa LOCK si no hay motivo comprobable; no fabriques delta para Dolly In. Si faltan medidas, huesos, ADN o tiempos indispensables, informa bloqueo: los valores del perfil no sustituyen esos datos. No afirmes resultados de Gate1 sin prueba física. La escena, no una plantilla fija, decide cuántas viñetas hacen falta.

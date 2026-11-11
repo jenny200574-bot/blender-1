@@ -1,0 +1,14 @@
+{
+  "id": "alien",
+  "adn_id": "alien",
+  "voz_ref": null,
+  "vistas": [
+    "frente",
+    "espalda",
+    "3_4"
+  ],
+  "sellado": false,
+  "version": 1,
+  "origen": "semilla_ako_cubo_cargar_js",
+  "canal": "genesis"
+}
